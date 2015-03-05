@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<changelog xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2">
+  <version>2.1</version>
+  <task-change-set user="Viktor Pekar" date="2015-03-02T16:55:34.688Z" timestamp="2015-03-02T16:55:34.688Z">
+    <change idref="t93" attribute="internalAssignments" type="string" from="" to="4" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Viktor Pekar" date="2015-03-03T09:15:18.667Z" timestamp="2015-03-03T09:15:18.667Z">
+    <change idref="t58" attribute="effort" type="real" from="28800" to="21600" resolved="yes"/>
+    <change idref="t58" attribute="internalEffortDone" type="real" from="28800" to="21600" resolved="yes"/>
+    <change idref="t105" to="t59" to-position="1" resolved="yes">
+      <change idref="t105" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-03T07:00:00.000Z"/>
+      <change idref="t105" attribute="title" type="string" to="Task 2"/>
+    </change>
+    <change idref="t97" to="t60" to-position="0" resolved="yes">
+      <change idref="t97" attribute="isGroup" type="real" from="0" to="1"/>
+      <change idref="t97" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-03T07:00:00.000Z"/>
+      <change idref="t97" attribute="taskType" type="real" from="0" to="2"/>
+      <change idref="t97" attribute="title" type="string" to="Map Concept"/>
+    </change>
+    <change idref="t102" to="t60" to-position="1" resolved="yes">
+      <change idref="t102" attribute="internalAssignments" type="string" from="" to="9"/>
+      <change idref="t102" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-03T07:00:00.000Z"/>
+      <change idref="t102" attribute="title" type="string" to="Character concept"/>
+    </change>
+    <change idref="t103" to="t60" to-position="2" resolved="yes">
+      <change idref="t103" attribute="internalAssignments" type="string" from="" to="9"/>
+      <change idref="t103" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-03T07:00:00.000Z"/>
+      <change idref="t103" attribute="title" type="string" to="Enemy concept"/>
+    </change>
+    <change idref="t63" attribute="internalPrerequisitesString" type="string" to="97FS" resolved="yes"/>
+    <change idref="t98" to="t97" to-position="0" resolved="yes">
+      <change idref="t98" attribute="effort" type="real" from="28800" to="7200"/>
+      <change idref="t98" attribute="internalAssignments" type="string" from="" to="9"/>
+      <change idref="t98" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-03T07:00:00.000Z"/>
+      <change idref="t98" attribute="title" type="string" to="Savanna"/>
+    </change>
+    <change idref="t99" to="t97" to-position="1" resolved="yes">
+      <change idref="t99" attribute="effort" type="real" from="28800" to="7200"/>
+      <change idref="t99" attribute="internalAssignments" type="string" from="" to="9"/>
+      <change idref="t99" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-03T07:00:00.000Z"/>
+      <change idref="t99" attribute="title" type="string" to="Swamp"/>
+    </change>
+    <change idref="t100" to="t97" to-position="2" resolved="yes">
+      <change idref="t100" attribute="effort" type="real" from="28800" to="7200"/>
+      <change idref="t100" attribute="internalAssignments" type="string" from="" to="9"/>
+      <change idref="t100" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-03T07:00:00.000Z"/>
+      <change idref="t100" attribute="title" type="string" to="Ice"/>
+    </change>
+    <change idref="t101" to="t97" to-position="3" resolved="yes">
+      <change idref="t101" attribute="effort" type="real" from="28800" to="7200"/>
+      <change idref="t101" attribute="internalAssignments" type="string" from="" to="9"/>
+      <change idref="t101" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-03T07:00:00.000Z"/>
+      <change idref="t101" attribute="title" type="string" to="Map borders"/>
+    </change>
+  </task-change-set>
+  <task-change-set user="Viktor Pekar" date="2015-03-03T09:15:30.417Z" timestamp="2015-03-03T09:15:30.417Z">
+    <change idref="t105" from="t59" from-position="1" resolved="yes">
+      <change idref="t105" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-03T07:00:00.000Z"/>
+      <change idref="t105" attribute="title" type="string" to="Task 2"/>
+    </change>
+  </task-change-set>
+  <task-change-set user="Viktor Pekar" date="2015-03-03T09:27:09.995Z" timestamp="2015-03-03T09:27:09.995Z">
+    <change idref="t107" to="t60" to-position="3" resolved="yes">
+      <change idref="t107" attribute="internalPrerequisitesString" type="string" to="103FS"/>
+      <change idref="t107" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-03T07:00:00.000Z"/>
+      <change idref="t107" attribute="title" type="string" to="Mockup"/>
+    </change>
+    <change idref="t102" attribute="effort" type="real" from="28800" to="14400" resolved="yes"/>
+    <change idref="t103" attribute="effort" type="real" from="28800" to="14400" resolved="yes"/>
+    <change idref="t103" attribute="internalPrerequisitesString" type="string" to="102FS" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Viktor Pekar" date="2015-03-03T09:53:07.906Z" timestamp="2015-03-03T09:53:07.906Z">
+    <change idref="t81" attribute="title" type="string" from="Task 1" to="Character blockout" resolved="yes"/>
+    <change idref="t81" attribute="internalAssignments" type="string" from="6; 7" to="6" resolved="yes"/>
+    <change idref="t81" attribute="internalPrerequisitesString" type="string" to="102FS" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Viktor Pekar" date="2015-03-03T09:53:31.947Z" timestamp="2015-03-03T09:53:31.947Z">
+    <change idref="t81" attribute="internalPrerequisitesString" type="string" from="102FS" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Viktor Pekar" date="2015-03-03T09:54:02.957Z" timestamp="2015-03-03T09:54:02.957Z">
+    <change idref="t61" attribute="internalPrerequisitesString" type="string" from="96FS" resolved="yes"/>
+    <change idref="t81" attribute="noLaterThanConstrainedTaskEnd" type="real" from="1" to="0" resolved="yes"/>
+    <change idref="t81" attribute="internalPrerequisitesString" type="string" to="102FS" resolved="yes"/>
+  </task-change-set>
+</changelog>
