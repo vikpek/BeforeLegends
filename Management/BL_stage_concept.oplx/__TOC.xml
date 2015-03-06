@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <omniplan xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2">
-  <window x="-0" y="4" w="1920" h="1173">
+  <window x="761" y="1200" w="960" h="1057">
     <editing-scenario>ogS8ixKXfP7</editing-scenario>
     <view>task</view>
     <overview/>
     <change-tracking/>
     <status-display>basic</status-display>
     <task-view>
-      <split-view-divider-position>695</split-view-divider-position>
-      <outline x="0" y="0" w="695" h="1032">
-        <column name="Violations" width="20"/>
+      <split-view-divider-position>860</split-view-divider-position>
+      <outline x="0" y="0" w="860" h="916">
         <column name="Status" width="20"/>
-        <column name="Notes" width="20"/>
-        <column name="Title" width="357"/>
+        <column name="Title" width="446"/>
+        <column name="Assigned" width="105"/>
+        <column name="%Done" width="81"/>
         <column name="Effort" width="100"/>
-        <column name="%Done" width="87"/>
-        <column name="Planned Start" width="98"/>
-        <column name="Start Variance" width="107"/>
-        <column name="Planned End" width="100"/>
-        <column name="End Variance" width="101"/>
-        <expanded-items idrefs="t24 t61 t97 t92 t22 t70 t86 t89 t36 t75 t69 t28 t59 t60 t26 t63 t46"/>
-        <expanded-item-notes idrefs="t41 t83"/>
+        <column name="Effort Done" width="91"/>
+        <expanded-items idrefs="t46 t130 t75 t59 t113 t26 t118 t63 t92 t144 t111 t89 t127 t116 t97 t22 t69 t60 t140 t36 t86 t123 t128 t121 t70 t115 t126"/>
+        <expanded-item-notes idrefs="t83 t41"/>
+        <selected-items-at-filter-time idrefs="t150 t148 t149 t147"/>
       </outline>
-      <gantt-view x="0" y="0" w="1224" h="1032">
+      <gantt-view x="0" y="0" w="99" h="916">
         <view-mode>actual</view-mode>
         <critical-path/>
         <dependency-lines/>
@@ -55,7 +52,7 @@
         <task-bar-label task-type="task" position="right">
           <key>Assigned</key>
         </task-bar-label>
-        <scale scale-name="Automatic" full-day-width="414.811">
+        <scale scale-name="Automatic" full-day-width="290.605">
           <selected/>
         </scale>
         <scale scale-name="Day" full-day-width="1215"/>
@@ -69,7 +66,7 @@
     </task-view>
     <resource-view>
       <split-view-divider-position>306</split-view-divider-position>
-      <outline x="0" y="0" w="306" h="1032">
+      <outline x="0" y="0" w="306" h="916">
         <column name="IM" width="20"/>
         <column name="Notes" width="20"/>
         <column name="Type" width="49"/>
@@ -77,7 +74,7 @@
         <column name="#" width="75"/>
         <selected-items-at-filter-time idrefs="r4 r7 r3 r6 r9 r5"/>
       </outline>
-      <timeline x="-33" y="0" w="1557.48605083695" h="1032">
+      <timeline x="-33" y="0" w="1557.48605083695" h="916">
         <resource-allocation/>
         <show-project-end/>
         <task-bar-label task-type="group" position="left">
@@ -121,7 +118,7 @@
     </resource-view>
     <calendar>
       <split-view-divider-position>290</split-view-divider-position>
-      <outline x="0" y="0" w="290" h="997">
+      <outline x="0" y="0" w="290" h="881">
         <column name="IM" width="20"/>
         <column name="Notes" width="20"/>
         <column name="Type" width="49"/>
@@ -133,7 +130,7 @@
   </window>
   <project>
     <title>BL_stage_concept</title>
-    <next-task-id>111</next-task-id>
+    <next-task-id>151</next-task-id>
     <next-resource-id>12</next-resource-id>
     <scenario id="ogS8ixKXfP7" name="Actual" filename="Actual.xml"/>
     <date-display dates="true" times="true" seconds="false"/>
@@ -205,7 +202,7 @@
       <key>includeTaskGroups</key>
       <bool>true</bool>
       <key>bookmarkData</key>
-      <data>Ym9va2wDAAAAAAQQMAAAAPdvuvWDFlZobIrW4uWe5TZSSrpLhyB3L6bXgeuckwbHaAIAAAQAAAADAwAAAAgAKAUAAAABAQAAVXNlcnMAAAAGAAAAAQEAAHZpa3BlawAABwAAAAEBAABEcm9wYm94AAIAAAABAQAAR0EAABAAAAABAQAAMDJfQmVmb3JlTGVnZW5kcwoAAAABAQAATWFuYWdlbWVudAAADQAAAAEBAABzdGFnZV9leHBvcnRzAAAADQAAAAEBAABzdGFnZV9jb25jZXB0AAAAIAAAAAEGAAAQAAAAIAAAADAAAABAAAAATAAAAGQAAAB4AAAAkAAAAAgAAAAEAwAA1ZMCAAAAAAAIAAAABAMAAPJoCQAAAAAACAAAAAQDAAC0qgkAAAAAAAgAAAAEAwAAk7QJAAAAAAAIAAAABAMAAI7lVAAAAAAACAAAAAQDAAAkymcAAAAAAAgAAAAEAwAALspnAAAAAAAIAAAABAMAAHGtbAAAAAAAIAAAAAEGAADQAAAA4AAAAPAAAAAAAQAAEAEAACABAAAwAQAAQAEAAAgAAAAABAAAQbqjbGcAAAAYAAAAAQIAAAIAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAgAAAAEAwAABgAAAAAAAAAEAAAAAwMAAPUBAAAIAAAAAQkAAGZpbGU6Ly8vDAAAAAEBAABNYWNpbnRvc2ggSEQIAAAABAMAAAAAADR0AAAACAAAAAAEAABBufDxVwAAACQAAAABAQAAMzNBNDcyQUMtNTg4My0zMThDLUIxN0MtRTdBRTIzQTczOTFEGAAAAAECAACBAAAAAQAIAO8XAAABAAgAAAAAAAAAAAABAAAAAQEAAC8AAAAAAAAAAQUAAMwAAAD+////AQAAAAAAAAAQAAAABBAAAKgAAAAAAAAABRAAAFABAAAAAAAAEBAAAIgBAAAAAAAAQBAAAHgBAAAAAAAAAiAAAFQCAAAAAAAABSAAAMQBAAAAAAAAECAAANQBAAAAAAAAESAAAAgCAAAAAAAAEiAAAOgBAAAAAAAAEyAAAPgBAAAAAAAAICAAADQCAAAAAAAAMCAAAGACAAAAAAAAAcAAAKgBAAAAAAAAEcAAACAAAAAAAAAAEsAAALgBAAAAAAAAENAAAAQAAAAAAAAA</data>
+      <data>Ym9va6ADAAAAAAQQMAAAAHktyLyBvJDp3s+0lrXN9lHDlQUHpwJ0qP+3LLWy9V4cnAIAAAQAAAADAwAAAAgAKAUAAAABAQAAVXNlcnMAAAAGAAAAAQEAAHZpa3BlawAABwAAAAEBAABEcm9wYm94AAIAAAABAQAAR0EAABAAAAABAQAAMDJfQmVmb3JlTGVnZW5kcxIAAAABAQAAQmVmb3JlTGVnZW5kcy1yZXBvAAAKAAAAAQEAAE1hbmFnZW1lbnQAAA0AAAABAQAAc3RhZ2VfZXhwb3J0cwAAAA0AAAABAQAAc3RhZ2VfY29uY2VwdAAAACQAAAABBgAAEAAAACAAAAAwAAAAQAAAAEwAAABkAAAAgAAAAJQAAACsAAAACAAAAAQDAADVkwIAAAAAAAgAAAAEAwAA8mgJAAAAAAAIAAAABAMAALSqCQAAAAAACAAAAAQDAACTtAkAAAAAAAgAAAAEAwAAjuVUAAAAAAAIAAAABAMAAIsxZQAAAAAACAAAAAQDAAAkymcAAAAAAAgAAAAEAwAALspnAAAAAAAIAAAABAMAAF50bQAAAAAAJAAAAAEGAADwAAAAAAEAABABAAAgAQAAMAEAAEABAABQAQAAYAEAAHABAAAIAAAAAAQAAEG6o2xnAAAAGAAAAAECAAACAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAIAAAABAMAAAcAAAAAAAAABAAAAAMDAAD1AQAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAAAA0dAAAAAgAAAAABAAAQbnw8VcAAAAkAAAAAQEAADMzQTQ3MkFDLTU4ODMtMzE4Qy1CMTdDLUU3QUUyM0E3MzkxRBgAAAABAgAAgQAAAAEACADvFwAAAQAIAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAADEAAAAAAAAAAUQAACAAQAAAAAAABAQAAC8AQAAAAAAAEAQAACsAQAAAAAAAAIgAACIAgAAAAAAAAUgAAD4AQAAAAAAABAgAAAIAgAAAAAAABEgAAA8AgAAAAAAABIgAAAcAgAAAAAAABMgAAAsAgAAAAAAACAgAABoAgAAAAAAADAgAACUAgAAAAAAAAHAAADcAQAAAAAAABHAAAAgAAAAAAAAABLAAADsAQAAAAAAABDQAAAEAAAAAAAAAA==</data>
       <key>templatePath</key>
       <string>/Applications/OmniPlan.app/Contents/Resources/en.lproj/HTMLTemplates/Standard</string>
       <key>filePath</key>
