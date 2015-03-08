@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <omniplan xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2">
-  <window x="761" y="1200" w="960" h="1057">
+  <window x="-199" y="1200" w="1920" h="1057">
     <editing-scenario>ogS8ixKXfP7</editing-scenario>
     <view>task</view>
     <overview/>
     <change-tracking/>
-    <status-display>basic</status-display>
+    <status-display>extended</status-display>
     <task-view>
-      <split-view-divider-position>860</split-view-divider-position>
-      <outline x="0" y="0" w="860" h="916">
+      <split-view-divider-position>611</split-view-divider-position>
+      <outline x="0" y="1411" w="611" h="901">
         <column name="Status" width="20"/>
-        <column name="Title" width="446"/>
-        <column name="Assigned" width="105"/>
-        <column name="%Done" width="81"/>
-        <column name="Effort" width="100"/>
-        <column name="Effort Done" width="91"/>
-        <expanded-items idrefs="t46 t130 t75 t59 t113 t26 t118 t63 t92 t144 t111 t89 t127 t116 t97 t22 t69 t60 t140 t36 t86 t123 t128 t121 t70 t115 t126"/>
+        <column name="Title" width="329"/>
+        <column name="Assigned" width="70"/>
+        <column name="%Done" width="46"/>
+        <column name="Effort" width="72"/>
+        <column name="Effort Done" width="67"/>
+        <expanded-items idrefs="t46 t130 t75 t59 t113 t26 t118 t144 t92 t63 t111 t22 t127 t116 t97 t89 t69 t60 t140 t36 t28 t86 t123 t24 t165 t61 t128 t159 t121 t163 t126 t70"/>
         <expanded-item-notes idrefs="t83 t41"/>
-        <selected-items-at-filter-time idrefs="t150 t148 t149 t147"/>
       </outline>
-      <gantt-view x="0" y="0" w="99" h="916">
+      <gantt-view x="65" y="1411" w="1308" h="901">
         <view-mode>actual</view-mode>
         <critical-path/>
         <dependency-lines/>
@@ -52,10 +51,10 @@
         <task-bar-label task-type="task" position="right">
           <key>Assigned</key>
         </task-bar-label>
-        <scale scale-name="Automatic" full-day-width="290.605">
+        <scale scale-name="Automatic" full-day-width="461.248"/>
+        <scale scale-name="Day" full-day-width="257.466">
           <selected/>
         </scale>
-        <scale scale-name="Day" full-day-width="1215"/>
         <scale scale-name="Hour" full-day-width="65880"/>
         <scale scale-name="Minute" full-day-width="64800"/>
         <scale scale-name="Month" full-day-width="34.5"/>
@@ -74,7 +73,7 @@
         <column name="#" width="75"/>
         <selected-items-at-filter-time idrefs="r4 r7 r3 r6 r9 r5"/>
       </outline>
-      <timeline x="-33" y="0" w="1557.48605083695" h="916">
+      <timeline x="39" y="0" w="1585" h="916">
         <resource-allocation/>
         <show-project-end/>
         <task-bar-label task-type="group" position="left">
@@ -130,7 +129,7 @@
   </window>
   <project>
     <title>BL_stage_concept</title>
-    <next-task-id>151</next-task-id>
+    <next-task-id>171</next-task-id>
     <next-resource-id>12</next-resource-id>
     <scenario id="ogS8ixKXfP7" name="Actual" filename="Actual.xml"/>
     <date-display dates="true" times="true" seconds="false"/>
@@ -202,7 +201,7 @@
       <key>includeTaskGroups</key>
       <bool>true</bool>
       <key>bookmarkData</key>
-      <data>Ym9va6ADAAAAAAQQMAAAAHktyLyBvJDp3s+0lrXN9lHDlQUHpwJ0qP+3LLWy9V4cnAIAAAQAAAADAwAAAAgAKAUAAAABAQAAVXNlcnMAAAAGAAAAAQEAAHZpa3BlawAABwAAAAEBAABEcm9wYm94AAIAAAABAQAAR0EAABAAAAABAQAAMDJfQmVmb3JlTGVnZW5kcxIAAAABAQAAQmVmb3JlTGVnZW5kcy1yZXBvAAAKAAAAAQEAAE1hbmFnZW1lbnQAAA0AAAABAQAAc3RhZ2VfZXhwb3J0cwAAAA0AAAABAQAAc3RhZ2VfY29uY2VwdAAAACQAAAABBgAAEAAAACAAAAAwAAAAQAAAAEwAAABkAAAAgAAAAJQAAACsAAAACAAAAAQDAADVkwIAAAAAAAgAAAAEAwAA8mgJAAAAAAAIAAAABAMAALSqCQAAAAAACAAAAAQDAACTtAkAAAAAAAgAAAAEAwAAjuVUAAAAAAAIAAAABAMAAIsxZQAAAAAACAAAAAQDAAAkymcAAAAAAAgAAAAEAwAALspnAAAAAAAIAAAABAMAAF50bQAAAAAAJAAAAAEGAADwAAAAAAEAABABAAAgAQAAMAEAAEABAABQAQAAYAEAAHABAAAIAAAAAAQAAEG6o2xnAAAAGAAAAAECAAACAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAIAAAABAMAAAcAAAAAAAAABAAAAAMDAAD1AQAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAAAA0dAAAAAgAAAAABAAAQbnw8VcAAAAkAAAAAQEAADMzQTQ3MkFDLTU4ODMtMzE4Qy1CMTdDLUU3QUUyM0E3MzkxRBgAAAABAgAAgQAAAAEACADvFwAAAQAIAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAADEAAAAAAAAAAUQAACAAQAAAAAAABAQAAC8AQAAAAAAAEAQAACsAQAAAAAAAAIgAACIAgAAAAAAAAUgAAD4AQAAAAAAABAgAAAIAgAAAAAAABEgAAA8AgAAAAAAABIgAAAcAgAAAAAAABMgAAAsAgAAAAAAACAgAABoAgAAAAAAADAgAACUAgAAAAAAAAHAAADcAQAAAAAAABHAAAAgAAAAAAAAABLAAADsAQAAAAAAABDQAAAEAAAAAAAAAA==</data>
+      <data>Ym9va6ADAAAAAAQQMAAAAB8HKIVf3F4EPhbPYZFYnO3eNGhu9xFI2Ky7Z2UO8jTqnAIAAAQAAAADAwAAAAgAKAUAAAABAQAAVXNlcnMAAAAGAAAAAQEAAHZpa3BlawAABwAAAAEBAABEcm9wYm94AAIAAAABAQAAR0EAABAAAAABAQAAMDJfQmVmb3JlTGVnZW5kcxIAAAABAQAAQmVmb3JlTGVnZW5kcy1yZXBvAAAKAAAAAQEAAE1hbmFnZW1lbnQAAA0AAAABAQAAc3RhZ2VfZXhwb3J0cwAAAA0AAAABAQAAc3RhZ2VfY29uY2VwdAAAACQAAAABBgAAEAAAACAAAAAwAAAAQAAAAEwAAABkAAAAgAAAAJQAAACsAAAACAAAAAQDAADVkwIAAAAAAAgAAAAEAwAA8mgJAAAAAAAIAAAABAMAALSqCQAAAAAACAAAAAQDAACTtAkAAAAAAAgAAAAEAwAAjuVUAAAAAAAIAAAABAMAAIsxZQAAAAAACAAAAAQDAAAkymcAAAAAAAgAAAAEAwAALspnAAAAAAAIAAAABAMAAN8HbgAAAAAAJAAAAAEGAADwAAAAAAEAABABAAAgAQAAMAEAAEABAABQAQAAYAEAAHABAAAIAAAAAAQAAEG6o2xnAAAAGAAAAAECAAACAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAIAAAABAMAAAcAAAAAAAAABAAAAAMDAAD1AQAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAAAA0dAAAAAgAAAAABAAAQbnw8VcAAAAkAAAAAQEAADMzQTQ3MkFDLTU4ODMtMzE4Qy1CMTdDLUU3QUUyM0E3MzkxRBgAAAABAgAAgQAAAAEACADvFwAAAQAIAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAADEAAAAAAAAAAUQAACAAQAAAAAAABAQAAC8AQAAAAAAAEAQAACsAQAAAAAAAAIgAACIAgAAAAAAAAUgAAD4AQAAAAAAABAgAAAIAgAAAAAAABEgAAA8AgAAAAAAABIgAAAcAgAAAAAAABMgAAAsAgAAAAAAACAgAABoAgAAAAAAADAgAACUAgAAAAAAAAHAAADcAQAAAAAAABHAAAAgAAAAAAAAABLAAADsAQAAAAAAABDQAAAEAAAAAAAAAA==</data>
       <key>templatePath</key>
       <string>/Applications/OmniPlan.app/Contents/Resources/en.lproj/HTMLTemplates/Standard</string>
       <key>filePath</key>
