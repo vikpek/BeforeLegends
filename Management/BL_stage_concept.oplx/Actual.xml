@@ -114,6 +114,7 @@
     <start-constraint-date>2015-02-28T23:00:00.000Z</start-constraint-date>
     <child-task idref="t140"/>
     <child-task idref="t144"/>
+    <child-task idref="t169"/>
     <child-task idref="t36"/>
     <start-no-earlier-than>2015-02-28T23:00:00.000Z</start-no-earlier-than>
   </task>
@@ -147,6 +148,7 @@
     <child-task idref="t53"/>
     <child-task idref="t54"/>
     <child-task idref="t75"/>
+    <prerequisite-task idref="t144"/>
   </task>
   <task id="t37">
     <title>Generated Map</title>
@@ -208,8 +210,6 @@
   <task id="t46">
     <title>Game Design Document</title>
     <type>group</type>
-    <child-task idref="t94"/>
-    <child-task idref="t96"/>
     <child-task idref="t44"/>
     <child-task idref="t47"/>
     <child-task idref="t50"/>
@@ -293,11 +293,11 @@
   <task id="t60">
     <title>2D Assets</title>
     <type>group</type>
+    <child-task idref="t159"/>
+    <child-task idref="t163"/>
+    <child-task idref="t165"/>
     <child-task idref="t115"/>
     <child-task idref="t97"/>
-    <child-task idref="t102"/>
-    <child-task idref="t103"/>
-    <child-task idref="t107"/>
     <child-task idref="t63"/>
   </task>
   <task id="t61">
@@ -306,7 +306,6 @@
     <child-task idref="t126"/>
     <child-task idref="t127"/>
     <child-task idref="t128"/>
-    <child-task idref="t130"/>
   </task>
   <task id="t63">
     <title>Map Tiles</title>
@@ -316,6 +315,7 @@
     <child-task idref="t66"/>
     <child-task idref="t67"/>
     <prerequisite-task idref="t97"/>
+    <prerequisite-task idref="t169"/>
     <start-no-earlier-than>2015-02-28T23:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t65">
@@ -345,6 +345,7 @@
     <start-constraint-date>2015-02-28T23:00:00.000Z</start-constraint-date>
     <child-task idref="t70"/>
     <child-task idref="t74"/>
+    <prerequisite-task idref="t140"/>
     <start-no-earlier-than>2015-02-28T23:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t70">
@@ -367,18 +368,18 @@
   <task id="t72">
     <title>Input from Toma</title>
     <effort>7200</effort>
-    <start-constraint-date>2015-02-28T23:00:00.000Z</start-constraint-date>
+    <start-constraint-date>2015-03-10T08:00:00.000Z</start-constraint-date>
     <prerequisite-task idref="t71"/>
     <assignment idref="r4"/>
-    <start-no-earlier-than>2015-02-28T23:00:00.000Z</start-no-earlier-than>
+    <start-no-earlier-than>2015-03-10T08:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t73">
     <title>Input from Andreas</title>
     <effort>7200</effort>
-    <start-constraint-date>2015-02-28T23:00:00.000Z</start-constraint-date>
+    <start-constraint-date>2015-03-10T08:00:00.000Z</start-constraint-date>
     <prerequisite-task idref="t71"/>
     <assignment idref="r4"/>
-    <start-no-earlier-than>2015-02-28T23:00:00.000Z</start-no-earlier-than>
+    <start-no-earlier-than>2015-03-10T08:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t74">
     <title>Mockup Concept</title>
@@ -414,10 +415,10 @@
     <start-no-earlier-than>2015-02-28T23:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t81">
-    <title>Character blockout</title>
-    <effort>28800</effort>
+    <title>Olaf blockout</title>
+    <effort>7200</effort>
     <start-constraint-date>2015-02-28T23:00:00.000Z</start-constraint-date>
-    <prerequisite-task idref="t102"/>
+    <prerequisite-task idref="t122"/>
     <assignment idref="r6"/>
     <start-no-earlier-than>2015-02-28T23:00:00.000Z</start-no-earlier-than>
   </task>
@@ -501,18 +502,6 @@
     <assignment idref="r4"/>
     <start-no-earlier-than>2015-02-28T23:00:00.000Z</start-no-earlier-than>
   </task>
-  <task id="t94">
-    <title>Minimal 2D-Asset List for Proof-Of-Fun</title>
-    <effort>28800</effort>
-    <start-constraint-date>2015-03-05T07:00:00.000Z</start-constraint-date>
-    <start-no-earlier-than>2015-03-05T07:00:00.000Z</start-no-earlier-than>
-  </task>
-  <task id="t96">
-    <title>Minimal 3D-Asset List for Proof-Of-Fun</title>
-    <effort>28800</effort>
-    <start-constraint-date>2015-03-05T07:00:00.000Z</start-constraint-date>
-    <start-no-earlier-than>2015-03-05T07:00:00.000Z</start-no-earlier-than>
-  </task>
   <task id="t97">
     <title>Map Concept</title>
     <type>group</type>
@@ -521,6 +510,7 @@
     <child-task idref="t99"/>
     <child-task idref="t100"/>
     <child-task idref="t101"/>
+    <child-task idref="t107"/>
     <start-no-earlier-than>2015-03-03T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t98">
@@ -534,6 +524,7 @@
   <task id="t99">
     <title>Swamp</title>
     <effort>7200</effort>
+    <effort-done>7200</effort-done>
     <start-constraint-date>2015-03-03T07:00:00.000Z</start-constraint-date>
     <assignment idref="r9"/>
     <start-no-earlier-than>2015-03-03T07:00:00.000Z</start-no-earlier-than>
@@ -541,6 +532,7 @@
   <task id="t100">
     <title>Ice</title>
     <effort>7200</effort>
+    <effort-done>7200</effort-done>
     <start-constraint-date>2015-03-03T07:00:00.000Z</start-constraint-date>
     <assignment idref="r9"/>
     <start-no-earlier-than>2015-03-03T07:00:00.000Z</start-no-earlier-than>
@@ -548,30 +540,17 @@
   <task id="t101">
     <title>Map borders</title>
     <effort>7200</effort>
+    <effort-done>7200</effort-done>
     <start-constraint-date>2015-03-03T07:00:00.000Z</start-constraint-date>
-    <assignment idref="r9"/>
-    <start-no-earlier-than>2015-03-03T07:00:00.000Z</start-no-earlier-than>
-  </task>
-  <task id="t102">
-    <title>Character concept</title>
-    <effort>14400</effort>
-    <start-constraint-date>2015-03-03T07:00:00.000Z</start-constraint-date>
-    <assignment idref="r9"/>
-    <start-no-earlier-than>2015-03-03T07:00:00.000Z</start-no-earlier-than>
-  </task>
-  <task id="t103">
-    <title>Enemy concept</title>
-    <effort>14400</effort>
-    <start-constraint-date>2015-03-03T07:00:00.000Z</start-constraint-date>
-    <prerequisite-task idref="t102"/>
     <assignment idref="r9"/>
     <start-no-earlier-than>2015-03-03T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t107">
     <title>Mockup</title>
     <effort>28800</effort>
+    <effort-done>28800</effort-done>
     <start-constraint-date>2015-03-03T07:00:00.000Z</start-constraint-date>
-    <prerequisite-task idref="t103"/>
+    <assignment idref="r9"/>
     <start-no-earlier-than>2015-03-03T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t111">
@@ -583,9 +562,11 @@
   </task>
   <task id="t112">
     <title>Club</title>
-    <effort>28800</effort>
-    <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
-    <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
+    <effort>14400</effort>
+    <start-constraint-date>2015-03-09T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t122"/>
+    <assignment idref="r9"/>
+    <start-no-earlier-than>2015-03-09T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t113">
     <title>Armor</title>
@@ -597,8 +578,9 @@
   <task id="t114">
     <title>Fur coat</title>
     <effort>28800</effort>
-    <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
-    <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
+    <start-constraint-date>2015-03-11T07:00:00.000Z</start-constraint-date>
+    <assignment idref="r9"/>
+    <start-no-earlier-than>2015-03-11T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t115">
     <title>Icons</title>
@@ -619,7 +601,7 @@
     <title>Club</title>
     <effort>28800</effort>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
-    <prerequisite-task idref="t112"/>
+    <assignment idref="r9"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t118">
@@ -634,6 +616,7 @@
     <effort>28800</effort>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
     <prerequisite-task idref="t114"/>
+    <assignment idref="r9"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t121">
@@ -646,8 +629,9 @@
   <task id="t122">
     <title>Tribe member - Olaf</title>
     <effort>28800</effort>
-    <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
-    <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
+    <start-constraint-date>2015-03-09T07:00:00.000Z</start-constraint-date>
+    <assignment idref="r9"/>
+    <start-no-earlier-than>2015-03-09T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t123">
     <title>Enemies</title>
@@ -658,9 +642,10 @@
   </task>
   <task id="t124">
     <title>Horned Lion</title>
-    <effort>28800</effort>
-    <effort-done>28800</effort-done>
+    <effort>18000</effort>
+    <effort-done>18000</effort-done>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
+    <assignment idref="r9"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t126">
@@ -668,6 +653,10 @@
     <type>group</type>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
     <child-task idref="t81"/>
+    <child-task idref="t154"/>
+    <child-task idref="t160"/>
+    <child-task idref="t156"/>
+    <child-task idref="t157"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t127">
@@ -676,7 +665,9 @@
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
     <child-task idref="t131"/>
     <child-task idref="t132"/>
-    <child-task idref="t133"/>
+    <child-task idref="t164"/>
+    <child-task idref="t151"/>
+    <child-task idref="t152"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t128">
@@ -685,7 +676,7 @@
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
     <child-task idref="t134"/>
     <child-task idref="t135"/>
-    <child-task idref="t136"/>
+    <child-task idref="t167"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t130">
@@ -697,44 +688,60 @@
   </task>
   <task id="t131">
     <title>Horned lion blockout</title>
-    <effort>28800</effort>
+    <effort>7200</effort>
+    <effort-done>7200</effort-done>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t124"/>
+    <assignment idref="r6"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t132">
     <title>Horned lion model</title>
-    <effort>28800</effort>
+    <effort>21600</effort>
+    <effort-done>21600</effort-done>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t131"/>
+    <assignment idref="r6"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t133">
     <title>Horned lion texture</title>
     <effort>28800</effort>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t164"/>
+    <assignment idref="r9"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t134">
     <title>Club blockout</title>
-    <effort>28800</effort>
+    <effort>3600</effort>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t112"/>
+    <assignment idref="r6"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t135">
     <title>Club model</title>
-    <effort>28800</effort>
+    <effort>14400</effort>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t134"/>
+    <assignment idref="r6"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t136">
     <title>Club texture</title>
     <effort>28800</effort>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t135"/>
+    <prerequisite-task idref="t167"/>
+    <assignment idref="r9"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t138">
     <title>Fur coat texture</title>
     <effort>28800</effort>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
+    <assignment idref="r9"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t140">
@@ -749,19 +756,24 @@
   <task id="t141">
     <title>One tile based map</title>
     <effort>28800</effort>
-    <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
-    <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
+    <start-constraint-date>2015-03-09T07:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2015-03-09T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t142">
     <title>Movement on map</title>
     <effort>28800</effort>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t141"/>
+    <assignment idref="r1"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t143">
     <title>One-button battle</title>
     <effort>28800</effort>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t142"/>
+    <assignment idref="r1"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t144">
@@ -769,25 +781,128 @@
     <type>group</type>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
     <child-task idref="t145"/>
+    <prerequisite-task idref="t140"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t145">
     <title>Tactical map</title>
     <effort>28800</effort>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t148">
     <title>Actionpoint System</title>
     <effort>28800</effort>
-    <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
-    <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
+    <start-constraint-date>2015-03-09T07:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-03-09T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t149">
     <title>Character management</title>
     <effort>28800</effort>
-    <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
-    <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
+    <start-constraint-date>2015-03-09T07:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-03-09T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t151">
+    <title>Horned lion rig</title>
+    <effort>28800</effort>
+    <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t164"/>
+    <assignment idref="r6"/>
+    <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t152">
+    <title>Horned lion animation</title>
+    <effort>28800</effort>
+    <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t151"/>
+    <assignment idref="r6"/>
+    <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t154">
+    <title>Olaf model</title>
+    <effort>28800</effort>
+    <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t81"/>
+    <assignment idref="r6"/>
+    <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t155">
+    <title>Olaf texture</title>
+    <effort>28800</effort>
+    <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t160"/>
+    <assignment idref="r9"/>
+    <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t156">
+    <title>Olaf rig</title>
+    <effort>28800</effort>
+    <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t154"/>
+    <assignment idref="r6"/>
+    <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t157">
+    <title>Olaf animation</title>
+    <effort>28800</effort>
+    <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t156"/>
+    <assignment idref="r6"/>
+    <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t159">
+    <title>Characters</title>
+    <type>group</type>
+    <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <child-task idref="t155"/>
+    <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t160">
+    <title>Olaf unwrap</title>
+    <effort>28800</effort>
+    <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t154"/>
+    <assignment idref="r6"/>
+    <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t163">
+    <title>Enemies</title>
+    <type>group</type>
+    <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <child-task idref="t133"/>
+    <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t164">
+    <title>Horned lion unwrap</title>
+    <effort>10800</effort>
+    <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t132"/>
+    <assignment idref="r6"/>
+    <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t165">
+    <title>Items</title>
+    <type>group</type>
+    <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <child-task idref="t136"/>
+    <child-task idref="t130"/>
+    <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t167">
+    <title>Club unwrap</title>
+    <effort>28800</effort>
+    <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t135"/>
+    <assignment idref="r6"/>
+    <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t169">
+    <title>Prototype 03</title>
+    <type>group</type>
+    <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t144"/>
+    <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
   </task>
   <critical-path root="-1" enabled="true" resources="false">
     <color r="1" g="0.5" b="0.5"/>

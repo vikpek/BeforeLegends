@@ -169,15 +169,184 @@
       <change idref="t143" attribute="title" type="string" to="One-button battle"/>
     </change>
   </task-change-set>
-  <task-change-set user="Viktor Pekar" date="2015-03-06T08:50:34.070Z" timestamp="2015-03-06T08:50:34.070Z">
-    <change idref="t148" to="t46" to-position="7">
-      <change idref="t148" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
+  <task-change-set user="Viktor Pekar" date="2015-03-07T09:38:12.156Z" timestamp="2015-03-07T09:38:12.156Z">
+    <change idref="t22" attribute="noLaterThanConstrainedTaskEnd" type="real" from="1" to="0" resolved="yes"/>
+    <change idref="t148" to="t46" to-position="7" resolved="yes">
+      <change idref="t148" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-09T07:00:00.000Z"/>
       <change idref="t148" attribute="title" type="string" to="Actionpoint System"/>
     </change>
-    <change idref="t149" to="t46" to-position="8">
-      <change idref="t149" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
+    <change idref="t149" to="t46" to-position="8" resolved="yes">
+      <change idref="t149" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-09T07:00:00.000Z"/>
       <change idref="t149" attribute="title" type="string" to="Character management"/>
     </change>
-    <change idref="t93" attribute="internalEffortDone" type="real" from="0" to="28800"/>
+    <change idref="t103" from="t60" from-position="3" resolved="yes">
+      <change idref="t103" attribute="effort" type="real" from="28800" to="14400"/>
+      <change idref="t103" attribute="internalAssignments" type="string" from="" to="9"/>
+      <change idref="t103" attribute="internalPrerequisitesString" type="string" to="102FS"/>
+      <change idref="t103" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-03T07:00:00.000Z"/>
+      <change idref="t103" attribute="title" type="string" to="Enemy concept"/>
+    </change>
+    <change idref="t102" from="t60" from-position="2" resolved="yes">
+      <change idref="t102" attribute="effort" type="real" from="28800" to="14400"/>
+      <change idref="t102" attribute="internalAssignments" type="string" from="" to="9"/>
+      <change idref="t102" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-03T07:00:00.000Z"/>
+      <change idref="t102" attribute="title" type="string" to="Character concept"/>
+    </change>
+    <change idref="t159" to="t60" to-position="0" resolved="yes">
+      <change idref="t159" attribute="isGroup" type="real" from="0" to="1"/>
+      <change idref="t159" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T23:00:00.000Z"/>
+      <change idref="t159" attribute="taskType" type="real" from="0" to="2"/>
+      <change idref="t159" attribute="title" type="string" to="Characters"/>
+    </change>
+    <change idref="t163" to="t60" to-position="1" resolved="yes">
+      <change idref="t163" attribute="isGroup" type="real" from="0" to="1"/>
+      <change idref="t163" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T23:00:00.000Z"/>
+      <change idref="t163" attribute="taskType" type="real" from="0" to="2"/>
+      <change idref="t163" attribute="title" type="string" to="Enemies"/>
+    </change>
+    <change idref="t165" to="t60" to-position="2" resolved="yes">
+      <change idref="t165" attribute="isGroup" type="real" from="0" to="1"/>
+      <change idref="t165" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T23:00:00.000Z"/>
+      <change idref="t165" attribute="taskType" type="real" from="0" to="2"/>
+      <change idref="t165" attribute="title" type="string" to="Items"/>
+    </change>
+    <change idref="t72" attribute="noEarlierThanConstraintDate" type="date" from="2015-02-28T23:00:00.000Z" to="2015-03-10T08:00:00.000Z" resolved="yes"/>
+    <change idref="t73" attribute="noEarlierThanConstraintDate" type="date" from="2015-02-28T23:00:00.000Z" to="2015-03-10T08:00:00.000Z" resolved="yes"/>
+    <change idref="t81" attribute="internalPrerequisitesString" type="string" from="102FS" to="122FS" resolved="yes"/>
+    <change idref="t81" attribute="title" type="string" from="Character blockout" to="Olaf blockout" resolved="yes"/>
+    <change idref="t93" attribute="internalEffortDone" type="real" from="0" to="28800" resolved="yes"/>
+    <change idref="t107" attribute="internalPrerequisitesString" type="string" from="103FS" resolved="yes"/>
+    <change idref="t112" attribute="noEarlierThanConstraintDate" type="date" from="2015-03-06T07:00:00.000Z" to="2015-03-09T07:00:00.000Z" resolved="yes"/>
+    <change idref="t112" attribute="internalAssignments" type="string" from="" to="9" resolved="yes"/>
+    <change idref="t112" attribute="internalPrerequisitesString" type="string" to="122FS" resolved="yes"/>
+    <change idref="t114" attribute="noEarlierThanConstraintDate" type="date" from="2015-03-06T07:00:00.000Z" to="2015-03-11T07:00:00.000Z" resolved="yes"/>
+    <change idref="t114" attribute="internalAssignments" type="string" from="" to="9" resolved="yes"/>
+    <change idref="t114" attribute="internalPrerequisitesString" type="string" to="112FS" resolved="yes"/>
+    <change idref="t117" attribute="internalAssignments" type="string" from="" to="9" resolved="yes"/>
+    <change idref="t119" attribute="internalAssignments" type="string" from="" to="9" resolved="yes"/>
+    <change idref="t122" attribute="noEarlierThanConstraintDate" type="date" from="2015-03-06T07:00:00.000Z" to="2015-03-09T07:00:00.000Z" resolved="yes"/>
+    <change idref="t122" attribute="internalAssignments" type="string" from="" to="9" resolved="yes"/>
+    <change idref="t124" attribute="internalAssignments" type="string" from="" to="9" resolved="yes"/>
+    <change idref="t154" to="t126" to-position="1" resolved="yes">
+      <change idref="t154" attribute="internalPrerequisitesString" type="string" to="81FS"/>
+      <change idref="t154" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T23:00:00.000Z"/>
+      <change idref="t154" attribute="title" type="string" to="Olaf model"/>
+    </change>
+    <change idref="t160" to="t126" to-position="2" resolved="yes">
+      <change idref="t160" attribute="internalPrerequisitesString" type="string" to="154FS"/>
+      <change idref="t160" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T23:00:00.000Z"/>
+      <change idref="t160" attribute="title" type="string" to="Olaf unwrap"/>
+    </change>
+    <change idref="t156" to="t126" to-position="3" resolved="yes">
+      <change idref="t156" attribute="internalPrerequisitesString" type="string" to="154FS"/>
+      <change idref="t156" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T23:00:00.000Z"/>
+      <change idref="t156" attribute="title" type="string" to="Olaf rig"/>
+    </change>
+    <change idref="t157" to="t126" to-position="4" resolved="yes">
+      <change idref="t157" attribute="internalPrerequisitesString" type="string" to="156FS"/>
+      <change idref="t157" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T23:00:00.000Z"/>
+      <change idref="t157" attribute="title" type="string" to="Olaf animation"/>
+    </change>
+    <change idref="t164" to="t127" to-position="2" resolved="yes">
+      <change idref="t164" attribute="internalPrerequisitesString" type="string" to="132FS"/>
+      <change idref="t164" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T23:00:00.000Z"/>
+      <change idref="t164" attribute="title" type="string" to="Horned lion unwrap"/>
+    </change>
+    <change idref="t151" to="t127" to-position="3" resolved="yes">
+      <change idref="t151" attribute="internalAssignments" type="string" from="" to="6"/>
+      <change idref="t151" attribute="internalPrerequisitesString" type="string" to="164FS"/>
+      <change idref="t151" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T23:00:00.000Z"/>
+      <change idref="t151" attribute="title" type="string" to="Horned lion rig"/>
+    </change>
+    <change idref="t152" to="t127" to-position="4" resolved="yes">
+      <change idref="t152" attribute="internalAssignments" type="string" from="" to="6"/>
+      <change idref="t152" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T23:00:00.000Z"/>
+      <change idref="t152" attribute="title" type="string" to="Horned lion animation"/>
+    </change>
+    <change idref="t167" to="t128" to-position="2" resolved="yes">
+      <change idref="t167" attribute="internalPrerequisitesString" type="string" to="135FS"/>
+      <change idref="t167" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T23:00:00.000Z"/>
+      <change idref="t167" attribute="title" type="string" to="Club unwrap"/>
+    </change>
+    <change idref="t131" attribute="effort" type="real" from="28800" to="7200" resolved="yes"/>
+    <change idref="t131" attribute="internalAssignments" type="string" from="" to="6" resolved="yes"/>
+    <change idref="t131" attribute="internalEffortDone" type="real" from="0" to="7200" resolved="yes"/>
+    <change idref="t132" attribute="effort" type="real" from="28800" to="21600" resolved="yes"/>
+    <change idref="t132" attribute="internalAssignments" type="string" from="" to="6" resolved="yes"/>
+    <change idref="t132" attribute="internalEffortDone" type="real" from="0" to="21600" resolved="yes"/>
+    <change idref="t133" attribute="internalAssignments" type="string" from="" to="9" resolved="yes"/>
+    <change idref="t133" attribute="internalPrerequisitesString" type="string" to="164FS" resolved="yes"/>
+    <change idref="t135" attribute="internalPrerequisitesString" type="string" to="134FS" resolved="yes"/>
+    <change idref="t136" attribute="internalPrerequisitesString" type="string" to="135FS, 167FS" resolved="yes"/>
+    <change idref="t136" from="t128" from-position="2" to="t165" to-position="0" resolved="yes"/>
+    <change idref="t130" from="t61" from-position="3" to="t165" to-position="1" resolved="yes"/>
+    <change idref="t155" to="t159" to-position="0" resolved="yes">
+      <change idref="t155" attribute="internalAssignments" type="string" from="" to="9"/>
+      <change idref="t155" attribute="internalPrerequisitesString" type="string" to="160FS"/>
+      <change idref="t155" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T23:00:00.000Z"/>
+      <change idref="t155" attribute="title" type="string" to="Olaf texture"/>
+    </change>
+    <change idref="t133" from="t127" from-position="2" to="t163" to-position="0" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Viktor Pekar" date="2015-03-07T09:44:20.636Z" timestamp="2015-03-07T09:44:20.636Z">
+    <change idref="t169" to="t24" to-position="2" resolved="yes">
+      <change idref="t169" attribute="internalPrerequisitesString" type="string" to="144FS"/>
+      <change idref="t169" attribute="isGroup" type="real" from="0" to="1"/>
+      <change idref="t169" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T23:00:00.000Z"/>
+      <change idref="t169" attribute="taskType" type="real" from="0" to="2"/>
+      <change idref="t169" attribute="title" type="string" to="Prototype 03"/>
+    </change>
+    <change idref="t36" attribute="internalPrerequisitesString" type="string" to="144FS" resolved="yes"/>
+    <change idref="t63" attribute="internalPrerequisitesString" type="string" from="97FS" to="97FS, 169FS" resolved="yes"/>
+    <change idref="t69" attribute="internalPrerequisitesString" type="string" to="140FS" resolved="yes"/>
+    <change idref="t107" from="t60" from-position="5" to="t97" to-position="4" resolved="yes"/>
+    <change idref="t99" attribute="internalEffortDone" type="real" from="0" to="7200" resolved="yes"/>
+    <change idref="t100" attribute="internalEffortDone" type="real" from="0" to="7200" resolved="yes"/>
+    <change idref="t101" attribute="internalEffortDone" type="real" from="0" to="7200" resolved="yes"/>
+    <change idref="t107" attribute="internalAssignments" type="string" from="" to="9" resolved="yes"/>
+    <change idref="t107" attribute="internalEffortDone" type="real" from="0" to="28800" resolved="yes"/>
+    <change idref="t114" attribute="internalPrerequisitesString" type="string" from="112FS" resolved="yes"/>
+    <change idref="t117" attribute="internalPrerequisitesString" type="string" from="112FS" resolved="yes"/>
+    <change idref="t134" attribute="internalAssignments" type="string" from="" to="6" resolved="yes"/>
+    <change idref="t134" attribute="internalPrerequisitesString" type="string" to="112FS" resolved="yes"/>
+    <change idref="t135" attribute="internalAssignments" type="string" from="" to="6" resolved="yes"/>
+    <change idref="t136" attribute="internalAssignments" type="string" from="" to="9" resolved="yes"/>
+    <change idref="t138" attribute="internalAssignments" type="string" from="" to="9" resolved="yes"/>
+    <change idref="t141" attribute="noEarlierThanConstraintDate" type="date" from="2015-03-06T07:00:00.000Z" to="2015-03-09T07:00:00.000Z" resolved="yes"/>
+    <change idref="t142" attribute="internalPrerequisitesString" type="string" to="141FS" resolved="yes"/>
+    <change idref="t143" attribute="internalPrerequisitesString" type="string" to="142FS" resolved="yes"/>
+    <change idref="t144" attribute="internalPrerequisitesString" type="string" to="140FS" resolved="yes"/>
+    <change idref="t154" attribute="internalAssignments" type="string" from="" to="6" resolved="yes"/>
+    <change idref="t156" attribute="internalAssignments" type="string" from="" to="6" resolved="yes"/>
+    <change idref="t157" attribute="internalAssignments" type="string" from="" to="6" resolved="yes"/>
+    <change idref="t160" attribute="internalAssignments" type="string" from="" to="6" resolved="yes"/>
+    <change idref="t164" attribute="internalAssignments" type="string" from="" to="6" resolved="yes"/>
+    <change idref="t167" attribute="internalAssignments" type="string" from="" to="6" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Viktor Pekar" date="2015-03-07T10:06:41.248Z" timestamp="2015-03-07T10:06:41.248Z">
+    <change idref="t81" attribute="effort" type="real" from="28800" to="7200" resolved="yes"/>
+    <change idref="t112" attribute="effort" type="real" from="28800" to="14400" resolved="yes"/>
+    <change idref="t124" attribute="effort" type="real" from="28800" to="18000" resolved="yes"/>
+    <change idref="t124" attribute="internalEffortDone" type="real" from="28800" to="18000" resolved="yes"/>
+    <change idref="t131" attribute="internalPrerequisitesString" type="string" to="124FS" resolved="yes"/>
+    <change idref="t132" attribute="internalPrerequisitesString" type="string" to="131FS" resolved="yes"/>
+    <change idref="t134" attribute="effort" type="real" from="28800" to="3600" resolved="yes"/>
+    <change idref="t135" attribute="effort" type="real" from="28800" to="14400" resolved="yes"/>
+    <change idref="t152" attribute="internalPrerequisitesString" type="string" to="151FS" resolved="yes"/>
+    <change idref="t164" attribute="effort" type="real" from="28800" to="10800" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Viktor Pekar" date="2015-03-07T10:08:19.899Z" timestamp="2015-03-07T10:08:19.899Z">
+    <change idref="t96" from="t46" from-position="1" resolved="yes">
+      <change idref="t96" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-05T07:00:00.000Z"/>
+      <change idref="t96" attribute="title" type="string" to="Minimal 3D-Asset List for Proof-Of-Fun"/>
+    </change>
+    <change idref="t94" from="t46" from-position="0" resolved="yes">
+      <change idref="t94" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-05T07:00:00.000Z"/>
+      <change idref="t94" attribute="title" type="string" to="Minimal 2D-Asset List for Proof-Of-Fun"/>
+    </change>
+    <change idref="t141" attribute="internalAssignments" type="string" from="" to="1" resolved="yes"/>
+    <change idref="t142" attribute="internalAssignments" type="string" from="" to="1" resolved="yes"/>
+    <change idref="t143" attribute="internalAssignments" type="string" from="" to="1" resolved="yes"/>
+    <change idref="t145" attribute="internalAssignments" type="string" from="" to="1" resolved="yes"/>
   </task-change-set>
 </changelog>
