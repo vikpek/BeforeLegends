@@ -1,174 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <changelog xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2">
   <version>2.1</version>
-  <task-change-set user="Viktor Pekar" date="2015-03-06T07:06:02.858Z" timestamp="2015-03-06T07:06:02.858Z">
-    <change idref="t111" to="t59" to-position="1" resolved="yes">
-      <change idref="t111" attribute="isGroup" type="real" from="0" to="1"/>
-      <change idref="t111" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t111" attribute="taskType" type="real" from="0" to="2"/>
-      <change idref="t111" attribute="title" type="string" to="Weapons"/>
-    </change>
-    <change idref="t113" to="t59" to-position="2" resolved="yes">
-      <change idref="t113" attribute="isGroup" type="real" from="0" to="1"/>
-      <change idref="t113" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t113" attribute="taskType" type="real" from="0" to="2"/>
-      <change idref="t113" attribute="title" type="string" to="Armor"/>
-    </change>
-    <change idref="t115" to="t60" to-position="0" resolved="yes">
-      <change idref="t115" attribute="isGroup" type="real" from="0" to="1"/>
-      <change idref="t115" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t115" attribute="taskType" type="real" from="0" to="2"/>
-      <change idref="t115" attribute="title" type="string" to="Icons"/>
-    </change>
-    <change idref="t117" to="t116" to-position="0" resolved="yes">
-      <change idref="t117" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t117" attribute="title" type="string" to="Club"/>
-    </change>
-    <change idref="t119" to="t118" to-position="0" resolved="yes">
-      <change idref="t119" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t119" attribute="title" type="string" to="Fur coat"/>
-    </change>
-    <change idref="t112" to="t111" to-position="0" resolved="yes">
-      <change idref="t112" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t112" attribute="title" type="string" to="Club"/>
-    </change>
-    <change idref="t114" to="t113" to-position="0" resolved="yes">
-      <change idref="t114" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t114" attribute="title" type="string" to="Fur coat"/>
-    </change>
-    <change idref="t116" to="t115" to-position="0" resolved="yes">
-      <change idref="t116" attribute="isGroup" type="real" from="0" to="1"/>
-      <change idref="t116" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t116" attribute="taskType" type="real" from="0" to="2"/>
-      <change idref="t116" attribute="title" type="string" to="Weapons"/>
-    </change>
-    <change idref="t118" to="t115" to-position="1" resolved="yes">
-      <change idref="t118" attribute="isGroup" type="real" from="0" to="1"/>
-      <change idref="t118" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t118" attribute="taskType" type="real" from="0" to="2"/>
-      <change idref="t118" attribute="title" type="string" to="Armor"/>
-    </change>
-  </task-change-set>
-  <task-change-set user="Viktor Pekar" date="2015-03-06T07:06:36.478Z" timestamp="2015-03-06T07:06:36.478Z">
-    <change idref="t117" attribute="internalPrerequisitesString" type="string" to="112FS" resolved="yes"/>
-    <change idref="t119" attribute="internalPrerequisitesString" type="string" to="114FS" resolved="yes"/>
-  </task-change-set>
-  <task-change-set user="Viktor Pekar" date="2015-03-06T07:10:15.581Z" timestamp="2015-03-06T07:10:15.581Z">
-    <change idref="t121" to="t59" to-position="1" resolved="yes">
-      <change idref="t121" attribute="isGroup" type="real" from="0" to="1"/>
-      <change idref="t121" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t121" attribute="taskType" type="real" from="0" to="2"/>
-      <change idref="t121" attribute="title" type="string" to="Characters"/>
-    </change>
-    <change idref="t123" to="t59" to-position="2" resolved="yes">
-      <change idref="t123" attribute="isGroup" type="real" from="0" to="1"/>
-      <change idref="t123" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t123" attribute="taskType" type="real" from="0" to="2"/>
-      <change idref="t123" attribute="title" type="string" to="Enemies"/>
-    </change>
-    <change idref="t126" to="t61" to-position="0" resolved="yes">
-      <change idref="t126" attribute="isGroup" type="real" from="0" to="1"/>
-      <change idref="t126" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t126" attribute="taskType" type="real" from="0" to="2"/>
-      <change idref="t126" attribute="title" type="string" to="Characters"/>
-    </change>
-    <change idref="t127" to="t61" to-position="1" resolved="yes">
-      <change idref="t127" attribute="isGroup" type="real" from="0" to="1"/>
-      <change idref="t127" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t127" attribute="taskType" type="real" from="0" to="2"/>
-      <change idref="t127" attribute="title" type="string" to="Enemies"/>
-    </change>
-    <change idref="t128" to="t61" to-position="2" resolved="yes">
-      <change idref="t128" attribute="isGroup" type="real" from="0" to="1"/>
-      <change idref="t128" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t128" attribute="taskType" type="real" from="0" to="2"/>
-      <change idref="t128" attribute="title" type="string" to="Weapons"/>
-    </change>
-    <change idref="t130" to="t61" to-position="3" resolved="yes">
-      <change idref="t130" attribute="isGroup" type="real" from="0" to="1"/>
-      <change idref="t130" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t130" attribute="taskType" type="real" from="0" to="2"/>
-      <change idref="t130" attribute="title" type="string" to="Armor"/>
-    </change>
-    <change idref="t122" to="t121" to-position="0" resolved="yes">
-      <change idref="t122" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t122" attribute="title" type="string" to="Tribe member - Olaf"/>
-    </change>
-    <change idref="t124" to="t123" to-position="0" resolved="yes">
-      <change idref="t124" attribute="internalEffortDone" type="real" from="0" to="28800"/>
-      <change idref="t124" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t124" attribute="title" type="string" to="Horned Lion"/>
-    </change>
-    <change idref="t81" from="t61" from-position="0" to="t126" to-position="0" resolved="yes"/>
-    <change idref="t131" to="t127" to-position="0" resolved="yes">
-      <change idref="t131" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t131" attribute="title" type="string" to="Horned lion blockout"/>
-    </change>
-    <change idref="t132" to="t127" to-position="1" resolved="yes">
-      <change idref="t132" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t132" attribute="title" type="string" to="Horned lion model"/>
-    </change>
-    <change idref="t133" to="t127" to-position="2" resolved="yes">
-      <change idref="t133" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t133" attribute="title" type="string" to="Horned lion texture"/>
-    </change>
-    <change idref="t134" to="t128" to-position="0" resolved="yes">
-      <change idref="t134" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t134" attribute="title" type="string" to="Club blockout"/>
-    </change>
-    <change idref="t135" to="t128" to-position="1" resolved="yes">
-      <change idref="t135" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t135" attribute="title" type="string" to="Club model"/>
-    </change>
-    <change idref="t136" to="t128" to-position="2" resolved="yes">
-      <change idref="t136" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t136" attribute="title" type="string" to="Club texture"/>
-    </change>
-    <change idref="t138" to="t130" to-position="0" resolved="yes">
-      <change idref="t138" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t138" attribute="title" type="string" to="Fur coat texture"/>
-    </change>
-  </task-change-set>
-  <task-change-set user="Viktor Pekar" date="2015-03-06T07:17:45.612Z" timestamp="2015-03-06T07:17:45.612Z">
-    <change idref="t140" to="t24" to-position="0" resolved="yes">
-      <change idref="t140" attribute="isGroup" type="real" from="0" to="1"/>
-      <change idref="t140" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t140" attribute="taskType" type="real" from="0" to="2"/>
-      <change idref="t140" attribute="title" type="string" to="Prototype 01"/>
-    </change>
-    <change idref="t144" to="t24" to-position="1" resolved="yes">
-      <change idref="t144" attribute="isGroup" type="real" from="0" to="1"/>
-      <change idref="t144" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t144" attribute="taskType" type="real" from="0" to="2"/>
-      <change idref="t144" attribute="title" type="string" to="Prototype 02"/>
-    </change>
-    <change idref="t44" attribute="noEarlierThanConstraintDate" type="date" from="2015-02-28T23:00:00.000Z" to="2015-03-02T07:00:00.000Z" resolved="yes"/>
-    <change idref="t44" attribute="internalEffortDone" type="real" from="0" to="3600" resolved="yes"/>
-    <change idref="t47" attribute="internalEffortDone" type="real" from="0" to="7200" resolved="yes"/>
-    <change idref="t49" attribute="internalEffortDone" type="real" from="0" to="14400" resolved="yes"/>
-    <change idref="t50" attribute="internalEffortDone" type="real" from="0" to="7200" resolved="yes"/>
-    <change idref="t52" attribute="internalEffortDone" type="real" from="0" to="14400" resolved="yes"/>
-    <change idref="t71" attribute="internalEffortDone" type="real" from="0" to="2879.999828338623" resolved="yes"/>
-    <change idref="t90" attribute="internalEffortDone" type="real" from="0" to="28800" resolved="yes"/>
-    <change idref="t91" attribute="internalEffortDone" type="real" from="0" to="28800" resolved="yes"/>
-    <change idref="t98" attribute="internalEffortDone" type="real" from="0" to="7200" resolved="yes"/>
-    <change idref="t145" to="t144" to-position="0" resolved="yes">
-      <change idref="t145" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t145" attribute="title" type="string" to="Tactical map"/>
-    </change>
-    <change idref="t141" to="t140" to-position="0" resolved="yes">
-      <change idref="t141" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t141" attribute="title" type="string" to="One tile based map"/>
-    </change>
-    <change idref="t142" to="t140" to-position="1" resolved="yes">
-      <change idref="t142" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t142" attribute="title" type="string" to="Movement on map"/>
-    </change>
-    <change idref="t143" to="t140" to-position="2" resolved="yes">
-      <change idref="t143" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-06T07:00:00.000Z"/>
-      <change idref="t143" attribute="title" type="string" to="One-button battle"/>
-    </change>
-  </task-change-set>
   <task-change-set user="Viktor Pekar" date="2015-03-07T09:38:12.156Z" timestamp="2015-03-07T09:38:12.156Z">
     <change idref="t22" attribute="noLaterThanConstrainedTaskEnd" type="real" from="1" to="0" resolved="yes"/>
     <change idref="t148" to="t46" to-position="7" resolved="yes">
@@ -348,5 +180,15 @@
     <change idref="t142" attribute="internalAssignments" type="string" from="" to="1" resolved="yes"/>
     <change idref="t143" attribute="internalAssignments" type="string" from="" to="1" resolved="yes"/>
     <change idref="t145" attribute="internalAssignments" type="string" from="" to="1" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Viktor Pekar" date="2015-03-08T10:25:36.315Z" timestamp="2015-03-08T10:25:36.315Z">
+    <change idref="t171" to="t-1" to-position="0" resurrection="yes" resolved="yes">
+      <change idref="t171" attribute="effort" type="real" from="28800" to="0"/>
+      <change idref="t171" attribute="isSplittableTask" type="real" from="1" to="0"/>
+      <change idref="t171" attribute="noEarlierThanConstraintDate" type="date" to="2015-03-30T06:00:00.000Z"/>
+      <change idref="t171" attribute="percentCompleteForMilestone" type="real" to="0"/>
+      <change idref="t171" attribute="taskType" type="real" from="0" to="1"/>
+      <change idref="t171" attribute="title" type="string" to="Concept Phase Milestone"/>
+    </change>
   </task-change-set>
 </changelog>
