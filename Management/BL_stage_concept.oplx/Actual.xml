@@ -218,6 +218,7 @@
     <child-task idref="t52"/>
     <child-task idref="t148"/>
     <child-task idref="t149"/>
+    <child-task idref="t172"/>
   </task>
   <task id="t47">
     <title>High Concept</title>
@@ -442,6 +443,7 @@
     <title>Management</title>
     <type>group</type>
     <start-constraint-date>2015-02-28T23:00:00.000Z</start-constraint-date>
+    <child-task idref="t173"/>
     <child-task idref="t87"/>
     <child-task idref="t88"/>
     <child-task idref="t89"/>
@@ -910,6 +912,18 @@
     <type>milestone</type>
     <start-constraint-date>2015-03-30T06:00:00.000Z</start-constraint-date>
     <start-no-earlier-than>2015-03-30T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t172">
+    <title>Enemy List</title>
+    <effort>28800</effort>
+    <start-constraint-date>2015-03-09T07:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-03-09T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t173">
+    <title>Finding a name</title>
+    <effort>28800</effort>
+    <start-constraint-date>2015-03-09T07:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-03-09T07:00:00.000Z</start-no-earlier-than>
   </task>
   <critical-path root="-1" enabled="true" resources="false">
     <color r="1" g="0.5" b="0.5"/>

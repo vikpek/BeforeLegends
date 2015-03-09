@@ -4,8 +4,10 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class ButtonTreeController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
-	
+public class ButtonTreeController : MonoBehaviour, IPointerClickHandler {
+
+	bool currentState = false;
+
 	List<Button> secondOrderButtons = new List<Button>();
 	
 	// Use this for initialization
@@ -19,20 +21,15 @@ public class ButtonTreeController : MonoBehaviour, IPointerDownHandler, IPointer
 			}
 		}
 	}
-	
-	public void OnPointerDown(PointerEventData data)
-	{
-		setSecondOrderButtonsTo (true);
-	}
 
-	public void OnPointerUp(PointerEventData eventData)
-
+	public void OnPointerClick (PointerEventData eventData)
 	{
-		setSecondOrderButtonsTo (false);
+		setSecondOrderButtonsTo (!currentState);
 	}
 
 	void setSecondOrderButtonsTo (bool state)
 	{
+		currentState = state;
 		foreach (Button b in secondOrderButtons) {
 			b.gameObject.SetActive (state);
 		}
