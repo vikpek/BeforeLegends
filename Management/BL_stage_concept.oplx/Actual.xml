@@ -219,6 +219,8 @@
     <child-task idref="t148"/>
     <child-task idref="t149"/>
     <child-task idref="t172"/>
+    <child-task idref="t174"/>
+    <child-task idref="t175"/>
   </task>
   <task id="t47">
     <title>High Concept</title>
@@ -666,11 +668,7 @@
     <title>Enemies</title>
     <type>group</type>
     <start-constraint-date>2015-03-06T07:00:00.000Z</start-constraint-date>
-    <child-task idref="t131"/>
-    <child-task idref="t132"/>
-    <child-task idref="t164"/>
-    <child-task idref="t151"/>
-    <child-task idref="t152"/>
+    <child-task idref="t185"/>
     <start-no-earlier-than>2015-03-06T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t128">
@@ -798,17 +796,19 @@
     <title>Actionpoint System</title>
     <effort>28800</effort>
     <start-constraint-date>2015-03-09T07:00:00.000Z</start-constraint-date>
+    <assignment idref="r3"/>
     <start-no-earlier-than>2015-03-09T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t149">
     <title>Character management</title>
     <effort>28800</effort>
     <start-constraint-date>2015-03-09T07:00:00.000Z</start-constraint-date>
+    <assignment idref="r3"/>
     <start-no-earlier-than>2015-03-09T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t151">
     <title>Horned lion rig</title>
-    <effort>28800</effort>
+    <effort>25200</effort>
     <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
     <prerequisite-task idref="t164"/>
     <assignment idref="r6"/>
@@ -816,10 +816,15 @@
   </task>
   <task id="t152">
     <title>Horned lion animation</title>
-    <effort>28800</effort>
+    <type>group</type>
     <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
+    <child-task idref="t177"/>
+    <child-task idref="t178"/>
+    <child-task idref="t179"/>
+    <child-task idref="t180"/>
+    <child-task idref="t181"/>
+    <child-task idref="t182"/>
     <prerequisite-task idref="t151"/>
-    <assignment idref="r6"/>
     <start-no-earlier-than>2015-03-06T23:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t154">
@@ -878,7 +883,7 @@
   </task>
   <task id="t164">
     <title>Horned lion unwrap</title>
-    <effort>10800</effort>
+    <effort>18000</effort>
     <start-constraint-date>2015-03-06T23:00:00.000Z</start-constraint-date>
     <prerequisite-task idref="t132"/>
     <assignment idref="r6"/>
@@ -917,6 +922,7 @@
     <title>Enemy List</title>
     <effort>28800</effort>
     <start-constraint-date>2015-03-09T07:00:00.000Z</start-constraint-date>
+    <assignment idref="r3"/>
     <start-no-earlier-than>2015-03-09T07:00:00.000Z</start-no-earlier-than>
   </task>
   <task id="t173">
@@ -924,6 +930,67 @@
     <effort>28800</effort>
     <start-constraint-date>2015-03-09T07:00:00.000Z</start-constraint-date>
     <start-no-earlier-than>2015-03-09T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t174">
+    <title>Weapon List</title>
+    <effort>28800</effort>
+    <start-constraint-date>2015-03-10T07:00:00.000Z</start-constraint-date>
+    <assignment idref="r3"/>
+    <start-no-earlier-than>2015-03-10T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t175">
+    <title>Armor List</title>
+    <effort>28800</effort>
+    <start-constraint-date>2015-03-10T07:00:00.000Z</start-constraint-date>
+    <assignment idref="r3"/>
+    <start-no-earlier-than>2015-03-10T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t177">
+    <title>Idle 01</title>
+    <effort>3600</effort>
+    <start-constraint-date>2015-03-10T07:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-03-10T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t178">
+    <title>Idle 02</title>
+    <effort>3600</effort>
+    <start-constraint-date>2015-03-10T07:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-03-10T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t179">
+    <title>Attack</title>
+    <effort>7200</effort>
+    <start-constraint-date>2015-03-10T07:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-03-10T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t180">
+    <title>Critical Attack</title>
+    <effort>3600</effort>
+    <start-constraint-date>2015-03-10T07:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-03-10T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t181">
+    <title>Hurt</title>
+    <effort>1800</effort>
+    <start-constraint-date>2015-03-10T07:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-03-10T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t182">
+    <title>Death</title>
+    <effort>3600</effort>
+    <start-constraint-date>2015-03-10T07:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2015-03-10T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t185">
+    <title>Horned Lion</title>
+    <type>group</type>
+    <start-constraint-date>2015-03-10T07:00:00.000Z</start-constraint-date>
+    <child-task idref="t131"/>
+    <child-task idref="t132"/>
+    <child-task idref="t164"/>
+    <child-task idref="t151"/>
+    <child-task idref="t152"/>
+    <start-no-earlier-than>2015-03-10T07:00:00.000Z</start-no-earlier-than>
   </task>
   <critical-path root="-1" enabled="true" resources="false">
     <color r="1" g="0.5" b="0.5"/>
