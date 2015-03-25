@@ -1,0 +1,933 @@
+fileFormatVersion: 2
+guid: fc4451349a0d7a540ab3c503e16209c8
+timeCreated: 1426698101
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Box001
+    100002: chest
+    100004: f_index.01.L
+    100006: f_index.01.R
+    100008: f_index.02.L
+    100010: f_index.02.R
+    100012: f_index.03.L
+    100014: f_index.03.L_end
+    100016: f_index.03.R
+    100018: f_index.03.R_end
+    100020: f_middle.01.L
+    100022: f_middle.01.R
+    100024: f_middle.02.L
+    100026: f_middle.02.R
+    100028: f_middle.03.L
+    100030: f_middle.03.L_end
+    100032: f_middle.03.R
+    100034: f_middle.03.R_end
+    100036: f_pinky.01.L
+    100038: f_pinky.01.R
+    100040: f_pinky.02.L
+    100042: f_pinky.02.R
+    100044: f_pinky.03.L
+    100046: f_pinky.03.L_end
+    100048: f_pinky.03.R
+    100050: f_pinky.03.R_end
+    100052: f_ring.01.L
+    100054: f_ring.01.R
+    100056: f_ring.02.L
+    100058: f_ring.02.R
+    100060: f_ring.03.L
+    100062: f_ring.03.L_end
+    100064: f_ring.03.R
+    100066: f_ring.03.R_end
+    100068: foot.L
+    100070: foot.R
+    100072: foot_ik.L
+    100074: foot_ik.L_end
+    100076: foot_ik.R
+    100078: foot_ik.R_end
+    100080: foot_ik_main.L
+    100082: foot_ik_main.R
+    100084: forearm.L
+    100086: forearm.R
+    100088: hand.L
+    100090: hand.R
+    100092: head
+    100094: head_end
+    100096: hips
+    100098: hips_main
+    100100: neck
+    100102: //RootNode
+    100104: Olaf_rig
+    100106: palm.01.L
+    100108: palm.01.R
+    100110: palm.02.L
+    100112: palm.02.R
+    100114: palm.03.L
+    100116: palm.03.R
+    100118: palm.04.L
+    100120: palm.04.R
+    100122: pole.L
+    100124: pole.L_end
+    100126: pole.R
+    100128: pole.R_end
+    100130: roll_back.L
+    100132: roll_back.R
+    100134: roll_front.L
+    100136: roll_front.R
+    100138: roll_main.L
+    100140: roll_main.L_end
+    100142: roll_main.R
+    100144: roll_main.R_end
+    100146: shin.L
+    100148: shin.R
+    100150: shoulder.L
+    100152: shoulder.R
+    100154: spine
+    100156: thigh.L
+    100158: thigh.R
+    100160: thumb.01.L
+    100162: thumb.01.R
+    100164: thumb.02.L
+    100166: thumb.02.R
+    100168: thumb.03.L
+    100170: thumb.03.L_end
+    100172: thumb.03.R
+    100174: thumb.03.R_end
+    100176: toe.L
+    100178: toe.L_end
+    100180: toe.R
+    100182: toe.R_end
+    100184: upper_arm.L
+    100186: upper_arm.R
+    100188: weapon.L
+    100190: weapon.L_end
+    100192: weapon.R
+    100194: weapon.R_end
+    400000: Box001
+    400002: chest
+    400004: f_index.01.L
+    400006: f_index.01.R
+    400008: f_index.02.L
+    400010: f_index.02.R
+    400012: f_index.03.L
+    400014: f_index.03.L_end
+    400016: f_index.03.R
+    400018: f_index.03.R_end
+    400020: f_middle.01.L
+    400022: f_middle.01.R
+    400024: f_middle.02.L
+    400026: f_middle.02.R
+    400028: f_middle.03.L
+    400030: f_middle.03.L_end
+    400032: f_middle.03.R
+    400034: f_middle.03.R_end
+    400036: f_pinky.01.L
+    400038: f_pinky.01.R
+    400040: f_pinky.02.L
+    400042: f_pinky.02.R
+    400044: f_pinky.03.L
+    400046: f_pinky.03.L_end
+    400048: f_pinky.03.R
+    400050: f_pinky.03.R_end
+    400052: f_ring.01.L
+    400054: f_ring.01.R
+    400056: f_ring.02.L
+    400058: f_ring.02.R
+    400060: f_ring.03.L
+    400062: f_ring.03.L_end
+    400064: f_ring.03.R
+    400066: f_ring.03.R_end
+    400068: foot.L
+    400070: foot.R
+    400072: foot_ik.L
+    400074: foot_ik.L_end
+    400076: foot_ik.R
+    400078: foot_ik.R_end
+    400080: foot_ik_main.L
+    400082: foot_ik_main.R
+    400084: forearm.L
+    400086: forearm.R
+    400088: hand.L
+    400090: hand.R
+    400092: head
+    400094: head_end
+    400096: hips
+    400098: hips_main
+    400100: neck
+    400102: //RootNode
+    400104: Olaf_rig
+    400106: palm.01.L
+    400108: palm.01.R
+    400110: palm.02.L
+    400112: palm.02.R
+    400114: palm.03.L
+    400116: palm.03.R
+    400118: palm.04.L
+    400120: palm.04.R
+    400122: pole.L
+    400124: pole.L_end
+    400126: pole.R
+    400128: pole.R_end
+    400130: roll_back.L
+    400132: roll_back.R
+    400134: roll_front.L
+    400136: roll_front.R
+    400138: roll_main.L
+    400140: roll_main.L_end
+    400142: roll_main.R
+    400144: roll_main.R_end
+    400146: shin.L
+    400148: shin.R
+    400150: shoulder.L
+    400152: shoulder.R
+    400154: spine
+    400156: thigh.L
+    400158: thigh.R
+    400160: thumb.01.L
+    400162: thumb.01.R
+    400164: thumb.02.L
+    400166: thumb.02.R
+    400168: thumb.03.L
+    400170: thumb.03.L_end
+    400172: thumb.03.R
+    400174: thumb.03.R_end
+    400176: toe.L
+    400178: toe.L_end
+    400180: toe.R
+    400182: toe.R_end
+    400184: upper_arm.L
+    400186: upper_arm.R
+    400188: weapon.L
+    400190: weapon.L_end
+    400192: weapon.R
+    400194: weapon.R_end
+    4300000: Box001
+    7400000: Olaf_rig|Idle_01
+    7400002: Olaf_rig|Idle_02_fight_1H
+    7400004: Olaf_rig|PoseLib
+    9500000: //RootNode
+    13700000: Box001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Olaf_rig|Idle_01
+      takeName: Olaf_rig|Idle_01
+      firstFrame: 0
+      lastFrame: 72
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Box001
+        weight: 1
+      - path: Olaf_rig
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/pole.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/pole.L/pole.L_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_back.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_back.L/roll_front.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L/foot_ik.L_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_main.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_main.L/roll_main.L_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/pole.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/pole.R/pole.R_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_back.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_back.R/roll_front.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R/foot_ik.R_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_main.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_main.R/roll_main.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main
+        weight: 1
+      - path: Olaf_rig/hips_main/hips
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/neck
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/neck/head
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L/weapon.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R/weapon.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L/shin.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R/shin.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Olaf_rig|Idle_02_fight_1H
+      takeName: Olaf_rig|Idle_02_fight_1H
+      firstFrame: 0
+      lastFrame: 72
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Box001
+        weight: 1
+      - path: Olaf_rig
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/pole.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/pole.L/pole.L_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_back.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_back.L/roll_front.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L/foot_ik.L_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_main.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_main.L/roll_main.L_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/pole.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/pole.R/pole.R_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_back.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_back.R/roll_front.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R/foot_ik.R_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_main.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_main.R/roll_main.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main
+        weight: 1
+      - path: Olaf_rig/hips_main/hips
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/neck
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/neck/head
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L/weapon.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R/weapon.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L/shin.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R/shin.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Olaf_rig|PoseLib
+      takeName: Olaf_rig|PoseLib
+      firstFrame: 0
+      lastFrame: 2
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Box001
+        weight: 1
+      - path: Olaf_rig
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/pole.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/pole.L/pole.L_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_back.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_back.L/roll_front.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L/foot_ik.L_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_main.L
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.L/roll_main.L/roll_main.L_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/pole.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/pole.R/pole.R_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_back.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_back.R/roll_front.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R/foot_ik.R_end
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_main.R
+        weight: 1
+      - path: Olaf_rig/foot_ik_main.R/roll_main.R/roll_main.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main
+        weight: 1
+      - path: Olaf_rig/hips_main/hips
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/neck
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/neck/head
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L/weapon.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R/weapon.R_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L/shin.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R/shin.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Olaf_rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
