@@ -8,6 +8,12 @@ var mapW : int;
 var mapH : int;
 var chunkW : int;
 var chunkH : int;
+var seed : int;
+var erosionScale : float;
+var continentScale : float;
+var moistureScale : float;
+var erosionWeight : float;
+var continentWeight : float;
 
 @HideInInspector
 var flatHex : FlatHexagon;
@@ -16,23 +22,23 @@ var flatHex : FlatHexagon;
 var tiles : Hexagon[,];
 
 @HideInInspector
-var seed : Vector2;
+var continentSeed : Vector2;
 
+@HideInInspector
+var moistureSeed : Vector2;
 
-var mat0 : Material;
-var mat1 : Material;
-var mat2 : Material;
-var mat3 : Material;
-var mat4 : Material;
-var mat5 : Material;
-var mat6 : Material;
-var mat7 : Material;
-var mat8 : Material;
+@HideInInspector
+var erosionSeed : Vector2;
+
+var tileMaterials : Material[];
 
 
 function Awake(){
-	seed = Vector2(Random.Range(0, 40), Random.Range(0, 40));
 	instance = this;
+	Random.seed = seed;
+	continentSeed = Vector2(Random.Range(0f, 65536f), Random.Range(0f, 65536f));
+	moistureSeed = Vector2(Random.Range(0f, 65536f), Random.Range(0f, 65536f));
+	erosionSeed = Vector2(Random.Range(0f, 65536f), Random.Range(0f, 65536f));
 	flatHex = FlatHexagon(hexRadius);
 	generateMap();
 }
@@ -40,7 +46,7 @@ function Awake(){
 function generateMap(){
 	tiles = new Hexagon[mapW, mapH];
 	for(var y = 0; y < mapH; y++){
-		var odd : boolean = y % 2 == 0;
+		var odd : boolean = y % 2 == 1;
 		for(var x = 0; x < mapW; x++){
 			tiles[x, y] = Hexagon();
 			tiles[x, y].position = Vector3(x * flatHex.size.x + (odd ? flatHex.extents.x : 0), 0, y * flatHex.size.z * 0.75);
@@ -64,7 +70,6 @@ function createChunk(xChunk : int, yChunk : int){
 	var chunk : GameObject = GameObject("Chunk(" + xChunk + "|" + yChunk + ")");
 	var render : MeshRenderer = chunk.AddComponent(MeshRenderer);
 	var filter : MeshFilter = chunk.AddComponent(MeshFilter);
-	var collider : MeshCollider = chunk.AddComponent(MeshCollider);
 	var meshes : List.<CombineInstance> = new List.<CombineInstance>();
 	var materials : List.<Material> = new List.<Material>();
 	chunk.transform.position = Vector3(xChunk * chunkW * flatHex.size.x, 0, yChunk * chunkH * flatHex.size.z * 0.75);
@@ -77,42 +82,12 @@ function createChunk(xChunk : int, yChunk : int){
 			combInst.mesh = flatHex.hexMesh;
 			combInst.transform = matrix;
 			meshes.Add(combInst);
-			
-			switch(hex.matID){
-				case 0 :
-					materials.Add(mat0);
-					break;
-				case 1 :
-					materials.Add(mat1);
-					break;
-				case 2 :
-					materials.Add(mat2);
-					break;
-				case 3 :
-					materials.Add(mat3);
-					break;
-				case 4 :
-					materials.Add(mat4);
-					break;
-				case 5 :
-					materials.Add(mat5);
-					break;
-				case 6 :
-					materials.Add(mat6);
-					break;
-				case 7 :
-					materials.Add(mat7);
-					break;
-				case 8 :
-					materials.Add(mat8);
-					break;
-			}
+			materials.Add(tileMaterials[hex.matID]);
 		}
 	}
 	var meshArray : CombineInstance[] = meshes.ToArray();
 	var materialArray : Material[] = materials.ToArray();
 	filter.mesh.CombineMeshes(meshArray, false);
-	collider.sharedMesh = filter.mesh;
 	filter.mesh.RecalculateNormals();
 	filter.mesh.RecalculateBounds();
 	render.materials = materialArray;

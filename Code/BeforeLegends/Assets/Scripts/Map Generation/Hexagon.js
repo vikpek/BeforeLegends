@@ -6,17 +6,49 @@ var yGrid : int;
 
 var vertices : Vector3[];
 
-var hexMesh : Mesh;
 var matID : int;
 var position : Vector3;
 
+var elevation : float;
+var erosion : float;
+var continent : float;
+var moisture : float;
+
+var traversable : boolean;
+
 function generate(){
-	var perlin : float = calcPerlin(MapManager.instance.seed.x, MapManager.instance.seed.y, 0.015);
 	var fault : float = calcFault(MapManager.instance.flatHex.size.x * MapManager.instance.mapW, MapManager.instance.flatHex.size.z * 0.75 * MapManager.instance.mapH);
-	var elevation = perlin * fault;
+	moisture = calcPerlin(MapManager.instance.moistureSeed, MapManager.instance.moistureScale);
+	erosion = calcPerlin(MapManager.instance.erosionSeed, MapManager.instance.erosionScale);
+	continent = calcPerlin(MapManager.instance.continentSeed, MapManager.instance.continentScale);
+	elevation = (continent * MapManager.instance.continentWeight + erosion * MapManager.instance.erosionWeight) * fault;
 	
+	assignMaterial();
+	traversable = matID > 2 && matID < 7;
+}
+
+function calcPerlin(offset : Vector2, scale : float){
+	return Mathf.PerlinNoise(offset.x + position.x * scale, offset.y + position.z * scale);
+}
+
+function calcFault(xMax : float, yMax : float){
+	var bottom = position.z;
+	var top = yMax - position.z;
+	var left = position.x;
+	var	right = xMax - position.x;
 	
+	var horizontal = left < right ? left : right;
+	var vertical = bottom < top ? bottom : top;
+	var all = horizontal < vertical ? horizontal : vertical; 
 	
+	if(all > xMax * 0.15){
+		return 1;
+	}else{
+		return all / (xMax * 0.15);  
+	}
+}
+
+function assignMaterial(){
 	if(elevation < 0.20){
 		matID = 0;
 	}else if(elevation < 0.30){
@@ -36,30 +68,6 @@ function generate(){
 	}else{
 		matID = 8;
 	}
-	
-}
-
-function calcPerlin(offsetX : float, offsetY : float, scale : float){
-	return Mathf.PerlinNoise(offsetX + position.x * scale, offsetY + position.z * scale);
-}
-
-function calcFault(xMax : float, yMax : float){
-	var bottom = position.z;
-	var top = yMax - position.z;
-	var left = position.x;
-	var	right = xMax - position.x;
-	
-	var horizontal = left < right ? left : right;
-	var vertical = bottom < top ? bottom : top;
-	var all = horizontal < vertical ? horizontal : vertical; 
-	
-	if(all > xMax * 0.15){
-		return 1;
-	}else{
-		return all / (xMax * 0.15);  
-	}
-	
-
 }
 
 
