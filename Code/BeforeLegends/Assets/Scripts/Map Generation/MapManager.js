@@ -1,5 +1,5 @@
-﻿#pragma strict
-import System.Collections.Generic;
+﻿import System.Collections.Generic;
+import System.Linq;
 
 static var instance : MapManager;
 
@@ -55,7 +55,10 @@ function generateMap(){
 			tiles[x, y].generate();
 		}
 	}
-
+	
+	for(var hex : Hexagon in tiles){
+		hex.assignMaterials();
+	}
 	var xChunks = mapW / chunkW;
 	var yChunks = mapH / chunkH;
 
@@ -91,4 +94,44 @@ function createChunk(xChunk : int, yChunk : int){
 	filter.mesh.RecalculateNormals();
 	filter.mesh.RecalculateBounds();
 	render.materials = materialArray;
+}
+
+function findPath(startX : int, startY : int, goalX : int, goalY : int){
+	var reachable : List.<PathNode> = new List.<PathNode>();
+	var visited : List.<PathNode> = new List.<PathNode>();
+	reachable.Add(PathNode(startX, startY));
+	
+	while(reachable.Count){
+		var cheapest : PathNode = reachable.OrderBy(function(node){return node.f;}).ToList()[0];
+		visited.Add(cheapest);
+		reachable.Remove(cheapest);
+	
+		for(var hex in tiles[cheapest.x, cheapest.y].getAdjacent()){
+			var gotVisited : boolean = false;
+			for(var vNode in visited){
+				if(hex.xGrid == vNode.x && hex.yGrid == vNode.y){
+					gotVisited = true;
+					break;
+				}
+			}
+		
+			if(hex.traversable && !gotVisited){
+				var isReachable : boolean = false;
+				for(var rNode in reachable){
+					if(hex.xGrid == rNode.x && hex.yGrid == rNode.y){
+						isReachable = true;
+						rNode.tryAlternative(cheapest);
+						break;
+					}
+				}
+			
+				if(!isReachable){
+					var nNode : PathNode = PathNode(hex.xGrid, hex.yGrid, cheapest, goalX, goalY);
+					if(hex.xGrid == goalX && hex.yGrid == goalY) return nNode.toPath();
+					reachable.Add(nNode);
+				}
+			}
+		}
+	}
+	return null;
 }

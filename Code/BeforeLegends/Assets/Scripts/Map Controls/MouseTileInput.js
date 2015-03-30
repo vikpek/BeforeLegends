@@ -3,14 +3,14 @@
 static var instance : MouseTileInput;
 
 @HideInInspector
-var lastTileX : int;
+var lastTileX : int = 0;
 @HideInInspector
-var lastTileY : int;
+var lastTileY : int = 0;
 
 @HideInInspector
-var lastTilePosX : float;
+var lastTilePosX : float = 0;
 @HideInInspector
-var lastTilePosZ : float;
+var lastTilePosZ : float = 0;
 
 function Awake(){
 	instance = this;
