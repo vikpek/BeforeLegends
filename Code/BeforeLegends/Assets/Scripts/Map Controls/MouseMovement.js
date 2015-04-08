@@ -1,7 +1,5 @@
 ﻿#pragma strict
 
-
-
 function Update () {
 	gameObject.transform.position.y -= Input.mouseScrollDelta.y;
 	

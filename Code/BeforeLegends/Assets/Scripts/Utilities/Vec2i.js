@@ -1,4 +1,4 @@
-﻿private class Vec2i{
+﻿public class Vec2i{
 	var x : int;
 	var y : int;
 		
