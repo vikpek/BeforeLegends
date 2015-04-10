@@ -1,4 +1,5 @@
 ﻿public class Vec2i{
+	
 	var x : int;
 	var y : int;
 		

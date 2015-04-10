@@ -2,18 +2,14 @@
 
 static var instance : MouseTileInput;
 
-@HideInInspector
-var lastTileX : int = 0;
-@HideInInspector
-var lastTileY : int = 0;
+var lastTile : Vec2i = Vec2i(0, 0); 
 
-@HideInInspector
-var lastTilePosX : float = 0;
-@HideInInspector
-var lastTilePosZ : float = 0;
+var lastTilePos : Vector3 = Vector3.zero;
+
+var lastWorldPos : Vector3 = Vector3.zero;
 
 function Awake(){
-	instance = this;
+	if(!instance) instance = this;
 }
 
 function Update(){
@@ -24,10 +20,10 @@ function Update(){
 			var odd : boolean = newTileY % 2 == 1;
 			var newTileX : int = Mathf.Round((hit.point.x - (odd ? MapManager.instance.flatHex.extents.x : 0)) / MapManager.instance.flatHex.size.x);
 			if(newTileX >= 0 && newTileX < MapManager.instance.mapW){
-				lastTileY = newTileY;
-				lastTileX = newTileX;
-				lastTilePosX = lastTileX * MapManager.instance.flatHex.size.x + (odd ? MapManager.instance.flatHex.extents.x : 0);
-				lastTilePosZ = lastTileY * MapManager.instance.flatHex.size.z * 0.75;
+				lastWorldPos = hit.point;
+				lastTile.y = newTileY;
+				lastTile.x = newTileX;
+				lastTilePos = MapManager.instance.tiles[newTileX, newTileY].position;
 			}
 		}
 	}

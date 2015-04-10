@@ -17,6 +17,8 @@ var traversable : boolean;
 var river : boolean = false;
 var sea : boolean = false;
 
+var mapObjects : List.<MapObjectData> = List.<MapObjectData>(); 
+
 function generate(){
 	var fault : float = calcFault(MapManager.instance.flatHex.size.x * MapManager.instance.mapW, MapManager.instance.flatHex.size.z * 0.75 * MapManager.instance.mapH);
 	moisture = calcPerlin(MapManager.instance.moistureSeed, MapManager.instance.moistureScale);
@@ -79,7 +81,12 @@ function assignMaterials(){
 		matID = 2;
 	}
 	
+	//TEST
 	traversable = matID > 2 && matID < 7;
+	if(traversable && Random.Range(0, 1f) > 0.90){
+		var entity : GameObject = GameObject.Instantiate(CharacterModelPrefabs.prefabs[0], position, Quaternion.identity);
+		entity.GetComponent(MapObjectData).pos = Vec2i(xGrid, yGrid);
+	}
 }
 
 function getNE() : Hexagon{

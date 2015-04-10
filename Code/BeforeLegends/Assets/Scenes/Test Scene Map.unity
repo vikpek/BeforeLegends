@@ -98,6 +98,9 @@ GameObject:
   - 114: {fileID: 258453195}
   - 65: {fileID: 258453194}
   - 114: {fileID: 258453193}
+  - 114: {fileID: 258453197}
+  - 114: {fileID: 258453198}
+  - 114: {fileID: 258453199}
   m_Layer: 0
   m_Name: System
   m_TagString: Untagged
@@ -116,10 +119,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2ea821b23f24e3439555f67d0064a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastTileX: 0
-  lastTileY: 0
-  lastTilePosX: 0
-  lastTilePosZ: 0
+  lastTile:
+    x: 0
+    y: 0
+  lastTilePos: {x: 0, y: 0, z: 0}
+  lastWorldPos: {x: 0, y: 0, z: 0}
 --- !u!65 &258453194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -188,6 +192,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &258453197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258453192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c1efacb1248f24fa8e926a1e17eb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &258453198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258453192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5389981cc42ecc04185ae62141778303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &258453199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258453192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665aacacc5d1c3147a8719429b627886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs_editor:
+  - {fileID: 103768, guid: 5a2f5d45753d2b54ab08939c39582382, type: 2}
 --- !u!1 &988179219
 GameObject:
   m_ObjectHideFlags: 0
