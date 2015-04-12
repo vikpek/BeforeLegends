@@ -14,16 +14,17 @@ function Awake(){
 
 function Update(){
 	var hit : RaycastHit;
+	var data : WorldMapData = WorldMapData.getInstance();
 	if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), hit)){
-		var newTileY : int = Mathf.Round(hit.point.z / (MapManager.instance.flatHex.size.z * 0.75));
-		if(newTileY >= 0 && newTileY < MapManager.instance.mapH){
+		var newTileY : int = Mathf.Round(hit.point.z / (data.flatHex.size.z * 0.75));
+		if(newTileY >= 0 && newTileY < data.size.y){
 			var odd : boolean = newTileY % 2 == 1;
-			var newTileX : int = Mathf.Round((hit.point.x - (odd ? MapManager.instance.flatHex.extents.x : 0)) / MapManager.instance.flatHex.size.x);
-			if(newTileX >= 0 && newTileX < MapManager.instance.mapW){
+			var newTileX : int = Mathf.Round((hit.point.x - (odd ? data.flatHex.extents.x : 0)) / data.flatHex.size.x);
+			if(newTileX >= 0 && newTileX < data.size.x){
 				lastWorldPos = hit.point;
 				lastTile.y = newTileY;
 				lastTile.x = newTileX;
-				lastTilePos = MapManager.instance.tiles[newTileX, newTileY].position;
+				lastTilePos = data.tiles[newTileX, newTileY].position;
 			}
 		}
 	}

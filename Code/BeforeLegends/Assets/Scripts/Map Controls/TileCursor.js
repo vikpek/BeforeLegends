@@ -4,7 +4,7 @@ var matX : Material;
 var matO : Material;
 
 function Update(){
-	if(MapManager.instance.tiles[MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y].traversable){
+	if(WorldMapData.getInstance().tiles[MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y].traversable){
 		gameObject.GetComponent.<Renderer>().material = matO;
 	}else{
 		gameObject.GetComponent.<Renderer>().material = matX;

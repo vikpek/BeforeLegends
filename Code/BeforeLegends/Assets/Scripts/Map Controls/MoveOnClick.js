@@ -12,10 +12,10 @@ function Update(){
 				objData.data.Add(ScriptableObject.CreateInstance(MapObjectData) as MapObjectData);
 				objData.data[0].pos = Vec2i(MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y);
 				objData.setPosition(Vec2i(MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y));
-				transform.position = MapManager.instance.tiles[objData.pos.x, objData.pos.y].position; 
+				transform.position = WorldMapData.getInstance().tiles[objData.pos.x, objData.pos.y].position; 
 				return;
 			}
 		}
-		objData.followPath(objData.pos.x, objData.pos.y, MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y, 0.25);
+		objData.followPath(WorldMapData.getInstance().findPath(objData.pos.x, objData.pos.y, MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y), 0.25);
 	}
 }
