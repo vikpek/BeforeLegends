@@ -12,11 +12,13 @@ function Awake(){
 }
 
 function Update(){
-	for(var msg : Message in messages){
-		var list : ArrayList = listeners[msg.type];
+	for(var message in messages){
+		var msg : Message = message as Message;
+		var list : ArrayList = listeners[msg.type] as ArrayList;
 		if(list){
-			for(var listener : GameObject in list){
-				listener.SendMessage("onEvent_" + msg.type, msg, SendMessageOptions.DontRequireReceiver);
+			for(var listener in list){
+				var go : GameObject = listener as GameObject;
+				go.SendMessage("onEvent_" + msg.type, msg, SendMessageOptions.DontRequireReceiver);
 			}
 		}
 	}
@@ -28,20 +30,19 @@ function send(msg : Message){
 }
 
 function listen(go : GameObject, type : String){
-	var list : ArrayList = listeners[type];
-	if(list){
-		list = listeners[type];
-		if(list.Contains(go)) return;
-	}else{
+	var list : ArrayList = listeners[type] as ArrayList;
+	if(list == null){
 		list = ArrayList();
 		listeners[type] = list;
+	}else if(list.Contains(go)){
+		return;
 	}
 	
 	list.Add(go);
 }
 
 function ignore(go : GameObject, type : String){
-	var list : ArrayList = listeners[type];
+	var list : ArrayList = listeners[type] as ArrayList;
 	if(list) list.Remove(go);
 } 
 

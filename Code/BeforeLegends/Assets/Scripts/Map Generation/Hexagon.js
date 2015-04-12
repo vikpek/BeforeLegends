@@ -85,7 +85,10 @@ function assignMaterials(){
 	traversable = matID > 2 && matID < 7;
 	if(traversable && Random.Range(0, 1f) > 0.90){
 		var entity : GameObject = GameObject.Instantiate(CharacterModelPrefabs.prefabs[0], position, Quaternion.identity);
-		entity.GetComponent(MapObjectData).pos = Vec2i(xGrid, yGrid);
+		var carrier : MapObjectCarrier = entity.GetComponent(MapObjectCarrier);
+		carrier.data = mapObjects;
+		carrier.setPosition(Vec2i(xGrid, yGrid));
+		
 	}
 }
 

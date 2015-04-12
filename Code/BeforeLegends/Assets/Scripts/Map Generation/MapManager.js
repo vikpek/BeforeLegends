@@ -37,13 +37,16 @@ var tileMaterials : Material[];
 
 
 function Awake(){
-	instance = this;
+	if(!instance) instance = this;
 	Random.seed = seed;
 	continentSeed = Vector2(Random.Range(0f, 65536f), Random.Range(0f, 65536f));
 	moistureSeed = Vector2(Random.Range(0f, 65536f), Random.Range(0f, 65536f));
 	erosionSeed = Vector2(Random.Range(0f, 65536f), Random.Range(0f, 65536f));
 	flatHex = FlatHexagon(hexRadius);
 	chunkMesh = getChunkMesh();
+}
+
+function Start(){
 	generateMap();
 }
 
@@ -113,6 +116,7 @@ function createChunk(xChunk : int, yChunk : int){
 }
 
 function findPath(startX : int, startY : int, goalX : int, goalY : int){
+	if(!tiles[startX, startY].traversable || !tiles[goalX, goalY].traversable || (startX == goalX && startY == goalY)) return null;
 	var reachable : List.<PathNode> = new List.<PathNode>();
 	var visited : List.<PathNode> = new List.<PathNode>();
 	reachable.Add(PathNode(startX, startY));

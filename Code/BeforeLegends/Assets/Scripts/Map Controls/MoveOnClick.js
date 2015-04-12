@@ -1,19 +1,21 @@
 ﻿#pragma strict
 
-var objData : MapObjectData;
+var objData : MapObjectCarrier;
 
 
 function Update(){
 	if(Input.GetMouseButtonDown(0)){
 		if(objData == null){
-			objData = gameObject.GetComponent(MapObjectData);
+			objData = gameObject.GetComponent(MapObjectCarrier);
 			if(objData == null){
-				objData = gameObject.AddComponent(MapObjectData);
-				objData.pos = Vec2i(MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y);
+				objData = gameObject.AddComponent(MapObjectCarrier);
+				objData.data.Add(ScriptableObject.CreateInstance(MapObjectData) as MapObjectData);
+				objData.data[0].pos = Vec2i(MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y);
+				objData.setPosition(Vec2i(MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y));
 				transform.position = MapManager.instance.tiles[objData.pos.x, objData.pos.y].position; 
 				return;
 			}
 		}
-		ObjectTileMovement.followPath(gameObject, objData.pos.x, objData.pos.y, MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y, 0.25);
+		objData.followPath(objData.pos.x, objData.pos.y, MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y, 0.25);
 	}
 }
