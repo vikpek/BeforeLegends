@@ -2,8 +2,7 @@
 import System.Collections.Generic;
 
 public class Hexagon{
-var xGrid : int;
-var yGrid : int;
+var gridPos : Vec2i;
 
 var matID : int;
 var position : Vector3;
@@ -19,12 +18,12 @@ var sea : boolean = false;
 
 var mapObjects : List.<MapObjectData> = List.<MapObjectData>(); 
 
-function generate(){
-	var fault : float = calcFault(MapManager.instance.flatHex.size.x * MapManager.instance.mapW, MapManager.instance.flatHex.size.z * 0.75 * MapManager.instance.mapH);
-	moisture = calcPerlin(MapManager.instance.moistureSeed, MapManager.instance.moistureScale);
-	erosion = calcPerlin(MapManager.instance.erosionSeed, MapManager.instance.erosionScale);
-	continent = calcPerlin(MapManager.instance.continentSeed, MapManager.instance.continentScale);
-	elevation = (continent * MapManager.instance.continentWeight + erosion * MapManager.instance.erosionWeight) * fault;
+function generate(generator : WorldMapGenerator){
+	var fault : float = calcFault(generator.flatHex.size.x * generator.size.x, generator.flatHex.size.z * 0.75 * generator.size.y);
+	moisture = calcPerlin(generator.moistureSeed, generator.moistureScale);
+	erosion = calcPerlin(generator.erosionSeed, generator.erosionScale);
+	continent = calcPerlin(generator.continentSeed, generator.continentScale);
+	elevation = (continent * generator.continentWeight + erosion * generator.erosionWeight) * fault;
 	
 	assignAttributes();
 }
@@ -83,41 +82,40 @@ function assignMaterials(){
 	
 	//TEST
 	traversable = matID > 2 && matID < 7;
-	if(traversable && Random.Range(0, 1f) > 0.90){
-		var entity : GameObject = GameObject.Instantiate(CharacterModelPrefabs.prefabs[0], position, Quaternion.identity);
-		var carrier : MapObjectCarrier = entity.GetComponent(MapObjectCarrier);
-		carrier.data = mapObjects;
-		carrier.setPosition(Vec2i(xGrid, yGrid));
-		
-	}
 }
 
 function getNE() : Hexagon{
-	var x : int = xGrid + (yGrid % 2 == 1 ? 1 : 0);  
-	return xGrid < MapManager.instance.mapW && yGrid + 1 < MapManager.instance.mapH ? MapManager.instance.tiles[x, yGrid + 1] : null;
+	var data : WorldMapData = WorldMapData.getInstance();
+	var x : int = gridPos.x + (gridPos.y % 2 == 1 ? 1 : 0);  
+	return gridPos.x < data.size.x && gridPos.y + 1 < data.size.y ? data.tiles[x, gridPos.y + 1] : null;
 }
 
 function getE() : Hexagon{
-	return xGrid + 1 < MapManager.instance.mapW ? MapManager.instance.tiles[xGrid + 1, yGrid] : null;
+	var data : WorldMapData = WorldMapData.getInstance();
+	return gridPos.x + 1 < data.size.x ? data.tiles[gridPos.x + 1, gridPos.y] : null;
 }
 
 function getSE() : Hexagon{
-	var x : int = xGrid + (yGrid % 2 == 1 ? 1 : 0);  
-	return x < MapManager.instance.mapW && yGrid - 1 >= 0 ? MapManager.instance.tiles[x, yGrid - 1] : null;
+	var data : WorldMapData = WorldMapData.getInstance();
+	var x : int = gridPos.x + (gridPos.y % 2 == 1 ? 1 : 0);  
+	return x < data.size.x && gridPos.y - 1 >= 0 ? data.tiles[x, gridPos.y - 1] : null;
 }
 
 function getSW() : Hexagon{
-	var x : int = xGrid - (yGrid % 2 == 0 ? 1 : 0);  
-	return x >= 0 && yGrid - 1 >= 0 ? MapManager.instance.tiles[x, yGrid - 1] : null;
+	var data : WorldMapData = WorldMapData.getInstance();
+	var x : int = gridPos.x - (gridPos.y % 2 == 0 ? 1 : 0);  
+	return x >= 0 && gridPos.y - 1 >= 0 ? data.tiles[x, gridPos.y - 1] : null;
 }
 
 function getW() : Hexagon{
-	return xGrid - 1 >= 0 ? MapManager.instance.tiles[xGrid - 1, yGrid] : null;
+	var data : WorldMapData = WorldMapData.getInstance();
+	return gridPos.x - 1 >= 0 ? data.tiles[gridPos.x - 1, gridPos.y] : null;
 }
 
 function getNW() : Hexagon{
-	var x : int = xGrid - (yGrid % 2 == 0 ? 1 : 0);  
-	return x >= 0 && yGrid + 1 < MapManager.instance.mapH ? MapManager.instance.tiles[x, yGrid + 1] : null;
+	var data : WorldMapData = WorldMapData.getInstance();
+	var x : int = gridPos.x - (gridPos.y % 2 == 0 ? 1 : 0);  
+	return x >= 0 && gridPos.y + 1 < data.size.y ? data.tiles[x, gridPos.y + 1] : null;
 }
 
 function getAdjacent() : Hexagon[]{
@@ -139,14 +137,15 @@ function getAdjacent() : Hexagon[]{
 
 function startRiver(){
 	var river : List.<Hexagon> = new List.<Hexagon>();
-	var currentX : int = xGrid;
-	var currentY : int = yGrid;
-	while(!MapManager.instance.tiles[currentX, currentY].sea){
-		MapManager.instance.tiles[currentX, currentY].river = true;
-		MapManager.instance.tiles[currentX, currentY].traversable = false;
+	var currentX : int = gridPos.x;
+	var currentY : int = gridPos.y;
+	var data : WorldMapData = WorldMapData.getInstance();
+	while(!data.tiles[currentX, currentY].sea){
+		data.tiles[currentX, currentY].river = true;
+		data.tiles[currentX, currentY].traversable = false;
 		
 		
-		var adjacent : Hexagon[] = MapManager.instance.tiles[currentX, currentY].getAdjacent();
+		var adjacent : Hexagon[] = data.tiles[currentX, currentY].getAdjacent();
 		var min : float = 1;
 		var minIndex : int = -1;
 		for(var i = 0; i < adjacent.length; i++){
@@ -157,8 +156,8 @@ function startRiver(){
 		}
 		if(minIndex == -1) break;
 		
-		currentX = adjacent[minIndex].xGrid;
-		currentY = adjacent[minIndex].yGrid;
+		currentX = adjacent[minIndex].gridPos.x;
+		currentY = adjacent[minIndex].gridPos.y;
 		
 	}
 }

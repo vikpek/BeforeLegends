@@ -10,20 +10,19 @@ var suspend : boolean = false;
 
 function setPosition(pos : Vec2i){
 	this.pos = pos;
+	var worlddata : WorldMapData = WorldMapData.getInstance();
 	for(var e : MapObjectData in data){
-		MapManager.instance.tiles[e.pos.x, e.pos.y].mapObjects.Remove(e);
+		worlddata.tiles[e.pos.x, e.pos.y].mapObjects.Remove(e);
 		e.pos = pos;
-		MapManager.instance.tiles[e.pos.x, e.pos.y].mapObjects.Add(e);
+		worlddata.tiles[e.pos.x, e.pos.y].mapObjects.Add(e);
 	}
 }
 
-function followPath(startX : int, startY : int, goalX : int, goalY : int, dur : float){
-	if(moving) return;
-	var path : Vec2i[] = MapManager.instance.findPath(startX, startY, goalX, goalY);
-	if(!path) return;
-	
+function followPath(path : Vec2i[], dur : float){
+	if(moving || !path) return;
 	moving = true;
 	
+	var worlddata : WorldMapData = WorldMapData.getInstance();
 	var passedTime : float = 0;
 	var index : int = 0;
 	var lastIndex : int = 0;
@@ -32,8 +31,8 @@ function followPath(startX : int, startY : int, goalX : int, goalY : int, dur : 
 		index = alpha;
 		alpha -= index;
 		
-		var a : Vector3 = MapManager.instance.tiles[path[index].x, path[index].y].position;
-		var b : Vector3 = MapManager.instance.tiles[path[index + 1].x, path[index + 1].y].position;
+		var a : Vector3 = worlddata.tiles[path[index].x, path[index].y].position;
+		var b : Vector3 = worlddata.tiles[path[index + 1].x, path[index + 1].y].position;
 		gameObject.transform.position.x = Mathf.Lerp(a.x, b.x, alpha);
 		gameObject.transform.position.z = Mathf.Lerp(a.z, b.z, alpha);
 		
@@ -61,7 +60,7 @@ function followPath(startX : int, startY : int, goalX : int, goalY : int, dur : 
 }
 
 function finalizeAt(index : int, path : Vec2i[], sendMsg : boolean){
-	var end : Vector3 = MapManager.instance.tiles[path[index].x, path[index].y].position;
+	var end : Vector3 = WorldMapData.getInstance().tiles[path[index].x, path[index].y].position;
 	gameObject.transform.position.x = end.x;
 	gameObject.transform.position.z = end.z;
 	setPosition(path[index]);
