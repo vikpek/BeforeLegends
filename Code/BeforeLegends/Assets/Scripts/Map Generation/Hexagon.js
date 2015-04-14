@@ -11,6 +11,7 @@ var elevation : float;
 var erosion : float;
 var continent : float;
 var moisture : float;
+var temperature : float;
 
 var traversable : boolean;
 var river : boolean = false;
@@ -19,11 +20,14 @@ var sea : boolean = false;
 var mapObjects : List.<MapObjectData> = List.<MapObjectData>(); 
 
 function generate(generator : WorldMapGenerator){
-	var fault : float = calcFault(generator.flatHex.size.x * generator.size.x, generator.flatHex.size.z * 0.75 * generator.size.y);
+	var xMax : float = generator.flatHex.size.x * generator.size.x;
+	var yMax : float = generator.flatHex.size.z * 0.75 * generator.size.y;
+	var fault : float = calcFault(xMax, yMax);
 	moisture = calcPerlin(generator.moistureSeed, generator.moistureScale);
 	erosion = calcPerlin(generator.erosionSeed, generator.erosionScale);
 	continent = calcPerlin(generator.continentSeed, generator.continentScale);
 	elevation = (continent * generator.continentWeight + erosion * generator.erosionWeight) * fault;
+	temperature = (1 - position.z / yMax) * generator.temperatureLocationWeight + calcPerlin(generator.temperatureSeed, generator.temperatureScale) * generator.temperatureNoiseWeight;
 	
 	assignAttributes();
 }
@@ -55,32 +59,30 @@ function assignAttributes(){
 	}
 }
 
-function assignMaterials(){
-	if(elevation < 0.20){
-		matID = 0;
-	}else if(elevation < 0.30){
-		matID = 1;
-	}else if(elevation < 0.35){
-		matID = 2;
-	}else if(elevation < 0.40){
-		matID = 3;
-	}else if(elevation < 0.45){
-		matID = 4;
-	}else if(elevation < 0.55){
-		matID = 5;
-	}else if(elevation < 0.75){
-		matID = 6;
-	}else if(elevation < 0.85){
-		matID = 7;
-	}else{
-		matID = 8;
+function assignMaterials(generator : WorldMapGenerator){
+	var heightID : int = 0;
+	for(var i : int = 0; i < generator.heightLookup.Length; i++){
+		if(elevation < generator.heightLookup[i]){
+			heightID = i;
+			break;
+		}
 	}
-	
-	if(river){
-		matID = 2;
+	var moistureID : int = 0;
+	for(i = 0; i < generator.moistureLookup.Length; i++){
+		if(moisture < generator.moistureLookup[i]){
+			moistureID = i;
+			break;
+		}
 	}
+	var temperatureID : int = 0;
+	for(i = 0; i < generator.temperatureLookup.Length; i++){
+		if(temperature < generator.temperatureLookup[i]){
+			temperatureID = i;
+			break;
+		}
+	}
+	matID = heightID + moistureID * generator.heightLookup.Length + temperatureID * generator.moistureLookup.Length * generator.heightLookup.Length;
 	
-	//TEST
 	traversable = matID > 2 && matID < 7;
 }
 

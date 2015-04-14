@@ -277,23 +277,67 @@ MonoBehaviour:
   chunkSize:
     x: 32
     y: 32
-  seed: 532523
+  seed: 785678657
   erosionScale: .100000001
   continentScale: .0149999997
-  moistureScale: .0299999993
+  moistureScale: .00999999978
+  temperatureScale: .0500000007
   erosionWeight: .200000003
   continentWeight: .800000012
+  temperatureNoiseWeight: .0500000007
+  temperatureLocationWeight: .949999988
   tileMaterials:
   - {fileID: 2100000, guid: 008549fc00483954eafb567095c7d303, type: 2}
-  - {fileID: 2100000, guid: c9b01c8331be5264bb041db760ed0035, type: 2}
-  - {fileID: 2100000, guid: 972ae5d76de1be049a2e3c676577c3a7, type: 2}
-  - {fileID: 2100000, guid: ff1c9887fb2307a418e6ac5027bc3ec5, type: 2}
-  - {fileID: 2100000, guid: bc3ca4435ec9ab04cb24bb3ae124249b, type: 2}
-  - {fileID: 2100000, guid: 31ac9f7cfda08bc4eb5031674d0d6ca8, type: 2}
-  - {fileID: 2100000, guid: 27bf0ef9507182b499075c63eb84f31f, type: 2}
-  - {fileID: 2100000, guid: bf582f796584d2c44bc79a693ccbbef3, type: 2}
-  - {fileID: 2100000, guid: 433ff1349f3e8584ebf612a5cc6428ca, type: 2}
+  - {fileID: 2100000, guid: b7e3c0e9238571f418ff303e879488da, type: 2}
+  - {fileID: 2100000, guid: b7b2cea09e8f6a64fbfa359f9b4093e3, type: 2}
+  - {fileID: 2100000, guid: eefcb54ea18eea040b63016a5159431e, type: 2}
+  - {fileID: 2100000, guid: 008549fc00483954eafb567095c7d303, type: 2}
+  - {fileID: 2100000, guid: b7e3c0e9238571f418ff303e879488da, type: 2}
+  - {fileID: 2100000, guid: 073dc525f4c9bc14084a1005f373dfe5, type: 2}
+  - {fileID: 2100000, guid: c8a6f1fda1f1252458cc432281efec06, type: 2}
+  - {fileID: 2100000, guid: 008549fc00483954eafb567095c7d303, type: 2}
+  - {fileID: 2100000, guid: b7e3c0e9238571f418ff303e879488da, type: 2}
+  - {fileID: 2100000, guid: 5583e99d2192b824a86a696136d5907c, type: 2}
+  - {fileID: 2100000, guid: e82f81291aa553e448667e4208154d18, type: 2}
+  - {fileID: 2100000, guid: 008549fc00483954eafb567095c7d303, type: 2}
+  - {fileID: 2100000, guid: 862e7824597982c469c20a1fc358d50f, type: 2}
+  - {fileID: 2100000, guid: afb0d990d6c1bb44f951ccc118c7fe05, type: 2}
+  - {fileID: 2100000, guid: cb73b48ff726e1949b85d7fc16ebebe9, type: 2}
+  - {fileID: 2100000, guid: 008549fc00483954eafb567095c7d303, type: 2}
+  - {fileID: 2100000, guid: 4e2b6bcab6f71f54b985b78b52ab6ee2, type: 2}
+  - {fileID: 2100000, guid: f30f5127b3fae644589c9b872986cd48, type: 2}
+  - {fileID: 2100000, guid: 1fee2db8634c85b4cb0a0e99c34b4ff2, type: 2}
+  - {fileID: 2100000, guid: 008549fc00483954eafb567095c7d303, type: 2}
+  - {fileID: 2100000, guid: 8055200db7fef0c449bcc8d1f36109c6, type: 2}
+  - {fileID: 2100000, guid: 8055200db7fef0c449bcc8d1f36109c6, type: 2}
+  - {fileID: 2100000, guid: 1fee2db8634c85b4cb0a0e99c34b4ff2, type: 2}
+  - {fileID: 2100000, guid: 008549fc00483954eafb567095c7d303, type: 2}
+  - {fileID: 2100000, guid: 4efe2aeb8fe7f9a45a1d74a01be60a06, type: 2}
+  - {fileID: 2100000, guid: 483029a399022e0449975de68b03651d, type: 2}
+  - {fileID: 2100000, guid: 5e0c9f37030aac748ba2d6a6b7d0782f, type: 2}
+  - {fileID: 2100000, guid: 008549fc00483954eafb567095c7d303, type: 2}
+  - {fileID: 2100000, guid: 9221fd4ff4de86f40b549df991516607, type: 2}
+  - {fileID: 2100000, guid: 2c755d30147af3a4f9bb2e8f3b9a8937, type: 2}
+  - {fileID: 2100000, guid: 6c1a99e6ada53c440871df952f2a4890, type: 2}
+  - {fileID: 2100000, guid: 008549fc00483954eafb567095c7d303, type: 2}
+  - {fileID: 2100000, guid: 54c608af1b3570648a86de75247b47c0, type: 2}
+  - {fileID: 2100000, guid: 54c608af1b3570648a86de75247b47c0, type: 2}
+  - {fileID: 2100000, guid: 71421cfe3bce21e459658728ff9e51af, type: 2}
+  heightLookup:
+  - .349999994
+  - .600000024
+  - .800000012
+  - 1
+  moistureLookup:
+  - .300000012
+  - .600000024
+  - 1
+  temperatureLookup:
+  - .300000012
+  - .600000024
+  - 1
   continentSeed: {x: 0, y: 0}
+  temperatureSeed: {x: 0, y: 0}
   moistureSeed: {x: 0, y: 0}
   erosionSeed: {x: 0, y: 0}
   flatHex:
@@ -305,6 +349,47 @@ MonoBehaviour:
     size: {x: 0, y: 0, z: 0}
     center: {x: 0, y: 0, z: 0}
   chunkHolder: {fileID: 0}
+--- !u!1 &1408614953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1408614955}
+  - 114: {fileID: 1408614954}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1408614954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1408614953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e23691c698efb0d44979b9282801c4ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  matX: {fileID: 0}
+  matO: {fileID: 0}
+--- !u!4 &1408614955
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1408614953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 69.2820358, y: 0, z: 81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &1692644000
 GameObject:
   m_ObjectHideFlags: 0
