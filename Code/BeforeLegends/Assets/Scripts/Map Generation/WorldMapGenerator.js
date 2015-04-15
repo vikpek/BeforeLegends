@@ -1,5 +1,8 @@
 ﻿#pragma strict
 
+import System.Collections.Generic;
+
+var mapMaterial : Material;
 var hexRadius : float;
 var size : Vec2i;
 var chunkSize : Vec2i;
@@ -9,14 +12,25 @@ var continentScale : float;
 var moistureScale : float;
 var temperatureScale : float;
 var erosionWeight : float;
+var moistureErosionWeight : float;
+var moistureWeight : float;
 var continentWeight : float;
 var temperatureNoiseWeight : float;
 var temperatureLocationWeight : float;
-var tileMaterials : Material[];
+var tileTextures : Texture2D[];
 
 var heightLookup : float[];
 var moistureLookup : float[];
-var temperatureLookup : float[]; 
+var temperatureLookup : float[];
+
+@HideInInspector 
+var chunkTexture : Texture2D;
+
+@HideInInspector 
+var chunkTextureRects : Rect[];
+
+@HideInInspector 
+var chunkUVs : List.<Vector2[]>;
 
 @HideInInspector
 var continentSeed : Vector2;
@@ -33,11 +47,17 @@ var erosionSeed : Vector2;
 @HideInInspector
 var flatHex : FlatHexagon;
 
-@HideInInspector
-var chunkHolder : GameObject;
-
-function Awake(){
+function Start(){
 	flatHex = FlatHexagon(hexRadius);
+	setSeeds();
+	packTextures();
+	generate();
+	createChunks();
+	spawnObjects();
+	spawnCarriers();
+}
+
+function setSeeds(){
 	Random.seed = seed;
 	temperatureSeed = Vector2(Random.Range(0f, 65536f), Random.Range(0f, 65536f));
 	continentSeed = Vector2(Random.Range(0f, 65536f), Random.Range(0f, 65536f));
@@ -45,17 +65,27 @@ function Awake(){
 	erosionSeed = Vector2(Random.Range(0f, 65536f), Random.Range(0f, 65536f));
 }
 
-function Start(){
-	generate();
-	createChunks();
-	//spawnObjects();
-	//spawnCarriers();
+function packTextures(){
+	chunkTexture = Texture2D(2048, 2048);
+	chunkTextureRects = chunkTexture.PackTextures(tileTextures, 50, 2048);
+	chunkUVs = new List.<Vector2[]>();
+	for(var rect : Rect in chunkTextureRects){
+		var uvs : Vector2[] = new Vector2[flatHex.uv.Length];
+		for(var i : int = 0; i < uvs.length; i++){
+			var uv : Vector2 = Vector2();
+			uv.x = rect.x + rect.width * flatHex.uv[i].x;
+			uv.y = rect.y + rect.height * flatHex.uv[i].y;
+			uvs[i] = uv;
+		}
+		chunkUVs.Add(uvs);
+	}
+	mapMaterial.mainTexture = chunkTexture;
 }
 
 function spawnObjects(){
 	var data : WorldMapData = WorldMapData.getInstance();
 	for(var tile : Hexagon in data.tiles){
-		if(Random.Range(0f, 1f) <= 0.1){
+		if(tile.traversable && Random.Range(0f, 1f) <= 0.1){
 			var obj : MapObjectData = ScriptableObject.CreateInstance(MapObjectData) as MapObjectData;
 			obj.appearanceID = 0;
 			tile.mapObjects.Add(obj);
@@ -88,18 +118,20 @@ function createChunk(xChunk : int, yChunk : int, mesh : Mesh){
 	var chunk : GameObject = GameObject("Chunk(" + xChunk + "|" + yChunk + ")");
 	var render : MeshRenderer = chunk.AddComponent(MeshRenderer);
 	var filter : MeshFilter = chunk.AddComponent(MeshFilter);
-	var materials : List.<Material> = new List.<Material>();
 	chunk.transform.position = Vector3(xChunk * chunkSize.x * flatHex.size.x, 0, yChunk * chunkSize.y * flatHex.size.z * 0.75);
+	var uvs : Vector2[] = new Vector2[mesh.uv.length];
 	for(var y = 0; y < chunkSize.y; y++){
 		for(var x = 0; x < chunkSize.x; x++){
-			materials.Add(tileMaterials[WorldMapData.getInstance().tiles[chunkSize.x * xChunk + x, chunkSize.y * yChunk + y].matID]);
+			var texUV : Vector2[] = chunkUVs[WorldMapData.getInstance().tiles[chunkSize.x * xChunk + x, chunkSize.y * yChunk + y].matID];
+			var offset : int = (x + y * chunkSize.y) * flatHex.uv.Length;
+			for(var i : int = 0; i < flatHex.uv.Length; i++){
+				uvs[offset + i] = texUV[i];
+			}
 		}
 	}
-	var materialArray : Material[] = materials.ToArray();
-	filter.sharedMesh = mesh;
-	render.shadowCastingMode = Rendering.ShadowCastingMode.Off;
-	render.receiveShadows = false;
-	render.sharedMaterials = materialArray;
+	filter.mesh = mesh;
+	filter.mesh.uv = uvs;
+	render.sharedMaterial = mapMaterial;
 	chunk.transform.parent = transform;
 }
 
@@ -118,7 +150,7 @@ function getChunkMesh(){
 		}
 	}
 	var meshArray : CombineInstance[] = meshes.ToArray();
-	mesh.CombineMeshes(meshArray, false);
+	mesh.CombineMeshes(meshArray, true);
 	mesh.RecalculateNormals();
 	mesh.RecalculateBounds();
 	return mesh;

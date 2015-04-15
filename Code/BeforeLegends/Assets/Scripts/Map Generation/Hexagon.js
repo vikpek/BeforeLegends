@@ -13,7 +13,7 @@ var continent : float;
 var moisture : float;
 var temperature : float;
 
-var traversable : boolean;
+var traversable : boolean = true;
 var river : boolean = false;
 var sea : boolean = false;
 
@@ -23,13 +23,11 @@ function generate(generator : WorldMapGenerator){
 	var xMax : float = generator.flatHex.size.x * generator.size.x;
 	var yMax : float = generator.flatHex.size.z * 0.75 * generator.size.y;
 	var fault : float = calcFault(xMax, yMax);
-	moisture = calcPerlin(generator.moistureSeed, generator.moistureScale);
 	erosion = calcPerlin(generator.erosionSeed, generator.erosionScale);
+	moisture = calcPerlin(generator.moistureSeed, generator.moistureScale) * generator.moistureWeight + erosion * generator.moistureErosionWeight;
 	continent = calcPerlin(generator.continentSeed, generator.continentScale);
 	elevation = (continent * generator.continentWeight + erosion * generator.erosionWeight) * fault;
 	temperature = (1 - position.z / yMax) * generator.temperatureLocationWeight + calcPerlin(generator.temperatureSeed, generator.temperatureScale) * generator.temperatureNoiseWeight;
-	
-	assignAttributes();
 }
 
 function calcPerlin(offset : Vector2, scale : float) : float{
@@ -50,12 +48,6 @@ function calcFault(xMax : float, yMax : float) : float{
 		return 1;
 	}else{
 		return all / (xMax * 0.15);  
-	}
-}
-
-function assignAttributes(){
-	if(elevation < 0.35){
-		sea = true;
 	}
 }
 
@@ -81,9 +73,8 @@ function assignMaterials(generator : WorldMapGenerator){
 			break;
 		}
 	}
+	traversable = heightID != 0 && heightID != 3;
 	matID = heightID + moistureID * generator.heightLookup.Length + temperatureID * generator.moistureLookup.Length * generator.heightLookup.Length;
-	
-	traversable = matID > 2 && matID < 7;
 }
 
 function getNE() : Hexagon{
