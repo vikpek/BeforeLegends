@@ -7,12 +7,22 @@ var seed : long;
 var erosionScale : float;
 var continentScale : float;
 var moistureScale : float;
+var temperatureScale : float;
 var erosionWeight : float;
 var continentWeight : float;
+var temperatureNoiseWeight : float;
+var temperatureLocationWeight : float;
 var tileMaterials : Material[];
+
+var heightLookup : float[];
+var moistureLookup : float[];
+var temperatureLookup : float[]; 
 
 @HideInInspector
 var continentSeed : Vector2;
+
+@HideInInspector
+var temperatureSeed : Vector2;
 
 @HideInInspector
 var moistureSeed : Vector2;
@@ -29,6 +39,7 @@ var chunkHolder : GameObject;
 function Awake(){
 	flatHex = FlatHexagon(hexRadius);
 	Random.seed = seed;
+	temperatureSeed = Vector2(Random.Range(0f, 65536f), Random.Range(0f, 65536f));
 	continentSeed = Vector2(Random.Range(0f, 65536f), Random.Range(0f, 65536f));
 	moistureSeed = Vector2(Random.Range(0f, 65536f), Random.Range(0f, 65536f));
 	erosionSeed = Vector2(Random.Range(0f, 65536f), Random.Range(0f, 65536f));
@@ -37,8 +48,8 @@ function Awake(){
 function Start(){
 	generate();
 	createChunks();
-	spawnObjects();
-	spawnCarriers();
+	//spawnObjects();
+	//spawnCarriers();
 }
 
 function spawnObjects(){
@@ -130,6 +141,6 @@ function generate(){
 	}
 	
 	for(var hex : Hexagon in data.tiles){
-		hex.assignMaterials();
+		hex.assignMaterials(this);
 	}
 }
