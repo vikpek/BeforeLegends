@@ -30,12 +30,12 @@ public class FlatHexagon{
 		];
 	
 		uv = [
-			Vector2(0.5 + 0.5 * Mathf.Cos(2 * Mathf.PI * (3 + 0.5) / 6), 0.5 + 0.5 * Mathf.Sin(2 * Mathf.PI * (3 + 0.5) / 6)),
-			Vector2(0.5 + 0.5 * Mathf.Cos(2 * Mathf.PI * (2 + 0.5) / 6), 0.5 + 0.5 * Mathf.Sin(2 * Mathf.PI * (2 + 0.5) / 6)),
-			Vector2(0.5 + 0.5 * Mathf.Cos(2 * Mathf.PI * (1 + 0.5) / 6), 0.5 + 0.5 * Mathf.Sin(2 * Mathf.PI * (1 + 0.5) / 6)),
-			Vector2(0.5 + 0.5 * Mathf.Cos(2 * Mathf.PI * (0 + 0.5) / 6), 0.5 + 0.5 * Mathf.Sin(2 * Mathf.PI * (0 + 0.5) / 6)),
-			Vector2(0.5 + 0.5 * Mathf.Cos(2 * Mathf.PI * (5 + 0.5) / 6), 0.5 + 0.5 * Mathf.Sin(2 * Mathf.PI * (5 + 0.5) / 6)),
-			Vector2(0.5 + 0.5 * Mathf.Cos(2 * Mathf.PI * (4 + 0.5) / 6), 0.5 + 0.5 * Mathf.Sin(2 * Mathf.PI * (4 + 0.5) / 6))
+			Vector2(0.5 + 0.45 * Mathf.Cos(2 * Mathf.PI * (3 + 0.5) / 6), 0.5 + 0.45 * Mathf.Sin(2 * Mathf.PI * (3 + 0.5) / 6)),
+			Vector2(0.5 + 0.45 * Mathf.Cos(2 * Mathf.PI * (2 + 0.5) / 6), 0.5 + 0.45 * Mathf.Sin(2 * Mathf.PI * (2 + 0.5) / 6)),
+			Vector2(0.5 + 0.45 * Mathf.Cos(2 * Mathf.PI * (1 + 0.5) / 6), 0.5 + 0.45 * Mathf.Sin(2 * Mathf.PI * (1 + 0.5) / 6)),
+			Vector2(0.5 + 0.45 * Mathf.Cos(2 * Mathf.PI * (0 + 0.5) / 6), 0.5 + 0.45 * Mathf.Sin(2 * Mathf.PI * (0 + 0.5) / 6)),
+			Vector2(0.5 + 0.45 * Mathf.Cos(2 * Mathf.PI * (5 + 0.5) / 6), 0.5 + 0.45 * Mathf.Sin(2 * Mathf.PI * (5 + 0.5) / 6)),
+			Vector2(0.5 + 0.45 * Mathf.Cos(2 * Mathf.PI * (4 + 0.5) / 6), 0.5 + 0.45 * Mathf.Sin(2 * Mathf.PI * (4 + 0.5) / 6))
 		];
 	
 		triangles = [
