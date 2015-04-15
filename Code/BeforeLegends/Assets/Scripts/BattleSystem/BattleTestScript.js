@@ -3,6 +3,13 @@ var player : UnitData;
 var opponent : UnitData;
 var dagger : UnitData;
 
+var playerObject : GameObject;
+var opponentObject : GameObject;
+var weaponObject : GameObject;
+
+private var battleLimit : int;
+private var wonCounter: int;
+
 function Awake(){
 
 	player = UnitData();
@@ -38,7 +45,29 @@ function Awake(){
 	dagger.critStrike = 0.15;
 	dagger.critBlock = 0;
 	
-	combatSequence(player.combine(dagger), opponent);
+	wonCounter = 0;
+	battleLimit = 1000;
+	
+	if(playerObject && opponent && weaponObject){
+		Debug.Log("Using Objects for battle simulation.");
+		var playerUnitData = playerObject.GetComponent(BattleParameters).battleParameters;
+		var opponentUnitData = opponentObject.GetComponent(BattleParameters).battleParameters;
+		var weaponUnitData = weaponObject.GetComponent(BattleParameters).battleParameters;
+		
+		for(i = 0; i < battleLimit; i++){		
+			combatSequence(playerUnitData.combine(opponentUnitData), weaponUnitData);
+		}
+		
+		Debug.Log("Won " + wonCounter + " from " + battleLimit + " battles.");
+	}else{
+		Debug.Log("Using hard coded input for battle simulation.");
+		
+		for(i = 0; i < battleLimit; i++){		
+			combatSequence(player.combine(dagger), opponent);
+		}
+		
+		Debug.Log("Won " + wonCounter + " from " + battleLimit + " battles.");
+	}
 }
 
 function combatSequence(player: UnitData, opponent : UnitData){
@@ -69,6 +98,7 @@ function combatSequence(player: UnitData, opponent : UnitData){
 	}
 	
 	if(player.hitPoints > 0){
+		wonCounter ++;
 		Debug.Log("Player won!");
 	}else{
 		Debug.Log("Opponent won!");
