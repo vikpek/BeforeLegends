@@ -51,14 +51,16 @@ function Awake(){
 	if(playerObject && opponentObject && weaponObject){
 		Debug.Log("Using Objects for battle simulation.");
 		
-//		for(i = 0; i < battleLimit; i++){	
-			var playerUnitData = playerObject.GetComponent(BattleParameters).battleParameters;
-			var opponentUnitData = opponentObject.GetComponent(BattleParameters).battleParameters;
-			var weaponUnitData = weaponObject.GetComponent(BattleParameters).battleParameters ;	
-			combatSequence(playerUnitData.combine(weaponUnitData), opponentUnitData);
-//		}
+		var playerUnitData = playerObject.GetComponent(BattleParameters).battleParameters;
+		var opponentUnitData = opponentObject.GetComponent(BattleParameters).battleParameters;
+		var weaponUnitData = weaponObject.GetComponent(BattleParameters).battleParameters;	 
+	
 		
-//		Debug.Log("Won " + wonCounter + " from " + battleLimit + " battles.");
+		for(i = 0; i < battleLimit; i++){	
+			combatSequence(playerUnitData.combine(weaponUnitData), opponentUnitData);
+		}
+		Debug.Log("Won " + wonCounter + " from " + battleLimit + " battles.");
+		
 	}
 //	else{
 //		Debug.Log("Using hard coded input for battle simulation.");
