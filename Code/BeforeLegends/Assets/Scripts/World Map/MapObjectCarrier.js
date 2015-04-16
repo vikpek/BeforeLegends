@@ -7,10 +7,12 @@ var pos : Vec2i;
 var movedMax : int = 8;
 var moved : int = 0;
 
-
 var moving : boolean = false;
 var paused : boolean = false;
 var suspend : boolean = false;
+
+//@HideInInspector
+var enemyGameObject : GameObject;
 
 function Start(){
 	Messenger.instance.listen(gameObject, "TurnEnded");
@@ -88,3 +90,12 @@ function finalizeAt(index : int, path : Vec2i[], suspended : boolean){
 		}
 	}
 }
+
+function OnTriggerEnter (other : Collider) {
+		enemyGameObject = other.transform.gameObject;
+		suspend = true;
+		if(enemyGameObject.tag == "Enemy")
+			var winner : int = BattleMaster.instance.combatSequence(data[0].battleStats, enemyGameObject.GetComponent.<MapObjectCarrier>().data[0].battleStats);
+		if(winner == 1)
+			enemyGameObject.SetActive(false);
+	}

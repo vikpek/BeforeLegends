@@ -6,4 +6,6 @@ class MapObjectData extends ScriptableObject{
 	var moving : boolean = false;
 	var paused : boolean = false;
 	var suspend : boolean = false;
+
+	var battleStats : UnitData = UnitData();
 }
