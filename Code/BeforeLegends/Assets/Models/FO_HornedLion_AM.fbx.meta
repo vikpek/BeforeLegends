@@ -167,6 +167,8 @@ ModelImporter:
     400156: toe.R_end
     400158: hornedlion_uv001
     400160: Rig.001
+    2300000: hornedlion_uv001
+    3300000: hornedlion_uv001
     4300000: Mesh
     4300002: hornedlion_uv001
     7400000: Rig|Activated_01
@@ -189,6 +191,7 @@ ModelImporter:
     7400034: Rig.001|Idle_01
     7400036: Rig.001|Idle_02
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Mesh
     13700002: hornedlion_uv001
   materials:
@@ -204,7 +207,7 @@ ModelImporter:
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 0
+    animationWrapMode: 2
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
@@ -212,12 +215,12 @@ ModelImporter:
       takeName: Rig.001|Activated_01
       firstFrame: 0
       lastFrame: 30
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
-      loop: 0
-      loopTime: 1
+      loop: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -1500,12 +1503,12 @@ ModelImporter:
       takeName: Rig.001|Idle_01
       firstFrame: 0
       lastFrame: 26
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -1684,12 +1687,12 @@ ModelImporter:
       takeName: Rig.001|Idle_02
       firstFrame: 0
       lastFrame: 48
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -1867,7 +1870,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
@@ -1900,7 +1903,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -12,7 +12,9 @@ function Awake(){
 }
 
 function Update(){
-	for(var message in messages){
+	var msgs : ArrayList = messages;
+	messages = ArrayList();
+	for(var message in msgs){
 		var msg : Message = message as Message;
 		var list : ArrayList = listeners[msg.type] as ArrayList;
 		if(list){
@@ -22,7 +24,6 @@ function Update(){
 			}
 		}
 	}
-	messages.Clear();
 }
 
 function send(msg : Message){

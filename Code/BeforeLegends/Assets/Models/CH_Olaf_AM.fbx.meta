@@ -103,12 +103,10 @@ ModelImporter:
     100190: weapon.L_end
     100192: weapon.R
     100194: weapon.R_end
-    100196: Mesh.001
-    100198: Mesh.002
-    100200: Mesh.003
-    100202: bags.001
-    100204: belt
-    100206: skirts.001
+    100196: bags.001
+    100198: belt
+    100200: Mesh.001
+    100202: skirts.001
     400000: //RootNode
     400002: chest
     400004: f_index.01.L
@@ -207,19 +205,15 @@ ModelImporter:
     400190: weapon.L_end
     400192: weapon.R
     400194: weapon.R_end
-    400196: Mesh.001
-    400198: Mesh.002
-    400200: Mesh.003
-    400202: bags.001
-    400204: belt
-    400206: skirts.001
+    400196: bags.001
+    400198: belt
+    400200: Mesh.001
+    400202: skirts.001
     4300000: Mesh
-    4300002: Mesh.003
-    4300004: Mesh.002
-    4300006: Mesh.001
-    4300008: bags.001
-    4300010: skirts.001
-    4300012: belt
+    4300002: Mesh.001
+    4300004: bags.001
+    4300006: skirts.001
+    4300008: belt
     7400000: Rig|Activated_01_fight_1H
     7400002: Rig|Attack_02_Crit
     7400004: Rig|Death_01
@@ -230,13 +224,12 @@ ModelImporter:
     7400014: Rig|Attack_01_Basic
     7400016: Rig|Activated_01
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Mesh
-    13700002: Mesh.001
-    13700004: Mesh.002
-    13700006: Mesh.003
-    13700008: bags.001
-    13700010: belt
-    13700012: skirts.001
+    13700002: bags.001
+    13700004: belt
+    13700006: Mesh.001
+    13700008: skirts.001
   materials:
     importMaterials: 1
     materialName: 0
@@ -246,11 +239,11 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 1
+    animationCompression: 2
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 0
+    animationWrapMode: 2
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
@@ -263,7 +256,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -279,11 +272,7 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: bags.001
-        weight: 1
-      - path: belt
-        weight: 1
-      - path: Mesh.001
+      - path: Mesh
         weight: 1
       - path: Rig
         weight: 1
@@ -476,8 +465,6 @@ ModelImporter:
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
         weight: 1
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
-        weight: 1
-      - path: skirts.001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -507,11 +494,7 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: bags.001
-        weight: 1
-      - path: belt
-        weight: 1
-      - path: Mesh.001
+      - path: Mesh
         weight: 1
       - path: Rig
         weight: 1
@@ -704,8 +687,6 @@ ModelImporter:
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
         weight: 1
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
-        weight: 1
-      - path: skirts.001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -735,11 +716,7 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: bags.001
-        weight: 1
-      - path: belt
-        weight: 1
-      - path: Mesh.001
+      - path: Mesh
         weight: 1
       - path: Rig
         weight: 1
@@ -932,8 +909,6 @@ ModelImporter:
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
         weight: 1
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
-        weight: 1
-      - path: skirts.001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -963,11 +938,7 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: bags.001
-        weight: 1
-      - path: belt
-        weight: 1
-      - path: Mesh.001
+      - path: Mesh
         weight: 1
       - path: Rig
         weight: 1
@@ -1160,8 +1131,6 @@ ModelImporter:
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
         weight: 1
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
-        weight: 1
-      - path: skirts.001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -1191,11 +1160,7 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: bags.001
-        weight: 1
-      - path: belt
-        weight: 1
-      - path: Mesh.001
+      - path: Mesh
         weight: 1
       - path: Rig
         weight: 1
@@ -1389,8 +1354,6 @@ ModelImporter:
         weight: 1
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
         weight: 1
-      - path: skirts.001
-        weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
@@ -1398,12 +1361,12 @@ ModelImporter:
       takeName: Rig|Idle_01
       firstFrame: 0
       lastFrame: 73
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -1419,11 +1382,7 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: bags.001
-        weight: 1
-      - path: belt
-        weight: 1
-      - path: Mesh.001
+      - path: Mesh
         weight: 1
       - path: Rig
         weight: 1
@@ -1616,8 +1575,6 @@ ModelImporter:
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
         weight: 1
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
-        weight: 1
-      - path: skirts.001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -1631,7 +1588,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -1647,11 +1604,7 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: bags.001
-        weight: 1
-      - path: belt
-        weight: 1
-      - path: Mesh.001
+      - path: Mesh
         weight: 1
       - path: Rig
         weight: 1
@@ -1844,8 +1797,6 @@ ModelImporter:
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
         weight: 1
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
-        weight: 1
-      - path: skirts.001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -1875,11 +1826,7 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: bags.001
-        weight: 1
-      - path: belt
-        weight: 1
-      - path: Mesh.001
+      - path: Mesh
         weight: 1
       - path: Rig
         weight: 1
@@ -2073,15 +2020,13 @@ ModelImporter:
         weight: 1
       - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
         weight: 1
-      - path: skirts.001
-        weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
@@ -2114,7 +2059,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -2,7 +2,6 @@
 
 var objData : MapObjectCarrier;
 
-
 function Update(){
 	if(Input.GetMouseButtonDown(0)){
 		if(objData == null){
@@ -13,9 +12,11 @@ function Update(){
 				objData.data[0].pos = Vec2i(MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y);
 				objData.setPosition(Vec2i(MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y));
 				transform.position = WorldMapData.getInstance().tiles[objData.pos.x, objData.pos.y].position; 
+				InterfaceData.getInstance().selectedCarrier = objData;
 				return;
 			}
 		}
-		objData.followPath(WorldMapData.getInstance().findPath(objData.pos.x, objData.pos.y, MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y), 0.25);
+		var path : Vec2i[] = WorldMapData.getInstance().findPath(objData.pos.x, objData.pos.y, MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y, objData.movedMax - objData.moved);
+		objData.followPath(path, 0.25);
 	}
 }

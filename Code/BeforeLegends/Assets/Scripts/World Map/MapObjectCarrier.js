@@ -4,9 +4,21 @@ var data : List.<MapObjectData> = List.<MapObjectData>();
 
 var pos : Vec2i;
 
+var movedMax : int = 8;
+var moved : int = 0;
+
+
 var moving : boolean = false;
 var paused : boolean = false;
 var suspend : boolean = false;
+
+function Start(){
+	Messenger.instance.listen(gameObject, "TurnEnded");
+}
+
+function onEvent_TurnEnded(){
+	moved = 0;
+}
 
 function setPosition(pos : Vec2i){
 	this.pos = pos;
@@ -20,6 +32,7 @@ function setPosition(pos : Vec2i){
 
 function followPath(path : Vec2i[], dur : float){
 	if(moving || !path) return;
+	Messenger.instance.send(ActionStartedMessage());
 	moving = true;
 	
 	var worlddata : WorldMapData = WorldMapData.getInstance();
@@ -38,6 +51,7 @@ function followPath(path : Vec2i[], dur : float){
 		
 		var reachedNext : boolean = index > lastIndex;
 		if(reachedNext){
+			moved++;
 			setPosition(path[index]);
 			lastIndex = index;
 			for(var e : MapObjectData in data){
@@ -49,24 +63,26 @@ function followPath(path : Vec2i[], dur : float){
 		yield;
 		
 		if(reachedNext && suspend){
-		 	finalizeAt(index, path, false);
+		 	finalizeAt(index, path, true);
 		 	return;
 		}
 		
 		if(!paused) passedTime += Time.deltaTime;
 	}
 	
-	finalizeAt(path.Length - 1, path, true);
+	finalizeAt(path.Length - 1, path, false);
 }
 
-function finalizeAt(index : int, path : Vec2i[], sendMsg : boolean){
+function finalizeAt(index : int, path : Vec2i[], suspended : boolean){
 	var end : Vector3 = WorldMapData.getInstance().tiles[path[index].x, path[index].y].position;
 	gameObject.transform.position.x = end.x;
 	gameObject.transform.position.z = end.z;
 	setPosition(path[index]);
 	moving = false;
 	suspend = false;
-	if(sendMsg){
+	Messenger.instance.send(ActionEndedMessage());
+	if(!suspended){
+		moved++;
 		for(var e : MapObjectData in data){
 			Messenger.instance.send(MapObjectMovedMessage(e, path[index-1]));
 		}

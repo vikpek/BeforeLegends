@@ -22,6 +22,9 @@ function Update(){
 			var newTileX : int = Mathf.Round((hit.point.x - (odd ? data.flatHex.extents.x : 0)) / data.flatHex.size.x);
 			if(newTileX >= 0 && newTileX < data.size.x){
 				lastWorldPos = hit.point;
+				if(newTileX != lastTile.x || newTileY != lastTile.y){
+					Messenger.instance.send(MouseTileChangedMessage(lastTile, lastTilePos, lastWorldPos));
+				}
 				lastTile.y = newTileY;
 				lastTile.x = newTileX;
 				lastTilePos = data.tiles[newTileX, newTileY].position;
