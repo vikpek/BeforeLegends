@@ -10,7 +10,7 @@ function Awake(){
 }
 
 function Update () {
-	nextPos.y -= Input.mouseScrollDelta.y;
+	nextPos.y -= Input.mouseScrollDelta.y * 1.5;
 	
 	if(Input.mousePosition.x > Screen.width - 25){
 		nextPos.x += nextPos.y * Time.deltaTime;

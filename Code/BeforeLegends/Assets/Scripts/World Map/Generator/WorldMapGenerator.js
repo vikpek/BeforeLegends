@@ -67,6 +67,7 @@ function setSeeds(){
 
 function packTextures(){
 	chunkTexture = Texture2D(2048, 2048);
+	chunkTexture.filterMode = FilterMode.Trilinear;
 	chunkTextureRects = chunkTexture.PackTextures(tileTextures, 50, 2048);
 	chunkUVs = new List.<Vector2[]>();
 	for(var rect : Rect in chunkTextureRects){
@@ -79,13 +80,14 @@ function packTextures(){
 		}
 		chunkUVs.Add(uvs);
 	}
+	chunkTexture.Apply();
 	mapMaterial.mainTexture = chunkTexture;
 }
 
 function spawnObjects(){
 	var data : WorldMapData = WorldMapData.getInstance();
 	for(var tile : Hexagon in data.tiles){
-		if(tile.traversable && Random.Range(0f, 1f) <= 0.1){
+		if(tile.traversable && Random.Range(0f, 1f) <= 0.025){
 			var obj : MapObjectData = ScriptableObject.CreateInstance(MapObjectData) as MapObjectData;
 			obj.appearanceID = 0;
 			tile.mapObjects.Add(obj);
@@ -97,7 +99,8 @@ function spawnCarriers(){
 	var data : WorldMapData = WorldMapData.getInstance();
 	for(var tile : Hexagon in data.tiles){
 		if(tile.mapObjects.Count != 0){
-			Instantiate(CharacterModelPrefabs.prefabs[tile.mapObjects[0].appearanceID], tile.position, Quaternion.identity).transform.parent = transform;
+			var go : GameObject = Instantiate(CharacterModelPrefabs.prefabs[tile.mapObjects[0].appearanceID], tile.position, Quaternion.identity);
+			go.transform.parent = transform;
 		}
 	}	
 }

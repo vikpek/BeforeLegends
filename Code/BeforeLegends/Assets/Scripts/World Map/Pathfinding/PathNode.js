@@ -25,7 +25,7 @@ public class PathNode{
 	
 	function evalCost(goalX : int, goalY : int){
 		var data : WorldMapData = WorldMapData.getInstance();
-		g = parent.g + data.flatHex.size.x;
+		g = parent.g + 1;
 		var goal : Vector3 = data.tiles[goalX, goalY].position;
 		var current : Vector3 = data.tiles[x, y].position;
 		h = Mathf.Abs(goal.x - current.x) + Mathf.Abs(goal.z - current.z);	
@@ -33,8 +33,8 @@ public class PathNode{
 	}
 	
 	function tryAlternative(alt : PathNode){
-		var altG : float = alt.g + WorldMapData.getInstance().size.x;
-		if(altG <= g){
+		var altG : float = alt.g + 1;
+		if(altG < g){
 			parent = alt;
 			g = altG;
 			f = g + h;

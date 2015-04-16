@@ -212,6 +212,7 @@ ModelImporter:
     7400014: Rig|Attack_01_Basic
     7400016: Rig|Activated_01
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Mesh
   materials:
     importMaterials: 1
@@ -222,18 +223,1794 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 1
+    animationCompression: 2
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 0
+    animationWrapMode: 2
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Rig|Activated_01
+      takeName: Rig|Activated_01
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Mesh
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/foot_ik_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L/pole.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L/foot_ik.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L/roll_main.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R/pole.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R/foot_ik.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R/roll_main.R_end
+        weight: 1
+      - path: Rig/hips_main
+        weight: 1
+      - path: Rig/hips_main/hips
+        weight: 1
+      - path: Rig/hips_main/hips/spine
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L/weapon.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R/weapon.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Rig|Activated_01_fight_1H
+      takeName: Rig|Activated_01_fight_1H
+      firstFrame: 0
+      lastFrame: 55
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Mesh
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/foot_ik_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L/pole.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L/foot_ik.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L/roll_main.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R/pole.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R/foot_ik.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R/roll_main.R_end
+        weight: 1
+      - path: Rig/hips_main
+        weight: 1
+      - path: Rig/hips_main/hips
+        weight: 1
+      - path: Rig/hips_main/hips/spine
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L/weapon.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R/weapon.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Rig|Attack_02_Crit
+      takeName: Rig|Attack_02_Crit
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Mesh
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/foot_ik_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L/pole.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L/foot_ik.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L/roll_main.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R/pole.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R/foot_ik.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R/roll_main.R_end
+        weight: 1
+      - path: Rig/hips_main
+        weight: 1
+      - path: Rig/hips_main/hips
+        weight: 1
+      - path: Rig/hips_main/hips/spine
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L/weapon.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R/weapon.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Rig|Death_01
+      takeName: Rig|Death_01
+      firstFrame: 0
+      lastFrame: 38
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Mesh
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/foot_ik_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L/pole.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L/foot_ik.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L/roll_main.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R/pole.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R/foot_ik.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R/roll_main.R_end
+        weight: 1
+      - path: Rig/hips_main
+        weight: 1
+      - path: Rig/hips_main/hips
+        weight: 1
+      - path: Rig/hips_main/hips/spine
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L/weapon.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R/weapon.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Rig|Hurt_01
+      takeName: Rig|Hurt_01
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Mesh
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/foot_ik_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L/pole.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L/foot_ik.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L/roll_main.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R/pole.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R/foot_ik.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R/roll_main.R_end
+        weight: 1
+      - path: Rig/hips_main
+        weight: 1
+      - path: Rig/hips_main/hips
+        weight: 1
+      - path: Rig/hips_main/hips/spine
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L/weapon.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R/weapon.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Rig|Idle_01
+      takeName: Rig|Idle_01
+      firstFrame: 0
+      lastFrame: 73
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Mesh
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/foot_ik_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L/pole.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L/foot_ik.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L/roll_main.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R/pole.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R/foot_ik.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R/roll_main.R_end
+        weight: 1
+      - path: Rig/hips_main
+        weight: 1
+      - path: Rig/hips_main/hips
+        weight: 1
+      - path: Rig/hips_main/hips/spine
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L/weapon.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R/weapon.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Rig|Idle_02_fight_1H
+      takeName: Rig|Idle_02_fight_1H
+      firstFrame: 0
+      lastFrame: 72
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Mesh
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/foot_ik_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L/pole.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L/foot_ik.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L/roll_main.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R/pole.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R/foot_ik.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R/roll_main.R_end
+        weight: 1
+      - path: Rig/hips_main
+        weight: 1
+      - path: Rig/hips_main/hips
+        weight: 1
+      - path: Rig/hips_main/hips/spine
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L/weapon.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R/weapon.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Rig|Attack_01_Basic
+      takeName: Rig|Attack_01_Basic
+      firstFrame: 0
+      lastFrame: 54
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Mesh
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/foot_ik_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/pole.L/pole.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_back.L/roll_front.L/foot_ik.L/foot_ik.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L
+        weight: 1
+      - path: Rig/foot_ik_main.L/roll_main.L/roll_main.L_end
+        weight: 1
+      - path: Rig/foot_ik_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/pole.R/pole.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_back.R/roll_front.R/foot_ik.R/foot_ik.R_end
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R
+        weight: 1
+      - path: Rig/foot_ik_main.R/roll_main.R/roll_main.R_end
+        weight: 1
+      - path: Rig/hips_main
+        weight: 1
+      - path: Rig/hips_main/hips
+        weight: 1
+      - path: Rig/hips_main/hips/spine
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.01.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.02.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.03.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/palm.04.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/weapon.L/weapon.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.03.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.04.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R
+        weight: 1
+      - path: Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/weapon.R/weapon.R_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
@@ -266,7 +2043,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

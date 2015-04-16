@@ -13,7 +13,7 @@ class WorldMapData{
 		return instance;
 	}
 	
-	function findPath(startX : int, startY : int, goalX : int, goalY : int){
+	function findPath(startX : int, startY : int, goalX : int, goalY : int, restrictCost : int){
 		if(!tiles[startX, startY].traversable || !tiles[goalX, goalY].traversable || (startX == goalX && startY == goalY)) return null;
 		var reachable : List.<PathNode> = new List.<PathNode>();
 		var visited : List.<PathNode> = new List.<PathNode>();
@@ -27,6 +27,9 @@ class WorldMapData{
 					fcost = node.f;
 					cheapest = node;
 				} 
+			}
+			if(cheapest.g >= restrictCost){
+				return null;
 			}
 			visited.Add(cheapest);
 			reachable.Remove(cheapest);
