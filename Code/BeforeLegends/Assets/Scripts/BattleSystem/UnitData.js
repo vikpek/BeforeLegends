@@ -18,7 +18,8 @@ class UnitData{
 	function calcDamage(opponent : UnitData){
 		var actualAttack : float = attack - attack * 0.1 + Random.Range(0, 1.0) * attack * 0.2;
 		var actualDefense : float = opponent.defense - opponent.defense * 0.1 + Random.Range(0, 1.0) * opponent.defense * 0.2;
-		
+
+
 		var mad : float = actualAttack / actualDefense / 10;
 		if(actualAttack < actualDefense){
 			mad = -mad;
