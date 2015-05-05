@@ -101,6 +101,8 @@ function spawnCarriers(){
 		if(tile.mapObjects.Count != 0){
 			var go : GameObject = Instantiate(CharacterModelPrefabs.prefabs[tile.mapObjects[0].appearanceID], tile.position, Quaternion.identity);
 			go.transform.parent = transform;
+			go.GetComponent.<MapObjectCarrier>().pos = tile.gridPos;
+			tile.gameObjectList.Add(go);
 		}
 	}	
 }

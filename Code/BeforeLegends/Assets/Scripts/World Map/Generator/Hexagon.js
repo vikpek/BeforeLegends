@@ -18,6 +18,7 @@ var river : boolean = false;
 var sea : boolean = false;
 
 var mapObjects : List.<MapObjectData> = List.<MapObjectData>(); 
+var gameObjectList : List.<GameObject> = List.<GameObject>();
 
 function generate(generator : WorldMapGenerator){
 	var xMax : float = generator.flatHex.size.x * generator.size.x;

@@ -73,6 +73,7 @@ function followPath(path : Vec2i[], dur : float){
 	}
 	
 	finalizeAt(path.Length - 1, path, false);
+
 }
 
 function finalizeAt(index : int, path : Vec2i[], suspended : boolean){
@@ -89,6 +90,9 @@ function finalizeAt(index : int, path : Vec2i[], suspended : boolean){
 			Messenger.instance.send(MapObjectMovedMessage(e, path[index-1]));
 		}
 	}
+	FogOfWar.instance.CheckTiles(path[index], FogOfWar.instance.visionRange);
+	//Debug.Log(path[index]);
+	FogOfWar.instance.SetEntitiesToVisible();
 }
 
 function OnTriggerEnter (other : Collider) {
