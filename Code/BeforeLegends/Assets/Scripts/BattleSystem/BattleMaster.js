@@ -15,7 +15,7 @@ function Awake() {
 }
 
 function combatSequence(player: UnitData, opponent : UnitData){
-
+	CurrentMap.instance.toggle();
 	//Debug.Log("Player:\nAttack: " + player.attack + "\nHP: " + player.hitPoints);
 	//Debug.Log("Opponent:\nAttack: " + opponent.attack + "\nHP: " + opponent.hitPoints);
 	//uiButton.GetComponent.<Image>().enabled = true;

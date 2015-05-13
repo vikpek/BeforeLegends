@@ -3,7 +3,6 @@
 import System.Collections.Generic;
 
 var mapMaterial : Material;
-var hexRadius : float;
 var size : Vec2i;
 var chunkSize : Vec2i;
 var seed : long;
@@ -48,7 +47,7 @@ var erosionSeed : Vector2;
 var flatHex : FlatHexagon;
 
 function Start(){
-	flatHex = FlatHexagon(hexRadius);
+	flatHex = FlatHexagon(1);
 	setSeeds();
 	packTextures();
 	generate();
