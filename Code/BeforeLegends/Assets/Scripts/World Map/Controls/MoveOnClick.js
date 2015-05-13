@@ -21,7 +21,7 @@ function Update(){
 				return;
 			}
 		}
-		var path : Vec2i[] = WorldMapData.getInstance().findPath(objData.pos.x, objData.pos.y, MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y, objData.movedMax - objData.moved);
+		var path : Vec2i[] = WorldMapData.getInstance().findPath(objData.pos.x, objData.pos.y, MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y, objData.movedMax - objData.moved, false);
 		objData.followPath(path, 0.25);
 	}
 }

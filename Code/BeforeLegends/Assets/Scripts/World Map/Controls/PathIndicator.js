@@ -65,7 +65,7 @@ function unhide(){
 function redraw(goal : Vec2i){
 	var target : MapObjectCarrier = InterfaceData.getInstance().selectedCarrier;
 	if(!target) return;
-	updatePath(WorldMapData.getInstance().findPath(target.pos.x, target.pos.y, goal.x, goal.y, target.movedMax - target.moved));
+	updatePath(WorldMapData.getInstance().findPath(target.pos.x, target.pos.y, goal.x, goal.y, target.movedMax - target.moved, false));
 }
 
 function onEvent_MouseTileChanged(msg : MouseTileChangedMessage){
