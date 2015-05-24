@@ -7,10 +7,12 @@ private var enemyUnitData : UnitData;
 private var damage : float;
 private var result : float[];
 private var isCrit : float;
+private var defaultPlayerHp: float;
 
 function Start () {
 	playerUnitData = GameObject.FindGameObjectWithTag("Player").GetComponent(BattleParameters).battleParameters;
 	enemyUnitData = GameObject.FindGameObjectWithTag("Enemy").GetComponent(BattleParameters).battleParameters;
+	defaultPlayerHp = playerUnitData.hitPoints;
 }
 
 function Update () {
@@ -18,7 +20,9 @@ function Update () {
 }
 
 function AttackDefault(){
-
+	
+	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
+	
 	result = playerUnitData.calcDamage(enemyUnitData) as float[];
 	damage = result[0];
 	isCrit = result[1];
@@ -29,8 +33,23 @@ function AttackDefault(){
 	ProcessResults();
 }
 
-function Attack2(){
-	Debug.Log("attack 2 default");
+function EnragedRetaliation(){
+
+	var enragedRetaliationBonus:float;
+	enragedRetaliationBonus = ((defaultPlayerHp - playerUnitData.hitPoints)/defaultPlayerHp)*playerUnitData.attack;
+	Debug.Log("enraged retaliation default" + enragedRetaliationBonus);
+	playerUnitData.attack = playerUnitData.attack + enragedRetaliationBonus;
+	
+	result = playerUnitData.calcDamage(enemyUnitData) as float[];
+	damage = result[0];
+	isCrit = result[1];
+
+	Debug.Log("attack default: " + damage + " " + isCrit);
+	enemyUnitData.hitPoints -= damage;
+	playerUnitData.attack = playerUnitData.attack - enragedRetaliationBonus;
+	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
+	ProcessResults();
+			
 }
 
 function Defend(){
@@ -50,9 +69,13 @@ private function ProcessResults()
 private function OpponentDeath()
 {
 	GameObject.FindGameObjectWithTag("Enemy").SetActive(false);
+	//TODO animation for opponent death
+	//TODO soundeffect for oppnent death
 }
 
 private function PlayerDeath()
 {
 	GameObject.FindGameObjectWithTag("Player").SetActive(false);
+	//TODO animation for player death
+	//TODO soundeffect for player death
 }
