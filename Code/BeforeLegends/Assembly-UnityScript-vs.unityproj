@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\Test stuff\EventListenerTest.js" />
      <Compile Include="Assets\Scripts\TurnManager.js" />
      <Compile Include="Assets\Scripts\Utilities\CharacterModelPrefabs.js" />
+     <Compile Include="Assets\Scripts\Utilities\CurrentMap.js" />
      <Compile Include="Assets\Scripts\Utilities\Vec2i.js" />
      <Compile Include="Assets\Scripts\World Map\Controls\InterfaceData.js" />
      <Compile Include="Assets\Scripts\World Map\Controls\MouseMovement.js" />
@@ -73,11 +74,13 @@
      <Compile Include="Assets\Scripts\World Map\Controls\MoveOnClick.js" />
      <Compile Include="Assets\Scripts\World Map\Controls\PathIndicator.js" />
      <Compile Include="Assets\Scripts\World Map\Controls\TileCursor.js" />
+     <Compile Include="Assets\Scripts\World Map\Generator\BattleMapGenerator.js" />
      <Compile Include="Assets\Scripts\World Map\Generator\FlatHexagon.js" />
      <Compile Include="Assets\Scripts\World Map\Generator\Hexagon.js" />
      <Compile Include="Assets\Scripts\World Map\Generator\WorldMapGenerator.js" />
      <Compile Include="Assets\Scripts\World Map\MapObjectCarrier.js" />
      <Compile Include="Assets\Scripts\World Map\MapObjectData.js" />
+     <Compile Include="Assets\Scripts\World Map\Pathfinding\BattleMapAgent.js" />
      <Compile Include="Assets\Scripts\World Map\Pathfinding\PathNode.js" />
      <Compile Include="Assets\Scripts\World Map\WorldMapData.js" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
@@ -140,6 +143,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\Scripts\Shader\FogOfWarMask 01.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
