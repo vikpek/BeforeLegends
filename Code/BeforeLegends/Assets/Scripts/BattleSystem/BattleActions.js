@@ -37,6 +37,15 @@ function Defend(){
 	Debug.Log("defend default");
 }
 
+<<<<<<< HEAD
+function Defend2(){
+	Debug.Log("defend 2 default");
+}
+
+function Defend3(){
+	Debug.Log("defend 3 default");
+}
+=======
 private function ProcessResults()
 {	
 	if(playerUnitData.hitPoints > 0){
@@ -57,3 +66,4 @@ private function PlayerDeath()
 {
 	GameObject.FindGameObjectWithTag("Player").SetActive(false);
 }
+>>>>>>> origin/code
