@@ -18,7 +18,8 @@ function Start () {
 }
 
 function Update () {
-
+	GameObject.FindGameObjectWithTag("PlayerHP").GetComponent(TextMesh).text = "" + playerUnitData.hitPoints;
+	GameObject.FindGameObjectWithTag("EnemyHP").GetComponent(TextMesh).text = "" + enemyUnitData.hitPoints;
 }
 
 function AttackDefault(){
