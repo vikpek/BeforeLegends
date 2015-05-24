@@ -8,11 +8,13 @@ private var damage : float;
 private var result : float[];
 private var isCrit : float;
 private var defaultPlayerHp: float;
+private var defaultEnemyHp: float;
 
 function Start () {
 	playerUnitData = GameObject.FindGameObjectWithTag("Player").GetComponent(BattleParameters).battleParameters;
 	enemyUnitData = GameObject.FindGameObjectWithTag("Enemy").GetComponent(BattleParameters).battleParameters;
 	defaultPlayerHp = playerUnitData.hitPoints;
+	defaultEnemyHp = enemyUnitData.hitPoints;
 }
 
 function Update () {
@@ -31,6 +33,28 @@ function AttackDefault(){
 	enemyUnitData.hitPoints -= damage;
 	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
 	ProcessResults();
+}
+
+function AttackOpponentDefault(){
+	
+	GameObject.FindGameObjectWithTag("Enemy").GetComponentInChildren(Animator).SetBool("attack",true);
+	
+	result = enemyUnitData.calcDamage(playerUnitData) as float[];
+	damage = result[0];
+	isCrit = result[1];
+
+	Debug.Log("attack default: " + damage + " " + isCrit);
+	playerUnitData.hitPoints -= damage;
+	Debug.Log("player hp: " + playerUnitData.hitPoints);
+	ProcessResults();
+}
+
+function HornedLionSpecialAttackOne (){
+
+	if (enemyUnitData.actionPoints >= 1 && enemyUnitData.hitPoints < defaultEnemyHp){
+	AttackOpponentDefault();
+	}
+	AttackOpponentDefault();
 }
 
 function EnragedRetaliation(){
