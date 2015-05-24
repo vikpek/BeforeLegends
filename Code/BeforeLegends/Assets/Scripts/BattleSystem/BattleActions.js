@@ -37,7 +37,7 @@ function AttackDefault(){
 
 function AttackOpponentDefault(){
 	
-	GameObject.FindGameObjectWithTag("Enemy").GetComponentInChildren(Animator).SetBool("attack",true);
+//	GameObject.FindGameObjectWithTag("Enemy").GetComponentInChildren(Animator).SetBool("attack",true);
 	
 	result = enemyUnitData.calcDamage(playerUnitData) as float[];
 	damage = result[0];
@@ -61,7 +61,7 @@ function EnragedRetaliation(){
 
 	var enragedRetaliationBonus:float;
 	enragedRetaliationBonus = ((defaultPlayerHp - playerUnitData.hitPoints)/defaultPlayerHp)*playerUnitData.attack;
-	Debug.Log("enraged retaliation default" + enragedRetaliationBonus);
+	Debug.Log("enraged retaliation bonus: " + enragedRetaliationBonus + " normal attack: " + playerUnitData.attack);
 	playerUnitData.attack = playerUnitData.attack + enragedRetaliationBonus;
 	
 	result = playerUnitData.calcDamage(enemyUnitData) as float[];

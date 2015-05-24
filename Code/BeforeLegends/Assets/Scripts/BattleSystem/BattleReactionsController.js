@@ -10,5 +10,5 @@ function Update () {
 
 function ReactionHornedLion()
 {
-//	GetComponent(BattleActions).HornedLion
+	GetComponent(BattleActions).HornedLionSpecialAttackOne();
 }

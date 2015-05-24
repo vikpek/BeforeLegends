@@ -32,7 +32,9 @@ function BattlePhase() {
 }
 
 function EnemyChoice() { 
+	
 	print("enemy makes a decision"); 
+	GetComponent(BattleReactionsController).ReactionHornedLion();
 	yield new WaitForSeconds(1); 
 	player = "enemy"; 
 	action = "attacks"; 
