@@ -53,6 +53,7 @@ function HornedLionSpecialAttackOne (){
 
 	if (enemyUnitData.actionPoints >= 1 && enemyUnitData.hitPoints < defaultEnemyHp){
 	AttackOpponentDefault();
+	enemyUnitData.actionPoints --;
 	}
 	AttackOpponentDefault();
 }
@@ -72,6 +73,8 @@ function EnragedRetaliation(){
 	enemyUnitData.hitPoints -= damage;
 	playerUnitData.attack = playerUnitData.attack - enragedRetaliationBonus;
 	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
+	playerUnitData.actionPoints --;	
+	
 	ProcessResults();
 			
 }
