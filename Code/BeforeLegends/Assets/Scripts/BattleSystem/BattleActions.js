@@ -26,3 +26,11 @@ function Attack2(){
 function Defend(){
 	Debug.Log("defend default");
 }
+
+function Defend2(){
+	Debug.Log("defend 2 default");
+}
+
+function Defend3(){
+	Debug.Log("defend 3 default");
+}
