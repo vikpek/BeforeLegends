@@ -1,4 +1,7 @@
-﻿var action : String; var player : String; var battle = true; var displayGui = false;
+﻿private var action : String; 
+private var player : String; 
+private var battle = true; 
+private var displayGui = false;
 
 function Start () { 
 	while (battle) { 
@@ -42,9 +45,9 @@ function TurnEnd() {
 
 function OnGUI() { 
 	if (!displayGui){
-		GameObject.FindGameObjectWithTag("UserAttackUI").SetActive(false);
+//		GameObject.FindGameObjectWithTag("UserAttackUI").SetActive(false);
 	}else{
-		GameObject.FindGameObjectWithTag("UserAttackUI").SetActive(true);
+//		GameObject.FindGameObjectWithTag("UserAttackUI").SetActive(true);
 	}
 
 // 	GUI.Box (Rect (10,10,100,90), "Battle Menu");
