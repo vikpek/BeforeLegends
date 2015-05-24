@@ -41,19 +41,28 @@ function TurnEnd() {
 }
 
 function OnGUI() { 
-	if (!displayGui) return;
+	if (!displayGui){
+		GameObject.FindGameObjectWithTag("UserAttackUI").SetActive(false);
+	}else{
+		GameObject.FindGameObjectWithTag("UserAttackUI").SetActive(true);
+	}
 
- 	GUI.Box (Rect (10,10,100,90), "Battle Menu");
- 
-	 if (GUI.Button (Rect (20,40,80,20), "Attack"))
-	 {
-	     action = "attacks";
-	     displayGui = false;
-	 } 
-	 
-	 if (GUI.Button (Rect (20,70,80,20), "Defend"))
-	 {
-	     action = "defends";
-	     displayGui = false;
-	 }
+// 	GUI.Box (Rect (10,10,100,90), "Battle Menu");
+// 
+//	 if (GUI.Button (Rect (20,40,80,20), "Attack"))
+//	 {
+//	     action = "attacks";
+//	     displayGui = false;
+//	 } 
+//	 
+//	 if (GUI.Button (Rect (20,70,80,20), "Defend"))
+//	 {
+//	     action = "defends";
+//	     displayGui = false;
+//	 }
+}
+
+function HideGUI()
+{
+	displayGui = false;
 }

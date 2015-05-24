@@ -39,12 +39,11 @@ function Defend(){
 
 private function ProcessResults()
 {	
-	if(playerUnitData.hitPoints > 0){
-		OpponentDeath();
-		Debug.Log("Player won!");
-	}else{
+	if(playerUnitData.hitPoints < 0){
 		PlayerDeath();
-		Debug.Log("Opponent won!");
+	}else if(enemyUnitData.hitPoints < 0)
+	{
+		OpponentDeath();
 	}
 }
 
