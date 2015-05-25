@@ -22,14 +22,17 @@ function Update () {
 function ReactionHornedLion()
 {
 
-if (enemyUnitData.hitPoints >0 && enemyUnitData.hitPoints <= 15){
+if (enemyUnitData.hitPoints >0 && enemyUnitData.hitPoints <= defaultEnemyHp*0.25){ // depending on HP enemey does different actions
 	GetComponent(BattleActions).AttackOpponentFinal();
 	}
-	else if (enemyUnitData.hitPoints>15 && enemyUnitData.hitPoints <=25){
+	else if (enemyUnitData.hitPoints> defaultEnemyHp*0.25 && enemyUnitData.hitPoints <= defaultEnemyHp*0.4){
 	GetComponent(BattleActions).HealSelfOpponent();
 	}
 	else{
 	GetComponent(BattleActions).HornedLionSpecialAttackOne();
 	}
+	
+	//enemyUnitData.hitPoints < defaultEnemyHp*0.8){
+	//enemyUnitData.hitPoints < defaultEnemyHp*0.8){
 }
 
