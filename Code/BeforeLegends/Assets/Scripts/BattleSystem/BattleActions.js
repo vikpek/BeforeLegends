@@ -178,6 +178,7 @@ function OlafDeath(){
 function EnragedRetaliation(){
 
 	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
+	Screenshake.instance.ScreenShake(0.5F, 0.1f, 0.1);
 	
 	var enragedRetaliationBonus:float;
 	enragedRetaliationBonus = ((defaultPlayerHp - playerUnitData.hitPoints)/defaultPlayerHp)*playerUnitData.attack;
