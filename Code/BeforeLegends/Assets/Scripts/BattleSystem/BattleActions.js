@@ -52,7 +52,7 @@ function AttackOpponentDefault(){
 
 function HornedLionSpecialAttackOne (){
 
-	if (enemyUnitData.actionPoints >= 1 && enemyUnitData.hitPoints < defaultEnemyHp){
+	if (enemyUnitData.actionPoints >= 1 && enemyUnitData.hitPoints < defaultEnemyHp*0.8){
 	AttackOpponentDefault();
 	enemyUnitData.actionPoints --;
 	}
