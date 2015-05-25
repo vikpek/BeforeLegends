@@ -29,6 +29,9 @@ function BattlePhase() {
 	yield new WaitForSeconds(1); 
 	print(player + " " + action); 
 	yield new WaitForSeconds(1); 
+	GetComponent(BattleActions).HornedLionDeath();
+	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",false);
+	
 }
 
 function EnemyChoice() { 
@@ -38,33 +41,24 @@ function EnemyChoice() {
 	yield new WaitForSeconds(1); 
 	player = "enemy"; 
 	action = "attacks"; 
+	GameObject.FindGameObjectWithTag("Enemy").GetComponentInChildren(Animator).SetBool("attack",false);
+	GetComponent(BattleActions).OlafDeath();
 }
 
 function TurnEnd() { 
 	print("turn ends"); 
 	yield new WaitForSeconds(1); 
+	
 }
 
 function OnGUI() { 
+	var canvas = GameObject.FindGameObjectWithTag("UserAttackUI").GetComponent(Canvas);
+	
 	if (!displayGui){
-//		GameObject.FindGameObjectWithTag("UserAttackUI").SetActive(false);
+		canvas.enabled = false;
 	}else{
-//		GameObject.FindGameObjectWithTag("UserAttackUI").SetActive(true);
+		canvas.enabled = true;
 	}
-
-// 	GUI.Box (Rect (10,10,100,90), "Battle Menu");
-// 
-//	 if (GUI.Button (Rect (20,40,80,20), "Attack"))
-//	 {
-//	     action = "attacks";
-//	     displayGui = false;
-//	 } 
-//	 
-//	 if (GUI.Button (Rect (20,70,80,20), "Defend"))
-//	 {
-//	     action = "defends";
-//	     displayGui = false;
-//	 }
 }
 
 function HideGUI()
