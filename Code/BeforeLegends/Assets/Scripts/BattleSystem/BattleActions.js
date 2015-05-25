@@ -22,7 +22,7 @@ function Update () { // updates about 30 times per second
 	GameObject.FindGameObjectWithTag("EnemyHP").GetComponent(TextMesh).text = "" + enemyUnitData.hitPoints;
 }
 
-function AttackDefault(){
+function AttackDefault(){ // Basic attack of PC
 	
 	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
 	
@@ -37,7 +37,7 @@ function AttackDefault(){
 	
 }
 
-function DoubleDamageAttack(){
+function DoubleDamageAttack(){ //This is just ONE attack that deals double damage
 	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
 	
 	result = playerUnitData.calcDamage(enemyUnitData) as float[];
@@ -52,7 +52,7 @@ function DoubleDamageAttack(){
 	
 }
 
-function DoubleAttack(){
+function DoubleAttack(){ // These are two attacks done one after the other during one round.
 
 	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
 	
@@ -110,7 +110,7 @@ function AttackOpponentDefault(){
 	ProcessResults();
 }
 
-function HealSelf(){
+function HealSelf(){ //This power can be used to heal the PC
 	
 	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
 	
@@ -121,7 +121,7 @@ function HealSelf(){
 	ProcessResults();
 }
 
-function HealOther(){
+function HealOther(){ // The PC can heal others (for now only the opponent): not very useful for now.
 	
 	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
 
