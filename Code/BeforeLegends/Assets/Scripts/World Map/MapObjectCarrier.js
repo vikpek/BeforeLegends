@@ -95,11 +95,11 @@ function finalizeAt(index : int, path : Vec2i[], suspended : boolean){
 	FogOfWar.instance.SetEntitiesToVisible();
 }
 
-function OnTriggerEnter (other : Collider) {
+function OnTriggerEnter (other : Collider){
+		GameStateManager.instance.startBattle(null);
 		enemyGameObject = other.transform.gameObject;
 		suspend = true;
-		if(enemyGameObject.tag == "Enemy")
-			var winner : int = BattleMaster.instance.combatSequence(data[0].battleStats, enemyGameObject.GetComponent.<MapObjectCarrier>().data[0].battleStats);
-		if(winner == 1)
-			enemyGameObject.SetActive(false);
+		
+		//CHECK FOR WIN 
+		//enemyGameObject.SetActive(false);
 	}

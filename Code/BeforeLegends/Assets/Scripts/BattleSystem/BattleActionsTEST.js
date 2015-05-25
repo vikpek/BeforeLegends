@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-private var playerUnitData : UnitData;
+/*private var playerUnitData : UnitData;
 private var enemyUnitData : UnitData;
 
 private var damage : float;
@@ -19,8 +19,22 @@ function Start () {
 function Update () {
 	GameObject.FindGameObjectWithTag("PlayerHP").GetComponent(TextMesh).text = "" + playerUnitData.hitPoints;
 	GameObject.FindGameObjectWithTag("EnemyHP").GetComponent(TextMesh).text = "" + enemyUnitData.hitPoints;
-}
+}*/
 
+static function Attack(subj : UnitData, subjAnim : CharacterAnimationInterface, obj : UnitData, objAnim : CharacterAnimationInterface, callback : Function){
+	subjAnim.swapAnimation(Anims.ATTACK);
+	objAnim.swapAnimation(Anims.HURT);
+		
+	while(
+		subjAnim.isAnimating(Anims.ATTACK) ||
+		subjAnim.isAnimating(Anims.HURT)
+	){
+		yield;
+	}
+	callback();
+	//calc damage
+}
+/*
 function AttackDefault(){
 	
 	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
@@ -91,12 +105,11 @@ private function ProcessResults()
 	{
 		OpponentDeath();
 	}
-}
+}*/
 
 private function OpponentDeath()
 {
 	GameStateManager.instance.endBattle(true);
-	Debug.Log("workz");
 	//TODO animation for opponent death
 	//TODO soundeffect for oppnent death
 }

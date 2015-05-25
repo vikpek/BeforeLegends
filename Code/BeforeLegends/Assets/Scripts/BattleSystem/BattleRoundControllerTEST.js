@@ -1,9 +1,64 @@
-﻿private var action : String; 
-private var player : String; 
-private var battle = true; 
-private var displayGui = false;
+﻿private enum Actor{
+	PLAYER, ENEMY
+}
 
-function Start () { 
+private enum BattleState{
+	IDLE, STARTED, ANIMATING
+}
+
+private enum Action{
+	ATTACK, ENRAGED
+}
+
+private var state : BattleState = BattleState.IDLE;
+private var actor : Actor = Actor.PLAYER;
+private var playerAction : Action;
+private var playerData : UnitData;
+private var enemyData : UnitData;
+private var playerAnimator : CharacterAnimationInterface;
+private var enemyAnimator : CharacterAnimationInterface;
+
+function Update(){
+	if(state == BattleState.STARTED){
+		state = BattleState.ANIMATING;
+		if(actor == Actor.PLAYER){
+			//player action + callback
+		}else{
+			//enemy action + callback
+		}
+	}
+}
+
+function OnAnimationFinished(){
+	if(state == BattleState.ANIMATING){
+		if(actor == Actor.PLAYER){
+			state = BattleState.STARTED;
+			actor = Actor.ENEMY;
+		}else{
+			state = BattleState.IDLE;
+			actor = Actor.PLAYER;
+		}
+	}
+}
+
+//---MAP INPUT---
+function OnInput_Attack(){
+	OnInput(Action.ATTACK);
+}
+
+function OnInput_Enraged(){
+	OnInput(Action.ENRAGED);
+}
+//--------------
+
+//Resolve Input
+function OnInput(action : Action){ 
+	if(state == BattleState.IDLE && actor == Actor.PLAYER){
+		state = BattleState.STARTED;
+	}
+}
+
+/*function Start () { 
 	while (battle) { 
 		yield PlayerChoice(); 
 		yield BattlePhase(); 
@@ -70,4 +125,4 @@ function OnGUI() {
 function HideGUI()
 {
 	displayGui = false;
-}
+}*/
