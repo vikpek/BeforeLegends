@@ -740,7 +740,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 407028, guid: d4b045998f71eac4ca58f92a9e589d5e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.155000001
+      value: -.153999999
       objectReference: {fileID: 0}
     - target: {fileID: 407028, guid: d4b045998f71eac4ca58f92a9e589d5e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -748,7 +748,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407028, guid: d4b045998f71eac4ca58f92a9e589d5e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.56799996
+      value: 1.01300001
       objectReference: {fileID: 0}
     - target: {fileID: 407028, guid: d4b045998f71eac4ca58f92a9e589d5e, type: 2}
       propertyPath: m_LocalRotation.x
@@ -756,7 +756,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407028, guid: d4b045998f71eac4ca58f92a9e589d5e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -.490255713
+      value: -.947309375
       objectReference: {fileID: 0}
     - target: {fileID: 407028, guid: d4b045998f71eac4ca58f92a9e589d5e, type: 2}
       propertyPath: m_LocalRotation.z
@@ -764,7 +764,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407028, guid: d4b045998f71eac4ca58f92a9e589d5e, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .871578634
+      value: .320320189
       objectReference: {fileID: 0}
     - target: {fileID: 407028, guid: d4b045998f71eac4ca58f92a9e589d5e, type: 2}
       propertyPath: m_RootOrder
@@ -782,7 +782,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .821136832
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11123882, guid: d4b045998f71eac4ca58f92a9e589d5e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d4b045998f71eac4ca58f92a9e589d5e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1013691688 stripped
@@ -809,7 +810,7 @@ MonoBehaviour:
     defense: 10
     damage: 10
     armor: 10
-    hitPoints: 100
+    hitPoints: 10
     actionPoints: 2
     speed: 10
     critStrike: 0
@@ -1095,7 +1096,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 697176f410176de4bb33228ee4025e95, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1354,3 +1355,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!1 &2003980998 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 141480, guid: d4b045998f71eac4ca58f92a9e589d5e, type: 2}
+  m_PrefabInternal: {fileID: 1013691687}
+--- !u!95 &2003981000
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2003980998}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 40fa85b6ed0482743ba0aa677e0ef6ad, type: 3}
+  m_Controller: {fileID: 9100000, guid: cff2728c6153638488116472e40fdac1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
