@@ -10,14 +10,14 @@ private var isCrit : float;
 private var defaultPlayerHp: float;
 private var defaultEnemyHp: float;
 
-function Start () {
+function Start () { // this function is called only ONCE per scene start
 	playerUnitData = GameObject.FindGameObjectWithTag("Player").GetComponent(BattleParameters).battleParameters;
 	enemyUnitData = GameObject.FindGameObjectWithTag("Enemy").GetComponent(BattleParameters).battleParameters;
 	defaultPlayerHp = playerUnitData.hitPoints;
 	defaultEnemyHp = enemyUnitData.hitPoints;
 }
 
-function Update () {
+function Update () { // updates about 30 times per second
 	GameObject.FindGameObjectWithTag("PlayerHP").GetComponent(TextMesh).text = "" + playerUnitData.hitPoints;
 	GameObject.FindGameObjectWithTag("EnemyHP").GetComponent(TextMesh).text = "" + enemyUnitData.hitPoints;
 }
@@ -36,6 +36,45 @@ function AttackDefault(){
 	ProcessResults();
 }
 
+function DoubleDamageAttack(){
+	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
+	
+	result = playerUnitData.calcDamage(enemyUnitData) as float[];
+	damage = result[0]*2;
+	isCrit = result[1];
+	
+	Debug.Log("attack default: " + damage + " " + isCrit);
+	enemyUnitData.hitPoints -= damage;
+	// is the same as enemyUnitData.hitPoints = enemyUnitData.hitPoints - damage;
+	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
+	ProcessResults();
+	
+}
+
+function DoubleAttack(){
+
+	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
+	
+	result = playerUnitData.calcDamage(enemyUnitData) as float[];
+	damage = result[0];
+	isCrit = result[1];
+
+	Debug.Log("attack default: " + damage + " " + isCrit);
+	enemyUnitData.hitPoints -= damage;
+	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
+	ProcessResults();
+	
+	result = playerUnitData.calcDamage(enemyUnitData) as float[];
+	damage = result[0];
+	isCrit = result[1];
+
+	Debug.Log("attack default: " + damage + " " + isCrit);
+	enemyUnitData.hitPoints -= damage;
+	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
+	ProcessResults();
+	
+}
+
 function AttackOpponentDefault(){
 	
 //	GameObject.FindGameObjectWithTag("Enemy").GetComponentInChildren(Animator).SetBool("attack",true);
@@ -47,6 +86,28 @@ function AttackOpponentDefault(){
 	Debug.Log("attack default: " + damage + " " + isCrit);
 	playerUnitData.hitPoints -= damage;
 	Debug.Log("player hp: " + playerUnitData.hitPoints);
+	ProcessResults();
+}
+
+function HealSelf(){
+	
+	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
+	
+	
+	Debug.Log("attack default: " + damage + " " + isCrit);
+	playerUnitData.hitPoints += 25;
+	Debug.Log("player hp: " + playerUnitData.hitPoints);
+	ProcessResults();
+}
+
+function HealOther(){
+	
+	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
+
+
+	Debug.Log("attack default: " + damage + " " + isCrit);
+	enemyUnitData.hitPoints += 25;
+	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
 	ProcessResults();
 }
 

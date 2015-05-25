@@ -85,6 +85,7 @@ GameObject:
   - 4: {fileID: 407028}
   - 114: {fileID: 11434068}
   - 65: {fileID: 6536104}
+  - 114: {fileID: 11424040}
   m_Layer: 0
   m_Name: HornedLion
   m_TagString: Enemy
@@ -1175,6 +1176,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &194064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 493906}
+  - 23: {fileID: 2391008}
+  - 102: {fileID: 10278582}
+  - 132: {fileID: 13210072}
+  - 114: {fileID: 11491698}
+  m_Layer: 0
+  m_Name: EnemyHP
+  m_TagString: EnemyHP
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &194984
 GameObject:
   m_ObjectHideFlags: 1
@@ -1263,12 +1283,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103140}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -.490255713, z: 0, w: .871578634}
+  m_LocalPosition: {x: -.155000001, y: -.023, z: 1.56799996}
+  m_LocalScale: {x: .821136415, y: .821136415, z: .821136832}
   m_Children:
   - {fileID: 459042}
   - {fileID: 442422}
+  - {fileID: 493906}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &410012
@@ -2229,6 +2250,18 @@ Transform:
   - {fileID: 462114}
   m_Father: {fileID: 497264}
   m_RootOrder: 1
+--- !u!4 &493906
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .469999999, y: 1.87600005, z: -.108999997}
+  m_LocalScale: {x: -.195491359, y: .165119946, z: .165119946}
+  m_Children: []
+  m_Father: {fileID: 407028}
+  m_RootOrder: 2
 --- !u!4 &497264
 Transform:
   m_ObjectHideFlags: 1
@@ -2272,6 +2305,30 @@ Transform:
   - {fileID: 466482}
   m_Father: {fileID: 483116}
   m_RootOrder: 2
+--- !u!23 &2391008
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194064}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!65 &6536104
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2284,6 +2341,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!102 &10278582
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194064}
+  m_Text: 000
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 46
+  m_FontStyle: 0
+  m_RichText: 0
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4282994560
 --- !u!111 &11123882
 Animation:
   m_ObjectHideFlags: 1
@@ -2299,6 +2377,27 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &11424040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleParameters:
+    attack: 10
+    defense: 10
+    damage: 10
+    armor: 10
+    hitPoints: 100
+    actionPoints: 2
+    speed: 10
+    critStrike: 0
+    critBlock: 0
 --- !u!114 &11434068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2342,6 +2441,40 @@ MonoBehaviour:
     critStrike: 0
     critBlock: 0
   gO: {fileID: 0}
+--- !u!114 &11491698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd72d62b6d3634de987603e90ccfaabf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!132 &13210072
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194064}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 176
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 0
+  m_RichText: 0
 --- !u!137 &13768160
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
