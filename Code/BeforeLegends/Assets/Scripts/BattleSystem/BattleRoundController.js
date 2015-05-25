@@ -29,8 +29,9 @@ function BattlePhase() {
 	yield new WaitForSeconds(1); 
 	print(player + " " + action); 
 	yield new WaitForSeconds(1); 
-	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",false);
 	GetComponent(BattleActions).HornedLionDeath();
+	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",false);
+	
 }
 
 function EnemyChoice() { 
