@@ -826,6 +826,7 @@ GameObject:
   - 54: {fileID: 5479850}
   - 65: {fileID: 6539078}
   - 114: {fileID: 11400326}
+  - 114: {fileID: 11421048}
   m_Layer: 0
   m_Name: Olaf
   m_TagString: Player
@@ -1202,8 +1203,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 437878}
-  - 111: {fileID: 11113990}
-  - 95: {fileID: 9564336}
+  - 95: {fileID: 9569152}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -3066,7 +3066,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &9564336
+--- !u!95 &9569152
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -3074,7 +3074,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169024}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 658bcf63987d34c459c4b09948584c21, type: 3}
   m_Controller: {fileID: 9100000, guid: 697176f410176de4bb33228ee4025e95, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -3104,22 +3104,28 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4291493726
---- !u!111 &11113990
-Animation:
+--- !u!114 &11400326
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169024}
+  m_GameObject: {fileID: 147908}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400010, guid: 658bcf63987d34c459c4b09948584c21, type: 3}
-  m_Animations:
-  - {fileID: 7400010, guid: 658bcf63987d34c459c4b09948584c21, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 1
---- !u!114 &11400326
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleParameters:
+    attack: 10
+    defense: 10
+    damage: 10
+    armor: 10
+    hitPoints: 100
+    actionPoints: 10
+    speed: 10
+    critStrike: 0
+    critBlock: 0
+--- !u!114 &11421048
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
