@@ -826,7 +826,6 @@ GameObject:
   - 54: {fileID: 5479850}
   - 65: {fileID: 6539078}
   - 114: {fileID: 11400326}
-  - 114: {fileID: 11421048}
   m_Layer: 0
   m_Name: Olaf
   m_TagString: Player
@@ -2202,8 +2201,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147908}
-  m_LocalRotation: {x: 0, y: .65063566, z: 0, w: .759390056}
-  m_LocalPosition: {x: 1.61899996, y: -.023, z: 1.60099995}
+  m_LocalRotation: {x: .00473183161, y: -.999945104, z: -.00466232467, w: .00810378883}
+  m_LocalPosition: {x: -.248936415, y: -.000873088837, z: -.0669660717}
   m_LocalScale: {x: .821136415, y: .821136415, z: .821136832}
   m_Children:
   - {fileID: 439276}
@@ -3105,27 +3104,6 @@ TextMesh:
     serializedVersion: 2
     rgba: 4291493726
 --- !u!114 &11400326
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  battleParameters:
-    attack: 10
-    defense: 10
-    damage: 10
-    armor: 10
-    hitPoints: 100
-    actionPoints: 10
-    speed: 10
-    critStrike: 0
-    critBlock: 0
---- !u!114 &11421048
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

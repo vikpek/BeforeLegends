@@ -86,7 +86,6 @@ GameObject:
   - 114: {fileID: 11434068}
   - 65: {fileID: 6536104}
   - 114: {fileID: 11468626}
-  - 114: {fileID: 11494354}
   m_Layer: 0
   m_Name: HornedLion
   m_TagString: Enemy
@@ -2439,7 +2438,7 @@ MonoBehaviour:
     defense: 10
     damage: 10
     armor: 10
-    hitPoints: 10
+    hitPoints: 60
     actionPoints: 2
     speed: 10
     critStrike: 0
@@ -2455,27 +2454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd72d62b6d3634de987603e90ccfaabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11494354
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  battleParameters:
-    attack: 10
-    defense: 10
-    damage: 10
-    armor: 10
-    hitPoints: 100
-    actionPoints: 10
-    speed: 10
-    critStrike: 0
-    critBlock: 0
 --- !u!132 &13288832
 GUIText:
   m_ObjectHideFlags: 1
