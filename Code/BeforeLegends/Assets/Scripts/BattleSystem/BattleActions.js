@@ -34,6 +34,7 @@ function AttackDefault(){
 	enemyUnitData.hitPoints -= damage;
 	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
 	ProcessResults();
+	
 }
 
 function DoubleDamageAttack(){
@@ -77,7 +78,7 @@ function DoubleAttack(){
 
 function AttackOpponentDefault(){
 	
-//	GameObject.FindGameObjectWithTag("Enemy").GetComponentInChildren(Animator).SetBool("attack",true);
+	GameObject.FindGameObjectWithTag("Enemy").GetComponentInChildren(Animator).SetBool("attack",true);
 	
 	result = enemyUnitData.calcDamage(playerUnitData) as float[];
 	damage = result[0];
@@ -120,8 +121,24 @@ function HornedLionSpecialAttackOne (){
 	AttackOpponentDefault();
 }
 
+function HornedLionDeath(){
+
+	if (enemyUnitData.hitPoints <= 0){
+	GameObject.FindGameObjectWithTag("Enemy").GetComponentInChildren(Animator).SetBool("liondeath",true);
+	}
+}
+
+function OlafDeath(){
+
+	if (playerUnitData.hitPoints <= 0){
+	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("olafdeath",true);
+	}
+}
+
 function EnragedRetaliation(){
 
+	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
+	
 	var enragedRetaliationBonus:float;
 	enragedRetaliationBonus = ((defaultPlayerHp - playerUnitData.hitPoints)/defaultPlayerHp)*playerUnitData.attack;
 	Debug.Log("enraged retaliation bonus: " + enragedRetaliationBonus + " normal attack: " + playerUnitData.attack);
@@ -157,14 +174,14 @@ private function ProcessResults()
 
 private function OpponentDeath()
 {
-	GameObject.FindGameObjectWithTag("Enemy").SetActive(false);
+
 	//TODO animation for opponent death
 	//TODO soundeffect for oppnent death
 }
 
 private function PlayerDeath()
 {
-	GameObject.FindGameObjectWithTag("Player").SetActive(false);
+	//GameObject.FindGameObjectWithTag("Player").SetActive(false);
 	//TODO animation for player death
 	//TODO soundeffect for player death
 }
