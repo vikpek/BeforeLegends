@@ -87,6 +87,381 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &97691243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 97691245}
+  - 114: {fileID: 97691244}
+  m_Layer: 0
+  m_Name: Opponent_HiPrMiDam_HiDoLoAr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &97691244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 97691243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleParameters:
+    attack: 8
+    defense: 8
+    damage: 4
+    armor: 1
+    hitPoints: 16
+    actionPoints: 0
+    speed: 0
+    critStrike: .100000001
+    critBlock: 0
+--- !u!4 &97691245
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 97691243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 794521362}
+  m_RootOrder: 0
+--- !u!1 &353141045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 353141047}
+  - 114: {fileID: 353141046}
+  m_Layer: 0
+  m_Name: Weapon_HighPrecLowDam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &353141046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 353141045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleParameters:
+    attack: 10
+    defense: 0
+    damage: 2
+    armor: 0
+    hitPoints: 0
+    actionPoints: 0
+    speed: 1
+    critStrike: 0
+    critBlock: 0
+--- !u!4 &353141047
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 353141045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1107920782}
+  m_RootOrder: 1
+--- !u!1 &389429191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 389429193}
+  - 114: {fileID: 389429192}
+  m_Layer: 0
+  m_Name: Striker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &389429192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 389429191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleParameters:
+    attack: 5
+    defense: 4
+    damage: .5
+    armor: 0
+    hitPoints: 10
+    actionPoints: 0
+    speed: 0
+    critStrike: 0
+    critBlock: 0
+--- !u!4 &389429193
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 389429191}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1758287177}
+  m_RootOrder: 1
+--- !u!1 &415201853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 415201854}
+  - 114: {fileID: 415201855}
+  m_Layer: 0
+  m_Name: Weapon_All0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &415201854
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 415201853}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1107920782}
+  m_RootOrder: 3
+--- !u!114 &415201855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 415201853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleParameters:
+    attack: 0
+    defense: 0
+    damage: 0
+    armor: 0
+    hitPoints: 0
+    actionPoints: 0
+    speed: 1
+    critStrike: 0
+    critBlock: 0
+--- !u!1 &483604752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 483604754}
+  - 114: {fileID: 483604753}
+  m_Layer: 0
+  m_Name: Tank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &483604753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 483604752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleParameters:
+    attack: 3
+    defense: 2
+    damage: 2
+    armor: 0
+    hitPoints: 20
+    actionPoints: 0
+    speed: 0
+    critStrike: 0
+    critBlock: 0
+--- !u!4 &483604754
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 483604752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1758287177}
+  m_RootOrder: 0
+--- !u!1 &794521361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 794521362}
+  m_Layer: 0
+  m_Name: Opponents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &794521362
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 794521361}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 97691245}
+  - {fileID: 2119748864}
+  - {fileID: 1324174143}
+  - {fileID: 1366966058}
+  - {fileID: 1045001861}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!1 &914334053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 914334055}
+  - 114: {fileID: 914334054}
+  m_Layer: 0
+  m_Name: Weapon_MidPrecMidDam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &914334054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 914334053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleParameters:
+    attack: 5
+    defense: 0
+    damage: 5
+    armor: 0
+    hitPoints: 0
+    actionPoints: 0
+    speed: 1
+    critStrike: 0
+    critBlock: 0
+--- !u!4 &914334055
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 914334053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1107920782}
+  m_RootOrder: 0
+--- !u!1 &1045001860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1045001861}
+  - 114: {fileID: 1045001862}
+  m_Layer: 0
+  m_Name: Opponent_Dummy_1Do1Ar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1045001861
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1045001860}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 794521362}
+  m_RootOrder: 4
+--- !u!114 &1045001862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1045001860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleParameters:
+    attack: 8
+    defense: 8
+    damage: 4
+    armor: 8
+    hitPoints: 100
+    actionPoints: 0
+    speed: 0
+    critStrike: .100000001
+    critBlock: 0
 --- !u!1 &1060831408
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,8 +509,40 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+  m_Father: {fileID: 1107920782}
+  m_RootOrder: 4
+--- !u!1 &1107920781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1107920782}
+  m_Layer: 0
+  m_Name: Weapons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1107920782
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1107920781}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 914334055}
+  - {fileID: 353141047}
+  - {fileID: 1744275902}
+  - {fileID: 415201854}
+  - {fileID: 1060831410}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!1 &1232819259
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,11 +631,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleParameters:
-    attack: 3
-    defense: 2
+    attack: 5
+    defense: 4
     damage: 1
     armor: 0
-    hitPoints: 20
+    hitPoints: 10
     actionPoints: 0
     speed: 0
     critStrike: .5
@@ -240,11 +647,60 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1301679301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1758287177}
+  m_RootOrder: 2
+--- !u!1 &1324174141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1324174143}
+  - 114: {fileID: 1324174142}
+  m_Layer: 0
+  m_Name: DireBuffalo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1324174142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1324174141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleParameters:
+    attack: 2
+    defense: 0
+    damage: 10
+    armor: 8
+    hitPoints: 30
+    actionPoints: 0
+    speed: 0
+    critStrike: .100000001
+    critBlock: 0
+--- !u!4 &1324174143
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1324174141}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 794521362}
+  m_RootOrder: 2
 --- !u!1 &1366966056
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,8 +748,137 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+  m_Father: {fileID: 794521362}
+  m_RootOrder: 3
+--- !u!1 &1744275900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1744275902}
+  - 114: {fileID: 1744275901}
+  m_Layer: 0
+  m_Name: Weapon_LowPrecHighDam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1744275901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1744275900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleParameters:
+    attack: 2
+    defense: 0
+    damage: 10
+    armor: 0
+    hitPoints: 0
+    actionPoints: 0
+    speed: 1
+    critStrike: 0
+    critBlock: 0
+--- !u!4 &1744275902
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1744275900}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1107920782}
+  m_RootOrder: 2
+--- !u!1 &1758287176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1758287177}
+  m_Layer: 0
+  m_Name: Characters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1758287177
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1758287176}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 483604754}
+  - {fileID: 389429193}
+  - {fileID: 1301679303}
+  - {fileID: 1816883990}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
+--- !u!1 &1816883988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1816883990}
+  - 114: {fileID: 1816883989}
+  m_Layer: 0
+  m_Name: Mannequin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1816883989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816883988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleParameters:
+    attack: 1
+    defense: 1
+    damage: 2
+    armor: 0
+    hitPoints: 50
+    actionPoints: 0
+    speed: 0
+    critStrike: .100000001
+    critBlock: 0
+--- !u!4 &1816883990
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816883988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1758287177}
+  m_RootOrder: 3
 --- !u!1 &1940987372
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +975,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb38934b2aab9b343a67d78107ad60b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 1301679301}
-  opponentObject: {fileID: 1366966056}
-  weaponObject: {fileID: 1060831408}
+  playerObject: {fileID: 1816883988}
+  opponentObject: {fileID: 1045001860}
+  weaponObject: {fileID: 415201853}
+--- !u!1 &2119748862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2119748864}
+  - 114: {fileID: 2119748863}
+  m_Layer: 0
+  m_Name: Opponent_HiPrMiDam_LoDoLoAr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2119748863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119748862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleParameters:
+    attack: 8
+    defense: 1
+    damage: 4
+    armor: 1
+    hitPoints: 16
+    actionPoints: 0
+    speed: 0
+    critStrike: .100000001
+    critBlock: 0
+--- !u!4 &2119748864
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119748862}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 794521362}
+  m_RootOrder: 1

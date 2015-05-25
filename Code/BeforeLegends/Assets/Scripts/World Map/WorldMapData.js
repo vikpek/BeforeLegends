@@ -13,8 +13,8 @@ class WorldMapData{
 		return instance;
 	}
 	
-	function findPath(startX : int, startY : int, goalX : int, goalY : int, restrictCost : int){
-		if(!tiles[startX, startY].traversable || !tiles[goalX, goalY].traversable || (startX == goalX && startY == goalY)) return null;
+	function findPath(startX : int, startY : int, goalX : int, goalY : int, restrictCost : int, ignorecollision : boolean){
+		if((!ignorecollision && (!tiles[startX, startY].traversable || !tiles[goalX, goalY].traversable)) || (startX == goalX && startY == goalY)) return null;
 		var reachable : List.<PathNode> = new List.<PathNode>();
 		var visited : List.<PathNode> = new List.<PathNode>();
 		reachable.Add(PathNode(startX, startY));
@@ -43,7 +43,7 @@ class WorldMapData{
 					}
 				}
 		
-				if(hex.traversable && !gotVisited){
+				if((hex.traversable || ignorecollision) && !gotVisited){
 					var isReachable : boolean = false;
 					for(var rNode in reachable){
 						if(hex.gridPos.x == rNode.x && hex.gridPos.y == rNode.y){
