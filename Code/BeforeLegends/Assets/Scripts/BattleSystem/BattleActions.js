@@ -73,7 +73,27 @@ function DoubleAttack(){
 	enemyUnitData.hitPoints -= damage;
 	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
 	ProcessResults();
+}
+
+function BluntAttack(){
 	
+	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
+	
+	result = playerUnitData.calcDamage(enemyUnitData) as float[];
+	damage = result[0];
+	isCrit = result[1];
+	Dazed();
+
+	Debug.Log("attack default: " + damage + " " + isCrit);
+	enemyUnitData.hitPoints -= damage;
+	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
+	ProcessResults();
+}
+
+function Dazed(){
+	
+	enemyUnitData.attack -= 1;
+	enemyUnitData.defense -= 1;
 }
 
 function AttackOpponentDefault(){
