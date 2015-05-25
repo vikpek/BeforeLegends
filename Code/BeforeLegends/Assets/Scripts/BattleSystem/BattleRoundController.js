@@ -46,25 +46,13 @@ function TurnEnd() {
 }
 
 function OnGUI() { 
+	var canvas = GameObject.FindGameObjectWithTag("UserAttackUI").GetComponent(Canvas);
+	
 	if (!displayGui){
-//		GameObject.FindGameObjectWithTag("UserAttackUI").SetActive(false);
+		canvas.enabled = false;
 	}else{
-//		GameObject.FindGameObjectWithTag("UserAttackUI").SetActive(true);
+		canvas.enabled = true;
 	}
-
-// 	GUI.Box (Rect (10,10,100,90), "Battle Menu");
-// 
-//	 if (GUI.Button (Rect (20,40,80,20), "Attack"))
-//	 {
-//	     action = "attacks";
-//	     displayGui = false;
-//	 } 
-//	 
-//	 if (GUI.Button (Rect (20,70,80,20), "Defend"))
-//	 {
-//	     action = "defends";
-//	     displayGui = false;
-//	 }
 }
 
 function HideGUI()
