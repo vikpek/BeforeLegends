@@ -32,7 +32,7 @@ static function Attack(subj : UnitData, subjAnim : CharacterAnimationInterface, 
 		yield;
 	}
 	callback();
-	//calc damage
+	subj.calcDamage(obj)
 }
 /*
 function AttackDefault(){
