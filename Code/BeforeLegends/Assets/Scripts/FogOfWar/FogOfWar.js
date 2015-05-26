@@ -16,14 +16,14 @@ function Start () {
 	player = GameObject.Find("Olaf");
 }
 
-function Update () {
+/*function Update () {
 	if(Input.GetKeyDown(KeyCode.L))
 		CheckTiles(player.GetComponent.<MapObjectCarrier>().pos, visionRange);
 	if(Input.GetKeyDown(KeyCode.K))
 		SetEntitiesToVisible();
 	if(Input.GetKeyDown(KeyCode.J))
 		SetEntitiesToInvisible();
-}
+}*/
 
 function CheckTiles(origin : Vec2i, radius : int) {
 	ClearLists();
@@ -63,12 +63,21 @@ function SetEntitiesToVisible() {
 }
 
 function SetEntitiesToInvisible() {
+	var enemysOufOfRange : List.<GameObject> = new List.<GameObject>();
 	for(var obj : GameObject in enemysInRange) {
 		var pos : Vec2i = obj.GetComponent.<MapObjectCarrier>().pos;
-		var temp : int = (pos.x - player.GetComponent.<MapObjectCarrier>().pos.x) + (pos.y - player.GetComponent.<MapObjectCarrier>().pos.y);
+		//Debug.LogWarning(player);
+		var temp : int = (pos.x - GameObject.Find("Olaf").GetComponent.<MapObjectCarrier>().pos.x) + (pos.y - GameObject.Find("Olaf").GetComponent.<MapObjectCarrier>().pos.y);
 		if(temp < -visionRange - 1 || temp > visionRange + 1) {
 			SetLayerRecursively(obj, 8);
-			enemysInRange.Remove(obj);
+			enemysOufOfRange.Add(obj);
+		}
+	}
+	for(var obj : GameObject in enemysOufOfRange) {
+		for(var i : int = 0; i < enemysInRange.Count; i++) {
+			if(enemysInRange[0] == obj) {
+				enemysInRange.Remove(obj);
+			}
 		}
 	}
 }
@@ -77,12 +86,10 @@ function ClearLists() {
 	adjacent.Clear();
 }
 
-function SetLayerRecursively( obj : GameObject, newLayer : int  )
-{
+function SetLayerRecursively( obj : GameObject, newLayer : int  ) {
     obj.layer = newLayer;
    
-    for( var child : Transform in obj.transform )
-    {
+    for( var child : Transform in obj.transform ) {
         SetLayerRecursively( child.gameObject, newLayer );
     }
 }

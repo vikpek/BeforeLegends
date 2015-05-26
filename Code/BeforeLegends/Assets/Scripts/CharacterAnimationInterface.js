@@ -22,7 +22,7 @@ function swapAnimation(a : Anims){
 }
 
 function isAnimating(a : Anims){
-	return animArr[lookUp].enabled;
+	return animArr[lookup(a)].enabled;
 }
 
 function lookup(a : Anims){

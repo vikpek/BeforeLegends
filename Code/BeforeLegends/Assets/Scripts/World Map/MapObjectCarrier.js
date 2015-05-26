@@ -52,15 +52,26 @@ function followPath(path : Vec2i[], dur : float){
 		gameObject.transform.position.z = Mathf.Lerp(a.z, b.z, alpha);
 		
 		var reachedNext : boolean = index > lastIndex;
+
 		if(reachedNext){
 			moved++;
 			setPosition(path[index]);
 			lastIndex = index;
+			
 			for(var e : MapObjectData in data){
 				Messenger.instance.send(MapObjectMovedMessage(e, path[index-1]));
 			}
-		}
 
+			if(CheckForEnemy(path[lastIndex])) {
+				enemyGameObject = worlddata.tiles[pos.x, pos.y].gameObjectList[0];
+				suspend = true;
+				BattleMaster.instance.combatSequence(data[0].battleStats, enemyGameObject.GetComponent.<MapObjectCarrier>().data[0].battleStats);
+			}
+			//Reveal enemys in rannge, hide enemys that move out of range
+			FogOfWar.instance.CheckTiles(path[index], FogOfWar.instance.visionRange);
+			FogOfWar.instance.SetEntitiesToVisible();
+			FogOfWar.instance.SetEntitiesToInvisible();
+		}
 		
 		yield;
 		
@@ -73,6 +84,12 @@ function followPath(path : Vec2i[], dur : float){
 	}
 	
 	finalizeAt(path.Length - 1, path, false);
+
+	if(CheckForEnemy(path[path.Length - 1])) {
+		enemyGameObject = worlddata.tiles[pos.x, pos.y].gameObjectList[0];
+		suspend = true;
+		BattleMaster.instance.combatSequence(data[0].battleStats, enemyGameObject.GetComponent.<MapObjectCarrier>().data[0].battleStats);
+	}
 
 }
 
@@ -90,16 +107,13 @@ function finalizeAt(index : int, path : Vec2i[], suspended : boolean){
 			Messenger.instance.send(MapObjectMovedMessage(e, path[index-1]));
 		}
 	}
-	FogOfWar.instance.CheckTiles(path[index], FogOfWar.instance.visionRange);
-	//Debug.Log(path[index]);
-	FogOfWar.instance.SetEntitiesToVisible();
 }
 
-function OnTriggerEnter (other : Collider){
-		GameStateManager.instance.startBattle(null);
-		enemyGameObject = other.transform.gameObject;
-		suspend = true;
-		
-		//CHECK FOR WIN 
-		//enemyGameObject.SetActive(false);
+function CheckForEnemy(pos : Vec2i) {
+	var mapData : WorldMapData = WorldMapData.getInstance();
+	if(mapData.tiles[pos.x, pos.y].gameObjectList == null) return false;
+	for(var obj : GameObject in mapData.tiles[pos.x, pos.y].gameObjectList) {
+		if(obj.tag == "Enemy") return true;
 	}
+	return false;
+}
