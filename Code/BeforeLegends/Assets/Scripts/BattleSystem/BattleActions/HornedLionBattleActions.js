@@ -4,6 +4,12 @@ function executeAction(battle : BattleController){
 		case Action.ATTACK :
 			attack(battle);
 			break;
+		case Action.FINALATTACK :
+			attackOpponentFinal(battle);
+			break;
+		case Action.HEAL :
+			healSelfOpponent(battle);
+			break;	
 	}
 }
 

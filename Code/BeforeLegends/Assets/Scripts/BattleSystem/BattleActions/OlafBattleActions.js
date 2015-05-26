@@ -7,6 +7,9 @@ function executeAction(battle : BattleController){
 		case Action.ENRAGED :
 			enraged(battle);
 			break;
+		case Action.HEAL :
+			healself(battle);
+			break;	
 	}
 }
 
@@ -26,7 +29,12 @@ function enraged(battle : BattleController){
 	battle.animatePlayer(Anims.ATTACK);
 }
 
-
+function healself(battle : BattleController){
+	battle.playerData.hitPoints += battle.playerData.maxHitPoints*0.05;
+	if (battle.playerData.hitPoints > battle.playerData.maxHitPoints){
+		battle.playerData.hitPoints = battle.playerData.maxHitPoints;
+	}
+}
 
 
 
