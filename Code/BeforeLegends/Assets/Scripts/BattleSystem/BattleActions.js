@@ -11,7 +11,6 @@ private var defaultPlayerHp: float;
 private var defaultEnemyHp: float;
 
 var olafSpeed : float;
-var length : float;
 var duration : float;
 var olafObject : GameObject;
 
@@ -28,9 +27,9 @@ function Update () { // updates about 30 times per second
 }
 
 function AttackDefault(){ // Basic attack of PC
-	MoveOlaf();	
+	MoveOlafWithDelay(2, true);
 	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
-	
+
 	result = playerUnitData.calcDamage(enemyUnitData) as float[];
 	damage = result[0];
 	isCrit = result[1];
@@ -42,18 +41,20 @@ function AttackDefault(){ // Basic attack of PC
 	
 }
 
-function MoveOlaf() {
+function MoveOlafWithDelay(delay: float, direction: boolean) {
+	MoveOlaf(direction);
+	yield WaitForSeconds(delay*delay);
+	MoveOlaf(!direction);
+}
+
+function MoveOlaf(direction : boolean) {
 	var orgPos : Vector3 = olafObject.transform.position;
 	var timePassed : float = 0;
 	while(timePassed < duration) {
-		olafObject.transform.position.x += Mathf.Lerp(olafObject.transform.position.x, orgPos.x - length, 0);
-		//Debug.Log(olafObject.transform.position.x);
-		Debug.Log(orgPos.x);
-		
+		olafObject.transform.Translate((direction ? 1 : -1) * Vector3.forward * olafSpeed * (duration * 0.1f));
 		yield;
 		timePassed += Time.deltaTime;
 	}
-	olafObject.transform.position.x = orgPos.x - length;
 }
 
 function DoubleDamageAttack(){ //This is just ONE attack that deals double damage
