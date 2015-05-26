@@ -83,11 +83,13 @@ function packTextures(){
 	mapMaterial.mainTexture = chunkTexture;
 }
 
+
+//need some spawning system
 function spawnObjects(){
 	var data : WorldMapData = WorldMapData.getInstance();
 	for(var tile : Hexagon in data.tiles){
 		if(tile.traversable && Random.Range(0f, 1f) <= 0.025){
-			var obj : MapObjectData = ScriptableObject.CreateInstance(MapObjectData) as MapObjectData;
+			var obj : MapObjectData = MapObjectData();
 			obj.appearanceID = 0;
 			tile.mapObjects.Add(obj);
 		}
@@ -101,6 +103,7 @@ function spawnCarriers(){
 			var go : GameObject = Instantiate(CharacterModelPrefabs.prefabs[tile.mapObjects[0].appearanceID], tile.position, Quaternion.identity);
 			go.transform.parent = transform;
 			go.GetComponent.<MapObjectCarrier>().pos = tile.gridPos;
+			go.GetComponent.<MapObjectCarrier>().data = tile.mapObjects[0];
 			tile.gameObjectList.Add(go);
 		}
 	}	

@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-var data : List.<MapObjectData> = List.<MapObjectData>(); 
+var data : MapObjectData = MapObjectData();
 
 var pos : Vec2i;
 
@@ -15,6 +15,7 @@ var suspend : boolean = false;
 var enemyGameObject : GameObject;
 
 function Start(){
+	data.battleStats = gameObject.GetComponent(BattleParameters).battleParameters;
 	Messenger.instance.listen(gameObject, "TurnEnded");
 }
 
@@ -25,11 +26,9 @@ function onEvent_TurnEnded(){
 function setPosition(pos : Vec2i){
 	this.pos = pos;
 	var worlddata : WorldMapData = WorldMapData.getInstance();
-	for(var e : MapObjectData in data){
-		worlddata.tiles[e.pos.x, e.pos.y].mapObjects.Remove(e);
-		e.pos = pos;
-		worlddata.tiles[e.pos.x, e.pos.y].mapObjects.Add(e);
-	}
+	worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Remove(data);
+	data.pos = pos;
+	worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Add(data);
 }
 
 function followPath(path : Vec2i[], dur : float){
@@ -56,12 +55,9 @@ function followPath(path : Vec2i[], dur : float){
 			moved++;
 			setPosition(path[index]);
 			lastIndex = index;
-			for(var e : MapObjectData in data){
-				Messenger.instance.send(MapObjectMovedMessage(e, path[index-1]));
-			}
+			Messenger.instance.send(MapObjectMovedMessage(data, path[index-1]));
 		}
 
-		
 		yield;
 		
 		if(reachedNext && suspend){
@@ -86,20 +82,13 @@ function finalizeAt(index : int, path : Vec2i[], suspended : boolean){
 	Messenger.instance.send(ActionEndedMessage());
 	if(!suspended){
 		moved++;
-		for(var e : MapObjectData in data){
-			Messenger.instance.send(MapObjectMovedMessage(e, path[index-1]));
-		}
+		Messenger.instance.send(MapObjectMovedMessage(data, path[index-1]));
 	}
 	FogOfWar.instance.CheckTiles(path[index], FogOfWar.instance.visionRange);
 	//Debug.Log(path[index]);
 	FogOfWar.instance.SetEntitiesToVisible();
 }
 
-function OnTriggerEnter (other : Collider) {
-		enemyGameObject = other.transform.gameObject;
-		suspend = true;
-		if(enemyGameObject.tag == "Enemy")
-			var winner : int = BattleMaster.instance.combatSequence(data[0].battleStats, enemyGameObject.GetComponent.<MapObjectCarrier>().data[0].battleStats);
-		if(winner == 1)
-			enemyGameObject.SetActive(false);
-	}
+function OnTriggerEnter (other : Collider){
+	suspend = true;
+}

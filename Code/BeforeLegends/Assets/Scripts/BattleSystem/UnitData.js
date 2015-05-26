@@ -11,10 +11,6 @@ class UnitData{
 	var critStrike : float;
 	var critBlock : float;
 	
-	function UnitData(){
-		
-	}
-	
 	function calcDamage(opponent : UnitData){
 		var actualAttack : float = attack - attack * 0.1 + Random.Range(0, 1.0) * attack * 0.2;
 		var actualDefense : float = opponent.defense - opponent.defense * 0.1 + Random.Range(0, 1.0) * opponent.defense * 0.2;
@@ -43,7 +39,6 @@ class UnitData{
 		var newData : UnitData = UnitData();
 		
 		newData.attack = attack + data.attack;
-		Debug.Log(newData.attack);
 		newData.defense = defense + data.defense;
 		newData.damage = damage + data.damage;
 		newData.armor = armor + data.armor;
