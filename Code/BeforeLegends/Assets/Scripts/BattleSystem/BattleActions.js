@@ -10,6 +10,11 @@ private var isCrit : float;
 private var defaultPlayerHp: float;
 private var defaultEnemyHp: float;
 
+var olafSpeed : float;
+var length : float;
+var duration : float;
+var olafObject : GameObject;
+
 function Start () { // this function is called only ONCE per scene start
 	playerUnitData = GameObject.FindGameObjectWithTag("Player").GetComponent(BattleParameters).battleParameters;
 	enemyUnitData = GameObject.FindGameObjectWithTag("Enemy").GetComponent(BattleParameters).battleParameters;
@@ -23,7 +28,7 @@ function Update () { // updates about 30 times per second
 }
 
 function AttackDefault(){ // Basic attack of PC
-	
+	MoveOlaf();	
 	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
 	
 	result = playerUnitData.calcDamage(enemyUnitData) as float[];
@@ -35,6 +40,20 @@ function AttackDefault(){ // Basic attack of PC
 	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
 	ProcessResults();
 	
+}
+
+function MoveOlaf() {
+	var orgPos : Vector3 = olafObject.transform.position;
+	var timePassed : float = 0;
+	while(timePassed < duration) {
+		olafObject.transform.position.x += Mathf.Lerp(olafObject.transform.position.x, orgPos.x - length, 0);
+		//Debug.Log(olafObject.transform.position.x);
+		Debug.Log(orgPos.x);
+		
+		yield;
+		timePassed += Time.deltaTime;
+	}
+	olafObject.transform.position.x = orgPos.x - length;
 }
 
 function DoubleDamageAttack(){ //This is just ONE attack that deals double damage
@@ -205,3 +224,4 @@ private function PlayerDeath()
 	//TODO animation for player death
 	//TODO soundeffect for player death
 }
+
