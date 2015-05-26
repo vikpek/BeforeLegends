@@ -122,13 +122,33 @@ function HealSelf(){ //This power can be used to heal the PC
 }
 
 function HealOther(){ // The PC can heal others (for now only the opponent): not very useful for now.
-	
-	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
 
 
 	Debug.Log("attack default: " + damage + " " + isCrit);
 	enemyUnitData.hitPoints += 25;
 	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
+	ProcessResults();
+}
+
+function HealSelfOpponent(){ // The enemy heals itself
+
+
+	Debug.Log("attack default: " + damage + " " + isCrit);
+	enemyUnitData.hitPoints += 5;
+	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
+	ProcessResults();
+}
+
+function AttackOpponentFinal(){ //This is a special attack that - in battlereactionscontroller will be triggered with very low health
+	
+	GameObject.FindGameObjectWithTag("Enemy").GetComponentInChildren(Animator).SetBool("attack",true);
+	
+	result = enemyUnitData.calcDamage(playerUnitData) as float[];
+	damage = result[0]+30;
+
+	Debug.Log("attack default: " + damage + " " + isCrit);
+	playerUnitData.hitPoints -= damage;
+	Debug.Log("player hp: " + playerUnitData.hitPoints);
 	ProcessResults();
 }
 
@@ -158,6 +178,7 @@ function OlafDeath(){
 function EnragedRetaliation(){
 
 	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
+	Screenshake.instance.ScreenShake(0.5F, 0.1f, 0.1);
 	
 	var enragedRetaliationBonus:float;
 	enragedRetaliationBonus = ((defaultPlayerHp - playerUnitData.hitPoints)/defaultPlayerHp)*playerUnitData.attack;
