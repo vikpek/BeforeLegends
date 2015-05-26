@@ -34,7 +34,7 @@ class UnitData{
 			return 0;
 		}
 		
-		return [damageValue / (damageValue + opponent.armor) * damageValue, isCrit];
+		return [damageValue / (damageValue + opponent.armor) * damageValue * actionDamage, isCrit];
 	}
 	
 	function combine(data : UnitData){
