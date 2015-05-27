@@ -22,7 +22,7 @@ function attack(battle : BattleController){ // this is the basic attack
 function attackOpponentFinal(battle : BattleController){ // this is a very powerful attack, deals 4x basic damage
 	battle.enemyData.actionPoints--;
 	battle.playerData.hitPoints -= battle.enemyData.calcDamage(battle.playerData, 4)[0];
-	battle.animateEnemy(Anims.ATTACK); 
+	battle.animateEnemy(Anims.SPATTACK); 
 	battle.animatePlayer(Anims.HURT); 
 }
 
