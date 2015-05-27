@@ -43,7 +43,7 @@ function healself(battle : BattleController){ // the char heals himself
 }
 
 function healother (battle : BattleController){ // the char can heal others (only the enemy for now)
-	battle.enemyData.hitPoints += battle.enemyData.maxHitPoints*0.05;
+	battle.enemyData.hitPoints += battle.enemyData.maxHitPoints*0.2;
 	if (battle.enemyData.hitPoints > battle.enemyData.maxHitPoints){
 		battle.enemyData.hitPoints = battle.enemyData.maxHitPoints;
 	}
