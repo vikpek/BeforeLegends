@@ -6,7 +6,7 @@ private enum BattleState{
 	IDLE, STARTED, ANIMATING
 }
 
-private enum Action{
+private enum Action{ // here below you need to add any new actions
 	ATTACK, ENRAGED, FINALATTACK, HEAL, HEALOTHER, DOUBLEDAMAGE
 }
 

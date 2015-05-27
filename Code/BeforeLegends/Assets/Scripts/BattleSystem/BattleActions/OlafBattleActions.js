@@ -1,6 +1,6 @@
 ﻿//copy paste
 function executeAction(battle : BattleController){
-	switch(battle.playerAction){
+	switch(battle.playerAction){   //always remember to list new battle actions (functions below) here.
 		case Action.ATTACK :
 			attack(battle);
 			break;
@@ -16,13 +16,13 @@ function executeAction(battle : BattleController){
 	}
 }
 
-function attack(battle : BattleController){
+function attack(battle : BattleController){ // Basic attack
 	battle.enemyData.hitPoints -= battle.playerData.calcDamage(battle.enemyData, 1)[0]; 
 	battle.animateEnemy(Anims.HURT); 
 	battle.animatePlayer(Anims.ATTACK);
 }
 
-function enraged(battle : BattleController){
+function enraged(battle : BattleController){ // Attack that deals more damage when low on HP
 	var enragedBonus : float;
 	enragedBonus = (battle.playerData.maxHitPoints - battle.playerData.hitPoints) / battle.playerData.maxHitPoints + 1;
 	var newPlayerData : UnitData = battle.playerData.combine(UnitData()); // kopiert playerdata
@@ -32,14 +32,14 @@ function enraged(battle : BattleController){
 	battle.animatePlayer(Anims.ATTACK);
 }
 
-function healself(battle : BattleController){
+function healself(battle : BattleController){ // the char heals himself
 	battle.playerData.hitPoints += battle.playerData.maxHitPoints*0.1;
 	if (battle.playerData.hitPoints > battle.playerData.maxHitPoints){
 		battle.playerData.hitPoints = battle.playerData.maxHitPoints;
 	}
 }
 
-function healother (battle : BattleController){
+function healother (battle : BattleController){ // the char can heal others (only the enemy for now)
 	battle.enemyData.hitPoints += battle.enemyData.maxHitPoints*0.05;
 	if (battle.enemyData.hitPoints > battle.enemyData.maxHitPoints){
 		battle.enemyData.hitPoints = battle.enemyData.maxHitPoints;
