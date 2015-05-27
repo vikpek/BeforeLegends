@@ -2,6 +2,8 @@
 
 var data : MapObjectData = MapObjectData();
 
+var audioObject : AudioObject;
+
 var pos : Vec2i;
 
 var movedMax : int = 8;
@@ -20,6 +22,10 @@ var enemyGameObject : GameObject;
 function Start(){
 	data.battleStats = gameObject.GetComponent(BattleParameters).battleParameters;
 	Messenger.instance.listen(gameObject, "TurnEnded");
+	if(gameObject.tag == "Player")
+		audioObject = AudioMaster.instance.FetchAudioObject("Olaf");
+	else
+		audioObject = AudioMaster.instance.FetchAudioObject(gameObject.name.Substring(0, gameObject.name.Length - 7));
 }
 
 function onEvent_TurnEnded(){
