@@ -4,8 +4,11 @@
 
 function determineAction(battle : BattleController){
 	if(battle.enemyData.hitPoints / battle.enemyData.maxHitPoints <= 0.2){
+<<<<<<< HEAD
 		battle.enemyAction = Action.FINALATTACK;
 	}else if(battle.enemyData.hitPoints / battle.enemyData.maxHitPoints <= 0.4){
+=======
+>>>>>>> origin/code
 		battle.enemyAction = Action.HEAL;
 	}else{
 		battle.enemyAction = Action.ATTACK;
