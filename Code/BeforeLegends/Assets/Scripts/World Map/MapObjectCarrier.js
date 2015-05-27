@@ -1,6 +1,8 @@
 ﻿#pragma strict
 
-var data : List.<MapObjectData> = List.<MapObjectData>(); 
+var data : MapObjectData = MapObjectData();
+
+var audioObject : AudioObject;
 
 var pos : Vec2i;
 
@@ -11,11 +13,19 @@ var moving : boolean = false;
 var paused : boolean = false;
 var suspend : boolean = false;
 
+private var index : int = 0;
+private var path : Vec2i[];
+
 //@HideInInspector
 var enemyGameObject : GameObject;
 
 function Start(){
+	data.battleStats = gameObject.GetComponent(BattleParameters).battleParameters;
 	Messenger.instance.listen(gameObject, "TurnEnded");
+	if(gameObject.tag == "Player")
+		audioObject = AudioMaster.instance.FetchAudioObject("Olaf");
+	else
+		audioObject = AudioMaster.instance.FetchAudioObject(gameObject.name.Substring(0, gameObject.name.Length - 7));
 }
 
 function onEvent_TurnEnded(){
@@ -25,21 +35,20 @@ function onEvent_TurnEnded(){
 function setPosition(pos : Vec2i){
 	this.pos = pos;
 	var worlddata : WorldMapData = WorldMapData.getInstance();
-	for(var e : MapObjectData in data){
-		worlddata.tiles[e.pos.x, e.pos.y].mapObjects.Remove(e);
-		e.pos = pos;
-		worlddata.tiles[e.pos.x, e.pos.y].mapObjects.Add(e);
-	}
+	worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Remove(data);
+	data.pos = pos;
+	worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Add(data);
 }
 
 function followPath(path : Vec2i[], dur : float){
 	if(moving || !path) return;
 	Messenger.instance.send(ActionStartedMessage());
 	moving = true;
+	this.path = path;
 	
 	var worlddata : WorldMapData = WorldMapData.getInstance();
 	var passedTime : float = 0;
-	var index : int = 0;
+	index = 0;
 	var lastIndex : int = 0;
 	while(passedTime/dur < path.Length - 1){
 		var alpha : float = passedTime/dur;
@@ -56,12 +65,9 @@ function followPath(path : Vec2i[], dur : float){
 			moved++;
 			setPosition(path[index]);
 			lastIndex = index;
-			for(var e : MapObjectData in data){
-				Messenger.instance.send(MapObjectMovedMessage(e, path[index-1]));
-			}
+			Messenger.instance.send(MapObjectMovedMessage(data, path[index-1]));
 		}
 
-		
 		yield;
 		
 		if(reachedNext && suspend){
@@ -86,20 +92,12 @@ function finalizeAt(index : int, path : Vec2i[], suspended : boolean){
 	Messenger.instance.send(ActionEndedMessage());
 	if(!suspended){
 		moved++;
-		for(var e : MapObjectData in data){
-			Messenger.instance.send(MapObjectMovedMessage(e, path[index-1]));
-		}
+		Messenger.instance.send(MapObjectMovedMessage(data, path[index-1]));
 	}
 	FogOfWar.instance.CheckTiles(path[index], FogOfWar.instance.visionRange);
-	//Debug.Log(path[index]);
 	FogOfWar.instance.SetEntitiesToVisible();
 }
 
-function OnTriggerEnter (other : Collider) {
-		enemyGameObject = other.transform.gameObject;
-		suspend = true;
-		if(enemyGameObject.tag == "Enemy")
-			var winner : int = BattleMaster.instance.combatSequence(data[0].battleStats, enemyGameObject.GetComponent.<MapObjectCarrier>().data[0].battleStats);
-		if(winner == 1)
-			enemyGameObject.SetActive(false);
-	}
+function OnTriggerEnter (other : Collider){
+	if(moving) finalizeAt(index, path, true);
+}

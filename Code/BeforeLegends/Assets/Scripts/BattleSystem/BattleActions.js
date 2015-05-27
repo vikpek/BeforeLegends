@@ -10,6 +10,10 @@ private var isCrit : float;
 private var defaultPlayerHp: float;
 private var defaultEnemyHp: float;
 
+var olafSpeed : float;
+var duration : float;
+var olafObject : GameObject;
+
 function Start () { // this function is called only ONCE per scene start
 	playerUnitData = GameObject.FindGameObjectWithTag("Player").GetComponent(BattleParameters).battleParameters;
 	enemyUnitData = GameObject.FindGameObjectWithTag("Enemy").GetComponent(BattleParameters).battleParameters;
@@ -23,9 +27,9 @@ function Update () { // updates about 30 times per second
 }
 
 function AttackDefault(){ // Basic attack of PC
-	
+	MoveOlafWithDelay(2, true);
 	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
-	
+
 	result = playerUnitData.calcDamage(enemyUnitData) as float[];
 	damage = result[0];
 	isCrit = result[1];
@@ -35,6 +39,22 @@ function AttackDefault(){ // Basic attack of PC
 	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
 	ProcessResults();
 	
+}
+
+function MoveOlafWithDelay(delay: float, direction: boolean) {
+	MoveOlaf(direction);
+	yield WaitForSeconds(delay*delay);
+	MoveOlaf(!direction);
+}
+
+function MoveOlaf(direction : boolean) {
+	var orgPos : Vector3 = olafObject.transform.position;
+	var timePassed : float = 0;
+	while(timePassed < duration) {
+		olafObject.transform.Translate((direction ? 1 : -1) * Vector3.forward * olafSpeed * (duration * 0.1f));
+		yield;
+		timePassed += Time.deltaTime;
+	}
 }
 
 function DoubleDamageAttack(){ //This is just ONE attack that deals double damage
@@ -122,33 +142,13 @@ function HealSelf(){ //This power can be used to heal the PC
 }
 
 function HealOther(){ // The PC can heal others (for now only the opponent): not very useful for now.
+	
+	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
 
 
 	Debug.Log("attack default: " + damage + " " + isCrit);
 	enemyUnitData.hitPoints += 25;
 	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
-	ProcessResults();
-}
-
-function HealSelfOpponent(){ // The enemy heals itself
-
-
-	Debug.Log("attack default: " + damage + " " + isCrit);
-	enemyUnitData.hitPoints += 5;
-	Debug.Log("enemy hp: " + enemyUnitData.hitPoints);
-	ProcessResults();
-}
-
-function AttackOpponentFinal(){ //This is a special attack that - in battlereactionscontroller will be triggered with very low health
-	
-	GameObject.FindGameObjectWithTag("Enemy").GetComponentInChildren(Animator).SetBool("attack",true);
-	
-	result = enemyUnitData.calcDamage(playerUnitData) as float[];
-	damage = result[0]+30;
-
-	Debug.Log("attack default: " + damage + " " + isCrit);
-	playerUnitData.hitPoints -= damage;
-	Debug.Log("player hp: " + playerUnitData.hitPoints);
 	ProcessResults();
 }
 
@@ -178,7 +178,6 @@ function OlafDeath(){
 function EnragedRetaliation(){
 
 	GameObject.FindGameObjectWithTag("Player").GetComponentInChildren(Animator).SetBool("attack",true);
-	Screenshake.instance.ScreenShake(0.5F, 0.1f, 0.1);
 	
 	var enragedRetaliationBonus:float;
 	enragedRetaliationBonus = ((defaultPlayerHp - playerUnitData.hitPoints)/defaultPlayerHp)*playerUnitData.attack;
@@ -226,3 +225,4 @@ private function PlayerDeath()
 	//TODO animation for player death
 	//TODO soundeffect for player death
 }
+
