@@ -396,7 +396,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 62038947}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fceaeb339b971b429c4cc600acabd13, type: 3}
   m_Name: 
@@ -476,8 +476,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualizeFocus: 0
-  focalLength: 10
-  focalSize: .0500000007
+  focalLength: 11.8000002
+  focalSize: .800000012
   aperture: 11.5
   focalTransform: {fileID: 0}
   maxBlurSize: 2
@@ -3034,6 +3034,10 @@ Prefab:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 652f3c22534f7d04fa7c4f4631205019, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 652f3c22534f7d04fa7c4f4631205019, type: 3}
   m_IsPrefabParent: 0
@@ -4645,7 +4649,7 @@ Light:
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: .838235259, g: .612098753, b: .369809687, a: 1}
-  m_Intensity: 2.00999999
+  m_Intensity: 1.28999996
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -16616,6 +16620,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0061a61d67974460580ba4cbb88c6f34, type: 2}
+    - target: {fileID: 100000, guid: cdba95c8d7fac41dfa6b773d2069f65a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdba95c8d7fac41dfa6b773d2069f65a, type: 3}
   m_IsPrefabParent: 0
