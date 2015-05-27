@@ -9,6 +9,9 @@ function executeAction(battle : BattleController){
 			break;
 		case Action.HEALOTHER :
 			healother(battle);
+			break;
+		case Action.DOUBLEDAMAGE :
+			doubleDamage(battle);
 			break;	
 	}
 }
@@ -43,4 +46,9 @@ function healother (battle : BattleController){
 	}
 }
 
+function doubleDamage(battle : BattleController){  // just like a basic attack but deals double basic damage
+	battle.enemyData.hitPoints -= battle.playerData.calcDamage(battle.enemyData, 2)[0]; 
+	battle.animateEnemy(Anims.HURT); 
+	battle.animatePlayer(Anims.ATTACK);
+}
 

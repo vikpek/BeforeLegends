@@ -7,7 +7,7 @@ private enum BattleState{
 }
 
 private enum Action{
-	ATTACK, ENRAGED, FINALATTACK, HEAL, HEALOTHER
+	ATTACK, ENRAGED, FINALATTACK, HEAL, HEALOTHER, DOUBLEDAMAGE
 }
 
 var player : GameObject;
