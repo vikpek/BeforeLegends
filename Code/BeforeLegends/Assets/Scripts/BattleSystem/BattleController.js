@@ -7,7 +7,7 @@ private enum BattleState{
 }
 
 private enum Action{
-	ATTACK, ENRAGED, FINALATTACK, HEAL
+	ATTACK, ENRAGED, FINALATTACK, HEAL, HEALOTHER
 }
 
 var player : GameObject;
@@ -129,6 +129,10 @@ function onInput_Enraged(){
 
 function onInput_Heal(){
 	onInput(Action.HEAL);
+}
+
+function onInput_HealOther(){
+	onInput(Action.HEALOTHER);
 }
 
 //--------------

@@ -31,3 +31,5 @@ function healSelfOpponent(battle : BattleController){
 		battle.enemyData.hitPoints = battle.enemyData.maxHitPoints;
 	}
 }
+
+

@@ -7,8 +7,8 @@ function executeAction(battle : BattleController){
 		case Action.ENRAGED :
 			enraged(battle);
 			break;
-		case Action.HEAL :
-			healself(battle);
+		case Action.HEALOTHER :
+			healother(battle);
 			break;	
 	}
 }
@@ -24,17 +24,23 @@ function enraged(battle : BattleController){
 	enragedBonus = (battle.playerData.maxHitPoints - battle.playerData.hitPoints) / battle.playerData.maxHitPoints + 1;
 	var newPlayerData : UnitData = battle.playerData.combine(UnitData()); // kopiert playerdata
 	newPlayerData.attack *= enragedBonus;
-	battle.enemyData.hitPoints -= newPlayerData.calcDamage(battle.enemyData, 1)[0]; 
+	battle.enemyData.hitPoints -= newPlayerData.calcDamage(battle.enemyData, enragedBonus)[0]; 
 	battle.animateEnemy(Anims.HURT); 
 	battle.animatePlayer(Anims.ATTACK);
 }
 
 function healself(battle : BattleController){
-	battle.playerData.hitPoints += battle.playerData.maxHitPoints*0.05;
+	battle.playerData.hitPoints += battle.playerData.maxHitPoints*0.1;
 	if (battle.playerData.hitPoints > battle.playerData.maxHitPoints){
 		battle.playerData.hitPoints = battle.playerData.maxHitPoints;
 	}
 }
 
+function healother (battle : BattleController){
+	battle.enemyData.hitPoints += battle.enemyData.maxHitPoints*0.05;
+	if (battle.enemyData.hitPoints > battle.enemyData.maxHitPoints){
+		battle.enemyData.hitPoints = battle.enemyData.maxHitPoints;
+	}
+}
 
 
