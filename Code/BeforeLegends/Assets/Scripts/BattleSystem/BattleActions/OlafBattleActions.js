@@ -13,6 +13,9 @@ function executeAction(battle : BattleController){
 		case Action.DOUBLEDAMAGE :
 			doubleDamage(battle);
 			break;	
+		case Action.HEAL :
+			healself(battle);
+			break;	
 	}
 }
 
@@ -33,7 +36,7 @@ function enraged(battle : BattleController){ // Attack that deals more damage wh
 }
 
 function healself(battle : BattleController){ // the char heals himself
-	battle.playerData.hitPoints += battle.playerData.maxHitPoints*0.1;
+	battle.playerData.hitPoints += battle.playerData.maxHitPoints*0.5;
 	if (battle.playerData.hitPoints > battle.playerData.maxHitPoints){
 		battle.playerData.hitPoints = battle.playerData.maxHitPoints;
 	}
