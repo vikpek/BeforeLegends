@@ -29,7 +29,7 @@ function enraged(battle : BattleController){ // Attack that deals more damage wh
 	newPlayerData.attack *= enragedBonus;
 	battle.enemyData.hitPoints -= newPlayerData.calcDamage(battle.enemyData, enragedBonus)[0]; 
 	battle.animateEnemy(Anims.HURT); 
-	battle.animatePlayer(Anims.ATTACK);
+	battle.animatePlayer(Anims.SPATTACK);
 }
 
 function healself(battle : BattleController){ // the char heals himself
