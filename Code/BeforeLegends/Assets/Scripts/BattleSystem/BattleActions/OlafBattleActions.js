@@ -36,7 +36,7 @@ function enraged(battle : BattleController){ // Attack that deals more damage wh
 }
 
 function healself(battle : BattleController){ // the char heals himself
-	battle.playerData.hitPoints += battle.playerData.maxHitPoints*0.5;
+	battle.playerData.hitPoints += battle.playerData.maxHitPoints*0.3;
 	if (battle.playerData.hitPoints > battle.playerData.maxHitPoints){
 		battle.playerData.hitPoints = battle.playerData.maxHitPoints;
 	}
