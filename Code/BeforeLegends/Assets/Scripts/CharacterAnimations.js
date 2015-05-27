@@ -1,12 +1,13 @@
 ﻿#pragma strict
 
 enum Anims{ //ETC ...
-	NONE, IDLE, ATTACK, HURT
+	NONE, IDLE, ATTACK, SPATTACK, HURT
 }
 
 var idle : String;
 var attack : String;
 var hurt : String;
+var spattack : String;
 
 @HideInInspector
 var current : String;
@@ -36,13 +37,14 @@ function isAnimating(a : Anims){
 }
 
 function lookup(a : Anims){
-	switch(a){
+	switch(a){ // NOT unreachable. ignore warnings
 		case Anims.IDLE :
 			return idle;
 		case Anims.ATTACK :
 			return attack ;
 		case Anims.HURT :
 			return hurt;
+		case Anims.SPATTACK :
+			return spattack; 
 	}
-	return "";
 }
