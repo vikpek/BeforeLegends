@@ -3,19 +3,17 @@
 class UnitData{
 	var attack : float;
 	var defense : float;
-	var damage : float;
 	var armor : float;
+	var damage : float;
 	var hitPoints : float;
+	var maxHitPoints : float;
 	var actionPoints : int;
+	var maxActionPoints : int;
 	var speed : int;
 	var critStrike : float;
 	var critBlock : float;
 	
-	function UnitData(){
-		
-	}
-	
-	function calcDamage(opponent : UnitData){
+	function calcDamage(opponent : UnitData, actionDamage : float){
 		var actualAttack : float = attack - attack * 0.1 + Random.Range(0, 1.0) * attack * 0.2;
 		var actualDefense : float = opponent.defense - opponent.defense * 0.1 + Random.Range(0, 1.0) * opponent.defense * 0.2;
 
@@ -36,14 +34,13 @@ class UnitData{
 			return 0;
 		}
 		
-		return [damageValue / (damageValue + opponent.armor) * damageValue, isCrit];
+		return [damageValue / (damageValue + opponent.armor) * damageValue * actionDamage, isCrit];
 	}
 	
 	function combine(data : UnitData){
 		var newData : UnitData = UnitData();
 		
 		newData.attack = attack + data.attack;
-		Debug.Log(newData.attack);
 		newData.defense = defense + data.defense;
 		newData.damage = damage + data.damage;
 		newData.armor = armor + data.armor;

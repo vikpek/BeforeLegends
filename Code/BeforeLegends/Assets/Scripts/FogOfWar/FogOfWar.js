@@ -6,24 +6,19 @@ var visionRange : int;
 var enemysInRange : List.<GameObject> = new List.<GameObject>();
 var adjacent : List.<Hexagon> = new List.<Hexagon>();
 var adjacentTemp : Hexagon[];
-var player : GameObject;
 
 function Awake() {
 	if(!instance) instance = this;
 }
 
-function Start () {
-	player = GameObject.Find("Olaf");
-}
-
-function Update () {
+/*function Update () {
 	if(Input.GetKeyDown(KeyCode.L))
-		CheckTiles(player.GetComponent.<MapObjectCarrier>().pos, visionRange);
+		CheckTiles(gameObject.GetComponent.<MapObjectCarrier>().pos, visionRange);
 	if(Input.GetKeyDown(KeyCode.K))
 		SetEntitiesToVisible();
 	if(Input.GetKeyDown(KeyCode.J))
 		SetEntitiesToInvisible();
-}
+}*/
 
 function CheckTiles(origin : Vec2i, radius : int) {
 	ClearLists();
@@ -65,7 +60,7 @@ function SetEntitiesToVisible() {
 function SetEntitiesToInvisible() {
 	for(var obj : GameObject in enemysInRange) {
 		var pos : Vec2i = obj.GetComponent.<MapObjectCarrier>().pos;
-		var temp : int = (pos.x - player.GetComponent.<MapObjectCarrier>().pos.x) + (pos.y - player.GetComponent.<MapObjectCarrier>().pos.y);
+		var temp : int = (pos.x - gameObject.GetComponent(MapObjectCarrier).pos.x) + (pos.y - gameObject.GetComponent(MapObjectCarrier).pos.y);
 		if(temp < -visionRange - 1 || temp > visionRange + 1) {
 			SetLayerRecursively(obj, 8);
 			enemysInRange.Remove(obj);
@@ -81,8 +76,9 @@ function SetLayerRecursively( obj : GameObject, newLayer : int  )
 {
     obj.layer = newLayer;
    
-    for( var child : Transform in obj.transform )
+    for( var c in obj.transform )
     {
+    	var child = c as Transform;
         SetLayerRecursively( child.gameObject, newLayer );
     }
 }
