@@ -76,10 +76,10 @@ function Update(){
 	}else if(state == BattleState.IDLE){
 		if(playerData.hitPoints <= 0){
 			GameStateManager.instance.endBattle(false);
-			playerWorldObject.enabled = false;
+			playerWorldObject.SetActive(true);
 		}else if(enemyData.hitPoints <= 0){
 			GameStateManager.instance.endBattle(true);
-			enemyWorldObject.enabled = false;
+			enemyWorldObject.SetActive(false);
 		}
 	}
 	enemyHPText.setVal(enemyData.hitPoints);

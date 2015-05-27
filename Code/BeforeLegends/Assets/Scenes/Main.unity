@@ -458,6 +458,8 @@ MonoBehaviour:
     critBlock: 0
   playerFinished: 0
   enemyFinished: 0
+  enemyWorldObject: {fileID: 0}
+  playerWorldObject: {fileID: 0}
   playerHPText: {fileID: 0}
   enemyHPText: {fileID: 0}
   playerAnimation: 0
@@ -1780,6 +1782,14 @@ Prefab:
     - target: {fileID: 446484, guid: 25d08e4a231fa2d4eba5b88156d0b5ad, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 452974, guid: 25d08e4a231fa2d4eba5b88156d0b5ad, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 494422, guid: 25d08e4a231fa2d4eba5b88156d0b5ad, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25d08e4a231fa2d4eba5b88156d0b5ad, type: 2}
