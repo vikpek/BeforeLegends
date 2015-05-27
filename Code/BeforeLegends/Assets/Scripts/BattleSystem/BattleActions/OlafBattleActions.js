@@ -20,11 +20,11 @@ function attack(battle : BattleController){
 }
 
 function enraged(battle : BattleController){
-	var enragedBonus: float;
+	var enragedBonus : float;
 	enragedBonus = (battle.playerData.maxHitPoints - battle.playerData.hitPoints) / battle.playerData.maxHitPoints + 1;
 	var newPlayerData : UnitData = battle.playerData.combine(UnitData()); // kopiert playerdata
 	newPlayerData.attack *= enragedBonus;
-	battle.enemyData.hitPoints -= battle.playerData.calcDamage(battle.enemyData, 1)[0]; 
+	battle.enemyData.hitPoints -= newPlayerData.calcDamage(battle.enemyData, 1)[0]; 
 	battle.animateEnemy(Anims.HURT); 
 	battle.animatePlayer(Anims.ATTACK);
 }

@@ -12,7 +12,7 @@ function Start(){
 	instance = this;
 }
 
-function startBattle(player : MapObjectData, enemy : MapObjectData){
+function startBattle(player : GameObject, enemy : GameObject){
 	battle.GetComponent(BattleController).init(player, enemy);
 	state = 1;
 	battle.SetActive(true);
