@@ -84,7 +84,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 407028}
   - 114: {fileID: 11434068}
-  - 65: {fileID: 6536104}
   - 114: {fileID: 11427732}
   m_Layer: 0
   m_Name: HornedLion
@@ -2330,18 +2329,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &6536104
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103140}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!102 &10291896
 TextMesh:
   serializedVersion: 3
@@ -2427,6 +2414,11 @@ MonoBehaviour:
   moving: 0
   paused: 0
   suspend: 0
+  audioObject:
+    objectName: 
+    attack: {fileID: 0}
+    walk: {fileID: 0}
+    die: {fileID: 0}
   enemyGameObject: {fileID: 0}
 --- !u!114 &11439174
 MonoBehaviour:
@@ -2452,6 +2444,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idle: Rig.001|Idle_01
   attack: Rig.001|Attack_01_Basic
+  hurt: 
+  current: 
   animArr: {fileID: 11123882}
 --- !u!114 &11460514
 MonoBehaviour:

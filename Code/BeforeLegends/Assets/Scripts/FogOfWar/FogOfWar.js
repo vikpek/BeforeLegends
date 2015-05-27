@@ -13,7 +13,7 @@ function Awake() {
 }
 
 function Start () {
-	player = GameObject.Find("Olaf");
+	player = gameObject;
 }
 
 /*function Update () {
@@ -45,10 +45,8 @@ function CheckTiles(origin : Vec2i, radius : int) {
 			for(var m : int = 0; m < adjacentTemp.Length; m++) {
 				if(!adjacent.Contains(adjacentTemp[m]) && (adjacentTemp[m].gridPos.x != origin.x || adjacentTemp[m].gridPos.y != origin.y)) {
 					adjacent.Add(adjacentTemp[m]);
-					//adjacentTemp[m].traversable = false;
 				}
 				if(adjacentTemp[m].gameObjectList.Count > 0 && !enemysInRange.Contains(adjacentTemp[m].gameObjectList[0])) {
-					//Debug.Log(adjacentTemp[m].gameObjectList[0]);
 					enemysInRange.Add(adjacentTemp[m].gameObjectList[0]);
 				}
 			}
@@ -66,8 +64,8 @@ function SetEntitiesToInvisible() {
 	var enemysOufOfRange : List.<GameObject> = new List.<GameObject>();
 	for(var obj : GameObject in enemysInRange) {
 		var pos : Vec2i = obj.GetComponent.<MapObjectCarrier>().pos;
-		//Debug.LogWarning(player);
-		var temp : int = (pos.x - GameObject.Find("Olaf").GetComponent.<MapObjectCarrier>().pos.x) + (pos.y - GameObject.Find("Olaf").GetComponent.<MapObjectCarrier>().pos.y);
+		//Debug.Log(player);
+		var temp : int = (pos.x - player.GetComponent.<MapObjectCarrier>().pos.x) + (pos.y - player.GetComponent.<MapObjectCarrier>().pos.y);
 		if(temp < -visionRange - 1 || temp > visionRange + 1) {
 			SetLayerRecursively(obj, 8);
 			enemysOufOfRange.Add(obj);
@@ -89,7 +87,7 @@ function ClearLists() {
 function SetLayerRecursively( obj : GameObject, newLayer : int  ) {
     obj.layer = newLayer;
    
-    for( var child : Transform in obj.transform ) {
+    for( var child : Transform in obj.transform) {
         SetLayerRecursively( child.gameObject, newLayer );
     }
 }

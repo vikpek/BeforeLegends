@@ -12,10 +12,16 @@ var paused : boolean = false;
 var suspend : boolean = false;
 
 //@HideInInspector
+var audioObject : AudioObject;
+//@HideInInspector
 var enemyGameObject : GameObject;
 
 function Start(){
 	Messenger.instance.listen(gameObject, "TurnEnded");
+	if(gameObject.tag == "Player")
+		audioObject = AudioMaster.instance.FetchAudioObject("Olaf");
+	else
+		audioObject = AudioMaster.instance.FetchAudioObject(gameObject.name.Substring(0, gameObject.name.Length - 7));
 }
 
 function onEvent_TurnEnded(){

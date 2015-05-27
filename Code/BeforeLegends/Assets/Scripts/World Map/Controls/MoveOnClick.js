@@ -16,8 +16,8 @@ function Update(){
 				objData.setPosition(Vec2i(MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y));
 				transform.position = WorldMapData.getInstance().tiles[objData.pos.x, objData.pos.y].position; 
 				InterfaceData.getInstance().selectedCarrier = objData;
-				//FogOfWar.instance.CheckTiles(Vec2i(objData.pos.x, objData.pos.y), FogOfWar.instance.visionRange);
-				//FogOfWar.instance.SetEntitiesToVisible();
+				FogOfWar.instance.CheckTiles(Vec2i(objData.pos.x, objData.pos.y), FogOfWar.instance.visionRange);
+				FogOfWar.instance.SetEntitiesToVisible();
 				return;
 			}
 		}
