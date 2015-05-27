@@ -47,4 +47,5 @@ function lookup(a : Anims){
 		case Anims.SPATTACK :
 			return spattack; 
 	}
+	return "";
 }

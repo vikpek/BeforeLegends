@@ -56,6 +56,7 @@ var enemyAction : Action;
 var playerAction : Action;
 
 function Update(){
+	if(checkEnded()) return;
 	if(state == BattleState.STARTED){
 		state = BattleState.ANIMATING;
 		if(actor == Actor.PLAYER){
@@ -73,17 +74,24 @@ function Update(){
 			actor = Actor.PLAYER;
 			round++;
 		}
-	}else if(state == BattleState.IDLE){
-		if(playerData.hitPoints <= 0){
-			GameStateManager.instance.endBattle(false);
-			playerWorldObject.SetActive(true);
-		}else if(enemyData.hitPoints <= 0){
-			GameStateManager.instance.endBattle(true);
-			enemyWorldObject.SetActive(false);
-		}
 	}
 	enemyHPText.setVal(enemyData.hitPoints);
 	playerHPText.setVal(playerData.hitPoints);
+}
+
+function checkEnded(){
+		if(playerData.hitPoints <= 0){
+			playerWorldObject.SetActive(false);
+			GameStateManager.instance.endBattle(false);
+			Messenger.instance.send(AllActionsEndedMessage());
+			return true;
+		}else if(enemyData.hitPoints <= 0){
+			enemyWorldObject.SetActive(false);
+			GameStateManager.instance.endBattle(true);
+			Messenger.instance.send(AllActionsEndedMessage());
+			return true;
+		}
+		return false;
 }
 	
 function animatePlayer(a : Anims){

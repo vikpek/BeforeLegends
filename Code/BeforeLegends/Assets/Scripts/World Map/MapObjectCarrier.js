@@ -11,6 +11,9 @@ var moving : boolean = false;
 var paused : boolean = false;
 var suspend : boolean = false;
 
+private var index : int = 0;
+private var path : Vec2i[];
+
 //@HideInInspector
 var enemyGameObject : GameObject;
 
@@ -35,10 +38,11 @@ function followPath(path : Vec2i[], dur : float){
 	if(moving || !path) return;
 	Messenger.instance.send(ActionStartedMessage());
 	moving = true;
+	this.path = path;
 	
 	var worlddata : WorldMapData = WorldMapData.getInstance();
 	var passedTime : float = 0;
-	var index : int = 0;
+	index = 0;
 	var lastIndex : int = 0;
 	while(passedTime/dur < path.Length - 1){
 		var alpha : float = passedTime/dur;
@@ -85,10 +89,9 @@ function finalizeAt(index : int, path : Vec2i[], suspended : boolean){
 		Messenger.instance.send(MapObjectMovedMessage(data, path[index-1]));
 	}
 	FogOfWar.instance.CheckTiles(path[index], FogOfWar.instance.visionRange);
-	//Debug.Log(path[index]);
 	FogOfWar.instance.SetEntitiesToVisible();
 }
 
 function OnTriggerEnter (other : Collider){
-	suspend = true;
+	if(moving) finalizeAt(index, path, true);
 }
