@@ -17,13 +17,15 @@ function attack(battle : BattleController){ // this is the basic attack
 	battle.playerData.hitPoints -= battle.enemyData.calcDamage(battle.playerData, 1)[0]; 
 	battle.animateEnemy(Anims.ATTACK); 
 	battle.animatePlayer(Anims.HURT);
+	AudioMaster.instance.audioSource.PlayOneShot(battle.enemyWorldObject.GetComponent(MapObjectCarrier).audioObject.attack);
 }
 
 function attackOpponentFinal(battle : BattleController){ // this is a very powerful attack, deals 4x basic damage
 	battle.enemyData.actionPoints--;
 	battle.playerData.hitPoints -= battle.enemyData.calcDamage(battle.playerData, 4)[0];
 	battle.animateEnemy(Anims.SPATTACK); 
-	battle.animatePlayer(Anims.HURT); 
+	battle.animatePlayer(Anims.HURT);
+	AudioMaster.instance.audioSource.PlayOneShot(battle.enemyWorldObject.GetComponent(MapObjectCarrier).audioObject.spattack); 
 }
 
 function healSelfOpponent(battle : BattleController){ // this power allows the Lion to heal itself

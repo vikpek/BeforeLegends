@@ -201,8 +201,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: edd6ad4de71af1a409e991d375e48f88, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -317,8 +317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: edd6ad4de71af1a409e991d375e48f88, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -853,7 +853,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 340188078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 221.699997, y: 2, z: 188.600006}
+  m_LocalPosition: {x: 221.699997, y: 1.70000005, z: 188.600006}
   m_LocalScale: {x: 38, y: 38, z: 38}
   m_Children: []
   m_Father: {fileID: 1200521818}
@@ -1133,7 +1133,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 445820770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 221.699997, y: 2.0999999, z: 188.600006}
+  m_LocalPosition: {x: 221.699997, y: 1.70000005, z: 188.600006}
   m_LocalScale: {x: 38, y: 38, z: 38}
   m_Children: []
   m_Father: {fileID: 1200521818}
@@ -1318,8 +1318,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: edd6ad4de71af1a409e991d375e48f88, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1817,17 +1817,20 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   audioObjects:
   - objectName: Olaf
-    attack: {fileID: 8300000, guid: a879e962c0e3e41368edad94da4a5780, type: 3}
+    attack: {fileID: 8300000, guid: 9d820ffcf7d61e3498286a5f5cfd6c15, type: 3}
     walk: {fileID: 0}
     die: {fileID: 0}
+    spattack: {fileID: 8300000, guid: e4856b17ef0374144a08383e14e27718, type: 3}
   - objectName: HornedLion
-    attack: {fileID: 0}
+    attack: {fileID: 8300000, guid: 7f360aa2abc1fb14aa0977e90eff061d, type: 3}
     walk: {fileID: 0}
     die: {fileID: 0}
+    spattack: {fileID: 8300000, guid: 1997c362838ca304cb36c0a8fe3b8107, type: 3}
   - objectName: SilverLion
-    attack: {fileID: 0}
+    attack: {fileID: 8300000, guid: 5f8012820b8d0c049ad5b22dcb67fed1, type: 3}
     walk: {fileID: 0}
     die: {fileID: 0}
+    spattack: {fileID: 0}
 --- !u!82 &1005331471
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1837,7 +1840,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ea1d1932ec8b3fb4aad15ff4a05c9a54, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2384,8 +2387,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: edd6ad4de71af1a409e991d375e48f88, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2636,8 +2639,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: edd6ad4de71af1a409e991d375e48f88, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2823,8 +2826,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: edd6ad4de71af1a409e991d375e48f88, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2991,7 +2994,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 439958, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 439958, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2999,7 +3002,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439958, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 439958, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3309,8 +3312,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: edd6ad4de71af1a409e991d375e48f88, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3334,7 +3337,6 @@ GameObject:
   - 20: {fileID: 2139333537}
   - 92: {fileID: 2139333536}
   - 124: {fileID: 2139333535}
-  - 81: {fileID: 2139333534}
   - 114: {fileID: 2139333539}
   m_Layer: 0
   m_Name: World Camera
@@ -3343,13 +3345,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2139333534
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2139333533}
-  m_Enabled: 1
 --- !u!124 &2139333535
 Behaviour:
   m_ObjectHideFlags: 0
