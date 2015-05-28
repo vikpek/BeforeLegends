@@ -1372,6 +1372,7 @@ GameObject:
   - 4: {fileID: 430282}
   - 33: {fileID: 3348808}
   - 23: {fileID: 2382782}
+  - 114: {fileID: 11477504}
   m_Layer: 8
   m_Name: ApertureMask
   m_TagString: Untagged
@@ -1944,8 +1945,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.51999998, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.60000002, z: 0}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 439958}
   m_RootOrder: 1
@@ -3080,7 +3081,6 @@ MonoBehaviour:
   enemysInRange: []
   adjacent: []
   adjacentTemp: []
-  player: {fileID: 0}
 --- !u!114 &11436540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3107,8 +3107,8 @@ MonoBehaviour:
   battleParameters:
     attack: 10
     defense: 10
-    damage: 10
     armor: 10
+    damage: 10
     hitPoints: 100
     maxHitPoints: 100
     actionPoints: 10
@@ -3116,6 +3116,18 @@ MonoBehaviour:
     speed: 10
     critStrike: 0
     critBlock: 0
+--- !u!114 &11477504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40da8aab9734dd24bb622414405ad0dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: .150000006
 --- !u!114 &11478554
 MonoBehaviour:
   m_ObjectHideFlags: 1
