@@ -23,6 +23,7 @@ function attack(battle : BattleController){ // Basic attack
 	battle.enemyData.hitPoints -= battle.playerData.calcDamage(battle.enemyData, 1)[0]; 
 	battle.animateEnemy(Anims.HURT); 
 	battle.animatePlayer(Anims.ATTACK);
+	AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent(MapObjectCarrier).audioObject.attack);
 }
 
 function enraged(battle : BattleController){ // Attack that deals more damage when low on HP
