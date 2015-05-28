@@ -38,6 +38,7 @@ function enraged(battle : BattleController){ // Attack that deals more damage wh
 }
 
 function healself(battle : BattleController){ // the char heals himself
+	battle.playerParticles.heal.Play();
 	battle.playerData.hitPoints += battle.playerData.maxHitPoints*0.3;
 	if (battle.playerData.hitPoints > battle.playerData.maxHitPoints){
 		battle.playerData.hitPoints = battle.playerData.maxHitPoints;
@@ -45,6 +46,7 @@ function healself(battle : BattleController){ // the char heals himself
 }
 
 function healother (battle : BattleController){ // the char can heal others (only the enemy for now)
+	battle.enemyParticles.heal.Play();
 	battle.enemyData.hitPoints += battle.enemyData.maxHitPoints*0.2;
 	if (battle.enemyData.hitPoints > battle.enemyData.maxHitPoints){
 		battle.enemyData.hitPoints = battle.enemyData.maxHitPoints;

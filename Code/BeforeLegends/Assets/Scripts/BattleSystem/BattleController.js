@@ -28,6 +28,11 @@ var playerFinished : boolean = false;
 var enemyFinished : boolean = false;
 
 @HideInInspector
+var playerParticles : CharacterParticleController;
+@HideInInspector
+var enemyParticles : CharacterParticleController;
+
+@HideInInspector
 var enemyWorldObject : GameObject; 
 @HideInInspector
 var playerWorldObject : GameObject;
@@ -58,6 +63,9 @@ var playerAction : Action;
 function Update(){
 	if(checkEnded()) return;
 	if(state == BattleState.STARTED){
+		playerParticles.heal.Stop(); // tentative
+		enemyParticles.heal.Stop(); // tentative
+		
 		state = BattleState.ANIMATING;
 		if(actor == Actor.PLAYER){
 			player.SendMessage("executeAction", this);
@@ -117,12 +125,14 @@ function init(player : GameObject, enemy : GameObject){
 	this.enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[enemy.GetComponent(MapObjectCarrier).data.appearanceID]);
 	this.enemy.transform.parent = transform;
 	enemyAnimator = this.enemy.GetComponent(CharacterAnimations);
+	enemyParticles = this.enemy.GetComponent(CharacterParticleController);
 	enemyHPText = this.enemy.GetComponent(HPText);
 	round = 0;
 }
 
 function Awake(){
 	playerAnimator = player.GetComponent(CharacterAnimations);
+	playerParticles = player.GetComponent(CharacterParticleController);
 	playerHPText = player.GetComponent(HPText); 
 }
 

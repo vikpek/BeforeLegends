@@ -216,60 +216,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 20918246}
---- !u!1001 &21075373
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1744492203}
-    m_Modifications:
-    - target: {fileID: 463728, guid: 32f7f52ad61181043bcea3ad800c425c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.0079999
-      objectReference: {fileID: 0}
-    - target: {fileID: 463728, guid: 32f7f52ad61181043bcea3ad800c425c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: .129999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 463728, guid: 32f7f52ad61181043bcea3ad800c425c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -.0489999987
-      objectReference: {fileID: 0}
-    - target: {fileID: 463728, guid: 32f7f52ad61181043bcea3ad800c425c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 463728, guid: 32f7f52ad61181043bcea3ad800c425c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 463728, guid: 32f7f52ad61181043bcea3ad800c425c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 463728, guid: 32f7f52ad61181043bcea3ad800c425c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 463728, guid: 32f7f52ad61181043bcea3ad800c425c, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 157902, guid: 32f7f52ad61181043bcea3ad800c425c, type: 2}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 162736, guid: 32f7f52ad61181043bcea3ad800c425c, type: 2}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 32f7f52ad61181043bcea3ad800c425c, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &21075374 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 463728, guid: 32f7f52ad61181043bcea3ad800c425c, type: 2}
-  m_PrefabInternal: {fileID: 21075373}
 --- !u!1001 &75069738
 Prefab:
   m_ObjectHideFlags: 0
@@ -995,6 +941,22 @@ Prefab:
     - target: {fileID: 131528, guid: 0fe47b3d136e68a4881b970dbf75b6a2, type: 2}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 19824074, guid: 0fe47b3d136e68a4881b970dbf75b6a2, type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19863592, guid: 0fe47b3d136e68a4881b970dbf75b6a2, type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 131528, guid: 0fe47b3d136e68a4881b970dbf75b6a2, type: 2}
+      propertyPath: m_Name
+      value: PS_Attack(inactive)
+      objectReference: {fileID: 0}
+    - target: {fileID: 131528, guid: 0fe47b3d136e68a4881b970dbf75b6a2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fe47b3d136e68a4881b970dbf75b6a2, type: 2}
@@ -9060,7 +9022,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 101062, guid: 5d71bb76d3c74ca458c9d5a68bbf9478, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19898422, guid: 5d71bb76d3c74ca458c9d5a68bbf9478, type: 2}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19861762, guid: 5d71bb76d3c74ca458c9d5a68bbf9478, type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19898422, guid: 5d71bb76d3c74ca458c9d5a68bbf9478, type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 101062, guid: 5d71bb76d3c74ca458c9d5a68bbf9478, type: 2}
+      propertyPath: m_Name
+      value: PS_Damage(inactive)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d71bb76d3c74ca458c9d5a68bbf9478, type: 2}
@@ -9182,7 +9160,6 @@ Transform:
   m_Children:
   - {fileID: 297265353}
   - {fileID: 1717197258}
-  - {fileID: 21075374}
   m_Father: {fileID: 1891227681}
   m_RootOrder: 3
 --- !u!1 &1781550630
@@ -10896,6 +10873,8 @@ MonoBehaviour:
     critBlock: 0
   playerFinished: 0
   enemyFinished: 0
+  playerParticles: {fileID: 0}
+  enemyParticles: {fileID: 0}
   enemyWorldObject: {fileID: 0}
   playerWorldObject: {fileID: 0}
   playerHPText: {fileID: 0}

@@ -29,6 +29,7 @@ function attackOpponentFinal(battle : BattleController){ // this is a very power
 }
 
 function healSelfOpponent(battle : BattleController){ // this power allows the Lion to heal itself
+	battle.enemyParticles.heal.Play();
 	battle.enemyData.actionPoints--;
 	battle.enemyData.hitPoints += battle.enemyData.maxHitPoints*0.05;
 	if (battle.enemyData.hitPoints > battle.enemyData.maxHitPoints){
