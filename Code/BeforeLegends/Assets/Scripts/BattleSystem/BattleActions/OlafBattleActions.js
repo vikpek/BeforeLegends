@@ -34,6 +34,7 @@ function enraged(battle : BattleController){ // Attack that deals more damage wh
 	battle.enemyData.hitPoints -= newPlayerData.calcDamage(battle.enemyData, enragedBonus)[0]; 
 	battle.animateEnemy(Anims.HURT); 
 	battle.animatePlayer(Anims.SPATTACK);
+	AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent(MapObjectCarrier).audioObject.spattack);
 }
 
 function healself(battle : BattleController){ // the char heals himself

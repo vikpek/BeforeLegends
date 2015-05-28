@@ -26,6 +26,7 @@ public class AudioObject {
 	var attack : AudioClip;
 	var walk : AudioClip;
 	var die : AudioClip;
+	var spattack: AudioClip; 
 }
 
 function Update() {
