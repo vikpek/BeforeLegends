@@ -54,6 +54,7 @@ function Start(){
 	createChunks();
 	spawnObjects();
 	spawnCarriers();
+	spwanRessources();
 }
 
 function setSeeds(){
@@ -104,6 +105,21 @@ function spawnCarriers(){
 			go.transform.parent = transform;
 			go.GetComponent.<MapObjectCarrier>().pos = tile.gridPos;
 			go.GetComponent.<MapObjectCarrier>().data = tile.mapObjects[0];
+			tile.gameObjectList.Add(go);
+		}
+	}	
+}
+
+function spwanRessources(){
+	var data : WorldMapData = WorldMapData.getInstance();
+	for(var tile : Hexagon in data.tiles){
+		var spawnChance : float = Random.Range(1, 4);
+		if(spawnChance > 1 && tile.traversable == true){
+			var rand : float = Random.Range(0, 3);
+			var go : GameObject = Instantiate(CharacterModelPrefabs.ressourcePrefabs[rand], tile.position, CharacterModelPrefabs.ressourcePrefabs[rand].transform.rotation);
+			go.transform.parent = transform;
+			//go.GetComponent.<MapObjectCarrier>().pos = tile.gridPos;
+			//go.GetComponent.<MapObjectCarrier>().data = tile.mapObjects[0];
 			tile.gameObjectList.Add(go);
 		}
 	}	
