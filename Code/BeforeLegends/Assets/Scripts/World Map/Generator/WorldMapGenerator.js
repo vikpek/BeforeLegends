@@ -118,8 +118,6 @@ function spwanRessources(){
 			var rand : float = Random.Range(0, 3);
 			var go : GameObject = Instantiate(CharacterModelPrefabs.ressourcePrefabs[rand], tile.position, CharacterModelPrefabs.ressourcePrefabs[rand].transform.rotation);
 			go.transform.parent = transform;
-			//go.GetComponent.<MapObjectCarrier>().pos = tile.gridPos;
-			//go.GetComponent.<MapObjectCarrier>().data = tile.mapObjects[0];
 			tile.gameObjectList.Add(go);
 		}
 	}	
