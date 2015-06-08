@@ -96,6 +96,7 @@ function finalizeAt(index : int, path : Vec2i[], suspended : boolean){
 	}
 	FogOfWar.instance.CheckTiles(path[index], FogOfWar.instance.visionRange);
 	FogOfWar.instance.SetEntitiesToVisible();
+	FogOfWar.instance.SetEntitiesToInvisible();
 }
 
 function OnTriggerEnter (other : Collider){

@@ -1113,8 +1113,8 @@ Transform:
   m_LocalPosition: {x: 221.699997, y: 1.70000005, z: 188.600006}
   m_LocalScale: {x: 38, y: 38, z: 38}
   m_Children: []
-  m_Father: {fileID: 1200521818}
-  m_RootOrder: 6
+  m_Father: {fileID: 409246233}
+  m_RootOrder: 1
 --- !u!1 &348066403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,8 +1239,8 @@ Transform:
   m_LocalPosition: {x: 50, y: 4, z: 50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1200521818}
-  m_RootOrder: 9
+  m_Father: {fileID: 409246233}
+  m_RootOrder: 4
 --- !u!1001 &370133654
 Prefab:
   m_ObjectHideFlags: 0
@@ -1429,6 +1429,38 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 8d8316dca03f744f1a032fd121a7382c, type: 3}
   m_PrefabInternal: {fileID: 399207249}
+--- !u!1 &409246232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 409246233}
+  m_Layer: 0
+  m_Name: FogOfWar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &409246233
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 409246232}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 445820774}
+  - {fileID: 340188082}
+  - {fileID: 1862178472}
+  - {fileID: 720130719}
+  - {fileID: 352819174}
+  m_Father: {fileID: 1200521818}
+  m_RootOrder: 7
 --- !u!1 &445820770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,8 +1519,8 @@ Transform:
   m_LocalPosition: {x: 221.699997, y: 1.70000005, z: 188.600006}
   m_LocalScale: {x: 38, y: 38, z: 38}
   m_Children: []
-  m_Father: {fileID: 1200521818}
-  m_RootOrder: 5
+  m_Father: {fileID: 409246233}
+  m_RootOrder: 0
 --- !u!1 &451376426
 GameObject:
   m_ObjectHideFlags: 0
@@ -3016,8 +3048,8 @@ Transform:
   m_LocalPosition: {x: 229, y: 50, z: 195}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1200521818}
-  m_RootOrder: 8
+  m_Father: {fileID: 409246233}
+  m_RootOrder: 3
 --- !u!1 &721854196
 GameObject:
   m_ObjectHideFlags: 0
@@ -4442,7 +4474,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1200521818}
-  m_RootOrder: 11
+  m_RootOrder: 6
 --- !u!1 &1001551661
 GameObject:
   m_PrefabParentObject: {fileID: 152424, guid: 25d08e4a231fa2d4eba5b88156d0b5ad, type: 2}
@@ -5930,13 +5962,9 @@ Transform:
   - {fileID: 721854197}
   - {fileID: 208699834}
   - {fileID: 473554654}
-  - {fileID: 445820774}
-  - {fileID: 340188082}
-  - {fileID: 1862178472}
-  - {fileID: 720130719}
-  - {fileID: 352819174}
   - {fileID: 2139333538}
   - {fileID: 988179221}
+  - {fileID: 409246233}
   m_Father: {fileID: 258453196}
   m_RootOrder: 0
 --- !u!114 &1200521820
@@ -10758,8 +10786,8 @@ Transform:
   m_LocalPosition: {x: 229, y: 50, z: 195}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1200521818}
-  m_RootOrder: 7
+  m_Father: {fileID: 409246233}
+  m_RootOrder: 2
 --- !u!1001 &1875136104
 Prefab:
   m_ObjectHideFlags: 0
@@ -10798,6 +10826,10 @@ Prefab:
     - target: {fileID: 439958, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426250, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
+      propertyPath: visionRange
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
@@ -11369,7 +11401,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294966527
+    m_Bits: 4294964479
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -11388,7 +11420,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1200521818}
-  m_RootOrder: 10
+  m_RootOrder: 5
 --- !u!114 &2139333539
 MonoBehaviour:
   m_ObjectHideFlags: 0
