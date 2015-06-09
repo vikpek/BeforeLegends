@@ -12,6 +12,7 @@ class UnitData{
 	var speed : int;
 	var critStrike : float;
 	var critBlock : float;
+	var expToGain : int;
 	
 	function calcDamage(opponent : UnitData, actionDamage : float){
 		var actualAttack : float = attack - attack * 0.1 + Random.Range(0, 1.0) * attack * 0.2;

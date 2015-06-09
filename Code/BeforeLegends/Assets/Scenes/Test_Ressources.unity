@@ -595,6 +595,7 @@ RectTransform:
   - {fileID: 896413271}
   - {fileID: 747629071}
   - {fileID: 486506935}
+  - {fileID: 1210877019}
   m_Father: {fileID: 1200521818}
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
@@ -6346,6 +6347,72 @@ MonoBehaviour:
     extents: {x: 0, y: 0, z: 0}
     size: {x: 0, y: 0, z: 0}
     center: {x: 0, y: 0, z: 0}
+--- !u!1 &1210877018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1210877019}
+  - 222: {fileID: 1210877021}
+  - 114: {fileID: 1210877020}
+  m_Layer: 5
+  m_Name: ExpGained
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1210877019
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1210877018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 208699834}
+  m_RootOrder: 8
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1210877020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1210877018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 26
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1210877021
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1210877018}
 --- !u!1 &1218710295
 GameObject:
   m_ObjectHideFlags: 0
@@ -8937,9 +9004,11 @@ MonoBehaviour:
   textWood: {fileID: 1795236642}
   textFood: {fileID: 1039812815}
   textStone: {fileID: 896413272}
+  textScore: {fileID: 747629072}
   valueWood: 0
   valueFood: 0
   valueStone: 0
+  valueScore: 0
   loseHealthInPercent: .200000003
   ressourcesToDeregister: []
 --- !u!4 &1427169111
@@ -11294,6 +11363,7 @@ MonoBehaviour:
     speed: 0
     critStrike: 0
     critBlock: 0
+    expToGain: 0
   enemyData:
     attack: 0
     defense: 0
@@ -11306,6 +11376,7 @@ MonoBehaviour:
     speed: 0
     critStrike: 0
     critBlock: 0
+    expToGain: 0
   playerFinished: 0
   enemyFinished: 0
   playerParticles: {fileID: 0}

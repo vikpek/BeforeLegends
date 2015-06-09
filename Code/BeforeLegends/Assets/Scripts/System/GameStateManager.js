@@ -19,8 +19,9 @@ function startBattle(player : GameObject, enemy : GameObject){
 	world.SetActive(false);
 }
 
-function endBattle(result : boolean){
+function endBattle(result : boolean, exp : int){
 	state = 0;
 	world.SetActive(true);
 	battle.SetActive(false);
+	RessourceMaster.instance.valueScore += exp;
 }
