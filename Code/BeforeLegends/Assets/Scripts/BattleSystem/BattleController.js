@@ -12,52 +12,52 @@ private enum Action{ // here below you need to add any new actions
 
 var player : GameObject;
 
-@HideInInspector
+//@HideInInspector
 var enemy : GameObject;
 
 var round : int = 0;
 
-@HideInInspector
+//@HideInInspector
 var playerData : UnitData;
-@HideInInspector
+//@HideInInspector
 var	enemyData : UnitData; 
 
-@HideInInspector
+//@HideInInspector
 var playerFinished : boolean = false;
-@HideInInspector
+//@HideInInspector
 var enemyFinished : boolean = false;
 
-@HideInInspector
+//@HideInInspector
 var playerParticles : CharacterParticleController;
-@HideInInspector
+//@HideInInspector
 var enemyParticles : CharacterParticleController;
 
-@HideInInspector
+//@HideInInspector
 var enemyWorldObject : GameObject; 
-@HideInInspector
+//@HideInInspector
 var playerWorldObject : GameObject;
 
-@HideInInspector
+//@HideInInspector
 var playerHPText : HPText;
-@HideInInspector
+//@HideInInspector
 var enemyHPText : HPText;
 
-@HideInInspector
+//@HideInInspector
 var playerAnimation : Anims;
-@HideInInspector
+//@HideInInspector
 var enemyAnimation : Anims;
-@HideInInspector
+//@HideInInspector
 var playerAnimator : CharacterAnimations;
-@HideInInspector
+//@HideInInspector
 var enemyAnimator : CharacterAnimations;
 
-@HideInInspector
+//@HideInInspector
 var state : BattleState = BattleState.IDLE;
-@HideInInspector
+//@HideInInspector
 var actor : Actor = Actor.PLAYER;
-@HideInInspector
+//@HideInInspector
 var enemyAction : Action;
-@HideInInspector
+//@HideInInspector
 var playerAction : Action;
 
 function Update(){
