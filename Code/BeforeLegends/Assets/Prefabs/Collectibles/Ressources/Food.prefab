@@ -11,9 +11,10 @@ GameObject:
   - 33: {fileID: 3319434}
   - 136: {fileID: 13683604}
   - 23: {fileID: 2307700}
+  - 114: {fileID: 11422302}
   m_Layer: 0
   m_Name: Food
-  m_TagString: Untagged
+  m_TagString: Ressource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,6 +62,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122060}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11422302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4d33ca547c4e44baa41aa296f89dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rType: Food
+  rValue: 5
+  pos:
+    x: 0
+    y: 0
 --- !u!136 &13683604
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -38,6 +38,7 @@ function setPosition(pos : Vec2i){
 	worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Remove(data);
 	data.pos = pos;
 	worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Add(data);
+	CollectRessources(pos);
 }
 
 function followPath(path : Vec2i[], dur : float){
@@ -97,6 +98,32 @@ function finalizeAt(index : int, path : Vec2i[], suspended : boolean){
 	FogOfWar.instance.CheckTiles(path[index], FogOfWar.instance.visionRange);
 	FogOfWar.instance.SetEntitiesToVisible();
 	FogOfWar.instance.SetEntitiesToInvisible();
+}
+
+function CollectRessources(pos : Vec2i) {
+	var worldData : WorldMapData = WorldMapData.getInstance();
+	if(worldData.tiles[pos.x, pos.y].gameObjectList.Count > 0) {
+		for(var gO : GameObject in worldData.tiles[pos.x, pos.y].gameObjectList) {
+			if(gO.tag == "Ressource") {
+				RessourceMaster.instance.ressourcesToDeregister.Add(gO);
+				switch(gO.GetComponent.<Ressource>().rType) {
+				case "Food":
+					RessourceMaster.instance.valueFood += gO.GetComponent.<Ressource>().rValue;
+					break;
+				case "Stone":
+					RessourceMaster.instance.valueStone += gO.GetComponent.<Ressource>().rValue;
+					break;
+				case "Wood":
+					RessourceMaster.instance.valueWood += gO.GetComponent.<Ressource>().rValue;
+					break;
+				case "default":
+					Debug.Log("Wrong Type");
+					break;
+				}
+				gO.SetActive(false);
+			}
+		}
+	}
 }
 
 function OnTriggerEnter (other : Collider){
