@@ -596,6 +596,7 @@ RectTransform:
   - {fileID: 747629071}
   - {fileID: 486506935}
   - {fileID: 1210877019}
+  - {fileID: 903467381}
   m_Father: {fileID: 1200521818}
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
@@ -3509,6 +3510,72 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 896413270}
+--- !u!1 &903467380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 903467381}
+  - 222: {fileID: 903467383}
+  - 114: {fileID: 903467382}
+  m_Layer: 5
+  m_Name: Victory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &903467381
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 903467380}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 208699834}
+  m_RootOrder: 9
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &903467382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 903467380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c1361455057eb384098fd0f65bbe7505, type: 3}
+    m_FontSize: 0
+    m_FontStyle: 3
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Game Won
+--- !u!222 &903467383
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 903467380}
 --- !u!1 &907465389
 GameObject:
   m_ObjectHideFlags: 0
@@ -6211,6 +6278,7 @@ GameObject:
   - 4: {fileID: 1200521818}
   - 114: {fileID: 1200521820}
   - 114: {fileID: 1200521819}
+  - 114: {fileID: 1200521821}
   m_Layer: 0
   m_Name: WorldMap
   m_TagString: Untagged
@@ -6347,6 +6415,22 @@ MonoBehaviour:
     extents: {x: 0, y: 0, z: 0}
     size: {x: 0, y: 0, z: 0}
     center: {x: 0, y: 0, z: 0}
+--- !u!114 &1200521821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1200521817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dc97e89b732022489a94bba3c86749d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreToWin: 10
+  textVictory: {fileID: 903467382}
+  gameObjectsToDeactivateOnGameOver:
+  - {fileID: 1816951263}
+  - {fileID: 721854196}
 --- !u!1 &1210877018
 GameObject:
   m_ObjectHideFlags: 0
