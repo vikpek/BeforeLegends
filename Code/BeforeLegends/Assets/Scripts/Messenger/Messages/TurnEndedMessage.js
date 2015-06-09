@@ -10,6 +10,9 @@ class TurnEndedMessage extends Message{
 			if(RessourceMaster.instance.valueFood <= 0) {
 				RessourceMaster.instance.LoseHealthToHunger();
 			}
+			else if(RessourceMaster.instance.valueFood > 0) {
+				RessourceMaster.instance.RegenerateHealthThroughEating();
+			}
 		}
 		this.turn = turn;
 	}

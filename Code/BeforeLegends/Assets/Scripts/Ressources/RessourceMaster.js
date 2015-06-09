@@ -13,6 +13,7 @@ var valueStone : int;
 var valueScore : int;
 
 var loseHealthInPercent : float;
+var generateHealthInPercent : float;
 
 var ressourcesToDeregister : List.<GameObject> = new List.<GameObject>();
 
@@ -46,6 +47,16 @@ function LoseHealthToHunger() {
 	var player : GameObject[] = GameObject.FindGameObjectsWithTag("Player");
 	for(var pO : GameObject in player) {
 		pO.GetComponent.<BattleParameters>().battleParameters.hitPoints -= pO.GetComponent.<BattleParameters>().battleParameters.maxHitPoints * loseHealthInPercent;
+	}
+}
+
+function RegenerateHealthThroughEating() {
+	var player : GameObject[] = GameObject.FindGameObjectsWithTag("Player");
+	for(var pO : GameObject in player) {
+		pO.GetComponent.<BattleParameters>().battleParameters.hitPoints += pO.GetComponent.<BattleParameters>().battleParameters.maxHitPoints * generateHealthInPercent;
+		if(pO.GetComponent.<BattleParameters>().battleParameters.hitPoints > pO.GetComponent.<BattleParameters>().battleParameters.maxHitPoints) {
+			pO.GetComponent.<BattleParameters>().battleParameters.hitPoints = pO.GetComponent.<BattleParameters>().battleParameters.maxHitPoints;
+		}
 	}
 }
 
