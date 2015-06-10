@@ -90,12 +90,12 @@ function Update(){
 function checkEnded(){
 		if(playerData.hitPoints <= 0){
 			playerWorldObject.SetActive(false);
-			GameStateManager.instance.endBattle(false);
+			GameStateManager.instance.endBattle(false, 0);
 			Messenger.instance.send(AllActionsEndedMessage());
 			return true;
 		}else if(enemyData.hitPoints <= 0){
 			enemyWorldObject.SetActive(false);
-			GameStateManager.instance.endBattle(true);
+			GameStateManager.instance.endBattle(true, enemyData.expToGain);
 			Messenger.instance.send(AllActionsEndedMessage());
 			return true;
 		}
