@@ -301,6 +301,7 @@ GameObject:
   - 114: {fileID: 11439676}
   - 114: {fileID: 11426250}
   - 114: {fileID: 11478554}
+  - 114: {fileID: 11418850}
   m_Layer: 0
   m_Name: Olaf
   m_TagString: Player
@@ -2047,7 +2048,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 1}
   m_LocalScale: {x: .821136415, y: .821136415, z: .821136832}
   m_Children:
   - {fileID: 419378}
@@ -3066,6 +3067,18 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &11418850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7924dcd00320044a9768b356707ff39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eat: 2
 --- !u!114 &11426250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3077,7 +3090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b24b444adc57e40b209db48f314293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRange: 5
+  visionRange: 3
   enemysInRange: []
   adjacent: []
   adjacentTemp: []
@@ -3108,7 +3121,7 @@ MonoBehaviour:
     attack: 10
     defense: 10
     armor: 10
-    damage: 10
+    damage: 30
     hitPoints: 100
     maxHitPoints: 100
     actionPoints: 10
@@ -3116,6 +3129,7 @@ MonoBehaviour:
     speed: 10
     critStrike: 0
     critBlock: 0
+    expToGain: 0
 --- !u!114 &11477504
 MonoBehaviour:
   m_ObjectHideFlags: 1
