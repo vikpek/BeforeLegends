@@ -39,6 +39,9 @@ function setPosition(pos : Vec2i){
 	data.pos = pos;
 	worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Add(data);
 	CollectRessources(pos);
+	FogOfWar.instance.CheckTiles(pos, FogOfWar.instance.visionRange);
+	FogOfWar.instance.SetEntitiesToVisible();
+	FogOfWar.instance.SetEntitiesToInvisible();
 }
 
 function followPath(path : Vec2i[], dur : float){
@@ -95,9 +98,6 @@ function finalizeAt(index : int, path : Vec2i[], suspended : boolean){
 		moved++;
 		Messenger.instance.send(MapObjectMovedMessage(data, path[index-1]));
 	}
-	FogOfWar.instance.CheckTiles(path[index], FogOfWar.instance.visionRange);
-	FogOfWar.instance.SetEntitiesToVisible();
-	FogOfWar.instance.SetEntitiesToInvisible();
 }
 
 function CollectRessources(pos : Vec2i) {

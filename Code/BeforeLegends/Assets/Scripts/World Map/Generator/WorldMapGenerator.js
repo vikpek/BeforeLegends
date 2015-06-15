@@ -1,6 +1,7 @@
 ﻿#pragma strict
 
 import System.Collections.Generic;
+import System.IO;
 
 var mapMaterial : Material;
 var size : Vec2i;
@@ -24,6 +25,9 @@ var temperatureLookup : float[];
 
 @HideInInspector 
 var chunkTexture : Texture2D;
+
+@HideInInspector
+var chunkTextureNormal : Texture2D;
 
 @HideInInspector 
 var chunkTextureRects : Rect[];
@@ -116,7 +120,25 @@ function spwanRessources(){
 		var spawnChance : float = Random.Range(1, 4);
 		if(spawnChance > 1 && tile.traversable == true){
 			var rand : float = Random.Range(0, 3);
-			var go : GameObject = Instantiate(CharacterModelPrefabs.ressourcePrefabs[rand], tile.position, CharacterModelPrefabs.ressourcePrefabs[rand].transform.rotation);
+
+			var randomX : float = Random.Range(0, 2);
+			if(randomX > 0.5)
+				randomX = 0.4;
+			else if(randomX < 0.5)
+				randomX = -0.4;
+			else
+				randomX = 0;
+
+			var randomY : float = Random.Range(0, 2);
+			if(randomY > 0.5)
+				randomY = 0.4;
+			else if(randomY < 0.5)
+				randomY = -0.4;
+			else
+				randomY = 0;
+			
+			var go : GameObject = Instantiate(CharacterModelPrefabs.ressourcePrefabs[rand], new Vector3(tile.position.x + randomX, tile.position.y + 10, tile.position.z + randomY) , CharacterModelPrefabs.ressourcePrefabs[rand].transform.rotation);
+			FogOfWar.instance.SetLayerRecursively(go, 11);
 			go.transform.parent = transform;
 			go.GetComponent.<Ressource>().pos = tile.gridPos;
 			//go.GetComponent.<MapObjectCarrier>().pos = tile.gridPos;

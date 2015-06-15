@@ -6,6 +6,7 @@ static var instance : FogOfWar;
 
 var visionRange : int;
 var enemysInRange : List.<GameObject> = new List.<GameObject>();
+var ressourceInRange : List.<GameObject> = new List.<GameObject>();
 var adjacent : List.<Hexagon> = new List.<Hexagon>();
 var adjacentTemp : List.<Hexagon> = new List.<Hexagon>();
 
@@ -32,7 +33,7 @@ function CheckTiles(origin : Vec2i, radius : int) {
 	adjacentTemp.Add(hexCenter);
 	adjacent.Add(hexCenter);
 
-	for(var i = 0; i < radius; i++) {
+	for(var i = 0; i <= radius; i++) {
 		for(var l = 0; l < 6 * radius; l++) {
 			adjacentTemp = adjacent[l].getAdjacent().ToList();
 			for(var hex : Hexagon in adjacentTemp) {
@@ -43,6 +44,7 @@ function CheckTiles(origin : Vec2i, radius : int) {
 	}
 	adjacent = Enumerable.ToList(Enumerable.Distinct(adjacent));
 	AddEnemysInRangeToList();
+	AddRessourcesInRangeToList();
 }
 
 function AddEnemysInRangeToList() {
@@ -54,14 +56,28 @@ function AddEnemysInRangeToList() {
 	}
 }
 
+function AddRessourcesInRangeToList() {
+	for(var hex : Hexagon in adjacent) {
+		for(var gO : GameObject in hex.gameObjectList) {
+			if(gO.tag == "Ressource") {
+				ressourceInRange.Add(gO);
+				gO.GetComponent.<Ressource>().fall = true;
+			}
+		}
+	}
+}
+
 function SetEntitiesToVisible() {
 	for(var i : int = 0; i < enemysInRange.Count; i++) {
 		SetLayerRecursively(enemysInRange[i], 0);
 	}
+	for(var j : int = 0; j < ressourceInRange.Count; j++) {
+		SetLayerRecursively(ressourceInRange[j], 0);
+	}
 }
 
 function SetEntitiesToInvisible() {
-var enemysInRangeTemp : List.<GameObject> = new List.<GameObject>();
+	var enemysInRangeTemp : List.<GameObject> = new List.<GameObject>();
 	for(var obj : GameObject in enemysInRange) {
 		var pos : Vec2i = obj.GetComponent.<MapObjectCarrier>().pos;
 		var temp : int = (pos.x - gameObject.GetComponent(MapObjectCarrier).pos.x) + (pos.y - gameObject.GetComponent(MapObjectCarrier).pos.y);
