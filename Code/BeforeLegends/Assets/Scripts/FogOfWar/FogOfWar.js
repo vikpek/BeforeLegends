@@ -69,10 +69,10 @@ function AddRessourcesInRangeToList() {
 
 function SetEntitiesToVisible() {
 	for(var i : int = 0; i < enemysInRange.Count; i++) {
-		SetLayerRecursively(enemysInRange[i], 0);
+		SetLayerRecursively(enemysInRange[i], 15);
 	}
 	for(var j : int = 0; j < ressourceInRange.Count; j++) {
-		SetLayerRecursively(ressourceInRange[j], 0);
+		SetLayerRecursively(ressourceInRange[j], 15);
 	}
 }
 
