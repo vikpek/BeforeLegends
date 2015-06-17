@@ -1,10 +1,54 @@
 ﻿#pragma strict
 
+//do screenshake
+// - create an "AnimationCurve" with "var [name] : AnimationCurve;" in ie BattleController
+// - modify Curve in editor
+// - call "Screenshake.instance.shakeIt([name]);"
+
 static var instance: Screenshake;
 
-function Awake (){
-	if (!instance) instance = this;
+public var doScreenshake : boolean = false;
+public var durationIntensity : AnimationCurve;
+var displacement : Vector3;
+var screenShakeTime : float = 0;
+
+function Awake()
+{
+    GameInfo.instance.assignBattleCameraPos(gameObject);
 }
+
+function shakeIt(animC : AnimationCurve)
+{
+	durationIntensity = animC;
+	doScreenshake = true;
+    screenShakeTime = 0;
+}
+
+function Update() {
+    if (!instance) 
+        instance = this;
+    if(doScreenshake)
+    {
+        screenShakeTime += Time.deltaTime;
+        displacement.x = Random.Range(-durationIntensity.Evaluate(screenShakeTime), durationIntensity.Evaluate(screenShakeTime));
+        displacement.y = Random.Range(-durationIntensity.Evaluate(screenShakeTime), durationIntensity.Evaluate(screenShakeTime));
+        displacement.z = 0;
+        gameObject.transform.position = GameInfo.instance.battleCameraPos + displacement;
+        if(screenShakeTime >= durationIntensity.keys[durationIntensity.length - 1].time)
+        {
+            screenShakeTime = 0;
+            doScreenshake = false;
+            gameObject.transform.position = GameInfo.instance.battleCameraPos;
+        }
+    }
+    else
+        screenShakeTime = 0;
+}
+
+
+
+
+/*
 
 function screenShake (dur : float, intensity : float, intensityDuration : float){
 	var pos : Vector3 = Camera.main.transform.position;
