@@ -16,9 +16,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &136578
+--- !u!1 &120802
 GameObject:
   m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400380}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &136578
+GameObject:
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -35,7 +50,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &158636
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -52,7 +67,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &162610
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -67,6 +82,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &400380
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120802}
+  m_LocalRotation: {x: -.707106888, y: -2.98023224e-08, z: 0, w: .707106709}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 441378}
+  - {fileID: 421042}
+  - {fileID: 436224}
+  m_Father: {fileID: 410704}
+  m_RootOrder: 0
 --- !u!4 &410704
 Transform:
   m_ObjectHideFlags: 1
@@ -74,12 +104,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113618}
   m_LocalRotation: {x: 0, y: -.537299693, z: 0, w: .843391418}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.98222256, y: -1.03075337, z: 6.40488958}
   m_LocalScale: {x: .800000012, y: .800000012, z: .800000012}
   m_Children:
-  - {fileID: 441378}
-  - {fileID: 421042}
-  - {fileID: 436224}
+  - {fileID: 400380}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &421042
@@ -88,11 +116,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162610}
-  m_LocalRotation: {x: -.707106829, y: -1.36004097e-09, z: -1.36004119e-09, w: .707106709}
-  m_LocalPosition: {x: -.189191163, y: 0, z: .0495391674}
-  m_LocalScale: {x: .370201916, y: .430684507, z: .277697891}
+  m_LocalRotation: {x: 8.94069601e-08, y: 8.94069601e-08, z: .165848404, w: .986151278}
+  m_LocalPosition: {x: -.182399839, y: -.152799174, z: -0}
+  m_LocalScale: {x: .296161532, y: .344547629, z: .222158343}
   m_Children: []
-  m_Father: {fileID: 410704}
+  m_Father: {fileID: 400380}
   m_RootOrder: 1
 --- !u!4 &436224
 Transform:
@@ -100,11 +128,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158636}
-  m_LocalRotation: {x: -.707106829, y: -1.36004097e-09, z: -1.36004119e-09, w: .707106709}
-  m_LocalPosition: {x: -.189191163, y: 0, z: .0495390818}
-  m_LocalScale: {x: .442465991, y: .430684507, z: .341061711}
+  m_LocalRotation: {x: 8.94069601e-08, y: 8.94069601e-08, z: .165848404, w: .986151278}
+  m_LocalPosition: {x: -.182399839, y: -.152799174, z: -0}
+  m_LocalScale: {x: .353972822, y: .344547629, z: .272849411}
   m_Children: []
-  m_Father: {fileID: 410704}
+  m_Father: {fileID: 400380}
   m_RootOrder: 2
 --- !u!4 &441378
 Transform:
@@ -112,11 +140,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136578}
-  m_LocalRotation: {x: -.707106829, y: -1.36004097e-09, z: -1.36004119e-09, w: .707106709}
+  m_LocalRotation: {x: 2.98023224e-08, y: 1.49011612e-08, z: 1.49011612e-08, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 410704}
+  m_Father: {fileID: 400380}
   m_RootOrder: 0
 --- !u!23 &2301238
 MeshRenderer:
