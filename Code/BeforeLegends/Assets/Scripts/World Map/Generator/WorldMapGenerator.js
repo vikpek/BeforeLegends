@@ -23,6 +23,8 @@ var heightLookup : float[];
 var moistureLookup : float[];
 var temperatureLookup : float[];
 
+var DropChances : List.<DropChance> = new List.<DropChance>();
+
 @HideInInspector 
 var chunkTexture : Texture2D;
 
@@ -117,10 +119,30 @@ function spawnCarriers(){
 function spwanRessources(){
 	var data : WorldMapData = WorldMapData.getInstance();
 	for(var tile : Hexagon in data.tiles){
-		var spawnChance : float = Random.Range(1, 4);
-		if(spawnChance > 1 && tile.traversable == true){
-			var rand : float = Random.Range(0, 3);
+		var chance : DropChance = returnDropChance(tile.matID, DropChances);
+		tile.tileType = chance.tileType;
 
+		var spawnChance : float = Random.Range(0.0, 1.0);
+		if(chance.chance > spawnChance && tile.traversable == true){
+			var rand : float = Random.Range(0.0, 1.0);
+			//Debug.Log(rand);
+			//Debug.Log(chance.tileType + "\n" + chance.foodDropChance + "\n" + chance.stoneDropChance + "\n" + chance.woodDropChance + "\n" + chance.expDropChance + "\n");
+			var spawn : int;
+			//Debug.Log("rand: " + rand);
+				if(rand<=chance.foodDropChance)
+					spawn = 0;
+					//Debug.Log("spawn:" + spawn);
+				if(rand<=chance.stoneDropChance)
+					spawn = 1;
+					//Debug.Log("spawn:" + spawn);
+				if(rand<=chance.woodDropChance)
+					spawn = 2;
+					//Debug.Log("spawn:" + spawn);
+				if(rand<=chance.expDropChance)
+					spawn = 3;
+					//Debug.Log("spawn:" + spawn);
+
+			//Debug.Log(spawn + "\n" + tile.tileType);
 			var randomX : float = Random.Range(0, 2);
 			if(randomX > 0.5)
 				randomX = 0.4;
@@ -137,15 +159,13 @@ function spwanRessources(){
 			else
 				randomY = 0;
 			
-			var go : GameObject = Instantiate(CharacterModelPrefabs.ressourcePrefabs[rand], new Vector3(tile.position.x + randomX, tile.position.y + 10, tile.position.z + randomY) , CharacterModelPrefabs.ressourcePrefabs[rand].transform.rotation);
+			var go : GameObject = Instantiate(CharacterModelPrefabs.ressourcePrefabs[spawn], new Vector3(tile.position.x + randomX, tile.position.y, tile.position.z + randomY) , CharacterModelPrefabs.ressourcePrefabs[rand].transform.rotation);
 			FogOfWar.instance.SetLayerRecursively(go, 11);
 			go.transform.parent = transform;
 			go.GetComponent.<Ressource>().pos = tile.gridPos;
-			//go.GetComponent.<MapObjectCarrier>().pos = tile.gridPos;
-			//go.GetComponent.<MapObjectCarrier>().data = tile.mapObjects[0];
 			tile.gameObjectList.Add(go);
 		}
-	}	
+	}
 }
 
 function createChunks(){
@@ -222,3 +242,53 @@ function generate(){
 		hex.assignMaterials(this);
 	}
 }
+
+function returnDropChance(matID : int, DropChances : List.<DropChance>) : DropChance {
+ 	var returnStruct : DropChance;
+ 	var mod : int = matID % 4;
+
+ 	var gL : int[] = [18,22,23,30135];
+
+ 	switch(mod) {
+ 		case 0:
+ 			for(var s : DropChance in DropChances) {
+ 				if(s.tileType == "Default") 
+ 					returnStruct = s;
+ 			}
+ 			break;
+ 		case 1:
+ 			for(var s : DropChance in DropChances) {
+ 				if(s.tileType == "Forest") 
+ 					returnStruct = s;
+ 			}
+ 			break;
+ 		case 2:
+ 			for(var s : DropChance in DropChances) {
+ 				if(s.tileType == "Desert") 
+ 					returnStruct = s;
+ 			}
+ 			break;
+ 		case 3:
+ 			for(var s : DropChance in DropChances) {
+ 				if(s.tileType == "Mountain") 
+ 					returnStruct = s;
+ 			}
+ 			break;
+ 		default:
+ 			returnStruct = DropChances[0];
+ 	}
+
+ 	for(var g : int in gL) {
+ 		if(matID == g)
+ 			returnStruct = DropChances[4];
+ 	}
+ 	/*if(matID % 4 == 0) {
+ 		for(var s : DropChance in DropChances) {
+ 			if(s.tileType == "Mountain")
+ 				returnStruct = s;
+ 		}
+ 	}*/
+
+ 	returnStruct.overallDropChance();
+ 	return returnStruct;
+ }
