@@ -4,11 +4,11 @@
  var woodDropChance : float;
  var stoneDropChance : float;
  var foodDropChance : float;
- var expDropChance : float;
+ var soulsDropChance : float;
 
  var chance : float;
 
  public function overallDropChance() {
- 	chance = woodDropChance + stoneDropChance + foodDropChance + expDropChance;
+ 	chance = woodDropChance + stoneDropChance + foodDropChance + soulsDropChance;
  }
 }

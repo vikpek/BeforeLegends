@@ -25,6 +25,21 @@ var temperatureLookup : float[];
 
 var DropChances : List.<DropChance> = new List.<DropChance>();
 
+var water : int[];
+var ice : int[];
+var ice_mountain : int[];
+var tundra : int[];
+var savana : int[];
+var dry_forest : int[];
+var dry_mountain : int[];
+var grassland : int[];
+var forest : int[];
+var forest_mountain : int[];
+var desert : int[];
+var desert_mountain : int[];
+var jungle : int[];
+
+
 @HideInInspector 
 var chunkTexture : Texture2D;
 
@@ -120,6 +135,7 @@ function spwanRessources(){
 	var data : WorldMapData = WorldMapData.getInstance();
 	for(var tile : Hexagon in data.tiles){
 		var chance : DropChance = returnDropChance(tile.matID, DropChances);
+		chance.overallDropChance();
 		tile.tileType = chance.tileType;
 
 		var spawnChance : float = Random.Range(0.0, 1.0);
@@ -138,11 +154,12 @@ function spwanRessources(){
 				if(rand<=chance.woodDropChance)
 					spawn = 2;
 					//Debug.Log("spawn:" + spawn);
-				if(rand<=chance.expDropChance)
+				if(rand<=chance.soulsDropChance)
 					spawn = 3;
 					//Debug.Log("spawn:" + spawn);
 
 			//Debug.Log(spawn + "\n" + tile.tileType);
+			Debug.Log(spawn);
 			var randomX : float = Random.Range(0, 2);
 			if(randomX > 0.5)
 				randomX = 0.4;
@@ -244,51 +261,53 @@ function generate(){
 }
 
 function returnDropChance(matID : int, DropChances : List.<DropChance>) : DropChance {
- 	var returnStruct : DropChance;
- 	var mod : int = matID % 4;
-
- 	var gL : int[] = [18,22,23,30135];
-
- 	switch(mod) {
- 		case 0:
- 			for(var s : DropChance in DropChances) {
- 				if(s.tileType == "Default") 
- 					returnStruct = s;
- 			}
- 			break;
- 		case 1:
- 			for(var s : DropChance in DropChances) {
- 				if(s.tileType == "Forest") 
- 					returnStruct = s;
- 			}
- 			break;
- 		case 2:
- 			for(var s : DropChance in DropChances) {
- 				if(s.tileType == "Desert") 
- 					returnStruct = s;
- 			}
- 			break;
- 		case 3:
- 			for(var s : DropChance in DropChances) {
- 				if(s.tileType == "Mountain") 
- 					returnStruct = s;
- 			}
- 			break;
- 		default:
- 			returnStruct = DropChances[0];
+ 	for(var e in ice) {
+ 		if(e == matID)
+ 			return DropChances[1];
  	}
-
- 	for(var g : int in gL) {
- 		if(matID == g)
- 			returnStruct = DropChances[4];
+ 	for(var e in ice_mountain) {
+ 		if(e == matID)
+ 			return DropChances[2];
  	}
- 	/*if(matID % 4 == 0) {
- 		for(var s : DropChance in DropChances) {
- 			if(s.tileType == "Mountain")
- 				returnStruct = s;
- 		}
- 	}*/
-
- 	returnStruct.overallDropChance();
- 	return returnStruct;
+ 	for(var e in tundra) {
+ 		if(e == matID)
+ 			return DropChances[3];
+ 	}
+ 	for(var e in savana) {
+ 		if(e == matID)
+ 			return DropChances[4];
+ 	}
+ 	for(var e in dry_forest) {
+ 		if(e == matID)
+ 			return DropChances[5];
+ 	}
+ 	for(var e in dry_mountain) {
+ 		if(e == matID)
+ 			return DropChances[6];
+ 	}
+ 	for(var e in grassland) {
+ 		if(e == matID)
+ 			return DropChances[7];
+ 	}
+ 	for(var e in forest) {
+ 		if(e == matID)
+ 			return DropChances[8];
+ 	}
+ 	for(var e in forest_mountain) {
+ 		if(e == matID)
+ 			return DropChances[9];
+ 	}
+ 	for(var e in desert) {
+ 		if(e == matID)
+ 			return DropChances[10];
+ 	}
+ 	for(var e in desert_mountain) {
+ 		if(e == matID)
+ 			return DropChances[11];
+ 	}
+ 	for(var e in jungle) {
+ 		if(e == matID)
+ 			return DropChances[12];
+ 	}
+ 	return DropChances[0];
  }
