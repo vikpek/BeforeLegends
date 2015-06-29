@@ -6,6 +6,7 @@ var gridPos : Vec2i;
 
 var matID : int;
 var tileType : String;
+var rand : float;
 var position : Vector3;
 
 var elevation : float;

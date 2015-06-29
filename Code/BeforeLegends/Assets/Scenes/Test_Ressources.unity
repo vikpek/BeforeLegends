@@ -406,6 +406,72 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 155702217}
+--- !u!1 &156463512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 156463513}
+  - 222: {fileID: 156463515}
+  - 114: {fileID: 156463514}
+  m_Layer: 5
+  m_Name: Souls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &156463513
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156463512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 208699834}
+  m_RootOrder: 6
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 425, y: 89}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &156463514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156463512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .925490201, g: 0, b: 0, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Souls
+--- !u!222 &156463515
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156463512}
 --- !u!1 &159123397
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +659,7 @@ RectTransform:
   - {fileID: 1795236641}
   - {fileID: 1039812814}
   - {fileID: 896413271}
+  - {fileID: 156463513}
   - {fileID: 747629071}
   - {fileID: 486506935}
   - {fileID: 1210877019}
@@ -1755,7 +1822,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 208699834}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -3195,10 +3262,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 208699834}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 420.399994, y: 82.0999985}
+  m_AnchoredPosition: {x: 420, y: 40}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &747629072
@@ -3599,7 +3666,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 208699834}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -6396,11 +6463,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapMaterial: {fileID: 2100000, guid: 2a6bd0230e90b5142a760dd65d79360d, type: 2}
   size:
-    x: 128
-    y: 128
+    x: 96
+    y: 96
   chunkSize:
-    x: 64
-    y: 64
+    x: 2
+    y: 2
   seed: 873248623
   erosionScale: .100000001
   continentScale: .0149999997
@@ -6470,76 +6537,76 @@ MonoBehaviour:
     soulsDropChance: 0
     chance: 0
   - tileType: ice
-    woodDropChance: 1
+    woodDropChance: 0
     stoneDropChance: 0
-    foodDropChance: 0
-    soulsDropChance: 0
+    foodDropChance: .100000001
+    soulsDropChance: .200000003
     chance: 0
   - tileType: ice_mountain
-    woodDropChance: 0
-    stoneDropChance: 0
-    foodDropChance: 0
-    soulsDropChance: 0
+    woodDropChance: .100000001
+    stoneDropChance: .300000012
+    foodDropChance: .100000001
+    soulsDropChance: .100000001
     chance: 0
   - tileType: tundra
-    woodDropChance: 0
-    stoneDropChance: 1
-    foodDropChance: 0
-    soulsDropChance: 0
+    woodDropChance: .200000003
+    stoneDropChance: .100000001
+    foodDropChance: .200000003
+    soulsDropChance: .100000001
     chance: 0
   - tileType: savanna
-    woodDropChance: 0
-    stoneDropChance: 0
-    foodDropChance: 1
-    soulsDropChance: 0
+    woodDropChance: .100000001
+    stoneDropChance: .100000001
+    foodDropChance: .25
+    soulsDropChance: .200000003
     chance: 0
   - tileType: dry_forest
-    woodDropChance: 0
-    stoneDropChance: 0
-    foodDropChance: 1
-    soulsDropChance: 0
+    woodDropChance: .300000012
+    stoneDropChance: .100000001
+    foodDropChance: .200000003
+    soulsDropChance: .100000001
     chance: 0
   - tileType: dry_mountain
-    woodDropChance: 0
-    stoneDropChance: 0
-    foodDropChance: 1
-    soulsDropChance: 0
+    woodDropChance: .100000001
+    stoneDropChance: .300000012
+    foodDropChance: .100000001
+    soulsDropChance: .200000003
     chance: 0
   - tileType: grassland
-    woodDropChance: 0
-    stoneDropChance: 0
-    foodDropChance: 1
-    soulsDropChance: 0
+    woodDropChance: .100000001
+    stoneDropChance: .100000001
+    foodDropChance: .400000006
+    soulsDropChance: .0500000007
     chance: 0
   - tileType: forest
-    woodDropChance: 0
-    stoneDropChance: 0
-    foodDropChance: 1
-    soulsDropChance: 0
+    woodDropChance: .400000006
+    stoneDropChance: .100000001
+    foodDropChance: .25
+    soulsDropChance: .0500000007
     chance: 0
   - tileType: forest_mountain
-    woodDropChance: 0
-    stoneDropChance: 0
-    foodDropChance: 1
-    soulsDropChance: 0
+    woodDropChance: .300000012
+    stoneDropChance: .300000012
+    foodDropChance: .25
+    soulsDropChance: .0500000007
     chance: 0
   - tileType: desert
     woodDropChance: 0
-    stoneDropChance: 0
-    foodDropChance: 1
-    soulsDropChance: 0
+    stoneDropChance: .100000001
+    foodDropChance: .100000001
+    soulsDropChance: .300000012
     chance: 0
   - tileType: desert_mountain
-    woodDropChance: 0
-    stoneDropChance: 0
-    foodDropChance: 1
-    soulsDropChance: 0
+    woodDropChance: .100000001
+    stoneDropChance: .25
+    foodDropChance: .100000001
+    soulsDropChance: .150000006
     chance: 0
   - tileType: jungle
-    woodDropChance: 0
-    stoneDropChance: 0
-    foodDropChance: 1
-    soulsDropChance: 0
+    woodDropChance: .200000003
+    stoneDropChance: .100000001
+    foodDropChance: .300000012
+    soulsDropChance: .150000006
     chance: 0
   water: 0000000004000000080000000c0000001000000014000000180000001c00000020000000
   ice: 010000000200000005000000
@@ -6613,7 +6680,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 208699834}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -9242,10 +9309,12 @@ MonoBehaviour:
   textWood: {fileID: 1795236642}
   textFood: {fileID: 1039812815}
   textStone: {fileID: 896413272}
+  textSouls: {fileID: 156463514}
   textScore: {fileID: 747629072}
   valueWood: 0
   valueFood: 0
   valueStone: 0
+  valueSouls: 0
   valueScore: 0
   loseHealthInPercent: .200000003
   generateHealthInPercent: .100000001
@@ -11593,14 +11662,6 @@ Prefab:
     - target: {fileID: 439958, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 183336, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 183336, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
-      propertyPath: m_Layer
-      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}

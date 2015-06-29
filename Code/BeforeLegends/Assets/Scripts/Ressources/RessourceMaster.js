@@ -5,11 +5,13 @@ static var instance : RessourceMaster;
 var textWood : UI.Text;
 var textFood : UI.Text;
 var textStone : UI.Text;
+var textSouls : UI.Text;
 var textScore : UI.Text; 
 
 var valueWood : int;
 var valueFood : int;
 var valueStone : int;
+var valueSouls : int;
 var valueScore : int;
 
 var loseHealthInPercent : float;
@@ -23,23 +25,27 @@ function Start() {
 	valueWood = 0;
 	valueStone = 0;
 	valueFood = 0;
+	valueSouls = 0;
 	valueScore = 0;
 
 	textWood.text = valueWood + " Wood";
 	textFood.text = valueFood + " Food";
 	textStone.text = valueStone + " Stone";
+	textStone.text = valueSouls + " Souls";
 }
 
 function Update() {
 	if(valueStone < 0) valueStone = 0;
 	if(valueWood < 0) valueWood = 0;
 	if(valueFood <= 0) valueFood = 0;
+	if(valueSouls < 0) valueSouls = 0;
 	
 	CheckHP();
 
 	textWood.text = valueWood + " Wood";
 	textFood.text = valueFood + " Food";
 	textStone.text = valueStone + " Stone";
+	textSouls.text = valueSouls + " Souls";
 	textScore.text = valueScore + " Points";
 }
 

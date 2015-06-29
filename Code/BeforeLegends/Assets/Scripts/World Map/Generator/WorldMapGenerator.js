@@ -140,26 +140,7 @@ function spwanRessources(){
 
 		var spawnChance : float = Random.Range(0.0, 1.0);
 		if(chance.chance > spawnChance && tile.traversable == true){
-			var rand : float = Random.Range(0.0, 1.0);
-			//Debug.Log(rand);
-			//Debug.Log(chance.tileType + "\n" + chance.foodDropChance + "\n" + chance.stoneDropChance + "\n" + chance.woodDropChance + "\n" + chance.expDropChance + "\n");
-			var spawn : int;
-			//Debug.Log("rand: " + rand);
-				if(rand<=chance.foodDropChance)
-					spawn = 0;
-					//Debug.Log("spawn:" + spawn);
-				if(rand<=chance.stoneDropChance)
-					spawn = 1;
-					//Debug.Log("spawn:" + spawn);
-				if(rand<=chance.woodDropChance)
-					spawn = 2;
-					//Debug.Log("spawn:" + spawn);
-				if(rand<=chance.soulsDropChance)
-					spawn = 3;
-					//Debug.Log("spawn:" + spawn);
-
-			//Debug.Log(spawn + "\n" + tile.tileType);
-			Debug.Log(spawn);
+			var spawn : int = chance.returnDrop();
 			var randomX : float = Random.Range(0, 2);
 			if(randomX > 0.5)
 				randomX = 0.4;
@@ -176,7 +157,7 @@ function spwanRessources(){
 			else
 				randomY = 0;
 			
-			var go : GameObject = Instantiate(CharacterModelPrefabs.ressourcePrefabs[spawn], new Vector3(tile.position.x + randomX, tile.position.y, tile.position.z + randomY) , CharacterModelPrefabs.ressourcePrefabs[rand].transform.rotation);
+			var go : GameObject = Instantiate(CharacterModelPrefabs.ressourcePrefabs[spawn], new Vector3(tile.position.x + randomX, tile.position.y, tile.position.z + randomY) , CharacterModelPrefabs.ressourcePrefabs[spawnChance].transform.rotation);
 			FogOfWar.instance.SetLayerRecursively(go, 11);
 			go.transform.parent = transform;
 			go.GetComponent.<Ressource>().pos = tile.gridPos;
