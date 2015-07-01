@@ -15,11 +15,11 @@
  	var rand : float = Random.Range(0.0, chance);
  	if(rand >= 0 && rand < woodDropChance)
  		return 2;
- 	if(rand > woodDropChance && rand < chance - stoneDropChance)
+ 	if(rand > woodDropChance && rand < chance - foodDropChance - soulsDropChance)
  		return 1;
- 	if(rand > chance - stoneDropChance && rand < chance - foodDropChance)
+ 	if(rand > chance - foodDropChance - soulsDropChance && rand < chance - soulsDropChance)
  		return 0;
- 	if(rand > chance - foodDropChance && rand <= chance - soulsDropChance)
+ 	if(rand > chance - soulsDropChance && rand <= chance)
  		return 3;
  }
 }

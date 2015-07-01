@@ -76,6 +76,7 @@ function Start(){
 	spawnObjects();
 	spawnCarriers();
 	spwanRessources();
+	spawnPlayer();
 }
 
 function setSeeds(){
@@ -157,7 +158,7 @@ function spwanRessources(){
 			else
 				randomY = 0;
 			
-			var go : GameObject = Instantiate(CharacterModelPrefabs.ressourcePrefabs[spawn], new Vector3(tile.position.x + randomX, tile.position.y, tile.position.z + randomY) , CharacterModelPrefabs.ressourcePrefabs[spawnChance].transform.rotation);
+			var go : GameObject = Instantiate(CharacterModelPrefabs.ressourcePrefabs[spawn], new Vector3(tile.position.x + randomX, tile.position.y + 10, tile.position.z + randomY) , CharacterModelPrefabs.ressourcePrefabs[spawnChance].transform.rotation);
 			FogOfWar.instance.SetLayerRecursively(go, 11);
 			go.transform.parent = transform;
 			go.GetComponent.<Ressource>().pos = tile.gridPos;
@@ -291,4 +292,42 @@ function returnDropChance(matID : int, DropChances : List.<DropChance>) : DropCh
  			return DropChances[12];
  	}
  	return DropChances[0];
+ }
+
+ function spawnPlayer() {
+ 	var worldData : WorldMapData = WorldMapData.getInstance();
+ 	var playerSpawned : boolean = false;
+ 	while(!playerSpawned) {
+ 		var randX : int = Random.Range(0.0, size.x);
+ 		var randY : int = Random.Range(0.0, size.y);
+
+ 		var contains = false;
+ 		for(var e in grassland) {
+ 			if(e == worldData.tiles[randX, randY].matID)
+ 				contains = true;
+ 		}
+ 		for(var e in forest) {
+ 			if(e == worldData.tiles[randX, randY].matID)
+ 				contains = true;
+ 		}
+ 		if(contains) {
+ 			FogOfWar.instance.CheckTiles(Vec2i(randX, randY), FogOfWar.instance.visionRange);
+ 			var spawn : boolean = true;
+ 			for(var e : Hexagon in FogOfWar.instance.adjacent) {
+ 				if(e.tileType == "ice" || e.tileType == "desert" || e.tileType == "water")
+ 					spawn = false;
+ 			}
+ 			if(spawn) {
+ 				var player : GameObject = GameObject.Find("Olaf");
+ 				var objData : MapObjectCarrier = player.AddComponent(MapObjectCarrier);
+ 				player.GetComponent.<MoveOnClick>().objData = objData;
+				objData.setPosition(Vec2i(randX, randY));
+				player.transform.position = worldData.tiles[randX, randY].position; 
+				InterfaceData.getInstance().selectedCarrier = objData;
+				
+				playerSpawned = true;
+ 			}
+ 		}
+
+ 	}
  }
