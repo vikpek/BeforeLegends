@@ -5,6 +5,8 @@ public class Hexagon{
 var gridPos : Vec2i;
 
 var matID : int;
+var tileType : String;
+var rand : float;
 var position : Vector3;
 
 var elevation : float;
@@ -74,7 +76,7 @@ function assignMaterials(generator : WorldMapGenerator){
 			break;
 		}
 	}
-	traversable = heightID != 0 && heightID != 3;
+	traversable = heightID != 0;
 	matID = heightID + moistureID * generator.heightLookup.Length + temperatureID * generator.moistureLookup.Length * generator.heightLookup.Length;
 }
 

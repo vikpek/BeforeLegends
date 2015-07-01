@@ -23,6 +23,23 @@ var heightLookup : float[];
 var moistureLookup : float[];
 var temperatureLookup : float[];
 
+var DropChances : List.<DropChance> = new List.<DropChance>();
+
+var water : int[];
+var ice : int[];
+var ice_mountain : int[];
+var tundra : int[];
+var savana : int[];
+var dry_forest : int[];
+var dry_mountain : int[];
+var grassland : int[];
+var forest : int[];
+var forest_mountain : int[];
+var desert : int[];
+var desert_mountain : int[];
+var jungle : int[];
+
+
 @HideInInspector 
 var chunkTexture : Texture2D;
 
@@ -59,6 +76,7 @@ function Start(){
 	spawnObjects();
 	spawnCarriers();
 	spwanRessources();
+	spawnPlayer();
 }
 
 function setSeeds(){
@@ -117,10 +135,13 @@ function spawnCarriers(){
 function spwanRessources(){
 	var data : WorldMapData = WorldMapData.getInstance();
 	for(var tile : Hexagon in data.tiles){
-		var spawnChance : float = Random.Range(1, 4);
-		if(spawnChance > 1 && tile.traversable == true){
-			var rand : float = Random.Range(0, 3);
+		var chance : DropChance = returnDropChance(tile.matID, DropChances);
+		chance.overallDropChance();
+		tile.tileType = chance.tileType;
 
+		var spawnChance : float = Random.Range(0.0, 1.0);
+		if(chance.chance > spawnChance && tile.traversable == true){
+			var spawn : int = chance.returnDrop();
 			var randomX : float = Random.Range(0, 2);
 			if(randomX > 0.5)
 				randomX = 0.4;
@@ -137,15 +158,13 @@ function spwanRessources(){
 			else
 				randomY = 0;
 			
-			var go : GameObject = Instantiate(CharacterModelPrefabs.ressourcePrefabs[rand], new Vector3(tile.position.x + randomX, tile.position.y + 10, tile.position.z + randomY) , CharacterModelPrefabs.ressourcePrefabs[rand].transform.rotation);
+			var go : GameObject = Instantiate(CharacterModelPrefabs.ressourcePrefabs[spawn], new Vector3(tile.position.x + randomX, tile.position.y + 10, tile.position.z + randomY) , CharacterModelPrefabs.ressourcePrefabs[spawnChance].transform.rotation);
 			FogOfWar.instance.SetLayerRecursively(go, 11);
 			go.transform.parent = transform;
 			go.GetComponent.<Ressource>().pos = tile.gridPos;
-			//go.GetComponent.<MapObjectCarrier>().pos = tile.gridPos;
-			//go.GetComponent.<MapObjectCarrier>().data = tile.mapObjects[0];
 			tile.gameObjectList.Add(go);
 		}
-	}	
+	}
 }
 
 function createChunks(){
@@ -222,3 +241,93 @@ function generate(){
 		hex.assignMaterials(this);
 	}
 }
+
+function returnDropChance(matID : int, DropChances : List.<DropChance>) : DropChance {
+ 	for(var e in ice) {
+ 		if(e == matID)
+ 			return DropChances[1];
+ 	}
+ 	for(var e in ice_mountain) {
+ 		if(e == matID)
+ 			return DropChances[2];
+ 	}
+ 	for(var e in tundra) {
+ 		if(e == matID)
+ 			return DropChances[3];
+ 	}
+ 	for(var e in savana) {
+ 		if(e == matID)
+ 			return DropChances[4];
+ 	}
+ 	for(var e in dry_forest) {
+ 		if(e == matID)
+ 			return DropChances[5];
+ 	}
+ 	for(var e in dry_mountain) {
+ 		if(e == matID)
+ 			return DropChances[6];
+ 	}
+ 	for(var e in grassland) {
+ 		if(e == matID)
+ 			return DropChances[7];
+ 	}
+ 	for(var e in forest) {
+ 		if(e == matID)
+ 			return DropChances[8];
+ 	}
+ 	for(var e in forest_mountain) {
+ 		if(e == matID)
+ 			return DropChances[9];
+ 	}
+ 	for(var e in desert) {
+ 		if(e == matID)
+ 			return DropChances[10];
+ 	}
+ 	for(var e in desert_mountain) {
+ 		if(e == matID)
+ 			return DropChances[11];
+ 	}
+ 	for(var e in jungle) {
+ 		if(e == matID)
+ 			return DropChances[12];
+ 	}
+ 	return DropChances[0];
+ }
+
+ function spawnPlayer() {
+ 	var worldData : WorldMapData = WorldMapData.getInstance();
+ 	var playerSpawned : boolean = false;
+ 	while(!playerSpawned) {
+ 		var randX : int = Random.Range(0.0, size.x);
+ 		var randY : int = Random.Range(0.0, size.y);
+
+ 		var contains = false;
+ 		for(var e in grassland) {
+ 			if(e == worldData.tiles[randX, randY].matID)
+ 				contains = true;
+ 		}
+ 		for(var e in forest) {
+ 			if(e == worldData.tiles[randX, randY].matID)
+ 				contains = true;
+ 		}
+ 		if(contains) {
+ 			FogOfWar.instance.CheckTiles(Vec2i(randX, randY), FogOfWar.instance.visionRange);
+ 			var spawn : boolean = true;
+ 			for(var e : Hexagon in FogOfWar.instance.adjacent) {
+ 				if(e.tileType == "ice" || e.tileType == "desert" || e.tileType == "water")
+ 					spawn = false;
+ 			}
+ 			if(spawn) {
+ 				var player : GameObject = GameObject.Find("Olaf");
+ 				var objData : MapObjectCarrier = player.AddComponent(MapObjectCarrier);
+ 				player.GetComponent.<MoveOnClick>().objData = objData;
+				objData.setPosition(Vec2i(randX, randY));
+				player.transform.position = worldData.tiles[randX, randY].position; 
+				InterfaceData.getInstance().selectedCarrier = objData;
+				
+				playerSpawned = true;
+ 			}
+ 		}
+
+ 	}
+ }

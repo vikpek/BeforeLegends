@@ -38,7 +38,7 @@ function setPosition(pos : Vec2i){
 	worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Remove(data);
 	data.pos = pos;
 	worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Add(data);
-	CollectRessources(pos);
+	//CollectRessources(pos);
 	FogOfWar.instance.CheckTiles(pos, FogOfWar.instance.visionRange);
 	FogOfWar.instance.SetEntitiesToVisible();
 	FogOfWar.instance.SetEntitiesToInvisible();
@@ -115,6 +115,9 @@ function CollectRessources(pos : Vec2i) {
 					break;
 				case "Wood":
 					RessourceMaster.instance.valueWood += gO.GetComponent.<Ressource>().rValue;
+					break;
+				case "Soul":
+					RessourceMaster.instance.valueSouls += gO.GetComponent.<Ressource>().rValue;
 					break;
 				case "default":
 					Debug.Log("Wrong Type");

@@ -24,4 +24,6 @@ function endBattle(result : boolean, exp : int){
 	world.SetActive(true);
 	battle.SetActive(false);
 	RessourceMaster.instance.valueScore += exp;
+	GameObject.Find("Olaf").GetComponent.<BattleParameters>().exp += exp;
+	GameObject.Find("Olaf").GetComponent.<BattleParameters>().LevelUp();
 }
