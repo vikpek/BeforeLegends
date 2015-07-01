@@ -117,7 +117,7 @@ function CollectRessources(pos : Vec2i) {
 					RessourceMaster.instance.WoodAS(gO.GetComponent.<Ressource>().rValue);
 					break;
 				case "Soul":
-					RessourceMaster.instance.valueSouls += gO.GetComponent.<Ressource>().rValue;
+					RessourceMaster.instance.SoulAS(gO.GetComponent.<Ressource>().rValue);
 					break;
 				case "default":
 					Debug.Log("Wrong Type");

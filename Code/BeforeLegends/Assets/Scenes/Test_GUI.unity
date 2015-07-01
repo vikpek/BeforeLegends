@@ -1309,6 +1309,34 @@ CanvasRenderer:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: bcae914220acd4907840a029bb9d9aec, type: 2}
   m_PrefabInternal: {fileID: 370133654}
+--- !u!1 &295013939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 2140900867}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 295013940}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &295013940
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 2140900867}
+  m_GameObject: {fileID: 295013939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 409246233}
+  m_Father: {fileID: 1200521818}
+  m_RootOrder: 10
 --- !u!1001 &297265352
 Prefab:
   m_ObjectHideFlags: 0
@@ -1937,8 +1965,16 @@ CanvasRenderer:
   m_GameObject: {fileID: 406936873}
 --- !u!4 &409246233
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 499702, guid: e563cd61ab82e32478f0f718d20b5035, type: 2}
   m_PrefabInternal: {fileID: 2140900867}
+  m_GameObject: {fileID: 1724851458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 295013940}
+  m_RootOrder: 0
 --- !u!1 &451376426
 GameObject:
   m_ObjectHideFlags: 0
@@ -8146,7 +8182,7 @@ Transform:
   - {fileID: 988179221}
   - {fileID: 1927865227}
   - {fileID: 927073168}
-  - {fileID: 409246233}
+  - {fileID: 295013940}
   m_Father: {fileID: 258453196}
   m_RootOrder: 0
 --- !u!114 &1200521819
@@ -8244,6 +8280,20 @@ MonoBehaviour:
   - .349999994
   - .699999988
   - 1
+  DropChances: []
+  water: 
+  ice: 
+  ice_mountain: 
+  tundra: 
+  savana: 
+  dry_forest: 
+  dry_mountain: 
+  grassland: 
+  forest: 
+  forest_mountain: 
+  desert: 
+  desert_mountain: 
+  jungle: 
   chunkTexture: {fileID: 0}
   chunkTextureNormal: {fileID: 0}
   chunkTextureRects: []
@@ -9940,6 +9990,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dampen: 3
   nextPos: {x: 0, y: 0, z: 0}
+  mouseScrollDeltaY: 0
+  maxY: 0
+  minY: 0
+  xMultiplier: 0
+  zMultiplier: 0
 --- !u!124 &1320440342
 Behaviour:
   m_ObjectHideFlags: 0
@@ -12228,6 +12283,21 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 8d09044593b0cb849974bbdafb337e85, type: 3}
   m_PrefabInternal: {fileID: 1718032103}
+--- !u!1 &1724851458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 2140900867}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 409246233}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1744492202
 GameObject:
   m_ObjectHideFlags: 0
@@ -15358,6 +15428,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dampen: 3
   nextPos: {x: 0, y: 0, z: 0}
+  mouseScrollDeltaY: 0
+  maxY: 0
+  minY: 0
+  xMultiplier: 0
+  zMultiplier: 0
 --- !u!1001 &2140900867
 Prefab:
   m_ObjectHideFlags: 0
