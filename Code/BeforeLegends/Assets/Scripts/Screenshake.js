@@ -1,10 +1,5 @@
 ﻿#pragma strict
 
-//do screenshake
-// - create an "AnimationCurve" with "var [name] : AnimationCurve;" in ie BattleController
-// - modify Curve in editor
-// - call "Screenshake.instance.shakeIt([name]);"
-
 static var instance: Screenshake;
 
 public var doScreenshake : boolean = false;
@@ -15,13 +10,6 @@ var screenShakeTime : float = 0;
 function Awake()
 {
     GameInfo.instance.assignBattleCameraPos(gameObject);
-}
-
-function shakeIt(animC : AnimationCurve)
-{
-	durationIntensity = animC;
-	doScreenshake = true;
-    screenShakeTime = 0;
 }
 
 function Update() {

@@ -1,4 +1,4 @@
-﻿#pragma strict 
+﻿#pragma strict
 
 static var instance: GameInfo;
 var battleCameraPosAssigned : boolean = false;

@@ -2,6 +2,8 @@
 
 import System.Collections.Generic;
 
+static var instance : WorldMapGenerator;
+
 var mapMaterial : Material;
 var size : Vec2i;
 var chunkSize : Vec2i;
@@ -47,6 +49,8 @@ var erosionSeed : Vector2;
 var flatHex : FlatHexagon;
 
 function Start(){
+    if(!instance)
+        instance = this;
 	flatHex = FlatHexagon(1);
 	setSeeds();
 	packTextures();

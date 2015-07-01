@@ -46,7 +46,6 @@ public class Shop : MonoBehaviour {
                     NewRandomOffer(i, new int[] { 0, 1 });
                 else
                     NewRandomOffer(i, new int[] { 2, 3, 4 });
-                NewRandomOffer(i, new int[] { });
                 i++;
             }
         }
@@ -95,7 +94,6 @@ public class Shop : MonoBehaviour {
 
     void NewRandomOffer(int offerId, int[] possibleCards)
     {
-        bool foundOffer = false;
         int nextCard = 0;
 
         if (possibleCards.Length == 0)
