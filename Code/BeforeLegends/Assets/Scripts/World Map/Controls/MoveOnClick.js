@@ -1,9 +1,10 @@
 ﻿#pragma strict
 
 var objData : MapObjectCarrier;
+var mouseOverUIElement : boolean;
 
 function Update(){
-	if(Input.GetMouseButtonDown(0)){
+    if(Input.GetMouseButtonDown(0) && !mouseOverUIElement){
 		if(objData == null){
 			objData = gameObject.GetComponent(MapObjectCarrier);
 			if(objData == null){
@@ -19,4 +20,9 @@ function Update(){
 		var path : Vec2i[] = WorldMapData.getInstance().findPath(objData.pos.x, objData.pos.y, MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y, objData.movedMax - objData.moved, false);
 		objData.followPath(path, 0.25);
 	}
+}
+
+function SetMouseOverUIElement(yesno : boolean)
+{
+    mouseOverUIElement = yesno;
 }

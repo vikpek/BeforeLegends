@@ -108,13 +108,13 @@ function CollectRessources(pos : Vec2i) {
 				RessourceMaster.instance.ressourcesToDeregister.Add(gO);
 				switch(gO.GetComponent.<Ressource>().rType) {
 				case "Food":
-					RessourceMaster.instance.valueFood += gO.GetComponent.<Ressource>().rValue;
+					RessourceMaster.instance.FoodAS(gO.GetComponent.<Ressource>().rValue);
 					break;
 				case "Stone":
-					RessourceMaster.instance.valueStone += gO.GetComponent.<Ressource>().rValue;
+					RessourceMaster.instance.StoneAS(gO.GetComponent.<Ressource>().rValue);
 					break;
 				case "Wood":
-					RessourceMaster.instance.valueWood += gO.GetComponent.<Ressource>().rValue;
+					RessourceMaster.instance.WoodAS(gO.GetComponent.<Ressource>().rValue);
 					break;
 				case "default":
 					Debug.Log("Wrong Type");

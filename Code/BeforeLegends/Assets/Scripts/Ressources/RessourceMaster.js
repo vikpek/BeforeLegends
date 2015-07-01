@@ -2,14 +2,16 @@
 
 static var instance : RessourceMaster;
 
-var textWood : UI.Text;
-var textFood : UI.Text;
-var textStone : UI.Text;
+var rm : ResourceManager;
+
+var shop : Shop; 
+
 var textScore : UI.Text; 
 
 var valueWood : int;
 var valueFood : int;
 var valueStone : int;
+var valueSoul : int;
 var valueScore : int;
 
 var loseHealthInPercent : float;
@@ -20,27 +22,33 @@ var ressourcesToDeregister : List.<GameObject> = new List.<GameObject>();
 function Start() {
 	if(!instance) instance = this;
 
-	valueWood = 0;
-	valueStone = 0;
-	valueFood = 0;
+	valueWood = 100;
+	valueStone = 100;
+	valueFood = 100;
+	valueSoul = 100;
 	valueScore = 0;
 
-	textWood.text = valueWood + " Wood";
-	textFood.text = valueFood + " Food";
-	textStone.text = valueStone + " Stone";
+
 }
 
 function Update() {
+    for(var i : int = 0; i < rm.resources.Length; i++)
+    {
+        if(rm.resources[i].name == "Wood") valueWood = rm.resources[i].number;
+        if(rm.resources[i].name == "Stone") valueStone = rm.resources[i].number;
+        if(rm.resources[i].name == "Food") valueFood = rm.resources[i].number;
+        if(rm.resources[i].name == "Soul") valueSoul = rm.resources[i].number;
+    }
+    
 	if(valueStone < 0) valueStone = 0;
 	if(valueWood < 0) valueWood = 0;
-	if(valueFood <= 0) valueFood = 0;
-	
+	if(valueFood < 0) valueFood = 0;
+	if(valueSoul < 0) valueSoul = 0;
+
 	CheckHP();
 
-	textWood.text = valueWood + " Wood";
-	textFood.text = valueFood + " Food";
-	textStone.text = valueStone + " Stone";
-	textScore.text = valueScore + " Points";
+
+	textScore.text = valueScore + "";
 }
 
 function LoseHealthToHunger() {
@@ -67,4 +75,24 @@ function CheckHP() {
 			pO.SetActive(false);
 		}
 	}
+}
+
+public function WoodAS(number : int) // AS == Add / Subtract
+{
+    rm.ResourceAS("Wood", number);
+}
+
+public function StoneAS(number : int)
+{
+    rm.ResourceAS("Stone", number);
+}
+
+public function FoodAS(number : int)
+{
+    rm.ResourceAS("Food", number);
+}
+
+public function SoulAS(number : int)
+{
+    rm.ResourceAS("Soul", number);
 }

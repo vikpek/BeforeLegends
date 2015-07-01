@@ -7,7 +7,7 @@ private enum BattleState{
 }
 
 private enum Action{ // here below you need to add any new actions
-	ATTACK, ENRAGED, FINALATTACK, HEAL, HEALOTHER, DOUBLEDAMAGE
+	ATTACK, ENRAGED, FINALATTACK, HEAL, HEALOTHER, DOUBLEDAMAGE, WRATH, SHIELD, REVENGE
 }
 
 var player : GameObject;

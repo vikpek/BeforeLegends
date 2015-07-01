@@ -6,7 +6,7 @@ class TurnEndedMessage extends Message{
 		super("TurnEnded");
 		var pO : GameObject[] = GameObject.FindGameObjectsWithTag("Player");
 		for(var gO : GameObject in pO) {
-			RessourceMaster.instance.valueFood -= gO.GetComponent.<Starvation>().eat;
+			RessourceMaster.instance.FoodAS(-gO.GetComponent.<Starvation>().eat);
 			if(RessourceMaster.instance.valueFood <= 0) {
 				RessourceMaster.instance.LoseHealthToHunger();
 			}
