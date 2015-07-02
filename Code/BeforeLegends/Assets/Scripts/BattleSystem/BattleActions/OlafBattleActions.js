@@ -54,7 +54,7 @@ function healother (battle : BattleController){ // the char can heal others (onl
 }
 
 function doubleDamage(battle : BattleController){  // just like a basic attack but deals double basic damage
-	battle.enemyData.hitPoints -= battle.playerData.calcDamage(battle.enemyData, 2)[0]; 
+	battle.enemyData.hitPoints -= battle.playerData.calcDamage(battle.enemyData, 2); 
 	battle.animateEnemy(Anims.HURT); 
 	battle.animatePlayer(Anims.ATTACK);
 }
