@@ -8,3 +8,10 @@ class Message{
 		this.type = type;
 	}
 }
+
+class ActionEndedMessage : Message{
+
+	void ActionEndedMessage(){
+		super("ActionEnded");
+	}
+}

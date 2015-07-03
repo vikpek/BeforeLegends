@@ -15,7 +15,7 @@ function executeAction(battle : BattleController){
 			break;	
 		case Action.HEAL :
 			healself(battle);
-			break;	
+			break;
 	}
 }
 

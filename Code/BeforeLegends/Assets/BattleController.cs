@@ -36,6 +36,11 @@ public class BattleController : MonoBehaviour {
     GameObject enemyWorldObject;
     GameObject playerWorldObject;
 
+    Map
+
+    MapObjectCarrier playerMapObjectCarrier;
+    MapObjectCarrier enemyMapObjectCarrier;
+
     Anims playerAnimation;
     Anims enemyAnimation;
     CharacterAnimations playerAnimator;
@@ -109,9 +114,9 @@ public class BattleController : MonoBehaviour {
     public void init(GameObject player, GameObject enemy){
 	    playerWorldObject = player;
 	    enemyWorldObject = enemy;
-	    state = BattleState.IDLE;
-	    actor = Actor.PLAYER;
-	    playerData = player.GetComponent(MapObjectCarrier).data.battleStats;
+	    battleState = BattleState.IDLE;
+	    actualActor = Actor.PLAYER;
+	    playerData = player.GetComponent<MapObjectCarrier>().data.battleStats;
 	    enemyData = enemy.GetComponent(MapObjectCarrier).data.battleStats;
 	    if(this.enemy){
 		    GameObject.Destroy(this.enemy);

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Messenger : MonoBehaviour {
+public static class Messenger {
 
     public Hashtable listeners;
     public ArrayList messages;
@@ -16,18 +16,42 @@ public class Messenger : MonoBehaviour {
 	void Update () {
         ArrayList msgs = messages; 
         messages = new ArrayList();
-	    foreach(ArrayList message in msgs)
+	    foreach(Message message in msgs)
         {
-		    Message msg = (Message)message;
-		    var list : ArrayList = listeners[msg.type] as ArrayList;
-		    if(list)
+		    Message msg = message;
+		    ArrayList list = listeners[msg.type] as ArrayList;
+
+		    if(list != null)
             {
-			    for(var listener in list)
+			    foreach(var listener in list)
                 {
-				    var go : GameObject = listener as GameObject;
+                    GameObject go = listener as GameObject;
 				    go.SendMessage("onEvent_" + msg.type, msg, SendMessageOptions.DontRequireReceiver);
 			    }
 		    }
 	    }
 	}
+
+    public void send(Message msg)
+    {
+	    messages.Add(msg);
+    }
+
+    public static void listen(GameObject go, string type)
+    {
+	    ArrayList list = listeners[type] as ArrayList;
+	    if(list == null){
+		    list = new ArrayList();
+		    listeners[type] = list;
+	    }else if(list.Contains(go)){
+		    return;
+	    }
+	
+	    list.Add(go);
+    }
+
+    public void ignore(GameObject go, string type){
+	    ArrayList list = listeners[type] as ArrayList;
+	    if(list != null) list.Remove(go);
+    } 
 }
