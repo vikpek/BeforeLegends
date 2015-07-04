@@ -1,4 +1,5 @@
 ﻿//copy paste
+/*
 function executeAction(battle : BattleController){
 	switch(battle.playerAction){   //always remember to list new battle actions (functions below) here.
 		case Action.ATTACK :
@@ -59,3 +60,4 @@ function doubleDamage(battle : BattleController){  // just like a basic attack b
 	battle.animatePlayer(Anims.ATTACK);
 }
 
+*/

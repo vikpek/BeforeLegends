@@ -47,9 +47,12 @@ function calcFault(xMax : float, yMax : float) : float{
 	var vertical = bottom < top ? bottom : top;
 	var all = horizontal < vertical ? horizontal : vertical; 
 	
-	if(all > xMax * 0.15){
+	if(all > xMax * 0.15)
+	{
 		return 1;
-	}else{
+	}
+	else
+	{
 		return all / (xMax * 0.15);  
 	}
 }

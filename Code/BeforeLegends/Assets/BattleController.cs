@@ -3,6 +3,8 @@ using System.Collections;
 
 public class BattleController : MonoBehaviour {
 
+    //every code snippet that is commented out has to be uncomment later! so ignore "!--!" or "!---!" here!
+
     private enum Actor
     {
         PLAYER, ENEMY
@@ -36,15 +38,17 @@ public class BattleController : MonoBehaviour {
     GameObject enemyWorldObject;
     GameObject playerWorldObject;
 
-    Map
 
     MapObjectCarrier playerMapObjectCarrier;
     MapObjectCarrier enemyMapObjectCarrier;
 
-    Anims playerAnimation;
-    Anims enemyAnimation;
-    CharacterAnimations playerAnimator;
-    CharacterAnimations enemyAnimator;
+    //Anims playerAnimation;
+    //Anims enemyAnimation;
+
+    //CharacterAnimations playerAnimator;
+    //CharacterAnimations enemyAnimator;
+
+    CharacterModelPrefabs characterModelPrefabs;
 
     GameStateManager gameSM;
 
@@ -74,7 +78,8 @@ public class BattleController : MonoBehaviour {
 			    enemy.SendMessage("determineAction", this);
 			    enemy.SendMessage("executeAction", this);
 		    }
-	    }else if(battleState == BattleState.ANIMATING && !playerAnimator.isAnimating(playerAnimation) && !enemyAnimator.isAnimating(enemyAnimation)){
+	    }else if(battleState == BattleState.ANIMATING)// && !playerAnimator.isAnimating(playerAnimation) && !enemyAnimator.isAnimating(enemyAnimation))
+        {
 		    if(actualActor == Actor.PLAYER){
 			    battleState = BattleState.STARTED;
 			    actualActor = Actor.ENEMY;
@@ -90,75 +95,77 @@ public class BattleController : MonoBehaviour {
 		    if(playerData.hitPoints <= 0){
 			    playerWorldObject.SetActive(false);
 			    gameSM.endBattle(false, 0);
-			    Messenger.instance.send(AllActionsEndedMessage());
+			    //Messenger.send(AllActionsEndedMessage()); !--!
 			    return true;
 		    }else if(enemyData.hitPoints <= 0){
 			    enemyWorldObject.SetActive(false);
 			    gameSM.endBattle(true, enemyData.expToGain);
-			    Messenger.instance.send(AllActionsEndedMessage());
+			    //Messenger.send(AllActionsEndedMessage()); !--! 
 			    return true;
 		    }
 		    return false;
     }
 	
-    //function animatePlayer(a : Anims){
+    //void animatePlayer(Anims a){
     //    playerAnimator.swapAnimation(a);
     //    playerAnimation = a;
     //}
-
-    //function animateEnemy(a : Anims){
+                                            // !--!
+    //void animateEnemy(Anims a){
     //    enemyAnimator.swapAnimation(a);
     //    enemyAnimation = a;
     //}
 
+
+    // !----!
     public void init(GameObject player, GameObject enemy){
 	    playerWorldObject = player;
 	    enemyWorldObject = enemy;
 	    battleState = BattleState.IDLE;
 	    actualActor = Actor.PLAYER;
 	    playerData = player.GetComponent<MapObjectCarrier>().data.battleStats;
-	    enemyData = enemy.GetComponent(MapObjectCarrier).data.battleStats;
+	    enemyData = enemy.GetComponent<MapObjectCarrier>().data.battleStats;
 	    if(this.enemy){
 		    GameObject.Destroy(this.enemy);
 	    }
-	    this.enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[enemy.GetComponent(MapObjectCarrier).data.appearanceID]);
+	    //this.enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[enemy.GetComponent<MapObjectCarrier>().data.appearanceID]); !--!
 	    this.enemy.transform.parent = transform;
-	    enemyAnimator = this.enemy.GetComponent(CharacterAnimations);
-	    enemyParticles = this.enemy.GetComponent(CharacterParticleController);
-	    enemyHPText = this.enemy.GetComponent(HPText);
+	    //enemyAnimator = this.enemy.GetComponent(CharacterAnimations);
+	    //enemyParticles = this.enemy.GetComponent(CharacterParticleController);
+	    //enemyHPText = this.enemy.GetComponent(HPText);
 	    round = 0;
     }
 
-    function Awake(){
-	    playerAnimator = player.GetComponent(CharacterAnimations);
-	    playerParticles = player.GetComponent(CharacterParticleController);
-	    playerHPText = player.GetComponent(HPText); 
+    void Awake(){
+        //playerAnimator = player.GetComponent(CharacterAnimations);
+        //playerParticles = player.GetComponent(CharacterParticleController);
+        //playerHPText = player.GetComponent(HPText); 
     }
 
     //---MAP INPUT---
-    function onInput_Attack(){
+    void onInput_Attack(){
 	    onInput(Action.ATTACK);
     }
 
-    function onInput_Enraged(){
+    void onInput_Enraged(){
 	    onInput(Action.ENRAGED);
     }
 
-    function onInput_Heal(){
+    void onInput_Heal(){
 	    onInput(Action.HEAL);
     }
 
-    function onInput_HealOther(){
+    void onInput_HealOther(){
 	    onInput(Action.HEALOTHER);
     }
 
     //--------------
 
     //Resolve Input
-    function onInput(action : Action){ 
-	    if(state == BattleState.IDLE && actor == Actor.PLAYER){
+    void onInput(Action action){ 
+	    if(battleState == BattleState.IDLE && actualActor == Actor.PLAYER){
 		    playerAction = action;
-		    state = BattleState.STARTED;
+            battleState = BattleState.STARTED;
 	    }
     }
 }

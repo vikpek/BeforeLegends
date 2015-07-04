@@ -1,7 +1,5 @@
 ﻿#pragma strict
 
-static var instance : AudioMaster;
-
 var audioSource : AudioSource;
 
 var audioObjects : List.<AudioObject> = List.<AudioObject>();
