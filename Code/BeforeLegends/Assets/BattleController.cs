@@ -1,62 +1,64 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BattleController : MonoBehaviour {
-
-    //every code snippet that is commented out has to be uncomment later! so ignore "!--!" or "!---!" here!
-
-    private enum Actor
+    public enum Actor
     {
         PLAYER, ENEMY
     }
 
-    private enum BattleState
+    public enum BattleState
     {
         IDLE, STARTED, ANIMATING
     }
 
-    private enum Action
+    public enum Action
     { // here below you need to add any new actions
         ATTACK, ENRAGED, FINALATTACK, HEAL, HEALOTHER, DOUBLEDAMAGE, WRATH, SHIELD, REVENGE
     }
+public class BattleController : MonoBehaviour {
+
+    //every code snippet that is commented out has to be uncomment later! so ignore "!--!" or "!---!" here!
+
 
     
-    GameObject enemy;
-    GameObject player;
-    int round = 0;
+    public GameObject enemy;
+    public GameObject player;
+    public int round = 0;
 
-    UnitData playerData;
-    UnitData enemyData; 
+    public UnitData playerData;
+    public UnitData enemyData; 
 
-    bool playerFinished = false;
-    bool enemyFinished = false;
+    public bool playerFinished = false;
+    public bool enemyFinished = false;
+
+    public HPText enemyHPText;
+    public HPText playerHPText;
+
+    public ParticleSystem playerParticles;
+    public ParticleSystem enemyParticles;
+
+    public GameObject enemyWorldObject;
+    public GameObject playerWorldObject;
 
 
-    ParticleSystem playerParticles;
-    ParticleSystem enemyParticles;
+    public MapObjectCarrier playerMapObjectCarrier;
+    public MapObjectCarrier enemyMapObjectCarrier;
 
-    GameObject enemyWorldObject;
-    GameObject playerWorldObject;
+    public Anims playerAnimation;
+    public Anims enemyAnimation;
 
+    public CharacterAnimations playerAnimator;
+    public CharacterAnimations enemyAnimator;
 
-    MapObjectCarrier playerMapObjectCarrier;
-    MapObjectCarrier enemyMapObjectCarrier;
+    public CharacterModelPrefabs characterModelPrefabs;
 
-    //Anims playerAnimation;
-    //Anims enemyAnimation;
+    public GameStateManager gameSM;
 
-    //CharacterAnimations playerAnimator;
-    //CharacterAnimations enemyAnimator;
+    public Action enemyAction;
+    public Action playerAction;
 
-    CharacterModelPrefabs characterModelPrefabs;
-
-    GameStateManager gameSM;
-
-    Action enemyAction;
-    Action playerAction;
-
-    BattleState battleState;
-    Actor actualActor;
+    public BattleState battleState;
+    public Actor actualActor;
 
 	// Use this for initialization
 	void Start () {
@@ -78,7 +80,7 @@ public class BattleController : MonoBehaviour {
 			    enemy.SendMessage("determineAction", this);
 			    enemy.SendMessage("executeAction", this);
 		    }
-	    }else if(battleState == BattleState.ANIMATING)// && !playerAnimator.isAnimating(playerAnimation) && !enemyAnimator.isAnimating(enemyAnimation))
+	    }else if(battleState == BattleState.ANIMATING && !playerAnimator.isAnimating(playerAnimation) && !enemyAnimator.isAnimating(enemyAnimation))
         {
 		    if(actualActor == Actor.PLAYER){
 			    battleState = BattleState.STARTED;
@@ -91,30 +93,34 @@ public class BattleController : MonoBehaviour {
 	    }
     }
 
-    bool checkEnded(){
+
+    public bool checkEnded()
+    {
 		    if(playerData.hitPoints <= 0){
 			    playerWorldObject.SetActive(false);
 			    gameSM.endBattle(false, 0);
-			    //Messenger.send(AllActionsEndedMessage()); !--!
+                Messenger.instance.send(new AllActionsEndedMessage());
 			    return true;
 		    }else if(enemyData.hitPoints <= 0){
 			    enemyWorldObject.SetActive(false);
 			    gameSM.endBattle(true, enemyData.expToGain);
-			    //Messenger.send(AllActionsEndedMessage()); !--! 
+                Messenger.instance.send(new AllActionsEndedMessage());
 			    return true;
 		    }
 		    return false;
     }
-	
-    //void animatePlayer(Anims a){
-    //    playerAnimator.swapAnimation(a);
-    //    playerAnimation = a;
-    //}
+
+    public void animatePlayer(Anims a)
+    {
+        playerAnimator.swapAnimation(a);
+        playerAnimation = a;
+    }
                                             // !--!
-    //void animateEnemy(Anims a){
-    //    enemyAnimator.swapAnimation(a);
-    //    enemyAnimation = a;
-    //}
+    public void animateEnemy(Anims a)
+    {
+        enemyAnimator.swapAnimation(a);
+        enemyAnimation = a;
+    }
 
 
     // !----!
@@ -128,18 +134,18 @@ public class BattleController : MonoBehaviour {
 	    if(this.enemy){
 		    GameObject.Destroy(this.enemy);
 	    }
-	    //this.enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[enemy.GetComponent<MapObjectCarrier>().data.appearanceID]); !--!
+	    this.enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[enemy.GetComponent<MapObjectCarrier>().data.appearanceID]);
 	    this.enemy.transform.parent = transform;
-	    //enemyAnimator = this.enemy.GetComponent(CharacterAnimations);
-	    //enemyParticles = this.enemy.GetComponent(CharacterParticleController);
-	    //enemyHPText = this.enemy.GetComponent(HPText);
+        enemyAnimator = this.enemy.GetComponent<CharacterAnimations>();
+        enemyParticles = this.enemy.GetComponent<CharacterParticleController>().heal;
+        enemyHPText = this.enemy.GetComponent<HPText>();
 	    round = 0;
     }
 
     void Awake(){
-        //playerAnimator = player.GetComponent(CharacterAnimations);
-        //playerParticles = player.GetComponent(CharacterParticleController);
-        //playerHPText = player.GetComponent(HPText); 
+        playerAnimator = player.GetComponent<CharacterAnimations>();
+        playerParticles = player.GetComponent<CharacterParticleController>().heal; // ._. trello (Note Name: CharacterParticleController)
+        playerHPText = player.GetComponent<HPText>(); 
     }
 
     //---MAP INPUT---
@@ -162,7 +168,8 @@ public class BattleController : MonoBehaviour {
     //--------------
 
     //Resolve Input
-    void onInput(Action action){ 
+    public void onInput(Action action)
+    { 
 	    if(battleState == BattleState.IDLE && actualActor == Actor.PLAYER){
 		    playerAction = action;
             battleState = BattleState.STARTED;

@@ -3,6 +3,18 @@ using System.Collections;
 
 public class GameStateManager : MonoBehaviour {
 
+    private static GameStateManager _instance;
+
+    public static GameStateManager instance
+    {
+        get
+        {
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<GameStateManager>();
+            return _instance;
+        }
+    }
+
     public GameObject world;
     public GameObject battle;
     public BattleParameters olaf;
@@ -17,7 +29,7 @@ public class GameStateManager : MonoBehaviour {
 	
 	}
 	
-    void startBattle(GameObject player, GameObject enemy)
+    public void startBattle(GameObject player, GameObject enemy)
     {
         battleC.init(player, enemy);
 	    state = 1;
@@ -25,16 +37,15 @@ public class GameStateManager : MonoBehaviour {
 	    world.SetActive(false);
     }
 
-    public void endBattle(bool result, int exp){
-	state = 0;
-	world.SetActive(true);
-	battle.SetActive(false);
-    //!-------------------
-	//RessourceMaster.instance.valueScore += exp;
-    //!---------------------
-	olaf.exp += exp;
-    olaf.LevelUp();
-}
+    public void endBattle(bool result, int exp)
+    {
+	    state = 0;
+	    world.SetActive(true);
+	    battle.SetActive(false);
+	    ResourceManager.instance.ResourceAS("exp", exp);
+	    olaf.exp += exp;
+        olaf.LevelUp();
+    }
 
 	// Update is called once per frame
 	void Update () {

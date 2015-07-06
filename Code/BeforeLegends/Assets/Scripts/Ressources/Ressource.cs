@@ -5,14 +5,14 @@ public class Ressource : MonoBehaviour {
 
     public string rType;
     public int rValue;
-    public Vec2Int pos;
+    public Vec2int pos;
 
     public float fallSpeed; 
     public bool fall = false;
 
-    function Update() {
+    void Update() {
 	    if(gameObject.transform.position.y > 0 && fall == true) {
-		    gameObject.transform.position.y = gameObject.transform.position.y - fallSpeed;
+		    gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - fallSpeed, gameObject.transform.position.z);
 	    }
     }
 }

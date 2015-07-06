@@ -15,7 +15,7 @@ public class CharacterModelPrefabs : MonoBehaviour {
 
     public GameObject[] ressourcePrefabs_editor;
 
-    function Awake(){
+    void Awake(){
 	    prefabs = prefabs_editor;
 	    battlePrefabs = battlePrefabs_editor;
 	    ressourcePrefabs = ressourcePrefabs_editor;

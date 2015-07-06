@@ -88,12 +88,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &97095983 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11418588, guid: 86c330a3c1ce24a459d1aa5d0326f5be,
-    type: 2}
-  m_PrefabInternal: {fileID: 1321020847}
-  m_Script: {fileID: 11500000, guid: 56674c8fa4c63d047a32501a6d031138, type: 3}
 --- !u!1 &155702217
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 1707974831}
---- !u!224 &219670049 stripped
+--- !u!224 &219670049
 RectTransform:
   m_PrefabParentObject: {fileID: 22493238, guid: 86c330a3c1ce24a459d1aa5d0326f5be,
     type: 2}
@@ -481,7 +475,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 258453192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22c1efacb1248f24fa8e926a1e17eb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7699f2dbc804e0d428033f4be39e6e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &258453198
@@ -497,6 +491,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   world: {fileID: 1200521817}
   battle: {fileID: 1891227680}
+  battleMapGui: {fileID: 0}
+  worldMapGui: {fileID: 0}
   state: 0
   lastBattleResult: 1
 --- !u!114 &258453199
@@ -620,7 +616,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 260975369}
---- !u!4 &292564517 stripped
+--- !u!4 &292564517
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: bcae914220acd4907840a029bb9d9aec, type: 2}
   m_PrefabInternal: {fileID: 370133654}
@@ -798,7 +794,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!4 &352819174
 Transform:
   m_ObjectHideFlags: 0
@@ -811,7 +806,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 409246233}
   m_RootOrder: 4
---- !u!114 &362546635 stripped
+--- !u!114 &362546635
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11472990, guid: 86c330a3c1ce24a459d1aa5d0326f5be,
     type: 2}
@@ -967,7 +962,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 409246233}
   m_RootOrder: 0
---- !u!4 &473554654 stripped
+--- !u!4 &473554654
 Transform:
   m_PrefabParentObject: {fileID: 439958, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
   m_PrefabInternal: {fileID: 1875136104}
@@ -1098,7 +1093,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!4 &720130719
 Transform:
   m_ObjectHideFlags: 0
@@ -2098,7 +2092,6 @@ MonoBehaviour:
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
-  m_RepeatDelay: .5
   m_AllowActivationOnMobileDevice: 0
 --- !u!114 &1297356768
 MonoBehaviour:
@@ -2213,9 +2206,34 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: .699999988
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11418588, guid: 86c330a3c1ce24a459d1aa5d0326f5be, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 86c330a3c1ce24a459d1aa5d0326f5be, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1321020848
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11444166, guid: 86c330a3c1ce24a459d1aa5d0326f5be,
+    type: 2}
+  m_PrefabInternal: {fileID: 1321020847}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!114 &1321020849
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11457620, guid: 86c330a3c1ce24a459d1aa5d0326f5be,
+    type: 2}
+  m_PrefabInternal: {fileID: 1321020847}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!114 &1321020850
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11401986, guid: 86c330a3c1ce24a459d1aa5d0326f5be,
+    type: 2}
+  m_PrefabInternal: {fileID: 1321020847}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!114 &1321020851
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11425384, guid: 86c330a3c1ce24a459d1aa5d0326f5be,
+    type: 2}
+  m_PrefabInternal: {fileID: 1321020847}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1427169109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2225,6 +2243,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1427169111}
   - 114: {fileID: 1427169110}
+  - 114: {fileID: 1427169112}
   m_Layer: 0
   m_Name: RessourceMaster
   m_TagString: Untagged
@@ -2243,7 +2262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd31438990379a43946a26394b656e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rm: {fileID: 97095983}
+  rm: {fileID: 0}
   shop: {fileID: 362546635}
   textScore: {fileID: 747629072}
   valueWood: 100
@@ -2266,6 +2285,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1427169112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1427169109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56674c8fa4c63d047a32501a6d031138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resources:
+  - name: Wood
+    number: 100
+    guiText: {fileID: 1321020849}
+  - name: Stone
+    number: 100
+    guiText: {fileID: 1321020851}
+  - name: Food
+    number: 100
+    guiText: {fileID: 1321020848}
+  - name: Soul
+    number: 100
+    guiText: {fileID: 1321020850}
 --- !u!1 &1437882035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2773,7 +2816,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!4 &1862178472
 Transform:
   m_ObjectHideFlags: 0
@@ -2967,11 +3009,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0196947ed4160549ba809d63fcb5686, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1981189445 stripped
+--- !u!4 &1981189445
 Transform:
   m_PrefabParentObject: {fileID: 404378, guid: f0196947ed4160549ba809d63fcb5686, type: 2}
   m_PrefabInternal: {fileID: 1981189444}
---- !u!1 &1981189446 stripped
+--- !u!1 &1981189446
 GameObject:
   m_PrefabParentObject: {fileID: 187916, guid: f0196947ed4160549ba809d63fcb5686, type: 2}
   m_PrefabInternal: {fileID: 1981189444}
@@ -3301,7 +3343,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!4 &2139333538
 Transform:
   m_ObjectHideFlags: 0

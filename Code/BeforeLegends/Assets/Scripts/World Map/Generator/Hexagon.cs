@@ -26,7 +26,7 @@ public class Hexagon {
     public List<GameObject> gameObjectList = new List<GameObject>();
 
 
-    void generate(WorldMapGenerator generator)
+    public void generate(WorldMapGenerator generator)
     { //!--WorldMapGenerator--!
 	    float xMax = generator.flatHex.size.x * generator.size.x;
 	    float yMax = generator.flatHex.size.z * 0.75f * generator.size.y;
@@ -64,7 +64,7 @@ public class Hexagon {
 	    }
     }
 
-    void  assignMaterials(WorldMapGenerator generator){
+    public void  assignMaterials(WorldMapGenerator generator){
 	    int heightID = 0;
 	    for(int i = 0; i < generator.heightLookup.Length; i++){
 		    if(elevation < generator.heightLookup[i]){
@@ -90,36 +90,83 @@ public class Hexagon {
 	    matID = heightID + moistureID * generator.heightLookup.Length + temperatureID * generator.moistureLookup.Length * generator.heightLookup.Length;
     }
 
-    Hexagon getNE(){
+    Hexagon getNE()
+    {
+        WorldMapData data = WorldMapData.instance;
 	    int x = gridPos.x + (gridPos.y % 2 == 1 ? 1 : 0);  
 	    return gridPos.x < data.size.x && gridPos.y + 1 < data.size.y ? data.tiles[x, gridPos.y + 1] : null;
     }
 
     Hexagon getE(){
-	    WorldMapData data = WorldMapData.getInstance();
-	    return gridPos.x + 1 < WorldMapData.size.x ? data.tiles[gridPos.x + 1, gridPos.y] : null;
+	    WorldMapData data = WorldMapData.instance;
+        return gridPos.x + 1 < data.size.x ? data.tiles[gridPos.x + 1, gridPos.y] : null;
     }
 
     Hexagon getSE(){
-	    WorldMapData data = WorldMapData.getInstance();
+        WorldMapData data = WorldMapData.instance;
 	    int x = gridPos.x + (gridPos.y % 2 == 1 ? 1 : 0);  
 	    return x < data.size.x && gridPos.y - 1 >= 0 ? data.tiles[x, gridPos.y - 1] : null;
     }
 
     Hexagon getSW(){
-	    WorldMapData data = WorldMapData.getInstance();
+        WorldMapData data = WorldMapData.instance;
 	    int x = gridPos.x - (gridPos.y % 2 == 0 ? 1 : 0);  
 	    return x >= 0 && gridPos.y - 1 >= 0 ? data.tiles[x, gridPos.y - 1] : null;
     }
 
     Hexagon getW(){
-	    WorldMapData data = WorldMapData.getInstance();
+        WorldMapData data = WorldMapData.instance;
 	    return gridPos.x - 1 >= 0 ? data.tiles[gridPos.x - 1, gridPos.y] : null;
     }
 
     Hexagon getNW(){
-	    WorldMapData data = WorldMapData.getInstance();
+        WorldMapData data = WorldMapData.instance;
 	    int x = gridPos.x - (gridPos.y % 2 == 0 ? 1 : 0);  
 	    return x >= 0 && gridPos.y + 1 < data.size.y ? data.tiles[x, gridPos.y + 1] : null;
+    }
+
+    public Hexagon[] getAdjacent(){
+	    List<Hexagon> adjacent = new List<Hexagon>();
+	    Hexagon ne = getNE();
+	    Hexagon e = getE();
+	    Hexagon se = getSE();
+	    Hexagon sw = getSW();
+	    Hexagon w = getW();
+	    Hexagon nw = getNW();
+	    if(ne != null) adjacent.Add(ne);
+        if (e != null) adjacent.Add(e);
+        if (se != null) adjacent.Add(se);
+        if (sw != null) adjacent.Add(sw);
+        if (w != null) adjacent.Add(w);
+        if (nw != null) adjacent.Add(nw);
+	    return adjacent.ToArray();
+    }
+
+    public void startRiver()
+    {
+	    List<Hexagon> river = new List<Hexagon>();
+	    int currentX = gridPos.x;
+	    int currentY = gridPos.y;
+	    WorldMapData data = WorldMapData.instance;
+	    while(!data.tiles[currentX, currentY].sea){
+		    data.tiles[currentX, currentY].river = true;
+		    data.tiles[currentX, currentY].traversable = false;
+		
+		
+		    Hexagon[] adjacent = data.tiles[currentX, currentY].getAdjacent();
+		    float min = 1;
+		    int minIndex = -1;
+		    for(var i = 0; i < adjacent.Length; i++){
+			    if(!adjacent[i].river && adjacent[i].elevation < min){
+				    min = adjacent[i].elevation;
+				    minIndex = i;
+			    }
+		    }
+		    if(minIndex == -1) break;
+		
+		    currentX = adjacent[minIndex].gridPos.x;
+		    currentY = adjacent[minIndex].gridPos.y;
+		
+	    }
     }
 }

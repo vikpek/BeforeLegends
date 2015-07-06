@@ -8,7 +8,7 @@ public class MapObjectCarrier : MonoBehaviour {
 
     public MapObjectData data = new MapObjectData();
 
-    AudioObject audioObject = new AudioObject();
+    public AudioObject audioObject = new AudioObject();
 
     public Vec2int pos;
 
@@ -27,7 +27,7 @@ public class MapObjectCarrier : MonoBehaviour {
 
     void Start(){
 	    data.battleStats = GetComponent<BattleParameters>().battleParameters;
-	    Messenger.listen(gameObject, "TurnEnded");
+        Messenger.instance.listen(gameObject, "TurnEnded");
 	    if(gameObject.tag == "Player")
 		    audioObject = AudioMaster.instance.FetchAudioObject("Olaf");
 	    else
@@ -39,9 +39,9 @@ public class MapObjectCarrier : MonoBehaviour {
 	    moved = 0;
     }
 
-    void setPosition(Vec2int pos){
+    public void setPosition(Vec2int pos){
 	    this.pos = pos;
-	    WorldMapData worlddata = WorldMapData.getInstance();
+	    WorldMapData worlddata = WorldMapData.instance;
 	    worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Remove(data);
 	    data.pos = pos;
 	    worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Add(data);
@@ -51,35 +51,34 @@ public class MapObjectCarrier : MonoBehaviour {
 	    FogOfWar.instance.SetEntitiesToInvisible();
     }
 
-    function followPath(path : Vec2i[], dur : float){
-	    if(moving || !path) return;
-	    Messenger.instance.send(ActionStartedMessage());
+    public void followPath(Vec2int[] path, float dur) // don't know if that works bc there WAS a yield ._.
+    {
+	    if(moving || path.Length == 0) return;
+	    Messenger.instance.send(new ActionStartedMessage());
 	    moving = true;
 	    this.path = path;
 	
-	    var worlddata : WorldMapData = WorldMapData.getInstance();
-	    var passedTime : float = 0;
+	    WorldMapData worlddata = WorldMapData.instance;
+	    float passedTime = 0;
 	    index = 0;
-	    var lastIndex : int = 0;
+	    int lastIndex = 0;
 	    while(passedTime/dur < path.Length - 1){
-		    var alpha : float = passedTime/dur;
-		    index = alpha;
+		    float alpha = passedTime/dur;
+		    index = (int)alpha; // casted to int - was only "index = alpha;"
 		    alpha -= index;
 		
-		    var a : Vector3 = worlddata.tiles[path[index].x, path[index].y].position;
-		    var b : Vector3 = worlddata.tiles[path[index + 1].x, path[index + 1].y].position;
-		    gameObject.transform.position.x = Mathf.Lerp(a.x, b.x, alpha);
-		    gameObject.transform.position.z = Mathf.Lerp(a.z, b.z, alpha);
+		    Vector3 a = worlddata.tiles[path[index].x, path[index].y].position;
+		    Vector3 b = worlddata.tiles[path[index + 1].x, path[index + 1].y].position;
+		    gameObject.transform.position = new Vector3(Mathf.Lerp(a.x, b.x, alpha), gameObject.transform.position.y,  Mathf.Lerp(a.z, b.z, alpha));
 		
-		    var reachedNext : boolean = index > lastIndex;
+		    bool reachedNext = index > lastIndex;
 		    if(reachedNext){
 			    moved++;
 			    setPosition(path[index]);
 			    lastIndex = index;
-			    Messenger.instance.send(MapObjectMovedMessage(data, path[index-1]));
+			    Messenger.instance.send(new MapObjectMovedMessage(data, path[index-1]));
 		    }
 
-		    yield;
 		
 		    if(reachedNext && suspend){
 		 	    finalizeAt(index, path, true);
@@ -93,38 +92,37 @@ public class MapObjectCarrier : MonoBehaviour {
 
     }
 
-    function finalizeAt(index : int, path : Vec2i[], suspended : boolean){
-	    var end : Vector3 = WorldMapData.getInstance().tiles[path[index].x, path[index].y].position;
-	    gameObject.transform.position.x = end.x;
-	    gameObject.transform.position.z = end.z;
+    void finalizeAt(int index, Vec2int[] path, bool suspended){
+	    Vector3 end = WorldMapData.instance.tiles[path[index].x, path[index].y].position;
+	    gameObject.transform.position = new Vector3(end.x, gameObject.transform.position.y, end.z);
 	    setPosition(path[index]);
 	    moving = false;
 	    suspend = false;
-	    Messenger.instance.send(ActionEndedMessage());
+	    Messenger.instance.send(new ActionEndedMessage(""));
 	    if(!suspended){
 		    moved++;
-		    Messenger.instance.send(MapObjectMovedMessage(data, path[index-1]));
+		    Messenger.instance.send(new MapObjectMovedMessage(data, path[index-1]));
 	    }
     }
 
-    function CollectRessources(pos : Vec2i) {
-	    var worldData : WorldMapData = WorldMapData.getInstance();
+    void CollectRessources(Vec2int pos) {
+	    WorldMapData worldData = WorldMapData.instance;
 	    if(worldData.tiles[pos.x, pos.y].gameObjectList.Count > 0) {
-		    for(var gO : GameObject in worldData.tiles[pos.x, pos.y].gameObjectList) {
+		    foreach(GameObject gO in worldData.tiles[pos.x, pos.y].gameObjectList) {
 			    if(gO.tag == "Ressource") {
-				    RessourceMaster.instance.ressourcesToDeregister.Add(gO);
-				    switch(gO.GetComponent.<Ressource>().rType) {
+				    ResourceManager.instance.ressourcesToDeregister.Add(gO);
+				    switch(gO.GetComponent<Ressource>().rType) {
 				    case "Food":
-					    RessourceMaster.instance.FoodAS(gO.GetComponent.<Ressource>().rValue);
+					    ResourceManager.instance.ResourceAS("Food", gO.GetComponent<Ressource>().rValue);
 					    break;
 				    case "Stone":
-					    RessourceMaster.instance.StoneAS(gO.GetComponent.<Ressource>().rValue);
+					    ResourceManager.instance.ResourceAS("Stone", gO.GetComponent<Ressource>().rValue);
 					    break;
 				    case "Wood":
-					    RessourceMaster.instance.WoodAS(gO.GetComponent.<Ressource>().rValue);
+					    ResourceManager.instance.ResourceAS("Wood", gO.GetComponent<Ressource>().rValue);
 					    break;
 				    case "Soul":
-					    RessourceMaster.instance.SoulAS(gO.GetComponent.<Ressource>().rValue);
+					    ResourceManager.instance.ResourceAS("Soul", gO.GetComponent<Ressource>().rValue);
 					    break;
 				    case "default":
 					    Debug.Log("Wrong Type");
@@ -136,17 +134,8 @@ public class MapObjectCarrier : MonoBehaviour {
 	    }
     }
 
-    function OnTriggerEnter (other : Collider){
+    void OnTriggerEnter (Collider other)
+    {
 	    if(moving) finalizeAt(index, path, true);
-}
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    }
 }

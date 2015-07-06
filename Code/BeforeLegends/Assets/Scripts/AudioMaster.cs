@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Object;
 using System.Collections.Generic;
 
 public class AudioObject
@@ -14,21 +13,31 @@ public class AudioObject
 
 public class AudioMaster : MonoBehaviour {
 
-    public AudioSource auddioSource;
+    private static AudioMaster _instance;
+
+    public static AudioMaster instance
+    {
+        get
+        {
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<AudioMaster>();
+            return _instance;
+        }
+    }
+
+    public AudioSource audioSource;
 
     List<AudioObject> audioObjects = new List<AudioObject>();
 
-	// Use this for initialization
-	void Start () {
 	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.D))
+            AudioMaster.instance.audioSource.PlayOneShot(audioObjects[0].attack);
 	
 	}
 
-    AudioObject FetchAudioObject(string objName)
+    public AudioObject FetchAudioObject(string objName)
     {
 	    foreach(AudioObject o in audioObjects) {
 		    if(o.objectName == objName)

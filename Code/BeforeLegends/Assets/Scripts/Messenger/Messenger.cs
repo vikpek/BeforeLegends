@@ -1,10 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public static class Messenger {
+public class Messenger : MonoBehaviour {
 
-    public Hashtable listeners;
+    public static Hashtable listeners;
     public ArrayList messages;
+
+    private static Messenger _instance;
+
+    public static Messenger instance
+    {
+        get
+        {
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<Messenger>();
+            return _instance;
+        }
+    }
 
 	// Use this for initialization
 	void Awake() {
@@ -37,9 +49,10 @@ public static class Messenger {
 	    messages.Add(msg);
     }
 
-    public static void listen(GameObject go, string type)
+    public void listen(GameObject go, string type)
     {
-	    ArrayList list = listeners[type] as ArrayList;
+        ArrayList list = new ArrayList();
+	    list = listeners[type] as ArrayList;
 	    if(list == null){
 		    list = new ArrayList();
 		    listeners[type] = list;

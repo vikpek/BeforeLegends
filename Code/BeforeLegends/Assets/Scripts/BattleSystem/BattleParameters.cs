@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BattleParameters : MonoBehaviour {
+public class BattleParameters : MonoBehaviour{
+
+
 
     public UnitData battleParameters;
     public int level;

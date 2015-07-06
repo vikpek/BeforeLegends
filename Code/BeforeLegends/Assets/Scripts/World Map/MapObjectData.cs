@@ -10,16 +10,18 @@ public class Vec2int{
         y = iY;
     }
 
-    string ToString(){
-	return x + " | " + y;
+    public string ToString()
+    {
+	    return x + " | " + y;
     }
 
 }
 
-public class MapObjectData{
+public class MapObjectData
+{
 	public Vec2int pos = new Vec2int(0, 0);
 	public int appearanceID;
 
 	public UnitData battleStats = new UnitData();
 }
-}
+

@@ -5,11 +5,11 @@ using System.Linq;
 
 public class FogOfWar : MonoBehaviour {
 
-    int visionRange;
-    List<GameObject> enemysInRange = new List<GameObject>();
-    List<GameObject> ressourceInRange = new List<GameObject>();
-    List<Hexagon> adjacent = new List<Hexagon>();
-    List<Hexagon> adjacentTemp = new List<Hexagon>();
+    public int visionRange;
+    public List<GameObject> enemysInRange = new List<GameObject>();
+    public List<GameObject> ressourceInRange = new List<GameObject>();
+    public List<Hexagon> adjacent = new List<Hexagon>();
+    public List<Hexagon> adjacentTemp = new List<Hexagon>();
     
 //var adjacentTemp : Hexagon[];
 
@@ -36,7 +36,7 @@ public class FogOfWar : MonoBehaviour {
 		SetEntitiesToInvisible();
 }*/
 
-    void CheckTiles(Vec2int origin, int radius) {
+    public void CheckTiles(Vec2int origin, int radius) {
 	    ClearLists();
 	    WorldMapData worldData = WorldMapData.instance;
 
@@ -58,7 +58,8 @@ public class FogOfWar : MonoBehaviour {
 	    AddRessourcesInRangeToList();
     }
 
-    void AddEnemysInRangeToList() {
+    public void AddEnemysInRangeToList()
+    {
 	    foreach(Hexagon hex in adjacent) {
 		    foreach(GameObject gO in hex.gameObjectList) {
 			    if(gO.tag == "Enemy")
@@ -67,7 +68,8 @@ public class FogOfWar : MonoBehaviour {
 	    }
     }
 
-    void AddRessourcesInRangeToList() {
+    public void AddRessourcesInRangeToList()
+    {
 	    foreach(Hexagon hex in adjacent) {
 		    foreach(GameObject gO in hex.gameObjectList) {
 			    if(gO.tag == "Ressource") {
@@ -78,7 +80,8 @@ public class FogOfWar : MonoBehaviour {
 	    }
     }
 
-    void SetEntitiesToVisible() {
+    public void SetEntitiesToVisible()
+    {
 	    for(int i = 0; i < enemysInRange.Count; i++) {
 		    SetLayerRecursively(enemysInRange[i], 15);
 	    }
@@ -87,7 +90,8 @@ public class FogOfWar : MonoBehaviour {
 	    }
     }
 
-    void SetEntitiesToInvisible() {
+    public void SetEntitiesToInvisible()
+    {
 	    List<GameObject> enemysInRangeTemp = new List<GameObject>();
 	    foreach(GameObject obj in enemysInRange) {
 		    Vec2int pos = obj.GetComponent<MapObjectCarrier>().pos;
@@ -102,11 +106,12 @@ public class FogOfWar : MonoBehaviour {
 	    }
     }
 
-    void ClearLists() {
+    public void ClearLists()
+    {
 	    adjacent.Clear();
     }
 
-    void SetLayerRecursively(GameObject obj, int newLayer )
+    public void SetLayerRecursively(GameObject obj, int newLayer)
     {
         obj.layer = newLayer;
    

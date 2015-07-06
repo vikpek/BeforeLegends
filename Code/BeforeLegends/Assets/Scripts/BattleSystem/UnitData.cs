@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-class UnitData{
+public class UnitData{
 	public float attack ;
 	public float defense ;
 	public float armor ;
@@ -13,8 +13,8 @@ class UnitData{
 	public float critStrike ;
 	public float critBlock ;
 	public int expToGain ;
-	
-	float calcDamage(UnitData opponent,float actionDamage )
+
+    public float calcDamage(UnitData opponent, float actionDamage)
     {
 		float actualAttack  = attack - attack * 0.1f + Random.Range(0.0f, 1.0f) * attack * 0.2f;
 		float actualDefense  = opponent.defense - opponent.defense * 0.1f + Random.Range(0.0f, 1.0f) * opponent.defense * 0.2f;
