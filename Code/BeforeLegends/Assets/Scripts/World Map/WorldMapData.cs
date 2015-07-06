@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 public class WorldMapData : MonoBehaviour
 {
-	Vec2int size;
-	Hexagon [ , ]tiles;
-	FlatHexagon flatHex;
+	public Vec2int size;
+	public Hexagon [ , ]tiles;
+	public FlatHexagon flatHex;
 
     //Here is a private reference only this class can access
     private static WorldMapData _instance;

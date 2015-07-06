@@ -10,6 +10,10 @@ public class Vec2int{
         y = iY;
     }
 
+    string ToString(){
+	return x + " | " + y;
+    }
+
 }
 
 public class MapObjectData{
