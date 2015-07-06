@@ -39,6 +39,9 @@ var desert : int[];
 var desert_mountain : int[];
 var jungle : int[];
 
+var silverLion : int[];
+var hornedLion : int[];
+
 
 @HideInInspector 
 var chunkTexture : Texture2D;
@@ -113,7 +116,18 @@ function spawnObjects(){
 	for(var tile : Hexagon in data.tiles){
 		if(tile.traversable && Random.Range(0f, 1f) <= 0.025){
 			var obj : MapObjectData = MapObjectData();
-			obj.appearanceID = Random.Range(0f, 1f) >= 0.5 ? 0 : 1;
+			var ID : int = 0;
+
+            for(var e : int in silverLion) {
+                 if(e == tile.matID)
+                     ID = 1;
+             }
+             for(var e : int in hornedLion) {
+                 if(e == tile.matID)
+                     ID = 0;;
+             }
+
+            obj.appearanceID = ID;
 			tile.mapObjects.Add(obj);
 		}
 	}	

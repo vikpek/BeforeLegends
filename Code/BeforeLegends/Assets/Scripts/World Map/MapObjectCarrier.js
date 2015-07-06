@@ -38,7 +38,7 @@ function setPosition(pos : Vec2i){
 	worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Remove(data);
 	data.pos = pos;
 	worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Add(data);
-	//CollectRessources(pos);
+	CollectRessources(pos);
 	FogOfWar.instance.CheckTiles(pos, FogOfWar.instance.visionRange);
 	FogOfWar.instance.SetEntitiesToVisible();
 	FogOfWar.instance.SetEntitiesToInvisible();
@@ -106,6 +106,7 @@ function CollectRessources(pos : Vec2i) {
 		for(var gO : GameObject in worldData.tiles[pos.x, pos.y].gameObjectList) {
 			if(gO.tag == "Ressource") {
 				RessourceMaster.instance.ressourcesToDeregister.Add(gO);
+				gO.GetComponent.<Ressource>().cooldown = 5;
 				switch(gO.GetComponent.<Ressource>().rType) {
 				case "Food":
 					RessourceMaster.instance.valueFood += gO.GetComponent.<Ressource>().rValue;

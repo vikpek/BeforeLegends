@@ -18,10 +18,13 @@ var loseHealthInPercent : float;
 var generateHealthInPercent : float;
 
 var ressourcesToDeregister : List.<GameObject> = new List.<GameObject>();
+var toDelete : List.<GameObject> = new List.<GameObject>();
+
+function Awake() {
+	if(!instance) instance = this;
+}
 
 function Start() {
-	if(!instance) instance = this;
-
 	valueWood = 0;
 	valueStone = 0;
 	valueFood = 0;

@@ -14,6 +14,17 @@ class TurnEndedMessage extends Message{
 				RessourceMaster.instance.RegenerateHealthThroughEating();
 			}
 		}
+		for(var r : GameObject in RessourceMaster.instance.ressourcesToDeregister) {
+            if(r.GetComponent.<Ressource>().cooldown != 0) {
+                r.GetComponent.<Ressource>().cooldown--;
+                if(r.GetComponent.<Ressource>().cooldown == 0) {
+                    r.GetComponent.<Ressource>().Respawn();
+                }
+            }
+        }
+        for(var r in RessourceMaster.instance.toDelete) {
+            RessourceMaster.instance.ressourcesToDeregister.Remove(r);
+        }
 		this.turn = turn;
 	}
 }
