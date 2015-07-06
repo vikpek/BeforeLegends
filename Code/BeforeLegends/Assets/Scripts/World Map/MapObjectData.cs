@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
 public class Vec2int{
     public int x;
     public int y;

@@ -6,11 +6,11 @@
 //var nextPos : Vector3;
 //@HideInInspector
 //var mouseScrollDeltaY : float;
-//var minY : float;
-//var maxY : float;
-//var xOffsetMultiplier : float;
-//var zOffsetMultiplierMin : float;
-//var zOffsetMultiplierMax : float;
+var minY : float;
+var maxY : float;
+var xOffsetMultiplier : float;
+var zOffsetMultiplierMin : float;
+var zOffsetMultiplierMax : float;
 
 //function Awake(){
 //	nextPos = transform.position;

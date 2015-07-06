@@ -28,10 +28,10 @@ public class MapObjectCarrier : MonoBehaviour {
     void Start(){
 	    data.battleStats = GetComponent<BattleParameters>().battleParameters;
         Messenger.instance.listen(gameObject, "TurnEnded");
-	    if(gameObject.tag == "Player")
-		    audioObject = AudioMaster.instance.FetchAudioObject("Olaf");
-	    else
-		    audioObject = AudioMaster.instance.FetchAudioObject(gameObject.name.Substring(0, gameObject.name.Length - 7));
+        //if(gameObject.tag == "Player")
+        //    audioObject = AudioMaster.instance.FetchAudioObject("Olaf");
+        //else
+            //audioObject = AudioMaster.instance.FetchAudioObject(gameObject.name.Substring(0, gameObject.name.Length - 7));
     }
 
     void onEvent_TurnEnded()

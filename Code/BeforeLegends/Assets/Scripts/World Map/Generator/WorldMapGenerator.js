@@ -1,45 +1,45 @@
-﻿//#pragma strict
+﻿#pragma strict
 
-//import System.Collections.Generic;
-//import System.IO;
+import System.Collections.Generic;
+import System.IO;
 
-//static var instance : WorldMapGenerator;
+static var instance : WorldMapGenerator;
 
-//var mapMaterial : Material;
-//var size : Vec2i;
-//var chunkSize : Vec2i;
-//var seed : long;
-//var erosionScale : float;
-//var continentScale : float;
-//var moistureScale : float;
-//var temperatureScale : float;
-//var erosionWeight : float;
-//var moistureErosionWeight : float;
-//var moistureWeight : float;
-//var continentWeight : float;
-//var temperatureNoiseWeight : float;
-//var temperatureLocationWeight : float;
-//var tileTextures : Texture2D[];
+var mapMaterial : Material;
+var size : Vec2i;
+var chunkSize : Vec2i;
+var seed : long;
+var erosionScale : float;
+var continentScale : float;
+var moistureScale : float;
+var temperatureScale : float;
+var erosionWeight : float;
+var moistureErosionWeight : float;
+var moistureWeight : float;
+var continentWeight : float;
+var temperatureNoiseWeight : float;
+var temperatureLocationWeight : float;
+var tileTextures : Texture2D[];
 
-//var heightLookup : float[];
-//var moistureLookup : float[];
-//var temperatureLookup : float[];
+var heightLookup : float[];
+var moistureLookup : float[];
+var temperatureLookup : float[];
 
-//var DropChances : List.<DropChance> = new List.<DropChance>();
+var DropChances : List.<DropChance> = new List.<DropChance>();
 
-//var water : int[];
-//var ice : int[];
-//var ice_mountain : int[];
-//var tundra : int[];
-//var savana : int[];
-//var dry_forest : int[];
-//var dry_mountain : int[];
-//var grassland : int[];
-//var forest : int[];
-//var forest_mountain : int[];
-//var desert : int[];
-//var desert_mountain : int[];
-//var jungle : int[];
+var water : int[];
+var ice : int[];
+var ice_mountain : int[];
+var tundra : int[];
+var savana : int[];
+var dry_forest : int[];
+var dry_mountain : int[];
+var grassland : int[];
+var forest : int[];
+var forest_mountain : int[];
+var desert : int[];
+var desert_mountain : int[];
+var jungle : int[];
 
 
 //@HideInInspector 

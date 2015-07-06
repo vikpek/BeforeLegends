@@ -2,11 +2,11 @@
 
 //static var instance : GameStateManager;
 
-//var world : GameObject;
-//var battle : GameObject;
+var world : GameObject;
+var battle : GameObject;
 
-//var state : int = 0;
-//var lastBattleResult : boolean = true;
+var state : int = 0;
+var lastBattleResult : boolean = true;
 
 //function Start(){
 //	instance = this;

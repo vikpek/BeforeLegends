@@ -1,64 +1,64 @@
-﻿//private enum Actor{
-//	PLAYER, ENEMY
-//}
+﻿private enum Actor{
+	PLAYER, ENEMY
+}
 
-//private enum BattleState{
-//	IDLE, STARTED, ANIMATING
-//}
+private enum BattleState{
+	IDLE, STARTED, ANIMATING
+}
 
-//private enum Action{ // here below you need to add any new actions
-//	ATTACK, ENRAGED, FINALATTACK, HEAL, HEALOTHER, DOUBLEDAMAGE, WRATH, SHIELD, REVENGE
-//}
+private enum Action{ // here below you need to add any new actions
+	ATTACK, ENRAGED, FINALATTACK, HEAL, HEALOTHER, DOUBLEDAMAGE, WRATH, SHIELD, REVENGE
+}
 
-//var player : GameObject;
+var player : GameObject;
 
-//@HideInInspector
-//var enemy : GameObject;
+@HideInInspector
+var enemy : GameObject;
 
-//var round : int = 0;
+var round : int = 0;
 
 //@HideInInspector
 //var playerData : UnitData;
 //@HideInInspector
 //var	enemyData : UnitData; 
 
-//@HideInInspector
-//var playerFinished : boolean = false;
-//@HideInInspector
-//var enemyFinished : boolean = false;
+@HideInInspector
+var playerFinished : boolean = false;
+@HideInInspector
+var enemyFinished : boolean = false;
 
-//@HideInInspector
-//var playerParticles : CharacterParticleController;
-//@HideInInspector
-//var enemyParticles : CharacterParticleController;
+@HideInInspector
+var playerParticles : CharacterParticleController;
+@HideInInspector
+var enemyParticles : CharacterParticleController;
 
-//@HideInInspector
-//var enemyWorldObject : GameObject; 
-//@HideInInspector
-//var playerWorldObject : GameObject;
+@HideInInspector
+var enemyWorldObject : GameObject; 
+@HideInInspector
+var playerWorldObject : GameObject;
 
-//@HideInInspector
-//var playerHPText : HPText;
-//@HideInInspector
-//var enemyHPText : HPText;
+@HideInInspector
+var playerHPText : HPText;
+@HideInInspector
+var enemyHPText : HPText;
 
-//@HideInInspector
-//var playerAnimation : Anims;
-//@HideInInspector
-//var enemyAnimation : Anims;
-//@HideInInspector
-//var playerAnimator : CharacterAnimations;
-//@HideInInspector
-//var enemyAnimator : CharacterAnimations;
+@HideInInspector
+var playerAnimation : Anims;
+@HideInInspector
+var enemyAnimation : Anims;
+@HideInInspector
+var playerAnimator : CharacterAnimations;
+@HideInInspector
+var enemyAnimator : CharacterAnimations;
 
-//@HideInInspector
-//var state : BattleState = BattleState.IDLE;
-//@HideInInspector
-//var actor : Actor = Actor.PLAYER;
-//@HideInInspector
-//var enemyAction : Action;
-//@HideInInspector
-//var playerAction : Action;
+@HideInInspector
+var state : BattleState = BattleState.IDLE;
+@HideInInspector
+var actor : Actor = Actor.PLAYER;
+@HideInInspector
+var enemyAction : Action;
+@HideInInspector
+var playerAction : Action;
 
 //function Update(){
 //	if(checkEnded()) return;

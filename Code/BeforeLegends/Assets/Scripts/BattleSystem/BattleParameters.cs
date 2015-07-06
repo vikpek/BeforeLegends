@@ -3,8 +3,6 @@ using System.Collections;
 
 public class BattleParameters : MonoBehaviour{
 
-
-
     public UnitData battleParameters;
     public int level;
     public int exp;

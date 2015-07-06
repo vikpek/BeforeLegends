@@ -19,8 +19,8 @@ public class GameStateManager : MonoBehaviour {
     public GameObject battle;
     public BattleParameters olaf;
 
-    int state;
-    bool lastBattleResult;
+    public int state;
+    public bool lastBattleResult;
 
     public BattleController battleC;
 

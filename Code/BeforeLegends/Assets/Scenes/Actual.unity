@@ -381,7 +381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba99aa1986d8ae46a7a4db5fad62f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt: {fileID: 1707974831}
 --- !u!224 &219670049
 RectTransform:
   m_PrefabParentObject: {fileID: 22493238, guid: 86c330a3c1ce24a459d1aa5d0326f5be,
@@ -396,14 +395,19 @@ GameObject:
   m_Component:
   - 4: {fileID: 258453196}
   - 65: {fileID: 258453194}
-  - 114: {fileID: 258453193}
-  - 114: {fileID: 258453197}
-  - 114: {fileID: 258453199}
-  - 114: {fileID: 258453195}
-  - 114: {fileID: 258453198}
   - 114: {fileID: 258453200}
   - 81: {fileID: 258453201}
+  - 114: {fileID: 258453203}
+  - 114: {fileID: 258453204}
+  - 114: {fileID: 258453199}
+  - 114: {fileID: 258453197}
+  - 114: {fileID: 258453195}
+  - 114: {fileID: 258453193}
   - 114: {fileID: 258453202}
+  - 114: {fileID: 258453198}
+  - 114: {fileID: 258453205}
+  - 114: {fileID: 258453206}
+  - 114: {fileID: 258453207}
   m_Layer: 0
   m_Name: System
   m_TagString: Untagged
@@ -419,14 +423,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 258453192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ea821b23f24e3439555f67d0064a8f, type: 3}
+  m_Script: {fileID: 11500000, guid: bedca6463ac0e38419cb2b5338da8493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastTile:
-    x: 0
-    y: 0
-  lastTilePos: {x: 0, y: 0, z: 0}
-  lastWorldPos: {x: 0, y: 0, z: 0}
+  world: {fileID: 1200521817}
+  battle: {fileID: 1891227680}
+  olaf: {fileID: 0}
+  state: 0
+  lastBattleResult: 0
+  battleC: {fileID: 0}
 --- !u!65 &258453194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -447,11 +452,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 258453192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9031b00546f35e6438142b9dcecac582, type: 3}
+  m_Script: {fileID: 11500000, guid: a630716252a77ca4dbabd112de3d8550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turn: 0
-  numActions: 0
 --- !u!4 &258453196
 Transform:
   m_ObjectHideFlags: 0
@@ -475,35 +478,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 258453192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7699f2dbc804e0d428033f4be39e6e49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &258453198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 258453192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e0e71de677fc6045a519961c7a2c5e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  world: {fileID: 1200521817}
-  battle: {fileID: 1891227680}
-  battleMapGui: {fileID: 0}
-  worldMapGui: {fileID: 0}
-  state: 0
-  lastBattleResult: 1
---- !u!114 &258453199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 258453192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 665aacacc5d1c3147a8719429b627886, type: 3}
+  m_Script: {fileID: 11500000, guid: 709b28c2ffc5f8e44a814aa7d94460b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs_editor:
@@ -517,6 +492,29 @@ MonoBehaviour:
   - {fileID: 100126, guid: c1a0b35a4aee812468d3ac5f110467bb, type: 2}
   - {fileID: 113618, guid: e457ead48ff374d4e87aad6b36a34a5d, type: 2}
   - {fileID: 121770, guid: f8e8d21f7f2cfc34eaaa86159a3e922b, type: 2}
+--- !u!114 &258453198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258453192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4883e109d872a834b9fa6835377a2a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 155702219}
+--- !u!114 &258453199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258453192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7699f2dbc804e0d428033f4be39e6e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &258453200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,11 +543,86 @@ MonoBehaviour:
   m_GameObject: {fileID: 258453192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 909ccaf9db0a1524d87b0fce298241fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 83b9dbe532acf334da80949a19a44596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   battleCameraPosAssigned: 0
   battleCameraPos: {x: 0, y: 0, z: 0}
+--- !u!114 &258453203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258453192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c5543ab63d6fd47bbffb0ebda91e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size:
+    x: 0
+    y: 0
+--- !u!114 &258453204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258453192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31bf3f32344db5142bffea5accc8cf2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastTile:
+    x: 0
+    y: 0
+  lastTilePos: {x: 0, y: 0, z: 0}
+  lastWorldPos: {x: 0, y: 0, z: 0}
+--- !u!114 &258453205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258453192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c23b05ff8b51049a24638dfafdfe6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  exp: 0
+--- !u!114 &258453206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258453192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9efc54a18240e7e4eb5edb000632f757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pos:
+    x: 0
+    y: 0
+  movedMax: 8
+  moved: 0
+  moving: 0
+  paused: 0
+  suspend: 0
+  enemyGameObject: {fileID: 0}
+--- !u!114 &258453207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258453192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03363eb326f862c4395b2fc9b276823f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1005331471}
 --- !u!1 &260975369
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,12 +879,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 409246233}
   m_RootOrder: 4
---- !u!114 &362546635
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11472990, guid: 86c330a3c1ce24a459d1aa5d0326f5be,
-    type: 2}
-  m_PrefabInternal: {fileID: 1321020847}
-  m_Script: {fileID: 11500000, guid: 9433e108ff4c6ff459dd7b851a920b53, type: 3}
 --- !u!1001 &370133654
 Prefab:
   m_ObjectHideFlags: 0
@@ -1144,10 +1211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30bfa5f0d89fff34b8861076d7640240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 175648, guid: 6eb95d44ed4526443b3d511a24520597, type: 2}
-  hidden: 0
-  path: []
-  gos: []
 --- !u!1 &747629070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,23 +1557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4307b8e412e26c14cb77e4d485482a37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  audioObjects:
-  - objectName: Olaf
-    attack: {fileID: 8300000, guid: 9d820ffcf7d61e3498286a5f5cfd6c15, type: 3}
-    walk: {fileID: 0}
-    die: {fileID: 0}
-    spattack: {fileID: 8300000, guid: e4856b17ef0374144a08383e14e27718, type: 3}
-  - objectName: HornedLion
-    attack: {fileID: 8300000, guid: 7f360aa2abc1fb14aa0977e90eff061d, type: 3}
-    walk: {fileID: 0}
-    die: {fileID: 0}
-    spattack: {fileID: 8300000, guid: 1997c362838ca304cb36c0a8fe3b8107, type: 3}
-  - objectName: SilverLion
-    attack: {fileID: 8300000, guid: 5f8012820b8d0c049ad5b22dcb67fed1, type: 3}
-    walk: {fileID: 0}
-    die: {fileID: 0}
-    spattack: {fileID: 0}
 --- !u!82 &1005331471
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1704,14 +1750,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1200521817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 571ab587963c45d4aa5f767a80d685e6, type: 3}
+  m_Script: {fileID: 11500000, guid: c64b1a4388657c244b8fde7724cda783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOver: {fileID: 486506936}
-  gameObjectsToDeactivateOnGameOver:
-  - {fileID: 1816951263}
-  - {fileID: 721854196}
-  activePlayers: []
 --- !u!114 &1200521820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1720,17 +1761,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1200521817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b36b125071f9924a9f01d6c1eb9d4f4, type: 3}
+  m_Script: {fileID: 11500000, guid: dfa07e44c5e3ade43a5b2f91fb5bc019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mapMaterial: {fileID: 2100000, guid: 168d7a82298b3004fa234807531a6004, type: 2}
   size:
-    x: 96
-    y: 96
+    x: 256
+    y: 256
   chunkSize:
-    x: 2
-    y: 2
-  seed: 2545415487
+    x: 64
+    y: 64
+  seed: 0
   erosionScale: .100000001
   continentScale: .0149999997
   moistureScale: .0199999996
@@ -1791,85 +1832,6 @@ MonoBehaviour:
   - .349999994
   - .699999988
   - 1
-  DropChances:
-  - tileType: water
-    woodDropChance: 0
-    stoneDropChance: 0
-    foodDropChance: 0
-    soulsDropChance: 0
-    chance: 0
-  - tileType: ice
-    woodDropChance: 0
-    stoneDropChance: 0
-    foodDropChance: .100000001
-    soulsDropChance: .200000003
-    chance: 0
-  - tileType: ice_mountain
-    woodDropChance: .100000001
-    stoneDropChance: .300000012
-    foodDropChance: .100000001
-    soulsDropChance: .100000001
-    chance: 0
-  - tileType: tundra
-    woodDropChance: .200000003
-    stoneDropChance: .100000001
-    foodDropChance: .200000003
-    soulsDropChance: .100000001
-    chance: 0
-  - tileType: savanna
-    woodDropChance: .100000001
-    stoneDropChance: .100000001
-    foodDropChance: .25
-    soulsDropChance: .200000003
-    chance: 0
-  - tileType: dry_forest
-    woodDropChance: .300000012
-    stoneDropChance: .100000001
-    foodDropChance: .200000003
-    soulsDropChance: .100000001
-    chance: 0
-  - tileType: dry_mountain
-    woodDropChance: .100000001
-    stoneDropChance: .300000012
-    foodDropChance: .100000001
-    soulsDropChance: .200000003
-    chance: 0
-  - tileType: grassland
-    woodDropChance: .100000001
-    stoneDropChance: .100000001
-    foodDropChance: .400000006
-    soulsDropChance: .0500000007
-    chance: 0
-  - tileType: forest
-    woodDropChance: .400000006
-    stoneDropChance: .100000001
-    foodDropChance: .25
-    soulsDropChance: .0500000007
-    chance: 0
-  - tileType: forest_mountain
-    woodDropChance: .300000012
-    stoneDropChance: .300000012
-    foodDropChance: .25
-    soulsDropChance: .0500000007
-    chance: 0
-  - tileType: desert
-    woodDropChance: 0
-    stoneDropChance: .100000001
-    foodDropChance: .100000001
-    soulsDropChance: .300000012
-    chance: 0
-  - tileType: desert_mountain
-    woodDropChance: .100000001
-    stoneDropChance: .25
-    foodDropChance: .100000001
-    soulsDropChance: .150000006
-    chance: 0
-  - tileType: jungle
-    woodDropChance: .200000003
-    stoneDropChance: .100000001
-    foodDropChance: .300000012
-    soulsDropChance: .150000006
-    chance: 0
   water: 0000000004000000080000000c0000001000000014000000180000001c00000020000000
   ice: 010000000200000005000000
   ice_mountain: 03000000070000000b000000
@@ -1883,6 +1845,8 @@ MonoBehaviour:
   desert: 190000001a000000
   desert_mountain: 1b000000
   jungle: 2100000022000000
+  dry_foreachest: 
+  foreachest: 
   chunkTexture: {fileID: 0}
   chunkTextureNormal: {fileID: 0}
   chunkTextureRects: []
@@ -1890,14 +1854,6 @@ MonoBehaviour:
   temperatureSeed: {x: 0, y: 0}
   moistureSeed: {x: 0, y: 0}
   erosionSeed: {x: 0, y: 0}
-  flatHex:
-    hexMesh: {fileID: 0}
-    vertices: []
-    uv: []
-    triangles: 
-    extents: {x: 0, y: 0, z: 0}
-    size: {x: 0, y: 0, z: 0}
-    center: {x: 0, y: 0, z: 0}
 --- !u!114 &1200521821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1906,14 +1862,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1200521817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dc97e89b732022489a94bba3c86749d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9efc54a18240e7e4eb5edb000632f757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreToWin: 100
-  textVictory: {fileID: 903467382}
-  gameObjectsToDeactivateOnGameOver:
-  - {fileID: 1816951263}
-  - {fileID: 721854196}
+  pos:
+    x: 0
+    y: 0
+  movedMax: 8
+  moved: 0
+  moving: 0
+  paused: 0
+  suspend: 0
+  enemyGameObject: {fileID: 0}
 --- !u!1 &1210877018
 GameObject:
   m_ObjectHideFlags: 0
@@ -2262,17 +2222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd31438990379a43946a26394b656e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rm: {fileID: 0}
-  shop: {fileID: 362546635}
-  textScore: {fileID: 747629072}
-  valueWood: 100
-  valueFood: 100
-  valueStone: 100
-  valueSoul: 100
-  valueScore: 0
-  loseHealthInPercent: .200000003
-  generateHealthInPercent: .100000001
-  ressourcesToDeregister: []
 --- !u!4 &1427169111
 Transform:
   m_ObjectHideFlags: 0
@@ -2296,6 +2245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56674c8fa4c63d047a32501a6d031138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ressourcesToDeregister: []
   resources:
   - name: Wood
     number: 100
@@ -2309,6 +2259,8 @@ MonoBehaviour:
   - name: Soul
     number: 100
     guiText: {fileID: 1321020850}
+  loseHealthInPercent: 0
+  generateHealthInPercent: 0
 --- !u!1 &1437882035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2878,7 +2830,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1891227681}
-  - 114: {fileID: 1891227682}
   - 114: {fileID: 1891227683}
   m_Layer: 0
   m_Name: BattleMap
@@ -2900,62 +2851,6 @@ Transform:
   - {fileID: 1981189445}
   m_Father: {fileID: 258453196}
   m_RootOrder: 1
---- !u!114 &1891227682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1891227680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aad93317c9c8f794ab35695f7bc65484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  enemy: {fileID: 0}
-  round: 0
-  playerData:
-    attack: 0
-    defense: 0
-    armor: 0
-    damage: 0
-    hitPoints: 0
-    maxHitPoints: 0
-    actionPoints: 0
-    maxActionPoints: 0
-    speed: 0
-    critStrike: 0
-    critBlock: 0
-    expToGain: 0
-  enemyData:
-    attack: 0
-    defense: 0
-    armor: 0
-    damage: 0
-    hitPoints: 0
-    maxHitPoints: 0
-    actionPoints: 0
-    maxActionPoints: 0
-    speed: 0
-    critStrike: 0
-    critBlock: 0
-    expToGain: 0
-  playerFinished: 0
-  enemyFinished: 0
-  playerParticles: {fileID: 0}
-  enemyParticles: {fileID: 0}
-  enemyWorldObject: {fileID: 0}
-  playerWorldObject: {fileID: 0}
-  playerHPText: {fileID: 0}
-  enemyHPText: {fileID: 0}
-  playerAnimation: 0
-  enemyAnimation: 0
-  playerAnimator: {fileID: 0}
-  enemyAnimator: {fileID: 0}
-  state: 0
-  actor: 0
-  enemyAction: 0
-  playerAction: 0
 --- !u!114 &1891227683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2967,6 +2862,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee2da04305740148b9ba570c0a70cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  player: {fileID: 0}
+  round: 0
+  playerFinished: 0
+  enemyFinished: 0
+  playerParticles: {fileID: 0}
+  enemyParticles: {fileID: 0}
+  enemyWorldObject: {fileID: 0}
+  playerWorldObject: {fileID: 0}
+  playerMapObjectCarrier: {fileID: 0}
+  enemyMapObjectCarrier: {fileID: 0}
+  playerAnimation: 0
+  enemyAnimation: 0
+  playerAnimator: {fileID: 0}
+  enemyAnimator: {fileID: 0}
+  characterModelPrefabs: {fileID: 0}
+  gameSM: {fileID: 0}
+  enemyAction: 0
+  playerAction: 0
+  battleState: 0
+  actualActor: 0
 --- !u!1001 &1981189444
 Prefab:
   m_ObjectHideFlags: 0
@@ -3289,7 +3205,7 @@ GameObject:
   - 20: {fileID: 2139333537}
   - 92: {fileID: 2139333536}
   - 124: {fileID: 2139333535}
-  - 114: {fileID: 2139333539}
+  - 114: {fileID: 2139333534}
   m_Layer: 0
   m_Name: World Camera
   m_TagString: MainCamera
@@ -3297,6 +3213,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2139333534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2139333533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b2900885532f1439d684867fb2c465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dampen: 1
+  mouseScrollDeltaY: 0
+  minY: 1
+  maxY: 50
+  xOffsetMultiplier: 1.75
+  zOffsetMultiplierMin: .360000014
+  zOffsetMultiplierMax: 2.70000005
 --- !u!124 &2139333535
 Behaviour:
   m_ObjectHideFlags: 0
@@ -3355,22 +3289,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1200521818}
   m_RootOrder: 5
---- !u!114 &2139333539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2139333533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58b50443030afdb4786bd49ae54acd3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dampen: 3
-  nextPos: {x: 0, y: 0, z: 0}
-  mouseScrollDeltaY: 0
-  minY: 1
-  maxY: 50
-  xOffsetMultiplier: 1.75
-  zOffsetMultiplierMin: .360000014
-  zOffsetMultiplierMax: 2.70000005
