@@ -35,8 +35,11 @@ public class Messenger : MonoBehaviour {
 
 		    if(list != null)
             {
+                int i = 0;
 			    foreach(var listener in list)
                 {
+                    i++;
+                    print("i: " + i);
                     GameObject go = listener as GameObject;
 				    go.SendMessage("onEvent_" + msg.type, msg, SendMessageOptions.DontRequireReceiver);
 			    }

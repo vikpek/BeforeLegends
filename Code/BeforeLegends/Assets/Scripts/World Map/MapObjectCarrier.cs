@@ -106,6 +106,7 @@ public class MapObjectCarrier : MonoBehaviour {
         }
         else
         {
+            pathWalkAStep = false;
             finalizeAt(path.Length - 1, path, false);
         }
     }
@@ -116,6 +117,7 @@ public class MapObjectCarrier : MonoBehaviour {
 	    setPosition(path[index]);
 	    moving = false;
 	    suspend = false;
+        print("ActionEndedMessage");
 	    Messenger.instance.send(new ActionEndedMessage(""));
 	    if(!suspended){
 		    moved++;
