@@ -22,6 +22,7 @@ public class MapObjectCarrier : MonoBehaviour {
     private int index = 0;
     private Vec2int[] path;
 
+    private bool waitFrame;
 
     public GameObject enemyGameObject;
 
@@ -53,7 +54,7 @@ public class MapObjectCarrier : MonoBehaviour {
 
     public void followPath(Vec2int[] path, float dur) // don't know if that works bc there WAS a yield ._.
     {
-	    if(moving || path.Length == 0) return;
+	    if(moving || path.Length == null) return;
 	    Messenger.instance.send(new ActionStartedMessage());
 	    moving = true;
 	    this.path = path;
@@ -79,7 +80,16 @@ public class MapObjectCarrier : MonoBehaviour {
 			    Messenger.instance.send(new MapObjectMovedMessage(data, path[index-1]));
 		    }
 
-		
+            if(waitFrame)
+            {
+                waitFrame = false;
+                print("wait Frame");
+                break;
+            }
+
+            print("don't wait Frame");
+            waitFrame = true;
+
 		    if(reachedNext && suspend){
 		 	    finalizeAt(index, path, true);
 		 	    return;
@@ -91,6 +101,8 @@ public class MapObjectCarrier : MonoBehaviour {
 	    finalizeAt(path.Length - 1, path, false);
 
     }
+
+    
 
     void finalizeAt(int index, Vec2int[] path, bool suspended){
 	    Vector3 end = WorldMapData.instance.tiles[path[index].x, path[index].y].position;

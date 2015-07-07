@@ -1,7 +1,7 @@
 ﻿//#pragma strict
 
-//var objData : MapObjectCarrier;
-//var mouseOverUIElement : boolean;
+var objData : MapObjectCarrier;
+var mouseOverUIElement : boolean;
 
 //function Update(){
 //    if(Input.GetMouseButtonDown(0) && !mouseOverUIElement){

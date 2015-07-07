@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
 public class AudioObject
 {
     public string objectName;
@@ -27,7 +28,7 @@ public class AudioMaster : MonoBehaviour {
 
     public AudioSource audioSource;
 
-    List<AudioObject> audioObjects = new List<AudioObject>();
+    public List<AudioObject> audioObjects = new List<AudioObject>();
 
 	
     void Update()

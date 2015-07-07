@@ -4,11 +4,11 @@
 
 //static var instance : FogOfWar;
 
-//var visionRange : int;
-//var enemysInRange : List.<GameObject> = new List.<GameObject>();
-//var ressourceInRange : List.<GameObject> = new List.<GameObject>();
-//var adjacent : List.<Hexagon> = new List.<Hexagon>();
-//var adjacentTemp : List.<Hexagon> = new List.<Hexagon>();
+var visionRange : int;
+var enemysInRange : List.<GameObject> = new List.<GameObject>();
+var ressourceInRange : List.<GameObject> = new List.<GameObject>();
+var adjacent : List.<Hexagon> = new List.<Hexagon>();
+var adjacentTemp : List.<Hexagon> = new List.<Hexagon>();
 
 ////var adjacentTemp : Hexagon[];
 

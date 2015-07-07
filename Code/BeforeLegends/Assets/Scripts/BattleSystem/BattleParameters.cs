@@ -7,8 +7,8 @@ public class BattleParameters : MonoBehaviour{
     public int level;
     public int exp;
 
-    int[] expToLevelUp;
-    UnitData[] levelUpChange;
+    public int[] expToLevelUp;
+    public UnitData[] levelUpChange;
 
     public void LevelUp()
     {
@@ -21,13 +21,4 @@ public class BattleParameters : MonoBehaviour{
         }
     }
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

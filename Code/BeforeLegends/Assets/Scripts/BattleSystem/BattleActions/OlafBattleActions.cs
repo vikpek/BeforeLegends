@@ -43,7 +43,7 @@ public class OlafBattleActions {
 
     void healself(BattleController battle){ // the char heals himself
 	    battle.playerParticles.Play();
-	    battle.playerData.hitPoints += battle.playerData.maxHitPoints*0.3f;
+	    battle.playerData.hitPoints += battle.playerData.maxHitPoints * 0.3f;
 	    if (battle.playerData.hitPoints > battle.playerData.maxHitPoints){
 		    battle.playerData.hitPoints = battle.playerData.maxHitPoints;
 	    }

@@ -1,10 +1,10 @@
 ﻿//#pragma strict
 
 ////var battleParameters : UnitData;
-//var level : int;
-//var exp : int;
+var level : int;
+var exp : int;
 
-//var expToLevelUp : int[];
+var expToLevelUp : int[];
 ////var levelUpChange : UnitData[];
 
 //function LevelUp() { 

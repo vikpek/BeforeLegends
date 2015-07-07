@@ -15,12 +15,15 @@ public class PathNode{
 
 
 
-    public PathNode(int x = 0, int y = 0, PathNode parent = null, int goalX = 0, int goalY = 0)
+    public PathNode(int x = 0, int y = 0, PathNode parenti = null, int goalX = 0, int goalY = 0)
     {
 		this.x = x;
 		this.y = y;
-		this.parent = parent;
-		evalCost(goalX, goalY);
+        if (parenti != null)
+        {
+		    this.parent = parenti;
+		    evalCost(goalX, goalY);
+        }
 	}
 	
 	void evalCost(int goalX, int goalY){

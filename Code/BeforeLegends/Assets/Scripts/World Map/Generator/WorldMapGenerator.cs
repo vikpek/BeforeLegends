@@ -57,7 +57,7 @@ public class WorldMapGenerator : MonoBehaviour
     public int[] jungle;
     public int[] dry_foreachest;
     public int[] foreachest;
-    int[] foreachest_mountain;
+    public int[] foreachest_mountain;
 
     public Texture2D chunkTexture;
 
@@ -145,7 +145,7 @@ public class WorldMapGenerator : MonoBehaviour
     {
 	    WorldMapData data = WorldMapData.instance;
 	    foreach(Hexagon tile in data.tiles){
-		    DropChance chance = returnDropChance(tile.matID, DropChances);
+		    DropChance chance = returnDropChance(tile.matID);
 		    chance.overallDropChance();
 		    tile.tileType = chance.tileType;
 
@@ -233,7 +233,7 @@ public class WorldMapGenerator : MonoBehaviour
 	    return mesh;
     }
 
-    DropChance returnDropChance(int matID, List<DropChance> DropChances) 
+    DropChance returnDropChance(int matID) 
     {
  	    foreach(int e in ice) {
  		    if(e == matID)
@@ -283,7 +283,7 @@ public class WorldMapGenerator : MonoBehaviour
  		    if(e == matID)
  			    return DropChances[12];
  	    }
- 	    return DropChances[0];
+        return DropChances[0];
     }
 
     void generate(){
