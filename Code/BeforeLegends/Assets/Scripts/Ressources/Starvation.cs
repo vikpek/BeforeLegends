@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Starvation
+public class Starvation : MonoBehaviour
 {
 	public int eat;
 }

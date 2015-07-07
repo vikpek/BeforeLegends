@@ -15,8 +15,8 @@ public class TurnManager : MonoBehaviour {
         }
     }
 
-    int turn;
-    int numActions;
+   public int turn;
+   public int numActions;
 
     void Start(){
 	    Messenger.instance.listen(gameObject, "ActionStarted");
