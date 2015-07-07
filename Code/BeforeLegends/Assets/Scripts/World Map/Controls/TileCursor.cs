@@ -3,7 +3,6 @@ using System.Collections;
 
 public class TileCursor : MonoBehaviour
 {
-
     void Update()
     {
         if (WorldMapData.instance.tiles[MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y].traversable)

@@ -63,7 +63,8 @@ public class MapObjectCarrier : MonoBehaviour {
 	    float passedTime = 0;
 	    index = 0;
 	    int lastIndex = 0;
-	    while(passedTime/dur < path.Length - 1){
+	    while(passedTime/dur < path.Length - 1)
+        {
 		    float alpha = passedTime/dur;
 		    index = (int)alpha; // casted to int - was only "index = alpha;"
 		    alpha -= index;

@@ -7,10 +7,13 @@ public class MoveOnClick : MonoBehaviour {
     public bool mouseOverUIElement;
 
     void Update(){
-        if(Input.GetMouseButtonDown(0) && !mouseOverUIElement){
-		    if(objData == null){
+        if(Input.GetMouseButtonDown(0) && !mouseOverUIElement)
+        {
+		    if(objData == null)
+            {
 			    objData = gameObject.GetComponent<MapObjectCarrier>();
-			    if(objData == null){
+			    if(objData == null)
+                {
 				    objData = gameObject.AddComponent<MapObjectCarrier>();
 				    objData.setPosition(new Vec2int(MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y));
 				    transform.position = WorldMapData.instance.tiles[objData.pos.x, objData.pos.y].position; 
