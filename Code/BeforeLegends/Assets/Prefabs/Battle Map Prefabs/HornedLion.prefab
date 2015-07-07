@@ -251,11 +251,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 438402}
-  - 114: {fileID: 11462756}
-  - 114: {fileID: 11450860}
-  - 114: {fileID: 11428738}
   - 114: {fileID: 11439864}
-  - 114: {fileID: 11488756}
+  - 114: {fileID: 11440498}
+  - 114: {fileID: 11433104}
+  - 114: {fileID: 11422818}
   m_Layer: 0
   m_Name: HornedLion
   m_TagString: Untagged
@@ -2406,6 +2405,22 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &11422818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd24a2ca6294e045a99ec27eec7a521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idle: Rig.001|Idle_01
+  attack: Rig.001|Attack_01_Basic
+  hurt: Rig.001|Hurt_01
+  spattack: Rig.001|Attack_02_Crit
+  animArr: {fileID: 11146398}
 --- !u!114 &11426040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2417,7 +2432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd72d62b6d3634de987603e90ccfaabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11428738
+--- !u!114 &11433104
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2425,7 +2440,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 122004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 564f097c02a20e04aacd2b2b29eac64b, type: 3}
+  m_Script: {fileID: 11500000, guid: 83f7a36ea1651b74fba7518921450fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tm: {fileID: 10227710}
@@ -2440,7 +2455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa156430b4a3cf14ebf7e57e92fd2822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11450860
+--- !u!114 &11440498
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2448,26 +2463,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 122004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e923eb575ca79394783a1010f86124a3, type: 3}
+  m_Script: {fileID: 11500000, guid: c982fc1e8dfdb994193940072b598760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11462756
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 122004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6adf22aaf38a64740bc5713be553a589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idle: Rig.001|Idle_01
-  attack: Rig.001|Attack_01_Basic
-  hurt: Rig.001|Hurt_01
-  spattack: Rig.001|Attack_02_Crit
-  current: 
-  animArr: {fileID: 11146398}
+  heal: {fileID: 19816302}
 --- !u!114 &11488694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2480,18 +2479,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .100000001
---- !u!114 &11488756
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 122004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63f09e60e1aaf274eb2728f27581e033, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heal: {fileID: 19816302}
 --- !u!137 &13746352
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

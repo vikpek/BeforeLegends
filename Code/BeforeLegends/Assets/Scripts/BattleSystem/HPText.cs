@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HPText
+public class HPText : MonoBehaviour
 {
 
-    TextMesh tm;
+    public TextMesh tm;
 
     void setVal(float v){
 	    int hp = (int)Mathf.Round(v);

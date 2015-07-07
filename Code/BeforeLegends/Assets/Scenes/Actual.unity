@@ -429,10 +429,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   world: {fileID: 1200521817}
   battle: {fileID: 1891227680}
-  olaf: {fileID: 0}
+  olaf: {fileID: 2048383751}
   state: 0
   lastBattleResult: 0
-  battleC: {fileID: 0}
+  battleC: {fileID: 1891227683}
 --- !u!65 &258453194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -456,6 +456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a630716252a77ca4dbabd112de3d8550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turn: 0
+  numActions: 0
 --- !u!4 &258453196
 Transform:
   m_ObjectHideFlags: 0
@@ -2993,6 +2995,8 @@ MonoBehaviour:
     expToGain: 0
   playerFinished: 0
   enemyFinished: 0
+  enemyHPText: {fileID: 0}
+  playerHPText: {fileID: 0}
   playerParticles: {fileID: 0}
   enemyParticles: {fileID: 0}
   enemyWorldObject: {fileID: 0}
@@ -3070,14 +3074,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285205bc260385a41b2751ed0063e73b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doScreenshake: 0
-  durationIntensity:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  displacement: {x: 0, y: 0, z: 0}
-  screenShakeTime: 0
+--- !u!114 &2048383751
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11430100, guid: 4c47a329f8b106e4195bbcc570ef8e6b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1875136104}
+  m_Script: {fileID: 11500000, guid: d0c23b05ff8b51049a24638dfafdfe6e, type: 3}
 --- !u!1 &2075755287
 GameObject:
   m_ObjectHideFlags: 0

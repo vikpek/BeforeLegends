@@ -13,9 +13,9 @@ public class CharacterAnimations : MonoBehaviour {
     public string spattack;
 
 
-    public string current;
+    string current;
 
-    Animation animArr;
+    public Animation animArr;
 
     void Start(){
 	    if(!animArr) animArr = gameObject.GetComponent<Animation>();

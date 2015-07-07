@@ -298,11 +298,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 492536}
-  - 114: {fileID: 11492510}
   - 114: {fileID: 11407140}
   - 114: {fileID: 11415966}
   - 114: {fileID: 11422136}
-  - 114: {fileID: 11446306}
+  - 114: {fileID: 11454384}
+  - 114: {fileID: 11493262}
+  - 114: {fileID: 11460568}
   m_Layer: 0
   m_Name: SilverLion
   m_TagString: Untagged
@@ -2463,7 +2464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .100000001
---- !u!114 &11446306
+--- !u!114 &11454384
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2471,11 +2472,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 119020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63f09e60e1aaf274eb2728f27581e033, type: 3}
+  m_Script: {fileID: 11500000, guid: c982fc1e8dfdb994193940072b598760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   heal: {fileID: 19811782}
---- !u!114 &11492510
+--- !u!114 &11460568
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2483,15 +2484,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 119020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6adf22aaf38a64740bc5713be553a589, type: 3}
+  m_Script: {fileID: 11500000, guid: dfd24a2ca6294e045a99ec27eec7a521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   idle: Rig.001|Idle_01
   attack: Rig.001|Attack_01_Basic
   hurt: Rig.001|Hurt_01
   spattack: Rig.001|Attack_02_Crit
-  current: 
   animArr: {fileID: 11144126}
+--- !u!114 &11493262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83f7a36ea1651b74fba7518921450fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tm: {fileID: 10268156}
 --- !u!137 &13796998
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

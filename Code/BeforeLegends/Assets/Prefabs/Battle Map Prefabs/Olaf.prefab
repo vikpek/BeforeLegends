@@ -873,10 +873,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 446484}
-  - 114: {fileID: 11467150}
-  - 114: {fileID: 11407652}
-  - 114: {fileID: 11412602}
-  - 114: {fileID: 11413530}
+  - 114: {fileID: 11427452}
+  - 114: {fileID: 11431568}
+  - 114: {fileID: 11422520}
   m_Layer: 10
   m_Name: Olaf
   m_TagString: Untagged
@@ -3112,29 +3111,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &11407652
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f19ce12ad8dbf29428f46c4d1b3bdce6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11412602
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 564f097c02a20e04aacd2b2b29eac64b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tm: {fileID: 10295412}
 --- !u!114 &11412944
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3146,7 +3122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd72d62b6d3634de987603e90ccfaabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11413530
+--- !u!114 &11422520
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -3154,27 +3130,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 152424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63f09e60e1aaf274eb2728f27581e033, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heal: {fileID: 19811396}
---- !u!114 &11467150
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6adf22aaf38a64740bc5713be553a589, type: 3}
+  m_Script: {fileID: 11500000, guid: dfd24a2ca6294e045a99ec27eec7a521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   idle: Rig|Idle_02_fight_1H
   attack: Rig|Attack_01_Basic
   hurt: Rig|Hurt_01
   spattack: Rig|Attack_02_Crit
-  current: 
   animArr: {fileID: 11155938}
+--- !u!114 &11427452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c982fc1e8dfdb994193940072b598760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heal: {fileID: 19811396}
+--- !u!114 &11431568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83f7a36ea1651b74fba7518921450fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tm: {fileID: 10295412}
 --- !u!114 &11468502
 MonoBehaviour:
   m_ObjectHideFlags: 1
