@@ -25,8 +25,6 @@ public class MoveOnClick : MonoBehaviour {
 		    }
 
 		    Vec2int[] path = WorldMapData.instance.findPath(objData.pos.x, objData.pos.y, MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y, objData.movedMax - objData.moved, false);
-            foreach (Vec2int v in path)
-                print("path: " + v.x + ", " + v.y);
             objData.followPath(path, 0.25f);
 	    }
     }

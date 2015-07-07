@@ -20,10 +20,13 @@ public class MapObjectCarrier : MonoBehaviour {
     public bool suspend = false;
 
     private int index = 0;
+    float passedTime = 0;
+	int lastIndex = 0;
     private Vec2int[] path;
-
+    bool pathWalkAStep = false;
     private bool waitFrame;
-
+    float theDur;
+    WorldMapData worlddata;
     public GameObject enemyGameObject;
 
     void Start(){
@@ -33,6 +36,13 @@ public class MapObjectCarrier : MonoBehaviour {
         //    audioObject = AudioMaster.instance.FetchAudioObject("Olaf");
         //else
             //audioObject = AudioMaster.instance.FetchAudioObject(gameObject.name.Substring(0, gameObject.name.Length - 7));
+        worlddata = WorldMapData.instance;
+    }
+
+    void Update()
+    {
+        if (pathWalkAStep)
+            PathWalkStep();
     }
 
     void onEvent_TurnEnded()
@@ -54,56 +64,51 @@ public class MapObjectCarrier : MonoBehaviour {
 
     public void followPath(Vec2int[] path, float dur) // don't know if that works bc there WAS a yield ._.
     {
-	    if(moving || path.Length == null) return;
+	    if(moving || path == null) return;
 	    Messenger.instance.send(new ActionStartedMessage());
 	    moving = true;
 	    this.path = path;
-	
-	    WorldMapData worlddata = WorldMapData.instance;
-	    float passedTime = 0;
+        theDur = dur;
+	    passedTime = 0;
 	    index = 0;
-	    int lastIndex = 0;
-	    while(passedTime/dur < path.Length - 1)
-        {
-		    float alpha = passedTime/dur;
-		    index = (int)alpha; // casted to int - was only "index = alpha;"
-		    alpha -= index;
-		
-		    Vector3 a = worlddata.tiles[path[index].x, path[index].y].position;
-		    Vector3 b = worlddata.tiles[path[index + 1].x, path[index + 1].y].position;
-		    gameObject.transform.position = new Vector3(Mathf.Lerp(a.x, b.x, alpha), gameObject.transform.position.y,  Mathf.Lerp(a.z, b.z, alpha));
-		
-		    bool reachedNext = index > lastIndex;
-		    if(reachedNext){
-			    moved++;
-			    setPosition(path[index]);
-			    lastIndex = index;
-			    Messenger.instance.send(new MapObjectMovedMessage(data, path[index-1]));
-		    }
-
-            if(waitFrame)
-            {
-                waitFrame = false;
-                print("wait Frame");
-                break;
-            }
-
-            print("don't wait Frame");
-            waitFrame = true;
-
-		    if(reachedNext && suspend){
-		 	    finalizeAt(index, path, true);
-		 	    return;
-		    }
-		
-		    if(!paused) passedTime += Time.deltaTime;
-	    }
-	
-	    finalizeAt(path.Length - 1, path, false);
-
+	    lastIndex = 0;
+        pathWalkAStep = true;
     }
 
-    
+    void PathWalkStep()
+    {
+        if(passedTime / theDur < path.Length - 1)
+        {
+            float alpha = passedTime / theDur;
+            index = (int)alpha; // casted to int - was only "index = alpha;"
+            alpha -= index;
+
+            Vector3 a = worlddata.tiles[path[index].x, path[index].y].position;
+            Vector3 b = worlddata.tiles[path[index + 1].x, path[index + 1].y].position;
+            gameObject.transform.position = new Vector3(Mathf.Lerp(a.x, b.x, alpha), gameObject.transform.position.y, Mathf.Lerp(a.z, b.z, alpha));
+
+            bool reachedNext = index > lastIndex;
+            if (reachedNext)
+            {
+                moved++;
+                setPosition(path[index]);
+                lastIndex = index;
+                Messenger.instance.send(new MapObjectMovedMessage(data, path[index - 1]));
+            }
+
+            if (reachedNext && suspend)
+            {
+                finalizeAt(index, path, true);
+                return;
+            }
+
+            if (!paused) passedTime += Time.deltaTime;
+        }
+        else
+        {
+            finalizeAt(path.Length - 1, path, false);
+        }
+    }
 
     void finalizeAt(int index, Vec2int[] path, bool suspended){
 	    Vector3 end = WorldMapData.instance.tiles[path[index].x, path[index].y].position;

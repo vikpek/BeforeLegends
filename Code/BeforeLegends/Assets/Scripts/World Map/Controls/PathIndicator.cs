@@ -16,7 +16,7 @@ public class PathIndicator : MonoBehaviour {
         }
     }
 
-    GameObject prefab;
+    public GameObject prefab;
 
     bool hidden = false;
     Vec2int[] path;
@@ -29,11 +29,16 @@ public class PathIndicator : MonoBehaviour {
     	Messenger.instance.listen(gameObject, "TurnBegan");
     }
 
-    void  updatePath(Vec2int[] newPath){
-    	if(newPath.Length != 0){
-    		foreach(GameObject go in gos){
-    			go.SetActive(false);
-    		}
+    void updatePath(Vec2int[] newPath){
+        if (newPath == null)
+        {
+            if (gos != null)
+            {
+    		    foreach(GameObject go in gos)
+                {
+    			    go.SetActive(false);
+    		    }
+            }
     		return;
     	}
     	if(gos == null) gos = new List<GameObject>();
@@ -68,7 +73,7 @@ public class PathIndicator : MonoBehaviour {
     	redraw(MouseTileInput.instance.lastTile);
     }
 
-    void  redraw(Vec2int goal){
+    void redraw(Vec2int goal){
     	MapObjectCarrier target = InterfaceData.instance.selectedCarrier;
     	if(!target) return;
     	updatePath(WorldMapData.instance.findPath(target.pos.x, target.pos.y, goal.x, goal.y, target.movedMax - target.moved, false));
