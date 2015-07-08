@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class HornedLionBattleActions{
@@ -22,7 +22,7 @@ public class HornedLionBattleActions{
 	    battle.playerData.hitPoints -= battle.enemyData.calcDamage(battle.playerData, 1); 
 	    battle.animateEnemy(Anims.ATTACK); 
 	    battle.animatePlayer(Anims.HURT);
-	    AudioMaster.instance.audioSource.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
+	    AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
     }
 
     void attackOpponentFinal(BattleController battle)
@@ -31,7 +31,7 @@ public class HornedLionBattleActions{
 	    battle.playerData.hitPoints -= battle.enemyData.calcDamage(battle.playerData, 4);
 	    battle.animateEnemy(Anims.SPATTACK); 
 	    battle.animatePlayer(Anims.HURT);
-	    AudioMaster.instance.audioSource.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack); 
+	    AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack); 
     }
 
     void healSelfOpponent(BattleController battle)

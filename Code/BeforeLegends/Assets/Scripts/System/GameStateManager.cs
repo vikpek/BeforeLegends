@@ -24,13 +24,9 @@ public class GameStateManager : MonoBehaviour {
 
     public BattleController battleC;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
     public void startBattle(GameObject player, GameObject enemy)
     {
+		AudioMaster.instance.BattleStartA015Play();
         battleC.init(player, enemy);
 	    state = 1;
 	    battle.SetActive(true);
@@ -39,6 +35,7 @@ public class GameStateManager : MonoBehaviour {
 
     public void endBattle(bool result, int exp)
     {
+		AudioMaster.instance.audioSourceMusic.Stop();
 	    state = 0;
 	    world.SetActive(true);
 	    battle.SetActive(false);
@@ -46,9 +43,4 @@ public class GameStateManager : MonoBehaviour {
 	    olaf.exp += exp;
         olaf.LevelUp();
     }
-
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
