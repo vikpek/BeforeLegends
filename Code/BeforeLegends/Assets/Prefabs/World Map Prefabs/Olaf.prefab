@@ -397,7 +397,6 @@ GameObject:
   - 4: {fileID: 439958}
   - 54: {fileID: 5433978}
   - 65: {fileID: 6553980}
-  - 114: {fileID: 11425464}
   - 114: {fileID: 11430100}
   - 114: {fileID: 11467226}
   - 114: {fileID: 11471276}
@@ -2573,7 +2572,7 @@ Transform:
   m_GameObject: {fileID: 183336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .00999999978, z: 0}
-  m_LocalScale: {x: 1.39999998, y: 1, z: 1.39999998}
+  m_LocalScale: {x: 1.60000002, y: 1, z: 1.60000002}
   m_Children: []
   m_Father: {fileID: 439958}
   m_RootOrder: 4
@@ -4673,32 +4672,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .100000001
---- !u!114 &11425464
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 117296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9efc54a18240e7e4eb5edb000632f757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioObject:
-    objectName: 
-    attack: {fileID: 0}
-    Walk: {fileID: 0}
-    die: {fileID: 0}
-    spattack: {fileID: 0}
-  pos:
-    x: 0
-    y: 0
-  movedMax: 8
-  moved: 0
-  moving: 0
-  paused: 0
-  suspend: 0
-  enemyGameObject: {fileID: 0}
 --- !u!114 &11430100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4765,7 +4738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1084c4b048affd4d83c7e5fff47646d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eat: 0
+  eat: 3
 --- !u!114 &11477504
 MonoBehaviour:
   m_ObjectHideFlags: 1
