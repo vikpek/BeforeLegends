@@ -62,8 +62,8 @@ public class FogOfWar : MonoBehaviour {
     {
 	    foreach(Hexagon hex in adjacent) {
 		    foreach(GameObject gO in hex.gameObjectList) {
-			    if(gO.tag == "Enemy")
-				    enemysInRange.Add(gO);
+                if (gO.tag == "Enemy")
+                    enemysInRange.Add(gO); 
 		    }
 	    }
     }
@@ -96,7 +96,9 @@ public class FogOfWar : MonoBehaviour {
 	    foreach(GameObject obj in enemysInRange) {
 		    Vec2int pos = obj.GetComponent<MapObjectCarrier>().pos;
 		    int temp = (pos.x - gameObject.GetComponent<MapObjectCarrier>().pos.x) + (pos.y - gameObject.GetComponent<MapObjectCarrier>().pos.y);
-		    if(temp < -visionRange - 1 || temp > visionRange + 1) {
+
+            if(temp < -visionRange - 1 || temp > visionRange + 1) {
+                //print("Enemy out of range: " + obj.name + "\n" + temp);
 			    enemysInRangeTemp.Add(obj);
 		    }
 	    }
