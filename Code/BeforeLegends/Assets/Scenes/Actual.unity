@@ -1812,14 +1812,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapMaterial: {fileID: 2100000, guid: 168d7a82298b3004fa234807531a6004, type: 2}
   size:
-    x: 96
-    y: 96
+    x: 128
+    y: 128
   chunkSize:
     x: 2
     y: 2
   seed: 0
   erosionScale: .100000001
-  continentScale: .0149999997
+  continentScale: .0900000036
   moistureScale: .0199999996
   temperatureScale: .100000001
   erosionWeight: .200000003
@@ -1888,74 +1888,74 @@ MonoBehaviour:
   - tileType: ice
     woodDropChance: 0
     stoneDropChance: 0
-    foodDropChance: .100000001
-    soulsDropChance: .200000003
+    foodDropChance: .0500000007
+    soulsDropChance: .150000006
     chance: 0
   - tileType: ice_mountain
     woodDropChance: .100000001
-    stoneDropChance: .300000012
-    foodDropChance: .100000001
-    soulsDropChance: .100000001
+    stoneDropChance: .200000003
+    foodDropChance: .0500000007
+    soulsDropChance: .0500000007
     chance: 0
   - tileType: tundra
-    woodDropChance: .200000003
-    stoneDropChance: .100000001
-    foodDropChance: .200000003
-    soulsDropChance: .100000001
+    woodDropChance: .100000001
+    stoneDropChance: .0500000007
+    foodDropChance: .100000001
+    soulsDropChance: .0500000007
     chance: 0
   - tileType: savanna
-    woodDropChance: .100000001
-    stoneDropChance: .100000001
-    foodDropChance: .25
-    soulsDropChance: .200000003
+    woodDropChance: .150000006
+    stoneDropChance: .0500000007
+    foodDropChance: .200000003
+    soulsDropChance: .0700000003
     chance: 0
   - tileType: dry_forest
-    woodDropChance: .300000012
-    stoneDropChance: .100000001
-    foodDropChance: .200000003
-    soulsDropChance: .100000001
+    woodDropChance: .200000003
+    stoneDropChance: .0500000007
+    foodDropChance: .150000006
+    soulsDropChance: .0500000007
     chance: 0
   - tileType: dry_mountain
-    woodDropChance: .100000001
-    stoneDropChance: .300000012
+    woodDropChance: .0500000007
+    stoneDropChance: .200000003
     foodDropChance: .100000001
-    soulsDropChance: .200000003
+    soulsDropChance: .0700000003
     chance: 0
   - tileType: grassland
     woodDropChance: .100000001
-    stoneDropChance: .100000001
-    foodDropChance: .400000006
-    soulsDropChance: .0500000007
+    stoneDropChance: .0500000007
+    foodDropChance: .430000007
+    soulsDropChance: 0
     chance: 0
   - tileType: forest
-    woodDropChance: .400000006
-    stoneDropChance: .100000001
-    foodDropChance: .25
-    soulsDropChance: .0500000007
+    woodDropChance: .300000012
+    stoneDropChance: .0500000007
+    foodDropChance: .330000013
+    soulsDropChance: 0
     chance: 0
   - tileType: forest_mountain
-    woodDropChance: .300000012
-    stoneDropChance: .300000012
-    foodDropChance: .25
-    soulsDropChance: .0500000007
+    woodDropChance: .25
+    stoneDropChance: .200000003
+    foodDropChance: .330000013
+    soulsDropChance: 0
     chance: 0
   - tileType: desert
     woodDropChance: 0
-    stoneDropChance: .100000001
-    foodDropChance: .100000001
-    soulsDropChance: .300000012
+    stoneDropChance: .0500000007
+    foodDropChance: .0500000007
+    soulsDropChance: .129999995
     chance: 0
   - tileType: desert_mountain
-    woodDropChance: .100000001
-    stoneDropChance: .25
-    foodDropChance: .100000001
-    soulsDropChance: .150000006
+    woodDropChance: .0500000007
+    stoneDropChance: .200000003
+    foodDropChance: .0500000007
+    soulsDropChance: .129999995
     chance: 0
   - tileType: jungle
     woodDropChance: .200000003
-    stoneDropChance: .100000001
-    foodDropChance: .300000012
-    soulsDropChance: .150000006
+    stoneDropChance: 0
+    foodDropChance: .25
+    soulsDropChance: .0500000007
     chance: 0
   SpawnChances:
   - tileType: water
