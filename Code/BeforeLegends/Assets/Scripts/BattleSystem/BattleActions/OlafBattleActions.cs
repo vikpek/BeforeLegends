@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class OlafBattleActions {
@@ -27,7 +27,7 @@ public class OlafBattleActions {
 	    battle.enemyData.hitPoints -= battle.playerData.calcDamage(battle.enemyData, 1); 
 	    battle.animateEnemy(Anims.HURT); 
 	    battle.animatePlayer(Anims.ATTACK);
-	    AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
+	    AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
     }
 
     void enraged(BattleController battle){ // Attack that deals more damage when low on HP
@@ -38,7 +38,7 @@ public class OlafBattleActions {
 	    battle.enemyData.hitPoints -= newPlayerData.calcDamage(battle.enemyData, enragedBonus); 
 	    battle.animateEnemy(Anims.HURT); 
 	    battle.animatePlayer(Anims.SPATTACK);
-	    AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack);
+	    AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack);
     }
 
     void healself(BattleController battle){ // the char heals himself

@@ -44,6 +44,10 @@ public class MapObjectCarrier : MonoBehaviour {
 
     void onEvent_TurnEnded()
     {
+		if(AudioMaster.instance.audioSourceMiscSounds.isPlaying)
+		{
+			AudioMaster.instance.audioSourceMiscSounds.Stop();
+		}
 	    moved = 0;
     }
 
@@ -131,15 +135,18 @@ public class MapObjectCarrier : MonoBehaviour {
 				    switch(gO.GetComponent<Ressource>().rType) {
 				    case "Food":
 					    ResourceManager.instance.ResourceAS("Food", gO.GetComponent<Ressource>().rValue);
+						AudioMaster.instance.WmUnitFoodCollectA005Play();
 					    break;
 				    case "Stone":
 					    ResourceManager.instance.ResourceAS("Stone", gO.GetComponent<Ressource>().rValue);
+						AudioMaster.instance.WmUnitStoneCollectA007Play();
 					    break;
 				    case "Wood":
 					    ResourceManager.instance.ResourceAS("Wood", gO.GetComponent<Ressource>().rValue);
+						AudioMaster.instance.WmUnitWoodCollectA008Play();
 					    break;
 				    case "Soul":
-					    ResourceManager.instance.ResourceAS("Soul", gO.GetComponent<Ressource>().rValue);
+					    ResourceManager.instance.ResourceAS("Soul", gO.GetComponent<Ressource>().rValue);						
 					    break;
 				    case "default":
 					    Debug.Log("Wrong Type");
