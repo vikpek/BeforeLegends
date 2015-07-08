@@ -114,7 +114,6 @@ public class MapObjectCarrier : MonoBehaviour {
 	    setPosition(path[index]);
 	    moving = false;
 	    suspend = false;
-        print("ActionEndedMessage");
 	    Messenger.instance.send(new ActionEndedMessage(""));
 	    if(!suspended){
 		    moved++;

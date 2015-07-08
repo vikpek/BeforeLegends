@@ -20,6 +20,7 @@ public class MoveOnClick : MonoBehaviour {
 				    InterfaceData.instance.selectedCarrier = objData;
 				    FogOfWar.instance.CheckTiles(new Vec2int(objData.pos.x, objData.pos.y), FogOfWar.instance.visionRange);
 				    FogOfWar.instance.SetEntitiesToVisible();
+                    print("called?");
 				    return;
 			    }
 		    }
