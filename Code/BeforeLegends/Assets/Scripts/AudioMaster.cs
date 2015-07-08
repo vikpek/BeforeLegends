@@ -134,6 +134,13 @@ public class AudioMaster : MonoBehaviour {
 		}
 	}
 
+
+	[SerializeField]
+	private AudioClip wmUnitSoulCollectA039;
+	public void wmUnitSoulCollectA039Play(){
+		AudioMaster.instance.audioSourceEnemies.PlayOneShot(wmUnitSoulCollectA039);
+	}
+
 	// Music
 
 	[SerializeField]

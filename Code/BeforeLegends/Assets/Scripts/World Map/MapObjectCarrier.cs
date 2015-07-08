@@ -147,6 +147,7 @@ public class MapObjectCarrier : MonoBehaviour {
 					    break;
 				    case "Soul":
 					    ResourceManager.instance.ResourceAS("Soul", gO.GetComponent<Ressource>().rValue);						
+						AudioMaster.instance.wmUnitSoulCollectA039Play();
 					    break;
 				    case "default":
 					    Debug.Log("Wrong Type");
