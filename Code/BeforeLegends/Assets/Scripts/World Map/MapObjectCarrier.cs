@@ -7,7 +7,7 @@ public class MapObjectCarrier : MonoBehaviour {
 
     public AudioObject audioObject = new AudioObject();
 
-    public Vec2int pos = new Vec2int(1,1);
+    public Vec2int pos;
 
     public int movedMax = 8;
     public int moved = 0;
