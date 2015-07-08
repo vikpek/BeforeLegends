@@ -864,6 +864,48 @@ SkinnedMeshRenderer:
     m_Center: {x: -.00656607747, y: .0388579518, z: -.0866705328}
     m_Extent: {x: .523071885, y: .394831717, z: .277459025}
   m_DirtyAABB: 0
+--- !u!1001 &249959919
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 483218, guid: 0b15ac471c24940fbb3f14862ffea3d0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 483218, guid: 0b15ac471c24940fbb3f14862ffea3d0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 483218, guid: 0b15ac471c24940fbb3f14862ffea3d0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 483218, guid: 0b15ac471c24940fbb3f14862ffea3d0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 483218, guid: 0b15ac471c24940fbb3f14862ffea3d0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 483218, guid: 0b15ac471c24940fbb3f14862ffea3d0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 483218, guid: 0b15ac471c24940fbb3f14862ffea3d0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 483218, guid: 0b15ac471c24940fbb3f14862ffea3d0, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0b15ac471c24940fbb3f14862ffea3d0, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &254931992
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +988,6 @@ GameObject:
   - 114: {fileID: 258453202}
   - 114: {fileID: 258453198}
   - 114: {fileID: 258453205}
-  - 114: {fileID: 258453207}
   - 114: {fileID: 258453206}
   - 114: {fileID: 258453208}
   - 82: {fileID: 258453211}
@@ -1164,57 +1205,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedCarrier: {fileID: 0}
---- !u!114 &258453207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 258453192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03363eb326f862c4395b2fc9b276823f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuClickA002: {fileID: 8300000, guid: a4ec24e2389c546f78b2b99785450d30, type: 3}
-  menuGameStartA003: {fileID: 8300000, guid: 2d711206f01cd47a28158f6d9d692072, type: 3}
-  wmUnitMovementA004: {fileID: 8300000, guid: 7fe9507d1a22743418aaa5151d53d54b, type: 3}
-  wmUnitFoodCollectA005_1: {fileID: 8300000, guid: 277494bc433ce4ce6bf486d7cd435016,
-    type: 3}
-  wmUnitFoodCollectA005_2: {fileID: 8300000, guid: 2bbb284ac5c6d486f80425751ade98aa,
-    type: 3}
-  wmUnitFoodCollectA005_3: {fileID: 8300000, guid: 3330cb1a724a54842866668c8b7ceeda,
-    type: 3}
-  wmUnitFoodCollectA005_4: {fileID: 8300000, guid: 735f9ca9799284610b5cae9aeef916f0,
-    type: 3}
-  wmUnitStoneCollectA007_1: {fileID: 8300000, guid: 080063d7c86c14c3b8dea944bf0cd842,
-    type: 3}
-  wmUnitStoneCollectA007_2: {fileID: 8300000, guid: 803952190593d4ad0b3d701b81e3d7a5,
-    type: 3}
-  wmUnitWoodCollectA008_1: {fileID: 8300000, guid: 1f80b03f52d0244928f565fda0c9e2db,
-    type: 3}
-  wmUnitWoodCollectA008_2: {fileID: 8300000, guid: 123ebb2ea1bd64079a6f470251c7edd4,
-    type: 3}
-  battleStartA015: {fileID: 8300000, guid: 74681d029f1d24ea38b590924059ee63, type: 3}
-  battleEndVictoryA025: {fileID: 0}
-  battleEndDefeatA026: {fileID: 0}
-  boardgamePieceClickA038_1: {fileID: 8300000, guid: 7f8fc2ce971ec4ccfb47122ff5e57847,
-    type: 3}
-  boardgamePieceClickA038_2: {fileID: 8300000, guid: d0f0283e761114574b32d917c687e522,
-    type: 3}
-  boardgamePieceClickA038_3: {fileID: 8300000, guid: 38bed3b09236b464e88ea6f99c10eea4,
-    type: 3}
-  trackWMMainA028: {fileID: 8300000, guid: 528c06b62a9074be59a109e67fdb17f6, type: 3}
-  trackBMA016: {fileID: 8300000, guid: 0fe5ec4d546d9497ba377ecb15da6ec8, type: 3}
-  trackBMA017: {fileID: 8300000, guid: 8af5cc7414cd3467398a07dd9a3bc8f6, type: 3}
-  audioSourceEnemies: {fileID: 258453211}
-  audioSourceMiscSounds: {fileID: 258453210}
-  audioSourceMusic: {fileID: 258453209}
-  audioObjects:
-  - objectName: FirstAudioObject
-    attack: {fileID: 8300000, guid: a4ec24e2389c546f78b2b99785450d30, type: 3}
-    Walk: {fileID: 8300000, guid: d7de280f86c52a74abc1f5dc86f9baaf, type: 3}
-    die: {fileID: 8300000, guid: 898d98a1426a39846b8bf351bbb6338f, type: 3}
-    spattack: {fileID: 8300000, guid: 9d820ffcf7d61e3498286a5f5cfd6c15, type: 3}
 --- !u!114 &258453208
 MonoBehaviour:
   m_ObjectHideFlags: 0
