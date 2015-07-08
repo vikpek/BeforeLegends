@@ -27,6 +27,7 @@ public class ResourceManager : MonoBehaviour
     }
 
     public List<GameObject> ressourcesToDeregister = new List<GameObject>();
+    public List<GameObject> toDelete = new List<GameObject>();
     public LResource[] resources;
     public float loseHealthInPercent;
     public float generateHealthInPercent;

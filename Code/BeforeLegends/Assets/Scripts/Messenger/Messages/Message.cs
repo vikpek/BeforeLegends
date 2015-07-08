@@ -43,6 +43,21 @@ public class TurnEndedMessage : Message{
                 ResourceManager.instance.RegenerateHealthThroughEating();
 			}
 		}
+
+        foreach (GameObject r in ResourceManager.instance.ressourcesToDeregister)
+        {
+
+            if(r.GetComponent<Ressource>().cooldown != 0) {
+                r.GetComponent<Ressource>().cooldown--;
+                if(r.GetComponent<Ressource>().cooldown == 0) {
+                    r.GetComponent<Ressource>().Respawn();
+                }
+            }
+        }
+        foreach (GameObject r in ResourceManager.instance.toDelete)
+        {
+            ResourceManager.instance.ressourcesToDeregister.Remove(r);
+        }
 		this.turn = turnI;
 	}
 }

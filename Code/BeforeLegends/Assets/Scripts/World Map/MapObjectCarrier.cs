@@ -3,9 +3,6 @@ using System.Collections;
 
 public class MapObjectCarrier : MonoBehaviour {
 
-
-    #pragma strict
-
     public MapObjectData data = new MapObjectData();
 
     public AudioObject audioObject = new AudioObject();
@@ -56,7 +53,7 @@ public class MapObjectCarrier : MonoBehaviour {
 	    worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Remove(data);
 	    data.pos = pos;
 	    worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Add(data);
-	    //CollectRessources(pos);
+	    CollectRessources(pos);
 	    FogOfWar.instance.CheckTiles(pos, FogOfWar.instance.visionRange);
 	    FogOfWar.instance.SetEntitiesToVisible();
 	    FogOfWar.instance.SetEntitiesToInvisible();

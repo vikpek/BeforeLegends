@@ -5,7 +5,7 @@ public class MouseMovement : MonoBehaviour {
 
     public float dampen;
 
-    Vector3 nextPos;
+    public Vector3 nextPos;
     public float mouseScrollDeltaY;
     public float minY;
     public float maxY;

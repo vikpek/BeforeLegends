@@ -1966,9 +1966,6 @@ MonoBehaviour:
   desert: 190000001a000000
   desert_mountain: 1b000000
   jungle: 2100000022000000
-  dry_foreachest: 
-  foreachest: 
-  foreachest_mountain: 
   chunkTexture: {fileID: 0}
   chunkTextureNormal: {fileID: 0}
   chunkTextureRects: []
@@ -2348,6 +2345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ressourcesToDeregister: []
+  toDelete: []
   resources:
   - name: Wood
     number: 100
@@ -2809,6 +2807,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1816951263}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1848726231
+GameObject:
+  m_PrefabParentObject: {fileID: 117296, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
+  m_PrefabInternal: {fileID: 1875136104}
 --- !u!1 &1862178467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2965,7 +2967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 1848726231}
   round: 0
   playerData:
     attack: 0
@@ -3052,7 +3054,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8113110, guid: f0196947ed4160549ba809d63fcb5686, type: 2}
+    - {fileID: 8182834, guid: f0196947ed4160549ba809d63fcb5686, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f0196947ed4160549ba809d63fcb5686, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1981189445
@@ -3334,6 +3338,7 @@ GameObject:
   - 92: {fileID: 2139333536}
   - 124: {fileID: 2139333535}
   - 114: {fileID: 2139333534}
+  - 114: {fileID: 2139333539}
   m_Layer: 0
   m_Name: World Camera
   m_TagString: MainCamera
@@ -3417,3 +3422,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1200521818}
   m_RootOrder: 5
+--- !u!114 &2139333539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2139333533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f036736daa0d49f45bb1faf3cf21bf60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionDuration: 2.5
+  startingPos: {x: 0, y: 0, z: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  t: 0

@@ -109,6 +109,8 @@ public class FogOfWar : MonoBehaviour {
     public void ClearLists()
     {
 	    adjacent.Clear();
+        enemysInRange.Clear();
+        ressourceInRange.Clear();
     }
 
     public void SetLayerRecursively(GameObject obj, int newLayer)

@@ -55,9 +55,6 @@ public class WorldMapGenerator : MonoBehaviour
     public int[] desert;
     public int[] desert_mountain;
     public int[] jungle;
-    public int[] dry_foreachest;
-    public int[] foreachest;
-    public int[] foreachest_mountain;
 
     public Texture2D chunkTexture;
 
@@ -251,7 +248,7 @@ public class WorldMapGenerator : MonoBehaviour
  		    if(e == matID)
  			    return DropChances[4];
  	    }
- 	    foreach(int e in dry_foreachest) {
+ 	    foreach(int e in dry_forest) {
  		    if(e == matID)
  			    return DropChances[5];
  	    }
@@ -263,11 +260,11 @@ public class WorldMapGenerator : MonoBehaviour
  		    if(e == matID)
  			    return DropChances[7];
  	    }
- 	    foreach(int e in foreachest) {
+ 	    foreach(int e in forest) {
  		    if(e == matID)
  			    return DropChances[8];
  	    }
- 	    foreach(int e in foreachest_mountain) {
+ 	    foreach(int e in forest_mountain) {
  		    if(e == matID)
  			    return DropChances[9];
  	    }
@@ -336,6 +333,7 @@ public class WorldMapGenerator : MonoBehaviour
                     if (e.tileType == "ice" || e.tileType == "desert" || e.tileType == "water")
                         spawn = false;
                 }
+                FogOfWar.instance.ClearLists();
                 if (spawn)
                 {
                     GameObject player = GameObject.Find("Olaf");
@@ -344,6 +342,9 @@ public class WorldMapGenerator : MonoBehaviour
                     objData.setPosition(new Vec2int(randX, randY));
                     player.transform.position = worldData.tiles[randX, randY].position;
                     InterfaceData.instance.selectedCarrier = objData;
+
+                    GameObject.Find("World Camera").GetComponent<MouseMovement>().nextPos = new Vector3(player.transform.position.x, 4.0f, player.transform.position.z - 4.0f);
+                    CameraTransitions.Instance.LerpCamera(player.transform);
 
                     playerSpawned = true;
                 }
