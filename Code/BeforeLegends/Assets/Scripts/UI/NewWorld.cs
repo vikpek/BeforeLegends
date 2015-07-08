@@ -8,15 +8,25 @@ public class NewWorld : MonoBehaviour {
     public Slider sTemperature;
     public Slider sAltitude;
     public Slider sHumidity;
+    public Toggle tWinBuilder;
+    public Toggle tWinGlory;
 
     public Vec2int size;
     public float temperature;
     public float altitude;
     public float humidity;
+    public bool winBuilder;
+    public bool winGlory;
+
+    public int foodToWin;
+    public int stoneToWin;
+    public int woodToWin;
+
+    public int scoreToWin;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Awake () {
+        DontDestroyOnLoad(this);
 	}
 	
 	// Update is called once per frame
@@ -35,5 +45,8 @@ public class NewWorld : MonoBehaviour {
         temperature = sTemperature.value;
         altitude = sAltitude.value;
         humidity = sHumidity.value;
+
+        winBuilder = tWinBuilder.isOn;
+        winGlory = tWinGlory.isOn;
 	}
 }

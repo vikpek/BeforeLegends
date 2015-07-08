@@ -119,7 +119,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -97, y: -28}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &56634899
@@ -291,7 +291,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -71, y: 1}
+  m_AnchoredPosition: {x: -168, y: -27}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &172876832
@@ -722,6 +722,63 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 384385966}
+--- !u!1 &479564457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 479564459}
+  - 114: {fileID: 479564458}
+  m_Layer: 0
+  m_Name: MenuOptions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &479564458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479564457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30535947714ef124eac723cb8c6603c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sSize: {fileID: 908933443}
+  sTemperature: {fileID: 737267308}
+  sAltitude: {fileID: 653644544}
+  sHumidity: {fileID: 257936508}
+  tWinBuilder: {fileID: 1728804614}
+  tWinGlory: {fileID: 1914368767}
+  size:
+    x: 0
+    y: 0
+  temperature: 0
+  altitude: 0
+  humidity: 0
+  winBuilder: 0
+  winGlory: 0
+  foodToWin: 100
+  stoneToWin: 50
+  woodToWin: 50
+  scoreToWin: 3000
+--- !u!4 &479564459
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479564457}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 759.912903, y: -75.5343628, z: 1092.5509}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &509432601
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,7 +919,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 555818726}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 936515480}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1867749686}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &555818726
@@ -1008,9 +1089,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2076840600}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: .100000001
   m_WholeNumbers: 0
-  m_Value: .5
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1372,7 +1453,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 936515483}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1867749686}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 936515480}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &936515483
@@ -1898,11 +2003,11 @@ MonoBehaviour:
     m_Alignment: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Path to glory
 
-    -> Collect x glory'
+    -> Collect 3000 glory'
 --- !u!222 &1333521113
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2249,7 +2354,7 @@ GameObject:
   - 114: {fileID: 1599749209}
   - 114: {fileID: 1599749208}
   m_Layer: 5
-  m_Name: Next
+  m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2311,7 +2416,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1599749209}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2006317450}
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1599749209
@@ -2433,7 +2550,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Next
+  m_Text: Start
 --- !u!222 &1669099573
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2951,11 +3068,11 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Civilization Builder
 
-    -> Collect x Food
+    -> Collect 100 Food
 
-    -> Collect x Wood
+    -> Collect 50 Wood
 
-    -> Collect x Stone'
+    -> Collect 50 Stone'
 --- !u!222 &1914353911
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3203,19 +3320,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2006317445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30535947714ef124eac723cb8c6603c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 08875b8188dca4549af1fb4fd073d079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sSize: {fileID: 908933443}
-  sTemperature: {fileID: 737267308}
-  sAltitude: {fileID: 653644544}
-  sHumidity: {fileID: 257936508}
-  size:
-    x: 0
-    y: 0
-  temperature: 0
-  altitude: 0
-  humidity: 0
 --- !u!1 &2054506293
 GameObject:
   m_ObjectHideFlags: 0
