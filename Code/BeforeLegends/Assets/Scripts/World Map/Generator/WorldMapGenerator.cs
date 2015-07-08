@@ -75,6 +75,14 @@ public class WorldMapGenerator : MonoBehaviour
 
     public FlatHexagon flatHex;
 
+    void Awake() {
+        NewWorld settings = GameObject.Find("MenuOptions").GetComponent<NewWorld>();
+        size = settings.size;
+        continentScale = settings.altitude;
+        moistureScale = settings.humidity;
+        temperatureScale = settings.temperature;
+    }
+
     void Start()
     {
         flatHex = new FlatHexagon(1);
