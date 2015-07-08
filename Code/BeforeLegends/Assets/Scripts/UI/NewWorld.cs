@@ -31,6 +31,8 @@ public class NewWorld : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (sSize == null)
+            return;
         switch ((int)sSize.value) {
             case 0:
                 size = new Vec2int(32, 32);
