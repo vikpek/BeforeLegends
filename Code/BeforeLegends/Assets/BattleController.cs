@@ -98,12 +98,12 @@ public class BattleController : MonoBehaviour {
     {
 		    if(playerData.hitPoints <= 0){
 			    playerWorldObject.SetActive(false);
-			    gameSM.endBattle(false, 0);
+                GameStateManager.instance.endBattle(false, 0);
                 Messenger.instance.send(new AllActionsEndedMessage());
 			    return true;
 		    }else if(enemyData.hitPoints <= 0){
 			    enemyWorldObject.SetActive(false);
-			    gameSM.endBattle(true, enemyData.expToGain);
+                GameStateManager.instance.endBattle(true, enemyData.expToGain);
                 Messenger.instance.send(new AllActionsEndedMessage());
 			    return true;
 		    }
@@ -144,7 +144,7 @@ public class BattleController : MonoBehaviour {
 
     void Awake(){
         playerAnimator = player.GetComponent<CharacterAnimations>();
-        playerParticles = player.GetComponent<CharacterParticleController>().heal; // ._. trello (Note Name: CharacterParticleController)
+        //playerParticles = player.GetComponent<CharacterParticleController>().heal; // ._. trello (Note Name: CharacterParticleController)
         playerHPText = player.GetComponent<HPText>(); 
     }
 

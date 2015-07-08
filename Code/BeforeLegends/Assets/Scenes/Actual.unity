@@ -2923,7 +2923,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11425464, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1891227680
@@ -3358,6 +3359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dampen: 1
+  nextPos: {x: 0, y: 0, z: 0}
   mouseScrollDeltaY: 0
   minY: 1
   maxY: 50
