@@ -34,41 +34,105 @@ public class AudioMaster : MonoBehaviour {
 	}
 
 	[SerializeField]
-	private AudioClip wmUnitFoodCollectA005;
+	private AudioClip wmUnitFoodCollectA005_1;
+	[SerializeField]
+	private AudioClip wmUnitFoodCollectA005_2;
+	[SerializeField]
+	private AudioClip wmUnitFoodCollectA005_3;
+	[SerializeField]
+	private AudioClip wmUnitFoodCollectA005_4;
+
 	public void WmUnitFoodCollectA005Play(){
-		AudioMaster.instance.audioSourceEnemies.PlayOneShot(wmUnitFoodCollectA005);
+		switch (Random.Range(0,4)) {
+			case 0:
+				AudioMaster.instance.audioSourceEnemies.PlayOneShot(wmUnitFoodCollectA005_1);
+				break;
+			case 1:
+				AudioMaster.instance.audioSourceEnemies.PlayOneShot(wmUnitFoodCollectA005_2);
+				break;
+			case 2:
+				AudioMaster.instance.audioSourceEnemies.PlayOneShot(wmUnitFoodCollectA005_3);
+				break;
+			case 3:
+				AudioMaster.instance.audioSourceEnemies.PlayOneShot(wmUnitFoodCollectA005_4);
+				break;
+			default:
+				break;
+		}
 	}
 
 	[SerializeField]
-	private AudioClip wmUnitStoneCollectA007;
+	private AudioClip wmUnitStoneCollectA007_1;
+	[SerializeField]
+	private AudioClip wmUnitStoneCollectA007_2;
+
 	public void WmUnitStoneCollectA007Play(){
-		AudioMaster.instance.audioSourceEnemies.PlayOneShot(wmUnitStoneCollectA007);
+		Random rand = new Random();
+		
+		if (Random.Range(0, 2) == 0)
+			AudioMaster.instance.audioSourceMiscSounds.PlayOneShot(wmUnitStoneCollectA007_1);
+		else
+			AudioMaster.instance.audioSourceMiscSounds.PlayOneShot(wmUnitStoneCollectA007_2);
+
 	}
 
 	[SerializeField]
-	private AudioClip wmUnitWoodCollectA008;
+	private AudioClip wmUnitWoodCollectA008_1;
+	[SerializeField]
+	private AudioClip wmUnitWoodCollectA008_2;
 	public void WmUnitWoodCollectA008Play(){
-		AudioMaster.instance.audioSourceEnemies.PlayOneShot(wmUnitWoodCollectA008);
+
+		Random rand = new Random();
+		
+		if (Random.Range(0, 2) == 0)
+			AudioMaster.instance.audioSourceMiscSounds.PlayOneShot(wmUnitWoodCollectA008_1);
+		else
+			AudioMaster.instance.audioSourceMiscSounds.PlayOneShot(wmUnitWoodCollectA008_2);
+
 	}
 	
 	[SerializeField]
 	private AudioClip battleStartA015;
 	public void BattleStartA015Play(){
-		AudioMaster.instance.audioSourceEnemies.PlayOneShot(battleStartA015);
+		AudioMaster.instance.audioSourceMusic.PlayOneShot(battleStartA015);
+
 	}
 
 	[SerializeField]
 	private AudioClip battleEndVictoryA025;
 	public void BattleEndVictoryA025Play(){
-		AudioMaster.instance.audioSourceEnemies.PlayOneShot(battleEndVictoryA025);
+		AudioMaster.instance.audioSourceMiscSounds.PlayOneShot(battleEndVictoryA025);
 	}
 
 	[SerializeField]
 	private AudioClip battleEndDefeatA026;
 	public void BattleEndDefeatA026Play(){
-		AudioMaster.instance.audioSourceEnemies.PlayOneShot(battleEndDefeatA026);
+		AudioMaster.instance.audioSourceMiscSounds.PlayOneShot(battleEndDefeatA026);
 	}
 
+
+	[SerializeField]
+	private AudioClip boardgamePieceClickA038_1;
+	[SerializeField]
+	private AudioClip boardgamePieceClickA038_2;
+	[SerializeField]
+	private AudioClip boardgamePieceClickA038_3;
+
+	public void boardgamePieceClickA038Play(){
+		switch (Random.Range(0,3)) {
+		case 0:
+			AudioMaster.instance.audioSourceEnemies.PlayOneShot(boardgamePieceClickA038_1);
+			break;
+		case 1:
+			AudioMaster.instance.audioSourceEnemies.PlayOneShot(boardgamePieceClickA038_2);
+			break;
+		case 2:
+			AudioMaster.instance.audioSourceEnemies.PlayOneShot(boardgamePieceClickA038_3);
+			break;
+		default:
+			break;
+		}
+	}
 
 	// Music
 

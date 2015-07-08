@@ -12,10 +12,17 @@ public class Ressource : MonoBehaviour {
     public float fallSpeed; 
     public bool fall = false;
 
+	private bool playedClick = false;
+
     void Update() {
 	    if(gameObject.transform.position.y > 0 && fall == true) {
-		    gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - fallSpeed, gameObject.transform.position.z);
+			gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - fallSpeed, gameObject.transform.position.z);
+
 	    }
+		if(gameObject.transform.position.y == 0 && fall == true && playedClick == false) {
+			AudioMaster.instance.boardgamePieceClickA038Play();
+			playedClick = true;
+		}
     }
 
     public void Respawn()
