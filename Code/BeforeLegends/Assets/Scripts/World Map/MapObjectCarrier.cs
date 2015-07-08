@@ -9,7 +9,7 @@ public class MapObjectCarrier : MonoBehaviour {
 
     public Vec2int pos;
 
-    public int movedMax = 8;
+    public int movedMax = 4;
     public int moved = 0;
 
     public bool moving = false;
@@ -118,7 +118,7 @@ public class MapObjectCarrier : MonoBehaviour {
 	    setPosition(path[index]);
 	    moving = false;
 	    suspend = false;
-        print("ActionEndedMessage");
+        //print("ActionEndedMessage");
 	    Messenger.instance.send(new ActionEndedMessage(""));
 	    if(!suspended){
 		    moved++;

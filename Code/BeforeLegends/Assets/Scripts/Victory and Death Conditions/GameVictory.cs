@@ -4,10 +4,10 @@ using System.Collections;
 
 public class GameVictory : MonoBehaviour {
 
-    int scoreToWin;
-    Text textVictory;
+    public int scoreToWin;
+    public Text textVictory;
 
-    GameObject[] gameObjectsToDeactivateOnGameOver;
+    public GameObject[] gameObjectsToDeactivateOnGameOver;
 
 
     void Update () {
