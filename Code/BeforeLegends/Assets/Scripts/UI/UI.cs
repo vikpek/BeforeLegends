@@ -14,6 +14,6 @@ public class UI : MonoBehaviour {
 	}
 
     public void StartGame() {
-        Application.LoadLevel("Actual");
+        Application.LoadLevel("Actual_Luke");
     }
 }

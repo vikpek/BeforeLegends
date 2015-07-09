@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 3
+  m_AmbientMode: 0
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
@@ -68,7 +68,7 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-  m_LightmapSnapshot: {fileID: 112000000, guid: c7c531124df0b8c4988e8d5af27baf8b,
+  m_LightmapSnapshot: {fileID: 112000000, guid: 9dde6e3c525e9544f88d4038e7449642,
     type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -1041,7 +1041,7 @@ Transform:
   - {fileID: 1891227681}
   - {fileID: 219670049}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!114 &258453197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2929,8 +2929,8 @@ Transform:
   m_LocalPosition: {x: 111.900002, y: 10.6999998, z: 1000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 1200521818}
+  m_RootOrder: 8
 --- !u!1 &796770398
 GameObject:
   m_ObjectHideFlags: 0
@@ -3591,7 +3591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &988179220
 Light:
   m_ObjectHideFlags: 0
@@ -3602,7 +3602,7 @@ Light:
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: .839999974
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -3610,8 +3610,8 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_Strength: 1
-    m_Bias: .0500000007
-    m_NormalBias: .400000006
+    m_Bias: .0599999987
+    m_NormalBias: .444999993
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -3744,7 +3744,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &1039192838
 GameObject:
   m_ObjectHideFlags: 0
@@ -4129,6 +4129,8 @@ Transform:
   - {fileID: 988179221}
   - {fileID: 409246233}
   - {fileID: 473554654}
+  - {fileID: 786348716}
+  - {fileID: 1437882037}
   m_Father: {fileID: 258453196}
   m_RootOrder: 0
 --- !u!114 &1200521819
@@ -4638,7 +4640,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1 &1304912619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4933,7 +4935,6 @@ GameObject:
   - 222: {fileID: 1363914977}
   - 114: {fileID: 1363914976}
   - 114: {fileID: 1363914975}
-  - 114: {fileID: 1363914974}
   - 114: {fileID: 1363914973}
   m_Layer: 5
   m_Name: Shop
@@ -4999,24 +5000,6 @@ MonoBehaviour:
     offerCardImage: {fileID: 559447162}
     offerBuyButton: {fileID: 980791710}
   rm: {fileID: 0}
---- !u!114 &1363914974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11441366, guid: 86c330a3c1ce24a459d1aa5d0326f5be,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1363914971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56810e1842976024dae585451f654b5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startSlideDistancePercentage: {x: 0, y: 0, z: 0}
-  slide:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!114 &1363914975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5034,7 +5017,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1363914974}
+        - m_Target: {fileID: 0}
           m_MethodName: SlideDown
           m_Mode: 1
           m_Arguments:
@@ -5051,7 +5034,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1363914974}
+        - m_Target: {fileID: 0}
           m_MethodName: SlideUp
           m_Mode: 1
           m_Arguments:
@@ -5201,7 +5184,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!114 &1427169112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5411,7 +5394,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 98304
+    m_Bits: 4294967295
   m_Lightmapping: 4
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -5427,8 +5410,8 @@ Transform:
   m_LocalPosition: {x: 111.900002, y: 10.6999998, z: 1000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 1200521818}
+  m_RootOrder: 9
 --- !u!1 &1448053683
 GameObject:
   m_ObjectHideFlags: 0
