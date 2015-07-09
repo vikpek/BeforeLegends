@@ -9,13 +9,13 @@ public class MoveOnClick : MonoBehaviour {
     void Update(){
         if(Input.GetMouseButtonDown(0) && !mouseOverUIElement)
         {
-
-			AudioMaster.instance.MenuClickA002Play();
+            if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+                return;
 		    if(objData == null)
             {
 			    objData = gameObject.GetComponent<MapObjectCarrier>();
 			    if(objData == null)
-                {                  	
+                {
 				    objData = gameObject.AddComponent<MapObjectCarrier>();
 				    objData.setPosition(new Vec2int(MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y));
 				    transform.position = WorldMapData.instance.tiles[objData.pos.x, objData.pos.y].position; 
