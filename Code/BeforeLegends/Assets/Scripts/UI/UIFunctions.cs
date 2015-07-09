@@ -20,10 +20,6 @@ public class UIFunctions : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if(Input.GetKeyDown(KeyCode.H))
-        {
-            print("slideY.Evaluate(slideYTime) * slideDistance.y: " + slideY.Evaluate(slideYTime) * slideDistance.y);
-        }
 	    switch(slideState)
         {
             case 1:
