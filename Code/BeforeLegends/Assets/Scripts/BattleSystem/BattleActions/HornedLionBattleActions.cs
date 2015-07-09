@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HornedLionBattleActions{
+public class HornedLionBattleActions : MonoBehaviour{
 
     void executeAction(BattleController battle){
 	    switch(battle.enemyAction){ // always remember to add new actions BELOW and in BattleController.js

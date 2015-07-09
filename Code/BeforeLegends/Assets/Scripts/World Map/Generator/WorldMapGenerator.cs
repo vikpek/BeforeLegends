@@ -69,10 +69,13 @@ public class WorldMapGenerator : MonoBehaviour
     public Vector2 moistureSeed;
     public Vector2 erosionSeed;
 
+    public Dictionary<GameObject, GameObject> enemys;
+    
     public FlatHexagon flatHex;
 
     void Start()
     {
+        enemys = new Dictionary<GameObject, GameObject>();
         flatHex = new FlatHexagon(1);
         setSeeds();
         packTextures();
@@ -131,9 +134,11 @@ public class WorldMapGenerator : MonoBehaviour
 		    if(tile.mapObjects.Count != 0){
 			    GameObject go = (GameObject)Instantiate(CharacterModelPrefabs.prefabs[tile.mapObjects[0].appearanceID], tile.position, Quaternion.identity);
 			    go.transform.parent = transform;
-			    go.GetComponent<MapObjectCarrier>().pos = tile.gridPos;
-			    go.GetComponent<MapObjectCarrier>().data = tile.mapObjects[0];
+			    go.GetComponentInChildren<MapObjectCarrier>().pos = tile.gridPos;
+                go.GetComponentInChildren<MapObjectCarrier>().data = tile.mapObjects[0];
 			    tile.gameObjectList.Add(go);
+                enemys.Add(go, go.GetComponentInChildren<MapObjectCarrier>().gameObject);
+                go.GetComponentInChildren<MapObjectCarrier>().gameObject.SetActive(false);
 		    }
 	    }	
     }

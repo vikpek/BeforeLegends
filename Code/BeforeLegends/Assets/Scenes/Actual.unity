@@ -88,6 +88,75 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &144984011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 144984012}
+  - 114: {fileID: 144984014}
+  - 135: {fileID: 144984013}
+  - 54: {fileID: 144984015}
+  m_Layer: 2
+  m_Name: EnemysInRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &144984012
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 144984011}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473554654}
+  m_RootOrder: 6
+--- !u!135 &144984013
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 144984011}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 20
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &144984014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 144984011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc5a2b8b357c86d4c91971441b476128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkRange: 0
+--- !u!54 &144984015
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 144984011}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &155702217
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,8 +554,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs_editor:
-  - {fileID: 103140, guid: d4b045998f71eac4ca58f92a9e589d5e, type: 2}
-  - {fileID: 122910, guid: b372aab0dd320e94a924bc0f82136cc8, type: 2}
+  - {fileID: 142462, guid: 302b8ae2aaad2dc4c9a7a0177f737adc, type: 2}
+  - {fileID: 137506, guid: 3c5834bddd5c2b44284524d4e3ea0b5a, type: 2}
   battlePrefabs_editor:
   - {fileID: 122004, guid: 184a4b02c24032547ba465faf6c8858e, type: 2}
   - {fileID: 119020, guid: 541fe84a329c9d8418aca0d715f64969, type: 2}
@@ -1811,8 +1880,8 @@ MonoBehaviour:
     x: 96
     y: 96
   chunkSize:
-    x: 2
-    y: 2
+    x: 32
+    y: 32
   seed: 0
   erosionScale: .100000001
   continentScale: .0149999997
@@ -2923,6 +2992,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 117296, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 189840, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
+      propertyPath: m_Name
+      value: OlafModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 110638, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
+      propertyPath: m_Name
+      value: OlafModel
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11425464, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
@@ -3359,6 +3440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dampen: 1
+  nextPos: {x: 0, y: 0, z: 0}
   mouseScrollDeltaY: 0
   minY: 1
   maxY: 50

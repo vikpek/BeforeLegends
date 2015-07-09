@@ -32,7 +32,7 @@ public class Messenger : MonoBehaviour {
         {
 		    Message msg = message;
 		    ArrayList list = listeners[msg.type] as ArrayList;
-
+           
 		    if(list != null)
             {
 			    foreach(var listener in list)
