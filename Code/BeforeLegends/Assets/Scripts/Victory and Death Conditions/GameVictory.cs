@@ -19,7 +19,7 @@ public class GameVictory : MonoBehaviour {
     void Update () {
         if (Input.GetKeyDown(KeyCode.B)) {
             iLikeCheating = true;
-            print("I'm a dirty cheater!");
+            print("Shame on you, cheater!");
         }
         if (settings == null)
             return;

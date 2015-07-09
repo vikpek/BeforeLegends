@@ -155,7 +155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &117944
 GameObject:
   m_ObjectHideFlags: 1
@@ -2210,32 +2210,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slideDistance: {x: 0, y: 750, z: 0}
-  slideY:
+  slide:
     serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: .315789938
-      outSlope: .315789938
-      tangentMode: 10
-    - time: .0852564648
-      value: .0269231349
-      inSlope: 1.08865309
-      outSlope: 1.08865309
-      tangentMode: 10
-    - time: .582028627
-      value: .951672614
-      inSlope: 1.13558495
-      outSlope: 1.13558495
-      tangentMode: 10
-    - time: .699999988
-      value: 1
-      inSlope: .409653544
-      outSlope: .409653544
-      tangentMode: 10
+    m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
-  unitInfo: {fileID: 116756}
 --- !u!114 &11479754
 MonoBehaviour:
   m_ObjectHideFlags: 1

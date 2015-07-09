@@ -163,7 +163,7 @@ public class AudioMaster : MonoBehaviour {
             return _instance;
         }
     }
-
+    public AudioSource audioSource;
     public AudioSource audioSourceEnemies;
 	public AudioSource audioSourceMiscSounds;
 	public AudioSource audioSourceMusic;
