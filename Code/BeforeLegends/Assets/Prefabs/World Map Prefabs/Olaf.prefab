@@ -306,7 +306,7 @@ GameObject:
   - 212: {fileID: 21259352}
   - 114: {fileID: 11445524}
   - 58: {fileID: 5875914}
-  - 114: {fileID: 11477446}
+  - 114: {fileID: 11408358}
   m_Layer: 15
   m_Name: Indicator
   m_TagString: Untagged
@@ -4717,6 +4717,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .100000001
+--- !u!114 &11408358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fbbe1e757da014290f4957440548eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11430100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4741,7 +4752,7 @@ MonoBehaviour:
     critStrike: 0
     critBlock: 0
     expToGain: 0
-  level: 0
+  level: 1
   exp: 0
   expToLevelUp: 
   levelUpChange: []
@@ -4796,22 +4807,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eat: 0
---- !u!114 &11477446
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00b8c6f9e3fc6884e8be5fc9021b3ede, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitInfo: {fileID: 0}
-  attack: {fileID: 0}
-  defense: {fileID: 0}
-  damage: {fileID: 0}
-  armor: {fileID: 0}
 --- !u!114 &11477504
 MonoBehaviour:
   m_ObjectHideFlags: 1

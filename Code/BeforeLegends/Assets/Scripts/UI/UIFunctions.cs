@@ -12,6 +12,9 @@ public class UIFunctions : MonoBehaviour {
     RectTransform rTransform;
     Vector3 startPosition;
 
+    public GameObject unitInfo;
+    bool wasUnitInfoActive;
+
 	// Use this for initialization
 	void Start () {
         rTransform = GetComponent<RectTransform>();
@@ -34,9 +37,12 @@ public class UIFunctions : MonoBehaviour {
                 break;
             case 2:
                 slideYTime -= Time.deltaTime;
-                rTransform.position = new Vector3(rTransform.position.x, startPosition.y - (slideY.Evaluate(slideYTime) * slideDistance.y), rTransform.position.z); 
-                if (slideYTime <= 0)
+                rTransform.position = new Vector3(rTransform.position.x, startPosition.y - (slideY.Evaluate(slideYTime) * slideDistance.y), rTransform.position.z);
+                if (slideYTime <= 0) {
                     slideState = 0;
+                    if (wasUnitInfoActive)
+                        ToggleUnitInfo(true);
+                }
                 break;
         }
 	}
@@ -44,9 +50,20 @@ public class UIFunctions : MonoBehaviour {
     public void SlideDown()
     {
         slideState = 1;
+        ToggleMouseOverUI(true);
+        wasUnitInfoActive = unitInfo.active;
+        ToggleUnitInfo(false);
     }
     public void SlideUp()
     {
         slideState = 2;
+        ToggleMouseOverUI(false);
+    }
+
+    public void ToggleMouseOverUI(bool toggle) {
+        GameObject.Find("Olaf").GetComponent<MoveOnClick>().SetMouseOverUIElement(toggle);
+    }
+    void ToggleUnitInfo(bool toggle) {
+        unitInfo.SetActive(toggle);
     }
 }

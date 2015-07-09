@@ -58,6 +58,8 @@ public class TurnEndedMessage : Message{
         {
             ResourceManager.instance.ressourcesToDeregister.Remove(r);
         }
+        UnitInfo.Instance.DisplayUnitInfo(UnitInfo.Instance.currentActive);
+        UnitInfo.Instance.DisplayUnitInfo(UnitInfo.Instance.currentActive);
 		this.turn = turnI;
 	}
 }
