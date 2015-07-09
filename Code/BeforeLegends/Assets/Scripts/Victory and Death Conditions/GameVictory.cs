@@ -13,7 +13,7 @@ public class GameVictory : MonoBehaviour {
     bool iLikeCheating = false;
 
     void Start() {
-        settings = GameObject.Find("MenuOptions").GetComponent<NewWorld>();
+        //settings = GameObject.Find("MenuOptions").GetComponent<NewWorld>();
     }
 
     void Update () {
