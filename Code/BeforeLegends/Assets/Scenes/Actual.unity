@@ -483,11 +483,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs_editor:
-  - {fileID: 103140, guid: d4b045998f71eac4ca58f92a9e589d5e, type: 2}
-  - {fileID: 122910, guid: b372aab0dd320e94a924bc0f82136cc8, type: 2}
+  - {fileID: 131654, guid: 22ac38c9f26a2bd4784ac07c2298e65d, type: 2}
+  - {fileID: 152348, guid: b372aab0dd320e94a924bc0f82136cc8, type: 2}
+  - {fileID: 127088, guid: cbe5f68f540e616428add741ae7b4f1f, type: 2}
+  - {fileID: 140626, guid: 26f0b17e2d294da4b9acff4673c8d0c9, type: 2}
+  - {fileID: 177444, guid: 9fc67454816093c4eb7c22550f41f4ac, type: 2}
   battlePrefabs_editor:
-  - {fileID: 122004, guid: 184a4b02c24032547ba465faf6c8858e, type: 2}
-  - {fileID: 119020, guid: 541fe84a329c9d8418aca0d715f64969, type: 2}
+  - {fileID: 131654, guid: 22ac38c9f26a2bd4784ac07c2298e65d, type: 2}
+  - {fileID: 152348, guid: b372aab0dd320e94a924bc0f82136cc8, type: 2}
+  - {fileID: 127088, guid: cbe5f68f540e616428add741ae7b4f1f, type: 2}
+  - {fileID: 140626, guid: 26f0b17e2d294da4b9acff4673c8d0c9, type: 2}
+  - {fileID: 177444, guid: 9fc67454816093c4eb7c22550f41f4ac, type: 2}
   ressourcePrefabs_editor:
   - {fileID: 199954, guid: f047bfd6b7037b848b8a056789b309c6, type: 2}
   - {fileID: 100126, guid: c1a0b35a4aee812468d3ac5f110467bb, type: 2}
@@ -959,7 +965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &409246233
 Transform:
   m_ObjectHideFlags: 0
@@ -1757,7 +1763,7 @@ MonoBehaviour:
     y: 32
   seed: 0
   erosionScale: .100000001
-  continentScale: .0149999997
+  continentScale: .0799999982
   moistureScale: .0199999996
   temperatureScale: .100000001
   erosionWeight: .200000003
@@ -1826,74 +1832,74 @@ MonoBehaviour:
   - tileType: ice
     woodDropChance: 0
     stoneDropChance: 0
-    foodDropChance: .100000001
-    soulsDropChance: .200000003
+    foodDropChance: .0500000007
+    soulsDropChance: .150000006
     chance: 0
   - tileType: ice_mountain
     woodDropChance: .100000001
-    stoneDropChance: .300000012
-    foodDropChance: .100000001
-    soulsDropChance: .100000001
+    stoneDropChance: .200000003
+    foodDropChance: .0500000007
+    soulsDropChance: .0500000007
     chance: 0
   - tileType: tundra
-    woodDropChance: .200000003
-    stoneDropChance: .100000001
-    foodDropChance: .200000003
-    soulsDropChance: .100000001
+    woodDropChance: .100000001
+    stoneDropChance: .0500000007
+    foodDropChance: .100000001
+    soulsDropChance: .0500000007
     chance: 0
   - tileType: savanna
     woodDropChance: .100000001
-    stoneDropChance: .100000001
-    foodDropChance: .25
-    soulsDropChance: .200000003
+    stoneDropChance: .0500000007
+    foodDropChance: .200000003
+    soulsDropChance: .0700000003
     chance: 0
   - tileType: dry_forest
-    woodDropChance: .300000012
-    stoneDropChance: .100000001
-    foodDropChance: .200000003
-    soulsDropChance: .100000001
+    woodDropChance: .200000003
+    stoneDropChance: .0500000007
+    foodDropChance: .150000006
+    soulsDropChance: .0500000007
     chance: 0
   - tileType: dry_mountain
-    woodDropChance: .100000001
-    stoneDropChance: .300000012
+    woodDropChance: .0500000007
+    stoneDropChance: .200000003
     foodDropChance: .100000001
-    soulsDropChance: .200000003
+    soulsDropChance: .0700000003
     chance: 0
   - tileType: grassland
     woodDropChance: .100000001
-    stoneDropChance: .100000001
-    foodDropChance: .400000006
-    soulsDropChance: .0500000007
+    stoneDropChance: .0500000007
+    foodDropChance: .430000007
+    soulsDropChance: 0
     chance: 0
   - tileType: forest
-    woodDropChance: .400000006
-    stoneDropChance: .100000001
-    foodDropChance: .25
-    soulsDropChance: .0500000007
+    woodDropChance: .300000012
+    stoneDropChance: .0500000007
+    foodDropChance: .330000013
+    soulsDropChance: 0
     chance: 0
   - tileType: forest_mountain
-    woodDropChance: .300000012
-    stoneDropChance: .300000012
-    foodDropChance: .25
-    soulsDropChance: .0500000007
+    woodDropChance: .25
+    stoneDropChance: .200000003
+    foodDropChance: .330000013
+    soulsDropChance: 0
     chance: 0
   - tileType: desert
     woodDropChance: 0
-    stoneDropChance: .100000001
-    foodDropChance: .100000001
-    soulsDropChance: .300000012
+    stoneDropChance: .0500000007
+    foodDropChance: .0500000007
+    soulsDropChance: .129999995
     chance: 0
   - tileType: desert_mountain
-    woodDropChance: .100000001
-    stoneDropChance: .25
-    foodDropChance: .100000001
-    soulsDropChance: .150000006
+    woodDropChance: .0500000007
+    stoneDropChance: .200000003
+    foodDropChance: .0500000007
+    soulsDropChance: .129999995
     chance: 0
   - tileType: jungle
     woodDropChance: .200000003
-    stoneDropChance: .100000001
-    foodDropChance: .300000012
-    soulsDropChance: .150000006
+    stoneDropChance: 0
+    foodDropChance: .25
+    soulsDropChance: .0500000007
     chance: 0
   SpawnChances:
   - tileType: water
@@ -1905,64 +1911,64 @@ MonoBehaviour:
     chance: 0
   - tileType: ice
     hornedLion: 0
-    silverLion: 1
+    silverLion: 0
     greenLion: 0
-    iceLion: 0
+    iceLion: .150000006
     desertLion: 0
     chance: 0
   - tileType: ice_mountain
     hornedLion: 0
-    silverLion: 1
+    silverLion: .100000001
     greenLion: 0
-    iceLion: 0
+    iceLion: .100000001
     desertLion: 0
     chance: 0
   - tileType: tundra
     hornedLion: 0
-    silverLion: 1
+    silverLion: 0
     greenLion: 0
-    iceLion: 0
+    iceLion: .150000006
     desertLion: 0
     chance: 0
   - tileType: savanna
-    hornedLion: 0
+    hornedLion: .100000001
     silverLion: 0
     greenLion: 0
     iceLion: 0
-    desertLion: 0
+    desertLion: .0500000007
     chance: 0
   - tileType: dry_forest
-    hornedLion: 0
+    hornedLion: .100000001
     silverLion: 0
     greenLion: 0
     iceLion: 0
-    desertLion: 0
+    desertLion: .0500000007
     chance: 0
   - tileType: dry_mountain
-    hornedLion: 0
-    silverLion: 0
+    hornedLion: .100000001
+    silverLion: .100000001
     greenLion: 0
     iceLion: 0
     desertLion: 0
     chance: 0
   - tileType: grassland
-    hornedLion: 0
+    hornedLion: .0500000007
     silverLion: 0
-    greenLion: 0
+    greenLion: .100000001
     iceLion: 0
     desertLion: 0
     chance: 0
   - tileType: forest
     hornedLion: 0
     silverLion: 0
-    greenLion: 0
+    greenLion: .100000001
     iceLion: 0
     desertLion: 0
     chance: 0
   - tileType: forest_mountain
     hornedLion: 0
-    silverLion: 0
-    greenLion: 0
+    silverLion: .100000001
+    greenLion: .100000001
     iceLion: 0
     desertLion: 0
     chance: 0
@@ -1971,19 +1977,19 @@ MonoBehaviour:
     silverLion: 0
     greenLion: 0
     iceLion: 0
-    desertLion: 0
+    desertLion: .150000006
     chance: 0
   - tileType: desert_mountain
-    hornedLion: 0
-    silverLion: 0
+    hornedLion: .0500000007
+    silverLion: .100000001
     greenLion: 0
     iceLion: 0
-    desertLion: 0
+    desertLion: .150000006
     chance: 0
   - tileType: jungle
-    hornedLion: 0
+    hornedLion: .0500000007
     silverLion: 0
-    greenLion: 0
+    greenLion: .100000001
     iceLion: 0
     desertLion: 0
     chance: 0
@@ -2000,8 +2006,11 @@ MonoBehaviour:
   desert: 190000001a000000
   desert_mountain: 1b000000
   jungle: 2100000022000000
-  hornedLion: 190000001a0000001b000000
-  silverLion: 01000000020000000500000003000000070000000b000000
+  hornedLion: 0d0000001d0000001e0000000e0000000f00000011000000150000001b0000002100000022000000
+  silverLion: 03000000070000000b0000000f00000013000000170000001b0000001f00000023000000
+  desertLion: 1d0000001e000000190000001a0000000e0000001b000000
+  iceLion: 010000000200000003000000050000000600000007000000090000000a0000000b000000
+  greenLion: 1100000015000000120000001600000013000000170000001f000000230000002100000022000000
   chunkTexture: {fileID: 0}
   chunkTextureNormal: {fileID: 0}
   chunkTextureRects: []
@@ -3561,7 +3570,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 483218, guid: 0b15ac471c24940fbb3f14862ffea3d0, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 132132, guid: 0b15ac471c24940fbb3f14862ffea3d0, type: 2}
       propertyPath: m_Name

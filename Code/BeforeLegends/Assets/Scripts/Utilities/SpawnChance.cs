@@ -14,9 +14,9 @@ public class SpawnChance
 
     public float chance;
 
-    public void overallDropChance()
+    public void overallSpawnChance()
     {
-        chance = hornedLion + silverLion;
+        chance = hornedLion + silverLion + desertLion + iceLion + greenLion;
     }
 
     public int returnSpawn()
@@ -24,8 +24,14 @@ public class SpawnChance
         float rand = Random.Range(0.0f, chance);
         if (rand >= 0 && rand < hornedLion)
             return 0;
-        if (rand > chance - silverLion && rand <= chance)
+        if (rand > hornedLion && rand < chance - desertLion - iceLion - greenLion)
             return 1;
+        if (rand > chance - desertLion - iceLion - greenLion && rand < chance - iceLion - greenLion)
+            return 2;
+        if (rand > chance - chance - iceLion - greenLion && rand < chance - greenLion)
+            return 3;
+        if (rand > chance - greenLion && rand <= chance)
+            return 4;
         return 999;
     }
 }

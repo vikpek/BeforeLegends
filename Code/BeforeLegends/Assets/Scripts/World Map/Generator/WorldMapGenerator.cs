@@ -59,6 +59,9 @@ public class WorldMapGenerator : MonoBehaviour
 
     public int[] hornedLion;
     public int[] silverLion;
+    public int[] desertLion;
+    public int[] iceLion;
+    public int[] greenLion;
 
     public Texture2D chunkTexture;
 
@@ -130,7 +133,7 @@ public class WorldMapGenerator : MonoBehaviour
 	    WorldMapData data = WorldMapData.instance;
 	    foreach(Hexagon tile in data.tiles){
             SpawnChance chance = returnSpawnChance(tile.matID);
-            chance.overallDropChance();
+            chance.overallSpawnChance();
 		    if(tile.traversable && Random.Range(0f, 1f) <= chance.chance){
                 MapObjectData obj = new MapObjectData();
                 
@@ -146,8 +149,10 @@ public class WorldMapGenerator : MonoBehaviour
 		    if(tile.mapObjects.Count != 0){
 			    GameObject go = (GameObject)Instantiate(CharacterModelPrefabs.prefabs[tile.mapObjects[0].appearanceID], tile.position, Quaternion.identity);
 			    go.transform.parent = transform;
-			    go.GetComponent<MapObjectCarrier>().pos = tile.gridPos;
-			    go.GetComponent<MapObjectCarrier>().data = tile.mapObjects[0];
+                print(go.GetComponent<MapObjectCarrier>());
+                print(tile.gridPos.ToString());
+                go.GetComponent<MapObjectCarrier>().pos = tile.gridPos;
+                go.GetComponent<MapObjectCarrier>().data = tile.mapObjects[0];
 			    tile.gameObjectList.Add(go);
 		    }
 	    }	
@@ -307,6 +312,21 @@ public class WorldMapGenerator : MonoBehaviour
         foreach (int e in silverLion) {
             if (e == matID)
                 ID = 1;
+        }
+        foreach (int e in desertLion)
+        {
+            if (e == matID)
+                ID = 2;
+        }
+        foreach (int e in iceLion)
+        {
+            if (e == matID)
+                ID = 3;
+        }
+        foreach (int e in greenLion)
+        {
+            if (e == matID)
+                ID = 4;
         }
         return SpawnChances[ID];
     }
