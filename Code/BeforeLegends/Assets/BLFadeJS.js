@@ -17,7 +17,7 @@ function Update()
         }
         else
         {
-            Application.LoadLevel("BLLogo");
+            Application.LoadLevel("Menu");
         }
     }
     time += Time.deltaTime;
