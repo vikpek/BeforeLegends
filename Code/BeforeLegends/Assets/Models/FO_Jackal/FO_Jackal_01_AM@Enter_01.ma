@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: FO_Jackal_01_AM@Enter_01.ma
-//Last modified: Thu, Jul 09, 2015 05:30:57 AM
+//Last modified: Thu, Jul 09, 2015 10:35:05 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "jackal_rig_master" -rfn "jackal_rig_masterRN" -op "v=0;" "/Users/Aholic/GA/Projects/S02_BeforeLegends/Assets/Characters/Jackal/maya//scenes/rig/jackal_rig_master.ma";
 file -r -ns "jackal_rig_master" -dr 1 -rfn "jackal_rig_masterRN" -op "v=0;" "/Users/Aholic/GA/Projects/S02_BeforeLegends/Assets/Characters/Jackal/maya//scenes/rig/jackal_rig_master.ma";
@@ -14,12 +14,12 @@ fileInfo "osv" "Mac OS X 10.9.4";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.572454813517401 2.3263092214362739 5.1962810814484417 ;
-	setAttr ".r" -type "double3" -13.538352729171452 28.999999999968885 4.5456251664296877e-16 ;
+	setAttr ".t" -type "double3" 6.1343962862253996 2.6753405454599539 -1.8008927752591433 ;
+	setAttr ".r" -type "double3" -14.138352729176239 109.79999999997661 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 5.6026900640428758;
+	setAttr ".coi" 6.7983763475786194;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -721,7 +721,7 @@ createNode reference -n "jackal_rig_masterRN";
 		"translateY" " -av"
 		2 "|jackal_rig_master:rig|jackal_rig_master:cl_hips_JNT|jackal_rig_master:cl_spine_b_JNT|jackal_rig_master:cl_spine_c_JNT|jackal_rig_master:cl_spine_d_JNT|jackal_rig_master:lf_clavicle_JNT|jackal_rig_master:lf_shoulder_fkRIG|jackal_rig_master:lf_elbow_fkRIG" 
 		"translateZ" " -av"
-		2 "jackal_rig_master:mesh" "displayType" " 2"
+		2 "jackal_rig_master:mesh" "displayType" " 0"
 		2 "jackal_rig_master:mesh" "visibility" " 1"
 		2 "jackal_rig_master:rigs" "visibility" " 0"
 		2 "jackal_rig_master:ctrls" "visibility" " 1"
