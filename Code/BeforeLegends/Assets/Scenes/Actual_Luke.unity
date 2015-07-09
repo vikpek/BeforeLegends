@@ -1061,7 +1061,7 @@ MonoBehaviour:
   - {fileID: 199954, guid: f047bfd6b7037b848b8a056789b309c6, type: 2}
   - {fileID: 100126, guid: c1a0b35a4aee812468d3ac5f110467bb, type: 2}
   - {fileID: 113618, guid: e457ead48ff374d4e87aad6b36a34a5d, type: 2}
-  - {fileID: 121770, guid: f8e8d21f7f2cfc34eaaa86159a3e922b, type: 2}
+  - {fileID: 182060, guid: 4e4049f4032e7ae4f9bf953c36a73e0e, type: 2}
 --- !u!114 &258453198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1201,7 +1201,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03363eb326f862c4395b2fc9b276823f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuClickA002: {fileID: 0}
+  menuGameStartA003: {fileID: 0}
+  wmUnitMovementA004: {fileID: 0}
+  wmUnitFoodCollectA005_1: {fileID: 0}
+  wmUnitFoodCollectA005_2: {fileID: 0}
+  wmUnitFoodCollectA005_3: {fileID: 0}
+  wmUnitFoodCollectA005_4: {fileID: 0}
+  wmUnitStoneCollectA007_1: {fileID: 0}
+  wmUnitStoneCollectA007_2: {fileID: 0}
+  wmUnitWoodCollectA008_1: {fileID: 0}
+  wmUnitWoodCollectA008_2: {fileID: 0}
+  battleStartA015: {fileID: 0}
+  battleEndVictoryA025: {fileID: 0}
+  battleEndDefeatA026: {fileID: 0}
+  boardgamePieceClickA038_1: {fileID: 0}
+  boardgamePieceClickA038_2: {fileID: 0}
+  boardgamePieceClickA038_3: {fileID: 0}
+  wmUnitSoulCollectA039: {fileID: 0}
+  trackWMMainA028: {fileID: 0}
+  trackBMA016: {fileID: 0}
+  trackBMA017: {fileID: 0}
   audioSource: {fileID: 1005331471}
+  audioSourceEnemies: {fileID: 0}
+  audioSourceMiscSounds: {fileID: 0}
+  audioSourceMusic: {fileID: 0}
   audioObjects:
   - objectName: FirstAudioObject
     attack: {fileID: 8300000, guid: cb2cf080a890b034a86c921116965611, type: 3}
@@ -1828,8 +1852,8 @@ MonoBehaviour:
   shift: 0
   s: 0
   g: 0
-  screenWidth: 830
-  screenHeight: 565
+  screenWidth: 1214
+  screenHeight: 683
   resized: 0
   getRelSize: 0
 --- !u!114 &454346165
@@ -2141,13 +2165,13 @@ RectTransform:
   m_GameObject: {fileID: 590964069}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .292741209, y: .354354024, z: 1}
+  m_LocalScale: {x: .620047033, y: .620276332, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 6
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 464.090942, y: -204.104187}
+  m_AnchoredPosition: {x: 982.978149, y: -357.272644}
   m_SizeDelta: {x: 512, y: 386}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &590964071
@@ -2280,8 +2304,8 @@ MonoBehaviour:
   shift: 0
   s: 0
   g: 0
-  screenWidth: 830
-  screenHeight: 565
+  screenWidth: 1758
+  screenHeight: 989
   resized: 1
   getRelSize: 0
 --- !u!1 &621376076
@@ -2512,7 +2536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &675446140
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2933,13 +2957,13 @@ RectTransform:
   m_GameObject: {fileID: 796770398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .247023821, y: .298941791, z: 1}
+  m_LocalScale: {x: .523214281, y: .523280442, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 60.2738037, y: -300.735413}
+  m_AnchoredPosition: {x: 127.664246, y: -526.420166}
   m_SizeDelta: {x: 371, y: 512}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &796770400
@@ -3061,8 +3085,8 @@ MonoBehaviour:
   shift: 0
   s: 0
   g: 0
-  screenWidth: 830
-  screenHeight: 565
+  screenWidth: 1758
+  screenHeight: 989
   resized: 1
   getRelSize: 0
 --- !u!114 &796770403
@@ -4116,6 +4140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64b1a4388657c244b8fde7724cda783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textVictory: {fileID: 0}
+  gameObjectsToDeactivateOnGameOver: []
 --- !u!114 &1200521820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4970,7 +4996,7 @@ MonoBehaviour:
     costSoul: {fileID: 1492576509}
     offerCardImage: {fileID: 559447162}
     offerBuyButton: {fileID: 980791710}
-  rm: {fileID: 11418588, guid: 86c330a3c1ce24a459d1aa5d0326f5be, type: 2}
+  rm: {fileID: 0}
 --- !u!114 &1363914974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5842,13 +5868,13 @@ RectTransform:
   m_GameObject: {fileID: 1580187861}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .247023821, y: .298941791, z: 1}
+  m_LocalScale: {x: .523214281, y: .523280442, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -342.375, y: -300.735413}
+  m_AnchoredPosition: {x: -725.174988, y: -526.420166}
   m_SizeDelta: {x: 371, y: 512}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1580187863
@@ -5870,8 +5896,8 @@ MonoBehaviour:
   shift: 0
   s: 0
   g: 0
-  screenWidth: 830
-  screenHeight: 565
+  screenWidth: 1758
+  screenHeight: 989
   resized: 1
   getRelSize: 0
 --- !u!114 &1580187864
@@ -6865,13 +6891,13 @@ RectTransform:
   m_GameObject: {fileID: 1837702052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .247023821, y: .298941791, z: 1}
+  m_LocalScale: {x: .523214281, y: .523280442, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -219.851196, y: -300.735413}
+  m_AnchoredPosition: {x: -465.660736, y: -526.420166}
   m_SizeDelta: {x: 371, y: 512}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1837702054
@@ -6994,8 +7020,8 @@ MonoBehaviour:
   shift: 0
   s: 0
   g: 0
-  screenWidth: 830
-  screenHeight: 565
+  screenWidth: 1758
+  screenHeight: 989
   resized: 1
   getRelSize: 0
 --- !u!114 &1837702057
@@ -7052,13 +7078,13 @@ RectTransform:
   m_GameObject: {fileID: 1854904237}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .247023821, y: .298941791, z: 1}
+  m_LocalScale: {x: .523214281, y: .523280442, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -126.476196, y: -300.735413}
+  m_AnchoredPosition: {x: -267.885712, y: -526.420166}
   m_SizeDelta: {x: 371, y: 512}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1854904239
@@ -7180,8 +7206,8 @@ MonoBehaviour:
   shift: 0
   s: 0
   g: 0
-  screenWidth: 830
-  screenHeight: 565
+  screenWidth: 1758
+  screenHeight: 989
   resized: 1
   getRelSize: 0
 --- !u!114 &1854904242
@@ -7311,13 +7337,13 @@ RectTransform:
   m_GameObject: {fileID: 1873709699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .247023821, y: .298941791, z: 1}
+  m_LocalScale: {x: .523214281, y: .523280442, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 153.648804, y: -300.735413}
+  m_AnchoredPosition: {x: 325.439209, y: -526.420166}
   m_SizeDelta: {x: 371, y: 512}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1873709701
@@ -7439,8 +7465,8 @@ MonoBehaviour:
   shift: 0
   s: 0
   g: 0
-  screenWidth: 830
-  screenHeight: 565
+  screenWidth: 1758
+  screenHeight: 989
   resized: 1
   getRelSize: 0
 --- !u!114 &1873709704
@@ -8316,13 +8342,13 @@ RectTransform:
   m_GameObject: {fileID: 2133449543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .247023821, y: .298941791, z: 1}
+  m_LocalScale: {x: .523214281, y: .523280442, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -33.1011963, y: -300.735413}
+  m_AnchoredPosition: {x: -70.1107178, y: -526.420166}
   m_SizeDelta: {x: 371, y: 512}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2133449545
@@ -8445,8 +8471,8 @@ MonoBehaviour:
   shift: 0
   s: 0
   g: 0
-  screenWidth: 830
-  screenHeight: 565
+  screenWidth: 1758
+  screenHeight: 989
   resized: 1
   getRelSize: 0
 --- !u!114 &2133449548

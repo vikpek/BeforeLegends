@@ -17,6 +17,8 @@ public class GameStateManager : MonoBehaviour {
 
     public GameObject world;
     public GameObject battle;
+    public GameObject worldMapGUI;
+    public GameObject battleMapGUI;
     public BattleParameters olaf;
 
     public int state;
@@ -28,9 +30,11 @@ public class GameStateManager : MonoBehaviour {
     {
 		AudioMaster.instance.BattleStartA015Play();
         battleC.init(player, enemy);
-	    state = 1;
-	    battle.SetActive(true);
-	    world.SetActive(false);
+        state = 1;
+        battle.SetActive(true);
+        world.SetActive(false);
+        battleMapGUI.SetActive(true);
+        worldMapGUI.SetActive(false);
     }
 
     public void endBattle(bool result, int exp)
@@ -38,7 +42,9 @@ public class GameStateManager : MonoBehaviour {
 		AudioMaster.instance.audioSourceMusic.Stop();
 	    state = 0;
 	    world.SetActive(true);
-	    battle.SetActive(false);
+        battle.SetActive(false);
+        battleMapGUI.SetActive(false);
+        worldMapGUI.SetActive(true);
 	    ResourceManager.instance.ResourceAS("exp", exp);
 	    olaf.exp += exp;
         olaf.LevelUp();
