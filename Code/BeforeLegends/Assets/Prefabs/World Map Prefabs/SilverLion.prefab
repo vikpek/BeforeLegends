@@ -363,7 +363,7 @@ GameObject:
   - 114: {fileID: 11413234}
   - 58: {fileID: 5801558}
   - 114: {fileID: 11422482}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2287,9 +2287,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 2.55999994}
+  m_Offset: {x: 0, y: 2.5}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 4.80000019
 --- !u!65 &6513494
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2401,8 +2401,8 @@ MonoBehaviour:
     defense: 0
     armor: 0
     damage: 0
-    hitPoints: 0
-    maxHitPoints: 0
+    hitPoints: 20
+    maxHitPoints: 20
     actionPoints: 0
     maxActionPoints: 0
     speed: 0

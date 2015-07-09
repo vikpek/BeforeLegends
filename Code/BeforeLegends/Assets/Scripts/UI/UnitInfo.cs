@@ -35,6 +35,7 @@ public class UnitInfo : MonoBehaviour {
 
     void Start() {
         //unitInfo = GameObject.Find("UnitInfo");
+        currentActive = GameObject.Find("Olaf");
     }
 
     public void DisplayUnitInfo(GameObject obj) {

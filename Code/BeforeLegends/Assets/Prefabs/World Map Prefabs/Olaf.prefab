@@ -305,8 +305,8 @@ GameObject:
   - 4: {fileID: 454878}
   - 212: {fileID: 21259352}
   - 114: {fileID: 11445524}
-  - 58: {fileID: 5875914}
   - 114: {fileID: 11408358}
+  - 58: {fileID: 5881260}
   m_Layer: 15
   m_Name: Indicator
   m_TagString: Untagged
@@ -4579,7 +4579,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!58 &5875914
+--- !u!58 &5881260
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -4589,9 +4589,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 2.55999994}
+  m_Offset: {x: 0, y: 2.5}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 4.80000019
 --- !u!65 &6553980
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4744,8 +4744,8 @@ MonoBehaviour:
     defense: 5
     armor: 100
     damage: 1337
-    hitPoints: 200
-    maxHitPoints: 10
+    hitPoints: 33
+    maxHitPoints: 100
     actionPoints: 0
     maxActionPoints: 0
     speed: 0
@@ -4753,8 +4753,8 @@ MonoBehaviour:
     critBlock: 0
     expToGain: 0
   level: 1
-  exp: 0
-  expToLevelUp: 
+  exp: 33
+  expToLevelUp: 640000009001000020030000b0040000
   levelUpChange: []
 --- !u!114 &11445524
 MonoBehaviour:
@@ -4806,7 +4806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1084c4b048affd4d83c7e5fff47646d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eat: 0
+  eat: 3
 --- !u!114 &11477504
 MonoBehaviour:
   m_ObjectHideFlags: 1
