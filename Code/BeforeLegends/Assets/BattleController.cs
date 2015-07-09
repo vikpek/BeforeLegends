@@ -10,15 +10,26 @@ using System.Collections;
     {
         IDLE, STARTED, ANIMATING
     }
-
+    [System.Serializable]
     public enum Action
     { // here below you need to add any new actions
         ATTACK, ENRAGED, FINALATTACK, HEAL, HEALOTHER, DOUBLEDAMAGE, WRATH, SHIELD, REVENGE
     }
-public class BattleController : MonoBehaviour {
+public class BattleController : MonoBehaviour{
 
     //every code snippet that is commented out has to be uncomment later! so ignore "!--!" or "!---!" here!
 
+    private static BattleController _instance;
+
+    public static BattleController instance
+    {
+        get
+        {
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<BattleController>();
+            return _instance;
+        }
+    }
 
     
     public GameObject enemy;
@@ -64,7 +75,7 @@ public class BattleController : MonoBehaviour {
 	void Start () {
         battleState = BattleState.IDLE;
         actualActor = Actor.PLAYER;
-	
+        Messenger.instance.listen(instance.gameObject, "executeAction");
 	}
 	
     void Update(){
@@ -75,10 +86,10 @@ public class BattleController : MonoBehaviour {
 		
 		    battleState = BattleState.ANIMATING;
 		    if(actualActor == Actor.PLAYER){
-			    player.SendMessage("executeAction", this);
+			    player.SendMessage("executeAction", instance);
 		    }else{
-			    enemy.SendMessage("determineAction", this);
-			    enemy.SendMessage("executeAction", this);
+                enemy.SendMessage("determineAction", instance);
+                enemy.SendMessage("executeAction", instance);
 		    }
 	    }else if(battleState == BattleState.ANIMATING && !playerAnimator.isAnimating(playerAnimation) && !enemyAnimator.isAnimating(enemyAnimation))
         {
@@ -98,12 +109,12 @@ public class BattleController : MonoBehaviour {
     {
 		    if(playerData.hitPoints <= 0){
 			    playerWorldObject.SetActive(false);
-			    gameSM.endBattle(false, 0);
+			    GameStateManager.instance.endBattle(false, 0);
                 Messenger.instance.send(new AllActionsEndedMessage());
 			    return true;
 		    }else if(enemyData.hitPoints <= 0){
-			    enemyWorldObject.SetActive(false);
-			    gameSM.endBattle(true, enemyData.expToGain);
+			    enemyWorldObject.transform.parent.gameObject.SetActive(false);
+                GameStateManager.instance.endBattle(true, enemyData.expToGain);
                 Messenger.instance.send(new AllActionsEndedMessage());
 			    return true;
 		    }
@@ -120,6 +131,19 @@ public class BattleController : MonoBehaviour {
     {
         enemyAnimator.swapAnimation(a);
         enemyAnimation = a;
+    }
+
+    public void playerAttack(string action)
+    {
+        print("\"click\"");
+        switch (action)
+        {
+            case "ATTACK":
+                playerAction = Action.ATTACK;
+                break;
+
+        }
+        //player.GetComponent<OlafBattleActions>().executeAction(BattleController.instance);
     }
 
 
@@ -149,7 +173,7 @@ public class BattleController : MonoBehaviour {
     }
 
     //---MAP INPUT---
-    void onInput_Attack(){
+    public void onInput_Attack(){
 	    onInput(Action.ATTACK);
     }
 

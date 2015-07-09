@@ -4711,12 +4711,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleParameters:
-    attack: 0
-    defense: 0
+    attack: 5
+    defense: 4
     armor: 0
-    damage: 0
-    hitPoints: 0
-    maxHitPoints: 0
+    damage: 1
+    hitPoints: 10
+    maxHitPoints: 10
     actionPoints: 0
     maxActionPoints: 0
     speed: 0
@@ -4725,8 +4725,68 @@ MonoBehaviour:
     expToGain: 0
   level: 0
   exp: 0
-  expToLevelUp: 
-  levelUpChange: []
+  expToLevelUp: 0000000064000000f401000014050000c4090000
+  levelUpChange:
+  - attack: 0
+    defense: 0
+    armor: 0
+    damage: 0
+    hitPoints: 5
+    maxHitPoints: 5
+    actionPoints: 0
+    maxActionPoints: 0
+    speed: 0
+    critStrike: 0
+    critBlock: 0
+    expToGain: 0
+  - attack: 0
+    defense: 0
+    armor: 1
+    damage: 1
+    hitPoints: 5
+    maxHitPoints: 5
+    actionPoints: 0
+    maxActionPoints: 0
+    speed: 0
+    critStrike: 0
+    critBlock: 0
+    expToGain: 0
+  - attack: 0
+    defense: 1
+    armor: 1
+    damage: 0
+    hitPoints: 5
+    maxHitPoints: 5
+    actionPoints: 0
+    maxActionPoints: 0
+    speed: 0
+    critStrike: 0
+    critBlock: 0
+    expToGain: 0
+  - attack: 0
+    defense: 1
+    armor: 1
+    damage: 5
+    hitPoints: 5
+    maxHitPoints: 0
+    actionPoints: 0
+    maxActionPoints: 0
+    speed: 0
+    critStrike: 0
+    critBlock: 0
+    expToGain: 0
+  - attack: 0
+    defense: 1
+    armor: 1
+    damage: 5
+    hitPoints: 5
+    maxHitPoints: 0
+    actionPoints: 0
+    maxActionPoints: 0
+    speed: 0
+    critStrike: 0
+    critBlock: 0
+    expToGain: 0
 --- !u!114 &11467226
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -61,9 +61,10 @@ public class FogOfWar : MonoBehaviour {
     public void AddEnemysInRangeToList()
     {
 	    foreach(Hexagon hex in adjacent) {
-		    foreach(GameObject gO in hex.gameObjectList) {
-			    if(gO.tag == "Enemy")
-				    enemysInRange.Add(gO);
+		    foreach(GameObject gO in hex.gameObjectList) 
+            {
+			    if(gO.tag == "EnemyParent")
+				    enemysInRange.Add(WorldMapGenerator.instance.enemys[gO]);
 		    }
 	    }
     }

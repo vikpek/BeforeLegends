@@ -25,7 +25,6 @@ public class WorldMapData : MonoBehaviour
 		List<PathNode> reachable = new List<PathNode>();
 		List<PathNode> visited = new List<PathNode>();
 		reachable.Add(new PathNode(startX, startY));
-        print("reached while in findPath");
 		while(reachable.Count != 0){
 			PathNode cheapest = new PathNode();
 			float fcost = -1;

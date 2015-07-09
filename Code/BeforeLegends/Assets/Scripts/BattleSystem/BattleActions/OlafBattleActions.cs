@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OlafBattleActions {
+public class OlafBattleActions : MonoBehaviour{
 
-    void executeAction(BattleController battle){
+    public void executeAction(BattleController battle){
 	    switch(battle.playerAction){   //always remember to list new battle actions (functions below) here.
 		    case Action.ATTACK :
 			    attack(battle);

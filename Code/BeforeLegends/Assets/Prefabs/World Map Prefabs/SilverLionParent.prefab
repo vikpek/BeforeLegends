@@ -389,6 +389,8 @@ GameObject:
   - 114: {fileID: 11420988}
   - 114: {fileID: 11413882}
   - 114: {fileID: 11407662}
+  - 114: {fileID: 11434690}
+  - 114: {fileID: 11486742}
   m_Layer: 11
   m_Name: SilverLion
   m_TagString: Enemy
@@ -2366,16 +2368,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleParameters:
-    attack: 0
-    defense: 0
+    attack: 5
+    defense: 4
     armor: 0
-    damage: 0
-    hitPoints: 0
-    maxHitPoints: 0
+    damage: 1
+    hitPoints: 10
+    maxHitPoints: 10
     actionPoints: 0
     maxActionPoints: 0
     speed: 0
-    critStrike: 0
+    critStrike: .5
     critBlock: 0
     expToGain: 0
   level: 0
@@ -2408,6 +2410,18 @@ MonoBehaviour:
   paused: 0
   suspend: 0
   enemyGameObject: {fileID: 0}
+--- !u!114 &11434690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f09e60e1aaf274eb2728f27581e033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heal: {fileID: 0}
 --- !u!114 &11471274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2417,6 +2431,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 594dec7e2d7a25d44aa2006b861c5206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11486742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fada60d62058674ea19d5b9df01a2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!137 &13773880
