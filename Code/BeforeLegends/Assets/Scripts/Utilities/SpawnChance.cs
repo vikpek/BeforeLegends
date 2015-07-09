@@ -24,13 +24,13 @@ public class SpawnChance
         float rand = Random.Range(0.0f, chance);
         if (rand >= 0 && rand < hornedLion)
             return 0;
-        if (rand > hornedLion && rand < chance - desertLion - iceLion - greenLion)
+        if (rand > hornedLion && rand < hornedLion + silverLion)
             return 1;
-        if (rand > chance - desertLion - iceLion - greenLion && rand < chance - iceLion - greenLion)
+        if (rand > hornedLion + silverLion && rand < hornedLion + silverLion + desertLion)
             return 2;
-        if (rand > chance - chance - iceLion - greenLion && rand < chance - greenLion)
+        if (rand > hornedLion + silverLion + desertLion && rand < hornedLion + silverLion + desertLion + iceLion)
             return 3;
-        if (rand > chance - greenLion && rand <= chance)
+        if (rand > hornedLion + silverLion + desertLion + iceLion && rand <= chance)
             return 4;
         return 999;
     }

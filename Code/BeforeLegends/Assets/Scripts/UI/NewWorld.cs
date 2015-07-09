@@ -35,13 +35,13 @@ public class NewWorld : MonoBehaviour {
             return;
         switch ((int)sSize.value) {
             case 0:
-                size = new Vec2int(32, 32);
-                break;
-            case 1:
                 size = new Vec2int(64, 64);
                 break;
-            case 2:
+            case 1:
                 size = new Vec2int(96, 96);
+                break;
+            case 2:
+                size = new Vec2int(128, 128);
                 break;
         }
         temperature = sTemperature.value;
