@@ -1773,6 +1773,91 @@ Transform:
   m_Children: []
   m_Father: {fileID: 409246233}
   m_RootOrder: 0
+--- !u!1 &454346162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 454346163}
+  - 222: {fileID: 454346166}
+  - 114: {fileID: 454346165}
+  - 114: {fileID: 454346164}
+  m_Layer: 0
+  m_Name: PlayerUnitInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &454346163
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 454346162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_Children:
+  - {fileID: 1492676299}
+  m_Father: {fileID: 675446140}
+  m_RootOrder: 7
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -870, y: -489.5}
+  m_SizeDelta: {x: 386, y: 512}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &454346164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 454346162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b840d2fd0f0a6014996d287e9050ef8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: {x: 0, y: 0}
+  pos: {x: 0, y: 0}
+  relSize: {x: 0, y: 0}
+  relPos: {x: 0, y: 0}
+  setIsActive: 0
+  shift: 0
+  s: 0
+  g: 0
+  screenWidth: 830
+  screenHeight: 565
+  resized: 0
+  getRelSize: 0
+--- !u!114 &454346165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 454346162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Texture: {fileID: 2800000, guid: 1eb23dcedb967dd42b2c5dedef36378b, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &454346166
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 454346162}
 --- !u!4 &473554654
 Transform:
   m_PrefabParentObject: {fileID: 439958, guid: 4c47a329f8b106e4195bbcc570ef8e6b, type: 2}
@@ -2056,13 +2141,13 @@ RectTransform:
   m_GameObject: {fileID: 590964069}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .699999988, y: .699999988, z: 1}
+  m_LocalScale: {x: .292741209, y: .354354024, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 6
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 1031, y: -372}
+  m_AnchoredPosition: {x: 464.090942, y: -204.104187}
   m_SizeDelta: {x: 512, y: 386}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &590964071
@@ -2150,7 +2235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56810e1842976024dae585451f654b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideDistance: {x: 300, y: 0, z: 0}
+  startSlideDistancePercentage: {x: .839999974, y: 0, z: 0}
   slide:
     serializedVersion: 2
     m_Curve:
@@ -2187,14 +2272,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b840d2fd0f0a6014996d287e9050ef8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: .699999988, y: .699999988}
-  pos: {x: 1944, y: 141.5}
-  relSize: {x: .00038335158, y: .000681596866}
-  relPos: {x: 1.06462216, y: .137779936}
-  setIsActive: 1
+  size: {x: .644030631, y: .644109011}
+  pos: {x: 1934, y: 142.5}
+  relSize: {x: .000352700241, y: .000627175265}
+  relPos: {x: 1.05914569, y: .138753653}
+  setIsActive: 0
   shift: 0
   s: 0
   g: 0
+  screenWidth: 830
+  screenHeight: 565
+  resized: 1
+  getRelSize: 0
 --- !u!1 &621376076
 GameObject:
   m_ObjectHideFlags: 0
@@ -2423,7 +2512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &675446140
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2441,6 +2530,7 @@ RectTransform:
   - {fileID: 796770399}
   - {fileID: 1873709700}
   - {fileID: 590964070}
+  - {fileID: 454346163}
   m_Father: {fileID: 219670049}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
@@ -2843,13 +2933,13 @@ RectTransform:
   m_GameObject: {fileID: 796770398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalScale: {x: .247023821, y: .298941791, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 161, y: -544}
+  m_AnchoredPosition: {x: 60.2738037, y: -300.735413}
   m_SizeDelta: {x: 371, y: 512}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &796770400
@@ -2863,7 +2953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56810e1842976024dae585451f654b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideDistance: {x: 0, y: -163, z: 0}
+  startSlideDistancePercentage: {x: 0, y: -.629999995, z: 0}
   slide:
     serializedVersion: 2
     m_Curve:
@@ -2963,14 +3053,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b840d2fd0f0a6014996d287e9050ef8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 0, y: 0}
-  pos: {x: 0, y: 0}
-  relSize: {x: 0, y: 0}
-  relPos: {x: 0, y: 0}
-  setIsActive: 1
+  size: {x: .543452382, y: .543386281}
+  pos: {x: 1045.60229, y: -33.1465454}
+  relSize: {x: .000297619059, y: .000529100536}
+  relPos: {x: .572619021, y: -.0322751179}
+  setIsActive: 0
   shift: 0
   s: 0
   g: 0
+  screenWidth: 830
+  screenHeight: 565
+  resized: 1
+  getRelSize: 0
 --- !u!114 &796770403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4889,7 +4983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56810e1842976024dae585451f654b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideDistance: {x: 0, y: 750, z: 0}
+  startSlideDistancePercentage: {x: 0, y: 0, z: 0}
   slide:
     serializedVersion: 2
     m_Curve: []
@@ -5507,6 +5601,66 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1492576507}
+--- !u!1 &1492676298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1492676299}
+  - 222: {fileID: 1492676301}
+  - 114: {fileID: 1492676300}
+  m_Layer: 0
+  m_Name: PlayerUnitInfoBody
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1492676299
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1492676298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 454346163}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: -482.100006}
+  m_SizeDelta: {x: 386, y: 512}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1492676300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1492676298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Texture: {fileID: 2800000, guid: 1e3a14bcf1323d447a42fe8fdd02889f, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1492676301
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1492676298}
 --- !u!198 &1497780386
 ParticleSystem:
   m_PrefabParentObject: {fileID: 19857732, guid: 4c47a329f8b106e4195bbcc570ef8e6b,
@@ -5688,13 +5842,13 @@ RectTransform:
   m_GameObject: {fileID: 1580187861}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalScale: {x: .247023821, y: .298941791, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -681, y: -544}
+  m_AnchoredPosition: {x: -342.375, y: -300.735413}
   m_SizeDelta: {x: 371, y: 512}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1580187863
@@ -5708,14 +5862,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b840d2fd0f0a6014996d287e9050ef8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 0, y: 0}
-  pos: {x: 0, y: 0}
-  relSize: {x: 0, y: 0}
-  relPos: {x: 0, y: 0}
-  setIsActive: 1
+  size: {x: .543452382, y: .543386281}
+  pos: {x: 159.775024, y: -33.1465454}
+  relSize: {x: .000297619059, y: .000529100536}
+  relPos: {x: .0875000134, y: -.0322751179}
+  setIsActive: 0
   shift: 0
   s: 0
   g: 0
+  screenWidth: 830
+  screenHeight: 565
+  resized: 1
+  getRelSize: 0
 --- !u!114 &1580187864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5753,7 +5911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56810e1842976024dae585451f654b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideDistance: {x: 0, y: -163, z: 0}
+  startSlideDistancePercentage: {x: 0, y: -.629999995, z: 0}
   slide:
     serializedVersion: 2
     m_Curve:
@@ -6707,13 +6865,13 @@ RectTransform:
   m_GameObject: {fileID: 1837702052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalScale: {x: .247023821, y: .298941791, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -406, y: -544}
+  m_AnchoredPosition: {x: -219.851196, y: -300.735413}
   m_SizeDelta: {x: 371, y: 512}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1837702054
@@ -6727,7 +6885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56810e1842976024dae585451f654b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideDistance: {x: 0, y: -163, z: 0}
+  startSlideDistancePercentage: {x: 0, y: -.629999995, z: 0}
   slide:
     serializedVersion: 2
     m_Curve:
@@ -6828,14 +6986,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b840d2fd0f0a6014996d287e9050ef8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 0, y: 0}
-  pos: {x: 0, y: 0}
-  relSize: {x: 0, y: 0}
-  relPos: {x: 0, y: 0}
-  setIsActive: 1
+  size: {x: .543452382, y: .543386281}
+  pos: {x: 429.327362, y: -33.1465454}
+  relSize: {x: .000297619059, y: .000529100536}
+  relPos: {x: .23511903, y: -.0322751179}
+  setIsActive: 0
   shift: 0
   s: 0
   g: 0
+  screenWidth: 830
+  screenHeight: 565
+  resized: 1
+  getRelSize: 0
 --- !u!114 &1837702057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6890,13 +7052,13 @@ RectTransform:
   m_GameObject: {fileID: 1854904237}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalScale: {x: .247023821, y: .298941791, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -217, y: -544}
+  m_AnchoredPosition: {x: -126.476196, y: -300.735413}
   m_SizeDelta: {x: 371, y: 512}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1854904239
@@ -6910,7 +7072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56810e1842976024dae585451f654b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideDistance: {x: 0, y: -163, z: 0}
+  startSlideDistancePercentage: {x: 0, y: -.629999995, z: 0}
   slide:
     serializedVersion: 2
     m_Curve:
@@ -7010,14 +7172,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b840d2fd0f0a6014996d287e9050ef8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 0, y: 0}
-  pos: {x: 0, y: 0}
-  relSize: {x: 0, y: 0}
-  relPos: {x: 0, y: 0}
-  setIsActive: 1
+  size: {x: .543452382, y: .543386281}
+  pos: {x: 634.752319, y: -33.1465454}
+  relSize: {x: .000297619059, y: .000529100536}
+  relPos: {x: .347619027, y: -.0322751179}
+  setIsActive: 0
   shift: 0
   s: 0
   g: 0
+  screenWidth: 830
+  screenHeight: 565
+  resized: 1
+  getRelSize: 0
 --- !u!114 &1854904242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7145,13 +7311,13 @@ RectTransform:
   m_GameObject: {fileID: 1873709699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalScale: {x: .247023821, y: .298941791, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 350, y: -544}
+  m_AnchoredPosition: {x: 153.648804, y: -300.735413}
   m_SizeDelta: {x: 371, y: 512}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1873709701
@@ -7165,7 +7331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56810e1842976024dae585451f654b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideDistance: {x: 0, y: -163, z: 0}
+  startSlideDistancePercentage: {x: 0, y: -.629999995, z: 0}
   slide:
     serializedVersion: 2
     m_Curve:
@@ -7265,14 +7431,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b840d2fd0f0a6014996d287e9050ef8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 0, y: 0}
-  pos: {x: 0, y: 0}
-  relSize: {x: 0, y: 0}
-  relPos: {x: 0, y: 0}
-  setIsActive: 1
+  size: {x: .543452382, y: .543386281}
+  pos: {x: 1251.02734, y: -33.1465454}
+  relSize: {x: .000297619059, y: .000529100536}
+  relPos: {x: .685119033, y: -.0322751179}
+  setIsActive: 0
   shift: 0
   s: 0
   g: 0
+  screenWidth: 830
+  screenHeight: 565
+  resized: 1
+  getRelSize: 0
 --- !u!114 &1873709704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8146,13 +8316,13 @@ RectTransform:
   m_GameObject: {fileID: 2133449543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalScale: {x: .247023821, y: .298941791, z: 1}
   m_Children: []
   m_Father: {fileID: 675446140}
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -28, y: -544}
+  m_AnchoredPosition: {x: -33.1011963, y: -300.735413}
   m_SizeDelta: {x: 371, y: 512}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2133449545
@@ -8166,7 +8336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56810e1842976024dae585451f654b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideDistance: {x: 0, y: -163, z: 0}
+  startSlideDistancePercentage: {x: 0, y: -.629999995, z: 0}
   slide:
     serializedVersion: 2
     m_Curve:
@@ -8267,14 +8437,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b840d2fd0f0a6014996d287e9050ef8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 0, y: 0}
-  pos: {x: 0, y: 0}
-  relSize: {x: 0, y: 0}
-  relPos: {x: 0, y: 0}
-  setIsActive: 1
+  size: {x: .543452382, y: .543386281}
+  pos: {x: 840.177368, y: -33.1465454}
+  relSize: {x: .000297619059, y: .000529100536}
+  relPos: {x: .460119039, y: -.0322751179}
+  setIsActive: 0
   shift: 0
   s: 0
   g: 0
+  screenWidth: 830
+  screenHeight: 565
+  resized: 1
+  getRelSize: 0
 --- !u!114 &2133449548
 MonoBehaviour:
   m_ObjectHideFlags: 0
