@@ -339,7 +339,7 @@ public class WorldMapGenerator : MonoBehaviour
                         spawn = false;
                 }
                 FogOfWar.instance.ClearLists();
-                if (spawn)
+                if (spawn && worldData.tiles[randX, randY].gameObjectList.Count <= 0)
                 {
                     GameObject player = GameObject.Find("Olaf");
                     MapObjectCarrier objData = player.AddComponent<MapObjectCarrier>();

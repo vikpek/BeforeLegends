@@ -10,6 +10,9 @@ public class PauseMenu : MonoBehaviour {
     void Update () {
 	    if(Input.GetKeyDown(KeyCode.Escape))
 		    TogglePauseMenu();
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            Application.LoadLevel("Menu");
     }
 
     void Resume()
