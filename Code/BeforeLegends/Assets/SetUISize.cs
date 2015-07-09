@@ -31,11 +31,11 @@ public class SetUISize : MonoBehaviour {
                 relSize = new Vector2(size.x / Screen.width, size.y / Screen.height);
                 relPos = new Vector2(pos.x / Screen.width, pos.y / Screen.height);
             }
-            if (s && shift)
-            {
-                transform.position = new Vector3(relPos.x * Screen.width, relPos.y * Screen.height, transform.position.z);
-                transform.localScale = new Vector3(relSize.x * Screen.width, relSize.y * Screen.height, transform.localScale.z);
-            }
+        }
+        if (s && shift)
+        {
+            transform.position = new Vector3(relPos.x * Screen.width, relPos.y * Screen.height, transform.position.z);
+            transform.localScale = new Vector3(relSize.x * Screen.width, relSize.y * Screen.height, transform.localScale.z);
         }
 	}
 }

@@ -37,7 +37,7 @@ public class BattleController : MonoBehaviour{
     public int round = 0;
 
     public UnitData playerData;
-    public UnitData enemyData; 
+    public UnitData enemyData;
 
     public bool playerFinished = false;
     public bool enemyFinished = false;
@@ -82,7 +82,7 @@ public class BattleController : MonoBehaviour{
 	    if(checkEnded()) return;
 	    if(battleState == BattleState.STARTED){
 		    playerParticles.Stop(); // tentative
-		    enemyParticles.Stop(); // tentative
+            enemyParticles.Stop(); // tentative
 		
 		    battleState = BattleState.ANIMATING;
 		    if(actualActor == Actor.PLAYER){
@@ -176,15 +176,18 @@ public class BattleController : MonoBehaviour{
 	    onInput(Action.ATTACK);
     }
 
-    void onInput_Enraged(){
+    public void onInput_Enraged()
+    {
 	    onInput(Action.ENRAGED);
     }
 
-    void onInput_Heal(){
+    public void onInput_Heal()
+    {
 	    onInput(Action.HEAL);
     }
 
-    void onInput_HealOther(){
+    public void onInput_HealOther()
+    {
 	    onInput(Action.HEALOTHER);
     }
 

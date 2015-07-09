@@ -13,7 +13,9 @@ public class UnitData{
 	public int speed ;
 	public float critStrike ;
 	public float critBlock ;
-	public int expToGain ;
+    public int expToGain;
+    public float lastDamageReceived = 0;
+    public float lastDamageDealt = 0;
 
     public float calcDamage(UnitData opponent, float actionDamage)
     {
