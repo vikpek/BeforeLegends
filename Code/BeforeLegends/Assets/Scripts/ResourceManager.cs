@@ -56,6 +56,8 @@ public class ResourceManager : MonoBehaviour
             if(lr.name == rName)
             {
                 lr.number += number;
+                if (lr.number <= 0)
+                    lr.number = 0;
             }
         }
     }
@@ -77,7 +79,7 @@ public class ResourceManager : MonoBehaviour
 	    GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
 	    foreach(GameObject pO in player) {
             pO.GetComponent<BattleParameters>().battleParameters.hitPoints -= pO.GetComponent<BattleParameters>().battleParameters.maxHitPoints * loseHealthInPercent;
-	    }
+        }
     }
     public void RegenerateHealthThroughEating() 
     {

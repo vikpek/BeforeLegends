@@ -34,6 +34,7 @@ public class UnitInfo : MonoBehaviour {
     }
 
     void Start() {
+        currentActive = GameObject.Find("Olaf");
         //unitInfo = GameObject.Find("UnitInfo");
     }
 
@@ -52,8 +53,10 @@ public class UnitInfo : MonoBehaviour {
         //defense.text = "Defense: " + info.battleParameters.defense;
         damage.text = "Damage: " + info.battleParameters.damage;
         armor.text = "Armor: " + info.battleParameters.armor;
-
-        hpText.text = info.battleParameters.hitPoints.ToString() + "/" + info.battleParameters.maxHitPoints.ToString();
+        if (info.battleParameters.hitPoints <= 0)
+            hpText.text = "0/" + info.battleParameters.maxActionPoints.ToString();
+        else
+            hpText.text = info.battleParameters.hitPoints.ToString() + "/" + info.battleParameters.maxHitPoints.ToString();
         hpBar.fillAmount = info.battleParameters.hitPoints / info.battleParameters.maxHitPoints;
 
         switch (obj.GetComponent<BattleParameters>().level) {

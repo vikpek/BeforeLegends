@@ -149,8 +149,6 @@ public class WorldMapGenerator : MonoBehaviour
 		    if(tile.mapObjects.Count != 0){
 			    GameObject go = (GameObject)Instantiate(CharacterModelPrefabs.prefabs[tile.mapObjects[0].appearanceID], tile.position, Quaternion.identity);
 			    go.transform.parent = transform;
-                print(go.GetComponent<MapObjectCarrier>());
-                print(tile.gridPos.ToString());
                 go.GetComponent<MapObjectCarrier>().pos = tile.gridPos;
                 go.GetComponent<MapObjectCarrier>().data = tile.mapObjects[0];
 			    tile.gameObjectList.Add(go);

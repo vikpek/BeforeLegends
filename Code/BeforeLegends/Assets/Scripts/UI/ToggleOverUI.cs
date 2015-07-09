@@ -14,10 +14,8 @@ public class ToggleOverUI : MonoBehaviour {
 
     void OnMouseEnter() {
         mouse.SetMouseOverUIElement(true);
-        print("OnMouseEnter()");
     }
     void OnMouseExit() {
         mouse.SetMouseOverUIElement(false);
-        print("OnMouseExit()");
     }
 }
