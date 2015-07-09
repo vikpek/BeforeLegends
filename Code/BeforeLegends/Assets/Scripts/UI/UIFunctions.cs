@@ -6,7 +6,8 @@ public class UIFunctions : MonoBehaviour {
     int slideState = 0; // 0 ==  nothing, 1 == in, 2 == out
     float slideTime = 0;
 
-    public Vector3 slideDistance;
+    public Vector3 startSlideDistancePercentage;
+    Vector3 slideDistance = new Vector3(0, 0, 0);
     public AnimationCurve slide;
     
     RectTransform rTransform;
@@ -16,6 +17,7 @@ public class UIFunctions : MonoBehaviour {
 	void Start () {
         rTransform = GetComponent<RectTransform>();
         startPosition = rTransform.position;
+        GetComponent<SetUISize>().ResizeUIStuff();
 	}
 
 	// Update is called once per frame
@@ -36,6 +38,20 @@ public class UIFunctions : MonoBehaviour {
                 break;
         }
 	}
+
+    public void SetStartPos(Vector3 newStartPos)
+    {
+        startPosition = newStartPos;
+    }
+
+    public void SetSlideDist(Vector3 newStartSlideDist) // sry for that variablename, tired
+    {
+        newStartSlideDist.x *= startSlideDistancePercentage.x;
+        newStartSlideDist.y *= startSlideDistancePercentage.y;
+        newStartSlideDist.z *= startSlideDistancePercentage.z;
+        slideDistance.x = rTransform.rect.width * newStartSlideDist.x;
+        slideDistance.y = rTransform.rect.height * newStartSlideDist.y;
+    }
 
     public void SlideIn()
     {
