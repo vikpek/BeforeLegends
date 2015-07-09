@@ -87,6 +87,7 @@ public class BattleController : MonoBehaviour{
 		    battleState = BattleState.ANIMATING;
 		    if(actualActor == Actor.PLAYER){
 			    player.SendMessage("executeAction", instance);
+		
 		    }else{
                 enemy.SendMessage("determineAction", instance);
                 enemy.SendMessage("executeAction", instance);
@@ -103,8 +104,7 @@ public class BattleController : MonoBehaviour{
 		    }
 	    }
     }
-
-
+	
     public bool checkEnded()
     {
 		    if(playerData.hitPoints <= 0){
@@ -143,7 +143,7 @@ public class BattleController : MonoBehaviour{
                 break;
 
         }
-        //player.GetComponent<OlafBattleActions>().executeAction(BattleController.instance);
+//        player.GetComponent<OlafBattleActions>().executeAction(BattleController.instance);
     }
 
 
