@@ -1,9 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-public class OlafBattleActions {
+public class OlafBattleActions : MonoBehaviour{
 
-    void executeAction(BattleController battle){
+    public void executeAction(BattleController battle){
 	    switch(battle.playerAction){   //always remember to list new battle actions (functions below) here.
 		    case Action.ATTACK :
 			    attack(battle);
@@ -23,32 +23,59 @@ public class OlafBattleActions {
 	    }
     }
 
-    void attack(BattleController battle){ // Basic attack
-	    battle.enemyData.hitPoints -= battle.playerData.calcDamage(battle.enemyData, 1); 
-	    battle.animateEnemy(Anims.HURT); 
-	    battle.animatePlayer(Anims.ATTACK);
-	    AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
+    void attack(BattleController battle)
+    { // Basic attack
+        battle.enemyData.lastDamageReceived = battle.playerData.calcDamage(battle.enemyData, 1);
+        battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
+        battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
+        battle.animateEnemy(Anims.HURT);
+        battle.animatePlayer(Anims.ATTACK);
+        AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
+    }
+
+    void Stun(BattleController battle)
+    { // Basic attack
+        battle.enemyData.lastDamageReceived = battle.playerData.calcDamage(battle.enemyData, 0.3f);
+        battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
+        battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
+        battle.animateEnemy(Anims.HURT);
+        battle.animatePlayer(Anims.ATTACK);
+        AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
     }
 
     void enraged(BattleController battle){ // Attack that deals more damage when low on HP
-	    float enragedBonus;
-	    enragedBonus = (battle.playerData.maxHitPoints - battle.playerData.hitPoints) / battle.playerData.maxHitPoints + 1;
-        UnitData newPlayerData = battle.playerData.combine(new UnitData()); // kopiert playerdata
-	    newPlayerData.attack *= enragedBonus;
-	    battle.enemyData.hitPoints -= newPlayerData.calcDamage(battle.enemyData, enragedBonus); 
+        battle.enemyData.lastDamageReceived = battle.playerData.calcDamage(battle.enemyData, 2);
+        battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
+        battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
 	    battle.animateEnemy(Anims.HURT); 
 	    battle.animatePlayer(Anims.SPATTACK);
-	    AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack);
+	    AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack);
     }
 
-    void healself(BattleController battle){ // the char heals himself
-	    battle.playerParticles.Play();
+    void healself(BattleController battle)
+    { // the char heals himself
+        battle.playerParticles.Play();
+        battle.playerParticles.Stop();
+        battle.animateEnemy(Anims.HURT);
+        battle.animatePlayer(Anims.NONE);
+        battle.playerData.lastDamageDealt = 0;
+        battle.enemyData.lastDamageReceived = 0;
 	    battle.playerData.hitPoints += battle.playerData.maxHitPoints * 0.3f;
 	    if (battle.playerData.hitPoints > battle.playerData.maxHitPoints){
 		    battle.playerData.hitPoints = battle.playerData.maxHitPoints;
 	    }
     }
 
+    void Revenge(BattleController battle)
+    { // Attack that deals more damage when low on HP
+        battle.enemyData.lastDamageReceived = battle.enemyData.lastDamageDealt;
+        battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
+        battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
+        battle.animateEnemy(Anims.HURT);
+        battle.animatePlayer(Anims.SPATTACK);
+        AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack);
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------
     void healother (BattleController battle){ // the char can heal others (only the enemy for now)
 	    battle.enemyParticles.Play();
 	    battle.enemyData.hitPoints += battle.enemyData.maxHitPoints*0.2f;

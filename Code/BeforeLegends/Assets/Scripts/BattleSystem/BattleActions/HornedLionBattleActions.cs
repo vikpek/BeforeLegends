@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class HornedLionBattleActions{
+public class HornedLionBattleActions : MonoBehaviour{
 
     void executeAction(BattleController battle){
 	    switch(battle.enemyAction){ // always remember to add new actions BELOW and in BattleController.js
@@ -19,7 +19,9 @@ public class HornedLionBattleActions{
 
     void attack(BattleController battle)
     { // this is the basic attack
-	    battle.playerData.hitPoints -= battle.enemyData.calcDamage(battle.playerData, 1); 
+        battle.playerData.lastDamageReceived = battle.enemyData.calcDamage(battle.playerData, 1);
+        battle.enemyData.lastDamageDealt = battle.playerData.lastDamageReceived;
+        battle.playerData.hitPoints -= battle.playerData.lastDamageReceived; 
 	    battle.animateEnemy(Anims.ATTACK); 
 	    battle.animatePlayer(Anims.HURT);
 	    AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
@@ -27,8 +29,10 @@ public class HornedLionBattleActions{
 
     void attackOpponentFinal(BattleController battle)
     { // this is a very powerful attack, deals 4x basic damage
-	    battle.enemyData.actionPoints--;
-	    battle.playerData.hitPoints -= battle.enemyData.calcDamage(battle.playerData, 4);
+        battle.enemyData.actionPoints--; 
+        battle.playerData.lastDamageReceived = battle.enemyData.calcDamage(battle.playerData, 4);
+        battle.enemyData.lastDamageDealt = battle.playerData.lastDamageReceived;
+        battle.playerData.hitPoints -= battle.playerData.lastDamageReceived; 
 	    battle.animateEnemy(Anims.SPATTACK); 
 	    battle.animatePlayer(Anims.HURT);
 	    AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack); 

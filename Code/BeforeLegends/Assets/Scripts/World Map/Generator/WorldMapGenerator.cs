@@ -41,7 +41,6 @@ public class WorldMapGenerator : MonoBehaviour
     public float[] temperatureLookup;
 
     public List<DropChance> DropChances = new List<DropChance>();
-    public List<SpawnChance> SpawnChances = new List<SpawnChance>();
 
     public int[] water;
     public int[] ice;
@@ -57,12 +56,6 @@ public class WorldMapGenerator : MonoBehaviour
     public int[] desert_mountain;
     public int[] jungle;
 
-    public int[] hornedLion;
-    public int[] silverLion;
-    public int[] desertLion;
-    public int[] iceLion;
-    public int[] greenLion;
-
     public Texture2D chunkTexture;
 
     public Texture2D chunkTextureNormal;
@@ -76,18 +69,13 @@ public class WorldMapGenerator : MonoBehaviour
     public Vector2 moistureSeed;
     public Vector2 erosionSeed;
 
+    public Dictionary<GameObject, GameObject> enemys;
+    
     public FlatHexagon flatHex;
-
-    void Awake() {
-        NewWorld settings = GameObject.Find("MenuOptions").GetComponent<NewWorld>();
-        size = settings.size;
-        continentScale = settings.altitude;
-        moistureScale = settings.humidity;
-        temperatureScale = settings.temperature;
-    }
 
     void Start()
     {
+        enemys = new Dictionary<GameObject, GameObject>();
         flatHex = new FlatHexagon(1);
         setSeeds();
         packTextures();
@@ -132,12 +120,9 @@ public class WorldMapGenerator : MonoBehaviour
     {
 	    WorldMapData data = WorldMapData.instance;
 	    foreach(Hexagon tile in data.tiles){
-            SpawnChance chance = returnSpawnChance(tile.matID);
-            chance.overallSpawnChance();
-		    if(tile.traversable && Random.Range(0f, 1f) <= chance.chance){
+		    if(tile.traversable && Random.Range(0f, 1f) <= 0.025){
                 MapObjectData obj = new MapObjectData();
-                
-			    obj.appearanceID = chance.returnSpawn();
+			    obj.appearanceID = Random.Range(0f, 1f) >= 0.5 ? 0 : 1;
 			    tile.mapObjects.Add(obj);
 		    }
 	    }	
@@ -149,9 +134,11 @@ public class WorldMapGenerator : MonoBehaviour
 		    if(tile.mapObjects.Count != 0){
 			    GameObject go = (GameObject)Instantiate(CharacterModelPrefabs.prefabs[tile.mapObjects[0].appearanceID], tile.position, Quaternion.identity);
 			    go.transform.parent = transform;
-                go.GetComponent<MapObjectCarrier>().pos = tile.gridPos;
-                go.GetComponent<MapObjectCarrier>().data = tile.mapObjects[0];
+			    go.GetComponentInChildren<MapObjectCarrier>().pos = tile.gridPos;
+                go.GetComponentInChildren<MapObjectCarrier>().data = tile.mapObjects[0];
 			    tile.gameObjectList.Add(go);
+                enemys.Add(go, go.GetComponentInChildren<MapObjectCarrier>().gameObject);
+                go.GetComponentInChildren<MapObjectCarrier>().gameObject.SetActive(false);
 		    }
 	    }	
     }
@@ -301,34 +288,6 @@ public class WorldMapGenerator : MonoBehaviour
         return DropChances[0];
     }
 
-    SpawnChance returnSpawnChance(int matID) {
-        int ID = 0;
-        foreach (int e in hornedLion) {
-            if (e == matID)
-                ID = 0;
-        }
-        foreach (int e in silverLion) {
-            if (e == matID)
-                ID = 1;
-        }
-        foreach (int e in desertLion)
-        {
-            if (e == matID)
-                ID = 2;
-        }
-        foreach (int e in iceLion)
-        {
-            if (e == matID)
-                ID = 3;
-        }
-        foreach (int e in greenLion)
-        {
-            if (e == matID)
-                ID = 4;
-        }
-        return SpawnChances[ID];
-    }
-
     void generate(){
 	    WorldMapData data = WorldMapData.instance;
 	    data.flatHex = flatHex;
@@ -389,8 +348,8 @@ public class WorldMapGenerator : MonoBehaviour
                     player.transform.position = worldData.tiles[randX, randY].position;
                     InterfaceData.instance.selectedCarrier = objData;
 
-                    GameObject.Find("World Camera").GetComponent<MouseMovement>().nextPos = new Vector3(player.transform.position.x, 10.0f, player.transform.position.z - 10.0f);
-                    //CameraTransitions.Instance.LerpCamera(player.transform);
+                    GameObject.Find("World Camera").GetComponent<MouseMovement>().nextPos = new Vector3(player.transform.position.x, 4.0f, player.transform.position.z - 4.0f);
+                    CameraTransitions.Instance.LerpCamera(player.transform);
 
                     playerSpawned = true;
                 }
