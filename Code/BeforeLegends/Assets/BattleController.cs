@@ -86,8 +86,7 @@ public class BattleController : MonoBehaviour{
 		
 		    battleState = BattleState.ANIMATING;
 		    if(actualActor == Actor.PLAYER){
-			    player.SendMessage("executeAction", instance);
-		
+			    player.SendMessage("executeAction", instance);		
 		    }else{
                 enemy.SendMessage("determineAction", instance);
                 enemy.SendMessage("executeAction", instance);
