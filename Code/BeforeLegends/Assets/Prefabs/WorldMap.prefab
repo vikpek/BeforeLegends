@@ -417,6 +417,7 @@ GameObject:
   - 212: {fileID: 21272968}
   - 114: {fileID: 11443726}
   - 58: {fileID: 5868792}
+  - 114: {fileID: 11476094}
   m_Layer: 0
   m_Name: WM_Player_Icon
   m_TagString: Untagged
@@ -4678,7 +4679,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!20 &2022282
 Camera:
   m_ObjectHideFlags: 1
@@ -4711,7 +4711,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!20 &2078518
 Camera:
   m_ObjectHideFlags: 1
@@ -4744,7 +4743,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!20 &2090768
 Camera:
   m_ObjectHideFlags: 1
@@ -4777,7 +4775,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!23 &2306582
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -6637,6 +6634,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textVictory: {fileID: 0}
   gameObjectsToDeactivateOnGameOver: []
+--- !u!114 &11476094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eff7d096e8248c43b9232bc09affa9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!114 &11476438
 MonoBehaviour:
   m_ObjectHideFlags: 1
