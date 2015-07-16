@@ -29,6 +29,7 @@ public class TurnManager : MonoBehaviour {
 
     void onEvent_ActionEnded(){
 	    numActions--;
+        if (numActions < 0) numActions = 0;
 	    if(numActions == 0) Messenger.instance.send(new AllActionsEndedMessage());
     }
 

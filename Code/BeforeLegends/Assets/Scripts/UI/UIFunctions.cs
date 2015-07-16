@@ -9,8 +9,8 @@ public class UIFunctions : MonoBehaviour {
     public Vector3 startSlideDistancePercentage;
     Vector3 slideDistance = new Vector3(0, 0, 0);
     public AnimationCurve slide;
-    
-    RectTransform rTransform;
+
+    public RectTransform rTransform;
     Vector3 startPosition;
 
     // Use this for initialization
