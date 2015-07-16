@@ -154,13 +154,14 @@ public class BattleController : MonoBehaviour{
 	    actualActor = Actor.PLAYER;
 	    playerData = player.GetComponent<MapObjectCarrier>().data.battleStats;
 	    enemyData = enemy.GetComponent<MapObjectCarrier>().data.battleStats;
+        int appID = enemy.GetComponent<MapObjectCarrier>().data.appearanceID;
 	    if(this.enemy){
 		    GameObject.Destroy(this.enemy);
 	    }
-	    this.enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[enemy.GetComponent<MapObjectCarrier>().data.appearanceID]);
+	    this.enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[appID]);
 	    this.enemy.transform.parent = transform;
         enemyAnimator = this.enemy.GetComponent<CharacterAnimations>();
-        enemyParticles = this.enemy.GetComponent<CharacterParticleController>().heal;
+        if (this.enemy.GetComponent<CharacterParticleController>()) enemyParticles = this.enemy.GetComponent<CharacterParticleController>().heal;
         enemyHPText = this.enemy.GetComponent<HPText>();
 	    round = 0;
     }
