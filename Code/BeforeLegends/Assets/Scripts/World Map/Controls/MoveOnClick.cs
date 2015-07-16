@@ -9,8 +9,8 @@ public class MoveOnClick : MonoBehaviour {
     void Update(){
         if(Input.GetMouseButtonDown(0) && !mouseOverUIElement)
         {
-            //if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
-                //return;
+            if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+                return;
 		    if(objData == null)
             {
 			    objData = gameObject.GetComponent<MapObjectCarrier>();

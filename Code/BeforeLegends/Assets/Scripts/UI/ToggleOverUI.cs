@@ -9,6 +9,7 @@ public class ToggleOverUI : MonoBehaviour {
     }
 
     void OnMouseDown() {
+        print(UnitInfo.Instance);
         UnitInfo.Instance.DisplayUnitInfo(transform.parent.gameObject);
     }
 
