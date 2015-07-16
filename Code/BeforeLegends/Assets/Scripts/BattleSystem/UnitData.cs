@@ -2,6 +2,7 @@
 
 [System.Serializable]
 public class UnitData{
+	public string unitName;
 	public float attack ;
 	public float defense ;
 	public float armor ;
@@ -23,6 +24,7 @@ public class UnitData{
 		float actualDefense  = opponent.defense - opponent.defense * 0.1f + Random.Range(0.0f, 1.0f) * opponent.defense * 0.2f;
 
 
+
 		float mad  = actualAttack / actualDefense / 10;
 		if(actualAttack < actualDefense){
 			mad = -mad;
@@ -30,14 +32,32 @@ public class UnitData{
 		
 		float damageValue  = damage + damage * mad;
 		bool isCrit  = false;
+	
+
 		if(Random.Range(0.0f, 1.0f) < critStrike){
 			damageValue *= 1.5f;
 			isCrit = true;
 		}
 		
 		if(Random.Range(0.0f, 1.0f) < opponent.critBlock){
+			#if DEBUG
+			Debug.Log("\t\tCritical block!!!");
+			#endif
 			return 0;
 		}
+
+		#if DEBUG
+		Debug.Log("Who: " + unitName + "\n" +
+		          "\t\tAttack: \t\t\t\t" + attack + "\n" +
+		          "\t\tActual Attack: \t\t\t" + actualAttack + "\n\n"+
+		          "\t\tDefense: \t\t\t" + defense + "\n" +
+		          "\t\tActual Defense: \t\t\t" + actualDefense + "\n" +
+		          "\t\tIs Critical: \t\t\t" + isCrit + "\n" +
+		          "\t\tDamage: \t\t\t" + damage + "\n" + 
+		          "\t\tDamage Value: \t\t\t" + damageValue + "\n" +
+		          "\t\tHitpoints " + unitName + "\t\t" + hitPoints + "\n" + 
+		          "\t\tHitpoints " + opponent.unitName + "\t" + opponent.hitPoints);
+		#endif
 
 		return damageValue / (damageValue + opponent.armor) * damageValue * actionDamage;
 	}
