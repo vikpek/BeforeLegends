@@ -9,6 +9,7 @@ public class HPText : MonoBehaviour
     void setVal(float v){
 	    int hp = (int)Mathf.Round(v);
 	    if(hp < 0) hp = 0;
-	    tm.text = "" + hp;
+//	    tm.text = "" + hp;
+		tm.text = "";
     }
 }
