@@ -35,9 +35,13 @@ public class TurnManager : MonoBehaviour {
 
     void Update(){
 	    if(Input.GetKeyDown("space") && numActions == 0){
-		    Messenger.instance.send(new TurnEndedMessage(turn));
-		    turn++;
-            Messenger.instance.send(new TurnBeganMessage(turn));
+            NextTurn();
 	    }
+    }
+
+    public void NextTurn() {
+        Messenger.instance.send(new TurnEndedMessage(turn));
+        turn++;
+        Messenger.instance.send(new TurnBeganMessage(turn));
     }
 }

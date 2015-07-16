@@ -8533,7 +8533,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!20 &2027692
 Camera:
   m_ObjectHideFlags: 1
@@ -8566,7 +8565,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!23 &2301844
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -10969,6 +10967,7 @@ MonoBehaviour:
   player: {fileID: 170960}
   round: 0
   playerData:
+    unitName: 
     attack: 0
     defense: 0
     armor: 0
@@ -10984,6 +10983,7 @@ MonoBehaviour:
     lastDamageReceived: 0
     lastDamageDealt: 0
   enemyData:
+    unitName: 
     attack: 0
     defense: 0
     armor: 0
