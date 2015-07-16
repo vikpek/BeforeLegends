@@ -85,7 +85,6 @@ public class ResourceManager : MonoBehaviour
     {
 	    GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
 	    foreach(GameObject pO in player) {
-            print(pO);
 		    pO.GetComponent<BattleParameters>().battleParameters.hitPoints += pO.GetComponent<BattleParameters>().battleParameters.maxHitPoints * generateHealthInPercent;
 		    if(pO.GetComponent<BattleParameters>().battleParameters.hitPoints > pO.GetComponent<BattleParameters>().battleParameters.maxHitPoints) {
 			    pO.GetComponent<BattleParameters>().battleParameters.hitPoints = pO.GetComponent<BattleParameters>().battleParameters.maxHitPoints;
