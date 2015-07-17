@@ -12,12 +12,17 @@ public class MouseMovement : MonoBehaviour {
     public float xOffsetMultiplier;
     public float zOffsetMultiplierMin;
     public float zOffsetMultiplierMax;
+    public KeyCode backToOlaf;
 
     void Awake(){
 	    nextPos = transform.position;
     }
 
     void Update () {
+        if (Input.GetKeyDown(backToOlaf))
+        if(Input.GetKeyDown(backToOlaf))
+            nextPos = new Vector3(GameObject.Find("Olaf").transform.position.x, gameObject.transform.position.y, GameObject.Find("Olaf").transform.position.z - gameObject.transform.position.y);
+
         mouseScrollDeltaY = 0;
         mouseScrollDeltaY = -Input.mouseScrollDelta.y * 1.5f;
 

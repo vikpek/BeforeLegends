@@ -81,7 +81,7 @@ public class ResourceManager : MonoBehaviour
             pO.GetComponent<BattleParameters>().battleParameters.hitPoints -= pO.GetComponent<BattleParameters>().battleParameters.maxHitPoints * loseHealthInPercent;
             if (pO.GetComponent<BattleParameters>().battleParameters.hitPoints < 0) {
                 pO.GetComponent<BattleParameters>().battleParameters.hitPoints = 0;
-                Destroy(pO);
+                pO.SetActive(false);
             }
         }
     }

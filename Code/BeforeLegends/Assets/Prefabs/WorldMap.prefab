@@ -1838,6 +1838,7 @@ GameObject:
   - 114: {fileID: 11482302}
   - 114: {fileID: 11470626}
   - 82: {fileID: 8200438}
+  - 114: {fileID: 11419568}
   m_Layer: 0
   m_Name: WorldMap
   m_TagString: Untagged
@@ -5928,6 +5929,7 @@ MonoBehaviour:
   xOffsetMultiplier: 1.75
   zOffsetMultiplierMin: .360000014
   zOffsetMultiplierMax: 2.70000005
+  backToOlaf: 111
 --- !u!114 &11404202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6119,6 +6121,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Points
+--- !u!114 &11419568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4709479ab0ab31346a54e5cbc4f9c3ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 0}
+  gameObjectsToDeactivateOnGameOver: []
+  activePlayers: []
 --- !u!114 &11422252
 MonoBehaviour:
   m_ObjectHideFlags: 1
