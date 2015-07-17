@@ -79,6 +79,10 @@ public class ResourceManager : MonoBehaviour
 	    GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
 	    foreach(GameObject pO in player) {
             pO.GetComponent<BattleParameters>().battleParameters.hitPoints -= pO.GetComponent<BattleParameters>().battleParameters.maxHitPoints * loseHealthInPercent;
+            if (pO.GetComponent<BattleParameters>().battleParameters.hitPoints < 0) {
+                pO.GetComponent<BattleParameters>().battleParameters.hitPoints = 0;
+                Destroy(pO);
+            }
         }
     }
     public void RegenerateHealthThroughEating() 

@@ -20,7 +20,7 @@ public class GameOver : MonoBehaviour {
 			foreach(GameObject gO in gameObjectsToDeactivateOnGameOver) {
 				gO.SetActive(false);
 			}
-			gameOver.gameObject.SetActive(true);
+			//gameOver.gameObject.SetActive(true);
 			Time.timeScale = 0;
 		}
 	}
