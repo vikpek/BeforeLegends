@@ -9,6 +9,13 @@ public class BattleParameters : MonoBehaviour{
 
     public int[] expToLevelUp;
     public UnitData[] levelUpChange;
+    public Sprite[] levelSprites;
+    public GameObject levelGO;
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.V))
+            LevelUp();
+    }
 
     public void LevelUp()
     {
@@ -18,6 +25,7 @@ public class BattleParameters : MonoBehaviour{
         {
             battleParameters = battleParameters.combine(levelUpChange[level - 1]);
             level++;
+            levelGO.GetComponent<SpriteRenderer>().sprite = levelSprites[level];
         }
     }
 
