@@ -45,7 +45,7 @@ public class GameStateManager : MonoBehaviour {
         battle.SetActive(false);
         battleMapGUI.SetActive(false);
         worldMapGUI.SetActive(true);
-	    ResourceManager.instance.ResourceAS("exp", exp);
+	    ResourceManager.instance.ResourceAS("Glory", exp);
 	    olaf.exp += exp;
         olaf.LevelUp();
     }
