@@ -4,6 +4,7 @@ using System.Collections;
 public class UIFunctions : MonoBehaviour {
 
     int slideState = 0; // 0 ==  nothing, 1 == in, 2 == out
+    bool shopOpen = false;
     float slideTime = 0;
 
     public Vector3 startSlideDistancePercentage;
@@ -27,14 +28,18 @@ public class UIFunctions : MonoBehaviour {
             case 1:
                 slideTime += Time.deltaTime;
                 rTransform.position = new Vector3(startPosition.x - (slide.Evaluate(slideTime) * slideDistance.x), startPosition.y - (slide.Evaluate(slideTime) * slideDistance.y), rTransform.position.z);
-                if (slideTime >= slide.keys[slide.keys.Length - 1].time)
+                if (slideTime >= slide.keys[slide.keys.Length - 1].time) {
                     slideState = 0;
+                    shopOpen = true;
+                }
                 break;
             case 2:
                 slideTime -= Time.deltaTime;
-                rTransform.position = new Vector3(startPosition.x - (slide.Evaluate(slideTime) * slideDistance.x), startPosition.y - (slide.Evaluate(slideTime) * slideDistance.y), rTransform.position.z); 
-                if (slideTime <= 0)
+                rTransform.position = new Vector3(startPosition.x - (slide.Evaluate(slideTime) * slideDistance.x), startPosition.y - (slide.Evaluate(slideTime) * slideDistance.y), rTransform.position.z);
+                if (slideTime <= 0) {
                     slideState = 0;
+                    shopOpen = false;
+                }
                 break;
         }
 	}
@@ -60,5 +65,11 @@ public class UIFunctions : MonoBehaviour {
     public void SlideOut()
     {
         slideState = 2;
+    }
+    public void ToggleSlideState() {
+        if (shopOpen == false)
+            slideState = 1;
+        else
+            slideState = 2;
     }
 }
