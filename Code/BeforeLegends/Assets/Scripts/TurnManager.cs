@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class TurnManager : MonoBehaviour {
@@ -17,6 +18,7 @@ public class TurnManager : MonoBehaviour {
 
    public int turn;
    public int numActions;
+   public Text turnNumber;
 
     void Start(){
 	    Messenger.instance.listen(gameObject, "ActionStarted");
@@ -42,6 +44,7 @@ public class TurnManager : MonoBehaviour {
     public void NextTurn() {
         Messenger.instance.send(new TurnEndedMessage(turn));
         turn++;
+        turnNumber.text = "Turn: " + turn;
         Messenger.instance.send(new TurnBeganMessage(turn));
     }
 }
