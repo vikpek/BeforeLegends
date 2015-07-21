@@ -24,6 +24,7 @@ public class WorldMapGenerator : MonoBehaviour
     public Vec2int size;
     public Vec2int chunkSize;
     public int seed;
+    public bool randomSeed;
     public float erosionScale;
     public float continentScale;
     public float moistureScale;
@@ -75,6 +76,10 @@ public class WorldMapGenerator : MonoBehaviour
 
     void Start()
     {
+        if (randomSeed = true) {
+            Random.seed = System.Environment.TickCount;
+            seed = Random.RandomRange(int.MinValue, int.MaxValue);
+        }
         enemys = new Dictionary<GameObject, GameObject>();
         flatHex = new FlatHexagon(1);
         setSeeds();
