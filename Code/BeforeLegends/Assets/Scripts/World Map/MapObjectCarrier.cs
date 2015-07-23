@@ -125,7 +125,7 @@ public class MapObjectCarrier : MonoBehaviour {
 	    WorldMapData worldData = WorldMapData.instance;
 	    if(worldData.tiles[pos.x, pos.y].gameObjectList.Count > 0) {
 		    foreach(GameObject gO in worldData.tiles[pos.x, pos.y].gameObjectList) {
-			    if(gO.tag == "Ressource") {
+			    if(gO.tag == "Ressource" && gO.activeInHierarchy) {
 				    ResourceManager.instance.ressourcesToDeregister.Add(gO);
 				    switch(gO.GetComponent<Ressource>().rType) {
 				    case "Food":
