@@ -42,6 +42,7 @@ public class WorldMapGenerator : MonoBehaviour
     public float[] temperatureLookup;
 
     public List<DropChance> DropChances = new List<DropChance>();
+    public List<SpawnChance> spawnChances = new List<SpawnChance>();
 
     public int[] water;
     public int[] ice;
@@ -56,6 +57,12 @@ public class WorldMapGenerator : MonoBehaviour
     public int[] desert;
     public int[] desert_mountain;
     public int[] jungle;
+
+    public int[] hornedLion;
+    public int[] silverLion;
+    public int[] greenLion;
+    public int[] iceLion;
+    public int[] desertLion;
 
     public Texture2D chunkTexture;
 
@@ -121,16 +128,18 @@ public class WorldMapGenerator : MonoBehaviour
 	    mapMaterial.mainTexture = chunkTexture;
     }
 
-    void spawnObjects()
-    {
-	    WorldMapData data = WorldMapData.instance;
-	    foreach(Hexagon tile in data.tiles){
-		    if(tile.traversable && Random.Range(0f, 1f) <= 0.025){
+    void spawnObjects() {
+        WorldMapData data = WorldMapData.instance;
+        foreach (Hexagon tile in data.tiles) {
+            SpawnChance chance = returnSpawnChance(tile.matID);
+            chance.overallSpawnChance();
+            if (tile.traversable && Random.Range(0f, 1f) <= chance.chance) {
                 MapObjectData obj = new MapObjectData();
-			    obj.appearanceID = Random.Range(0f, 1f) >= 0.5 ? 0 : 1;
-			    tile.mapObjects.Add(obj);
-		    }
-	    }	
+
+                obj.appearanceID = chance.returnSpawn();
+                tile.mapObjects.Add(obj);
+            }
+        }
     }
 
     void spawnCarriers(){
@@ -291,6 +300,34 @@ public class WorldMapGenerator : MonoBehaviour
  			    return DropChances[12];
  	    }
         return DropChances[0];
+    }
+
+    SpawnChance returnSpawnChance(int matID) {
+        int ID = 0;
+        foreach (int e in hornedLion) {
+            if (e == matID)
+                ID = 0;
+        }
+        foreach (int e in silverLion) {
+            if (e == matID)
+                ID = 1;
+        }
+        foreach (int e in desertLion)
+                    {
+                        if (e == matID)
+                ID = 2;
+                    }
+                foreach (int e in iceLion)
+                    {
+                        if (e == matID)
+                ID = 3;
+                    }
+                foreach (int e in greenLion)
+                    {
+                        if (e == matID)
+                ID = 4;
+                    }
+        return spawnChances[ID];
     }
 
     void generate(){

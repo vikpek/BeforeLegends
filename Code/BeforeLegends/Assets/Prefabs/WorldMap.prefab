@@ -6939,6 +6939,98 @@ MonoBehaviour:
     foodDropChance: .300000012
     soulsDropChance: .150000006
     chance: 0
+  spawnChances:
+  - tileType: water
+    hornedLion: 0
+    silverLion: 0
+    greenLion: 0
+    iceLion: 0
+    desertLion: 0
+    chance: 0
+  - tileType: ice
+    hornedLion: 0
+    silverLion: 0
+    greenLion: 0
+    iceLion: .150000006
+    desertLion: 0
+    chance: 0
+  - tileType: ice_mountain
+    hornedLion: 0
+    silverLion: .100000001
+    greenLion: 0
+    iceLion: .100000001
+    desertLion: 0
+    chance: 0
+  - tileType: tundra
+    hornedLion: 0
+    silverLion: 0
+    greenLion: 0
+    iceLion: .150000006
+    desertLion: 0
+    chance: 0
+  - tileType: savanna
+    hornedLion: .100000001
+    silverLion: 0
+    greenLion: 0
+    iceLion: 0
+    desertLion: .0500000007
+    chance: 0
+  - tileType: dry_forest
+    hornedLion: .100000001
+    silverLion: 0
+    greenLion: 0
+    iceLion: 0
+    desertLion: .0500000007
+    chance: 0
+  - tileType: dry_mountain
+    hornedLion: .100000001
+    silverLion: .100000001
+    greenLion: 0
+    iceLion: 0
+    desertLion: 0
+    chance: 0
+  - tileType: grassland
+    hornedLion: .0500000007
+    silverLion: 0
+    greenLion: .100000001
+    iceLion: 0
+    desertLion: 0
+    chance: 0
+  - tileType: forest
+    hornedLion: 0
+    silverLion: 0
+    greenLion: .100000001
+    iceLion: 0
+    desertLion: 0
+    chance: 0
+  - tileType: forest_mountain
+    hornedLion: 0
+    silverLion: .100000001
+    greenLion: .100000001
+    iceLion: 0
+    desertLion: 0
+    chance: 0
+  - tileType: desert
+    hornedLion: 0
+    silverLion: 0
+    greenLion: 0
+    iceLion: 0
+    desertLion: .150000006
+    chance: 0
+  - tileType: desert_mountain
+    hornedLion: .0500000007
+    silverLion: .100000001
+    greenLion: 0
+    iceLion: 0
+    desertLion: .150000006
+    chance: 0
+  - tileType: jungle
+    hornedLion: .0500000007
+    silverLion: 0
+    greenLion: .100000001
+    iceLion: 0
+    desertLion: 0
+    chance: 0
   water: 0000000004000000080000000c0000001000000014000000180000001c00000020000000
   ice: 010000000200000005000000
   ice_mountain: 03000000070000000b000000
@@ -6952,6 +7044,11 @@ MonoBehaviour:
   desert: 190000001a000000
   desert_mountain: 1b000000
   jungle: 2100000022000000
+  hornedLion: 0d0000001d0000001e0000000e0000000f00000011000000150000001b0000002100000022000000
+  silverLion: 03000000070000000b0000000f00000013000000170000001b0000001f00000023000000
+  greenLion: 1100000015000000120000001600000013000000170000001f000000230000002100000022000000
+  iceLion: 010000000200000003000000050000000600000007000000090000000a0000000b000000
+  desertLion: 1d0000001e000000190000001a0000000e0000001b000000
   chunkTexture: {fileID: 0}
   chunkTextureNormal: {fileID: 0}
   chunkTextureRects: []
