@@ -81,8 +81,8 @@ public class UnitInfo : MonoBehaviour {
                 break;
         }
 
-        if(currentActive == obj || !unitInfo.active)
-            unitInfo.SetActive(!unitInfo.active);
+        if(currentActive == obj || !unitInfo.activeSelf)
+            unitInfo.SetActive(!unitInfo.activeSelf);
         
         currentActive = obj;
     }

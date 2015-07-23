@@ -76,9 +76,9 @@ public class WorldMapGenerator : MonoBehaviour
 
     void Start()
     {
-        if (randomSeed = true) {
+        if (randomSeed == true) {
             Random.seed = System.Environment.TickCount;
-            seed = Random.RandomRange(int.MinValue, int.MaxValue);
+            seed = Random.Range(int.MinValue, int.MaxValue);
         }
         enemys = new Dictionary<GameObject, GameObject>();
         flatHex = new FlatHexagon(1);

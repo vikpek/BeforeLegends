@@ -4,29 +4,30 @@ using System.Collections;
 
 public class PauseMenu : MonoBehaviour {
 
-    public Button pauseMenu;
+    public GameObject pauseMenu;
     bool isPause;
+    public GameObject[] deactivateAtPause;
 
     void Update () {
-	    if(Input.GetKeyDown(KeyCode.Escape))
-		    TogglePauseMenu();
+        if (Input.GetKeyDown(KeyCode.Escape))
+            TogglePauseMenu();
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
             Application.LoadLevel("Menu");
     }
 
-    void Resume()
+    public void Resume()
     {
 	    TogglePauseMenu();
     }
 
-    void ExitToMainMenu()
+    public void LoadLevel(string sceneName)
     {
 	    Time.timeScale = 1;
-	    Application.LoadLevel(1);
+        Application.LoadLevel(sceneName);
     }
 
-    void Exit()
+    public void Exit()
     {
 	    Application.Quit();
     }
@@ -36,11 +37,17 @@ public class PauseMenu : MonoBehaviour {
 	    if(isPause) {
 		    pauseMenu.gameObject.SetActive(false);
 		    Time.timeScale = 1;
+            foreach(GameObject gO in deactivateAtPause) {
+                gO.SetActive(true);
+            }
 	    }
 	    else {
 		    pauseMenu.gameObject.SetActive(true);
 		    Time.timeScale = 0;
-	    }
+            foreach (GameObject gO in deactivateAtPause) {
+                gO.SetActive(false);
+            }
+        }
 	    isPause = !isPause;
     }
 }
