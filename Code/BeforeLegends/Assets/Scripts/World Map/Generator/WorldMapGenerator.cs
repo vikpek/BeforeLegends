@@ -353,6 +353,7 @@ public class WorldMapGenerator : MonoBehaviour
                     player.transform.position = worldData.tiles[randX, randY].position;
                     InterfaceData.instance.selectedCarrier = objData;
 
+                    GameObject.Find("World Camera").transform.position = new Vector3(player.transform.position.x, 10.0f, player.transform.position.z - 10.0f);
                     GameObject.Find("World Camera").GetComponent<MouseMovement>().nextPos = new Vector3(player.transform.position.x, 10.0f, player.transform.position.z - 10.0f);
                     //CameraTransitions.Instance.LerpCamera(player.transform);
 
