@@ -124,4 +124,23 @@ public class FogOfWar : MonoBehaviour {
             SetLayerRecursively( child.gameObject, newLayer );
         }
     }
+
+    void Cheat() {
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("Ressource");
+        GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(GameObject gO in objects) {
+            SetLayerRecursively(gO, 15);
+            gO.GetComponent<Ressource>().fall = true;
+        }
+        foreach (GameObject gO in enemys) {
+            SetLayerRecursively(gO, 15);
+        }
+        GameObject.Find("FogOfWar").SetActive(false);
+    }
+
+    void Update() {
+        if(Input.GetKeyDown(KeyCode.X)) {
+            Cheat();
+        }
+    }
 }
