@@ -312,21 +312,18 @@ public class WorldMapGenerator : MonoBehaviour
             if (e == matID)
                 ID = 1;
         }
-        foreach (int e in desertLion)
-                    {
+        foreach (int e in desertLion) {
                         if (e == matID)
                 ID = 2;
-                    }
-                foreach (int e in iceLion)
-                    {
+        }
+                foreach (int e in iceLion){
                         if (e == matID)
                 ID = 3;
-                    }
-                foreach (int e in greenLion)
-                    {
+                }
+                foreach (int e in greenLion){
                         if (e == matID)
                 ID = 4;
-                    }
+                }
         return spawnChances[ID];
     }
 

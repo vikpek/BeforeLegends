@@ -13,7 +13,8 @@ public class GameVictory : MonoBehaviour {
     bool iLikeCheating = false;
 
     void Start() {
-        //settings = GameObject.Find("MenuOptions").GetComponent<NewWorld>();
+        if(GameObject.Find("MenuOptions"))
+            settings = GameObject.Find("MenuOptions").GetComponent<NewWorld>();
     }
 
     void Update () {
@@ -46,7 +47,7 @@ public class GameVictory : MonoBehaviour {
             foreach (GameObject gO in gameObjectsToDeactivateOnGameOver) {
                 gO.SetActive(false);
             }
-            textVictory.gameObject.SetActive(true);
+            //textVictory.gameObject.SetActive(true);
             Time.timeScale = 0;
         }
     }
