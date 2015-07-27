@@ -752,10 +752,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 455554}
-  - 114: {fileID: 11467640}
   - 114: {fileID: 11444230}
   - 114: {fileID: 11442612}
   - 114: {fileID: 11405698}
+  - 114: {fileID: 11426044}
+  - 114: {fileID: 11492650}
   m_Layer: 0
   m_Name: IceLion
   m_TagString: Untagged
@@ -1974,7 +1975,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158700}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: 693.478088, y: 1.1920929e-07, z: 1370.69775}
+  m_LocalPosition: {x: -2.3499999, y: .289999992, z: -.389999986}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 493554}
@@ -2432,6 +2433,17 @@ MonoBehaviour:
   hurt: Rig.001|Hurt_01
   spattack: Rig.001|Attack_02_Crit
   animArr: {fileID: 11127224}
+--- !u!114 &11426044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fada60d62058674ea19d5b9df01a2dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11442612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2468,7 +2480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .100000001
---- !u!114 &11467640
+--- !u!114 &11492650
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2476,7 +2488,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 158700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa156430b4a3cf14ebf7e57e92fd2822, type: 3}
+  m_Script: {fileID: 11500000, guid: 809c9cb1e355242438190539d9882161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!137 &13790914
