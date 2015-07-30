@@ -100,9 +100,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 407028}
-  - 114: {fileID: 11434068}
   - 65: {fileID: 6536104}
-  - 114: {fileID: 11468626}
+  - 114: {fileID: 11415372}
+  - 114: {fileID: 11447474}
   m_Layer: 11
   m_Name: HornedLion
   m_TagString: Enemy
@@ -1394,7 +1394,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.32210732, y: 1.1920929e-07, z: -4.1406889}
+  m_LocalPosition: {x: 2.36100006, y: 0, z: -2.84100008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 442422}
@@ -2719,7 +2719,7 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
---- !u!114 &11434068
+--- !u!114 &11415372
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2727,31 +2727,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 103140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 594dec7e2d7a25d44aa2006b861c5206, type: 3}
+  m_Script: {fileID: 11500000, guid: 9efc54a18240e7e4eb5edb000632f757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data:
-    pos:
-      x: 0
-      y: 0
-    appearanceID: 0
-    battleStats:
-      attack: 0
-      defense: 0
-      armor: 0
-      damage: 0
-      hitPoints: 0
-      maxHitPoints: 0
-      actionPoints: 0
-      maxActionPoints: 0
-      speed: 0
-      critStrike: 0
-      critBlock: 0
-      expToGain: 0
   audioObject:
     objectName: 
     attack: {fileID: 0}
-    walk: {fileID: 0}
+    Walk: {fileID: 0}
     die: {fileID: 0}
     spattack: {fileID: 0}
   pos:
@@ -2763,7 +2745,7 @@ MonoBehaviour:
   paused: 0
   suspend: 0
   enemyGameObject: {fileID: 0}
---- !u!114 &11468626
+--- !u!114 &11447474
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2771,22 +2753,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 103140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
+  m_Script: {fileID: 11500000, guid: d0c23b05ff8b51049a24638dfafdfe6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   battleParameters:
-    attack: 10
-    defense: 10
-    armor: 5
-    damage: 10
-    hitPoints: 50
-    maxHitPoints: 50
-    actionPoints: 2
-    maxActionPoints: 2
-    speed: 10
+    unitName: 
+    attack: 0
+    defense: 0
+    armor: 0
+    damage: 0
+    hitPoints: 0
+    maxHitPoints: 0
+    actionPoints: 0
+    maxActionPoints: 0
+    speed: 0
     critStrike: 0
     critBlock: 0
-    expToGain: 10
+    expToGain: 0
+    lastDamageReceived: 0
+    lastDamageDealt: 0
+  level: 0
+  exp: 0
+  expToLevelUp: 
+  levelUpChange: []
 --- !u!137 &13768160
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -1,6 +1,6 @@
-﻿#pragma strict
+﻿//#pragma strict
 
 
-function OnTriggerEnter (other : Collider){
-	GameStateManager.instance.startBattle(gameObject, other.gameObject);
-}
+//function OnTriggerEnter (other : Collider){
+//	GameStateManager.instance.startBattle(gameObject, other.gameObject);
+//}
