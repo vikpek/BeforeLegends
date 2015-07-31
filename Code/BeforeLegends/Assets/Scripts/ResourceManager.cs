@@ -120,31 +120,36 @@ public class ResourceManager : MonoBehaviour
             ind = GameObject.Instantiate((number < 0 ? minusIndicator : plusIndicator),
                                           indicatorOrigins[0].position,
                                           Quaternion.identity) as GameObject;
-            ind.gameObject.GetComponent<RectTransform>().parent = indicatorOrigins[0];
+            //ind.gameObject.GetComponent<RectTransform>().parent = indicatorOrigins[0];
+            ind.gameObject.GetComponent<RectTransform>().SetParent(indicatorOrigins[0]);
         break;
         case "Food":
             ind = GameObject.Instantiate((number < 0 ? minusIndicator : plusIndicator),
                                           indicatorOrigins[1].position,
                                           Quaternion.identity) as GameObject;
-            ind.gameObject.GetComponent<RectTransform>().parent = indicatorOrigins[1];
+            //ind.gameObject.GetComponent<RectTransform>().parent = indicatorOrigins[1];
+            ind.gameObject.GetComponent<RectTransform>().SetParent(indicatorOrigins[1]);
         break;
         case "Stone":
             ind = GameObject.Instantiate((number < 0 ? minusIndicator : plusIndicator),
                                           indicatorOrigins[2].position,
                                           Quaternion.identity) as GameObject;
-            ind.gameObject.GetComponent<RectTransform>().parent = indicatorOrigins[2];
+            //ind.gameObject.GetComponent<RectTransform>().parent = indicatorOrigins[2];
+            ind.gameObject.GetComponent<RectTransform>().SetParent(indicatorOrigins[2]);
         break;
         case "Soul":
             ind = GameObject.Instantiate((number < 0 ? minusIndicator : plusIndicator),
                                           indicatorOrigins[3].position,
                                           Quaternion.identity) as GameObject;
-            ind.gameObject.GetComponent<RectTransform>().parent = indicatorOrigins[3];
+            //ind.gameObject.GetComponent<RectTransform>().parent = indicatorOrigins[3];
+            ind.gameObject.GetComponent<RectTransform>().SetParent(indicatorOrigins[3]);
         break;
         case "Wood":
             ind = GameObject.Instantiate((number < 0 ? minusIndicator : plusIndicator),
                                           indicatorOrigins[4].position,
                                           Quaternion.identity) as GameObject;
-            ind.gameObject.GetComponent<RectTransform>().parent = indicatorOrigins[4];
+            //ind.gameObject.GetComponent<RectTransform>().parent = indicatorOrigins[4];
+            ind.gameObject.GetComponent<RectTransform>().SetParent(indicatorOrigins[4]);
         break;
         }
     }
