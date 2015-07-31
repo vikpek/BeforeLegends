@@ -1414,22 +1414,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &148236
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 428492}
-  - 111: {fileID: 11186694}
-  m_Layer: 10
-  m_Name: FO_Jackal_01_AM 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &148846
 GameObject:
   m_ObjectHideFlags: 1
@@ -2547,6 +2531,7 @@ GameObject:
   - 114: {fileID: 11414806}
   - 114: {fileID: 11494106}
   - 114: {fileID: 11496364}
+  - 114: {fileID: 11498862}
   m_Layer: 0
   m_Name: Main Camera_Raphko
   m_TagString: MainCamera
@@ -3095,7 +3080,6 @@ Transform:
   - {fileID: 419764}
   - {fileID: 461582}
   - {fileID: 479298}
-  - {fileID: 428492}
   - {fileID: 465050}
   - {fileID: 460192}
   - {fileID: 487888}
@@ -3711,18 +3695,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 476892}
   m_RootOrder: 1
---- !u!4 &428492
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 148236}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -1.10000002, y: -.0464828312, z: .429999948}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 404378}
-  m_RootOrder: 6
 --- !u!4 &429106
 Transform:
   m_ObjectHideFlags: 1
@@ -4343,7 +4315,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 404378}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!4 &458118
 Transform:
   m_ObjectHideFlags: 1
@@ -4418,7 +4390,7 @@ Transform:
   m_Children:
   - {fileID: 427254}
   m_Father: {fileID: 404378}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!4 &460680
 Transform:
   m_ObjectHideFlags: 1
@@ -4585,7 +4557,7 @@ Transform:
   m_Children:
   - {fileID: 457168}
   m_Father: {fileID: 404378}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!4 &465502
 Transform:
   m_ObjectHideFlags: 1
@@ -5068,7 +5040,7 @@ Transform:
   m_Children:
   - {fileID: 476662}
   m_Father: {fileID: 404378}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!4 &488160
 Transform:
   m_ObjectHideFlags: 1
@@ -7651,21 +7623,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
---- !u!111 &11186694
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 148236}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 2827fe6c175854af2ad33c92ffca905a, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 2827fe6c175854af2ad33c92ffca905a, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &11407958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7996,6 +7953,23 @@ MonoBehaviour:
   dx11BokehTexture: {fileID: 2800000, guid: a4cdca73d61814d33ac1587f6c163bca, type: 3}
   dx11BokehScale: 1.20000005
   dx11BokehIntensity: 2.5
+--- !u!114 &11498862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3baa58cc23640c54ab34ad7fa45913dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlable: 0
+  moveSpeed: 1
+  resolution: 4
+  imageName: Screenshot_
+  customPath: /Screenshots/
+  resetIndex: 0
 --- !u!124 &12438712
 Behaviour:
   m_ObjectHideFlags: 1
