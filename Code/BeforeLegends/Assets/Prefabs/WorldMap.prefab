@@ -2176,7 +2176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &180776
 GameObject:
   m_ObjectHideFlags: 1
@@ -2463,6 +2463,7 @@ GameObject:
   - 33: {fileID: 3365548}
   - 23: {fileID: 2319048}
   - 114: {fileID: 11416372}
+  - 114: {fileID: 11498208}
   m_Layer: 13
   m_Name: ApertureMask
   m_TagString: Untagged
@@ -2722,7 +2723,7 @@ Transform:
   m_GameObject: {fileID: 190746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .00999999978, z: 0}
-  m_LocalScale: {x: 1.39999998, y: 1, z: 1.39999998}
+  m_LocalScale: {x: 1.60000002, y: 1, z: 1.60000002}
   m_Children: []
   m_Father: {fileID: 475178}
   m_RootOrder: 4
@@ -4733,7 +4734,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294964479
+    m_Bits: 4294956287
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -6175,7 +6176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042e9547f2f12874689732969607bd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRange: 4
+  visionRange: 3
   enemysInRange: []
   ressourceInRange: []
   adjacent: []
@@ -7283,6 +7284,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 175648, guid: 6eb95d44ed4526443b3d511a24520597, type: 2}
+--- !u!114 &11498208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d64a84fc1fc1a540864e7f48ef825a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  olafTransform: {fileID: 0}
 --- !u!124 &12446670
 Behaviour:
   m_ObjectHideFlags: 1
