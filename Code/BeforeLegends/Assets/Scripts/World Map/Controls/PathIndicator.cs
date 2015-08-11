@@ -73,7 +73,7 @@ public class PathIndicator : MonoBehaviour {
     	redraw(MouseTileInput.instance.lastTile);
     }
 
-    void redraw(Vec2int goal){
+    public void redraw(Vec2int goal){
     	MapObjectCarrier target = InterfaceData.instance.selectedCarrier;
     	if(!target) return;
     	updatePath(WorldMapData.instance.findPath(target.pos.x, target.pos.y, goal.x, goal.y, target.movedMax - target.moved, false));

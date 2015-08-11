@@ -41,7 +41,9 @@ public class EnemyAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.H))
+        {
             HuntPlayer();
+        }
 	}
 
     public int MakeTurn()
@@ -63,5 +65,10 @@ public class EnemyAI : MonoBehaviour {
             print("pathToFollow.Length" + pathToFollow.Length);
         }
         moc.followPath(pathToFollow, 0.25f);
+    }
+
+    public void FindPathToOlaf()
+    {
+
     }
 }

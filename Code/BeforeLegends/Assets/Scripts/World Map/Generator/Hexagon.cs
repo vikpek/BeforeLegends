@@ -126,6 +126,17 @@ public class Hexagon {
 	    return x >= 0 && gridPos.y + 1 < data.size.y ? data.tiles[x, gridPos.y + 1] : null;
     }
 
+    public List<Vec2int> AdjacentHexListPositions()
+    {
+        Hexagon[] hexArray = getAdjacent();
+        List<Vec2int> positions = new List<Vec2int>()
+            ;
+        foreach (Hexagon hex in hexArray)
+            positions.Add(hex.gridPos);
+
+        return positions;
+    }
+
     public Hexagon[] getAdjacent(){
 	    List<Hexagon> adjacent = new List<Hexagon>();
 	    Hexagon ne = getNE();
