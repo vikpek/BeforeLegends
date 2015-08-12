@@ -18,7 +18,7 @@ public class FloatingText : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         newColor = new Color(1, 1, 1, newColor.a - 0.1F * (Time.deltaTime * fadeOutTime));
-        gameObject.GetComponent<Image>().color = newColor;
+        //gameObject.GetComponent<Image>().color = newColor;
 
         if (newColor.a <= 0) {
             Destroy(gameObject);

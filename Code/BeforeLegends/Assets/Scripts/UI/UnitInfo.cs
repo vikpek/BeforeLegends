@@ -42,8 +42,8 @@ public class UnitInfo : MonoBehaviour {
     public void DisplayUnitInfo(GameObject obj) {
         BattleParameters info = obj.GetComponent<BattleParameters>();
         if (obj.tag == "Player"){
-            unitInfo.GetComponent<Image>().sprite = playerBackground;
-            gloryBar.fillAmount = (float)info.exp / (float)info.expToLevelUp[info.level-1];
+            //unitInfo.GetComponent<Image>().sprite = playerBackground;
+            //gloryBar.fillAmount = (float)info.exp / (float)info.expToLevelUp[info.level-1];
         }
         else {
             unitInfo.GetComponent<Image>().sprite = enemyBackground;

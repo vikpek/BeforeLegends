@@ -84,7 +84,7 @@ public class WorldMapGenerator : MonoBehaviour
     void Start()
     {
         if (randomSeed == true) {
-            Random.seed = System.Environment.TickCount;
+            Random.seed =   System.Environment.TickCount;
             seed = Random.Range(int.MinValue, int.MaxValue);
         }
         enemys = new Dictionary<GameObject, GameObject>();
@@ -133,7 +133,7 @@ public class WorldMapGenerator : MonoBehaviour
         foreach (Hexagon tile in data.tiles) {
             SpawnChance chance = returnSpawnChance(tile.matID);
             chance.overallSpawnChance();
-            if (tile.traversable && Random.Range(0f, 1f) <= chance.chance) {
+            if (tile.traversable && Random.Range(0f, 2f) <= chance.chance) {
                 MapObjectData obj = new MapObjectData();
 
                 obj.appearanceID = chance.returnSpawn();

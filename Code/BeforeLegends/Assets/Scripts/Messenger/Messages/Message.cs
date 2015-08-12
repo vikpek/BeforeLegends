@@ -59,8 +59,8 @@ public class TurnEndedMessage : Message{
             ResourceManager.instance.ressourcesToDeregister.Remove(r);
         }
         //Ugly fix to update the UnitInfo popup when the round ends
-        UnitInfo.Instance.DisplayUnitInfo(UnitInfo.Instance.currentActive);
-        UnitInfo.Instance.DisplayUnitInfo(UnitInfo.Instance.currentActive);
+        //UnitInfo.Instance.DisplayUnitInfo(UnitInfo.Instance.currentActive);
+        //UnitInfo.Instance.DisplayUnitInfo(UnitInfo.Instance.currentActive);
 		this.turn = turnI;
 	}
 }

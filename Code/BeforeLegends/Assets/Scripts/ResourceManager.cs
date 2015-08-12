@@ -41,7 +41,7 @@ public class ResourceManager : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-        UpdateResourceText();
+        //UpdateResourceText();
         if (Input.GetKeyDown(KeyCode.G))
             ResourceAS("Glory", -20);
 	}

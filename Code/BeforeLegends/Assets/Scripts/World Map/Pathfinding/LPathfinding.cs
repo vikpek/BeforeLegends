@@ -11,19 +11,15 @@ public class LPathNode
     public int f;
     public int g;
     public int h;
-    public bool allowed;
     public bool inOpen = false;
     public bool inClosed = false;
     public LPathNode(Vec2int iPos, Vec2int iDest)
     {
         position = iPos;
         h = position.ManhattenDistance(iDest);
-        /*
-         * test if nodes is allowed 
-         */
     }
 
-    public void calcF()
+    public void CalcF()
     {
         f = g + h;
     }
@@ -39,23 +35,70 @@ public class LPathfinding : MonoBehaviour {
     public Vec2int dest;
     public int coroutineCount;
 
-    void Update()
+    public bool searching = false;
+
+    public GameObject prefab;
+    public GameObject prefabRed;
+
+    public int nodesPerFrame;
+    int nodeFrameCount = 0;
+
+    LPathfindingCallback callback;
+    List<LPathNode> path = new List<LPathNode>();
+
+    public Vec2int[] LPathNodeToVec2intArray(List<LPathNode> lpnList, LPathNode[] lpnArray)
     {
-        if (Input.GetKeyDown(KeyCode.K))
-            LFindPath(new Vec2int(5, 5), new Vec2int(10, 10));
+        Vec2int[] temp = null;
+        if(lpnList != null)
+        {
+            temp = new Vec2int[lpnList.Count];
+            int i = 0;
+            foreach(LPathNode lpn in lpnList)
+            {
+                temp[i] = lpn.position;
+                i++;
+            }
+        }
+        else
+        {
+            print("array not implemented yet, sorry");
+        }
+        return temp;
     }
 
-
-	public void LFindPath(Vec2int iStart, Vec2int iDest)
+	public void LFindPath(Vec2int iStart, Vec2int iDest, LPathfindingCallback lpfc)
     {
+        prefabRed = GetComponent<EnemyAI>().pathIndicatorPrefab;
+        if (searching)
+            return;
+        callback = lpfc;
+        openList = new List<LPathNode>();
+        closedList = new List<LPathNode>();
+
+        if (WorldMapData.instance.tiles[iStart.x, iStart.y].tileType == "water")
+        {
+            print("Start is in water");
+            return;
+        }
+        if (WorldMapData.instance.tiles[iDest.x, iDest.y].tileType == "water")
+        {
+            print("Destination is in water");
+            return;
+        }
+
         start = iStart;
         dest = iDest;
         actualNode = new LPathNode(start, dest);
         actualNode.g = 0;
-        actualNode.calcF();
+        actualNode.CalcF();
+        actualNode.inOpen = true;
         openList.Add(actualNode);
+        nodeFrameCount = 0;
+        path = new List<LPathNode>();
         StartCoroutine("LFindPathCoroutine");
     }
+
+    
 
     public LPathNode LFindPathNodeInList(Vec2int nodeToFind, bool openClosed)
     {
@@ -80,95 +123,88 @@ public class LPathfinding : MonoBehaviour {
         return null;
     }
 
+
     IEnumerator LFindPathCoroutine()
     {
-        while(true)
+        searching = true;
+        while (searching)
         {
+            nodeFrameCount++;
             coroutineCount++;
             actualNode = openList[0];
-            actualNode.calcF();
+            List<Vec2int> childPositions = WorldMapData.instance.tiles[actualNode.position.x, actualNode.position.y].AdjacentHexListPositions();
 
-            List<Vec2int> parentPositions = WorldMapData.instance.tiles[actualNode.position.x, actualNode.position.y].AdjacentHexListPositions();
-
-            for (int i = 0; i < parentPositions.Count; i++)
+            for (int i = 0; i < childPositions.Count; i++)
             {
-                //FOR FUCK SAKE LUKE PLS!
+                LPathNode thisChildNode = LFindPathNodeInList(childPositions[i], true);
+                if(thisChildNode == null)
+                    thisChildNode = LFindPathNodeInList(childPositions[i], false);
 
-                LPathNode thisParentNode = LFindPathNodeInList(parentPositions[i], true);
-                if(thisParentNode == null)
-                    thisParentNode = LFindPathNodeInList(parentPositions[i], false);
+                //GameObject goTemp = Instantiate(prefabRed, WorldMapData.instance.tiles[childPositions[i].x, childPositions[i].y].position, Quaternion.identity) as GameObject;
+                //goTemp.transform.parent = gameObject.transform;
 
-
-
-
-
-
-
-
-
-
-
-
-                var alreadyInOpenList = from lpn in openList where lpn.position.x == parentPositions[i].x && lpn.position.y == parentPositions[i].y select lpn;
-                var alreadyInClosedList = from lpn in closedList where lpn.position.x == parentPositions[i].x && lpn.position.y == parentPositions[i].y select lpn;
-
-                var alreadyInOpenListArray = alreadyInOpenList.ToArray();
-                var alreadyInClosedListArray = alreadyInClosedList.ToArray();
-
-                if (actualNode.parent == null)
+                if (thisChildNode == null && WorldMapData.instance.tiles[childPositions[i].x, childPositions[i].y].tileType != "water" && WorldMapData.instance.tiles[childPositions[i].x, childPositions[i].y].gameObjectList.Find(x => x.tag == "EnemyParent") == null)
                 {
-                    actualNode.parent = new LPathNode(parentPositions[i], dest);
-                    actualNode.g = actualNode.parent.g + 1;
-                    actualNode.calcF();
+                    thisChildNode = new LPathNode(childPositions[i], dest);
+                    thisChildNode.parent = actualNode;
+                    if (thisChildNode.position.y == actualNode.position.y)
+                        thisChildNode.g = actualNode.g + 1;
+                    else
+                        thisChildNode.g = actualNode.g + 2;
+                    thisChildNode.CalcF();
+                    thisChildNode.inOpen = true;
+                    openList.Add(thisChildNode);
                 }
 
-                if (alreadyInOpenListArray.Length != 0 && alreadyInOpenListArray[0].f < actualNode.parent.f)
-                {
-                    actualNode.parent = alreadyInOpenListArray[0];
-                    actualNode.g = actualNode.parent.g + 1;
-                    actualNode.calcF();
-                }
 
-                if (alreadyInClosedListArray.Length != 0 && alreadyInClosedListArray[0].f < actualNode.parent.f)
-                {
-                    actualNode.parent = alreadyInClosedListArray[0];
-                    actualNode.g = actualNode.parent.g + 1;
-                    actualNode.calcF();
-                }
-
-                if (alreadyInOpenListArray.Length == 0 && alreadyInClosedListArray.Length == 0)
-                {
-                    openList.Add(new LPathNode(parentPositions[i], dest));
-                }
-                else if (alreadyInClosedListArray.Length != 0)
-                {
-                    LPathNode a = alreadyInClosedListArray[0];
-                    if(alreadyInClosedListArray[0].parent.f > actualNode.f)
-                        alreadyInClosedListArray[0].parent = actualNode;
-                }
             }
 
+            actualNode.inOpen = false;
+            actualNode.inClosed = true;
             openList.Remove(actualNode);
+
             closedList.Add(actualNode);
 
-            print(actualNode.position.ToString() + ", " + dest.ToString());
+            List<LPathNode> temp = openList.OrderBy(o => o.h).ThenByDescending(o => o.g).ToList();
+            openList = temp;
 
             if (actualNode.position.x == dest.x && actualNode.position.y == dest.y)
             {
-                print("yay pathfinding ended!");
-                List<LPathNode> path = new List<LPathNode>();
+
                 path.Add(actualNode);
                 while(path[path.Count - 1].parent != null)
                 {
-                    print(path[path.Count - 1].position.ToString());
+                    nodeFrameCount++;
                     path.Add(path[path.Count - 1].parent);
+                    
+                    if (nodeFrameCount > nodesPerFrame)
+                    {
+                        nodeFrameCount = 0;
+                        yield return null;
+                    }
                 }
                 StopCoroutine("LFindPathCoroutine");
                 break;
             }
-
-            yield return null;
+            if (nodeFrameCount > nodesPerFrame)
+            {
+                nodeFrameCount = 0;
+                yield return null;
+            }
         }
+
+        callback(LPathNodeToVec2intArray(path, null));
+        searching = false;
+    }
+
+    public Vec2int[] FlipPath(Vec2int[] path)
+    {
+        Vec2int[] temp = new Vec2int[path.Length];
+        for(int i = 0; i < path.Length; i++)
+        {
+            temp[i] = path[path.Length - i - 1];
+        }
+        return temp;
     }
 }
 

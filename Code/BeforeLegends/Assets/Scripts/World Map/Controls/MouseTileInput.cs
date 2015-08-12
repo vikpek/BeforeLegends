@@ -20,7 +20,26 @@ public class MouseTileInput : MonoBehaviour {
     public Vector3 lastTilePos = Vector3.zero;
 
     public Vector3  lastWorldPos = Vector3.zero;
+    public Vec2int actualTile = new Vec2int(0, 0);
+    public int distance;
+    public MapObjectCarrier player;
 
+    LPathfinding lpf;
+    public GameObject prefab;
+    public GameObject prefabRed;
+
+    void callback(Vec2int[] path)
+    {
+
+    }
+
+    void Start()
+    {
+        lpf = gameObject.AddComponent<LPathfinding>();
+        lpf.prefab = prefab;
+        lpf.prefabRed = prefabRed;
+        lpf.nodesPerFrame = 5;
+    }
     void Update(){
 	    RaycastHit hit;
 	    WorldMapData data = WorldMapData.instance;
@@ -37,10 +56,15 @@ public class MouseTileInput : MonoBehaviour {
 					    Messenger.instance.send(new MouseTileChangedMessage(lastTile, lastTilePos, lastWorldPos));
 				    }
 				    lastTile.y = newTileY;
-				    lastTile.x = newTileX;
+                    lastTile.x = newTileX;
+                    actualTile.x = newTileX;
+                    actualTile.y = newTileY;
+                    distance = actualTile.ManhattenDistance(new Vec2int(80, 46));
 				    lastTilePos = data.tiles[newTileX, newTileY].position;
 			    }
 		    }
+            if (Input.GetMouseButtonDown(1))
+                lpf.LFindPath(GameObject.Find("Olaf").GetComponent<MapObjectCarrier>().pos, actualTile, callback);
 	    }
     }	
 }

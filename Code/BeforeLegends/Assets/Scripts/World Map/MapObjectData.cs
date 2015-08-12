@@ -18,7 +18,7 @@ public class Vec2int{
 
     public int ManhattenDistance(Vec2int destination)
     {
-        return Mathf.Abs((x - destination.x) + (y - destination.y));
+        return (Mathf.Abs(x - destination.x) + Mathf.Abs(y - destination.y));
     }
 
 }
