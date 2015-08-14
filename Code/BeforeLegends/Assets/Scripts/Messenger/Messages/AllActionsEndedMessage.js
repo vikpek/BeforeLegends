@@ -1,8 +1,8 @@
-﻿#pragma strict
+﻿//#pragma strict
 
-class AllActionsEndedMessage extends Message{
+//class AllActionsEndedMessage extends Message{
 
-	function AllActionsEndedMessage(){
-		super("AllActionsEnded");
-	}
-}
+//	function AllActionsEndedMessage(){
+//		super("AllActionsEnded");
+//	}
+//}

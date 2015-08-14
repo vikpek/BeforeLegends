@@ -1,4 +1,7 @@
-﻿public class DropChance{
+﻿//DONE
+
+
+public class DropChance{
  var tileType : String;
 
  var woodDropChance : float;

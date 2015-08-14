@@ -1,3 +1,3 @@
-﻿#pragma strict
+﻿//#pragma strict
 
-var eat : int;
+//var eat : int;

@@ -1,15 +1,15 @@
-﻿#pragma strict
+﻿//#pragma strict
 
-class InterfaceData{
+//class InterfaceData{
 	
-	private static var instance : InterfaceData;
+//	private static var instance : InterfaceData;
 	
-	var selectedCarrier : MapObjectCarrier;
+//	var selectedCarrier : MapObjectCarrier;
 
-	private function InterfaceData(){}
+//	private function InterfaceData(){}
 	
-	static function getInstance() : InterfaceData{
-		if(instance == null) instance = new InterfaceData();
-		return instance;
-	}
-}
+//	static function getInstance() : InterfaceData{
+//		if(instance == null) instance = new InterfaceData();
+//		return instance;
+//	}
+//}
