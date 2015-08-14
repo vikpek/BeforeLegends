@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -11,6 +11,7 @@ Material:
   m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -18,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: db76feae5aac9ab4ca576de3e180ecb4, type: 3}
+          m_Texture: {fileID: 2800000, guid: 8e19521c8ad75cc439f58611c6dd73e0, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -80,16 +81,16 @@ Material:
     m_Floats:
       data:
         first:
-          name: _Cutoff
-        second: .5
-      data:
-        first:
           name: _SrcBlend
         second: 1
       data:
         first:
           name: _DstBlend
         second: 0
+      data:
+        first:
+          name: _Cutoff
+        second: .5
       data:
         first:
           name: _Parallax
@@ -138,7 +139,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .838235259, g: .838235259, b: .838235259, a: 1}
+        second: {r: .845588207, g: .845588207, b: .845588207, a: 1}
       data:
         first:
           name: _EmissionColorUI
