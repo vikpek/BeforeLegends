@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 40fa85b6ed0482743ba0aa677e0ef6ad
-timeCreated: 1428845357
+timeCreated: 1439553986
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -34,10 +34,10 @@ ModelImporter:
     100052: front_shin.R
     100054: head
     100056: head_end
-    100058: jaw.1
-    100060: jaw.2
-    100062: jaw.2_end
-    100064: Mesh
+    100058: hornedlion_uv001
+    100060: jaw.1
+    100062: jaw.2
+    100064: jaw.2_end
     100066: neck
     100068: pole_target_front.L
     100070: pole_target_front.L_end
@@ -47,7 +47,7 @@ ModelImporter:
     100078: pole_target_rear.L_end
     100080: pole_target_rear.R
     100082: pole_target_rear.R_end
-    100084: Rig
+    100084: Rig.001
     100086: roll_back_front.L
     100088: roll_back_front.R
     100090: roll_back_rear.L
@@ -84,8 +84,7 @@ ModelImporter:
     100152: toe.L_end
     100154: toe.R
     100156: toe.R_end
-    100158: hornedlion_uv001
-    100160: Rig.001
+    100158: Mesh
     400000: chest
     400002: chest.001
     400004: //RootNode
@@ -115,10 +114,10 @@ ModelImporter:
     400052: front_shin.R
     400054: head
     400056: head_end
-    400058: jaw.1
-    400060: jaw.2
-    400062: jaw.2_end
-    400064: Mesh
+    400058: hornedlion_uv001
+    400060: jaw.1
+    400062: jaw.2
+    400064: jaw.2_end
     400066: neck
     400068: pole_target_front.L
     400070: pole_target_front.L_end
@@ -128,7 +127,7 @@ ModelImporter:
     400078: pole_target_rear.L_end
     400080: pole_target_rear.R
     400082: pole_target_rear.R_end
-    400084: Rig
+    400084: Rig.001
     400086: roll_back_front.L
     400088: roll_back_front.R
     400090: roll_back_rear.L
@@ -165,37 +164,115 @@ ModelImporter:
     400152: toe.L_end
     400154: toe.R
     400156: toe.R_end
-    400158: hornedlion_uv001
-    400160: Rig.001
+    400158: Mesh
     2300000: hornedlion_uv001
     3300000: hornedlion_uv001
-    4300000: Mesh
-    4300002: hornedlion_uv001
-    7400000: Rig|Activated_01
-    7400002: Rig|Activated_02
-    7400004: Rig|Attack_01_Basic
-    7400006: Rig|Attack_02_Crit
-    7400008: Rig|Death_01
-    7400010: Rig|Death_02
-    7400012: Rig|Hurt_01
-    7400014: Rig|Idle_01
-    7400016: Rig|Idle_02
-    7400018: Rig.001|Activated_01
-    7400020: Rig.001|Activated_02
-    7400022: Rig.001|Attack_01_Basic
-    7400024: Rig.001|Attack_01_Basic.001
-    7400026: Rig.001|Attack_02_Crit
-    7400028: Rig.001|Death_01
-    7400030: Rig.001|Death_02
-    7400032: Rig.001|Hurt_01
-    7400034: Rig.001|Idle_01
-    7400036: Rig.001|Idle_02
+    4300000: hornedlion_uv001
+    4300002: Mesh
+    7400000: Rig.001|Activated_01
+    7400002: Rig.001|Activated_02
+    7400004: Rig.001|Attack_01_Basic
+    7400006: Rig.001|Attack_02_Crit
+    7400008: Rig.001|Death_01
+    7400010: Rig.001|Death_02
+    7400012: Rig.001|Enter_01
+    7400014: Rig.001|Hurt_01
+    7400016: Rig.001|Idle_01
+    7400018: Rig.001|Idle_02
+    7400020: Rig.001|Activated_01 //// Rig.001
+    7400022: Rig.001|Activated_02 //// Rig.001
+    7400024: Rig.001|Attack_01_Basic //// Rig.001
+    7400026: Rig.001|Attack_02_Crit //// Rig.001
+    7400028: Rig.001|Death_01 //// Rig.001
+    7400030: Rig.001|Death_02 //// Rig.001
+    7400032: Rig.001|Enter_01 //// Rig.001
+    7400034: Rig.001|Hurt_01 //// Rig.001
+    7400036: Rig.001|Idle_01 //// Rig.001
+    7400038: Rig.001|Idle_02 //// Rig.001
     9500000: //RootNode
     11100000: //RootNode
-    13700000: Mesh
-    13700002: hornedlion_uv001
+    11100002: chest
+    11100004: chest.001
+    11100006: foot.L
+    11100008: foot.R
+    11100010: foot_ik_front.L
+    11100012: foot_ik_front.L_end
+    11100014: foot_ik_front.R
+    11100016: foot_ik_front.R_end
+    11100018: foot_ik_main_front.L
+    11100020: foot_ik_main_front.R
+    11100022: foot_ik_main_rear.L
+    11100024: foot_ik_main_rear.R
+    11100026: foot_ik_rear.L
+    11100028: foot_ik_rear.L_end
+    11100030: foot_ik_rear.R
+    11100032: foot_ik_rear.R_end
+    11100034: front_foot.L
+    11100036: front_foot.L_end
+    11100038: front_foot.R
+    11100040: front_foot.R_end
+    11100042: front_knuckle.L
+    11100044: front_knuckle.R
+    11100046: front_leg.L
+    11100048: front_leg.R
+    11100050: front_shin.L
+    11100052: front_shin.R
+    11100054: head
+    11100056: head_end
+    11100058: hornedlion_uv001
+    11100060: jaw.1
+    11100062: jaw.2
+    11100064: jaw.2_end
+    11100066: neck
+    11100068: pole_target_front.L
+    11100070: pole_target_front.L_end
+    11100072: pole_target_front.R
+    11100074: pole_target_front.R_end
+    11100076: pole_target_rear.L
+    11100078: pole_target_rear.L_end
+    11100080: pole_target_rear.R
+    11100082: pole_target_rear.R_end
+    11100084: Rig.001
+    11100086: roll_back_front.L
+    11100088: roll_back_front.R
+    11100090: roll_back_rear.L
+    11100092: roll_back_rear.R
+    11100094: roll_front_front.L
+    11100096: roll_front_front.R
+    11100098: roll_front_rear.L
+    11100100: roll_front_rear.R
+    11100102: roll_main_front.L
+    11100104: roll_main_front.L_end
+    11100106: roll_main_front.R
+    11100108: roll_main_front.R_end
+    11100110: roll_main_rear.L
+    11100112: roll_main_rear.L_end
+    11100114: roll_main_rear.R
+    11100116: roll_main_rear.R_end
+    11100118: shin.L
+    11100120: shin.L.001
+    11100122: shin.R
+    11100124: shin.R.001
+    11100126: shoulder.L
+    11100128: shoulder.L_end
+    11100130: shoulder.R
+    11100132: shoulder.R_end
+    11100134: spine
+    11100136: tail.1
+    11100138: tail.2
+    11100140: tail.3
+    11100142: tail.4
+    11100144: tail.4_end
+    11100146: thigh.L
+    11100148: thigh.R
+    11100150: toe.L
+    11100152: toe.L_end
+    11100154: toe.R
+    11100156: toe.R_end
+    13700000: hornedlion_uv001
+    13700002: Mesh
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
@@ -207,1670 +284,14 @@ ModelImporter:
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 2
+    animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Rig.001|Activated_01
-      takeName: Rig.001|Activated_01
-      firstFrame: 0
-      lastFrame: 30
-      wrapMode: 1
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 1
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: hornedlion_uv001
-        weight: 1
-      - path: Rig.001
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L/pole_target_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L/foot_ik_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L/roll_main_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R/pole_target_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R/foot_ik_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R/roll_main_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L/pole_target_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L/foot_ik_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L/roll_main_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R/pole_target_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R/foot_ik_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R/roll_main_rear.R_end
-        weight: 1
-      - path: Rig.001/spine
-        weight: 1
-      - path: Rig.001/spine/chest
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head/head_end
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2/jaw.2_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L/front_foot.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R/front_foot.R_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L/shoulder.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R/shoulder.R_end
-        weight: 1
-      - path: Rig.001/spine/tail.1
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4/tail.4_end
-        weight: 1
-      - path: Rig.001/spine/thigh.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L/toe.L_end
-        weight: 1
-      - path: Rig.001/spine/thigh.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R/toe.R_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Rig.001|Activated_02
-      takeName: Rig.001|Activated_02
-      firstFrame: 0
-      lastFrame: 39
-      wrapMode: 1
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: hornedlion_uv001
-        weight: 1
-      - path: Rig.001
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L/pole_target_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L/foot_ik_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L/roll_main_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R/pole_target_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R/foot_ik_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R/roll_main_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L/pole_target_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L/foot_ik_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L/roll_main_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R/pole_target_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R/foot_ik_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R/roll_main_rear.R_end
-        weight: 1
-      - path: Rig.001/spine
-        weight: 1
-      - path: Rig.001/spine/chest
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head/head_end
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2/jaw.2_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L/front_foot.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R/front_foot.R_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L/shoulder.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R/shoulder.R_end
-        weight: 1
-      - path: Rig.001/spine/tail.1
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4/tail.4_end
-        weight: 1
-      - path: Rig.001/spine/thigh.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L/toe.L_end
-        weight: 1
-      - path: Rig.001/spine/thigh.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R/toe.R_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Rig.001|Attack_01_Basic
-      takeName: Rig.001|Attack_01_Basic
-      firstFrame: 0
-      lastFrame: 25
-      wrapMode: 1
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: hornedlion_uv001
-        weight: 1
-      - path: Rig.001
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L/pole_target_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L/foot_ik_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L/roll_main_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R/pole_target_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R/foot_ik_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R/roll_main_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L/pole_target_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L/foot_ik_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L/roll_main_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R/pole_target_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R/foot_ik_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R/roll_main_rear.R_end
-        weight: 1
-      - path: Rig.001/spine
-        weight: 1
-      - path: Rig.001/spine/chest
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head/head_end
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2/jaw.2_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L/front_foot.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R/front_foot.R_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L/shoulder.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R/shoulder.R_end
-        weight: 1
-      - path: Rig.001/spine/tail.1
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4/tail.4_end
-        weight: 1
-      - path: Rig.001/spine/thigh.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L/toe.L_end
-        weight: 1
-      - path: Rig.001/spine/thigh.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R/toe.R_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Rig.001|Attack_02_Crit
-      takeName: Rig.001|Attack_02_Crit
-      firstFrame: 0
-      lastFrame: 70
-      wrapMode: 1
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: hornedlion_uv001
-        weight: 1
-      - path: Rig.001
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L/pole_target_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L/foot_ik_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L/roll_main_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R/pole_target_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R/foot_ik_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R/roll_main_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L/pole_target_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L/foot_ik_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L/roll_main_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R/pole_target_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R/foot_ik_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R/roll_main_rear.R_end
-        weight: 1
-      - path: Rig.001/spine
-        weight: 1
-      - path: Rig.001/spine/chest
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head/head_end
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2/jaw.2_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L/front_foot.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R/front_foot.R_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L/shoulder.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R/shoulder.R_end
-        weight: 1
-      - path: Rig.001/spine/tail.1
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4/tail.4_end
-        weight: 1
-      - path: Rig.001/spine/thigh.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L/toe.L_end
-        weight: 1
-      - path: Rig.001/spine/thigh.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R/toe.R_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Rig.001|Death_01
-      takeName: Rig.001|Death_01
-      firstFrame: 0
-      lastFrame: 40
-      wrapMode: 1
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: hornedlion_uv001
-        weight: 1
-      - path: Rig.001
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L/pole_target_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L/foot_ik_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L/roll_main_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R/pole_target_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R/foot_ik_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R/roll_main_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L/pole_target_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L/foot_ik_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L/roll_main_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R/pole_target_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R/foot_ik_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R/roll_main_rear.R_end
-        weight: 1
-      - path: Rig.001/spine
-        weight: 1
-      - path: Rig.001/spine/chest
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head/head_end
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2/jaw.2_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L/front_foot.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R/front_foot.R_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L/shoulder.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R/shoulder.R_end
-        weight: 1
-      - path: Rig.001/spine/tail.1
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4/tail.4_end
-        weight: 1
-      - path: Rig.001/spine/thigh.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L/toe.L_end
-        weight: 1
-      - path: Rig.001/spine/thigh.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R/toe.R_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Rig.001|Death_02
-      takeName: Rig.001|Death_02
-      firstFrame: 0
-      lastFrame: 40
-      wrapMode: 1
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: hornedlion_uv001
-        weight: 1
-      - path: Rig.001
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L/pole_target_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L/foot_ik_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L/roll_main_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R/pole_target_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R/foot_ik_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R/roll_main_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L/pole_target_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L/foot_ik_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L/roll_main_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R/pole_target_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R/foot_ik_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R/roll_main_rear.R_end
-        weight: 1
-      - path: Rig.001/spine
-        weight: 1
-      - path: Rig.001/spine/chest
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head/head_end
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2/jaw.2_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L/front_foot.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R/front_foot.R_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L/shoulder.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R/shoulder.R_end
-        weight: 1
-      - path: Rig.001/spine/tail.1
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4/tail.4_end
-        weight: 1
-      - path: Rig.001/spine/thigh.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L/toe.L_end
-        weight: 1
-      - path: Rig.001/spine/thigh.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R/toe.R_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Rig.001|Hurt_01
-      takeName: Rig.001|Hurt_01
-      firstFrame: 0
-      lastFrame: 24
-      wrapMode: 1
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: hornedlion_uv001
-        weight: 1
-      - path: Rig.001
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L/pole_target_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L/foot_ik_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L/roll_main_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R/pole_target_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R/foot_ik_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R/roll_main_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L/pole_target_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L/foot_ik_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L/roll_main_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R/pole_target_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R/foot_ik_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R/roll_main_rear.R_end
-        weight: 1
-      - path: Rig.001/spine
-        weight: 1
-      - path: Rig.001/spine/chest
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head/head_end
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2/jaw.2_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L/front_foot.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R/front_foot.R_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L/shoulder.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R/shoulder.R_end
-        weight: 1
-      - path: Rig.001/spine/tail.1
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4/tail.4_end
-        weight: 1
-      - path: Rig.001/spine/thigh.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L/toe.L_end
-        weight: 1
-      - path: Rig.001/spine/thigh.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R/toe.R_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Rig.001|Idle_01
-      takeName: Rig.001|Idle_01
-      firstFrame: 0
-      lastFrame: 26
-      wrapMode: 2
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: hornedlion_uv001
-        weight: 1
-      - path: Rig.001
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L/pole_target_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L/foot_ik_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L/roll_main_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R/pole_target_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R/foot_ik_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R/roll_main_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L/pole_target_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L/foot_ik_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L/roll_main_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R/pole_target_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R/foot_ik_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R/roll_main_rear.R_end
-        weight: 1
-      - path: Rig.001/spine
-        weight: 1
-      - path: Rig.001/spine/chest
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head/head_end
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2/jaw.2_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L/front_foot.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R/front_foot.R_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L/shoulder.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R/shoulder.R_end
-        weight: 1
-      - path: Rig.001/spine/tail.1
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4/tail.4_end
-        weight: 1
-      - path: Rig.001/spine/thigh.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L/toe.L_end
-        weight: 1
-      - path: Rig.001/spine/thigh.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R/toe.R_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Rig.001|Idle_02
-      takeName: Rig.001|Idle_02
-      firstFrame: 0
-      lastFrame: 48
-      wrapMode: 2
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: hornedlion_uv001
-        weight: 1
-      - path: Rig.001
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/pole_target_front.L/pole_target_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_back_front.L/roll_front_front.L/foot_ik_front.L/foot_ik_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.L/roll_main_front.L/roll_main_front.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/pole_target_front.R/pole_target_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_back_front.R/roll_front_front.R/foot_ik_front.R/foot_ik_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_front.R/roll_main_front.R/roll_main_front.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/pole_target_rear.L/pole_target_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_back_rear.L/roll_front_rear.L/foot_ik_rear.L/foot_ik_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.L/roll_main_rear.L/roll_main_rear.L_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/pole_target_rear.R/pole_target_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_back_rear.R/roll_front_rear.R/foot_ik_rear.R/foot_ik_rear.R_end
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R
-        weight: 1
-      - path: Rig.001/foot_ik_main_rear.R/roll_main_rear.R/roll_main_rear.R_end
-        weight: 1
-      - path: Rig.001/spine
-        weight: 1
-      - path: Rig.001/spine/chest
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/head/head_end
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2
-        weight: 1
-      - path: Rig.001/spine/chest/chest.001/neck/jaw.1/jaw.2/jaw.2_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.L/front_shin.L/front_knuckle.L/front_foot.L/front_foot.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R
-        weight: 1
-      - path: Rig.001/spine/chest/front_leg.R/front_shin.R/front_knuckle.R/front_foot.R/front_foot.R_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.L/shoulder.L_end
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R
-        weight: 1
-      - path: Rig.001/spine/chest/shoulder.R/shoulder.R_end
-        weight: 1
-      - path: Rig.001/spine/tail.1
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4
-        weight: 1
-      - path: Rig.001/spine/tail.1/tail.2/tail.3/tail.4/tail.4_end
-        weight: 1
-      - path: Rig.001/spine/thigh.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L
-        weight: 1
-      - path: Rig.001/spine/thigh.L/shin.L/shin.L.001/foot.L/toe.L/toe.L_end
-        weight: 1
-      - path: Rig.001/spine/thigh.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R
-        weight: 1
-      - path: Rig.001/spine/thigh.R/shin.R/shin.R.001/foot.R/toe.R/toe.R_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 3
+    meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
@@ -1885,9 +306,9 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 115
+    normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
