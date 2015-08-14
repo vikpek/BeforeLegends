@@ -81,6 +81,10 @@ public class WorldMapGenerator : MonoBehaviour
     
     public FlatHexagon flatHex;
 
+    private int enemyCounter = 0;
+
+    public bool generationComplete = false;
+
     void Start()
     {
         if (randomSeed == true) {
@@ -97,6 +101,7 @@ public class WorldMapGenerator : MonoBehaviour
         spawnCarriers();
         spwanRessources();
         spawnPlayer();
+        generationComplete = true;
     }
 
     void setSeeds()
@@ -153,6 +158,8 @@ public class WorldMapGenerator : MonoBehaviour
 			    tile.gameObjectList.Add(go);
                 enemys.Add(go, go.GetComponentInChildren<MapObjectCarrier>().gameObject);
                 go.GetComponentInChildren<MapObjectCarrier>().gameObject.SetActive(false);
+                go.name = go.name + enemyCounter;
+                enemyCounter++;
 		    }
 	    }	
     }
