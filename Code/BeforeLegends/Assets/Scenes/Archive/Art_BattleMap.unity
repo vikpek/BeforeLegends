@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientGroundColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: .5
   m_AmbientMode: 3
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: .5
@@ -68,7 +68,8 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-  m_LightmapSnapshot: {fileID: 0}
+  m_LightmapSnapshot: {fileID: 112000000, guid: 8214ff291d4d3564f95dba2a4b3fec53,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
 NavMeshSettings:
@@ -133,6 +134,7 @@ MonoBehaviour:
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
+  m_RepeatDelay: .5
   m_AllowActivationOnMobileDevice: 0
 --- !u!114 &7470447
 MonoBehaviour:
@@ -286,23 +288,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleParameters:
-    attack: 10
-    defense: 10
-    armor: 10
-    damage: 10
-    hitPoints: 100
-    maxHitPoints: 0
-    actionPoints: 10
-    maxActionPoints: 0
-    speed: 10
-    critStrike: 0
-    critBlock: 0
-    expToGain: 0
   level: 0
   exp: 0
   expToLevelUp: 
-  levelUpChange: []
 --- !u!65 &25619188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6734,6 +6722,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!4 &1105879445
 Transform:
   m_ObjectHideFlags: 0
@@ -7251,6 +7240,10 @@ Prefab:
     - target: {fileID: 400000, guid: e22d56a84f20a5040b4979bf8c3f2a29, type: 3}
       propertyPath: m_LocalScale.z
       value: .549414754
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e22d56a84f20a5040b4979bf8c3f2a29, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e22d56a84f20a5040b4979bf8c3f2a29, type: 3}

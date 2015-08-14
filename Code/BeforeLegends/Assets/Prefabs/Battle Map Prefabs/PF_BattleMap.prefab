@@ -496,7 +496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &112448
 GameObject:
   m_ObjectHideFlags: 1
@@ -790,7 +790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &125926
 GameObject:
   m_ObjectHideFlags: 1
@@ -2628,7 +2628,7 @@ GameObject:
   - 4: {fileID: 416010}
   - 33: {fileID: 3356130}
   - 23: {fileID: 2319208}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Group10261
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4299,7 +4299,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0896327496, y: 2.04999995, z: .903999984}
+  m_LocalPosition: {x: -0, y: 2.04999995, z: -.00999999978}
   m_LocalScale: {x: .793153703, y: .793153822, z: .793153822}
   m_Children: []
   m_Father: {fileID: 461582}
@@ -5460,6 +5460,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!20 &2089982
 Camera:
   m_ObjectHideFlags: 1
@@ -5492,6 +5493,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!23 &2300222
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -7418,7 +7420,7 @@ Light:
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: .75, g: .782758713, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.75
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -7449,7 +7451,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 1
-  m_Color: {r: 0, g: .793103218, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 2.83999991
   m_Range: 10
   m_SpotAngle: 30
@@ -7513,8 +7515,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2.9000001
+  m_Color: {r: 1, g: .817038476, b: .676470578, a: 1}
+  m_Intensity: 1.21000004
   m_Range: 16.8999996
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -7530,7 +7532,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294966271
+    m_Bits: 4294967295
   m_Lightmapping: 4
   m_BounceIntensity: 0
   m_ShadowRadius: 0
@@ -7542,10 +7544,10 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132676}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 6
   m_Type: 1
-  m_Color: {r: .235294119, g: 0, b: 0, a: 1}
+  m_Color: {r: .235294104, g: 0, b: 0, a: 1}
   m_Intensity: 1.28999996
   m_Range: 10
   m_SpotAngle: 30
@@ -7634,23 +7636,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c30970a0a6ced4f6fbfa212987ec2cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleParameters:
-    attack: 10
-    defense: 10
-    armor: 5
-    damage: 10
-    hitPoints: 50
-    maxHitPoints: 50
-    actionPoints: 2
-    maxActionPoints: 2
-    speed: 10
-    critStrike: 0
-    critBlock: 0
-    expToGain: 10
   level: 0
   exp: 0
   expToLevelUp: 
-  levelUpChange: []
 --- !u!114 &11408546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7721,39 +7709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 594dec7e2d7a25d44aa2006b861c5206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data:
-    pos:
-      x: 0
-      y: 0
-    appearanceID: 0
-    battleStats:
-      attack: 0
-      defense: 0
-      armor: 0
-      damage: 0
-      hitPoints: 0
-      maxHitPoints: 0
-      actionPoints: 0
-      maxActionPoints: 0
-      speed: 0
-      critStrike: 0
-      critBlock: 0
-      expToGain: 0
-  audioObject:
-    objectName: 
-    attack: {fileID: 0}
-    walk: {fileID: 0}
-    die: {fileID: 0}
-    spattack: {fileID: 0}
-  pos:
-    x: 0
-    y: 0
-  movedMax: 8
-  moved: 0
-  moving: 0
-  paused: 0
-  suspend: 0
-  enemyGameObject: {fileID: 0}
 --- !u!114 &11426300
 MonoBehaviour:
   m_ObjectHideFlags: 1
