@@ -112,7 +112,9 @@ public class BattleController : MonoBehaviour{
                 Messenger.instance.send(new AllActionsEndedMessage());
 			    return true;
 		    }else if(enemyData.hitPoints <= 0){
-			    enemyWorldObject.transform.parent.gameObject.SetActive(false);
+                enemyWorldObject.transform.parent.gameObject.SetActive(false);
+                enemyWorldObject.GetComponent<EnemyAI>().enabled = false;
+                enemyWorldObject.GetComponent<LPathfinding>().enabled = false;
                 GameStateManager.instance.endBattle(true, enemyData.expToGain);
                 Messenger.instance.send(new AllActionsEndedMessage());
 			    return true;

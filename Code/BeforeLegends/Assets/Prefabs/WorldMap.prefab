@@ -2357,6 +2357,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &187916
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 499084}
+  m_Layer: 15
+  m_Name: EnemyVision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &189476
 GameObject:
   m_ObjectHideFlags: 1
@@ -4041,6 +4056,7 @@ Transform:
   - {fileID: 490438}
   - {fileID: 476882}
   - {fileID: 415150}
+  - {fileID: 499084}
   m_Father: {fileID: 456808}
   m_RootOrder: 6
 --- !u!4 &475320
@@ -4634,6 +4650,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 449810}
   m_RootOrder: 2
+--- !u!4 &499084
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475178}
+  m_RootOrder: 8
 --- !u!4 &499888
 Transform:
   m_ObjectHideFlags: 1
@@ -6051,6 +6079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb1c6b85bc816114591c1cd1cf82a8b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  world: {fileID: 170094}
 --- !u!114 &11416372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6716,8 +6745,8 @@ MonoBehaviour:
   chunkSize:
     x: 32
     y: 32
-  seed: 2147483647
-  randomSeed: 1
+  seed: 1
+  randomSeed: 0
   erosionScale: .100000001
   continentScale: .0149999997
   moistureScale: .0199999996
@@ -7002,6 +7031,7 @@ MonoBehaviour:
   temperatureSeed: {x: 0, y: 0}
   moistureSeed: {x: 0, y: 0}
   erosionSeed: {x: 0, y: 0}
+  generationComplete: 0
 --- !u!114 &11484276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7258,7 +7288,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 20
+  m_Radius: 1063.06323
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &13760370
 SkinnedMeshRenderer:
