@@ -63,6 +63,8 @@ public class WorldMapGenerator : MonoBehaviour
     public int[] greenLion;
     public int[] iceLion;
     public int[] desertLion;
+    public int[] jackal;
+    public int[] mammoth;
 
     public Texture2D chunkTexture;
 
@@ -302,28 +304,36 @@ public class WorldMapGenerator : MonoBehaviour
         return DropChances[0];
     }
 
-    SpawnChance returnSpawnChance(int matID) {
-        int ID = 0;
-        foreach (int e in hornedLion) {
+    private SpawnChance returnSpawnChance(int matID) {
+        var ID = 0;
+        foreach (var e in hornedLion) {
             if (e == matID)
                 ID = 0;
         }
-        foreach (int e in silverLion) {
+        foreach (var e in silverLion) {
             if (e == matID)
                 ID = 1;
         }
-        foreach (int e in desertLion) {
-                        if (e == matID)
+        foreach (var e in desertLion) {
+            if (e == matID)
                 ID = 2;
         }
-                foreach (int e in iceLion){
-                        if (e == matID)
+        foreach (var e in iceLion) {
+            if (e == matID)
                 ID = 3;
-                }
-                foreach (int e in greenLion){
-                        if (e == matID)
+        }
+        foreach (var e in greenLion) {
+            if (e == matID)
                 ID = 4;
-                }
+        }
+        foreach (var e in jackal) {
+            if (e == matID)
+                ID = 5;
+        }
+        foreach (var e in mammoth) {
+            if (e == matID)
+                ID = 6;
+        }
         return spawnChances[ID];
     }
 
