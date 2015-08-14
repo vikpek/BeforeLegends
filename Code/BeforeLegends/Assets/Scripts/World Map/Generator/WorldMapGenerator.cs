@@ -154,7 +154,7 @@ public class WorldMapGenerator : MonoBehaviour
                 go.GetComponentInChildren<MapObjectCarrier>().data = tile.mapObjects[0];
 			    tile.gameObjectList.Add(go);
                 enemys.Add(go, go.GetComponentInChildren<MapObjectCarrier>().gameObject);
-                go.GetComponentInChildren<MapObjectCarrier>().gameObject.SetActive(false);
+                //go.GetComponentInChildren<MapObjectCarrier>().gameObject.SetActive(false);
 		    }
 	    }	
     }

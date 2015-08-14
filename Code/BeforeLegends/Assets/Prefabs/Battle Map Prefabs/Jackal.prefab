@@ -2388,11 +2388,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 448066}
-  - 114: {fileID: 11454316}
   - 114: {fileID: 11456638}
   - 114: {fileID: 11406084}
-  - 114: {fileID: 11440770}
   - 114: {fileID: 11422208}
+  - 114: {fileID: 11414088}
+  - 114: {fileID: 11444214}
   m_Layer: 0
   m_Name: Jackal
   m_TagString: Untagged
@@ -3696,8 +3696,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189732}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -10.3599997, y: 0, z: -4.94999981}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: -1.50600004, y: .458000004, z: -.0979999974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 483442}
@@ -5108,6 +5108,18 @@ MonoBehaviour:
   hurt: Hurt_01
   spattack: Attack_Crit_01
   animArr: {fileID: 11114032}
+--- !u!114 &11414088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c982fc1e8dfdb994193940072b598760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heal: {fileID: 19883708}
 --- !u!114 &11422208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5119,7 +5131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 809c9cb1e355242438190539d9882161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11440770
+--- !u!114 &11444214
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5127,21 +5139,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 189732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e923eb575ca79394783a1010f86124a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fada60d62058674ea19d5b9df01a2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11454316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 189732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63f09e60e1aaf274eb2728f27581e033, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heal: {fileID: 0}
 --- !u!114 &11456638
 MonoBehaviour:
   m_ObjectHideFlags: 1

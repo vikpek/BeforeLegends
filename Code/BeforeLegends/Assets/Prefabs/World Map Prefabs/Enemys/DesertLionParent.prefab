@@ -378,7 +378,6 @@ GameObject:
   - 114: {fileID: 11469904}
   - 114: {fileID: 11451100}
   - 114: {fileID: 11480198}
-  - 114: {fileID: 11489006}
   m_Layer: 15
   m_Name: HornedLion
   m_TagString: Enemy
@@ -3233,18 +3232,6 @@ MonoBehaviour:
   moveTilesPerTurnMax: 3
   walkStepTime: .100000001
   pathIndicatorPrefab: {fileID: 175648, guid: 6eb95d44ed4526443b3d511a24520597, type: 2}
---- !u!114 &11489006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 124750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63f09e60e1aaf274eb2728f27581e033, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heal: {fileID: 0}
 --- !u!137 &13752652
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
