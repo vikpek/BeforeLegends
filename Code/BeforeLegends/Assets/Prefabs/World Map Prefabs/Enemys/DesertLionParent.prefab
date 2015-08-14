@@ -3230,11 +3230,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92097e9857525cd46886b7764b582dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 0
-  visionRange: 1000
-  huntRange: 0
-  moveTilesPerTurnMin: 0
-  moveTilesPerTurnMax: 2
+  moveTilesPerTurnMax: 3
+  walkStepTime: .100000001
+  pathIndicatorPrefab: {fileID: 175648, guid: 6eb95d44ed4526443b3d511a24520597, type: 2}
 --- !u!114 &11489006
 MonoBehaviour:
   m_ObjectHideFlags: 1

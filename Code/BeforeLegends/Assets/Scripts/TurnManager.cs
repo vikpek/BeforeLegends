@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class TurnManager : MonoBehaviour {
 
@@ -16,9 +17,13 @@ public class TurnManager : MonoBehaviour {
         }
     }
 
-   public int turn;
-   public int numActions;
-   public Text turnNumber;
+    public int turn;
+    public int numActions;
+    public Text turnNumber;
+
+    EnemyAI[] enemyAIs;
+    int actualEnemyTurnIndex = 0;
+    public bool nextEnemyDoTurn = false;
 
     void Start(){
 	    Messenger.instance.listen(gameObject, "ActionStarted");
@@ -36,15 +41,38 @@ public class TurnManager : MonoBehaviour {
     }
 
     void Update(){
-	    if(Input.GetKeyDown("space") && numActions == 0){
-            NextTurn();
-	    }
+	    if(Input.GetKeyDown("space") && numActions == 0)
+            EnemyTurn();
+
+        if (nextEnemyDoTurn)
+            NextEnemyTurn();
     }
 
-    public void NextTurn() {
+    public void EnemyTurn() {
         Messenger.instance.send(new TurnEndedMessage(turn));
+        enemyAIs = FindObjectsOfType(typeof(EnemyAI)) as EnemyAI[];
+        nextEnemyDoTurn = true;
+    }
+
+    public void NextEnemyTurn()
+    {
+        if (actualEnemyTurnIndex >= enemyAIs.Length)
+        {
+            NextTurn();
+            actualEnemyTurnIndex = 0;
+        }
+        else
+        {
+            enemyAIs[actualEnemyTurnIndex].HuntPlayer();
+            actualEnemyTurnIndex++;
+        }
+        nextEnemyDoTurn = false;
+    }
+
+    public void NextTurn()
+    {
         turn++;
-        turnNumber.text = "Turn: " + turn;
+        //turnNumber.text = "Turn: " + turn;
         Messenger.instance.send(new TurnBeganMessage(turn));
     }
 }
