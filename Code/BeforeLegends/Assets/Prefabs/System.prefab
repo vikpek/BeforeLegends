@@ -1157,6 +1157,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 22404394}
+  - 114: {fileID: 11499386}
   m_Layer: 0
   m_Name: BattlemapGUI
   m_TagString: Untagged
@@ -5437,6 +5438,38 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 100/100
+--- !u!114 &11499386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63be8fd0bc9c1fb4a9e27ac14094442c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cards:
+  - name: revenge
+    cardSlot: {fileID: 11414828}
+    cardIsActive: {fileID: 2800000, guid: 23f7ad9ea4500db499583d9964e9b38d, type: 3}
+    cardIsInactive: {fileID: 2800000, guid: 8872bd76d7ce3d340b415b5499a28a10, type: 3}
+  - name: wrath
+    cardSlot: {fileID: 11496860}
+    cardIsActive: {fileID: 2800000, guid: 5f2401f8f1fd17942a8cff1a65e4c8c4, type: 3}
+    cardIsInactive: {fileID: 2800000, guid: c782dae4db7c92249b4b283543ec920f, type: 3}
+  - name: stun
+    cardSlot: {fileID: 11427268}
+    cardIsActive: {fileID: 2800000, guid: bd4d2c07a6f68234e93e31938b0cac42, type: 3}
+    cardIsInactive: {fileID: 2800000, guid: a051d5d2b873564478669d89294bfb3f, type: 3}
+  - name: heal
+    cardSlot: {fileID: 11431972}
+    cardIsActive: {fileID: 2800000, guid: 59d44ab9c509ebd49b1be23b9fe6d034, type: 3}
+    cardIsInactive: {fileID: 2800000, guid: 16c21d3709fec9e4db4ed1158fc9f695, type: 3}
+  - name: shield
+    cardSlot: {fileID: 11460266}
+    cardIsActive: {fileID: 2800000, guid: 8ccc512db07bbb442a66f0c981029c79, type: 3}
+    cardIsInactive: {fileID: 2800000, guid: 82ec9aba730bc9d4ab0939d63efcfe71, type: 3}
 --- !u!222 &22200148
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -6124,7 +6157,6 @@ RectTransform:
   m_Children:
   - {fileID: 22446556}
   - {fileID: 22404394}
-  - {fileID: 22429386}
   - {fileID: 22416746}
   m_Father: {fileID: 466610}
   m_RootOrder: 0
@@ -6306,7 +6338,7 @@ RectTransform:
   - {fileID: 22400762}
   - {fileID: 22478806}
   m_Father: {fileID: 22405612}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -6557,8 +6589,8 @@ RectTransform:
   - {fileID: 22455254}
   - {fileID: 22407374}
   - {fileID: 22436092}
-  m_Father: {fileID: 22405612}
-  m_RootOrder: 2
+  m_Father: {fileID: 22446556}
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 110, y: -264}
@@ -6771,6 +6803,7 @@ RectTransform:
   - {fileID: 22414860}
   - {fileID: 22435742}
   - {fileID: 22406428}
+  - {fileID: 22429386}
   m_Father: {fileID: 22405612}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}

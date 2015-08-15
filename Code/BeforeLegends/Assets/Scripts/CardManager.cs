@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngineInternal;
 
 [System.Serializable]
 public class Card 
@@ -18,6 +19,8 @@ public class Card
 
 public class CardManager : MonoBehaviour {
 
+    public static CardManager Instance { get; private set; }
+
     public Shop shop;
     public Card[] cards;
 	// Use this for initialization
@@ -33,6 +36,10 @@ public class CardManager : MonoBehaviour {
         }
         shop.Initialize();
 	}
+
+    void Awake() {
+        Instance = this;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -43,5 +50,13 @@ public class CardManager : MonoBehaviour {
     public void CardAS(int cardId, int number) //AS = Add/Subtract
     {
         cards[cardId].number += number;
+    }
+
+    public Card GetCard(string name) {
+        foreach (var card in cards) {
+            if (card.name == name)
+                return card;
+        }
+        return null;
     }
 }

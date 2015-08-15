@@ -70,6 +70,7 @@ public class UnitData{
 		newData.damage = damage + data.damage;
 		newData.armor = armor + data.armor;
 		newData.hitPoints = hitPoints + data.hitPoints;
+	    newData.maxHitPoints = maxHitPoints + data.maxHitPoints;
 		newData.actionPoints = actionPoints + data.actionPoints;
 		newData.speed = speed + data.speed;
 		newData.critStrike = critStrike + data.critStrike;

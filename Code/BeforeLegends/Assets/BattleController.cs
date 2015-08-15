@@ -180,11 +180,13 @@ public class BattleController : MonoBehaviour{
     public void onInput_Enraged()
     {
 	    onInput(Action.ENRAGED);
+        CardManager.Instance.CardAS(0, -1);
     }
 
     public void onInput_Heal()
     {
 	    onInput(Action.HEAL);
+        CardManager.Instance.CardAS(2, -1);
     }
 
     public void onInput_HealOther()
