@@ -55,7 +55,7 @@ GameObject:
   - 4: {fileID: 421960}
   - 33: {fileID: 3394930}
   - 23: {fileID: 2308332}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Stones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 465864}
-  - 65: {fileID: 6555764}
   - 114: {fileID: 11442292}
   - 114: {fileID: 11428108}
   - 114: {fileID: 11443920}
@@ -511,7 +510,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 483032}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: EN_FigureBase_01_SM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +783,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 401276}
   - 95: {fileID: 9597198}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: FO_HornedLionFig_01_PF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +815,7 @@ GameObject:
   - 4: {fileID: 451358}
   - 33: {fileID: 3372484}
   - 23: {fileID: 2337646}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1128,7 +1127,7 @@ GameObject:
   - 4: {fileID: 443892}
   - 65: {fileID: 6571526}
   - 54: {fileID: 5472874}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: SilverLionParent
   m_TagString: EnemyParent
   m_Icon: {fileID: 0}
@@ -1233,7 +1232,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 438708}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Figure_Base_PF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1421,7 +1420,7 @@ GameObject:
   - 4: {fileID: 488490}
   - 33: {fileID: 3303804}
   - 23: {fileID: 2399830}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: FigureBase_lp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3055,18 +3054,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 2.5}
   serializedVersion: 2
   m_Radius: 4.80000019
---- !u!65 &6555764
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118342}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6571526
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -3217,7 +3204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92097e9857525cd46886b7764b582dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveTilesPerTurnMax: 3
+  idleWalk: 1
+  huntRange: 2
   passiveEnemy: 0
   playerInRange: 0
   walkStepTime: .100000001

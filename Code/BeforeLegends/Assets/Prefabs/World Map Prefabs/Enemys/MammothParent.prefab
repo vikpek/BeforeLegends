@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 469084}
   - 95: {fileID: 9501882}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: FO_MammothFigure_01_SM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   - 4: {fileID: 451990}
   - 65: {fileID: 6562644}
   - 54: {fileID: 5439786}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: MammothParent
   m_TagString: EnemyParent
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - 4: {fileID: 438496}
   - 33: {fileID: 3310196}
   - 23: {fileID: 2354082}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Base_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 420668}
-  - 65: {fileID: 6561838}
   - 114: {fileID: 11436622}
   - 114: {fileID: 11437654}
   - 114: {fileID: 11475814}
@@ -79,7 +78,7 @@ GameObject:
   - 4: {fileID: 494626}
   - 33: {fileID: 3399628}
   - 23: {fileID: 2359186}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Base_Top_ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +95,7 @@ GameObject:
   - 4: {fileID: 414628}
   - 33: {fileID: 3388200}
   - 23: {fileID: 2379080}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +147,7 @@ GameObject:
   - 4: {fileID: 440210}
   - 33: {fileID: 3309360}
   - 23: {fileID: 2355532}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Base_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +164,7 @@ GameObject:
   - 4: {fileID: 408678}
   - 33: {fileID: 3378798}
   - 23: {fileID: 2356538}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Base_middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +181,7 @@ GameObject:
   - 4: {fileID: 417114}
   - 33: {fileID: 3342646}
   - 23: {fileID: 2337440}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,18 +544,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 2.5}
   serializedVersion: 2
   m_Radius: 4.80000019
---- !u!65 &6561838
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 127494}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6562644
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -668,8 +655,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92097e9857525cd46886b7764b582dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveTilesPerTurnMax: 3
-  passiveEnemy: 0
+  idleWalk: 2
+  huntRange: 0
+  passiveEnemy: 1
   playerInRange: 0
   walkStepTime: .100000001
   pathIndicatorPrefab: {fileID: 175648, guid: 6eb95d44ed4526443b3d511a24520597, type: 2}

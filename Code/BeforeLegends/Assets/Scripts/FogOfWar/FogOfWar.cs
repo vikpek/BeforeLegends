@@ -110,7 +110,7 @@ public class FogOfWar : MonoBehaviour {
     public void ClearLists()
     {
 	    adjacent.Clear();
-        //enemysInRange.Clear();
+        enemysInRange.Clear();
         ressourceInRange.Clear();
     }
 
