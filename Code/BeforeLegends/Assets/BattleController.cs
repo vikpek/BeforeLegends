@@ -112,7 +112,9 @@ public class BattleController : MonoBehaviour{
                 Messenger.instance.send(new AllActionsEndedMessage());
 			    return true;
 		    }else if(enemyData.hitPoints <= 0){
-			    enemyWorldObject.transform.parent.gameObject.SetActive(false);
+                enemyWorldObject.transform.parent.gameObject.SetActive(false);
+                enemyWorldObject.GetComponent<EnemyAI>().enabled = false;
+                enemyWorldObject.GetComponent<LPathfinding>().enabled = false;
                 GameStateManager.instance.endBattle(true, enemyData.expToGain);
                 Messenger.instance.send(new AllActionsEndedMessage());
 			    return true;
@@ -180,11 +182,13 @@ public class BattleController : MonoBehaviour{
     public void onInput_Enraged()
     {
 	    onInput(Action.ENRAGED);
+        CardManager.Instance.CardAS(0, -1);
     }
 
     public void onInput_Heal()
     {
 	    onInput(Action.HEAL);
+        CardManager.Instance.CardAS(2, -1);
     }
 
     public void onInput_HealOther()

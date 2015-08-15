@@ -1,7 +1,14 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
+
+
 
 [System.Serializable]
 public class LPathNode
@@ -45,6 +52,16 @@ public class LPathfinding : MonoBehaviour {
 
     LPathfindingCallback callback;
     List<LPathNode> path = new List<LPathNode>();
+    RectTransform loading;
+
+#if UNITY_EDITOR
+    List<GameObject> psis = new List<GameObject>();
+#endif
+
+    void Start()
+    {
+        //loading = GameObject.Find("EnemyAIWorking").GetComponent<RectTransform>();
+    }
 
     public Vec2int[] LPathNodeToVec2intArray(List<LPathNode> lpnList, LPathNode[] lpnArray)
     {
@@ -66,14 +83,37 @@ public class LPathfinding : MonoBehaviour {
         return temp;
     }
 
+    void OnDisable()
+    {
+        searching = false;
+
+    }
+
+
 	public void LFindPath(Vec2int iStart, Vec2int iDest, LPathfindingCallback lpfc)
     {
         prefabRed = GetComponent<EnemyAI>().pathIndicatorPrefab;
-        if (searching)
+
+#if UNITY_EDITOR
+        if(gameObject.activeInHierarchy == false)
+        {
+            print("gameObject.activeInHierarchy == false");
+            print(gameObject.transform.parent.gameObject.name);
+            //EditorApplication.isPaused = true;
+        }
+#endif
+
+        if (searching)// || gameObject.activeInHierarchy == false)
+        {
+            print("already searching for path");
             return;
-        callback = lpfc;
-        openList = new List<LPathNode>();
-        closedList = new List<LPathNode>();
+        }
+#if UNITY_EDITOR
+        foreach (GameObject go in WorldMapData.instance.tiles[iStart.x, iStart.y].gameObjectList)
+            if (go.tag == "EnemyParent")
+                print(go.name);
+#endif
+        TurnManager.instance.activeLPFs.Add(this);
 
         if (WorldMapData.instance.tiles[iStart.x, iStart.y].tileType == "water")
         {
@@ -86,6 +126,10 @@ public class LPathfinding : MonoBehaviour {
             return;
         }
 
+        callback = lpfc;
+        openList = new List<LPathNode>();
+        closedList = new List<LPathNode>();
+
         start = iStart;
         dest = iDest;
         actualNode = new LPathNode(start, dest);
@@ -95,6 +139,7 @@ public class LPathfinding : MonoBehaviour {
         openList.Add(actualNode);
         nodeFrameCount = 0;
         path = new List<LPathNode>();
+        gameObject.SetActive(true);
         StartCoroutine("LFindPathCoroutine");
     }
 
@@ -126,24 +171,48 @@ public class LPathfinding : MonoBehaviour {
 
     IEnumerator LFindPathCoroutine()
     {
+#if UNITY_EDITOR
+        psis = new List<GameObject>();
+        GameObject g1 = Instantiate(prefabRed, WorldMapData.instance.tiles[actualNode.position.x, actualNode.position.y].position + new Vector3(0, 3, 0), Quaternion.identity) as GameObject;
+        ParticleSystem p1 = g1.GetComponent<ParticleSystem>();
+        p1.startColor = new Color(1, 0, 1);
+#endif
         searching = true;
         while (searching)
         {
             nodeFrameCount++;
             coroutineCount++;
+
+            if (openList.Count == 0 || openList.Count + closedList.Count > 5000)
+            {
+#if UNITY_EDITOR
+                Destroy(g1);
+                foreach (GameObject psi in psis)
+                {
+                    Destroy(psi);
+                }
+#endif
+                searching = false;
+                StopCoroutine("LFindPathCoroutine");
+                callback(null);
+                yield return null;
+            }
             actualNode = openList[0];
+
             List<Vec2int> childPositions = WorldMapData.instance.tiles[actualNode.position.x, actualNode.position.y].AdjacentHexListPositions();
 
             for (int i = 0; i < childPositions.Count; i++)
             {
+                //loading.Rotate(new Vector3(0, 0, 1), 0.05f);
+
                 LPathNode thisChildNode = LFindPathNodeInList(childPositions[i], true);
                 if(thisChildNode == null)
                     thisChildNode = LFindPathNodeInList(childPositions[i], false);
 
-                //GameObject goTemp = Instantiate(prefabRed, WorldMapData.instance.tiles[childPositions[i].x, childPositions[i].y].position, Quaternion.identity) as GameObject;
-                //goTemp.transform.parent = gameObject.transform;
 
-                if (thisChildNode == null && WorldMapData.instance.tiles[childPositions[i].x, childPositions[i].y].tileType != "water" && WorldMapData.instance.tiles[childPositions[i].x, childPositions[i].y].gameObjectList.Find(x => x.tag == "EnemyParent") == null)
+
+
+            if (thisChildNode == null && WorldMapData.instance.tiles[childPositions[i].x, childPositions[i].y].tileType != "water" && WorldMapData.instance.tiles[childPositions[i].x, childPositions[i].y].gameObjectList.Find(x => x.tag == "EnemyParent") == null)
                 {
                     thisChildNode = new LPathNode(childPositions[i], dest);
                     thisChildNode.parent = actualNode;
@@ -156,7 +225,24 @@ public class LPathfinding : MonoBehaviour {
                     openList.Add(thisChildNode);
                 }
 
-
+#if UNITY_EDITOR
+                //=========================================================DEBUG=========================================================                
+                if (childPositions[i] != null && 
+                    psis != null && 
+                    psis.Find(x => x.name == childPositions[i].ToString()) == null)
+                {
+                    GameObject g = Instantiate(prefabRed, WorldMapData.instance.tiles[childPositions[i].x, childPositions[i].y].position, Quaternion.identity) as GameObject;
+                    g.name = childPositions[i].ToString();
+                    ParticleSystem p = g.GetComponent<ParticleSystem>();
+                    psis.Add(g);
+                    if (WorldMapData.instance.tiles[childPositions[i].x, childPositions[i].y].tileType != "water" && WorldMapData.instance.tiles[childPositions[i].x, childPositions[i].y].gameObjectList.Find(x => x.tag == "EnemyParent") == null)
+                        p.startColor = new Color(0, 1, 0);
+                    else
+                        p.startColor = new Color(1, 0, 0);
+                    p.Simulate(5f);
+                }
+                //=========================================================DEBUG=========================================================
+#endif
             }
 
             actualNode.inOpen = false;
@@ -176,26 +262,36 @@ public class LPathfinding : MonoBehaviour {
                 {
                     nodeFrameCount++;
                     path.Add(path[path.Count - 1].parent);
-                    
+
                     if (nodeFrameCount > nodesPerFrame)
                     {
                         nodeFrameCount = 0;
-                        yield return null;
+                        yield return new WaitForEndOfFrame();
                     }
                 }
-                StopCoroutine("LFindPathCoroutine");
                 break;
             }
             if (nodeFrameCount > nodesPerFrame)
             {
                 nodeFrameCount = 0;
-                yield return null;
+                yield return new WaitForEndOfFrame();
             }
         }
-
-        callback(LPathNodeToVec2intArray(path, null));
+        print("watafak?!?!?");
         searching = false;
+        TurnManager.instance.activeLPFs.Remove(this);
+#if UNITY_EDITOR
+        Destroy(g1);
+        foreach (GameObject psi in psis)
+        {
+            Destroy(psi);
+        }
+#endif
+        callback(LPathNodeToVec2intArray(path, null));
+
+        StopCoroutine("LFindPathCoroutine");
     }
+
 
     public Vec2int[] FlipPath(Vec2int[] path)
     {
