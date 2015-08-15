@@ -82,7 +82,7 @@ public class WorldMapGenerator : MonoBehaviour
     public Dictionary<GameObject, GameObject> enemys;
     
     public FlatHexagon flatHex;
-
+    public bool generationComplete = false;
     void Start()
     {
         if (randomSeed == true) {
@@ -99,6 +99,7 @@ public class WorldMapGenerator : MonoBehaviour
         spawnCarriers();
         spwanRessources();
         spawnPlayer();
+        generationComplete = true;
     }
 
     void setSeeds()

@@ -60,7 +60,7 @@ public class LPathfinding : MonoBehaviour {
 
     void Start()
     {
-        loading = GameObject.Find("EnemyAIWorking").GetComponent<RectTransform>();
+        //loading = GameObject.Find("EnemyAIWorking").GetComponent<RectTransform>();
     }
 
     public Vec2int[] LPathNodeToVec2intArray(List<LPathNode> lpnList, LPathNode[] lpnArray)
@@ -203,7 +203,7 @@ public class LPathfinding : MonoBehaviour {
 
             for (int i = 0; i < childPositions.Count; i++)
             {
-                loading.Rotate(new Vector3(0, 0, 1), 0.05f);
+                //loading.Rotate(new Vector3(0, 0, 1), 0.05f);
 
                 LPathNode thisChildNode = LFindPathNodeInList(childPositions[i], true);
                 if(thisChildNode == null)
@@ -262,7 +262,7 @@ public class LPathfinding : MonoBehaviour {
                 {
                     nodeFrameCount++;
                     path.Add(path[path.Count - 1].parent);
-                    
+
                     if (nodeFrameCount > nodesPerFrame)
                     {
                         nodeFrameCount = 0;

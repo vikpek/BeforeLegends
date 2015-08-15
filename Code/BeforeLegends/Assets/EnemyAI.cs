@@ -67,7 +67,7 @@ public class EnemyAI : MonoBehaviour {
 
     public void HuntPlayer()
     {
-        if(passiveEnemy)
+        if(!passiveEnemy)
         {
             lpf.LFindPath(moc.pos, mocOlaf.pos, FollowOlaf);
         }

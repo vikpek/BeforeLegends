@@ -20,7 +20,7 @@ public class TurnManager : MonoBehaviour {
     public int turn;
     public int numActions;
     public Text turnNumber;
-    public Text numOfEnemys;
+    //public Text numOfEnemys;
     public GameObject world;
 
     EnemyAI[] enemyAIs;
@@ -54,7 +54,7 @@ public class TurnManager : MonoBehaviour {
     public void EnemyTurn() {
         Messenger.instance.send(new TurnEndedMessage(turn));
         enemyAIs = FindObjectsOfType(typeof(EnemyAI)) as EnemyAI[];
-        numOfEnemys.text = "EnemyAIs in Array: " + enemyAIs.Length;
+        //numOfEnemys.text = "EnemyAIs in Array: " + enemyAIs.Length;
         nextEnemyDoTurn = true;
     }
 
@@ -69,7 +69,7 @@ public class TurnManager : MonoBehaviour {
         {
             enemyAIs[actualEnemyTurnIndex].HuntPlayer();
             actualEnemyTurnIndex++;
-            numOfEnemys.text = "EnemyAIs in Array: " + enemyAIs.Length + ", actualEnemyTurnIndex: " + actualEnemyTurnIndex;
+            //numOfEnemys.text = "EnemyAIs in Array: " + enemyAIs.Length + ", actualEnemyTurnIndex: " + actualEnemyTurnIndex;
         }
         nextEnemyDoTurn = false;
     }
