@@ -26,12 +26,14 @@ public class Terrain
 public class EnemyAI : MonoBehaviour {
 
 
-    //public int attackRange;
     //public int visionRange;
     //public int huntRange;
     //public int moveTilesPerTurnMin;
-    public int moveTilesPerTurnMax;
     int tilesMoved = 0;
+
+    public int moveTilesPerTurnMax;
+    public bool passiveEnemy;
+    public bool playerInRange = false;
 
     private bool walkFinished = true;
     private bool stepFinished = false;
@@ -54,30 +56,37 @@ public class EnemyAI : MonoBehaviour {
         moc = GetComponent<MapObjectCarrier>();
         mocOlaf = GameObject.Find("Olaf").GetComponent<MapObjectCarrier>();
         lpf = gameObject.AddComponent<LPathfinding>();
-        lpf.nodesPerFrame = 5;
+        lpf.nodesPerFrame = 20;
 	}
-
+    
     public int MakeTurn()
     {
         bool suceeded = false;
-
         return 0;
     }
 
     public void HuntPlayer()
     {
-        lpf.LFindPath(moc.pos, mocOlaf.pos, FollowOlaf);
+        if(passiveEnemy)
+        {
+            lpf.LFindPath(moc.pos, mocOlaf.pos, FollowOlaf);
+        }
     }
 
     public void FollowOlaf(Vec2int[] path)
     {
+        if(path == null)
+        {
+            TurnManager.instance.nextEnemyDoTurn = true;
+            return;
+        }
         pathToWalk = path;
         walkStart = transform.position;
         walkFinished = false;
         walkIndex = path.Length - 1;   
     }
 
-    void Update()
+    void LateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
@@ -99,20 +108,21 @@ public class EnemyAI : MonoBehaviour {
             if(stepFinished)
             {
 
-                moc.pos = pathToWalk[walkIndex];
                 WorldMapData worlddata = WorldMapData.instance;
-                worlddata.tiles[moc.data.pos.x, moc.data.pos.y].mapObjects.Remove(moc.data);
-                worlddata.tiles[moc.data.pos.x, moc.data.pos.y].gameObjectList.Remove(transform.parent.gameObject);
+                worlddata.tiles[moc.pos.x, moc.pos.y].mapObjects.Remove(moc.data);
+                worlddata.tiles[moc.pos.x, moc.pos.y].gameObjectList.Remove(transform.parent.gameObject);
+                moc.pos = pathToWalk[walkIndex];
                 moc.data.pos = pathToWalk[walkIndex];
-                worlddata.tiles[moc.data.pos.x, moc.data.pos.y].mapObjects.Add(moc.data);
-                worlddata.tiles[moc.data.pos.x, moc.data.pos.y].gameObjectList.Add(transform.parent.gameObject);
+                worlddata.tiles[moc.pos.x, moc.pos.y].mapObjects.Add(moc.data);
+                worlddata.tiles[moc.pos.x, moc.pos.y].gameObjectList.Add(transform.parent.gameObject);
+                walkIndex--;
+                FogOfWar.instance.CheckTiles(mocOlaf.pos, 4);
+                FogOfWar.instance.SetEntitiesToVisible();
+                FogOfWar.instance.SetEntitiesToInvisible();
 
 
                 walkStart = transform.position;
                 stepFinished = false;
-                GameObject goTemp = Instantiate(pathIndicatorPrefab, WorldMapData.instance.tiles[pathToWalk[walkIndex].x, pathToWalk[walkIndex].y].position, Quaternion.identity) as GameObject;
-                goTemp.transform.parent = gameObject.transform;
-                walkIndex--;
                 walkStepTimeActual = 0;
                 tilesMoved++;
                 if (walkIndex < 0 || tilesMoved > moveTilesPerTurnMax)
