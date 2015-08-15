@@ -78,7 +78,7 @@ GameObject:
   - 4: {fileID: 403576}
   - 65: {fileID: 6549136}
   - 54: {fileID: 5449392}
-  m_Layer: 2
+  m_Layer: 11
   m_Name: JackalParent
   m_TagString: EnemyParent
   m_Icon: {fileID: 0}
@@ -649,6 +649,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveTilesPerTurnMax: 3
+  passiveEnemy: 0
+  playerInRange: 0
   walkStepTime: .100000001
   pathIndicatorPrefab: {fileID: 175648, guid: 6eb95d44ed4526443b3d511a24520597, type: 2}
 --- !u!114 &11447794

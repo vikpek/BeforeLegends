@@ -107,11 +107,15 @@ public class BattleController : MonoBehaviour{
     public bool checkEnded()
     {
 		    if(playerData.hitPoints <= 0){
+                animatePlayer(Anims.DEATH);
+                StartCoroutine(WaitForAnimation(playerAnimator.animArr));
 			    playerWorldObject.SetActive(false);
 			    GameStateManager.instance.endBattle(false, 0);
                 Messenger.instance.send(new AllActionsEndedMessage());
 			    return true;
 		    }else if(enemyData.hitPoints <= 0){
+                animateEnemy(Anims.DEATH);
+                StartCoroutine(WaitForAnimation(enemyAnimator.animArr));
                 enemyWorldObject.transform.parent.gameObject.SetActive(false);
                 enemyWorldObject.GetComponent<EnemyAI>().enabled = false;
                 enemyWorldObject.GetComponent<LPathfinding>().enabled = false;
@@ -205,5 +209,11 @@ public class BattleController : MonoBehaviour{
 		    playerAction = action;
             battleState = BattleState.STARTED;
 	    }
+    }
+
+    IEnumerator WaitForAnimation(Animation a) {
+        do {
+            yield return null;
+        } while (a.isPlaying);
     }
 }

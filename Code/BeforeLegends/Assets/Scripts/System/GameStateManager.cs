@@ -48,6 +48,6 @@ public class GameStateManager : MonoBehaviour {
 	    ResourceManager.instance.ResourceAS("Glory", exp);
 	    olaf.exp += exp;
         olaf.LevelUp();
-        TurnManager.instance.nextEnemyDoTurn = true;
+        //TurnManager.instance.nextEnemyDoTurn = true;
     }
 }

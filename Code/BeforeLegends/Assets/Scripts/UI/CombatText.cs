@@ -32,7 +32,7 @@ public class CombatText : MonoBehaviour {
             DisplayDamage(29);
         }
         if (dmgTimer) {
-            newColor = new Color(1, 1, 1, newColor.a - 0.1F * (fadeOutTime * Time.deltaTime));
+            newColor = new Color(1, 0, 0, newColor.a - 0.1F * (fadeOutTime * Time.deltaTime));
             this.GetComponent<TextMesh>().color = newColor;
 
             newPosition = new Vector3(orgPosition.x, newPosition.y +  0.1F * (offset/fadeOutTime), orgPosition.z);
@@ -46,7 +46,7 @@ public class CombatText : MonoBehaviour {
 
     public void DisplayDamage(float dmg) {
         dmgTimer = true;
-        text.text = dmg.ToString();
+        text.text = dmg.ToString("f1");
         text.color = new Color(1, 1, 1, 1);
         newColor = new Color(1, 1, 1, 1);
     }

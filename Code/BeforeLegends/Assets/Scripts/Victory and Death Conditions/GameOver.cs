@@ -3,7 +3,9 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class GameOver : MonoBehaviour {
-	public Text gameOver;
+	public Image gameOver;
+    public Sprite gameOverImage;
+
 	public GameObject[] gameObjectsToDeactivateOnGameOver;
 
 	public GameObject[] activePlayers;
@@ -21,6 +23,8 @@ public class GameOver : MonoBehaviour {
 				gO.SetActive(false);
 			}
 			//gameOver.gameObject.SetActive(true);
+		    gameOver.sprite = gameOverImage;
+		    gameOver.enabled = true;
 			Time.timeScale = 0;
 		}
 	}
