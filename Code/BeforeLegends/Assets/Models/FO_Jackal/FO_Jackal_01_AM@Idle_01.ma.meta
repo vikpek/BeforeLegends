@@ -356,7 +356,7 @@ ModelImporter:
     400346: jackal_rig_master:wpn_rt
     400348: left
     4300000: jackal_rig_master:FO_Jackal_17_SM_jackal_lp
-    7400000: Take 001
+    7400000: Idle_01
     9500000: //RootNode
     11100000: //RootNode
     13700000: jackal_rig_master:FO_Jackal_17_SM_jackal_lp
@@ -375,7 +375,383 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle_01
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: jackal_rig_master:ctrl
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:cl_head_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:cl_head_ctGRP/jackal_rig_master:cl_head_CTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:lf_clavicle_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:lf_clavicle_ctGRP/jackal_rig_master:lf_clavicle_CTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:lf_clavicle_ctGRP/jackal_rig_master:lf_clavicle_CTRL/jackal_rig_master:lf_shoulder_fk_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:lf_clavicle_ctGRP/jackal_rig_master:lf_clavicle_CTRL/jackal_rig_master:lf_shoulder_fk_ctGRP/jackal_rig_master:lf_shoulder_fkCTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:lf_clavicle_ctGRP/jackal_rig_master:lf_clavicle_CTRL/jackal_rig_master:lf_shoulder_fk_ctGRP/jackal_rig_master:lf_shoulder_fkCTRL/jackal_rig_master:lf_elbow_fk_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:lf_clavicle_ctGRP/jackal_rig_master:lf_clavicle_CTRL/jackal_rig_master:lf_shoulder_fk_ctGRP/jackal_rig_master:lf_shoulder_fkCTRL/jackal_rig_master:lf_elbow_fk_ctGRP/jackal_rig_master:lf_elbow_fkCTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:rt_clavicle_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:rt_clavicle_ctGRP/jackal_rig_master:rt_clavicle_CTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:rt_clavicle_ctGRP/jackal_rig_master:rt_clavicle_CTRL/jackal_rig_master:rt_shoulder_fk_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:rt_clavicle_ctGRP/jackal_rig_master:rt_clavicle_CTRL/jackal_rig_master:rt_shoulder_fk_ctGRP/jackal_rig_master:rt_shoulder_fkCTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:rt_clavicle_ctGRP/jackal_rig_master:rt_clavicle_CTRL/jackal_rig_master:rt_shoulder_fk_ctGRP/jackal_rig_master:rt_shoulder_fkCTRL/jackal_rig_master:rt_elbow_fk_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_belly_ctGRP/jackal_rig_master:cl_belly_CTRL/jackal_rig_master:cl_chest_ctGRP/jackal_rig_master:cl_chest_CTRL/jackal_rig_master:rt_clavicle_ctGRP/jackal_rig_master:rt_clavicle_CTRL/jackal_rig_master:rt_shoulder_fk_ctGRP/jackal_rig_master:rt_shoulder_fkCTRL/jackal_rig_master:rt_elbow_fk_ctGRP/jackal_rig_master:rt_elbow_fkCTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_hips_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:cl_CoG_ctGRP/jackal_rig_master:cl_CoG_CTRL/jackal_rig_master:cl_hips_ctGRP/jackal_rig_master:cl_hips_CTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:lf_elbow_ik_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:lf_elbow_ik_ctGRP/jackal_rig_master:lf_ellbow_ikCTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:lf_foot_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:lf_foot_ctGRP/jackal_rig_master:lf_foot_CTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:lf_hand_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:lf_hand_ctGRP/jackal_rig_master:lf_hand_CTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:lf_knee_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:lf_knee_ctGRP/jackal_rig_master:lf_knee_CTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:lf_wrist_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:lf_wrist_ctGRP/jackal_rig_master:lf_wrist_fkCTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:lf_wrist_ik_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:lf_wrist_ik_ctGRP/jackal_rig_master:lf_wrist_ikCTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:rt_elbow_ik_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:rt_elbow_ik_ctGRP/jackal_rig_master:rt_ellbow_ikCTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:rt_foot_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:rt_foot_ctGRP/jackal_rig_master:rt_foot_CTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:rt_hand_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:rt_hand_ctGRP/jackal_rig_master:rt_hand_CTRL1
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:rt_knee_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:rt_knee_ctGRP/jackal_rig_master:rt_knee_CTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:rt_wrist_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:rt_wrist_ctGRP/jackal_rig_master:rt_wrist_fkCTRL
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:rt_wrist_ik_ctGRP
+        weight: 1
+      - path: jackal_rig_master:ctrl/jackal_rig_master:rt_wrist_ik_ctGRP/jackal_rig_master:rt__wrist_ikCTRL
+        weight: 1
+      - path: jackal_rig_master:FO_Jackal_17_SM_jackal_lp
+        weight: 1
+      - path: jackal_rig_master:rig
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:cl_beard_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:cl_beard_a_JNT/jackal_rig_master:cl_beard_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:cl_beard_a_JNT/jackal_rig_master:cl_beard_b_JNT/jackal_rig_master:cl_beard_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:cl_head_JNT1
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:cl_mouth_jaw_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:cl_mouth_jaw_a_JNT/jackal_rig_master:cl_mouth_jaw_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:cl_mouth_upper_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:cl_mouth_upper_a_JNT/jackal_rig_master:cl_mouth_upper_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:lf_ear_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:lf_ear_a_JNT/jackal_rig_master:lf_ear_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:lf_ear_a_JNT/jackal_rig_master:lf_ear_b_JNT/jackal_rig_master:lf_ear_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:rg_ear_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:rg_ear_a_JNT/jackal_rig_master:rg_ear_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:cl_spine_e_JNT/jackal_rig_master:cl_head_JNT/jackal_rig_master:rg_ear_a_JNT/jackal_rig_master:rg_ear_b_JNT/jackal_rig_master:rg_ear_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_fkRIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_fkRIG/jackal_rig_master:lf_elbow_fkRIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_fkRIG/jackal_rig_master:lf_elbow_fkRIG/jackal_rig_master:lf_wrist_fkRIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_ik_RIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_ik_RIG/jackal_rig_master:lf_elbow_ikRIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_ik_RIG/jackal_rig_master:lf_elbow_ikRIG/jackal_rig_master:lf_wrist_ikRIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_index_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_index_a_JNT/jackal_rig_master:lf_index_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_index_a_JNT/jackal_rig_master:lf_index_b_JNT/jackal_rig_master:lf_index_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_index_a_JNT/jackal_rig_master:lf_index_b_JNT/jackal_rig_master:lf_index_c_JNT/jackal_rig_master:lf_index_d_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_middle_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_middle_a_JNT/jackal_rig_master:lf_middle_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_middle_a_JNT/jackal_rig_master:lf_middle_b_JNT/jackal_rig_master:lf_middle_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_middle_a_JNT/jackal_rig_master:lf_middle_b_JNT/jackal_rig_master:lf_middle_c_JNT/jackal_rig_master:lf_middle_d_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_pinkie_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_pinkie_a_JNT/jackal_rig_master:lf_pinkie_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_pinkie_a_JNT/jackal_rig_master:lf_pinkie_b_JNT/jackal_rig_master:lf_pinkie_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_pinkie_a_JNT/jackal_rig_master:lf_pinkie_b_JNT/jackal_rig_master:lf_pinkie_c_JNT/jackal_rig_master:lf_pinkie_d_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_ring_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_ring_a_JNT/jackal_rig_master:lf_ring_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_ring_a_JNT/jackal_rig_master:lf_ring_b_JNT/jackal_rig_master:lf_ring_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_ring_a_JNT/jackal_rig_master:lf_ring_b_JNT/jackal_rig_master:lf_ring_c_JNT/jackal_rig_master:lf_ring_d_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_thumb_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_thumb_a_JNT/jackal_rig_master:lf_thumb_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_thumb_a_JNT/jackal_rig_master:lf_thumb_b_JNT/jackal_rig_master:lf_thumb_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:lf_clavicle_JNT/jackal_rig_master:lf_shoulder_JNT/jackal_rig_master:lf_upper_twist_JNT/jackal_rig_master:lf_elbow_JNT/jackal_rig_master:lf_forearm_twist_JNT/jackal_rig_master:lf_wrist_JNT/jackal_rig_master:lf_hand_JNT/jackal_rig_master:lf_thumb_a_JNT/jackal_rig_master:lf_thumb_b_JNT/jackal_rig_master:lf_thumb_c_JNT/jackal_rig_master:lf_thumb_d_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_fkRIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_fkRIG/jackal_rig_master:rt_elbow_fkRIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_fkRIG/jackal_rig_master:rt_elbow_fkRIG/jackal_rig_master:rt_wrist_fkRIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_ik_RIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_ik_RIG/jackal_rig_master:rt_elbow_ikRIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_ik_RIG/jackal_rig_master:rt_elbow_ikRIG/jackal_rig_master:rt_wrist_ikRIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_index_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_index_a_JNT/jackal_rig_master:rt_index_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_index_a_JNT/jackal_rig_master:rt_index_b_JNT/jackal_rig_master:rt_index_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_index_a_JNT/jackal_rig_master:rt_index_b_JNT/jackal_rig_master:rt_index_c_JNT/jackal_rig_master:rt_index_d_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_middle_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_middle_a_JNT/jackal_rig_master:rt_middle_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_middle_a_JNT/jackal_rig_master:rt_middle_b_JNT/jackal_rig_master:rt_middle_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_middle_a_JNT/jackal_rig_master:rt_middle_b_JNT/jackal_rig_master:rt_middle_c_JNT/jackal_rig_master:rt_middle_d_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_pinky_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_pinky_a_JNT/jackal_rig_master:rt_pinky_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_pinky_a_JNT/jackal_rig_master:rt_pinky_b_JNT/jackal_rig_master:rt_pinky_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_pinky_a_JNT/jackal_rig_master:rt_pinky_b_JNT/jackal_rig_master:rt_pinky_c_JNT/jackal_rig_master:rt_pinky_d_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_ring_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_ring_a_JNT/jackal_rig_master:rt_ring_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_ring_a_JNT/jackal_rig_master:rt_ring_b_JNT/jackal_rig_master:rt_ring_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_ring_a_JNT/jackal_rig_master:rt_ring_b_JNT/jackal_rig_master:rt_ring_c_JNT/jackal_rig_master:rt_ring_d_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_thumb_a_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_thumb_a_JNT/jackal_rig_master:rt_thumb_b_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_thumb_a_JNT/jackal_rig_master:rt_thumb_b_JNT/jackal_rig_master:rt_thumb_c_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:cl_spine_b_JNT/jackal_rig_master:cl_spine_c_JNT/jackal_rig_master:cl_spine_d_JNT/jackal_rig_master:rt_clavicle_JNT/jackal_rig_master:rt_shoulder_JNT/jackal_rig_master:rt_upper_twist_JNT/jackal_rig_master:rt_elbow_JNT/jackal_rig_master:rt_forearm_twist_JNT/jackal_rig_master:rt_wrist_JNT/jackal_rig_master:rt_hand_JNT/jackal_rig_master:rt_thumb_a_JNT/jackal_rig_master:rt_thumb_b_JNT/jackal_rig_master:rt_thumb_c_JNT/jackal_rig_master:rt_thumb_d_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:lf_thigh_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:lf_thigh_JNT/jackal_rig_master:lf_knee1_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:lf_thigh_JNT/jackal_rig_master:lf_knee1_JNT/jackal_rig_master:lf_knee2_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:lf_thigh_JNT/jackal_rig_master:lf_knee1_JNT/jackal_rig_master:lf_knee2_JNT/jackal_rig_master:lf_ankle1_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:lf_thigh_JNT/jackal_rig_master:lf_knee1_JNT/jackal_rig_master:lf_knee2_JNT/jackal_rig_master:lf_ankle1_JNT/jackal_rig_master:lf_ankle2_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:lf_thigh_JNT/jackal_rig_master:lf_knee1_JNT/jackal_rig_master:lf_knee2_JNT/jackal_rig_master:lf_ankle1_JNT/jackal_rig_master:lf_ankle2_JNT/jackal_rig_master:lf_ball_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:lf_thigh_JNT/jackal_rig_master:lf_knee1_JNT/jackal_rig_master:lf_knee2_JNT/jackal_rig_master:lf_ankle1_JNT/jackal_rig_master:lf_ankle2_JNT/jackal_rig_master:lf_ball_JNT/jackal_rig_master:lf_toe_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:rt_thigh_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:rt_thigh_JNT/jackal_rig_master:rt_knee1_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:rt_thigh_JNT/jackal_rig_master:rt_knee1_JNT/jackal_rig_master:rt_knee2_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:rt_thigh_JNT/jackal_rig_master:rt_knee1_JNT/jackal_rig_master:rt_knee2_JNT/jackal_rig_master:rt_ankle1_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:rt_thigh_JNT/jackal_rig_master:rt_knee1_JNT/jackal_rig_master:rt_knee2_JNT/jackal_rig_master:rt_ankle1_JNT/jackal_rig_master:rt_ankle2_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:rt_thigh_JNT/jackal_rig_master:rt_knee1_JNT/jackal_rig_master:rt_knee2_JNT/jackal_rig_master:rt_ankle1_JNT/jackal_rig_master:rt_ankle2_JNT/jackal_rig_master:rt_ball_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:cl_hips_JNT/jackal_rig_master:rt_thigh_JNT/jackal_rig_master:rt_knee1_JNT/jackal_rig_master:rt_knee2_JNT/jackal_rig_master:rt_ankle1_JNT/jackal_rig_master:rt_ankle2_JNT/jackal_rig_master:rt_ball_JNT/jackal_rig_master:rt_toe_JNT
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:lf_arm_ik
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:lf_footRig_ctGRP
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:lf_footRig_ctGRP/jackal_rig_master:lf_heel_RIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:lf_footRig_ctGRP/jackal_rig_master:lf_heel_RIG/jackal_rig_master:lf_toe_RIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:lf_footRig_ctGRP/jackal_rig_master:lf_heel_RIG/jackal_rig_master:lf_toe_RIG/jackal_rig_master:lf_ball_RIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:lf_footRig_ctGRP/jackal_rig_master:lf_heel_RIG/jackal_rig_master:lf_toe_RIG/jackal_rig_master:lf_ball_RIG/jackal_rig_master:lf_ankle_RIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:lf_footRig_ctGRP/jackal_rig_master:lf_heel_RIG/jackal_rig_master:lf_toe_RIG/jackal_rig_master:lf_ball_RIG/jackal_rig_master:lf_ankle_RIG/jackal_rig_master:lf_ankle_IK
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:lf_footRig_ctGRP/jackal_rig_master:lf_heel_RIG/jackal_rig_master:lf_toe_RIG/jackal_rig_master:lf_ball_RIG/jackal_rig_master:lf_ball_IK
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:lf_footRig_ctGRP/jackal_rig_master:lf_heel_RIG/jackal_rig_master:lf_toeCap_RIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:lf_footRig_ctGRP/jackal_rig_master:lf_heel_RIG/jackal_rig_master:lf_toeCap_RIG/jackal_rig_master:lf_toe_IK
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:rt_arm_ik
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:rt_footRig_ctGRP
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:rt_footRig_ctGRP/jackal_rig_master:rt_heel_RIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:rt_footRig_ctGRP/jackal_rig_master:rt_heel_RIG/jackal_rig_master:rt_toe_RIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:rt_footRig_ctGRP/jackal_rig_master:rt_heel_RIG/jackal_rig_master:rt_toe_RIG/jackal_rig_master:rt_ball_RIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:rt_footRig_ctGRP/jackal_rig_master:rt_heel_RIG/jackal_rig_master:rt_toe_RIG/jackal_rig_master:rt_ball_RIG/jackal_rig_master:rt_ankle_RIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:rt_footRig_ctGRP/jackal_rig_master:rt_heel_RIG/jackal_rig_master:rt_toe_RIG/jackal_rig_master:rt_ball_RIG/jackal_rig_master:rt_ankle_RIG/jackal_rig_master:rt_ankle_IK
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:rt_footRig_ctGRP/jackal_rig_master:rt_heel_RIG/jackal_rig_master:rt_toe_RIG/jackal_rig_master:rt_ball_RIG/jackal_rig_master:rt_ball_IK
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:rt_footRig_ctGRP/jackal_rig_master:rt_heel_RIG/jackal_rig_master:rt_toeCap_RIG
+        weight: 1
+      - path: jackal_rig_master:rig/jackal_rig_master:rt_footRig_ctGRP/jackal_rig_master:rt_heel_RIG/jackal_rig_master:rt_toeCap_RIG/jackal_rig_master:rt_toe_IK
+        weight: 1
+      - path: jackal_rig_master:wpn_lf
+        weight: 1
+      - path: jackal_rig_master:wpn_lf/jackal_rig_master:jackal_rig_master2_lf_hand
+        weight: 1
+      - path: jackal_rig_master:wpn_rt
+        weight: 1
+      - path: jackal_rig_master:wpn_rt/jackal_rig_master:jackal_rig_master2_rt_hand
+        weight: 1
+      - path: left
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
