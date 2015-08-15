@@ -23,6 +23,7 @@ public class Shop : MonoBehaviour {
     public CardManager cm;
     public OfferSlot[] offerSlots;
     public ResourceManager rm;
+    public Image previewImage;
 
 	// Use this for initialization
 	void Start () {
@@ -111,5 +112,9 @@ public class Shop : MonoBehaviour {
         offerSlots[offerId].costStone.text = cm.cards[possibleCards[nextCard]].costStone + "";
         offerSlots[offerId].costWood.text = cm.cards[possibleCards[nextCard]].costWood + "";
         offerSlots[offerId].offerCardId = cm.cards[possibleCards[nextCard]].id;
+    }
+
+    public void Preview(GameObject preview) {
+        previewImage.sprite = preview.GetComponent<Image>().sprite;
     }
 }
