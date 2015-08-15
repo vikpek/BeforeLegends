@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 
 public delegate void LPathfindingCallback(Vec2int[] path);
@@ -27,11 +28,11 @@ public class EnemyAI : MonoBehaviour {
 
 
     //public int visionRange;
-    //public int huntRange;
     //public int moveTilesPerTurnMin;
     int tilesMoved = 0;
 
-    public int moveTilesPerTurnMax;
+    public int idleWalk;
+    public int huntRange;
     public bool passiveEnemy;
     public bool playerInRange = false;
 
@@ -65,17 +66,49 @@ public class EnemyAI : MonoBehaviour {
         return 0;
     }
 
+    public void RandomWalk(int distance)
+    {
+        List<Vec2int> path = new List<Vec2int>();
+        Hexagon[] possibleNextTiles;
+        int randomTile;
+        int randomTilesChecked = 0;
+        for(int i = 0; i < distance; i++)
+        {
+            possibleNextTiles = WorldMapData.instance.tiles[moc.pos.x, moc.pos.y].getAdjacent();
+            randomTile = UnityEngine.Random.Range(0, 6);
+            do
+            {
+                randomTilesChecked++;
+                randomTile++;
+                if (randomTile >= 6)
+                    randomTile = 0;
+                if (randomTilesChecked >= 6)
+                    break;
+            }
+            while (possibleNextTiles[randomTile].gameObjectList.Find(x => x.tag == "EnemyParent") != null || possibleNextTiles[randomTile].tileType == "water");
+
+            path.Add(possibleNextTiles[randomTile].gridPos);
+        }
+        Walk(path.ToArray());
+        path = null;
+        possibleNextTiles = null;
+    }
+
     public void HuntPlayer()
     {
-        if(!passiveEnemy)
+        if(!passiveEnemy && playerInRange)
         {
-            lpf.LFindPath(moc.pos, mocOlaf.pos, FollowOlaf);
+            lpf.LFindPath(moc.pos, mocOlaf.pos, Walk);
+        }
+        else
+        {
+            RandomWalk(idleWalk);
         }
     }
 
-    public void FollowOlaf(Vec2int[] path)
+    public void Walk(Vec2int[] path)
     {
-        if(path == null)
+        if(path == null || path.Length == 0)
         {
             TurnManager.instance.nextEnemyDoTurn = true;
             return;
@@ -93,7 +126,13 @@ public class EnemyAI : MonoBehaviour {
             HuntPlayer();
         }
 
-        if(!walkFinished)
+        if (!walkFinished && pathToWalk.Length == 0)
+        {
+            walkFinished = true;
+            tilesMoved = 0;
+            TurnManager.instance.nextEnemyDoTurn = true;
+        }
+        else if(!walkFinished)
         {
             walkStepTimeActual += Time.deltaTime;
             Vector3 nextPosition = new Vector3(0, transform.position.y, 0);
@@ -125,7 +164,9 @@ public class EnemyAI : MonoBehaviour {
                 stepFinished = false;
                 walkStepTimeActual = 0;
                 tilesMoved++;
-                if (walkIndex < 0 || tilesMoved > moveTilesPerTurnMax)
+                if (walkIndex < 0 ||
+                    (!passiveEnemy && playerInRange && tilesMoved > huntRange) ||
+                    (!playerInRange && tilesMoved > idleWalk))
                 {
                     walkFinished = true;
                     tilesMoved = 0;

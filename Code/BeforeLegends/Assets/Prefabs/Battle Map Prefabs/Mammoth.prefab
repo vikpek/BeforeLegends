@@ -116,6 +116,7 @@ GameObject:
   - 23: {fileID: 2309436}
   - 102: {fileID: 10241980}
   - 114: {fileID: 11459606}
+  - 114: {fileID: 11413294}
   m_Layer: 0
   m_Name: EnemyHP
   m_TagString: EnemyHP
@@ -2927,7 +2928,22 @@ MonoBehaviour:
   attack: Attack01
   hurt: Hurt_01
   spattack: Attack_Crit_01
+  death: Death_01
   animArr: {fileID: 11141324}
+--- !u!114 &11413294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eca67acae7ed9d44ad336705744f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutTime: 20
+  offset: 2
+  dmgTimer: 0
 --- !u!114 &11424216
 MonoBehaviour:
   m_ObjectHideFlags: 1

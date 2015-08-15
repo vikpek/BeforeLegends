@@ -360,6 +360,7 @@ GameObject:
   - 23: {fileID: 2368882}
   - 102: {fileID: 10295412}
   - 114: {fileID: 11412944}
+  - 114: {fileID: 11414460}
   m_Layer: 10
   m_Name: PlayerHP
   m_TagString: PlayerHP
@@ -3123,6 +3124,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd72d62b6d3634de987603e90ccfaabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11414460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eca67acae7ed9d44ad336705744f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutTime: 1
+  offset: 2
+  dmgTimer: 0
 --- !u!114 &11422520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3138,6 +3153,7 @@ MonoBehaviour:
   attack: Rig|Attack_01_Basic
   hurt: Rig|Hurt_01
   spattack: Rig|Attack_02_Crit
+  death: 
   animArr: {fileID: 11155938}
 --- !u!114 &11427452
 MonoBehaviour:

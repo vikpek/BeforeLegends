@@ -754,6 +754,7 @@ GameObject:
   - 23: {fileID: 2359154}
   - 102: {fileID: 10297970}
   - 114: {fileID: 11455190}
+  - 114: {fileID: 11490290}
   m_Layer: 0
   m_Name: EnemyHP
   m_TagString: EnemyHP
@@ -2445,6 +2446,7 @@ MonoBehaviour:
   attack: Rig.001|Attack_01_Basic
   hurt: Rig.001|Hurt_01
   spattack: Rig.001|Attack_02_Crit
+  death: Rig.001|Death_01
   animArr: {fileID: 11188412}
 --- !u!114 &11436918
 MonoBehaviour:
@@ -2492,6 +2494,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .100000001
+--- !u!114 &11490290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eca67acae7ed9d44ad336705744f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutTime: 20
+  offset: 2
+  dmgTimer: 0
 --- !u!137 &13735670
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

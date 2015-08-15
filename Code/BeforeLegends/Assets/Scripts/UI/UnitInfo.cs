@@ -55,9 +55,9 @@ public class UnitInfo : MonoBehaviour {
         damage.text = "Damage: " + info.battleParameters.damage;
         armor.text = "Armor: " + info.battleParameters.armor;
         if (info.battleParameters.hitPoints <= 0)
-            hpText.text = "0/" + info.battleParameters.maxActionPoints.ToString();
+            hpText.text = "0/" + info.battleParameters.maxHitPoints.ToString("f1");
         else
-            hpText.text = info.battleParameters.hitPoints.ToString() + "/" + info.battleParameters.maxHitPoints.ToString();
+            hpText.text = info.battleParameters.hitPoints.ToString("f1") + "/" + info.battleParameters.maxHitPoints.ToString("f1");
         hpBar.fillAmount = info.battleParameters.hitPoints / info.battleParameters.maxHitPoints;
 
         switch (obj.GetComponent<BattleParameters>().level) {
