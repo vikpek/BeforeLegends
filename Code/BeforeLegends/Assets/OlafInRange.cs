@@ -7,17 +7,33 @@ public class OlafInRange : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.name == "EnemyVision")
+        if (other.gameObject.name.Contains("Lion"))
         {
-            ai.playerInRange = true;
+            other.gameObject.GetComponentInChildren<EnemyAI>().playerInRange = true;
         }
-    }
-    void OnTriggerExit(Collider other)
-    {
-        if (other.name == "EnemyVision")
+        else if (other.gameObject.name.Contains("Jack"))
         {
-            ai.playerInRange = false;
+            other.gameObject.GetComponentInChildren<EnemyAI>().playerInRange = true;
+        }
+        else if (other.gameObject.name.Contains("Mammo"))
+        {
+            other.gameObject.GetComponentInChildren<EnemyAI>().playerInRange = true;
         }
     }
 
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name.Contains("Lion"))
+        {
+            other.gameObject.GetComponentInChildren<EnemyAI>().playerInRange = false;
+        }
+        else if (other.gameObject.name.Contains("Jack"))
+        {
+            other.gameObject.GetComponentInChildren<EnemyAI>().playerInRange = false;
+        }
+        else if (other.gameObject.name.Contains("Mammo"))
+        {
+            other.gameObject.GetComponentInChildren<EnemyAI>().playerInRange = false;
+        }
+    }
 }
