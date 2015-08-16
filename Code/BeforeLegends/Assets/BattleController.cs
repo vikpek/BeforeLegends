@@ -71,6 +71,7 @@ public class BattleController : MonoBehaviour{
     public BattleState battleState;
     public Actor actualActor;
 
+
 	// Use this for initialization
 	void Start () {
         battleState = BattleState.IDLE;
@@ -102,6 +103,8 @@ public class BattleController : MonoBehaviour{
 			    round++;
 		    }
 	    }
+
+        
     }
 	
     public bool checkEnded()
@@ -155,7 +158,6 @@ public class BattleController : MonoBehaviour{
     // !----!
     public void init(GameObject player, GameObject enemy){
 	    playerWorldObject = player;
-	    enemyWorldObject = enemy;
 	    battleState = BattleState.IDLE;
 	    actualActor = Actor.PLAYER;
 	    playerData = player.GetComponent<MapObjectCarrier>().data.battleStats;
@@ -164,12 +166,13 @@ public class BattleController : MonoBehaviour{
 	    if(this.enemy){
 		    GameObject.Destroy(this.enemy);
 	    }
-	    this.enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[appID]);
+	    this.enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[0]);
 	    this.enemy.transform.parent = transform;
         enemyAnimator = this.enemy.GetComponent<CharacterAnimations>();
         if (this.enemy.GetComponent<CharacterParticleController>()) enemyParticles = this.enemy.GetComponent<CharacterParticleController>().heal;
         enemyHPText = this.enemy.GetComponent<HPText>();
 	    round = 0;
+        this.enemy.SetActive(true);
     }
 
     void Awake(){

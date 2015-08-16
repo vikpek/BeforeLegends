@@ -146,6 +146,7 @@ public class WorldMapGenerator : MonoBehaviour
     }
 
     void spawnCarriers(){
+        int nameCounter = 0;
 	    WorldMapData data = WorldMapData.instance;
 	    foreach(Hexagon tile in data.tiles){
 		    if(tile.mapObjects.Count != 0){
@@ -156,6 +157,8 @@ public class WorldMapGenerator : MonoBehaviour
 			    tile.gameObjectList.Add(go);
                 enemys.Add(go, go.GetComponentInChildren<MapObjectCarrier>().gameObject);
                 go.GetComponentInChildren<MapObjectCarrier>().gameObject.SetActive(false);
+                go.name += nameCounter;
+                nameCounter++;
 		    }
 	    }	
     }

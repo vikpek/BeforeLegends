@@ -19,11 +19,18 @@ public class GameInfo : MonoBehaviour {
 
     public bool battleCameraPosAssigned = false;
     public Vector3 battleCameraPos;
+    public Screenshake battleMainCam;
 
-    void assignBattleCameraPos(GameObject camera)
+    public void assignBattleCameraPos(GameObject camera)
     {
         if(!battleCameraPosAssigned)                    // I know that line is a bit pointless
             battleCameraPos = camera.transform.position;
         battleCameraPosAssigned = true;
+        battleMainCam = camera.GetComponent<Screenshake>();
+    }
+
+    public void doAScreenshake(AnimationCurve iDurationIntensity)
+    {
+        battleMainCam.ShakeIt(iDurationIntensity);
     }
 }
