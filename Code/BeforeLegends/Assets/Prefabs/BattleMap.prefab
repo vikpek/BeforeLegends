@@ -2947,13 +2947,14 @@ GameObject:
   - 23: {fileID: 2388918}
   - 102: {fileID: 10233560}
   - 114: {fileID: 11473628}
+  - 114: {fileID: 11454566}
   m_Layer: 10
   m_Name: PlayerHP
   m_TagString: PlayerHP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &163368
 GameObject:
   m_ObjectHideFlags: 1
@@ -10605,7 +10606,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162854}
-  m_Text: 
+  m_Text: 000
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -11114,6 +11115,7 @@ MonoBehaviour:
   attack: Rig|Attack_01_Basic
   hurt: Rig|Hurt_01
   spattack: Rig|Attack_02_Crit
+  death: Rig|Death_01
   animArr: {fileID: 11176136}
 --- !u!114 &11448338
 MonoBehaviour:
@@ -11144,6 +11146,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285205bc260385a41b2751ed0063e73b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11454566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eca67acae7ed9d44ad336705744f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutTime: 20
+  offset: 2
+  dmgTimer: 0
 --- !u!114 &11466350
 MonoBehaviour:
   m_ObjectHideFlags: 1

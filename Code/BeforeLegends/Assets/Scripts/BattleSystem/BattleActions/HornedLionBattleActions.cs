@@ -22,7 +22,8 @@ public class HornedLionBattleActions : MonoBehaviour{
         battle.playerData.lastDamageReceived = battle.enemyData.calcDamage(battle.playerData, 1);
         battle.enemyData.lastDamageDealt = battle.playerData.lastDamageReceived;
         battle.playerData.hitPoints -= battle.playerData.lastDamageReceived; 
-	    battle.animateEnemy(Anims.ATTACK); 
+	    battle.animateEnemy(Anims.ATTACK);
+        battle.playerHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.enemyData.lastDamageDealt);
 	    battle.animatePlayer(Anims.HURT);
 	    AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
     }
@@ -33,7 +34,8 @@ public class HornedLionBattleActions : MonoBehaviour{
         battle.playerData.lastDamageReceived = battle.enemyData.calcDamage(battle.playerData, 4);
         battle.enemyData.lastDamageDealt = battle.playerData.lastDamageReceived;
         battle.playerData.hitPoints -= battle.playerData.lastDamageReceived; 
-	    battle.animateEnemy(Anims.SPATTACK); 
+	    battle.animateEnemy(Anims.SPATTACK);
+        battle.playerHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.enemyData.lastDamageDealt);
 	    battle.animatePlayer(Anims.HURT);
 	    AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack); 
     }

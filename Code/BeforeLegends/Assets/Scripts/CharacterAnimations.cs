@@ -2,7 +2,7 @@
 using System.Collections;
 
 public enum Anims{ //ETC ...
-	NONE, IDLE, ATTACK, SPATTACK, HURT
+	NONE, IDLE, ATTACK, SPATTACK, HURT, DEATH
 }
 
 public class CharacterAnimations : MonoBehaviour {
@@ -11,6 +11,7 @@ public class CharacterAnimations : MonoBehaviour {
     public string attack;
     public string hurt;
     public string spattack;
+    public string death;
 
 
     string current;
@@ -50,6 +51,8 @@ public class CharacterAnimations : MonoBehaviour {
 			    return hurt;
 		    case Anims.SPATTACK :
 			    return spattack; 
+            case Anims.DEATH :
+                return death;
 	    }
 	    return "";
     }

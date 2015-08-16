@@ -29,6 +29,7 @@ public class OlafBattleActions : MonoBehaviour{
         battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
         battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
         battle.animateEnemy(Anims.HURT);
+        battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
         battle.animatePlayer(Anims.ATTACK);
         AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
     }
@@ -39,6 +40,7 @@ public class OlafBattleActions : MonoBehaviour{
         battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
         battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
         battle.animateEnemy(Anims.HURT);
+        battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
         battle.animatePlayer(Anims.ATTACK);
         AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
     }
@@ -47,8 +49,9 @@ public class OlafBattleActions : MonoBehaviour{
         battle.enemyData.lastDamageReceived = battle.playerData.calcDamage(battle.enemyData, 2);
         battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
         battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
-	    battle.animateEnemy(Anims.HURT); 
-	    battle.animatePlayer(Anims.SPATTACK);
+	    battle.animateEnemy(Anims.HURT);
+        battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
+        battle.animatePlayer(Anims.SPATTACK);
 	    AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack);
     }
 
@@ -72,6 +75,7 @@ public class OlafBattleActions : MonoBehaviour{
         battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
         battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
         battle.animateEnemy(Anims.HURT);
+        battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
         battle.animatePlayer(Anims.SPATTACK);
         AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack);
     }
@@ -86,7 +90,8 @@ public class OlafBattleActions : MonoBehaviour{
 
     void doubleDamage(BattleController battle){  // just like a basic attack but deals double basic damage
 	    battle.enemyData.hitPoints -= battle.playerData.calcDamage(battle.enemyData, 2); 
-	    battle.animateEnemy(Anims.HURT); 
-	    battle.animatePlayer(Anims.ATTACK);
+	    battle.animateEnemy(Anims.HURT);
+        battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
+        battle.animatePlayer(Anims.ATTACK);
     }
 }

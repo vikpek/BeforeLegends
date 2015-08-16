@@ -4,7 +4,8 @@ using System.Collections;
 
 public class GameVictory : MonoBehaviour {
 
-    public Text textVictory;
+    public Image victory;
+    public Sprite victorySprite;
 
     public GameObject[] gameObjectsToDeactivateOnGameOver;
 
@@ -13,14 +14,21 @@ public class GameVictory : MonoBehaviour {
     bool iLikeCheating = false;
 
     void Start() {
-        if(GameObject.Find("MenuOptions"))
+        if (GameObject.Find("MenuOptions"))
             settings = GameObject.Find("MenuOptions").GetComponent<NewWorld>();
+        else {
+            settings = new NewWorld();
+            settings.foodToWin = 200;
+            settings.woodToWin = 200;
+            settings.stoneToWin = 200;
+        }
     }
 
     void Update () {
         if (Input.GetKeyDown(KeyCode.B)) {
             iLikeCheating = true;
             print("Shame on you, cheater!");
+            CheckRessourcesForWin();
         }
         if (settings == null)
             return;
@@ -35,7 +43,8 @@ public class GameVictory : MonoBehaviour {
 		    foreach(GameObject gO in gameObjectsToDeactivateOnGameOver) {
 			    gO.SetActive(false);
 		    }
-		    textVictory.gameObject.SetActive(true);
+	        victory.sprite = victorySprite;
+	        victory.enabled = true;
 		    Time.timeScale = 0;
 	    }
     }
@@ -47,7 +56,8 @@ public class GameVictory : MonoBehaviour {
             foreach (GameObject gO in gameObjectsToDeactivateOnGameOver) {
                 gO.SetActive(false);
             }
-            //textVictory.gameObject.SetActive(true);
+            victory.sprite = victorySprite;
+            victory.enabled = true;
             Time.timeScale = 0;
         }
     }
