@@ -66,6 +66,8 @@ public class Shop : MonoBehaviour {
             rm.ResourceAS("Stone", -cm.cards[aCardId].costStone);
             rm.ResourceAS("Food", -cm.cards[aCardId].costFood);
             rm.ResourceAS("Soul", -cm.cards[aCardId].costSoul);
+            
+            AudioMaster.instance.ShopPurchaseCardA045Play();
         }
     }
 

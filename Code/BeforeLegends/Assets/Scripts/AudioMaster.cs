@@ -109,7 +109,12 @@ public class AudioMaster : MonoBehaviour {
 	public void BattleEndDefeatA026Play(){
 		AudioMaster.instance.audioSourceMiscSounds.PlayOneShot(battleEndDefeatA026);
 	}
-
+	
+	[SerializeField]
+	private AudioClip slideUIElementA030;
+	public void SlideUIElementA030Play(){
+		AudioMaster.instance.audioSourceMiscSounds.PlayOneShot(slideUIElementA030);
+	}
 
 	[SerializeField]
 	private AudioClip boardgamePieceClickA038_1;
@@ -146,6 +151,12 @@ public class AudioMaster : MonoBehaviour {
 	public void wmRoundEndingA040Play(){
 		AudioMaster.instance.audioSourceEnemies.PlayOneShot(wmRoundEndingA040);
 	}
+	
+	[SerializeField]
+	private AudioClip shopPurchaseCardA045;
+	public void ShopPurchaseCardA045Play(){
+		AudioMaster.instance.audioSourceEnemies.PlayOneShot(shopPurchaseCardA045);
+	}
 
 	// Music
 
@@ -179,9 +190,9 @@ public class AudioMaster : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
-            AudioMaster.instance.audioSourceEnemies.PlayOneShot(audioObjects[0].attack);
-	
+		if(Input.GetMouseButtonDown(0)){
+			MenuClickA002Play();
+		}   
 	}
 
     public AudioObject FetchAudioObject(string objName)

@@ -67,6 +67,7 @@ public class UIFunctions : MonoBehaviour {
         slideState = 2;
     }
     public void ToggleSlideState() {
+        AudioMaster.instance.SlideUIElementA030Play();
         if (shopOpen == false)
             slideState = 1;
         else
