@@ -6,16 +6,17 @@ using System.Collections;
     {
         PLAYER, ENEMY
     }
-
-    public enum BattleState
-    {
-        IDLE, STARTED, ANIMATING
-    }
     [System.Serializable]
     public enum Action
     { // here below you need to add any new actions
         ATTACK, ENRAGED, FINALATTACK, HEAL, HEALOTHER, DOUBLEDAMAGE, WRATH, SHIELD, REVENGE, STUN, SKIP
     }
+
+    public enum BattleState
+    {
+        ANIMTING, IDLE
+    }
+
 public class BattleController : MonoBehaviour{
 
     //every code snippet that is commented out has to be uncomment later! so ignore "!--!" or "!---!" here!
@@ -31,7 +32,6 @@ public class BattleController : MonoBehaviour{
             return _instance;
         }
     }
-
     
     public GameObject enemy;
     public GameObject player;
@@ -56,9 +56,6 @@ public class BattleController : MonoBehaviour{
     public MapObjectCarrier playerMapObjectCarrier;
     public MapObjectCarrier enemyMapObjectCarrier;
 
-    public Anims playerAnimation;
-    public Anims enemyAnimation;
-
     public CharacterAnimations playerAnimator;
     public CharacterAnimations enemyAnimator;
 
@@ -69,7 +66,6 @@ public class BattleController : MonoBehaviour{
     public Action enemyAction;
     public Action playerAction;
 
-    public BattleState battleState;
     public Actor actualActor;
 
     [HideInInspector] public bool stunned;
@@ -81,23 +77,18 @@ public class BattleController : MonoBehaviour{
     public Text battleLog;
     public Scrollbar scrollBar;
 
+    public BattleState battleState;
 
 	// Use this for initialization
 	void Start () {
-        battleState = BattleState.IDLE;
-        actualActor = Actor.PLAYER;
-        Messenger.instance.listen(instance.gameObject, "executeAction");
-	}
-	
-    void Update(){
-        /*
 
-         * check end
-         *      end battle
-         * wait finish action
-         *      action
-         *      
-         */
+	}
+
+    bool test = true;
+
+    void Update()
+    {
+
         if (Input.GetKeyDown(KeyCode.F))
         {
             enemyData.hitPoints = 0;
@@ -105,44 +96,131 @@ public class BattleController : MonoBehaviour{
         if (Input.GetKeyDown(KeyCode.U)) {
             PrintToBattlelog("Olaf can't be stopped and deals around 9 billion damage. " + enemyName + " can't stand the mighty power and stares in disbelief as the fury of an exploding sun that is olaf's strength rains down on him.");
         }
-	    if(checkEnded()) return;
-        if (battleState == BattleState.STARTED) {
-		    playerParticles.Stop(); // tentative
-            enemyParticles.Stop(); // tentative
-		    battleState = BattleState.ANIMATING;
-            if (actualActor == Actor.PLAYER) {
-			    player.SendMessage("executeAction", instance);		
-		    }else{
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (test)
+            {
+                enemy.GetComponent<CharacterAnimations>().animate(1);
+                test = false;
+            }
+            else
+                print(enemy.GetComponent<CharacterAnimations>().isAnimationPlaying());
+        }
+
+        if(checkEnded()) return;
+        
+        if(actualActor == Actor.ENEMY)
+        {
+            if (playerAnimator.isAnimationPlaying() == "" && enemyAnimator.isAnimationPlaying() == "")
+            {
                 enemy.SendMessage("determineAction", instance);
                 enemy.SendMessage("executeAction", instance);
-		    }
-	    }else if(battleState == BattleState.ANIMATING && !playerAnimator.isAnimating(playerAnimation) && !enemyAnimator.isAnimating(enemyAnimation)) {
-		    if(actualActor == Actor.PLAYER){
-			    battleState = BattleState.STARTED;
-			    actualActor = Actor.ENEMY;
-		    }else{
-			    battleState = BattleState.IDLE;
-			    actualActor = Actor.PLAYER;
-			    round++;
-		    }
-	    }
+                battleState = BattleState.ANIMTING;
+                actualActor = Actor.PLAYER;
+            }
+        }
+
+        if(actualActor == Actor.PLAYER)
+        {
+            if(battleState == BattleState.IDLE)
+            {
+                if (playerAnimator.isAnimationPlaying() == "")
+                {
+                    playerAnimator.animate(0);
+                }
+                if (enemyAnimator.isAnimationPlaying() == "")
+                {
+                    enemyAnimator.animate(0);
+                }
+            }
+            else
+            {
+                if(playerAnimator.isAnimationPlaying() == "")
+                {
+                    if(enemyAnimator.isAnimationPlaying() == "")
+                    {
+                        actualActor = Actor.ENEMY;
+                    }
+                }
+            }
+        }
+        else
+        {
+
+            if (battleState == BattleState.IDLE)
+            {
+                if (playerAnimator.isAnimationPlaying() == "")
+                {
+                    playerAnimator.animate(0);
+                }
+                if (enemyAnimator.isAnimationPlaying() == "")
+                {
+                    enemyAnimator.animate(0);
+                }
+            }
+            else
+            {
+                if (enemyAnimator.isAnimationPlaying() == "")
+                {
+                    if (playerAnimator.isAnimationPlaying() == "")
+                    {
+                        actualActor = Actor.PLAYER;
+                    }
+                }
+            }
+
+        }
+
+        
+        //if (playerAnimator.isAnimationPlaying() == "" && enemyAnimator.isAnimationPlaying() == "")
+        //{
+        //    battleState = BattleState.IDLE;
+        //}
+
+        //if(battleState == BattleState.IDLE && actualActor == Actor.ENEMY)
+        //{
+        //    actualActor = Actor.PLAYER;
+        //}
+
+
+
+
+
+        //if (battleState == BattleState.STARTED) {
+        //    playerParticles.Stop(); // tentative
+        //    enemyParticles.Stop(); // tentative
+        //    battleState = BattleState.ANIMATING;
+        //    if (actualActor == Actor.PLAYER) {
+        //        player.SendMessage("executeAction", instance);		
+        //    }else{
+        //        enemy.SendMessage("determineAction", instance);
+        //        enemy.SendMessage("executeAction", instance);
+        //    }
+        //}else if(battleState == BattleState.ANIMATING && !playerAnimator.isAnimating(playerAnimation) && !enemyAnimator.isAnimating(enemyAnimation)) {
+        //    if(actualActor == Actor.PLAYER){
+        //        battleState = BattleState.STARTED;
+        //        actualActor = Actor.ENEMY;
+        //    }else{
+        //        battleState = BattleState.IDLE;
+        //        actualActor = Actor.PLAYER;
+        //        round++;
+        //    }
+        //}
 
         
     }
 	
     public bool checkEnded()
     {
-		    if(playerData.hitPoints <= 0){
-                animatePlayer(Anims.DEATH);
-                StartCoroutine(WaitForAnimation(playerAnimator.animArr));
+		    if(playerData.hitPoints <= 0)
+            {
 			    playerWorldObject.SetActive(false);
 			    GameStateManager.instance.endBattle(false, 0);
                 Messenger.instance.send(new AllActionsEndedMessage());
 			    return true;
-		    }else if(enemyData.hitPoints <= 0){
-                animateEnemy(Anims.DEATH);
-                
-                StartCoroutine(WaitForAnimation(enemyAnimator.animArr));
+		    }
+            else if(enemyData.hitPoints <= 0)
+            {
                 enemyWorldObject.transform.parent.gameObject.SetActive(false);
                 enemyWorldObject.GetComponent<EnemyAI>().enabled = false;
                 enemyWorldObject.GetComponent<LPathfinding>().enabled = false;
@@ -153,118 +231,44 @@ public class BattleController : MonoBehaviour{
 		    return false;
     }
 
-    public void animatePlayer(Anims a)
-    {
-        playerAnimator.swapAnimation(a);
-        playerAnimation = a;
-    }
-                                            // !--!
-    public void animateEnemy(Anims a)
-    {
-        enemyAnimator.swapAnimation(a);
-        enemyAnimation = a;
-    }
+    public void init(GameObject iPlayer, GameObject iEnemy){
+	    playerWorldObject = iPlayer;
+        enemyWorldObject = iEnemy;
 
-    public void playerAttack(string action)
-    {
-        print("\"click\"");
-        switch (action)
-        {
-            case "ATTACK":
-                playerAction = Action.ATTACK;
-                break;
+	    playerData = iPlayer.GetComponent<MapObjectCarrier>().data.battleStats;
+	    enemyData = iEnemy.GetComponent<MapObjectCarrier>().data.battleStats;
 
-        }
-//        player.GetComponent<OlafBattleActions>().executeAction(BattleController.instance);
-    }
-
-
-    // !----!
-    public void init(GameObject player, GameObject enemy){
-	    playerWorldObject = player;
-	    battleState = BattleState.IDLE;
-        enemyWorldObject = enemy;
 	    actualActor = Actor.PLAYER;
-	    playerData = player.GetComponent<MapObjectCarrier>().data.battleStats;
-	    enemyData = enemy.GetComponent<MapObjectCarrier>().data.battleStats;
-        int appID = enemy.GetComponent<MapObjectCarrier>().data.appearanceID;
-	    if(this.enemy){
-		    GameObject.Destroy(this.enemy);
+
+        int appID = iEnemy.GetComponent<MapObjectCarrier>().data.appearanceID;
+        battleState = BattleState.IDLE;
+
+	    if(enemy){
+		    GameObject.Destroy(enemy);
 	    }
-	    this.enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[0]);
-	    this.enemy.transform.parent = transform;
-        enemyAnimator = this.enemy.GetComponent<CharacterAnimations>();
-        //animateEnemy(Anims.ENTER);
-        if (this.enemy.GetComponent<CharacterParticleController>()) 
-                enemyParticles = this.enemy.GetComponent<CharacterParticleController>().heal;
-        enemyHPText = this.enemy.GetComponent<HPText>();
+
+	    enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[0]);
+        enemy.SetActive(true);
+
+        playerAnimator = player.GetComponent<CharacterAnimations>();
+        enemyAnimator = enemy.GetComponent<CharacterAnimations>();
+
+	    enemy.transform.parent = transform;
+        enemyAnimator = enemy.GetComponent<CharacterAnimations>();
+
+        enemyParticles = enemy.GetComponent<CharacterParticleController>().heal;
+        enemyHPText = enemy.GetComponent<HPText>();
+        playerHPText = player.GetComponent<HPText>();
+
 	    round = 0;
-        this.enemy.SetActive(true);
-        battleLog.text = "";
+
+//        battleLog.text = "";
         AssignEnemyName();
     }
 
-    void Awake(){
-        playerAnimator = player.GetComponent<CharacterAnimations>();
-        playerParticles = player.GetComponent<CharacterParticleController>().heal; // ._. trello (Note Name: CharacterParticleController)
-        playerHPText = player.GetComponent<HPText>(); 
-    }
-
-    //---MAP INPUT---
-    public void onInput_Attack(){
-        print("Attack");
-	    onInput(Action.ATTACK);
-    }
-
-    public void onInput_Enraged()
-    {
-	    onInput(Action.ENRAGED);
-        CardManager.Instance.CardAS(0, -1);
-    }
-
-    public void onInput_Heal()
-    {
-	    onInput(Action.HEAL);
-        CardManager.Instance.CardAS(2, -1);
-    }
-
-    public void onInput_Stun() {
-        onInput(Action.STUN);
-    }
-
-    public void onInput_Shield() {
-        onInput(Action.SHIELD);
-    }
-
-    public void onInput_Revenge() {
-        onInput(Action.REVENGE);
-    }
-
-    public void onInput_HealOther()
-    {
-	    onInput(Action.HEALOTHER);
-    }
-
-    //--------------
-
-    //Resolve Input
-    public void onInput(Action action)
-    { 
-	    if(battleState == BattleState.IDLE && actualActor == Actor.PLAYER){
-		    playerAction = action;
-            battleState = BattleState.STARTED;
-	    }
-    }
-
-    IEnumerator WaitForAnimation(Animation a) {
-        do {
-            yield return new WaitForEndOfFrame();
-        } while (a.isPlaying);
-    }
-
     public void PrintToBattlelog(string content) {
-        battleLog.text += content + "\n\n";
-        scrollBar.value = 0;
+        //battleLog.text += content + "\n\n";
+        //scrollBar.value = 0;
 
     }
 

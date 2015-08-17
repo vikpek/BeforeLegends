@@ -5,31 +5,39 @@ public class OlafBattleActions : MonoBehaviour{
 
     public void executeAction(BattleController battle){
 	    switch(battle.playerAction){   //always remember to list new battle actions (functions below) here.
-		    case Action.ATTACK :
+            case Action.ATTACK:
+                battle.enemyAnimator.animate(1);
 			    attack(battle);
 			    break;
-		    case Action.ENRAGED :
+            case Action.ENRAGED:
+                battle.enemyAnimator.animate(2);
 			    enraged(battle);
 			    break;
-		    case Action.HEALOTHER :
+            case Action.HEALOTHER:
+                battle.enemyAnimator.animate(99);
 			    healother(battle);
 			    break;
-		    case Action.DOUBLEDAMAGE :
+            case Action.DOUBLEDAMAGE:
+                battle.enemyAnimator.animate(99);
 			    doubleDamage(battle);
-			    break;	
-		    case Action.HEAL :
+			    break;
+            case Action.HEAL:
 			    healself(battle);
 			    break;
             case Action.STUN:
+                battle.enemyAnimator.animate(1);
                 Stun(battle);
 	            break;
             case Action.SHIELD:
 	            Shield(battle);
 	            break;
             case Action.REVENGE:
+                battle.enemyAnimator.animate(2);
                 Revenge(battle);
 	            break;
-	    }
+        }
+        battle.enemyAnimator.animate(3);
+        battle.battleState = BattleState.ANIMTING;
     }
 
     public void attack(BattleController battle)
@@ -37,43 +45,39 @@ public class OlafBattleActions : MonoBehaviour{
         battle.enemyData.lastDamageReceived = battle.playerData.calcDamage(battle.enemyData, 1);
         battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
         battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
-        battle.animateEnemy(Anims.HURT);
         battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
-        battle.animatePlayer(Anims.ATTACK);
         AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
         battle.PrintToBattlelog(AssembleBattleLog(battle));
+        battle.playerAnimator.animate(1);
+        battle.enemyAnimator.animate(3);
+        battle.battleState = BattleState.ANIMTING;
     }
 
-    void Stun(BattleController battle)
+    public void Stun(BattleController battle)
     { // Less damage, but lets the enemy skip his next action
         battle.enemyData.lastDamageReceived = battle.playerData.calcDamage(battle.enemyData, 0.3f);
         battle.stunned = true;
         battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
         battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
-        battle.animateEnemy(Anims.HURT);
         battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
-        battle.animatePlayer(Anims.ATTACK);
         AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
         battle.PrintToBattlelog(AssembleBattleLog(battle, "and stunned the enemy"));
     }
 
-    void enraged(BattleController battle){ // Attack that deals more damage when low on HP
+    public void enraged(BattleController battle)
+    { // Attack that deals more damage when low on HP
         battle.enemyData.lastDamageReceived = battle.playerData.calcDamage(battle.enemyData, 2);
         battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
         battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
-	    battle.animateEnemy(Anims.HURT);
         battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
-        battle.animatePlayer(Anims.SPATTACK);
 	    AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack);
         battle.PrintToBattlelog(AssembleBattleLog(battle));
     }
 
-    void healself(BattleController battle)
+    public void healself(BattleController battle)
     { // the char heals himself
         battle.playerParticles.Play();
         battle.playerParticles.Stop();
-        battle.animateEnemy(Anims.HURT);
-        battle.animatePlayer(Anims.NONE);
         battle.playerData.lastDamageDealt = 0;
         battle.enemyData.lastDamageReceived = 0;
 	    battle.playerData.hitPoints += battle.playerData.maxHitPoints * 0.3f;
@@ -104,14 +108,12 @@ public class OlafBattleActions : MonoBehaviour{
 
     void doubleDamage(BattleController battle){  // just like a basic attack but deals double basic damage
 	    battle.enemyData.hitPoints -= battle.playerData.calcDamage(battle.enemyData, 2); 
-	    battle.animateEnemy(Anims.HURT);
         battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
-        battle.animatePlayer(Anims.ATTACK);
         battle.PrintToBattlelog(AssembleBattleLog(battle));
     }
 
-    void Shield(BattleController battle) {
-        battle.animatePlayer(Anims.HURT);
+    public void Shield(BattleController battle) 
+    {
         battle.playerParticles.Play();
         battle.shielded = true;
         battle.playerData.hitPoints += battle.playerData.maxHitPoints * 0.15f;
@@ -121,8 +123,8 @@ public class OlafBattleActions : MonoBehaviour{
         battle.PrintToBattlelog(AssembleBattleLog("Olaf shielded himself"));
     }
 
-    void Revenge(BattleController battle) {
-        battle.animatePlayer(Anims.ATTACK);
+    public void Revenge(BattleController battle) 
+    {
         battle.revenge = true;
         battle.PrintToBattlelog(AssembleBattleLog("Olaf will reflect the next attack"));
     }

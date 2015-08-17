@@ -1152,6 +1152,11 @@ GameObject:
   - 4: {fileID: 446746}
   - 95: {fileID: 9518146}
   - 114: {fileID: 11414608}
+  - 114: {fileID: 11415428}
+  - 114: {fileID: 11457304}
+  - 114: {fileID: 11471352}
+  - 114: {fileID: 11485452}
+  - 114: {fileID: 11431044}
   m_Layer: 15
   m_Name: BM_IceMammoth
   m_TagString: Untagged
@@ -3126,8 +3131,12 @@ Animation:
   m_Animation: {fileID: 7400000, guid: df07e89316f325646bc556165cfe1253, type: 3}
   m_Animations:
   - {fileID: 7400000, guid: df07e89316f325646bc556165cfe1253, type: 3}
+  - {fileID: 7400000, guid: d5c5f2ee9f8bebb4a8ba0b52bb797deb, type: 3}
+  - {fileID: 7400000, guid: 13b51344229f6894aba2d488a4084038, type: 3}
+  - {fileID: 7400000, guid: 07aa4873b083f5a42aa501230c52fdc7, type: 3}
+  - {fileID: 7400000, guid: 334af65026750d240a9f2416b9bbabeb, type: 3}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 1
 --- !u!114 &11414608
@@ -3243,6 +3252,29 @@ MonoBehaviour:
   enemyModelAnimation: {fileID: 0}
   enterAnimation: {fileID: 11100000, guid: b343245b925a21f429c627bc060d5e73, type: 3}
   reset: 0
+--- !u!114 &11415428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd24a2ca6294e045a99ec27eec7a521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationClips: []
+--- !u!114 &11431044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809c9cb1e355242438190539d9882161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11437886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3257,6 +3289,30 @@ MonoBehaviour:
   fadeOutTime: 20
   offset: 2
   dmgTimer: 0
+--- !u!114 &11457304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c982fc1e8dfdb994193940072b598760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heal: {fileID: 19867914}
+--- !u!114 &11471352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83f7a36ea1651b74fba7518921450fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tm: {fileID: 10227478}
 --- !u!114 &11477288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3269,6 +3325,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .100000001
+--- !u!114 &11485452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fada60d62058674ea19d5b9df01a2dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11485538
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -3,12 +3,14 @@ using System.Collections;
 
 public class HornedLionBattleActions : MonoBehaviour{
 
-    void executeAction(BattleController battle){
+    public void executeAction(BattleController battle){
 	    switch(battle.enemyAction){ // always remember to add new actions BELOW and in BattleController.js
-		    case Action.ATTACK :
+            case Action.ATTACK:
+                battle.enemyAnimator.animate(1);
 			    attack(battle);
 			    break;
-		    case Action.FINALATTACK :
+            case Action.FINALATTACK:
+                battle.enemyAnimator.animate(2);
 			    attackOpponentFinal(battle);
 			    break;
 		    case Action.HEAL :
@@ -18,6 +20,8 @@ public class HornedLionBattleActions : MonoBehaviour{
                 Skip(battle);
 	            break;
 	    }
+        battle.playerAnimator.animate(4);
+        battle.battleState = BattleState.ANIMTING;
     }
 
     void attack(BattleController battle)
@@ -42,8 +46,6 @@ public class HornedLionBattleActions : MonoBehaviour{
                 battle.PrintToBattlelog("Olaf reflected the damage, " + battle.enemyName + " dealt " + battle.enemyData.lastDamageDealt.ToString("F1") + " to himself");
             }
         }
-        battle.animateEnemy(Anims.ATTACK);
-        battle.animatePlayer(Anims.HURT);
 	    AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
     }
 
@@ -69,8 +71,6 @@ public class HornedLionBattleActions : MonoBehaviour{
                 battle.PrintToBattlelog("Olaf reflected the damage, " + battle.enemyName + " dealt " + battle.enemyData.lastDamageDealt.ToString("F1") + " to himself");
             }
         }
-        battle.animateEnemy(Anims.SPATTACK);
-        battle.animatePlayer(Anims.HURT);
         AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack); 
     }
 
@@ -81,12 +81,11 @@ public class HornedLionBattleActions : MonoBehaviour{
 	    battle.enemyData.hitPoints += battle.enemyData.maxHitPoints*0.05f;
 	    if (battle.enemyData.hitPoints > battle.enemyData.maxHitPoints){
 		    battle.enemyData.hitPoints = battle.enemyData.maxHitPoints;
-	    }
+        }
     }
 
     void Skip(BattleController battle) {
         battle.enemyData.actionPoints--;
-        battle.animateEnemy(Anims.HURT);
         battle.stunned = false;
         battle.PrintToBattlelog(AssembleBattleLog(battle.enemyName + " is stunned and can't act"));
     }

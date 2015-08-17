@@ -44,14 +44,15 @@ public class StartAnimation : MonoBehaviour {
     void Start()
     {
         enemyModelAnimation = GetComponentInChildren<Animation>();
-        enemyModelAnimation.AddClip(enterAnimation.clip, "Enter");
+        //enemyModelAnimation.AddClip(enterAnimation.clip, "Enter");
         startPosition = transform.position;
-        startPositionChild = enemyModelAnimation.transform.gameObject.transform.position;
+        //startPositionChild = enemyModelAnimation.transform.gameObject.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
+        animateStart = false;
         if (Input.GetKeyDown(KeyCode.R))
             reset = true;
 
