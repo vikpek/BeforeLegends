@@ -1394,7 +1394,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.32210732, y: 1.1920929e-07, z: -4.1406889}
+  m_LocalPosition: {x: 2.36100006, y: 0, z: -2.84100008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 442422}
@@ -2757,6 +2757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleParameters:
+    unitName: 
     attack: 0
     defense: 0
     armor: 0
@@ -2769,6 +2770,8 @@ MonoBehaviour:
     critStrike: 0
     critBlock: 0
     expToGain: 0
+    lastDamageReceived: 0
+    lastDamageDealt: 0
   level: 0
   exp: 0
   expToLevelUp: 

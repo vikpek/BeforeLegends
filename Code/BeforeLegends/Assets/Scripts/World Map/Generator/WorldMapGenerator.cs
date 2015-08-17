@@ -24,6 +24,7 @@ public class WorldMapGenerator : MonoBehaviour
     public Vec2int size;
     public Vec2int chunkSize;
     public int seed;
+    public bool randomSeed;
     public float erosionScale;
     public float continentScale;
     public float moistureScale;
@@ -41,6 +42,7 @@ public class WorldMapGenerator : MonoBehaviour
     public float[] temperatureLookup;
 
     public List<DropChance> DropChances = new List<DropChance>();
+    public List<SpawnChance> spawnChances = new List<SpawnChance>();
 
     public int[] water;
     public int[] ice;
@@ -56,6 +58,14 @@ public class WorldMapGenerator : MonoBehaviour
     public int[] desert_mountain;
     public int[] jungle;
 
+    public int[] hornedLion;
+    public int[] silverLion;
+    public int[] greenLion;
+    public int[] iceLion;
+    public int[] desertLion;
+    public int[] jackal;
+    public int[] mammoth;
+
     public Texture2D chunkTexture;
 
     public Texture2D chunkTextureNormal;
@@ -69,10 +79,17 @@ public class WorldMapGenerator : MonoBehaviour
     public Vector2 moistureSeed;
     public Vector2 erosionSeed;
 
+    public Dictionary<GameObject, GameObject> enemys;
+    
     public FlatHexagon flatHex;
-
+    public bool generationComplete = false;
     void Start()
     {
+        if (randomSeed == true) {
+            Random.seed = System.Environment.TickCount;
+            seed = Random.Range(int.MinValue, int.MaxValue);
+        }
+        enemys = new Dictionary<GameObject, GameObject>();
         flatHex = new FlatHexagon(1);
         setSeeds();
         packTextures();
@@ -82,6 +99,7 @@ public class WorldMapGenerator : MonoBehaviour
         spawnCarriers();
         spwanRessources();
         spawnPlayer();
+        generationComplete = true;
     }
 
     void setSeeds()
@@ -113,27 +131,34 @@ public class WorldMapGenerator : MonoBehaviour
 	    mapMaterial.mainTexture = chunkTexture;
     }
 
-    void spawnObjects()
-    {
-	    WorldMapData data = WorldMapData.instance;
-	    foreach(Hexagon tile in data.tiles){
-		    if(tile.traversable && Random.Range(0f, 1f) <= 0.025){
+    void spawnObjects() {
+        WorldMapData data = WorldMapData.instance;
+        foreach (Hexagon tile in data.tiles) {
+            SpawnChance chance = returnSpawnChance(tile.matID);
+            chance.overallSpawnChance();
+            if (tile.traversable && Random.Range(0f, 1f) <= chance.chance) {
                 MapObjectData obj = new MapObjectData();
-			    obj.appearanceID = Random.Range(0f, 1f) >= 0.5 ? 0 : 1;
-			    tile.mapObjects.Add(obj);
-		    }
-	    }	
+
+                obj.appearanceID = chance.returnSpawn();
+                tile.mapObjects.Add(obj);
+            }
+        }
     }
 
     void spawnCarriers(){
+        int nameCounter = 0;
 	    WorldMapData data = WorldMapData.instance;
 	    foreach(Hexagon tile in data.tiles){
 		    if(tile.mapObjects.Count != 0){
 			    GameObject go = (GameObject)Instantiate(CharacterModelPrefabs.prefabs[tile.mapObjects[0].appearanceID], tile.position, Quaternion.identity);
 			    go.transform.parent = transform;
-			    go.GetComponent<MapObjectCarrier>().pos = tile.gridPos;
-			    go.GetComponent<MapObjectCarrier>().data = tile.mapObjects[0];
+			    go.GetComponentInChildren<MapObjectCarrier>().pos = tile.gridPos;
+                go.GetComponentInChildren<MapObjectCarrier>().data = tile.mapObjects[0];
 			    tile.gameObjectList.Add(go);
+                enemys.Add(go, go.GetComponentInChildren<MapObjectCarrier>().gameObject);
+                go.GetComponentInChildren<MapObjectCarrier>().gameObject.SetActive(false);
+                go.name += nameCounter;
+                nameCounter++;
 		    }
 	    }	
     }
@@ -283,6 +308,39 @@ public class WorldMapGenerator : MonoBehaviour
         return DropChances[0];
     }
 
+    private SpawnChance returnSpawnChance(int matID) {
+        var ID = 0;
+        foreach (var e in hornedLion) {
+            if (e == matID)
+                ID = 0;
+        }
+        foreach (var e in silverLion) {
+            if (e == matID)
+                ID = 1;
+        }
+        foreach (var e in desertLion) {
+            if (e == matID)
+                ID = 2;
+        }
+        foreach (var e in iceLion) {
+            if (e == matID)
+                ID = 3;
+        }
+        foreach (var e in greenLion) {
+            if (e == matID)
+                ID = 4;
+        }
+        foreach (var e in jackal) {
+            if (e == matID)
+                ID = 5;
+        }
+        foreach (var e in mammoth) {
+            if (e == matID)
+                ID = 6;
+        }
+        return spawnChances[ID];
+    }
+
     void generate(){
 	    WorldMapData data = WorldMapData.instance;
 	    data.flatHex = flatHex;
@@ -334,7 +392,7 @@ public class WorldMapGenerator : MonoBehaviour
                         spawn = false;
                 }
                 FogOfWar.instance.ClearLists();
-                if (spawn)
+                if (spawn && worldData.tiles[randX, randY].gameObjectList.Count <= 0)
                 {
                     GameObject player = GameObject.Find("Olaf");
                     MapObjectCarrier objData = player.AddComponent<MapObjectCarrier>();
@@ -343,8 +401,9 @@ public class WorldMapGenerator : MonoBehaviour
                     player.transform.position = worldData.tiles[randX, randY].position;
                     InterfaceData.instance.selectedCarrier = objData;
 
-                    GameObject.Find("World Camera").GetComponent<MouseMovement>().nextPos = new Vector3(player.transform.position.x, 4.0f, player.transform.position.z - 4.0f);
-                    CameraTransitions.Instance.LerpCamera(player.transform);
+                    GameObject.Find("World Camera").transform.position = new Vector3(player.transform.position.x, 10.0f, player.transform.position.z - 10.0f);
+                    GameObject.Find("World Camera").GetComponent<MouseMovement>().nextPos = new Vector3(player.transform.position.x, 10.0f, player.transform.position.z - 10.0f);
+                    //CameraTransitions.Instance.LerpCamera(player.transform);
 
                     playerSpawned = true;
                 }

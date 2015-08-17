@@ -16,6 +16,11 @@ public class Vec2int{
 	    return x + " | " + y;
     }
 
+    public int ManhattenDistance(Vec2int destination)
+    {
+        return (Mathf.Abs(x - destination.x) + Mathf.Abs(y - destination.y));
+    }
+
 }
 
 public class MapObjectData

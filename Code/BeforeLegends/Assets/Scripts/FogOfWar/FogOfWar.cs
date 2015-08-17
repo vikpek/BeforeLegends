@@ -61,9 +61,10 @@ public class FogOfWar : MonoBehaviour {
     public void AddEnemysInRangeToList()
     {
 	    foreach(Hexagon hex in adjacent) {
-		    foreach(GameObject gO in hex.gameObjectList) {
-			    if(gO.tag == "Enemy")
-				    enemysInRange.Add(gO);
+		    foreach(GameObject gO in hex.gameObjectList) 
+            {
+			    if(gO.tag == "EnemyParent")
+				    enemysInRange.Add(WorldMapGenerator.instance.enemys[gO]);
 		    }
 	    }
     }
@@ -121,6 +122,25 @@ public class FogOfWar : MonoBehaviour {
         {
     	    var child = c as Transform;
             SetLayerRecursively( child.gameObject, newLayer );
+        }
+    }
+
+    void Cheat() {
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("Ressource");
+        GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(GameObject gO in objects) {
+            SetLayerRecursively(gO, 15);
+            gO.GetComponent<Ressource>().fall = true;
+        }
+        foreach (GameObject gO in enemys) {
+            SetLayerRecursively(gO, 15);
+        }
+        GameObject.Find("FogOfWar").SetActive(false);
+    }
+
+    void Update() {
+        if(Input.GetKeyDown(KeyCode.X)) {
+            Cheat();
         }
     }
 }

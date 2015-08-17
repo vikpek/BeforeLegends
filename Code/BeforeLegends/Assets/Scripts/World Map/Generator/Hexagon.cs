@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
 public class Hexagon {
 
     public Vec2int gridPos;
@@ -123,6 +124,17 @@ public class Hexagon {
         WorldMapData data = WorldMapData.instance;
 	    int x = gridPos.x - (gridPos.y % 2 == 0 ? 1 : 0);  
 	    return x >= 0 && gridPos.y + 1 < data.size.y ? data.tiles[x, gridPos.y + 1] : null;
+    }
+
+    public List<Vec2int> AdjacentHexListPositions()
+    {
+        Hexagon[] hexArray = getAdjacent();
+        List<Vec2int> positions = new List<Vec2int>()
+            ;
+        foreach (Hexagon hex in hexArray)
+            positions.Add(hex.gridPos);
+
+        return positions;
     }
 
     public Hexagon[] getAdjacent(){
