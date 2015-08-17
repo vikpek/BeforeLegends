@@ -78,7 +78,7 @@ public class TurnManager : MonoBehaviour {
     {
         turn++;
         AudioMaster.instance.wmRoundEndingA040Play();
-        //turnNumber.text = "Turn: " + turn;
+        turnNumber.text = "Turn: " + turn;
         Messenger.instance.send(new TurnBeganMessage(turn));
     }
 }

@@ -5368,11 +5368,14 @@ Animation:
   m_GameObject: {fileID: 133954}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b343245b925a21f429c627bc060d5e73, type: 3}
+  m_Animation: {fileID: 7400000, guid: 90e4caaa876274c5ab67f313460372b4, type: 3}
   m_Animations:
-  - {fileID: 7400000, guid: 4cb316c76d336482598efbd65efe04c6, type: 3}
+  - {fileID: 7400000, guid: 1729cba90128e41ef8f814991a4650f1, type: 3}
   - {fileID: 7400000, guid: 56e008799e8e04e4f8cec84f294878bf, type: 3}
-  - {fileID: 7400000, guid: b343245b925a21f429c627bc060d5e73, type: 3}
+  - {fileID: 7400000, guid: 196e1806483dd43588f2a8b3856602d5, type: 3}
+  - {fileID: 7400000, guid: fe29a8362cc49484b884ef4ccbb8e858, type: 3}
+  - {fileID: 7400000, guid: 498b304bd8cad4a20ab92b645b522610, type: 3}
+  - {fileID: 7400000, guid: 90e4caaa876274c5ab67f313460372b4, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -5614,12 +5617,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd24a2ca6294e045a99ec27eec7a521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idle: Enter_01
-  attack: Enter_01
-  hurt: Enter_01
-  spattack: Enter_01
-  death: Enter_01
-  animArr: {fileID: 11100000, guid: 56e008799e8e04e4f8cec84f294878bf, type: 3}
+  idle: Idle_01
+  attack: Attack_01
+  hurt: Hurt_01
+  spattack: Attack_Crit_01
+  death: Die_01
+  enter: Enter_01
+  animArr: {fileID: 11191480}
 --- !u!137 &13709150
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

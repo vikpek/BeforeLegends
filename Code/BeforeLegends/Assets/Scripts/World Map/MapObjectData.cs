@@ -11,7 +11,7 @@ public class Vec2int{
         y = iY;
     }
 
-    public string ToString()
+    override public string ToString()
     {
 	    return x + " | " + y;
     }

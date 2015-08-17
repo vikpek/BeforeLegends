@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 [ExecuteInEditMode]
 public class SetUISize : MonoBehaviour {
 
@@ -23,15 +24,13 @@ public class SetUISize : MonoBehaviour {
         screenWidth = Screen.width;
         screenHeight = Screen.height;
 	}
-	
-	// Update is called once per frame
+    // Update is called once per frame
 	void Update () {
 
+        //check for input
         shift = Input.GetKey(KeyCode.LeftShift);
         s = Input.GetKey(KeyCode.S);
         g = Input.GetKey(KeyCode.G);
-
-
 
 	    if(setIsActive)
         {
@@ -50,8 +49,6 @@ public class SetUISize : MonoBehaviour {
             {
                 resized = true;
             }
-
-
 
             if ((s && shift) || resized)
             {

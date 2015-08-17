@@ -8,11 +8,16 @@ public class Ressource : MonoBehaviour {
     public Vec2int pos;
 
     public int cooldown;
+    private int orgCooldown;
 
     public float fallSpeed; 
     public bool fall = false;
 
 	private bool playedClick = false;
+
+    void Start() {
+        orgCooldown = cooldown;
+    }
 
     void Update() {
 	    if(gameObject.transform.position.y > 0 && fall == true) {
@@ -34,5 +39,6 @@ public class Ressource : MonoBehaviour {
 
         ResourceManager.instance.toDelete.Add(gameObject);
         gameObject.SetActive(true);
+        cooldown = orgCooldown;
     }
 }

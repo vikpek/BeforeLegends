@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
     public enum Actor
@@ -13,7 +14,7 @@ using System.Collections;
     [System.Serializable]
     public enum Action
     { // here below you need to add any new actions
-        ATTACK, ENRAGED, FINALATTACK, HEAL, HEALOTHER, DOUBLEDAMAGE, WRATH, SHIELD, REVENGE
+        ATTACK, ENRAGED, FINALATTACK, HEAL, HEALOTHER, DOUBLEDAMAGE, WRATH, SHIELD, REVENGE, STUN, SKIP
     }
 public class BattleController : MonoBehaviour{
 
@@ -71,6 +72,15 @@ public class BattleController : MonoBehaviour{
     public BattleState battleState;
     public Actor actualActor;
 
+    [HideInInspector] public bool stunned;
+    [HideInInspector] public bool shielded;
+    [HideInInspector] public bool revenge;
+    [HideInInspector] public string playerName = "Olaf";
+    [HideInInspector] public string enemyName;
+
+    public Text battleLog;
+    public Scrollbar scrollBar;
+
 
 	// Use this for initialization
 	void Start () {
@@ -80,24 +90,33 @@ public class BattleController : MonoBehaviour{
 	}
 	
     void Update(){
-        if(Input.GetKeyDown(KeyCode.F))
+        /*
+
+         * check end
+         *      end battle
+         * wait finish action
+         *      action
+         *      
+         */
+        if (Input.GetKeyDown(KeyCode.F))
         {
             enemyData.hitPoints = 0;
         }
+        if (Input.GetKeyDown(KeyCode.U)) {
+            PrintToBattlelog("Olaf can't be stopped and deals around 9 billion damage. " + enemyName + " can't stand the mighty power and stares in disbelief as the fury of an exploding sun that is olaf's strength rains down on him.");
+        }
 	    if(checkEnded()) return;
-	    if(battleState == BattleState.STARTED){
+        if (battleState == BattleState.STARTED) {
 		    playerParticles.Stop(); // tentative
             enemyParticles.Stop(); // tentative
-		
 		    battleState = BattleState.ANIMATING;
-		    if(actualActor == Actor.PLAYER){
+            if (actualActor == Actor.PLAYER) {
 			    player.SendMessage("executeAction", instance);		
 		    }else{
                 enemy.SendMessage("determineAction", instance);
                 enemy.SendMessage("executeAction", instance);
 		    }
-	    }else if(battleState == BattleState.ANIMATING && !playerAnimator.isAnimating(playerAnimation) && !enemyAnimator.isAnimating(enemyAnimation))
-        {
+	    }else if(battleState == BattleState.ANIMATING && !playerAnimator.isAnimating(playerAnimation) && !enemyAnimator.isAnimating(enemyAnimation)) {
 		    if(actualActor == Actor.PLAYER){
 			    battleState = BattleState.STARTED;
 			    actualActor = Actor.ENEMY;
@@ -174,10 +193,14 @@ public class BattleController : MonoBehaviour{
 	    this.enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[0]);
 	    this.enemy.transform.parent = transform;
         enemyAnimator = this.enemy.GetComponent<CharacterAnimations>();
-        if (this.enemy.GetComponent<CharacterParticleController>()) enemyParticles = this.enemy.GetComponent<CharacterParticleController>().heal;
+        //animateEnemy(Anims.ENTER);
+        if (this.enemy.GetComponent<CharacterParticleController>()) 
+                enemyParticles = this.enemy.GetComponent<CharacterParticleController>().heal;
         enemyHPText = this.enemy.GetComponent<HPText>();
 	    round = 0;
         this.enemy.SetActive(true);
+        battleLog.text = "";
+        AssignEnemyName();
     }
 
     void Awake(){
@@ -188,6 +211,7 @@ public class BattleController : MonoBehaviour{
 
     //---MAP INPUT---
     public void onInput_Attack(){
+        print("Attack");
 	    onInput(Action.ATTACK);
     }
 
@@ -201,6 +225,18 @@ public class BattleController : MonoBehaviour{
     {
 	    onInput(Action.HEAL);
         CardManager.Instance.CardAS(2, -1);
+    }
+
+    public void onInput_Stun() {
+        onInput(Action.STUN);
+    }
+
+    public void onInput_Shield() {
+        onInput(Action.SHIELD);
+    }
+
+    public void onInput_Revenge() {
+        onInput(Action.REVENGE);
     }
 
     public void onInput_HealOther()
@@ -223,5 +259,30 @@ public class BattleController : MonoBehaviour{
         do {
             yield return null;
         } while (a.isPlaying);
+    }
+
+    public void PrintToBattlelog(string content) {
+        battleLog.text += content + "\n\n";
+        scrollBar.value = 0;
+
+    }
+
+    void AssignEnemyName() {
+        if (enemy.name.Contains("Ice"))
+            enemyName = "Ice ";
+        else if (enemy.name.Contains("Desert"))
+            enemyName = "Desert ";
+        else if (enemy.name.Contains("Silver"))
+            enemyName = "Silver ";
+        else if (enemy.name.Contains("Green"))
+            enemyName = "Green ";
+        if (enemy.name.Contains("Lion"))
+            enemyName += "Lion";
+        else if (enemy.name.Contains("Jackal"))
+            enemyName += "Jackal";
+        else if (enemy.name.Contains("Mammoth"))
+            enemyName += "Mammoth";
+        if (enemy.name.Contains("HornedLion"))
+            enemyName = "Horned Lion";
     }
 }

@@ -526,7 +526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &117048
 GameObject:
   m_ObjectHideFlags: 1
@@ -8274,6 +8274,13 @@ MonoBehaviour:
   playerAction: 0
   battleState: 0
   actualActor: 0
+  stunned: 0
+  shielded: 0
+  revenge: 0
+  playerName: Olaf
+  enemyName: 
+  battleLog: {fileID: 0}
+  scrollBar: {fileID: 0}
 --- !u!114 &11438128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8371,6 +8378,7 @@ MonoBehaviour:
   hurt: Rig|Hurt_01
   spattack: Rig|Attack_02_Crit
   death: Rig|Death_01
+  enter: Rig|Attack_01_Basic
   animArr: {fileID: 11176136}
 --- !u!114 &11448338
 MonoBehaviour:

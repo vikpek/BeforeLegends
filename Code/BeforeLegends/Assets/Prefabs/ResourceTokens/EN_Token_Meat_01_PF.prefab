@@ -59,7 +59,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 478362}
-  - 114: {fileID: 11421610}
+  - 114: {fileID: 11457188}
   m_Layer: 15
   m_Name: EN_Token_Meat_01_PF
   m_TagString: Ressource
@@ -295,7 +295,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127176}
   m_Mesh: {fileID: 4300010, guid: 85ca86d8af5888248bf6cfa7d57e6c19, type: 3}
---- !u!114 &11421610
+--- !u!114 &11457188
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -303,14 +303,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 167996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d4d33ca547c4e44baa41aa296f89dc8, type: 3}
+  m_Script: {fileID: 11500000, guid: acb96601daa56a44984471daa85cea8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rType: Wood
-  rValue: 1
+  rType: Food
+  rValue: 4
   pos:
     x: 0
     y: 0
+  cooldown: 7
   fallSpeed: .5
   fall: 0
 --- !u!1001 &100100000

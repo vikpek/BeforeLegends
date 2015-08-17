@@ -116,6 +116,10 @@ public class Shop : MonoBehaviour {
         offerSlots[offerId].offerCardId = cm.cards[possibleCards[nextCard]].id;
     }
 
+    public void Preview(Sprite preview) {
+        previewImage.sprite = preview;
+    }
+
     public void Preview(GameObject preview) {
         previewImage.sprite = preview.GetComponent<Image>().sprite;
     }

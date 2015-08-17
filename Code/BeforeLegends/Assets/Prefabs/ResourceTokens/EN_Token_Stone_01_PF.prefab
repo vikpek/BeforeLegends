@@ -23,7 +23,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 497260}
-  - 114: {fileID: 11497996}
+  - 114: {fileID: 11469062}
   m_Layer: 15
   m_Name: EN_Token_Stone_01_PF
   m_TagString: Ressource
@@ -178,7 +178,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189276}
   m_Mesh: {fileID: 4300000, guid: b34a4a8022570420498c0fe12f099f9c, type: 3}
---- !u!114 &11497996
+--- !u!114 &11469062
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -186,14 +186,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 165714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d4d33ca547c4e44baa41aa296f89dc8, type: 3}
+  m_Script: {fileID: 11500000, guid: acb96601daa56a44984471daa85cea8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rType: Wood
+  rType: Stone
   rValue: 1
   pos:
     x: 0
     y: 0
+  cooldown: 14
   fallSpeed: .5
   fall: 0
 --- !u!1001 &100100000

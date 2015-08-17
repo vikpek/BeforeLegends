@@ -4,8 +4,12 @@ using System.Collections;
 public class HornedLionBehaviour : MonoBehaviour
 {
 
-    void determineAction(BattleController battle)
-    {
+    void determineAction(BattleController battle) {
+        if (battle.stunned) {
+            battle.enemyAction = Action.SKIP;
+            return;
+        }
+        
         if (battle.enemyData.hitPoints / battle.enemyData.maxHitPoints <= 0.2f && battle.enemyData.actionPoints >= 1)
         {
             battle.enemyAction = Action.FINALATTACK;

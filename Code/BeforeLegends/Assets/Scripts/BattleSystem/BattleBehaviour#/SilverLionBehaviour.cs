@@ -6,6 +6,10 @@ public class SilverLionBehaviour : MonoBehaviour
 
     void determineAction(BattleController battle)
     {
+        if (battle.stunned) {
+            battle.enemyAction = Action.SKIP;
+            return;
+        }
         if (battle.enemyData.hitPoints / battle.enemyData.maxHitPoints <= 0.4f && battle.enemyData.actionPoints >= 1)
         {
             battle.enemyAction = Action.FINALATTACK;

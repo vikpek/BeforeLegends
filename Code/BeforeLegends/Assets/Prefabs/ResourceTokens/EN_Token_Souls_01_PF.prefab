@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 458354}
-  - 114: {fileID: 11433866}
+  - 114: {fileID: 11410646}
   m_Layer: 15
   m_Name: EN_Token_Souls_01_PF
   m_TagString: Ressource
@@ -503,7 +503,7 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11433866
+--- !u!114 &11410646
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -511,14 +511,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 171412}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d4d33ca547c4e44baa41aa296f89dc8, type: 3}
+  m_Script: {fileID: 11500000, guid: acb96601daa56a44984471daa85cea8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rType: Wood
+  rType: Soul
   rValue: 1
   pos:
     x: 0
     y: 0
+  cooldown: 28
   fallSpeed: .5
   fall: 0
 --- !u!198 &19804030
