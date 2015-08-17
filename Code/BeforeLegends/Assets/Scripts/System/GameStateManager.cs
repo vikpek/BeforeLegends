@@ -35,6 +35,7 @@ public class GameStateManager : MonoBehaviour {
         world.SetActive(false);
         battleMapGUI.SetActive(true);
         worldMapGUI.SetActive(false);
+
     }
 
     public void endBattle(bool result, int exp)
