@@ -29,12 +29,10 @@ public class StartAnimation : MonoBehaviour {
 
     public float jumpSpeedMultiplier;
 
-    Animation enemyModelAnimation;
+    public Animation enemyModelAnimation;
     bool animateStart = true;
 
-    SkinnedMeshRenderer shittyskinnedMeshrenderer;
-    Mesh s1;
-    public Animation test;
+    public Animation enterAnimation;
 
     public bool reset = false;
     Vector3 startPosition;
@@ -44,7 +42,7 @@ public class StartAnimation : MonoBehaviour {
     void Start()
     {
         enemyModelAnimation = GetComponentInChildren<Animation>();
-        enemyModelAnimation.AddClip(test.clip, "Enter");
+        enemyModelAnimation.AddClip(enterAnimation.clip, "Enter");
         startPosition = transform.position;
         startPositionChild = enemyModelAnimation.transform.gameObject.transform.position;
 	}

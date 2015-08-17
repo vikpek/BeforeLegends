@@ -1521,6 +1521,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &155482
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 433598}
+  - 135: {fileID: 13517578}
+  - 114: {fileID: 11430006}
+  m_Layer: 15
+  m_Name: JackalVision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &156158
 GameObject:
   m_ObjectHideFlags: 1
@@ -2365,8 +2382,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 499084}
+  - 135: {fileID: 13543428}
+  - 114: {fileID: 11422852}
   m_Layer: 15
-  m_Name: EnemyVision
+  m_Name: LionVision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3221,6 +3240,18 @@ Transform:
   - {fileID: 452500}
   m_Father: {fileID: 471604}
   m_RootOrder: 0
+--- !u!4 &433598
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155482}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475178}
+  m_RootOrder: 9
 --- !u!4 &434188
 Transform:
   m_ObjectHideFlags: 1
@@ -4057,6 +4088,7 @@ Transform:
   - {fileID: 476882}
   - {fileID: 415150}
   - {fileID: 499084}
+  - {fileID: 433598}
   m_Father: {fileID: 456808}
   m_RootOrder: 6
 --- !u!4 &475320
@@ -6177,6 +6209,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Resume
+--- !u!114 &11422852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a9346d98e9a9b4aa7b920321e035f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11423504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6250,6 +6293,17 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &11430006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a9346d98e9a9b4aa7b920321e035f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11433832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6894,121 +6948,199 @@ MonoBehaviour:
     chance: 0
   spawnChances:
   - tileType: water
-    hornedLion: 0
     silverLion: 0
-    greenLion: 0
+    silverJackal: 0
+    silverMammoth: 0
     iceLion: 0
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: 0
+    greenJackal: 0
+    greenMammoth: 0
     desertLion: 0
-    jackal: 0
-    mammoth: 0
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: 0
     chance: 0
   - tileType: ice
-    hornedLion: 0
     silverLion: 0
-    greenLion: 0
+    silverJackal: 0
+    silverMammoth: 0
     iceLion: 0
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: 0
+    greenJackal: 0
+    greenMammoth: 0
     desertLion: 0
-    jackal: .5
-    mammoth: .5
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: 0
     chance: 0
   - tileType: ice_mountain
-    hornedLion: 0
     silverLion: 0
-    greenLion: 0
+    silverJackal: 0
+    silverMammoth: 0
     iceLion: 0
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: 0
+    greenJackal: 0
+    greenMammoth: 0
     desertLion: 0
-    jackal: .5
-    mammoth: .5
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: 0
     chance: 0
   - tileType: tundra
-    hornedLion: 0
     silverLion: 0
-    greenLion: 0
+    silverJackal: 0
+    silverMammoth: 0
     iceLion: .150000006
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: 0
+    greenJackal: 0
+    greenMammoth: 0
     desertLion: 0
-    jackal: 0
-    mammoth: 0
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: 0
     chance: 0
   - tileType: savanna
-    hornedLion: .100000001
     silverLion: 0
-    greenLion: 0
+    silverJackal: 0
+    silverMammoth: 0
     iceLion: 0
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: 0
+    greenJackal: 0
+    greenMammoth: 0
     desertLion: .0500000007
-    jackal: 0
-    mammoth: 0
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: .100000001
     chance: 0
   - tileType: dry_forest
-    hornedLion: .100000001
     silverLion: 0
-    greenLion: 0
+    silverJackal: 0
+    silverMammoth: 0
     iceLion: 0
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: 0
+    greenJackal: 0
+    greenMammoth: 0
     desertLion: .0500000007
-    jackal: 0
-    mammoth: 0
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: .100000001
     chance: 0
   - tileType: dry_mountain
-    hornedLion: .100000001
     silverLion: .100000001
-    greenLion: 0
+    silverJackal: 0
+    silverMammoth: 0
     iceLion: 0
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: 0
+    greenJackal: 0
+    greenMammoth: 0
     desertLion: 0
-    jackal: 0
-    mammoth: 0
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: .100000001
     chance: 0
   - tileType: grassland
-    hornedLion: .0500000007
     silverLion: 0
-    greenLion: .100000001
+    silverJackal: 0
+    silverMammoth: 0
     iceLion: 0
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: .100000001
+    greenJackal: 0
+    greenMammoth: 0
     desertLion: 0
-    jackal: 0
-    mammoth: 0
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: .0500000007
     chance: 0
   - tileType: forest
-    hornedLion: 0
     silverLion: 0
-    greenLion: .100000001
+    silverJackal: 0
+    silverMammoth: 0
     iceLion: 0
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: .100000001
+    greenJackal: 0
+    greenMammoth: 0
     desertLion: 0
-    jackal: 0
-    mammoth: 0
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: 0
     chance: 0
   - tileType: forest_mountain
-    hornedLion: 0
     silverLion: .100000001
-    greenLion: .100000001
+    silverJackal: 0
+    silverMammoth: 0
     iceLion: 0
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: .100000001
+    greenJackal: 0
+    greenMammoth: 0
     desertLion: 0
-    jackal: 0
-    mammoth: 0
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: 0
     chance: 0
   - tileType: desert
-    hornedLion: 0
     silverLion: 0
-    greenLion: 0
+    silverJackal: 0
+    silverMammoth: 0
     iceLion: 0
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: 0
+    greenJackal: 0
+    greenMammoth: 0
     desertLion: .150000006
-    jackal: 0
-    mammoth: 0
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: 0
     chance: 0
   - tileType: desert_mountain
-    hornedLion: .0500000007
     silverLion: .100000001
-    greenLion: 0
+    silverJackal: 0
+    silverMammoth: 0
     iceLion: 0
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: 0
+    greenJackal: 0
+    greenMammoth: 0
     desertLion: .150000006
-    jackal: 0
-    mammoth: 0
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: .0500000007
     chance: 0
   - tileType: jungle
-    hornedLion: .0500000007
     silverLion: 0
-    greenLion: .100000001
+    silverJackal: 0
+    silverMammoth: 0
     iceLion: 0
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: .100000001
+    greenJackal: 0
+    greenMammoth: 0
     desertLion: 0
-    jackal: 0
-    mammoth: 0
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: .0500000007
     chance: 0
   water: 0000000004000000080000000c0000001000000014000000180000001c00000020000000
   ice: 010000000200000005000000
@@ -7284,12 +7416,36 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105694}
   m_Enabled: 1
+--- !u!135 &13517578
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155482}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 6
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &13536284
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 16
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &13543428
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187916}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
