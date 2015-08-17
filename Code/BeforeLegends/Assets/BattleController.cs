@@ -122,6 +122,7 @@ public class BattleController : MonoBehaviour{
 			    return true;
 		    }else if(enemyData.hitPoints <= 0){
                 animateEnemy(Anims.DEATH);
+                
                 StartCoroutine(WaitForAnimation(enemyAnimator.animArr));
                 enemyWorldObject.transform.parent.gameObject.SetActive(false);
                 enemyWorldObject.GetComponent<EnemyAI>().enabled = false;
@@ -221,7 +222,7 @@ public class BattleController : MonoBehaviour{
 
     IEnumerator WaitForAnimation(Animation a) {
         do {
-            yield return null;
+            yield return new WaitForEndOfFrame();
         } while (a.isPlaying);
     }
 }

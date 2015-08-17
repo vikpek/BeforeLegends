@@ -22,7 +22,8 @@ public class OlafBattleActions : MonoBehaviour{
 			    break;
 	    }
     }
-
+    
+    
     void attack(BattleController battle)
     { // Basic attack
         battle.enemyData.lastDamageReceived = battle.playerData.calcDamage(battle.enemyData, 1);
