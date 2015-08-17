@@ -27,12 +27,6 @@ public class SetUISize : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        shift = Input.GetKey(KeyCode.LeftShift);
-        s = Input.GetKey(KeyCode.S);
-        g = Input.GetKey(KeyCode.G);
-
-
-
 	    if(setIsActive)
         {
             if (g && shift || getRelSize)
