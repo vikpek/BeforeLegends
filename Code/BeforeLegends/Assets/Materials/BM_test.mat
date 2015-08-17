@@ -2,16 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: BM_test
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _NORMALMAP
+  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
-  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -19,7 +18,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: a25c808ba2da17946897e4082a66e646, type: 3}
+          m_Texture: {fileID: 2800000, guid: f7dde3a42d578497f8478624be39a904, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -75,10 +74,14 @@ Material:
         first:
           name: _MetallicGlossMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: d831db94b66c8427a8a3bc6e6de863d2, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .5
       data:
         first:
           name: _SrcBlend
@@ -87,10 +90,6 @@ Material:
         first:
           name: _DstBlend
         second: 0
-      data:
-        first:
-          name: _Cutoff
-        second: .5
       data:
         first:
           name: _Parallax
@@ -102,7 +101,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: 0
+        second: .0199999996
       data:
         first:
           name: _BumpScale
@@ -110,7 +109,7 @@ Material:
       data:
         first:
           name: _OcclusionStrength
-        second: .639999986
+        second: 1
       data:
         first:
           name: _DetailNormalMapScale
@@ -139,7 +138,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .845588207, g: .845588207, b: .845588207, a: 1}
+        second: {r: .808823526, g: .773680806, b: .731509507, a: 1}
       data:
         first:
           name: _EmissionColorUI
