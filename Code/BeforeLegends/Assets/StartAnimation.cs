@@ -13,29 +13,64 @@ public class StartAnimation : MonoBehaviour {
 
     bool fallJumpTimeOffset = false;
     public float jumpTimeOffset;
-    public float jumpTimeOffsetAnimation; //re-fucking-name it !!!!
+    public float jumpTimeOffsetAnimation;
     float actualJumpTimeOffset = 0;
 
     bool jump = false;
     Vector3 jumpStartPosition;
     public AnimationCurve jumpYPosition;
     public AnimationCurve jumpXPosition;
+    public AnimationCurve jumpAnimationSpeedCurve;
     public float jumpTime;
     float actualJumpTime = 0;
 
-    Animation enemyModelAnimation;
-    bool animateStart = false;
+    public float debugTime0 = 0;
+    public float debugTime1 = 0;
 
+    public float jumpSpeedMultiplier;
+
+    Animation enemyModelAnimation;
+    bool animateStart = true;
+
+    SkinnedMeshRenderer shittyskinnedMeshrenderer;
+    Mesh s1;
+    public Animation test;
+
+    public bool reset = false;
+    Vector3 startPosition;
+    Vector3 startPositionChild;
 
 	// Use this for initialization
     void Start()
     {
         enemyModelAnimation = GetComponentInChildren<Animation>();
+        enemyModelAnimation.AddClip(test.clip, "Enter");
+        startPosition = transform.position;
+        startPositionChild = enemyModelAnimation.transform.gameObject.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
+        if (Input.GetKeyDown(KeyCode.R))
+            reset = true;
+
+        if(reset)
+        {
+            actualFallTime = 0;
+            actualJumpTime = 0;
+            actualJumpTimeOffset = 0;
+            fall = true;
+            animateStart = true;
+            jump = true;
+            reset = false;
+            fallJumpTimeOffset = false;
+            animateStartInitialized = false;
+            transform.position = startPosition;
+            enemyModelAnimation.transform.gameObject.transform.position = startPositionChild;
+            enemyModelAnimation.Stop();
+        }
+
         if(animateStart)
         {
 
@@ -44,8 +79,8 @@ public class StartAnimation : MonoBehaviour {
                 if (!animateStartInitialized)
                 {
                     animateStartInitialized = true;
-                    enemyModelAnimation.Play("Rig.001|Enter_01");
-                    //enemyModelAnimation["Rig.001|Enter_01"].speed = 0;
+                    enemyModelAnimation.Play("Enter");
+                    enemyModelAnimation["Enter"].speed = 0;
                 }
                 actualFallTime += Time.deltaTime;
                 if (actualFallTime >= fallTime)
@@ -61,36 +96,40 @@ public class StartAnimation : MonoBehaviour {
                     fallJumpTimeOffset = true;
                     jumpStartPosition = enemyModelAnimation.gameObject.transform.position;
                     actualFallTime = 0;
-                    //GameInfo.instance.doAScreenshake(null);
+                    GameInfo.instance.doAScreenshake(null);
                 }
             }
             else if (fallJumpTimeOffset)
             {
                 actualJumpTimeOffset += Time.deltaTime;
-                if (actualJumpTimeOffset > jumpTimeOffset - jumpTimeOffsetAnimation)
-                {
-                    enemyModelAnimation["Rig.001|Enter_01"].speed = 1;
-                }
+
                 if (actualJumpTimeOffset > jumpTimeOffset)
                 {
-                    actualJumpTimeOffset = 0;
+                    enemyModelAnimation["Enter"].speed = 1;
                     fallJumpTimeOffset = false;
+                    actualJumpTimeOffset = 0;
                     jump = true;
+                    GetComponentInChildren<ParticleSystem>().Emit(1000);
                 }
+
             }
             else if (jump)
             {
+                actualJumpTime += Time.deltaTime * jumpAnimationSpeedCurve.Evaluate(actualJumpTime);
 
-                actualJumpTime += Time.deltaTime;
+                debugTime1 = actualJumpTime;
+
                 if (actualJumpTime >= jumpTime)
                 {
                     jump = false;
                     actualJumpTime = jumpTime;
                 }
 
-                enemyModelAnimation.gameObject.transform.position = new Vector3(jumpStartPosition.x + jumpXPosition.Evaluate(actualJumpTime / jumpTime),
-                                                        jumpStartPosition.y + jumpYPosition.Evaluate(actualJumpTime / jumpTime),
-                                                        enemyModelAnimation.gameObject.transform.position.z);
+                enemyModelAnimation["Enter"].speed = jumpAnimationSpeedCurve.Evaluate(actualJumpTime);
+
+                enemyModelAnimation.gameObject.transform.position = new Vector3(jumpStartPosition.x + jumpXPosition.Evaluate(actualJumpTime),
+                                                                                jumpStartPosition.y + jumpYPosition.Evaluate(actualJumpTime),
+                                                                                enemyModelAnimation.gameObject.transform.position.z);
 
                 if (!jump)
                 {

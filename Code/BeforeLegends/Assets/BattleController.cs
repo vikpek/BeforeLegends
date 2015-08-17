@@ -80,6 +80,10 @@ public class BattleController : MonoBehaviour{
 	}
 	
     void Update(){
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            enemyData.hitPoints = 0;
+        }
 	    if(checkEnded()) return;
 	    if(battleState == BattleState.STARTED){
 		    playerParticles.Stop(); // tentative
@@ -159,6 +163,7 @@ public class BattleController : MonoBehaviour{
     public void init(GameObject player, GameObject enemy){
 	    playerWorldObject = player;
 	    battleState = BattleState.IDLE;
+        enemyWorldObject = enemy;
 	    actualActor = Actor.PLAYER;
 	    playerData = player.GetComponent<MapObjectCarrier>().data.battleStats;
 	    enemyData = enemy.GetComponent<MapObjectCarrier>().data.battleStats;
