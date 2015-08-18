@@ -44,6 +44,11 @@ public class ResourceManager : MonoBehaviour
         UpdateResourceText();
         if (Input.GetKeyDown(KeyCode.G))
             ResourceAS("Glory", -20);
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            for (int i = 0; i < 5; i++)
+                CardManager.Instance.cards[i].number += 999;
+        }
 	}
 
     void UpdateResourceText()

@@ -4,38 +4,6 @@ using System.Collections;
 public class OlafBattleActions : MonoBehaviour{
 
     public void executeAction(BattleController battle){
-	    switch(battle.playerAction){   //always remember to list new battle actions (functions below) here.
-            case Action.ATTACK:
-                battle.enemyAnimator.animate(1);
-			    attack(battle);
-			    break;
-            case Action.ENRAGED:
-                battle.enemyAnimator.animate(2);
-			    enraged(battle);
-			    break;
-            case Action.HEALOTHER:
-                battle.enemyAnimator.animate(99);
-			    healother(battle);
-			    break;
-            case Action.DOUBLEDAMAGE:
-                battle.enemyAnimator.animate(99);
-			    doubleDamage(battle);
-			    break;
-            case Action.HEAL:
-			    healself(battle);
-			    break;
-            case Action.STUN:
-                battle.enemyAnimator.animate(1);
-                Stun(battle);
-	            break;
-            case Action.SHIELD:
-	            Shield(battle);
-	            break;
-            case Action.REVENGE:
-                battle.enemyAnimator.animate(2);
-                Revenge(battle);
-	            break;
-        }
         battle.enemyAnimator.animate(3);
         battle.battleState = BattleState.ANIMTING;
     }
@@ -49,7 +17,7 @@ public class OlafBattleActions : MonoBehaviour{
         AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
         battle.PrintToBattlelog(AssembleBattleLog(battle));
         battle.playerAnimator.animate(1);
-        battle.enemyAnimator.animate(3);
+        battle.enemyAnimator.animate(3, 0.5f);
         battle.battleState = BattleState.ANIMTING;
     }
 
@@ -62,6 +30,9 @@ public class OlafBattleActions : MonoBehaviour{
         battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
         AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
         battle.PrintToBattlelog(AssembleBattleLog(battle, "and stunned the enemy"));
+        battle.playerAnimator.animate(1);
+        battle.enemyAnimator.animate(3);
+        battle.battleState = BattleState.ANIMTING;
     }
 
     public void enraged(BattleController battle)
@@ -72,6 +43,9 @@ public class OlafBattleActions : MonoBehaviour{
         battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
 	    AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack);
         battle.PrintToBattlelog(AssembleBattleLog(battle));
+        battle.playerAnimator.animate(2);
+        battle.enemyAnimator.animate(3, 1.5f);
+        battle.battleState = BattleState.ANIMTING;
     }
 
     public void healself(BattleController battle)
@@ -85,6 +59,7 @@ public class OlafBattleActions : MonoBehaviour{
 		    battle.playerData.hitPoints = battle.playerData.maxHitPoints;
 	    }
         battle.PrintToBattlelog(AssembleBattleLog("Olaf healed himself for " + battle.playerData.maxHitPoints * 0.3f));
+        StartCoroutine(battle.SetBattleStateAndActor(BattleState.IDLE, Actor.ENEMY, 1f));
     }
 
     /*void Revenge(BattleController battle)
@@ -98,35 +73,48 @@ public class OlafBattleActions : MonoBehaviour{
         AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack);
     }*/
     //---------------------------------------------------------------------------------------------------------------------------------
-    void healother (BattleController battle){ // the char can heal others (only the enemy for now)
-	    battle.enemyParticles.Play();
-	    battle.enemyData.hitPoints += battle.enemyData.maxHitPoints*0.2f;
-	    if (battle.enemyData.hitPoints > battle.enemyData.maxHitPoints){
-		    battle.enemyData.hitPoints = battle.enemyData.maxHitPoints;
-	    }
-    }
+    //void healother (BattleController battle){ // the char can heal others (only the enemy for now)
+    //    battle.enemyParticles.Play();
+    //    battle.enemyData.hitPoints += battle.enemyData.maxHitPoints*0.2f;
+    //    if (battle.enemyData.hitPoints > battle.enemyData.maxHitPoints){
+    //        battle.enemyData.hitPoints = battle.enemyData.maxHitPoints;
+    //    }
+    //}
 
-    void doubleDamage(BattleController battle){  // just like a basic attack but deals double basic damage
-	    battle.enemyData.hitPoints -= battle.playerData.calcDamage(battle.enemyData, 2); 
-        battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
-        battle.PrintToBattlelog(AssembleBattleLog(battle));
-    }
+    //void doubleDamage(BattleController battle){  // just like a basic attack but deals double basic damage
+    //    battle.enemyData.hitPoints -= battle.playerData.calcDamage(battle.enemyData, 2); 
+    //    battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
+    //    battle.PrintToBattlelog(AssembleBattleLog(battle));
+    //}
 
-    public void Shield(BattleController battle) 
+    public void Shield(BattleController battle)
     {
         battle.playerParticles.Play();
+        battle.playerParticles.Stop();
         battle.shielded = true;
         battle.playerData.hitPoints += battle.playerData.maxHitPoints * 0.15f;
         if (battle.playerData.hitPoints > battle.playerData.maxHitPoints) {
             battle.playerData.hitPoints = battle.playerData.maxHitPoints;
         }
         battle.PrintToBattlelog(AssembleBattleLog("Olaf shielded himself"));
+        battle.playerAnimator.StartShieldAnimation();
+        StartCoroutine(battle.SetBattleStateAndActor(BattleState.IDLE, Actor.ENEMY, 2f));
+        /*
+         * awesome stuff! 
+         */
     }
 
     public void Revenge(BattleController battle) 
     {
-        battle.revenge = true;
-        battle.PrintToBattlelog(AssembleBattleLog("Olaf will reflect the next attack"));
+        battle.enemyData.lastDamageReceived = battle.playerData.lastDamageReceived;
+        battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
+        battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
+        battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
+        AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
+        battle.PrintToBattlelog(AssembleBattleLog("REEEEEEEEEEEEVENGE UAUAUUAAAAAAAAAAH!"));
+        battle.playerAnimator.animate(1);
+        battle.enemyAnimator.animate(3);
+        battle.battleState = BattleState.ANIMTING;
     }
 
     string AssembleBattleLog(BattleController battle) {
