@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityStandardAssets.ImageEffects;
 
 public enum Anims{ //ETC ...
@@ -12,6 +13,17 @@ public class CharacterAnimations : MonoBehaviour {
     public AnimationClip[] animationClips;
     Animation animation;
     int actualAnimation;
+
+    public Image shieldImage;
+    public RectTransform shieldTransform;
+    float shieldAnimationDuration;
+    float shieldFadeoutDuration;
+    public AnimationCurve shieldSizeColorOverTime;
+    public AnimationCurve shieldFadeoutOverTime;
+    float actualSieldAnimationTime = 0;
+    float actualSieldFadeoutTime = 0;
+    bool shieldAnimationFinished = false;
+    bool shieldFadeoutFinished = false;
 
     void Start()
     {
@@ -26,19 +38,71 @@ public class CharacterAnimations : MonoBehaviour {
 
     public void animate(int animIndex)
     {
-        print(animIndex);
         actualAnimation = animIndex;
         animation.Play(animationClips[actualAnimation].name);
-        print(isAnimationPlaying());
+    }
+
+    public void animate(int animIndex, float delay)
+    {
+        actualAnimation = animIndex;
+        StartCoroutine(delayAnimation(delay));
+    }
+    public void stopAnimation()
+    {
+        animation.Stop();
     }
 
     public string isAnimationPlaying()
     {
+        //!!!test if Particles are running!!!
         if (animation.isPlaying)
             return animationClips[actualAnimation].name;
         return "";
     }
 
+    IEnumerator delayAnimation(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        animation.Play(animationClips[actualAnimation].name);
+    }
+
+    public void StartShieldAnimation()
+    {
+        actualSieldAnimationTime = 0;
+        shieldAnimationFinished = false;
+        actualSieldFadeoutTime = 0;
+        shieldFadeoutFinished = false;
+        shieldAnimationDuration = shieldSizeColorOverTime.keys[shieldSizeColorOverTime.keys.Length - 1].time;
+        shieldFadeoutDuration = shieldFadeoutOverTime.keys[shieldFadeoutOverTime.keys.Length - 1].time;
+        StartCoroutine(ShieldAnimation());
+    }
+
+    IEnumerator ShieldAnimation()
+    {
+        while (!shieldAnimationFinished)
+        {
+            actualSieldAnimationTime += Time.deltaTime;
+            shieldTransform.localScale = Vector3.one * shieldSizeColorOverTime.Evaluate(actualSieldAnimationTime / shieldAnimationDuration);
+            shieldImage.color = new Color(1, 1, 1, shieldSizeColorOverTime.Evaluate(actualSieldAnimationTime / shieldAnimationDuration));
+            if(actualSieldAnimationTime >= shieldAnimationDuration)
+            {
+                shieldAnimationFinished = true;
+                GameInfo.instance.doAScreenshake(null);
+            }
+            yield return new WaitForEndOfFrame();
+        }
+        while(!shieldFadeoutFinished)
+        {
+            actualSieldFadeoutTime += Time.deltaTime;
+            shieldImage.color = new Color(1, 1, 1, shieldFadeoutOverTime.Evaluate(actualSieldFadeoutTime / shieldFadeoutDuration));
+
+            if (actualSieldFadeoutTime >= shieldFadeoutDuration)
+                shieldFadeoutFinished = true;
+            
+            yield return new WaitForEndOfFrame();
+        }
+
+    }
 
     //public string idle;
     //public string attack;

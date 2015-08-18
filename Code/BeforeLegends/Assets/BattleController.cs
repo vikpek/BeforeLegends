@@ -86,6 +86,15 @@ public class BattleController : MonoBehaviour{
 
     bool test = true;
 
+    public IEnumerator SetBattleStateAndActor(BattleState bs, Actor aA, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        battleState = bs;
+        actualActor = aA;
+        playerAnimator.stopAnimation();
+        enemyAnimator.stopAnimation();
+    }
+
     void Update()
     {
 
@@ -113,10 +122,7 @@ public class BattleController : MonoBehaviour{
         {
             if (playerAnimator.isAnimationPlaying() == "" && enemyAnimator.isAnimationPlaying() == "")
             {
-                enemy.SendMessage("determineAction", instance);
-                enemy.SendMessage("executeAction", instance);
-                battleState = BattleState.ANIMTING;
-                actualActor = Actor.PLAYER;
+
             }
         }
 
@@ -140,34 +146,27 @@ public class BattleController : MonoBehaviour{
                     if(enemyAnimator.isAnimationPlaying() == "")
                     {
                         actualActor = Actor.ENEMY;
+                        battleState = BattleState.IDLE;
                     }
                 }
             }
         }
         else
         {
-
-            if (battleState == BattleState.IDLE)
+            if ((battleState == BattleState.IDLE))
+            {
+                enemy.SendMessage("determineAction", instance);
+                enemy.SendMessage("executeAction", instance);
+            }
+            else if (enemyAnimator.isAnimationPlaying() == "")
             {
                 if (playerAnimator.isAnimationPlaying() == "")
                 {
-                    playerAnimator.animate(0);
-                }
-                if (enemyAnimator.isAnimationPlaying() == "")
-                {
-                    enemyAnimator.animate(0);
+                    actualActor = Actor.PLAYER;
+                    battleState = BattleState.IDLE;
                 }
             }
-            else
-            {
-                if (enemyAnimator.isAnimationPlaying() == "")
-                {
-                    if (playerAnimator.isAnimationPlaying() == "")
-                    {
-                        actualActor = Actor.PLAYER;
-                    }
-                }
-            }
+        
 
         }
 
@@ -257,6 +256,8 @@ public class BattleController : MonoBehaviour{
         enemyAnimator = enemy.GetComponent<CharacterAnimations>();
 
         enemyParticles = enemy.GetComponent<CharacterParticleController>().heal;
+        playerParticles = player.GetComponent<CharacterParticleController>().heal;
+        
         enemyHPText = enemy.GetComponent<HPText>();
         playerHPText = player.GetComponent<HPText>();
 

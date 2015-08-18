@@ -20,7 +20,6 @@ public class HornedLionBattleActions : MonoBehaviour{
                 Skip(battle);
 	            break;
 	    }
-        battle.playerAnimator.animate(4);
         battle.battleState = BattleState.ANIMTING;
     }
 
@@ -45,6 +44,7 @@ public class HornedLionBattleActions : MonoBehaviour{
                 battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.enemyData.lastDamageDealt);
                 battle.PrintToBattlelog("Olaf reflected the damage, " + battle.enemyName + " dealt " + battle.enemyData.lastDamageDealt.ToString("F1") + " to himself");
             }
+            battle.playerAnimator.animate(3);
         }
 	    AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
     }
@@ -70,6 +70,7 @@ public class HornedLionBattleActions : MonoBehaviour{
                 battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.enemyData.lastDamageDealt);
                 battle.PrintToBattlelog("Olaf reflected the damage, " + battle.enemyName + " dealt " + battle.enemyData.lastDamageDealt.ToString("F1") + " to himself");
             }
+            battle.playerAnimator.animate(3);
         }
         AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack); 
     }
