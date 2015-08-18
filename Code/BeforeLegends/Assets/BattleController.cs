@@ -263,13 +263,13 @@ public class BattleController : MonoBehaviour{
 
 	    round = 0;
 
-//        battleLog.text = "";
+        battleLog.text = "";
         AssignEnemyName();
     }
 
     public void PrintToBattlelog(string content) {
-        //battleLog.text += content + "\n\n";
-        //scrollBar.value = 0;
+        battleLog.text += content + "\n\n";
+        scrollBar.value = 0;
 
     }
 

@@ -22,7 +22,7 @@ public class Vec2int{
     }
 
 }
-
+[System.Serializable]
 public class MapObjectData
 {
 	public Vec2int pos = new Vec2int(0, 0);
