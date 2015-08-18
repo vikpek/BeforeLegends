@@ -105,24 +105,26 @@ public class LPathfinding : MonoBehaviour {
 
         if (searching)// || gameObject.activeInHierarchy == false)
         {
+#if UNITY_EDITOR
             print("already searching for path");
+#endif
             return;
         }
-#if UNITY_EDITOR
-        foreach (GameObject go in WorldMapData.instance.tiles[iStart.x, iStart.y].gameObjectList)
-            if (go.tag == "EnemyParent")
-                print(go.name);
-#endif
+
         TurnManager.instance.activeLPFs.Add(this);
 
         if (WorldMapData.instance.tiles[iStart.x, iStart.y].tileType == "water")
         {
+#if UNITY_EDITOR
             print("Start is in water");
+#endif
             return;
         }
         if (WorldMapData.instance.tiles[iDest.x, iDest.y].tileType == "water")
         {
+#if UNITY_EDITOR
             print("Destination is in water");
+#endif
             return;
         }
 
@@ -277,9 +279,10 @@ public class LPathfinding : MonoBehaviour {
                 yield return new WaitForEndOfFrame();
             }
         }
-        print("watafak?!?!?");
+
         searching = false;
         TurnManager.instance.activeLPFs.Remove(this);
+
 #if UNITY_EDITOR
         Destroy(g1);
         foreach (GameObject psi in psis)

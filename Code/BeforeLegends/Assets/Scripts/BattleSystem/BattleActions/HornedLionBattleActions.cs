@@ -6,11 +6,11 @@ public class HornedLionBattleActions : MonoBehaviour{
     public void executeAction(BattleController battle){
 	    switch(battle.enemyAction){ // always remember to add new actions BELOW and in BattleController.js
             case Action.ATTACK:
-                battle.enemyAnimator.animate(1);
+                battle.enemyAnimator.Animate(1);
 			    attack(battle);
 			    break;
             case Action.FINALATTACK:
-                battle.enemyAnimator.animate(2);
+                battle.enemyAnimator.Animate(2);
 			    attackOpponentFinal(battle);
 			    break;
 		    case Action.HEAL :
@@ -44,7 +44,7 @@ public class HornedLionBattleActions : MonoBehaviour{
                 battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.enemyData.lastDamageDealt);
                 battle.PrintToBattlelog("Olaf reflected the damage, " + battle.enemyName + " dealt " + battle.enemyData.lastDamageDealt.ToString("F1") + " to himself");
             }
-            battle.playerAnimator.animate(3);
+            battle.playerAnimator.Animate(3);
         }
 	    AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
     }
@@ -70,7 +70,7 @@ public class HornedLionBattleActions : MonoBehaviour{
                 battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.enemyData.lastDamageDealt);
                 battle.PrintToBattlelog("Olaf reflected the damage, " + battle.enemyName + " dealt " + battle.enemyData.lastDamageDealt.ToString("F1") + " to himself");
             }
-            battle.playerAnimator.animate(3);
+            battle.playerAnimator.Animate(3);
         }
         AudioMaster.instance.audioSourceEnemies.PlayOneShot(battle.enemyWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack); 
     }
