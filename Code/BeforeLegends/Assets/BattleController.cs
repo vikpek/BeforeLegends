@@ -91,8 +91,8 @@ public class BattleController : MonoBehaviour{
         yield return new WaitForSeconds(delay);
         battleState = bs;
         actualActor = aA;
-        playerAnimator.stopAnimation();
-        enemyAnimator.stopAnimation();
+        playerAnimator.StopAnimation();
+        enemyAnimator.StopAnimation();
     }
 
     void Update()
@@ -104,16 +104,6 @@ public class BattleController : MonoBehaviour{
         }
         if (Input.GetKeyDown(KeyCode.U)) {
             PrintToBattlelog("Olaf can't be stopped and deals around 9 billion damage. " + enemyName + " can't stand the mighty power and stares in disbelief as the fury of an exploding sun that is olaf's strength rains down on him.");
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (test)
-            {
-                enemy.GetComponent<CharacterAnimations>().animate(1);
-                test = false;
-            }
-            else
-                print(enemy.GetComponent<CharacterAnimations>().isAnimationPlaying());
         }
 
         if(checkEnded()) return;
@@ -132,11 +122,11 @@ public class BattleController : MonoBehaviour{
             {
                 if (playerAnimator.isAnimationPlaying() == "")
                 {
-                    playerAnimator.animate(0);
+                    playerAnimator.Animate(0);
                 }
                 if (enemyAnimator.isAnimationPlaying() == "")
                 {
-                    enemyAnimator.animate(0);
+                    enemyAnimator.Animate(0);
                 }
             }
             else
@@ -246,7 +236,7 @@ public class BattleController : MonoBehaviour{
 		    GameObject.Destroy(enemy);
 	    }
 
-	    enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[0]);
+	    enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[appID]);
         enemy.SetActive(true);
 
         playerAnimator = player.GetComponent<CharacterAnimations>();

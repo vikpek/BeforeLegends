@@ -5,54 +5,61 @@ public class StartAnimation : MonoBehaviour {
 
     bool animateStartInitialized = false;
 
-    bool fall = true;
+    // fall
     public float fallStartYPosition;
     public float fallEndYPosition;
     public float fallTime;
     float actualFallTime = 0;
+    bool fall = true;
+    
 
-    bool fallJumpTimeOffset = false;
+    // jumpoffset
+    public float jumpSpeedMultiplier;
     public float jumpTimeOffset;
     public float jumpTimeOffsetAnimation;
+    bool fallJumpTimeOffset = false;
     float actualJumpTimeOffset = 0;
 
-    bool jump = false;
-    Vector3 jumpStartPosition;
+    // jump
     public AnimationCurve jumpYPosition;
     public AnimationCurve jumpXPosition;
     public AnimationCurve jumpAnimationSpeedCurve;
     public float jumpTime;
+    bool jump = false;
     float actualJumpTime = 0;
+    Vector3 jumpStartPosition;
+
+    public AnimationCurve fallScreenShake;
+    public AnimationCurve jumpScreenShake;
 
     public float debugTime0 = 0;
     public float debugTime1 = 0;
 
-    public float jumpSpeedMultiplier;
+    CharacterAnimations animator;
 
-    public Animation enemyModelAnimation;
+    public GameObject model;
     bool animateStart = true;
 
-    public Animation enterAnimation;
 
     public bool reset = false;
     Vector3 startPosition;
-    Vector3 startPositionChild;
+    Vector3 startPositionModel;
 
     bool secondScreenshake = true;
 
 	// Use this for initialization
     void Start()
     {
-        enemyModelAnimation = GetComponentInChildren<Animation>();
-        //enemyModelAnimation.AddClip(enterAnimation.clip, "Enter");
+        animator = GetComponent<CharacterAnimations>();
+        model = GetComponentInChildren<Animation>().gameObject;
         startPosition = transform.position;
-        //startPositionChild = enemyModelAnimation.transform.gameObject.transform.position;
+        startPositionModel = model.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        animateStart = false;
+        //animateStart = false;
         if (Input.GetKeyDown(KeyCode.R))
             reset = true;
 
@@ -68,9 +75,14 @@ public class StartAnimation : MonoBehaviour {
             fallJumpTimeOffset = false;
             animateStartInitialized = false;
             transform.position = startPosition;
-            enemyModelAnimation.transform.gameObject.transform.position = startPositionChild;
-            enemyModelAnimation.Stop();
+            model.transform.position = startPositionModel;
+            animator.StopAnimation();
             secondScreenshake = true;
+        }
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            animator.Animate(5);
         }
 
         if(animateStart)
@@ -81,8 +93,8 @@ public class StartAnimation : MonoBehaviour {
                 if (!animateStartInitialized)
                 {
                     animateStartInitialized = true;
-                    enemyModelAnimation.Play("Enter");
-                    enemyModelAnimation["Enter"].speed = 0;
+                    animator.Animate(5);
+                    animator.SetSpeed(0.0f);
                 }
                 actualFallTime += Time.deltaTime;
                 if (actualFallTime >= fallTime)
@@ -95,20 +107,20 @@ public class StartAnimation : MonoBehaviour {
                                                         transform.position.z);
                 if (!fall)
                 {
-                    GameInfo.instance.doAScreenshake(null);
+                    GameInfo.instance.doAScreenshake(fallScreenShake);
                     fallJumpTimeOffset = true;
-                    jumpStartPosition = enemyModelAnimation.gameObject.transform.position;
+                    jumpStartPosition = model.transform.position;
                     actualFallTime = 0;
                     GetComponentInChildren<ParticleSystem>().Emit(1000);
                 }
             }
             else if (fallJumpTimeOffset)
             {
-                actualJumpTimeOffset += Time.deltaTime * jumpAnimationSpeedCurve.Evaluate(actualJumpTime);
+                actualJumpTimeOffset += Time.deltaTime;
 
                 if (actualJumpTimeOffset > jumpTimeOffset)
                 {
-                    enemyModelAnimation["Enter"].speed = 1;
+                    animator.SetSpeed(1.0f);
                     fallJumpTimeOffset = false;
                     actualJumpTimeOffset = 0;
                     jump = true;
@@ -117,7 +129,7 @@ public class StartAnimation : MonoBehaviour {
             }
             else if (jump)
             {
-                actualJumpTime += Time.deltaTime;
+                actualJumpTime += Time.deltaTime * jumpAnimationSpeedCurve.Evaluate(actualJumpTime);
 
                 debugTime1 = actualJumpTime;
 
@@ -129,20 +141,18 @@ public class StartAnimation : MonoBehaviour {
                     actualJumpTime = jumpTime;
                 }
 
-                if (enemyModelAnimation.gameObject.transform.localPosition.y < 0.1f && secondScreenshake)
+                if (model.transform.localPosition.y < 0.1f && secondScreenshake)
                 {
                     secondScreenshake = false;
-                    GameInfo.instance.doAScreenshake(null);
+                    GameInfo.instance.doAScreenshake(jumpScreenShake);
                     GetComponentInChildren<ParticleSystem>().Emit(400);
                 }
+                
+                animator.SetSpeed(jumpAnimationSpeedCurve.Evaluate(actualJumpTime));
 
-                print("jumpStartPosition.y + jumpYPosition.Evaluate(actualJumpTime): " + jumpStartPosition.y + jumpYPosition.Evaluate(actualJumpTime));
-
-                enemyModelAnimation["Enter"].speed = jumpAnimationSpeedCurve.Evaluate(actualJumpTime);
-
-                enemyModelAnimation.gameObject.transform.position = new Vector3(jumpStartPosition.x + jumpXPosition.Evaluate(actualJumpTime),
+                model.transform.position = new Vector3(jumpStartPosition.x + jumpXPosition.Evaluate(actualJumpTime),
                                                                                 jumpStartPosition.y + jumpYPosition.Evaluate(actualJumpTime),
-                                                                                enemyModelAnimation.gameObject.transform.position.z);
+                                                                                model.transform.position.z);
 
                 if (!jump)
                 {

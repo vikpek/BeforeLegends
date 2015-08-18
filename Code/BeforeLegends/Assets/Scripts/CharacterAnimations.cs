@@ -25,29 +25,39 @@ public class CharacterAnimations : MonoBehaviour {
     bool shieldAnimationFinished = false;
     bool shieldFadeoutFinished = false;
 
+
+    public GameObject temp;
+
     void Start()
     {
-        animation = GetComponentInChildren<Animation>();
         List<AnimationClip> animClipBuffer = new List<AnimationClip>();
+
+        animation = GetComponentInChildren<Animation>();
         foreach(AnimationState animClip in animation)
         {
             animClipBuffer.Add(animClip.clip);
         }
+
         animationClips = animClipBuffer.ToArray();
     }
 
-    public void animate(int animIndex)
+    public void Animate(int animIndex)
     {
         actualAnimation = animIndex;
         animation.Play(animationClips[actualAnimation].name);
     }
 
-    public void animate(int animIndex, float delay)
+    public void SetSpeed(float speed)
+    {
+        animation[animationClips[actualAnimation].name].speed = speed;
+    }
+
+    public void Animate(int animIndex, float delay)
     {
         actualAnimation = animIndex;
         StartCoroutine(delayAnimation(delay));
     }
-    public void stopAnimation()
+    public void StopAnimation()
     {
         animation.Stop();
     }
