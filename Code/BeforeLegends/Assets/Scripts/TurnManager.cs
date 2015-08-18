@@ -28,9 +28,15 @@ public class TurnManager : MonoBehaviour {
     public bool nextEnemyDoTurn = false;
     public List<LPathfinding> activeLPFs = new List<LPathfinding>();
 
+    private Image nextTurnButton;
+    private MapObjectCarrier olafMapObjectCarrier;
+    public Sprite button_h;
+    public Sprite button;
+
     void Start(){
 	    Messenger.instance.listen(gameObject, "ActionStarted");
 	    Messenger.instance.listen(gameObject, "ActionEnded");
+        
     }
 
     void onEvent_ActionStarted(){
@@ -49,6 +55,23 @@ public class TurnManager : MonoBehaviour {
 
         if (nextEnemyDoTurn && world.activeSelf)
             NextEnemyTurn();
+
+
+        if(nextTurnButton == null)
+            nextTurnButton = GameObject.Find("NextTurn").GetComponent<Image>();
+        if(olafMapObjectCarrier == null) 
+            olafMapObjectCarrier = GameObject.Find("Olaf").GetComponent<MapObjectCarrier>();
+
+        if (olafMapObjectCarrier.moved >= olafMapObjectCarrier.movedMax) {
+            if (Mathf.Sin(Time.time * 10) < 0)
+                nextTurnButton.sprite = button_h;
+            else
+                nextTurnButton.sprite = button;
+        }
+        else {
+            nextTurnButton.sprite = button;
+        }
+
     }
 
     public void EnemyTurn() {
