@@ -95,8 +95,8 @@ public class WorldMapGenerator : MonoBehaviour
         packTextures();
         generate();
         createChunks();
-        spawnObjects();
-        spawnCarriers();
+        //spawnObjects();
+        //spawnCarriers();
         spwanRessources();
         spawnPlayer();
         generationComplete = true;

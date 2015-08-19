@@ -5,7 +5,7 @@ public class MaskOffset : MonoBehaviour {
 
     // Use this for initialization
     //Vec2int origin =  new Vec2int(60, 80);
-    Vector2 origin = new Vector2(47.5f, 70);
+    Vector2 origin = new Vector2(49.5f, 65);
     float offsetPerUnit = 0.05f;
     public Transform olafTransform;
 

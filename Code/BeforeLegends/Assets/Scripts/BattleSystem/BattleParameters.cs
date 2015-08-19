@@ -13,8 +13,11 @@ public class BattleParameters : MonoBehaviour{
     public GameObject levelGO;
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.V)) {
+            //exp = expToLevelUp[level];
             LevelUp();
+        }
+            
     }
 
     public void LevelUp() {

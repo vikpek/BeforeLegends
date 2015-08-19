@@ -3149,12 +3149,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd24a2ca6294e045a99ec27eec7a521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idle: Rig|Idle_02_fight_1H
-  attack: Rig|Attack_01_Basic
-  hurt: Rig|Hurt_01
-  spattack: Rig|Attack_02_Crit
-  death: 
-  animArr: {fileID: 11155938}
+  animationClips: []
+  shieldImage: {fileID: 0}
+  shieldTransform: {fileID: 0}
+  shieldSizeColorOverTime:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  shieldFadeoutOverTime:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  temp: {fileID: 0}
 --- !u!114 &11427452
 MonoBehaviour:
   m_ObjectHideFlags: 1
