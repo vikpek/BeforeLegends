@@ -891,10 +891,10 @@ MonoBehaviour:
   humidity: 0
   winBuilder: 0
   winGlory: 0
-  foodToWin: 150
+  foodToWin: 30
   stoneToWin: 50
-  woodToWin: 50
-  scoreToWin: 3000
+  woodToWin: 60
+  scoreToWin: 12000
 --- !u!4 &479564459
 Transform:
   m_ObjectHideFlags: 0
@@ -2297,7 +2297,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Path to glory
 
-    -> Collect 3000 glory'
+    -> Collect 12000 glory'
 --- !u!222 &1333521113
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3421,9 +3421,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Civilization Builder
 
-    -> Collect 100 Food
+    -> Collect 30 Food
 
-    -> Collect 50 Wood
+    -> Collect 60 Wood
 
     -> Collect 50 Stone'
 --- !u!222 &1914353911

@@ -6625,7 +6625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 0}
-  gameOverImage: {fileID: 21300000, guid: f6c187377f98b3c48a4eca305866e2ac, type: 3}
+  gameOverImage: {fileID: 21300000, guid: a994b6b8207fc094ba35d42bee14c0c2, type: 3}
   gameObjectsToDeactivateOnGameOver:
   - {fileID: 193950}
   - {fileID: 181230}
@@ -7157,7 +7157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   victory: {fileID: 0}
-  victorySprite: {fileID: 21300000, guid: c6cd630f21e223a48af1081cd1d8ad5a, type: 3}
+  victorySprite: {fileID: 21300000, guid: c21806a819158c948aa74901f3efd103, type: 3}
   gameObjectsToDeactivateOnGameOver:
   - {fileID: 193950}
   - {fileID: 181230}
@@ -7436,56 +7436,64 @@ MonoBehaviour:
     desertJackal: 0
     desertMammoth: 0
     hornedLion: 0
+    mammoth: 0
+    tigerLion: 0
     chance: 0
   - tileType: ice
     silverLion: 0
-    silverJackal: 0
+    silverJackal: .0500000007
     silverMammoth: 0
-    iceLion: 0
-    iceJackal: 0
+    iceLion: .0500000007
+    iceJackal: .0500000007
     iceMammoth: 0
     greenLion: 0
     greenJackal: 0
-    greenMammoth: 0
+    greenMammoth: .0500000007
     desertLion: 0
     desertJackal: 0
     desertMammoth: 0
     hornedLion: 0
+    mammoth: 0
+    tigerLion: 0
     chance: 0
   - tileType: ice_mountain
     silverLion: 0
-    silverJackal: 0
+    silverJackal: .0500000007
     silverMammoth: 0
-    iceLion: 0
+    iceLion: .0500000007
     iceJackal: 0
     iceMammoth: 0
     greenLion: 0
-    greenJackal: 0
-    greenMammoth: 0
+    greenJackal: .0500000007
+    greenMammoth: .0500000007
     desertLion: 0
     desertJackal: 0
     desertMammoth: 0
     hornedLion: 0
+    mammoth: 0
+    tigerLion: 0
     chance: 0
   - tileType: tundra
     silverLion: 0
-    silverJackal: 0
+    silverJackal: .0500000007
     silverMammoth: 0
-    iceLion: .150000006
-    iceJackal: 0
+    iceLion: .0500000007
+    iceJackal: .0500000007
     iceMammoth: 0
     greenLion: 0
     greenJackal: 0
-    greenMammoth: 0
+    greenMammoth: .0500000007
     desertLion: 0
     desertJackal: 0
     desertMammoth: 0
     hornedLion: 0
+    mammoth: 0
+    tigerLion: 0
     chance: 0
   - tileType: savanna
-    silverLion: 0
+    silverLion: .0500000007
     silverJackal: 0
-    silverMammoth: 0
+    silverMammoth: .0500000007
     iceLion: 0
     iceJackal: 0
     iceMammoth: 0
@@ -7495,12 +7503,14 @@ MonoBehaviour:
     desertLion: .0500000007
     desertJackal: 0
     desertMammoth: 0
-    hornedLion: .100000001
+    hornedLion: 0
+    mammoth: 0
+    tigerLion: .0500000007
     chance: 0
   - tileType: dry_forest
     silverLion: 0
     silverJackal: 0
-    silverMammoth: 0
+    silverMammoth: .0500000007
     iceLion: 0
     iceJackal: 0
     iceMammoth: 0
@@ -7509,23 +7519,27 @@ MonoBehaviour:
     greenMammoth: 0
     desertLion: .0500000007
     desertJackal: 0
-    desertMammoth: 0
-    hornedLion: .100000001
+    desertMammoth: .0500000007
+    hornedLion: 0
+    mammoth: 0
+    tigerLion: 0
     chance: 0
   - tileType: dry_mountain
-    silverLion: .100000001
+    silverLion: .0500000007
     silverJackal: 0
-    silverMammoth: 0
+    silverMammoth: .0500000007
     iceLion: 0
-    iceJackal: 0
+    iceJackal: .0500000007
     iceMammoth: 0
     greenLion: 0
     greenJackal: 0
     greenMammoth: 0
-    desertLion: 0
+    desertLion: .0500000007
     desertJackal: 0
     desertMammoth: 0
-    hornedLion: .100000001
+    hornedLion: 0
+    mammoth: 0
+    tigerLion: 0
     chance: 0
   - tileType: grassland
     silverLion: 0
@@ -7534,13 +7548,15 @@ MonoBehaviour:
     iceLion: 0
     iceJackal: 0
     iceMammoth: 0
-    greenLion: .100000001
-    greenJackal: 0
+    greenLion: 0
+    greenJackal: .0500000007
     greenMammoth: 0
     desertLion: 0
     desertJackal: 0
     desertMammoth: 0
     hornedLion: .0500000007
+    mammoth: .0500000007
+    tigerLion: 0
     chance: 0
   - tileType: forest
     silverLion: 0
@@ -7549,58 +7565,66 @@ MonoBehaviour:
     iceLion: 0
     iceJackal: 0
     iceMammoth: 0
-    greenLion: .100000001
-    greenJackal: 0
+    greenLion: 0
+    greenJackal: .0500000007
     greenMammoth: 0
     desertLion: 0
     desertJackal: 0
-    desertMammoth: 0
-    hornedLion: 0
+    desertMammoth: .0500000007
+    hornedLion: .0500000007
+    mammoth: .0500000007
+    tigerLion: 0
     chance: 0
   - tileType: forest_mountain
-    silverLion: .100000001
-    silverJackal: 0
+    silverLion: 0
+    silverJackal: .0500000007
     silverMammoth: 0
     iceLion: 0
     iceJackal: 0
     iceMammoth: 0
-    greenLion: .100000001
-    greenJackal: 0
+    greenLion: 0
+    greenJackal: .0500000007
     greenMammoth: 0
     desertLion: 0
     desertJackal: 0
-    desertMammoth: 0
-    hornedLion: 0
+    desertMammoth: .0500000007
+    hornedLion: .0500000007
+    mammoth: .0500000007
+    tigerLion: 0
     chance: 0
   - tileType: desert
     silverLion: 0
-    silverJackal: 0
-    silverMammoth: 0
+    silverJackal: .0500000007
+    silverMammoth: .0500000007
     iceLion: 0
     iceJackal: 0
     iceMammoth: 0
     greenLion: 0
     greenJackal: 0
     greenMammoth: 0
-    desertLion: .150000006
-    desertJackal: 0
-    desertMammoth: 0
-    hornedLion: 0
-    chance: 0
-  - tileType: desert_mountain
-    silverLion: .100000001
-    silverJackal: 0
-    silverMammoth: 0
-    iceLion: 0
-    iceJackal: 0
-    iceMammoth: 0
-    greenLion: 0
-    greenJackal: 0
-    greenMammoth: 0
-    desertLion: .150000006
+    desertLion: .0500000007
     desertJackal: 0
     desertMammoth: 0
     hornedLion: .0500000007
+    mammoth: 0
+    tigerLion: 0
+    chance: 0
+  - tileType: desert_mountain
+    silverLion: .0500000007
+    silverJackal: 0
+    silverMammoth: .0500000007
+    iceLion: 0
+    iceJackal: 0
+    iceMammoth: 0
+    greenLion: 0
+    greenJackal: 0
+    greenMammoth: 0
+    desertLion: .0500000007
+    desertJackal: 0
+    desertMammoth: 0
+    hornedLion: 0
+    mammoth: 0
+    tigerLion: .0500000007
     chance: 0
   - tileType: jungle
     silverLion: 0
@@ -7608,14 +7632,16 @@ MonoBehaviour:
     silverMammoth: 0
     iceLion: 0
     iceJackal: 0
-    iceMammoth: 0
-    greenLion: .100000001
+    iceMammoth: .0500000007
+    greenLion: .0500000007
     greenJackal: 0
     greenMammoth: 0
     desertLion: 0
-    desertJackal: 0
+    desertJackal: .0500000007
     desertMammoth: 0
-    hornedLion: .0500000007
+    hornedLion: 0
+    mammoth: 0
+    tigerLion: .0500000007
     chance: 0
   water: 0000000004000000080000000c0000001000000014000000180000001c00000020000000
   ice: 010000000200000005000000
@@ -7630,13 +7656,21 @@ MonoBehaviour:
   desert: 190000001a000000
   desert_mountain: 1b000000
   jungle: 2100000022000000
-  hornedLion: 0d0000001d0000001e0000000e0000000f00000011000000150000001b0000002100000022000000
-  silverLion: 03000000070000000b0000000f00000013000000170000001b0000001f00000023000000
-  greenLion: 1100000015000000120000001600000013000000170000001f000000230000002100000022000000
-  iceLion: 010000000200000003000000050000000600000007000000090000000a0000000b000000
-  desertLion: 1d0000001e000000190000001a0000000e0000001b000000
-  jackal: 010000000200000003000000050000000600000007000000090000000a0000000b000000
-  mammoth: 010000000200000003000000050000000600000007000000090000000a0000000b000000
+  silverLion: 1d0000001e0000000d0000000f0000001b000000
+  silverJackal: 01000000020000000500000003000000070000000b00000006000000090000000a0000000f00000013000000170000001f00000023000000
+  silverMammoth: 1d0000001e0000000d0000000e0000000f000000190000001a0000001b000000
+  iceLion: 01000000020000000500000003000000070000000b00000006000000090000000a000000
+  iceJackal: 01000000020000000500000003000000070000000b00000006000000090000000a000000
+  iceMammoth: 2100000022000000
+  greenLion: 2100000022000000
+  greenJackal: 1100000015000000120000001600000013000000170000001f00000023000000
+  greenMammoth: 01000000020000000500000003000000070000000b00000006000000090000000a000000
+  desertLion: 1d0000001e0000000d0000000e0000000f000000190000001a0000001b000000
+  desertJackal: 2100000022000000
+  desertMammoth: 0e000000120000001600000013000000170000001f00000023000000
+  hornedLion: 1100000015000000120000001600000013000000170000001f00000023000000190000001a000000
+  mammoth: 1100000015000000120000001600000013000000170000001f00000023000000
+  tigerLion: 1d0000001e0000000d0000001b0000002100000022000000
   chunkTexture: {fileID: 0}
   chunkTextureNormal: {fileID: 0}
   chunkTextureRects: []
@@ -7644,6 +7678,7 @@ MonoBehaviour:
   temperatureSeed: {x: 0, y: 0}
   moistureSeed: {x: 0, y: 0}
   erosionSeed: {x: 0, y: 0}
+  tileNormalTexture: {fileID: 0}
   generationComplete: 0
 --- !u!114 &11484276
 MonoBehaviour:
@@ -7763,8 +7798,8 @@ MonoBehaviour:
   levelUpWeapons:
   - {fileID: 159244}
   - {fileID: 159244}
-  - {fileID: 156646}
   - {fileID: 111660}
+  - {fileID: 156646}
   - {fileID: 146880}
   - {fileID: 152984}
 --- !u!114 &11485060

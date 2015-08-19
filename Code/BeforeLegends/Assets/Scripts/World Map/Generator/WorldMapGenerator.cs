@@ -338,9 +338,61 @@ public class WorldMapGenerator : MonoBehaviour
         return DropChances[0];
     }
 
-    private SpawnChance returnSpawnChance(int matID) {
+     private SpawnChance returnSpawnChance(int matID) {
+        foreach (int e in ice) {
+            if (e == matID)
+                return spawnChances[1];
+        }
+        foreach (int e in ice_mountain) {
+            if (e == matID)
+                return spawnChances[2];
+        }
+        foreach (int e in tundra) {
+            if (e == matID)
+                return spawnChances[3];
+        }
+        foreach (int e in savana) {
+            if (e == matID)
+                return spawnChances[4];
+        }
+        foreach (int e in dry_forest) {
+            if (e == matID)
+                return spawnChances[5];
+        }
+        foreach (int e in dry_mountain) {
+            if (e == matID)
+                return spawnChances[6];
+        }
+        foreach (int e in grassland) {
+            if (e == matID)
+                return spawnChances[7];
+        }
+        foreach (int e in forest) {
+            if (e == matID)
+                return spawnChances[8];
+        }
+        foreach (int e in forest_mountain) {
+            if (e == matID)
+                return spawnChances[9];
+        }
+        foreach (int e in desert) {
+            if (e == matID)
+                return spawnChances[10];
+        }
+        foreach (int e in desert_mountain) {
+            if (e == matID)
+                return spawnChances[11];
+        }
+        foreach (int e in jungle) {
+            if (e == matID)
+                return spawnChances[12];
+        }
+        return spawnChances[0];
+     }
+
+    /*private SpawnChance returnSpawnChance(int matID) {
         var ID = 0;
-        foreach (var e in hornedLion) {
+        foreach (var e in silverJackal) {
             if (e == matID)
                 ID = 0;
         }
@@ -348,28 +400,60 @@ public class WorldMapGenerator : MonoBehaviour
             if (e == matID)
                 ID = 1;
         }
-        foreach (var e in desertLion) {
+        foreach (var e in silverMammoth) {
             if (e == matID)
                 ID = 2;
         }
-        foreach (var e in iceLion) {
+        foreach (var e in iceJackal) {
             if (e == matID)
                 ID = 3;
         }
-        foreach (var e in greenLion) {
+        foreach (var e in iceLion) {
             if (e == matID)
                 ID = 4;
         }
-        /*foreach (var e in jackal) {
+        foreach (var e in iceMammoth) {
             if (e == matID)
                 ID = 5;
-        }*/
-        foreach (var e in mammoth) {
+        }
+        foreach (var e in desertJackal) {
             if (e == matID)
                 ID = 6;
         }
+        foreach (var e in desertLion) {
+            if (e == matID)
+                ID = 7;
+        }
+        foreach (var e in desertMammoth) {
+            if (e == matID)
+                ID = 8;
+        }
+        foreach (var e in greenJackal) {
+            if (e == matID)
+                ID = 9;
+        }
+        foreach (var e in greenLion) {
+            if (e == matID)
+                ID = 10;
+        }
+        foreach (var e in greenMammoth) {
+            if (e == matID)
+                ID = 11;
+        }
+        foreach (var e in hornedLion) {
+            if (e == matID)
+                ID = 12;
+        }
+        foreach (var e in mammoth) {
+            if (e == matID)
+                ID = 13;
+        }
+        foreach (var e in tigerLion) {
+            if (e == matID)
+                ID = 14;
+        }
         return spawnChances[ID];
-    }
+    }*/
 
     void generate(){
 	    WorldMapData data = WorldMapData.instance;

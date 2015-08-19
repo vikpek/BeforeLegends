@@ -33,8 +33,6 @@ public class BattleParameters : MonoBehaviour{
         foreach (GameObject gO in levelUpWeapons) {
             gO.SetActive(false);
         }
-        print(level);
-        
         levelUpWeapons[level].SetActive(true);
     }
 
@@ -67,4 +65,3 @@ public class BattleParameters : MonoBehaviour{
         levelUpParticel.gameObject.SetActive(false);
     }
 }
-//a40 roundending
