@@ -15,12 +15,21 @@ public class BattleParameters : MonoBehaviour{
     public ParticleSystem levelUpParticel;
     public SpriteRenderer levelUpIcon;
 
+    public GameObject[] levelUpWeapons;
+
     void Update() {
         if (Input.GetKeyDown(KeyCode.V)) {
-            //exp = expToLevelUp[level];
+            exp = 100000;
             LevelUp();
         }
             
+    }
+
+    void Start() {
+        foreach (GameObject gO in levelUpWeapons) {
+            gO.SetActive(false);
+        }
+        levelUpWeapons[level].SetActive(true);
     }
 
     public void LevelUp() {
@@ -31,7 +40,9 @@ public class BattleParameters : MonoBehaviour{
         if(exp >= expToLevelUp[level - 1])
         {
             battleParameters = battleParameters.combine(levelUpChange[level]);
+            levelUpWeapons[level].SetActive(false);
             level++;
+            levelUpWeapons[level].SetActive(true);
             levelGO.GetComponent<SpriteRenderer>().sprite = levelSprites[level - 1];
             levelUpParticel.gameObject.SetActive(true);
             levelUpIcon.color = new Color(1,1,1,1);
@@ -42,9 +53,10 @@ public class BattleParameters : MonoBehaviour{
     }
 
     IEnumerator FadeOut() {
+        yield return new WaitForSeconds(1);
         do {
             yield return new WaitForEndOfFrame();
-            levelUpIcon.color = new Color(1, 1, 1, levelUpIcon.color.a - 0.01f);
+            levelUpIcon.color = new Color(1, 1, 1, levelUpIcon.color.a - 0.008f);
         } while (levelUpIcon.color.a >= 0);
         levelUpParticel.gameObject.SetActive(false);
     }
