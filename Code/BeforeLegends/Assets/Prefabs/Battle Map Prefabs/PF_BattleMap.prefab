@@ -253,6 +253,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &115342
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 415404}
+  - 108: {fileID: 10835788}
+  - 114: {fileID: 11497658}
+  m_Layer: 0
+  m_Name: Lighning
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &118970
 GameObject:
   m_ObjectHideFlags: 1
@@ -282,6 +299,22 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &121558
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 413882}
+  - 108: {fileID: 10801744}
+  m_Layer: 19
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &123122
 GameObject:
@@ -600,7 +633,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 487776}
-  m_Layer: 9
+  m_Layer: 19
   m_Name: EN_BMMoon_01_SM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +925,7 @@ GameObject:
   - 33: {fileID: 3368976}
   - 23: {fileID: 2311506}
   - 114: {fileID: 11408546}
-  m_Layer: 17
+  m_Layer: 18
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -943,7 +976,7 @@ GameObject:
   - 4: {fileID: 407486}
   - 33: {fileID: 3355646}
   - 23: {fileID: 2344308}
-  m_Layer: 9
+  m_Layer: 19
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,7 +1506,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110746}
-  m_LocalRotation: {x: .134387761, y: .689184606, z: .66389066, w: -.257320136}
+  m_LocalRotation: {x: .134387776, y: .689184666, z: .663890719, w: -.257320166}
   m_LocalPosition: {x: -2.86999989, y: 10.3500004, z: -.670000017}
   m_LocalScale: {x: .991199434, y: .991199851, z: .991199553}
   m_Children:
@@ -1491,7 +1524,7 @@ Transform:
   m_LocalScale: {x: .529769838, y: .529769838, z: .529769838}
   m_Children: []
   m_Father: {fileID: 487776}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &408734
 Transform:
   m_ObjectHideFlags: 1
@@ -1612,6 +1645,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 470738}
   m_RootOrder: 0
+--- !u!4 &413882
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121558}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487776}
+  m_RootOrder: 0
 --- !u!4 &414534
 Transform:
   m_ObjectHideFlags: 1
@@ -1624,6 +1669,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 478528}
   m_RootOrder: 1
+--- !u!4 &415404
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115342}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 15, z: -12.7600002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461582}
+  m_RootOrder: 8
 --- !u!4 &415590
 Transform:
   m_ObjectHideFlags: 1
@@ -2089,6 +2146,7 @@ Transform:
   - {fileID: 479740}
   - {fileID: 494798}
   - {fileID: 400374}
+  - {fileID: 415404}
   m_Father: {fileID: 404378}
   m_RootOrder: 3
 --- !u!4 &463622
@@ -2342,6 +2400,7 @@ Transform:
   m_LocalPosition: {x: 8.15999985, y: 3.68000007, z: -19.5900002}
   m_LocalScale: {x: 1.35741329, y: 1.35741341, z: 1.35741341}
   m_Children:
+  - {fileID: 413882}
   - {fileID: 407486}
   m_Father: {fileID: 463622}
   m_RootOrder: 1
@@ -3745,6 +3804,38 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!108 &10801744
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121558}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: .519999981
+  m_Range: 4.06825638
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 1
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 131072
+  m_Lightmapping: 4
+  m_BounceIntensity: 2.72000003
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
 --- !u!108 &10818512
 Light:
   m_ObjectHideFlags: 1
@@ -3771,7 +3862,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294966527
+    m_Bits: 4294442239
   m_Lightmapping: 4
   m_BounceIntensity: 2.61999989
   m_ShadowRadius: 0
@@ -3806,6 +3897,38 @@ Light:
     m_Bits: 512
   m_Lightmapping: 4
   m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
+--- !u!108 &10835788
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115342}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 2
+  m_Color: {r: .75, g: .782758713, b: 1, a: 1}
+  m_Intensity: 8
+  m_Range: 19.8035374
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 393728
+  m_Lightmapping: 4
+  m_BounceIntensity: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
@@ -3899,7 +4022,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294835711
+    m_Bits: 4294311423
   m_Lightmapping: 4
   m_BounceIntensity: 0
   m_ShadowRadius: 0
@@ -4012,7 +4135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40da8aab9734dd24bb622414405ad0dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .0900000036
+  speed: .100000001
 --- !u!114 &11411388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4271,6 +4394,142 @@ MonoBehaviour:
   dx11BokehTexture: {fileID: 2800000, guid: a4cdca73d61814d33ac1587f6c163bca, type: 3}
   dx11BokehScale: 1.20000005
   dx11BokehIntensity: 2.5
+--- !u!114 &11497658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b5ae252212ff54493f33685fa308f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yPositionOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: -.0500000007
+      value: 33.2160301
+      inSlope: -87759.1406
+      outSlope: -87759.1406
+      tangentMode: 10
+    - time: -.0495000035
+      value: -10.6633034
+      inSlope: 488.435455
+      outSlope: 488.435455
+      tangentMode: 0
+    - time: .00630536862
+      value: 33.9645653
+      inSlope: 434.770599
+      outSlope: 3.61887288
+      tangentMode: 17
+    - time: 2.97232985
+      value: 44.6982307
+      inSlope: 3.61887288
+      outSlope: -393.983185
+      tangentMode: 21
+    - time: 3.20000005
+      value: -45
+      inSlope: -393.983185
+      outSlope: 385.14328
+      tangentMode: 21
+    - time: 3.43012619
+      value: 43.6315346
+      inSlope: 385.14328
+      outSlope: -3451.98022
+      tangentMode: 21
+    - time: 3.4545064
+      value: -40.5284576
+      inSlope: -3451.98022
+      outSlope: 286.241821
+      tangentMode: 21
+    - time: 3.71974683
+      value: 35.3944473
+      inSlope: 286.241821
+      outSlope: .598500013
+      tangentMode: 21
+    - time: 3.84683967
+      value: 35.4705124
+      inSlope: .598500013
+      outSlope: -1058.09033
+      tangentMode: 21
+    - time: 3.90223002
+      value: -23.1374893
+      inSlope: -1058.09033
+      outSlope: 15540.8027
+      tangentMode: 21
+    - time: 3.90634418
+      value: 40.7997208
+      inSlope: 15540.8027
+      outSlope: 57.8978081
+      tangentMode: 21
+    - time: 4.13724232
+      value: 54.1682167
+      inSlope: 57.8978081
+      outSlope: -3161.67017
+      tangentMode: 21
+    - time: 4.16714191
+      value: -40.3644485
+      inSlope: -3161.67017
+      outSlope: 1150.93713
+      tangentMode: 21
+    - time: 4.25
+      value: 55
+      inSlope: 1150.93713
+      outSlope: -138.444534
+      tangentMode: 21
+    - time: 4.45083618
+      value: 27.1953278
+      inSlope: -138.444534
+      outSlope: -2151.96606
+      tangentMode: 5
+    - time: 4.4879756
+      value: -27.9482803
+      inSlope: -331.792847
+      outSlope: -331.792847
+      tangentMode: 1
+    - time: 4.5
+      value: 30
+      inSlope: 1006.98932
+      outSlope: -1231.01892
+      tangentMode: 17
+    - time: 4.53134346
+      value: -8.58439255
+      inSlope: Infinity
+      outSlope: -54.2119789
+      tangentMode: 7
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+  intensityOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1.255
+      value: -5
+      inSlope: -.503063202
+      outSlope: -.503063202
+      tangentMode: 0
+    - time: 1.67493689
+      value: -.0678907633
+      inSlope: -5.94139099
+      outSlope: -5.94139099
+      tangentMode: 0
+    - time: 2.07720089
+      value: -11.1823788
+      inSlope: 3.71694565
+      outSlope: 3.71694565
+      tangentMode: 0
+    - time: 2.5
+      value: 0
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
 --- !u!114 &11498862
 MonoBehaviour:
   m_ObjectHideFlags: 1
