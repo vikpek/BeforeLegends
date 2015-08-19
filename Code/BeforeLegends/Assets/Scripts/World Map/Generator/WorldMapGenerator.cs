@@ -58,13 +58,30 @@ public class WorldMapGenerator : MonoBehaviour
     public int[] desert_mountain;
     public int[] jungle;
 
-    public int[] hornedLion;
+    //silver
     public int[] silverLion;
-    public int[] greenLion;
+    public int[] silverJackal;
+    public int[] silverMammoth;
+
+    //ice
     public int[] iceLion;
+    public int[] iceJackal;
+    public int[] iceMammoth;
+
+    //green
+    public int[] greenLion;
+    public int[] greenJackal;
+    public int[] greenMammoth;
+
+    //desert
     public int[] desertLion;
-    public int[] jackal;
+    public int[] desertJackal;
+    public int[] desertMammoth;
+
+    //Random shit
+    public int[] hornedLion;
     public int[] mammoth;
+    public int[] tigerLion;
 
     public Texture2D chunkTexture;
 
@@ -95,8 +112,8 @@ public class WorldMapGenerator : MonoBehaviour
         packTextures();
         generate();
         createChunks();
-        //spawnObjects();
-        //spawnCarriers();
+        spawnObjects();
+        spawnCarriers();
         spwanRessources();
         spawnPlayer();
         generationComplete = true;
@@ -330,10 +347,10 @@ public class WorldMapGenerator : MonoBehaviour
             if (e == matID)
                 ID = 4;
         }
-        foreach (var e in jackal) {
+        /*foreach (var e in jackal) {
             if (e == matID)
                 ID = 5;
-        }
+        }*/
         foreach (var e in mammoth) {
             if (e == matID)
                 ID = 6;

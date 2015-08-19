@@ -25,14 +25,22 @@ public class SpawnChance
     public float desertLion;
     public float desertJackal;
     public float desertMammoth;
-
+    
+    //Random shit
     public float hornedLion;
+    public float mammoth;
+    public float tigerLion;
+
 
     public float chance;
 
     public void overallSpawnChance()
     {
-        chance = silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth + desertLion + desertJackal + desertMammoth;
+        chance = silverLion + silverJackal + silverMammoth + 
+            iceLion + iceJackal + iceMammoth + 
+            greenLion + greenJackal + greenMammoth + 
+            desertLion + desertJackal + desertMammoth + 
+            hornedLion + mammoth + tigerLion;
     }
 
     public int returnSpawn()
@@ -62,6 +70,12 @@ public class SpawnChance
             return 10;
         else if (Random.Range(0.0f, chance) < greenMammoth / chance)
             return 11;
+        else if (Random.Range(0.0f, chance) < hornedLion / chance)
+            return 12;
+        else if (Random.Range(0.0f, chance) < mammoth / chance)
+            return 13;
+        else if (Random.Range(0.0f, chance) < tigerLion / chance)
+            return 14;
         return 999;
     }
 }
