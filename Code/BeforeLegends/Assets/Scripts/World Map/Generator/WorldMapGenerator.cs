@@ -207,7 +207,7 @@ public class WorldMapGenerator : MonoBehaviour
 			    else
 				    randomY = 0;
 			
-			    GameObject go = Instantiate(CharacterModelPrefabs.ressourcePrefabs[spawn], new Vector3(tile.position.x + randomX, tile.position.y + 10, tile.position.z + randomY) , CharacterModelPrefabs.ressourcePrefabs[(int)spawnChance].transform.rotation) as GameObject;
+			    GameObject go = Instantiate(CharacterModelPrefabs.ressourcePrefabs[spawn], new Vector3(tile.position.x, tile.position.y + 10, tile.position.z) , CharacterModelPrefabs.ressourcePrefabs[(int)spawnChance].transform.rotation) as GameObject;
 			    FogOfWar.instance.SetLayerRecursively(go, 11);
 			    go.transform.parent = transform;
 			    go.GetComponent<Ressource>().pos = tile.gridPos;

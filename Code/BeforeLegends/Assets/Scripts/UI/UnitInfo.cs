@@ -52,7 +52,7 @@ public class UnitInfo : MonoBehaviour {
 
         //attack.text = "Attack: " + info.battleParameters.attack;
         //defense.text = "Defense: " + info.battleParameters.defense;
-        damage.text = "Damage: " + info.battleParameters.damage;
+        damage.text = "Strength: " + info.battleParameters.damage;
         armor.text = "Armor: " + info.battleParameters.armor;
         if (info.battleParameters.hitPoints <= 0)
             hpText.text = "0/" + info.battleParameters.maxHitPoints.ToString("f1");

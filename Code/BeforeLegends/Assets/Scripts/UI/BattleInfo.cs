@@ -28,10 +28,10 @@ public class BattleInfo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        playerDamageText.text = "Damage: " + controller.playerData.damage;
+        playerDamageText.text = "Strength: " + controller.playerData.damage;
         playerArmorText.text = "Armor: " + controller.playerData.armor;
 
-        enemyDamageText.text = "Damage: " + controller.enemyData.damage;
+        enemyDamageText.text = "Strength: " + controller.enemyData.damage;
         enemyArmorText.text = "Armor " + controller.enemyData.armor;
 
         playerHpBar.fillAmount = controller.playerData.hitPoints / controller.playerData.maxHitPoints;
