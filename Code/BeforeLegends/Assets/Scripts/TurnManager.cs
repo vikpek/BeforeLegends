@@ -63,7 +63,7 @@ public class TurnManager : MonoBehaviour {
             olafMapObjectCarrier = GameObject.Find("Olaf").GetComponent<MapObjectCarrier>();
 
         if (olafMapObjectCarrier.moved >= olafMapObjectCarrier.movedMax) {
-            if (Mathf.Sin(Time.time * 10) < 0)
+            if (Mathf.Sin(Time.time * 5) < 0)
                 nextTurnButton.sprite = button_h;
             else
                 nextTurnButton.sprite = button;
