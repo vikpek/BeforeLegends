@@ -6,6 +6,18 @@ public class MoveOnClick : MonoBehaviour {
     public MapObjectCarrier objData;
     public bool mouseOverUIElement;
 
+    private static MoveOnClick _instance;
+
+    public static MoveOnClick instance
+    {
+        get
+        {
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<MoveOnClick>();
+            return _instance;
+        }
+    }
+
     void Update(){
         if(Input.GetMouseButtonDown(0) && !mouseOverUIElement)
         {

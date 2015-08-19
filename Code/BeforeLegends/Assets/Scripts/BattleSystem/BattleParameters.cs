@@ -22,21 +22,31 @@ public class BattleParameters : MonoBehaviour{
             exp = 100000;
             LevelUp();
         }
-            
     }
 
     void Start() {
 
         if (name != "Olaf")
+        {
+            SpriteRenderer spriteRendererLI = GetComponentsInChildren<SpriteRenderer>()[1];
+            GameObject spriteRendererLIGo = spriteRendererLI.gameObject;
+            spriteRendererLI.sprite = levelSprites[level - 1];
+            spriteRendererLIGo.transform.localScale = new Vector3(
+                spriteRendererLIGo.transform.localScale.x * -1, 
+                spriteRendererLIGo.transform.localScale.y,
+                spriteRendererLIGo.transform.localScale.z);
             return;
+        }
 
         foreach (GameObject gO in levelUpWeapons) {
             gO.SetActive(false);
         }
+        
         levelUpWeapons[level].SetActive(true);
     }
-
     public void LevelUp() {
+
+
         if (gameObject.tag != "Player")
             return;
         if (level >= 5)
@@ -52,7 +62,6 @@ public class BattleParameters : MonoBehaviour{
             levelUpIcon.color = new Color(1,1,1,1);
             StartCoroutine(FadeOut());
             AudioMaster.instance.wmRoundEndingA040Play();
-
         }
     }
 

@@ -102,7 +102,21 @@ public class WorldMapGenerator : MonoBehaviour
     public bool generationComplete = false;
     void Start()
     {
-        if (randomSeed == true) {
+        InitWorld();
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.G))
+        {
+            InitWorld();
+        }
+    }
+
+    public void InitWorld()
+    {
+        if (randomSeed == true)
+        {
             Random.seed = System.Environment.TickCount;
             seed = Random.Range(int.MinValue, int.MaxValue);
         }

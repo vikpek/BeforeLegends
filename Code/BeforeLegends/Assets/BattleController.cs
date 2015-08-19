@@ -111,7 +111,6 @@ public class BattleController : MonoBehaviour{
         if (battleState == BattleState.PLAYERDEAD)
         {
             playerAnimator.Animate(4, 0.5f);
-            playerAnimator.SetSpeed(0.3f);
             battleState = BattleState.ANIMATEDEATHPLAYER;
         }
 

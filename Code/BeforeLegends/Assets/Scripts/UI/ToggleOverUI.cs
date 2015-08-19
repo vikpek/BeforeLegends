@@ -2,10 +2,8 @@
 using System.Collections;
 
 public class ToggleOverUI : MonoBehaviour {
-    MoveOnClick mouse;
 
     void Start() {
-        mouse = GameObject.Find("Olaf").GetComponent<MoveOnClick>();
     }
 
     void OnMouseDown() {
@@ -13,9 +11,9 @@ public class ToggleOverUI : MonoBehaviour {
     }
 
     void OnMouseEnter() {
-        mouse.SetMouseOverUIElement(true);
+        MoveOnClick.instance.SetMouseOverUIElement(true);
     }
     void OnMouseExit() {
-        mouse.SetMouseOverUIElement(false);
+        MoveOnClick.instance.SetMouseOverUIElement(false);
     }
 }
