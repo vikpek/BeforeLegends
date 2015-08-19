@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 433142}
   - 33: {fileID: 3358132}
   - 23: {fileID: 2374326}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: FigureBase_lp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - 114: {fileID: 11495546}
   - 58: {fileID: 5832426}
   - 114: {fileID: 11402668}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   - 4: {fileID: 403644}
   - 33: {fileID: 3308406}
   - 23: {fileID: 2315170}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 458228}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Figure_Base_PF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 417368}
   - 114: {fileID: 11431286}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: LevelIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - 114: {fileID: 11468934}
   - 114: {fileID: 11464576}
   - 114: {fileID: 11413810}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: HornedLion
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - 4: {fileID: 436062}
   - 33: {fileID: 3316800}
   - 23: {fileID: 2348904}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Stones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - 4: {fileID: 460730}
   - 212: {fileID: 21234866}
   - 114: {fileID: 11479540}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 477142}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: EN_FigureBase_01_SM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 469848}
   - 95: {fileID: 9594096}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: FO_HornedLionFig_01_PF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.10000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 427478}
@@ -279,8 +279,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184096}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.00899999961, y: 3.53299999, z: -.0289999992}
+  m_LocalRotation: {x: .333975822, y: -1.4901163e-08, z: -7.45058149e-09, w: .942581654}
+  m_LocalPosition: {x: -0, y: 3.48600006, z: .209999993}
   m_LocalScale: {x: .0878761634, y: .0878761634, z: .0878762156}
   m_Children: []
   m_Father: {fileID: 417368}
@@ -320,7 +320,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59, y: 0, z: 41.9000015}
+  m_LocalPosition: {x: 38.8199997, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429282}
@@ -675,7 +675,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: c73aebb7e952c0a42a6fa047ae59b118, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
