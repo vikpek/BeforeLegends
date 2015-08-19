@@ -26,9 +26,15 @@ public class BattleParameters : MonoBehaviour{
     }
 
     void Start() {
+
+        if (name != "Olaf")
+            return;
+
         foreach (GameObject gO in levelUpWeapons) {
             gO.SetActive(false);
         }
+        print(level);
+        
         levelUpWeapons[level].SetActive(true);
     }
 

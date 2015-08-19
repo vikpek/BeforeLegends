@@ -94,6 +94,14 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1027660183}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &300808943
+GameObject:
+  m_PrefabParentObject: {fileID: 152984, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+  m_PrefabInternal: {fileID: 1605021594}
+--- !u!1 &352739144
+GameObject:
+  m_PrefabParentObject: {fileID: 159244, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+  m_PrefabInternal: {fileID: 1605021594}
 --- !u!1001 &451037463
 Prefab:
   m_ObjectHideFlags: 0
@@ -590,6 +598,19 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1027660183}
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &1136279095
+GameObject:
+  m_PrefabParentObject: {fileID: 156646, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+  m_PrefabInternal: {fileID: 1605021594}
+--- !u!1 &1160708860
+GameObject:
+  m_PrefabParentObject: {fileID: 146880, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+  m_PrefabInternal: {fileID: 1605021594}
+--- !u!198 &1179602195
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 19857430, guid: 8145e432d6db74d2d9a52f79df9e2fc4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1605021594}
 --- !u!224 &1249102798
 RectTransform:
   m_PrefabParentObject: {fileID: 22490650, guid: 40c59a671573f44129556cf0e500e3a1,
@@ -717,6 +738,10 @@ Prefab:
     - target: {fileID: 11482302, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
       propertyPath: silverMammoth.Array.size
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484276, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+      propertyPath: levelUpWeapons.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 456808, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
       propertyPath: m_LocalPosition.x
@@ -900,9 +925,49 @@ Prefab:
       propertyPath: iceLion.Array.data[14]
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 149216, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484276, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+      propertyPath: levelUpWeapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 352739144}
+    - target: {fileID: 11484276, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+      propertyPath: levelUpWeapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 352739144}
+    - target: {fileID: 11484276, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+      propertyPath: levelUpWeapons.Array.data[2]
+      value: 
+      objectReference: {fileID: 1720743653}
+    - target: {fileID: 11484276, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+      propertyPath: levelUpWeapons.Array.data[3]
+      value: 
+      objectReference: {fileID: 1136279095}
+    - target: {fileID: 11484276, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+      propertyPath: levelUpWeapons.Array.data[4]
+      value: 
+      objectReference: {fileID: 1160708860}
+    - target: {fileID: 11484276, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+      propertyPath: levelUpWeapons.Array.data[5]
+      value: 
+      objectReference: {fileID: 300808943}
+    - target: {fileID: 11484276, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+      propertyPath: levelUpIcon
+      value: 
+      objectReference: {fileID: 2125411595}
+    - target: {fileID: 11484276, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+      propertyPath: levelUpParticel
+      value: 
+      objectReference: {fileID: 1179602195}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1720743653
+GameObject:
+  m_PrefabParentObject: {fileID: 111660, guid: 8145e432d6db74d2d9a52f79df9e2fc4, type: 2}
+  m_PrefabInternal: {fileID: 1605021594}
 --- !u!114 &1830003876
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11481252, guid: 40c59a671573f44129556cf0e500e3a1,
@@ -935,3 +1000,8 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22471190, guid: 40c59a671573f44129556cf0e500e3a1,
     type: 2}
   m_PrefabInternal: {fileID: 1027660183}
+--- !u!212 &2125411595
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 21222188, guid: 8145e432d6db74d2d9a52f79df9e2fc4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1605021594}

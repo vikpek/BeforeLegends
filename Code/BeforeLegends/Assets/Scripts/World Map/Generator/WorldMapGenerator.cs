@@ -95,7 +95,7 @@ public class WorldMapGenerator : MonoBehaviour
     public Vector2 temperatureSeed;
     public Vector2 moistureSeed;
     public Vector2 erosionSeed;
-
+    public Texture2D tileNormalTexture;
     public Dictionary<GameObject, GameObject> enemys;
     
     public FlatHexagon flatHex;
@@ -109,6 +109,7 @@ public class WorldMapGenerator : MonoBehaviour
         enemys = new Dictionary<GameObject, GameObject>();
         flatHex = new FlatHexagon(1);
         setSeeds();
+        packTextures(tileNormalTexture);
         packTextures();
         generate();
         createChunks();
@@ -130,22 +131,34 @@ public class WorldMapGenerator : MonoBehaviour
 
     void packTextures()
     {
-	    chunkTexture = new Texture2D(2048, 2048);
-	    chunkTexture.filterMode = FilterMode.Trilinear;
-	    chunkTextureRects = chunkTexture.PackTextures(tileTextures, 50, 2048);
-	    chunkUVs = new List<Vector2[]>();
-	    foreach(Rect rect in chunkTextureRects){
-		    Vector2[] uvs = new Vector2[flatHex.uv.Length];
-		    for(int i = 0; i < uvs.Length; i++){
+        chunkTexture = new Texture2D(2048, 2048);
+        chunkTexture.filterMode = FilterMode.Trilinear;
+        chunkTextureRects = chunkTexture.PackTextures(tileTextures, 50, 2048);
+        chunkUVs = new List<Vector2[]>();
+        foreach (Rect rect in chunkTextureRects)
+        {
+            Vector2[] uvs = new Vector2[flatHex.uv.Length];
+            for (int i = 0; i < uvs.Length; i++)
+            {
                 Vector2 uv = new Vector2();
-			    uv.x = rect.x + rect.width * flatHex.uv[i].x;
-			    uv.y = rect.y + rect.height * flatHex.uv[i].y;
-			    uvs[i] = uv;
-		    }
-		    chunkUVs.Add(uvs);
-	    }
-	    chunkTexture.Apply();
-	    mapMaterial.mainTexture = chunkTexture;
+                uv.x = rect.x + rect.width * flatHex.uv[i].x;
+                uv.y = rect.y + rect.height * flatHex.uv[i].y;
+                uvs[i] = uv;
+            }
+            chunkUVs.Add(uvs);
+        }
+        chunkTexture.Apply();
+        mapMaterial.mainTexture = chunkTexture;
+    }
+    void packTextures(Texture2D normalTexture)
+    {
+        Texture2D[] normalTextureArray = new Texture2D[12];
+        for (int i = 0; i < normalTextureArray.Length; i++)
+            normalTextureArray[i] = normalTexture;
+        chunkTextureNormal = new Texture2D(2048, 2048);
+        chunkTextureNormal.filterMode = FilterMode.Trilinear;
+        chunkTextureNormal.PackTextures(normalTextureArray, 50, 2048);
+        mapMaterial.SetTexture("_BumpMap", chunkTextureNormal);
     }
 
     void spawnObjects() {

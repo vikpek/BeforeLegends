@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FogOfWarTiles : MonoBehaviour {
 
-    public GameObject 
+    public GameObject Tile;
 	// Use this for initialization
 	void Start () {
 	
