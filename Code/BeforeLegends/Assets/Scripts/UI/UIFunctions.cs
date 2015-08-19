@@ -73,4 +73,20 @@ public class UIFunctions : MonoBehaviour {
         else
             slideState = 2;
     }
+
+    public void ToggleSlideStateNoSound() {
+        if (shopOpen == false)
+            slideState = 1;
+        else
+            slideState = 2;
+    }
+
+    public void ToggleSlideState(UIFunctions child) {
+        child.ToggleSlideStateNoSound();
+        AudioMaster.instance.SlideUIElementA030Play();
+        if (shopOpen == false)
+            slideState = 1;
+        else
+            slideState = 2;
+    }
 }

@@ -28,7 +28,6 @@ public class OlafInRange : MonoBehaviour {
         {
             if (other.gameObject.name.Contains("Lion") && name == "LionVision")
             {
-                //print(other.gameObject.name);
                 other.gameObject.GetComponentInChildren<EnemyAI>().playerInRange = false;
             }
             else if (other.gameObject.name.Contains("Jack") && name == "JackalVision")

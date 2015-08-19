@@ -4,7 +4,7 @@ using System.Collections;
 public class OlafBattleActions : MonoBehaviour{
 
     public void executeAction(BattleController battle){
-        battle.enemyAnimator.animate(3);
+        battle.enemyAnimator.Animate(3);
         battle.battleState = BattleState.ANIMTING;
     }
 
@@ -16,8 +16,8 @@ public class OlafBattleActions : MonoBehaviour{
         battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
         AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
         battle.PrintToBattlelog(AssembleBattleLog(battle));
-        battle.playerAnimator.animate(1);
-        battle.enemyAnimator.animate(3, 0.5f);
+        battle.playerAnimator.Animate(1);
+        battle.enemyAnimator.Animate(3, 0.5f);
         battle.battleState = BattleState.ANIMTING;
     }
 
@@ -30,8 +30,8 @@ public class OlafBattleActions : MonoBehaviour{
         battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
         AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
         battle.PrintToBattlelog(AssembleBattleLog(battle, "and stunned the enemy"));
-        battle.playerAnimator.animate(1);
-        battle.enemyAnimator.animate(3);
+        battle.playerAnimator.Animate(1);
+        battle.enemyAnimator.Animate(3);
         battle.battleState = BattleState.ANIMTING;
     }
 
@@ -43,8 +43,8 @@ public class OlafBattleActions : MonoBehaviour{
         battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
 	    AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.spattack);
         battle.PrintToBattlelog(AssembleBattleLog(battle));
-        battle.playerAnimator.animate(2);
-        battle.enemyAnimator.animate(3, 1.5f);
+        battle.playerAnimator.Animate(2);
+        battle.enemyAnimator.Animate(3, 1.5f);
         battle.battleState = BattleState.ANIMTING;
     }
 
@@ -112,8 +112,8 @@ public class OlafBattleActions : MonoBehaviour{
         battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);
         AudioMaster.instance.audioSource.PlayOneShot(battle.playerWorldObject.GetComponent<MapObjectCarrier>().audioObject.attack);
         battle.PrintToBattlelog(AssembleBattleLog("REEEEEEEEEEEEVENGE UAUAUUAAAAAAAAAAH!"));
-        battle.playerAnimator.animate(1);
-        battle.enemyAnimator.animate(3);
+        battle.playerAnimator.Animate(1);
+        battle.enemyAnimator.Animate(3);
         battle.battleState = BattleState.ANIMTING;
     }
 
