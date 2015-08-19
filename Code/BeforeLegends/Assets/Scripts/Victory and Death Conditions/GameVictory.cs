@@ -45,6 +45,7 @@ public class GameVictory : MonoBehaviour {
 		    }
 	        victory.sprite = victorySprite;
 	        victory.enabled = true;
+	        victory.preserveAspect = true;
 		    Time.timeScale = 0;
 	    }
     }
@@ -58,6 +59,7 @@ public class GameVictory : MonoBehaviour {
             }
             victory.sprite = victorySprite;
             victory.enabled = true;
+            victory.preserveAspect = true;
             Time.timeScale = 0;
         }
     }

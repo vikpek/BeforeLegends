@@ -4,7 +4,7 @@ using System.Collections;
 
     public enum Actor
     {
-        PLAYER, ENEMY
+        PLAYER, ENEMY, NOONE
     }
     [System.Serializable]
     public enum Action
@@ -14,7 +14,7 @@ using System.Collections;
 
     public enum BattleState
     {
-        ANIMTING, IDLE
+        ANIMTING, IDLE, PLAYERDEAD, ENEMYDEAD, ANIMATEDEATH, ANIMATEDEATHPLAYER, ANIMATEDEATHENEMY
     }
 
 public class BattleController : MonoBehaviour{
@@ -106,13 +106,30 @@ public class BattleController : MonoBehaviour{
             PrintToBattlelog("Olaf can't be stopped and deals around 9 billion damage. " + enemyName + " can't stand the mighty power and stares in disbelief as the fury of an exploding sun that is olaf's strength rains down on him.");
         }
 
-        if(checkEnded()) return;
-        
+        CheckEnded();
+
+        if (battleState == BattleState.PLAYERDEAD)
+        {
+            playerAnimator.Animate(4, 0.5f);
+            playerAnimator.SetSpeed(0.3f);
+            battleState = BattleState.ANIMATEDEATHPLAYER;
+        }
+
+        if (battleState == BattleState.ENEMYDEAD)
+        {
+            enemyAnimator.Animate(4, 0.5f);
+            battleState = BattleState.ANIMATEDEATHENEMY;
+        }
+
+        if ((battleState == BattleState.ANIMATEDEATHPLAYER && playerAnimator.isAnimationPlaying() == -1) || (battleState == BattleState.ANIMATEDEATHENEMY && enemyAnimator.isAnimationPlaying() == -1))
+        {
+            EndBattle();
+        }
+
         if(actualActor == Actor.ENEMY)
         {
-            if (playerAnimator.isAnimationPlaying() == "" && enemyAnimator.isAnimationPlaying() == "")
+            if (playerAnimator.isAnimationPlaying() == -1 && enemyAnimator.isAnimationPlaying() == -1)
             {
-
             }
         }
 
@@ -120,20 +137,20 @@ public class BattleController : MonoBehaviour{
         {
             if(battleState == BattleState.IDLE)
             {
-                if (playerAnimator.isAnimationPlaying() == "")
+                if (playerAnimator.isAnimationPlaying() == -1)
                 {
                     playerAnimator.Animate(0);
                 }
-                if (enemyAnimator.isAnimationPlaying() == "")
+                if (enemyAnimator.isAnimationPlaying() == -1)
                 {
                     enemyAnimator.Animate(0);
                 }
             }
             else
             {
-                if(playerAnimator.isAnimationPlaying() == "")
+                if(playerAnimator.isAnimationPlaying() == -1)
                 {
-                    if(enemyAnimator.isAnimationPlaying() == "")
+                    if(enemyAnimator.isAnimationPlaying() == -1)
                     {
                         actualActor = Actor.ENEMY;
                         battleState = BattleState.IDLE;
@@ -148,58 +165,35 @@ public class BattleController : MonoBehaviour{
                 enemy.SendMessage("determineAction", instance);
                 enemy.SendMessage("executeAction", instance);
             }
-            else if (enemyAnimator.isAnimationPlaying() == "")
+            else if (enemyAnimator.isAnimationPlaying() == -1)
             {
-                if (playerAnimator.isAnimationPlaying() == "")
+                if (playerAnimator.isAnimationPlaying() == -1)
                 {
                     actualActor = Actor.PLAYER;
                     battleState = BattleState.IDLE;
                 }
             }
-        
-
         }
-
-        
-        //if (playerAnimator.isAnimationPlaying() == "" && enemyAnimator.isAnimationPlaying() == "")
-        //{
-        //    battleState = BattleState.IDLE;
-        //}
-
-        //if(battleState == BattleState.IDLE && actualActor == Actor.ENEMY)
-        //{
-        //    actualActor = Actor.PLAYER;
-        //}
-
-
-
-
-
-        //if (battleState == BattleState.STARTED) {
-        //    playerParticles.Stop(); // tentative
-        //    enemyParticles.Stop(); // tentative
-        //    battleState = BattleState.ANIMATING;
-        //    if (actualActor == Actor.PLAYER) {
-        //        player.SendMessage("executeAction", instance);		
-        //    }else{
-        //        enemy.SendMessage("determineAction", instance);
-        //        enemy.SendMessage("executeAction", instance);
-        //    }
-        //}else if(battleState == BattleState.ANIMATING && !playerAnimator.isAnimating(playerAnimation) && !enemyAnimator.isAnimating(enemyAnimation)) {
-        //    if(actualActor == Actor.PLAYER){
-        //        battleState = BattleState.STARTED;
-        //        actualActor = Actor.ENEMY;
-        //    }else{
-        //        battleState = BattleState.IDLE;
-        //        actualActor = Actor.PLAYER;
-        //        round++;
-        //    }
-        //}
-
-        
     }
-	
-    public bool checkEnded()
+
+    public void CheckEnded()
+    {
+        if (battleState != BattleState.ANIMATEDEATH)
+        {
+            if (playerData.hitPoints <= 0)
+            {
+                battleState = BattleState.PLAYERDEAD;
+                actualActor = Actor.NOONE;
+            }
+            else if (enemyData.hitPoints <= 0)
+            {
+                battleState = BattleState.ENEMYDEAD;
+                actualActor = Actor.NOONE;
+            }
+        }
+    }
+
+    public bool EndBattle()
     {
 		    if(playerData.hitPoints <= 0)
             {

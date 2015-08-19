@@ -144,8 +144,8 @@ public class StartAnimation : MonoBehaviour {
                 if (model.transform.localPosition.y < 0.1f && secondScreenshake)
                 {
                     secondScreenshake = false;
-                    //GameInfo.instance.doAScreenshake(jumpScreenShake);
-                    //GetComponentInChildren<ParticleSystem>().Emit(400);
+                    GameInfo.instance.doAScreenshake(jumpScreenShake);
+                    GetComponentInChildren<ParticleSystem>().Emit(400);
                 }
                 
                 animator.SetSpeed(jumpAnimationSpeedCurve.Evaluate(actualJumpTime));

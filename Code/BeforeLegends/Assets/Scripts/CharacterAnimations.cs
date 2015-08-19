@@ -62,12 +62,12 @@ public class CharacterAnimations : MonoBehaviour {
         animation.Stop();
     }
 
-    public string isAnimationPlaying()
+    public int isAnimationPlaying()
     {
         //!!!test if Particles are running!!!
         if (animation.isPlaying)
-            return animationClips[actualAnimation].name;
-        return "";
+            return actualAnimation;
+        return -1;
     }
 
     IEnumerator delayAnimation(float delay)

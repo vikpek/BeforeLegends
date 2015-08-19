@@ -1359,7 +1359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &164168
 GameObject:
   m_ObjectHideFlags: 1
@@ -1535,7 +1535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &178044
 GameObject:
   m_ObjectHideFlags: 1
@@ -3757,11 +3757,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400628}
-        m_MethodName: NextTurn
+        m_MethodName: EnemyTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: TurnEnded
@@ -3860,14 +3861,25 @@ MonoBehaviour:
   - {fileID: 102998, guid: 8d8ee6a1a13c2084a9f42f4e4f5811e1, type: 2}
   - {fileID: 157182, guid: db004e1e963af914b961343c362494b0, type: 2}
   - {fileID: 174496, guid: 5112806df1670bf49a74f6c9b7f91ac3, type: 2}
+  - {fileID: 142462, guid: 302b8ae2aaad2dc4c9a7a0177f737adc, type: 2}
+  - {fileID: 113088, guid: 208ef308b7ac049458303c83e1be13c6, type: 2}
+  - {fileID: 104398, guid: 9d366addebe20ce4fb4f83a72ad40fac, type: 2}
   battlePrefabs_editor:
+  - {fileID: 128280, guid: 01bc3d4d6f6b19a4c88f5dffdf47ac78, type: 2}
+  - {fileID: 191616, guid: ac6f1041e85cccd43a88763e3e70a623, type: 2}
+  - {fileID: 139752, guid: b899511a262b5ad44aea172682be6e0c, type: 2}
+  - {fileID: 117458, guid: bfe5f0670f7c8b94dab23fbe60135772, type: 2}
+  - {fileID: 191000, guid: 9117219a3385bd742be22b8fb85927fd, type: 2}
   - {fileID: 174318, guid: d1d7b4b7a3415e047a1ad53f54b93cd2, type: 2}
-  - {fileID: 119020, guid: 541fe84a329c9d8418aca0d715f64969, type: 2}
-  - {fileID: 198658, guid: 74e9d14fbbb0d614094aa5bbe7c42074, type: 2}
-  - {fileID: 141776, guid: a1f9531fa9b74f240a14a438dcf466de, type: 2}
-  - {fileID: 158700, guid: caced76f9c82cb94fb9f4f304d6636d4, type: 2}
-  - {fileID: 189732, guid: b7738e3a25740d04183517c1334425bb, type: 2}
-  - {fileID: 192058, guid: 0d3c6949b2f0fbc4abb984889e66d42f, type: 2}
+  - {fileID: 167748, guid: 8b72d98685886bf4688d8b27a03acd17, type: 2}
+  - {fileID: 126740, guid: 82ce74d4a29b3244c9fbd6190f24f412, type: 2}
+  - {fileID: 143882, guid: 81c3c36bd7c1bdb488cf461010fb1a11, type: 2}
+  - {fileID: 130924, guid: d2dc42731737aa449bcbc41e2960b17a, type: 2}
+  - {fileID: 165012, guid: 8a7fa8a017e6a0f4fb21411cd60224af, type: 2}
+  - {fileID: 161826, guid: 303196a82a1771d488df1a703845e6db, type: 2}
+  - {fileID: 161826, guid: 303196a82a1771d488df1a703845e6db, type: 2}
+  - {fileID: 161826, guid: 303196a82a1771d488df1a703845e6db, type: 2}
+  - {fileID: 161826, guid: 303196a82a1771d488df1a703845e6db, type: 2}
   ressourcePrefabs_editor:
   - {fileID: 199954, guid: f047bfd6b7037b848b8a056789b309c6, type: 2}
   - {fileID: 100126, guid: c1a0b35a4aee812468d3ac5f110467bb, type: 2}
@@ -4098,46 +4110,46 @@ MonoBehaviour:
   - name: wrath
     id: 0
     number: 0
-    costWood: 1
+    costWood: 2
     costStone: 2
-    costFood: 3
-    costSoul: 4
+    costFood: 0
+    costSoul: 0
     guiText: {fileID: 11403800}
     cardImage: {fileID: 11459486}
   - name: stun
     id: 0
     number: 0
-    costWood: 2
-    costStone: 3
-    costFood: 4
-    costSoul: 5
+    costWood: 3
+    costStone: 1
+    costFood: 0
+    costSoul: 0
     guiText: {fileID: 11412600}
     cardImage: {fileID: 11451562}
   - name: heal
     id: 0
     number: 0
-    costWood: 3
-    costStone: 4
-    costFood: 5
-    costSoul: 6
+    costWood: 4
+    costStone: 2
+    costFood: 0
+    costSoul: 1
     guiText: {fileID: 11437088}
     cardImage: {fileID: 11413570}
   - name: revenge
     id: 0
     number: 0
-    costWood: 4
-    costStone: 5
-    costFood: 6
-    costSoul: 7
+    costWood: 2
+    costStone: 2
+    costFood: 0
+    costSoul: 1
     guiText: {fileID: 11447312}
     cardImage: {fileID: 11481758}
   - name: shield
     id: 0
     number: 0
-    costWood: 5
-    costStone: 6
-    costFood: 7
-    costSoul: 8
+    costWood: 1
+    costStone: 3
+    costFood: 0
+    costSoul: 1
     guiText: {fileID: 11465084}
     cardImage: {fileID: 11423986}
 --- !u!114 &11444022
@@ -6374,16 +6386,16 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163878}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: .39199999}
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7852,7 +7864,7 @@ RectTransform:
   m_GameObject: {fileID: 125242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.22920537, y: 4.1154089, z: .385747313}
+  m_LocalScale: {x: 1.06352174, y: 1.35512459, z: .385747313}
   m_Children:
   - {fileID: 22435838}
   - {fileID: 22453450}
@@ -7860,7 +7872,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -1005.91455, y: -221.383179}
+  m_AnchoredPosition: {x: -331.292664, y: -72.8972015}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22415010
@@ -8257,7 +8269,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -34}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22435094
@@ -8581,7 +8593,7 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -8.80206644e-05, y: 0}
-  m_SizeDelta: {x: 364.200012, y: 0}
+  m_SizeDelta: {x: 364.200012, y: 600}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22451440
 RectTransform:
@@ -8805,7 +8817,7 @@ RectTransform:
   m_GameObject: {fileID: 128708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .457560837, y: .457415015, z: 1}
+  m_LocalScale: {x: .150695249, y: .150617912, z: 1}
   m_Children:
   - {fileID: 22403938}
   - {fileID: 22494226}
@@ -8820,7 +8832,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1016.47791}
+  m_AnchoredPosition: {x: 0, y: 334.706604}
   m_SizeDelta: {x: 2600, y: 2600}
   m_Pivot: {x: .5, y: 1}
 --- !u!224 &22465910
@@ -9092,7 +9104,7 @@ RectTransform:
   m_GameObject: {fileID: 125598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .711761296, y: .711534441, z: 1}
+  m_LocalScale: {x: .234414831, y: .234294534, z: 1}
   m_Children:
   - {fileID: 22403088}
   - {fileID: 22477970}
@@ -9104,7 +9116,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 750.39978, y: 250.053528}
+  m_AnchoredPosition: {x: 247.140198, y: 82.3378143}
   m_SizeDelta: {x: 413.600006, y: 2400}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22481102

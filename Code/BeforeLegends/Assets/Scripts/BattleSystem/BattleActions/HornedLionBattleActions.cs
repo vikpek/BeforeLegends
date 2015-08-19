@@ -61,12 +61,14 @@ public class HornedLionBattleActions : MonoBehaviour{
                 battle.enemyData.lastDamageDealt = battle.playerData.lastDamageReceived;
                 battle.playerData.hitPoints -= battle.playerData.lastDamageReceived;
                 battle.playerHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.enemyData.lastDamageDealt);
+                battle.enemyData.actionPoints--;
                 battle.PrintToBattlelog(AssembleBattleLog(battle));
             }
             else {//revenge reflects damage
                 battle.playerData.lastDamageReceived = 0; //battle.enemyData.calcDamage(battle.playerData, 1);
                 battle.enemyData.lastDamageDealt = battle.enemyData.calcDamage(battle.playerData, 4);
                 battle.enemyData.hitPoints -= battle.enemyData.lastDamageDealt;
+                battle.enemyData.actionPoints--;
                 battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.enemyData.lastDamageDealt);
                 battle.PrintToBattlelog("Olaf reflected the damage, " + battle.enemyName + " dealt " + battle.enemyData.lastDamageDealt.ToString("F1") + " to himself");
             }
@@ -79,14 +81,13 @@ public class HornedLionBattleActions : MonoBehaviour{
     { // this power allows the Lion to heal itself
 	    battle.enemyParticles.Play();
 	    battle.enemyData.actionPoints--;
-	    battle.enemyData.hitPoints += battle.enemyData.maxHitPoints*0.05f;
+	    battle.enemyData.hitPoints += battle.enemyData.maxHitPoints*0.3f;
 	    if (battle.enemyData.hitPoints > battle.enemyData.maxHitPoints){
 		    battle.enemyData.hitPoints = battle.enemyData.maxHitPoints;
         }
     }
 
     void Skip(BattleController battle) {
-        battle.enemyData.actionPoints--;
         battle.stunned = false;
         battle.PrintToBattlelog(AssembleBattleLog(battle.enemyName + " is stunned and can't act"));
     }

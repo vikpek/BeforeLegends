@@ -57,7 +57,7 @@ public class PathIndicator : MonoBehaviour {
     	for(int i = 0; i < newPath.Length; i++){
     		gos[i].SetActive(true);
     		gos[i].transform.position = WorldMapData.instance.tiles[newPath[i].x, newPath[i].y].position;
-    		gos[i].transform.position = new Vector3(gos[i].transform.position.x, gos[i].transform.position.y + 0.2f, gos[i].transform.position.z);
+    		gos[i].transform.position = new Vector3(gos[i].transform.position.x, gos[i].transform.position.y + 0.01f, gos[i].transform.position.z);
     	}
     }
 
