@@ -1535,7 +1535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &178044
 GameObject:
   m_ObjectHideFlags: 1
@@ -3407,8 +3407,8 @@ MonoBehaviour:
   shift: 0
   s: 0
   g: 0
-  screenWidth: 975
-  screenHeight: 548
+  screenWidth: 1755
+  screenHeight: 987
   resized: 0
   getRelSize: 0
 --- !u!114 &11426720
@@ -3861,13 +3861,18 @@ MonoBehaviour:
   - {fileID: 157182, guid: db004e1e963af914b961343c362494b0, type: 2}
   - {fileID: 174496, guid: 5112806df1670bf49a74f6c9b7f91ac3, type: 2}
   battlePrefabs_editor:
+  - {fileID: 128280, guid: 01bc3d4d6f6b19a4c88f5dffdf47ac78, type: 2}
+  - {fileID: 191616, guid: ac6f1041e85cccd43a88763e3e70a623, type: 2}
+  - {fileID: 139752, guid: b899511a262b5ad44aea172682be6e0c, type: 2}
+  - {fileID: 117458, guid: bfe5f0670f7c8b94dab23fbe60135772, type: 2}
+  - {fileID: 191000, guid: 9117219a3385bd742be22b8fb85927fd, type: 2}
   - {fileID: 174318, guid: d1d7b4b7a3415e047a1ad53f54b93cd2, type: 2}
-  - {fileID: 119020, guid: 541fe84a329c9d8418aca0d715f64969, type: 2}
-  - {fileID: 198658, guid: 74e9d14fbbb0d614094aa5bbe7c42074, type: 2}
-  - {fileID: 141776, guid: a1f9531fa9b74f240a14a438dcf466de, type: 2}
-  - {fileID: 158700, guid: caced76f9c82cb94fb9f4f304d6636d4, type: 2}
-  - {fileID: 189732, guid: b7738e3a25740d04183517c1334425bb, type: 2}
-  - {fileID: 192058, guid: 0d3c6949b2f0fbc4abb984889e66d42f, type: 2}
+  - {fileID: 167748, guid: 8b72d98685886bf4688d8b27a03acd17, type: 2}
+  - {fileID: 126740, guid: 82ce74d4a29b3244c9fbd6190f24f412, type: 2}
+  - {fileID: 143882, guid: 81c3c36bd7c1bdb488cf461010fb1a11, type: 2}
+  - {fileID: 130924, guid: d2dc42731737aa449bcbc41e2960b17a, type: 2}
+  - {fileID: 165012, guid: 8a7fa8a017e6a0f4fb21411cd60224af, type: 2}
+  - {fileID: 161826, guid: 303196a82a1771d488df1a703845e6db, type: 2}
   ressourcePrefabs_editor:
   - {fileID: 199954, guid: f047bfd6b7037b848b8a056789b309c6, type: 2}
   - {fileID: 100126, guid: c1a0b35a4aee812468d3ac5f110467bb, type: 2}
@@ -4098,46 +4103,46 @@ MonoBehaviour:
   - name: wrath
     id: 0
     number: 0
-    costWood: 1
+    costWood: 2
     costStone: 2
-    costFood: 3
-    costSoul: 4
+    costFood: 0
+    costSoul: 0
     guiText: {fileID: 11403800}
     cardImage: {fileID: 11459486}
   - name: stun
     id: 0
     number: 0
-    costWood: 2
-    costStone: 3
-    costFood: 4
-    costSoul: 5
+    costWood: 3
+    costStone: 1
+    costFood: 0
+    costSoul: 0
     guiText: {fileID: 11412600}
     cardImage: {fileID: 11451562}
   - name: heal
     id: 0
     number: 0
-    costWood: 3
-    costStone: 4
-    costFood: 5
-    costSoul: 6
+    costWood: 4
+    costStone: 2
+    costFood: 0
+    costSoul: 1
     guiText: {fileID: 11437088}
     cardImage: {fileID: 11413570}
   - name: revenge
     id: 0
     number: 0
-    costWood: 4
-    costStone: 5
-    costFood: 6
-    costSoul: 7
+    costWood: 2
+    costStone: 2
+    costFood: 0
+    costSoul: 1
     guiText: {fileID: 11447312}
     cardImage: {fileID: 11481758}
   - name: shield
     id: 0
     number: 0
-    costWood: 5
-    costStone: 6
-    costFood: 7
-    costSoul: 8
+    costWood: 1
+    costStone: 3
+    costFood: 0
+    costSoul: 1
     guiText: {fileID: 11465084}
     cardImage: {fileID: 11423986}
 --- !u!114 &11444022
@@ -6684,8 +6689,8 @@ MonoBehaviour:
   shift: 0
   s: 0
   g: 0
-  screenWidth: 975
-  screenHeight: 548
+  screenWidth: 1755
+  screenHeight: 987
   resized: 0
   getRelSize: 0
 --- !u!114 &11495748
@@ -6771,8 +6776,8 @@ MonoBehaviour:
   shift: 0
   s: 0
   g: 0
-  screenWidth: 975
-  screenHeight: 548
+  screenWidth: 1755
+  screenHeight: 987
   resized: 0
   getRelSize: 0
 --- !u!114 &11496860
@@ -8581,7 +8586,7 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -8.80206644e-05, y: 0}
-  m_SizeDelta: {x: 364.200012, y: 0}
+  m_SizeDelta: {x: 364.200012, y: 600}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22451440
 RectTransform:
