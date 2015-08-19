@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 421576}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: EN_FigureBase_01_SM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 491832}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: Figure_Base_PF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - 4: {fileID: 483636}
   - 33: {fileID: 3374656}
   - 23: {fileID: 2333178}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: FigureBase_lp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - 114: {fileID: 11454688}
   - 58: {fileID: 5807212}
   - 114: {fileID: 11427370}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 403964}
   - 95: {fileID: 9540388}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: FO_MammutFig_01_PF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - 114: {fileID: 11458952}
   - 114: {fileID: 11455126}
   - 114: {fileID: 11473256}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: Mammoth
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - 4: {fileID: 440304}
   - 33: {fileID: 3361370}
   - 23: {fileID: 2303546}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - 4: {fileID: 471006}
   - 212: {fileID: 21299888}
   - 114: {fileID: 11490550}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - 4: {fileID: 482360}
   - 33: {fileID: 3305962}
   - 23: {fileID: 2381982}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: Stones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 430136}
   - 114: {fileID: 11409352}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: LevelIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165056}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -282,8 +282,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192862}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.8099995, y: 0, z: 10}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 32.7900009, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 468906}
@@ -295,7 +295,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189840}
-  m_LocalRotation: {x: -.318478405, y: -.791807652, z: -.521121562, w: .00668212632}
+  m_LocalRotation: {x: -.318478376, y: -.791807532, z: -.521121502, w: .00668212539}
   m_LocalPosition: {x: -.173999995, y: .123000003, z: .0299999993}
   m_LocalScale: {x: .157001957, y: .142735407, z: .143184632}
   m_Children: []
@@ -336,7 +336,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 524765e5fa0bcb34192186f7fc31a1ff, type: 2}
+  - {fileID: 2100000, guid: 2d37fe3aa362b094b8e27377861e598a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -527,15 +527,15 @@ MonoBehaviour:
     attack: 3
     defense: 2
     armor: 5
-    damage: 6
-    hitPoints: 120
-    maxHitPoints: 120
+    damage: 10
+    hitPoints: 150
+    maxHitPoints: 150
     actionPoints: 1
     maxActionPoints: 1
     speed: 0
     critStrike: .0500000007
     critBlock: 0
-    expToGain: 1320
+    expToGain: 2250
     lastDamageReceived: 0
     lastDamageDealt: 0
   level: 3

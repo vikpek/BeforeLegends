@@ -38,7 +38,7 @@ public class StartAnimation : MonoBehaviour {
     CharacterAnimations animator;
 
     public GameObject model;
-    bool animateStart = true;
+    public bool animateStart = true;
 
 
     public bool reset = false;
@@ -56,6 +56,24 @@ public class StartAnimation : MonoBehaviour {
         startPositionModel = model.transform.position;
 	}
 	
+    public void Reset()
+    {
+        actualFallTime = 0;
+        actualJumpTime = 0;
+        actualJumpTimeOffset = 0;
+        fall = true;
+        animateStart = true;
+        jump = true;
+        reset = false;
+        fallJumpTimeOffset = false;
+        animateStartInitialized = false;
+        transform.position = startPosition;
+        model.transform.position = startPositionModel;
+        animator.StopAnimation();
+        secondScreenshake = true;
+        animateStart = true;
+    }
+
 	// Update is called once per frame
 	void Update () 
     {
@@ -65,19 +83,7 @@ public class StartAnimation : MonoBehaviour {
 
         if(reset)
         {
-            actualFallTime = 0;
-            actualJumpTime = 0;
-            actualJumpTimeOffset = 0;
-            fall = true;
-            animateStart = true;
-            jump = true;
-            reset = false;
-            fallJumpTimeOffset = false;
-            animateStartInitialized = false;
-            transform.position = startPosition;
-            model.transform.position = startPositionModel;
-            animator.StopAnimation();
-            secondScreenshake = true;
+            Reset();
         }
 
         if(Input.GetKeyDown(KeyCode.P))

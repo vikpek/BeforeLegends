@@ -203,6 +203,7 @@ public class BattleController : MonoBehaviour{
 		    }
             else if(enemyData.hitPoints <= 0)
             {
+                player.GetComponent<StartAnimation>().Reset();
                 enemyWorldObject.transform.parent.gameObject.SetActive(false);
                 enemyWorldObject.GetComponent<EnemyAI>().enabled = false;
                 enemyWorldObject.GetComponent<LPathfinding>().enabled = false;
@@ -231,7 +232,7 @@ public class BattleController : MonoBehaviour{
 
 	    enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[appID]);
         enemy.SetActive(true);
-
+        
         playerAnimator = player.GetComponent<CharacterAnimations>();
         enemyAnimator = enemy.GetComponent<CharacterAnimations>();
 
@@ -248,6 +249,7 @@ public class BattleController : MonoBehaviour{
 
         battleLog.text = "";
         AssignEnemyName();
+
     }
 
     public void PrintToBattlelog(string content) {
