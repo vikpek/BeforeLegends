@@ -1799,7 +1799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &195460
 GameObject:
   m_ObjectHideFlags: 1
@@ -4922,7 +4922,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100432}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 462fddd6cba942a49bef8a49c7ddebf4, type: 3}
   m_Name: 
@@ -4959,22 +4959,22 @@ MonoBehaviour:
     m_Curve:
     - time: 0
       value: 0
-      inSlope: 8
-      outSlope: 8
+      inSlope: 6
+      outSlope: 6
       tangentMode: 10
     - time: .5
-      value: 4
+      value: 3
       inSlope: 0
       outSlope: 0
       tangentMode: 10
     - time: 1
       value: 0
-      inSlope: -8
-      outSlope: -8
+      inSlope: -6
+      outSlope: -6
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
-  rotateTime: .100000001
+  rotateTime: .200000003
   cheatEnabled: 0
 --- !u!114 &11459256
 MonoBehaviour:
@@ -7905,7 +7905,7 @@ RectTransform:
   - {fileID: 22463554}
   - {fileID: 22467902}
   m_Father: {fileID: 22405612}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -7921,10 +7921,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 22416746}
   - {fileID: 22446556}
   - {fileID: 22404394}
   - {fileID: 22434664}
+  - {fileID: 22416746}
   m_Father: {fileID: 466610}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
@@ -8073,7 +8073,7 @@ RectTransform:
   - {fileID: 22400762}
   - {fileID: 22478806}
   m_Father: {fileID: 22405612}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -8428,7 +8428,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 22405612}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -34}
@@ -8699,7 +8699,7 @@ RectTransform:
   - {fileID: 22430320}
   - {fileID: 22412902}
   m_Father: {fileID: 22405612}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
