@@ -115,7 +115,47 @@ public class FogOfWarTiles : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                WorldMapData data = WorldMapData.instance;
+                GameObject go = (GameObject)Instantiate(CharacterModelPrefabs.prefabs[0], WorldMapData.instance.tiles[MouseTileInput.instance.actualTile.x, MouseTileInput.instance.actualTile.y].position, Quaternion.identity);
+                go.transform.parent = transform;
+                WorldMapData.instance.tiles[MouseTileInput.instance.actualTile.x, MouseTileInput.instance.actualTile.y].gameObjectList.Add(go);
+                WorldMapGenerator.instance.enemys.Add(go, go.GetComponentInChildren<MapObjectCarrier>().gameObject);
+                go.GetComponentInChildren<MapObjectCarrier>().gameObject.SetActive(true);
+                FogOfWar.instance.SetLayerRecursively(go, 15);
+            }
+        }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                WorldMapData data = WorldMapData.instance;
+                GameObject go = (GameObject)Instantiate(CharacterModelPrefabs.prefabs[1], WorldMapData.instance.tiles[MouseTileInput.instance.actualTile.x, MouseTileInput.instance.actualTile.y].position, Quaternion.identity);
+                go.transform.parent = transform;
+                WorldMapData.instance.tiles[MouseTileInput.instance.actualTile.x, MouseTileInput.instance.actualTile.y].gameObjectList.Add(go);
+                WorldMapGenerator.instance.enemys.Add(go, go.GetComponentInChildren<MapObjectCarrier>().gameObject);
+                go.GetComponentInChildren<MapObjectCarrier>().gameObject.SetActive(true);
+                FogOfWar.instance.SetLayerRecursively(go, 15);
+            }
+        }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                WorldMapData data = WorldMapData.instance;
+                GameObject go = (GameObject)Instantiate(CharacterModelPrefabs.prefabs[2], WorldMapData.instance.tiles[MouseTileInput.instance.actualTile.x, MouseTileInput.instance.actualTile.y].position, Quaternion.identity);
+                go.transform.parent = transform;
+                WorldMapData.instance.tiles[MouseTileInput.instance.actualTile.x, MouseTileInput.instance.actualTile.y].gameObjectList.Add(go);
+                WorldMapGenerator.instance.enemys.Add(go, go.GetComponentInChildren<MapObjectCarrier>().gameObject);
+                go.GetComponentInChildren<MapObjectCarrier>().gameObject.SetActive(true);
+                FogOfWar.instance.SetLayerRecursively(go, 15);
+            }
+        }
         if (Input.GetKeyDown(KeyCode.X))
         {
             Cheat();

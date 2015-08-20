@@ -15,7 +15,8 @@ public class MouseTileInput : MonoBehaviour {
         }
     }
 
-    public Vec2int lastTile = new Vec2int(0, 0); 
+    public Vec2int lastTile = new Vec2int(0, 0);
+    public Vec2int actualTile = new Vec2int(0, 0);
 
     public Vector3 lastTilePos = Vector3.zero;
 
@@ -41,6 +42,8 @@ public class MouseTileInput : MonoBehaviour {
                         {
                             Messenger.instance.send(new MouseTileChangedMessage(lastTile, lastTilePos, lastWorldPos));
                         }
+                        actualTile.x = newTileX;
+                        actualTile.y = newTileY;
                         lastTile.y = newTileY;
                         lastTile.x = newTileX;
                         lastTilePos = data.tiles[newTileX, newTileY].position;
