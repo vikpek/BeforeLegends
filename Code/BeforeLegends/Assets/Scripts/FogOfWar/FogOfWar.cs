@@ -171,13 +171,12 @@ public class FogOfWar : MonoBehaviour {
         foreach (GameObject gO in enemys) {
             SetLayerRecursively(gO, 15);
         }
-        GameObject.Find("FogOfWar").SetActive(false);
     }
 
     void Update() 
     {
         if(Input.GetKeyDown(KeyCode.X)) {
-           // Cheat();
+           Cheat();
         }
         if (Input.GetKeyDown(KeyCode.L))
             CheckTiles(new Vec2int(0, 0), 5);

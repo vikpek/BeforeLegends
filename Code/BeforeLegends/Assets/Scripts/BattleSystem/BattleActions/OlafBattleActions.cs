@@ -111,7 +111,7 @@ public class OlafBattleActions : MonoBehaviour{
             battle.playerData.hitPoints = battle.playerData.maxHitPoints;
         }
         battle.PrintToBattlelog(AssembleBattleLog("Olaf shielded himself"));
-        battle.playerAnimator.StartShieldAnimation();
+        //battle.playerAnimator.StartShieldAnimation();
         StartCoroutine(battle.SetBattleStateAndActor(BattleState.IDLE, Actor.ENEMY, 2f));
         /*
          * awesome stuff! 

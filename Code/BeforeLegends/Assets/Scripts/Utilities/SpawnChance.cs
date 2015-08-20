@@ -6,41 +6,39 @@ public class SpawnChance
 {
     public string tileType;
 
-    //silver
+    //Lion
     public float silverLion;
-    public float silverJackal;
-    public float silverMammoth;
-
-    //ice
     public float iceLion;
-    public float iceJackal;
-    public float iceMammoth;
-
-    //green
     public float greenLion;
-    public float greenJackal;
-    public float greenMammoth;
-
-    //desert
     public float desertLion;
-    public float desertJackal;
-    public float desertMammoth;
-    
-    //Random shit
     public float hornedLion;
-    public float mammoth;
     public float tigerLion;
+
+    //Jackal
+    public float silverJackal;
+    public float iceJackal;
+    public float greenJackal;
+    public float desertJackal;
+    
+    //Mammoth
+    public float grasslandMammoth;
+    public float arcticMammoth;
+    public float jungleMammoth;
+    public float desertMammoth;
+    public float forestMammoth;
+
+    
 
 
     public float chance;
 
     public void overallSpawnChance()
     {
-        chance = silverLion + silverJackal + silverMammoth + 
-            iceLion + iceJackal + iceMammoth + 
-            greenLion + greenJackal + greenMammoth + 
-            desertLion + desertJackal + desertMammoth + 
-            hornedLion + mammoth + tigerLion;
+        chance = silverLion + silverJackal + grasslandMammoth +
+            iceLion + iceJackal + arcticMammoth +
+            greenLion + greenJackal + jungleMammoth + 
+            desertLion + desertJackal + desertMammoth +
+            hornedLion + forestMammoth + tigerLion;
 
         chance *= 0.66f;
     }
@@ -54,44 +52,44 @@ public class SpawnChance
         if (rand > silverLion && 
             rand < silverLion + silverJackal)
             return 1;
-        if (rand > silverLion + silverJackal && 
-            rand < silverLion + silverJackal + silverMammoth)
+        if (rand > silverLion + silverJackal &&
+            rand < silverLion + silverJackal + grasslandMammoth)
             return 2;
-        if (rand > silverLion + silverJackal + silverMammoth && 
-            rand < silverLion + silverJackal + silverMammoth + iceLion)
+        if (rand > silverLion + silverJackal + grasslandMammoth &&
+            rand < silverLion + silverJackal + grasslandMammoth + iceLion)
             return 3;
-        if (rand > silverLion + silverJackal + silverMammoth + iceLion && 
-            rand < silverLion + silverJackal + silverMammoth + iceLion + iceJackal)
+        if (rand > silverLion + silverJackal + grasslandMammoth + iceLion &&
+            rand < silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal)
             return 4;
-        if (rand > silverLion + silverJackal + silverMammoth + iceLion + iceJackal && 
-            rand < silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth)
+        if (rand > silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal &&
+            rand < silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth)
             return 5;
-        if (rand > silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth && 
-            rand < silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion)
+        if (rand > silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth &&
+            rand < silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion)
             return 6;
-        if (rand > silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion && 
-            rand < silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal)
+        if (rand > silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion &&
+            rand < silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal)
             return 7;
-        if (rand > silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal &&
-            rand < silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth)
+        if (rand > silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal &&
+            rand < silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal + jungleMammoth)
             return 8;
-        if (rand > silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth &&
-            rand < silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth + desertLion)
+        if (rand > silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal + jungleMammoth &&
+            rand < silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal + jungleMammoth + desertLion)
             return 9;
-        if (rand > silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth + desertLion &&
-            rand < silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth + desertLion + desertJackal)
+        if (rand > silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal + jungleMammoth + desertLion &&
+            rand < silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal + jungleMammoth + desertLion + desertJackal)
             return 10;
-        if (rand > silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth + desertLion + desertJackal &&
-            rand < silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth + desertLion + desertJackal + desertMammoth)
+        if (rand > silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal + jungleMammoth + desertLion + desertJackal &&
+            rand < silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal + jungleMammoth + desertLion + desertJackal + desertMammoth)
             return 11;
-        if (rand > silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth + desertLion + desertJackal + desertMammoth &&
-            rand < silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth + desertLion + desertJackal + desertMammoth + hornedLion)
+        if (rand > silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal + jungleMammoth + desertLion + desertJackal + desertMammoth &&
+            rand < silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal + jungleMammoth + desertLion + desertJackal + desertMammoth + hornedLion)
             return 12;
-        if (rand > silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth + desertLion + desertJackal + desertMammoth + hornedLion &&
-            rand < silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth + desertLion + desertJackal + desertMammoth + hornedLion + mammoth)
+        if (rand > silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal + jungleMammoth + desertLion + desertJackal + desertMammoth + hornedLion &&
+            rand < silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal + jungleMammoth + desertLion + desertJackal + desertMammoth + hornedLion + forestMammoth)
             return 13;
-        if (rand > silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth + desertLion + desertJackal + desertMammoth + hornedLion + mammoth &&
-            rand < silverLion + silverJackal + silverMammoth + iceLion + iceJackal + iceMammoth + greenLion + greenJackal + greenMammoth + desertLion + desertJackal + desertMammoth + hornedLion + mammoth + tigerLion)
+        if (rand > silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal + jungleMammoth + desertLion + desertJackal + desertMammoth + hornedLion + forestMammoth &&
+            rand < silverLion + silverJackal + grasslandMammoth + iceLion + iceJackal + arcticMammoth + greenLion + greenJackal + jungleMammoth + desertLion + desertJackal + desertMammoth + hornedLion + forestMammoth + tigerLion)
             return 14;
         return 999;
 
