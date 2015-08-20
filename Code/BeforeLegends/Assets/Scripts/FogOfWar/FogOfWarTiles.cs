@@ -77,9 +77,9 @@ public class FogOfWarTiles : MonoBehaviour {
         cheatEnabled = true;
         for (int x = 0; x < WorldMapGenerator.instance.size.x; x++ )
         {
-            for (int y = 0; y < WorldMapGenerator.instance.size.x; y++)
+            for (int y = WorldMapGenerator.instance.size.y - 1; 0 <= y; y--)
             {
-                AddTileToUnFOW(WorldMapData.instance.tiles[x, y].gridPos, WorldMapData.instance.tiles[x, y].matID, new Vec2int(0,0));
+                AddTileToUnFOW(WorldMapData.instance.tiles[y, x].gridPos, WorldMapData.instance.tiles[x, y].matID, new Vec2int(0,0));
             }
         }
     }

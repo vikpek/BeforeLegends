@@ -7,7 +7,7 @@ public class TileCursor : MonoBehaviour
     {
         if(WorldMapGenerator.instance.generationComplete)
         {
-            if (WorldMapData.instance.tiles[MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y].traversable)
+            if (WorldMapData.instance.tiles[MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y].traversable && WorldMapData.instance.tiles[MouseTileInput.instance.lastTile.x, MouseTileInput.instance.lastTile.y].alreadyFlipped)
             {
                 transform.position = new Vector3(MouseTileInput.instance.lastTilePos.x, transform.position.y, MouseTileInput.instance.lastTilePos.z);
             }
