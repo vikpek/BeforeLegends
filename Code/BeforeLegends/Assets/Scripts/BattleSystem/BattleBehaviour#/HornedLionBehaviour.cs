@@ -20,6 +20,10 @@ public class HornedLionBehaviour : MonoBehaviour
             {
                 battle.enemyAction = Action.DOUBLEDAMAGE;
             }
+            else
+            {
+                battle.enemyAction = Action.ATTACK;
+            }
         }
 
         if(name.Contains("Mammoth"))

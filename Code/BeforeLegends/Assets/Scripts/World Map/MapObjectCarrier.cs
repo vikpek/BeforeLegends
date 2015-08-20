@@ -54,9 +54,9 @@ public class MapObjectCarrier : MonoBehaviour {
 	    data.pos = pos;
 	    worlddata.tiles[data.pos.x, data.pos.y].mapObjects.Add(data);
 	    CollectRessources(pos);
-	    FogOfWar.instance.CheckTiles(pos, FogOfWar.instance.visionRange);
-	    FogOfWar.instance.SetEntitiesToVisible();
-	    FogOfWar.instance.SetEntitiesToInvisible();
+        FogOfWar.instance.CheckTiles(pos, FogOfWar.instance.visionRange);
+        FogOfWar.instance.SetEntitiesToVisible();
+        FogOfWar.instance.SetEntitiesToInvisible();
     }
 
     public void followPath(Vec2int[] path, float dur) // don't know if that works bc there WAS a yield ._.

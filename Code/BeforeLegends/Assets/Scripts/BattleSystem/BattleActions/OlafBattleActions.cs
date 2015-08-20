@@ -10,6 +10,7 @@ public class OlafBattleActions : MonoBehaviour{
 
     public void attack(BattleController battle)
     { // Basic attack
+        BattleMapCards.instance.DeactivateAllCards();
         battle.playerParticles.PlayerAttackParticles();
         battle.enemyData.lastDamageReceived = battle.playerData.calcDamage(battle.enemyData, 1);
         battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
@@ -24,8 +25,11 @@ public class OlafBattleActions : MonoBehaviour{
 
     public void Stun(BattleController battle)
     { // Less damage, but lets the enemy skip his next action
+        CardManager.Instance.CardAS(1, -1);
+        BattleMapCards.instance.DeactivateAllCards();
+
         battle.playerParticles.PlayerStunParticles();
-        battle.enemyData.lastDamageReceived = battle.playerData.calcDamage(battle.enemyData, 0.3f);
+        battle.enemyData.lastDamageReceived = battle.playerData.calcDamage(battle.enemyData, 1f);
         battle.stunned = true;
         battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
         battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
@@ -39,6 +43,9 @@ public class OlafBattleActions : MonoBehaviour{
 
     public void enraged(BattleController battle)
     { // Attack that deals more damage when low on HP
+        CardManager.Instance.CardAS(0, -1);
+        BattleMapCards.instance.DeactivateAllCards();
+
         battle.playerParticles.PlayerWrathParticles();
         battle.enemyData.lastDamageReceived = battle.playerData.calcDamage(battle.enemyData, 2);
         battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
@@ -53,10 +60,13 @@ public class OlafBattleActions : MonoBehaviour{
 
     public void healself(BattleController battle)
     { // the char heals himself
+        CardManager.Instance.CardAS(2, -1);
+        BattleMapCards.instance.DeactivateAllCards();
+
         battle.playerParticles.PlayerHealParticles();
         battle.playerData.lastDamageDealt = 0;
         battle.enemyData.lastDamageReceived = 0;
-	    battle.playerData.hitPoints += battle.playerData.maxHitPoints * 0.3f;
+	    battle.playerData.hitPoints += battle.playerData.maxHitPoints * 0.7f;
 	    if (battle.playerData.hitPoints > battle.playerData.maxHitPoints){
 		    battle.playerData.hitPoints = battle.playerData.maxHitPoints;
 	    }
@@ -91,9 +101,12 @@ public class OlafBattleActions : MonoBehaviour{
 
     public void Shield(BattleController battle)
     {
+        CardManager.Instance.CardAS(4, -1);
+        BattleMapCards.instance.DeactivateAllCards();
+
         battle.playerParticles.PlayerShieldParticles();
         battle.shielded = true;
-        battle.playerData.hitPoints += battle.playerData.maxHitPoints * 0.15f;
+        battle.playerData.hitPoints += battle.playerData.maxHitPoints * 0.2f;
         if (battle.playerData.hitPoints > battle.playerData.maxHitPoints) {
             battle.playerData.hitPoints = battle.playerData.maxHitPoints;
         }
@@ -107,8 +120,11 @@ public class OlafBattleActions : MonoBehaviour{
 
     public void Revenge(BattleController battle)
     {
+        CardManager.Instance.CardAS(3, -1);
+        BattleMapCards.instance.DeactivateAllCards();
+
         battle.playerParticles.PlayerRevengeParticles();
-        battle.enemyData.lastDamageReceived = battle.playerData.lastDamageReceived;
+        battle.enemyData.lastDamageReceived = battle.playerData.lastDamageReceived * 2;
         battle.playerData.lastDamageDealt = battle.enemyData.lastDamageReceived;
         battle.enemyData.hitPoints -= battle.enemyData.lastDamageReceived;
         battle.enemyHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.playerData.lastDamageDealt);

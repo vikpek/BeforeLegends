@@ -171,6 +171,7 @@ public class BattleController : MonoBehaviour{
             {
                 if (playerAnimator.isAnimationPlaying() == -1)
                 {
+                    BattleMapCards.instance.ActivateAllCards();
                     actualActor = Actor.PLAYER;
                     battleState = BattleState.IDLE;
                 }
@@ -221,7 +222,7 @@ public class BattleController : MonoBehaviour{
 	    playerWorldObject = iPlayer;
         enemyWorldObject = iEnemy;
 
-	    playerData = iPlayer.GetComponent<MapObjectCarrier>().data.battleStats;
+	    playerData = iPlayer.GetComponent<BattleParameters>().battleParameters;
 	    enemyData = iEnemy.GetComponent<MapObjectCarrier>().data.battleStats;
 
 	    actualActor = Actor.PLAYER;
