@@ -71,6 +71,8 @@ public class BattleController : MonoBehaviour{
 
     public Actor actualActor;
 
+    public GameObject[] weapons;
+
     [HideInInspector] public bool stunned;
     [HideInInspector] public bool shielded;
     [HideInInspector] public bool revenge;
@@ -171,6 +173,7 @@ public class BattleController : MonoBehaviour{
             {
                 if (playerAnimator.isAnimationPlaying() == -1)
                 {
+                    round++;
                     BattleMapCards.instance.ActivateAllCards();
                     actualActor = Actor.PLAYER;
                     battleState = BattleState.IDLE;
@@ -230,9 +233,19 @@ public class BattleController : MonoBehaviour{
         int appID = iEnemy.GetComponent<MapObjectCarrier>().data.appearanceID;
         battleState = BattleState.IDLE;
 
-	    if(enemy){
-		    GameObject.Destroy(enemy);
-	    }
+        for (int i = 0; i < weapons.Length; i++ )
+        {
+            weapons[i].SetActive(false);
+            if(i == iPlayer.GetComponent<BattleParameters>().level - 1)
+                weapons[i].SetActive(true);
+        }
+
+        if (enemy)
+        {
+            GameObject.Destroy(enemy);
+        }
+
+
 
 	    enemy = GameObject.Instantiate(CharacterModelPrefabs.battlePrefabs[appID]);
         enemy.SetActive(true);

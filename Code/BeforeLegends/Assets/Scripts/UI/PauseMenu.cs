@@ -62,7 +62,7 @@ public class PauseMenu : MonoBehaviour {
         else {
             pauseMenu.gameObject.SetActive(true);
             greyOut.enabled = true;
-            Time.timeScale = 0;
+            Time.timeScale = 0.01f;
             foreach (var gO in deactivateAtPause) {
                 gO.SetActive(false);
             }

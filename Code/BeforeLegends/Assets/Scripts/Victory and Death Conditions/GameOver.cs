@@ -21,7 +21,7 @@ public class GameOver : MonoBehaviour {
 	void Update () {
 	    if (Input.GetKeyDown(KeyCode.Y)) {
             fuckyou = true;
-            print("Why would you cheat to lose? Fucking retard!");
+            print("Why would you cheat to lose? Fucking idiot!");
 	    }
 	        
 		activePlayers = GameObject.FindGameObjectsWithTag("Player");
@@ -33,7 +33,7 @@ public class GameOver : MonoBehaviour {
 		    gameOver.sprite = gameOverImage;
 		    gameOver.enabled = true;
 		    gameOver.preserveAspect = true;
-			Time.timeScale = 0;
+			Time.timeScale = 0.01f;
 		}
 	}
 }

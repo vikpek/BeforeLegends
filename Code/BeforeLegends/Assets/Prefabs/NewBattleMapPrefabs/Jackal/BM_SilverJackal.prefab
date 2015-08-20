@@ -1471,23 +1471,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &156638
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 493926}
-  - 33: {fileID: 3399314}
-  - 23: {fileID: 2366496}
-  m_Layer: 15
-  m_Name: default
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &157358
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,6 +2301,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &182440
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 441738}
+  m_Layer: 11
+  m_Name: WP_Jackal_PF
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &183030
 GameObject:
   m_ObjectHideFlags: 1
@@ -2575,6 +2573,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &193238
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 469058}
+  - 33: {fileID: 3374856}
+  - 23: {fileID: 2372116}
+  m_Layer: 11
+  m_Name: default
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &193478
 GameObject:
   m_ObjectHideFlags: 1
@@ -2660,21 +2675,6 @@ GameObject:
   - 4: {fileID: 412942}
   m_Layer: 15
   m_Name: jackal_rig_master:rt_knee1_JNT
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &195582
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 413308}
-  m_Layer: 15
-  m_Name: WP_Jackal_PF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3087,19 +3087,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 424416}
-  m_RootOrder: 0
---- !u!4 &413308
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 195582}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 493926}
-  m_Father: {fileID: 448050}
   m_RootOrder: 0
 --- !u!4 &413366
 Transform:
@@ -3709,6 +3696,19 @@ Transform:
   - {fileID: 406844}
   m_Father: {fileID: 485906}
   m_RootOrder: 0
+--- !u!4 &441738
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182440}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 469058}
+  m_Father: {fileID: 448050}
+  m_RootOrder: 0
 --- !u!4 &441756
 Transform:
   m_ObjectHideFlags: 1
@@ -3989,7 +3989,7 @@ Transform:
   m_LocalPosition: {x: -.166115716, y: -.0243198778, z: .00399071863}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 413308}
+  - {fileID: 441738}
   m_Father: {fileID: 452958}
   m_RootOrder: 0
 --- !u!4 &448424
@@ -4406,6 +4406,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 478082}
   m_RootOrder: 1
+--- !u!4 &469058
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441738}
+  m_RootOrder: 0
 --- !u!4 &469620
 Transform:
   m_ObjectHideFlags: 1
@@ -5001,18 +5013,6 @@ Transform:
   - {fileID: 466046}
   m_Father: {fileID: 441756}
   m_RootOrder: 0
---- !u!4 &493926
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156638}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 413308}
-  m_RootOrder: 0
 --- !u!4 &494896
 Transform:
   m_ObjectHideFlags: 1
@@ -5253,17 +5253,17 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!23 &2366496
+--- !u!23 &2372116
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156638}
+  m_GameObject: {fileID: 193238}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: bcac2f732af226c47b1a75417aaf875b, type: 2}
+  - {fileID: 2100000, guid: 7653e26eecd1547a69c6290060a6f80e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -5315,13 +5315,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181050}
   m_Mesh: {fileID: 4300006, guid: 7d6f6a7ffe1a02b4e9a21d93e4f50df3, type: 3}
---- !u!33 &3399314
+--- !u!33 &3374856
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156638}
-  m_Mesh: {fileID: 4300000, guid: 3a44738136542b24ea363f524f927d9f, type: 3}
+  m_GameObject: {fileID: 193238}
+  m_Mesh: {fileID: 4300000, guid: b2182ab916dce40bbbc0084d94176045, type: 3}
 --- !u!95 &9540800
 Animator:
   serializedVersion: 3
@@ -5391,7 +5391,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c982fc1e8dfdb994193940072b598760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heal: {fileID: 19859808}
+  allParticleSystems:
+    attack: []
+    heal: []
+    shield: []
+    stun: []
+    wrath: []
+    revenge: []
+    enemyAttack: []
+    enemyHeal: []
+    enemyCritAttack: []
 --- !u!114 &11413028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5458,17 +5467,17 @@ MonoBehaviour:
       outSlope: -0
       tangentMode: 5
     - time: 1.98299193
-      value: 2.90516543
-      inSlope: 3.1138165
+      value: 3.84999967
+      inSlope: 4.12650919
       outSlope: .691218853
       tangentMode: 21
     - time: 2.20000005
-      value: 3.05516553
+      value: 3.99999976
       inSlope: .691218853
       outSlope: 1.32377693e-07
       tangentMode: 21
     - time: 4.00104809
-      value: 3.05516577
+      value: 4
       inSlope: 1.32377693e-07
       outSlope: 0
       tangentMode: 5
@@ -5583,6 +5592,7 @@ MonoBehaviour:
   debugTime0: 0
   debugTime1: 0
   model: {fileID: 0}
+  animateStart: 1
   reset: 0
 --- !u!114 &11416240
 MonoBehaviour:

@@ -285,23 +285,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &112526
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 472114}
-  - 33: {fileID: 3393330}
-  - 23: {fileID: 2368692}
-  m_Layer: 15
-  m_Name: default
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &112600
 GameObject:
   m_ObjectHideFlags: 1
@@ -1294,6 +1277,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &145964
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 463550}
+  - 33: {fileID: 3382478}
+  - 23: {fileID: 2350970}
+  m_Layer: 11
+  m_Name: default
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &146276
 GameObject:
   m_ObjectHideFlags: 1
@@ -1349,6 +1349,21 @@ GameObject:
   - 4: {fileID: 411264}
   m_Layer: 15
   m_Name: jackal_rig_master:rt_thigh_JNT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &148136
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 429716}
+  m_Layer: 11
+  m_Name: WP_Jackal_PF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1529,21 +1544,6 @@ GameObject:
   - 4: {fileID: 410308}
   m_Layer: 15
   m_Name: jackal_rig_master:rg_ear_b_JNT
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &161056
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 446026}
-  m_Layer: 15
-  m_Name: WP_Jackal_PF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3469,6 +3469,19 @@ Transform:
   - {fileID: 431654}
   m_Father: {fileID: 465200}
   m_RootOrder: 0
+--- !u!4 &429716
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148136}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 463550}
+  m_Father: {fileID: 466264}
+  m_RootOrder: 0
 --- !u!4 &430244
 Transform:
   m_ObjectHideFlags: 1
@@ -3908,19 +3921,6 @@ Transform:
   m_Children:
   - {fileID: 493848}
   m_Father: {fileID: 458590}
-  m_RootOrder: 0
---- !u!4 &446026
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 161056}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 472114}
-  m_Father: {fileID: 466264}
   m_RootOrder: 0
 --- !u!4 &446900
 Transform:
@@ -4364,6 +4364,18 @@ Transform:
   - {fileID: 424724}
   m_Father: {fileID: 406680}
   m_RootOrder: 0
+--- !u!4 &463550
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 429716}
+  m_RootOrder: 0
 --- !u!4 &463670
 Transform:
   m_ObjectHideFlags: 1
@@ -4462,7 +4474,7 @@ Transform:
   m_LocalPosition: {x: -.166115716, y: -.0243198778, z: .00399071863}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 446026}
+  - {fileID: 429716}
   m_Father: {fileID: 469826}
   m_RootOrder: 0
 --- !u!4 &466342
@@ -4648,18 +4660,6 @@ Transform:
   m_Children:
   - {fileID: 462146}
   m_Father: {fileID: 482516}
-  m_RootOrder: 0
---- !u!4 &472114
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 112526}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 446026}
   m_RootOrder: 0
 --- !u!4 &473138
 Transform:
@@ -5229,17 +5229,17 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!23 &2368692
+--- !u!23 &2350970
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 112526}
+  m_GameObject: {fileID: 145964}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: bcac2f732af226c47b1a75417aaf875b, type: 2}
+  - {fileID: 2100000, guid: 7653e26eecd1547a69c6290060a6f80e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -5315,13 +5315,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115518}
   m_Mesh: {fileID: 4300006, guid: 7d6f6a7ffe1a02b4e9a21d93e4f50df3, type: 3}
---- !u!33 &3393330
+--- !u!33 &3382478
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 112526}
-  m_Mesh: {fileID: 4300000, guid: 3a44738136542b24ea363f524f927d9f, type: 3}
+  m_GameObject: {fileID: 145964}
+  m_Mesh: {fileID: 4300000, guid: b2182ab916dce40bbbc0084d94176045, type: 3}
 --- !u!95 &9514988
 Animator:
   serializedVersion: 3
@@ -5460,17 +5460,17 @@ MonoBehaviour:
       outSlope: -0
       tangentMode: 5
     - time: 1.98299193
-      value: 2.90516543
-      inSlope: 3.1138165
+      value: 3.84999967
+      inSlope: 4.12650919
       outSlope: .691218853
       tangentMode: 21
     - time: 2.20000005
-      value: 3.05516553
+      value: 3.99999976
       inSlope: .691218853
       outSlope: 1.32377693e-07
       tangentMode: 21
     - time: 4.00104809
-      value: 3.05516577
+      value: 4
       inSlope: 1.32377693e-07
       outSlope: 0
       tangentMode: 5
@@ -5585,6 +5585,7 @@ MonoBehaviour:
   debugTime0: 0
   debugTime1: 0
   model: {fileID: 0}
+  animateStart: 1
   reset: 0
 --- !u!114 &11412358
 MonoBehaviour:
@@ -5597,7 +5598,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c982fc1e8dfdb994193940072b598760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heal: {fileID: 19883830}
+  allParticleSystems:
+    attack: []
+    heal: []
+    shield: []
+    stun: []
+    wrath: []
+    revenge: []
+    enemyAttack: []
+    enemyHeal: []
+    enemyCritAttack: []
 --- !u!114 &11429720
 MonoBehaviour:
   m_ObjectHideFlags: 1

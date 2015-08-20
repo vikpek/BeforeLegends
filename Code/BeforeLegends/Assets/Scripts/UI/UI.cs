@@ -13,7 +13,9 @@ public class UI : MonoBehaviour {
 	
 	}
 
-    public void StartGame() {
+    public void StartGame()
+    {
+        Time.timeScale = 1;
         Application.LoadLevel("Actual");
     }
 }

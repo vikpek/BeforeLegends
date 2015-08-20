@@ -407,6 +407,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &110204
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 489218}
+  - 33: {fileID: 3317966}
+  - 23: {fileID: 2385344}
+  m_Layer: 11
+  m_Name: default
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &110346
 GameObject:
   m_ObjectHideFlags: 1
@@ -477,21 +494,6 @@ GameObject:
   - 4: {fileID: 452058}
   m_Layer: 15
   m_Name: jackal_rig_master:cl_hips_CTRL
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &116096
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 475938}
-  m_Layer: 15
-  m_Name: WP_Jackal_PF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1695,6 +1697,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &161338
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 430814}
+  m_Layer: 11
+  m_Name: WP_Jackal_PF 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &161396
 GameObject:
   m_ObjectHideFlags: 1
@@ -2660,23 +2677,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &196114
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 474686}
-  - 33: {fileID: 3323372}
-  - 23: {fileID: 2385216}
-  m_Layer: 15
-  m_Name: default
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &196832
 GameObject:
   m_ObjectHideFlags: 1
@@ -2904,7 +2904,7 @@ Transform:
   m_LocalPosition: {x: -.166115716, y: -.0243198778, z: .00399071863}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 475938}
+  - {fileID: 430814}
   m_Father: {fileID: 433282}
   m_RootOrder: 0
 --- !u!4 &403690
@@ -3472,6 +3472,19 @@ Transform:
   m_Children:
   - {fileID: 431298}
   m_Father: {fileID: 440124}
+  m_RootOrder: 0
+--- !u!4 &430814
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 489218}
+  m_Father: {fileID: 402660}
   m_RootOrder: 0
 --- !u!4 &431020
 Transform:
@@ -4702,18 +4715,6 @@ Transform:
   - {fileID: 470026}
   m_Father: {fileID: 444496}
   m_RootOrder: 0
---- !u!4 &474686
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196114}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 475938}
-  m_RootOrder: 0
 --- !u!4 &475758
 Transform:
   m_ObjectHideFlags: 1
@@ -4727,19 +4728,6 @@ Transform:
   - {fileID: 436634}
   m_Father: {fileID: 460120}
   m_RootOrder: 1
---- !u!4 &475938
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116096}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 474686}
-  m_Father: {fileID: 402660}
-  m_RootOrder: 0
 --- !u!4 &476050
 Transform:
   m_ObjectHideFlags: 1
@@ -5038,6 +5026,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 445510}
   m_RootOrder: 0
+--- !u!4 &489218
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110204}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 430814}
+  m_RootOrder: 0
 --- !u!4 &491058
 Transform:
   m_ObjectHideFlags: 1
@@ -5277,17 +5277,17 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!23 &2385216
+--- !u!23 &2385344
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196114}
+  m_GameObject: {fileID: 110204}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: bcac2f732af226c47b1a75417aaf875b, type: 2}
+  - {fileID: 2100000, guid: 7653e26eecd1547a69c6290060a6f80e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -5301,13 +5301,13 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3323372
+--- !u!33 &3317966
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196114}
-  m_Mesh: {fileID: 4300000, guid: 3a44738136542b24ea363f524f927d9f, type: 3}
+  m_GameObject: {fileID: 110204}
+  m_Mesh: {fileID: 4300000, guid: b2182ab916dce40bbbc0084d94176045, type: 3}
 --- !u!33 &3343240
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -5428,7 +5428,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c982fc1e8dfdb994193940072b598760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heal: {fileID: 19819602}
+  allParticleSystems:
+    attack: []
+    heal: []
+    shield: []
+    stun: []
+    wrath: []
+    revenge: []
+    enemyAttack: []
+    enemyHeal: []
+    enemyCritAttack: []
 --- !u!114 &11475644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5518,17 +5527,17 @@ MonoBehaviour:
       outSlope: -0
       tangentMode: 5
     - time: 1.98299193
-      value: 2.90516543
-      inSlope: 3.1138165
+      value: 3.84999967
+      inSlope: 4.12650919
       outSlope: .691218853
       tangentMode: 21
     - time: 2.20000005
-      value: 3.05516553
+      value: 3.99999976
       inSlope: .691218853
       outSlope: 1.32377693e-07
       tangentMode: 21
     - time: 4.00104809
-      value: 3.05516577
+      value: 4
       inSlope: 1.32377693e-07
       outSlope: 0
       tangentMode: 5
@@ -5643,6 +5652,7 @@ MonoBehaviour:
   debugTime0: 0
   debugTime1: 0
   model: {fileID: 0}
+  animateStart: 1
   reset: 0
 --- !u!114 &11490014
 MonoBehaviour:

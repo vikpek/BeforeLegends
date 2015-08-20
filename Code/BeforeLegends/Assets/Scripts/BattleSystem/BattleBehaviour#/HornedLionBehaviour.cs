@@ -16,7 +16,7 @@ public class HornedLionBehaviour : MonoBehaviour
             {
                 battle.enemyAction = Action.HEAL;
             }
-            else if (Random.Range(0, 10) == 0 && battle.enemyData.actionPoints >= 1)
+            else if (battle.enemyData.actionPoints >= 1)
             {
                 battle.enemyAction = Action.DOUBLEDAMAGE;
             }

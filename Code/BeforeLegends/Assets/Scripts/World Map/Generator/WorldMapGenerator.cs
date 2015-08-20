@@ -106,6 +106,14 @@ public class WorldMapGenerator : MonoBehaviour
         InitWorld();
     }
 
+    void Awake() 
+    {
+        if (GameObject.Find("MenuOptions")) 
+        {
+            size = GameObject.Find("MenuOptions").GetComponent<NewWorld>().size;
+        }
+    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.G))

@@ -79,7 +79,6 @@ public class FogOfWarTiles : MonoBehaviour {
     {
         cheatEnabled = true;
 
-
         for (int x = 0; x < WorldMapGenerator.instance.size.x; x++)
         {
             for (int y = WorldMapGenerator.instance.size.y - 1; 0 <= y; y--)
