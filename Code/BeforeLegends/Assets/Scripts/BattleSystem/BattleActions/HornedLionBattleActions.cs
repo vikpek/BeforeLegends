@@ -8,11 +8,11 @@ public class HornedLionBattleActions : MonoBehaviour{
             case Action.ATTACK:
                 battle.enemyAnimator.Animate(1);
 			    attack(battle);
-			    break;
+                break;
             case Action.FINALATTACK:
                 battle.enemyAnimator.Animate(2);
-			    attackOpponentFinal(battle);
-			    break;
+                attackOpponentFinal(battle);
+                break;
 		    case Action.HEAL :
 			    healSelfOpponent(battle);
 			    break;	

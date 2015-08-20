@@ -18,7 +18,7 @@ public class HornedLionBehaviour : MonoBehaviour
             }
             else if (battle.enemyData.actionPoints >= 1)
             {
-                battle.enemyAction = Action.DOUBLEDAMAGE;
+                battle.enemyAction = Action.FINALATTACK;
             }
             else
             {
