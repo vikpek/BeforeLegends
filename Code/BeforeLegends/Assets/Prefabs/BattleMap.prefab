@@ -4126,8 +4126,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: .00607130863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 476416}
+  m_Children: []
   m_Father: {fileID: 405756}
   m_RootOrder: 0
 --- !u!4 &445782
@@ -4962,6 +4961,7 @@ Transform:
   - {fileID: 440124}
   - {fileID: 477816}
   - {fileID: 405756}
+  - {fileID: 476416}
   m_Father: {fileID: 469078}
   m_RootOrder: 0
 --- !u!4 &473552
@@ -5033,13 +5033,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188732}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -.00431000022, z: 0}
-  m_LocalScale: {x: .00400000019, y: .00400000019, z: .00400000019}
+  m_LocalRotation: {x: -.0416551158, y: -.0384865701, z: .677527666, w: -.7333076}
+  m_LocalPosition: {x: -.000847979216, y: .00154358428, z: -.000890060095}
+  m_LocalScale: {x: .00399999972, y: .00400000019, z: .00400000019}
   m_Children:
   - {fileID: 445782}
-  m_Father: {fileID: 445758}
-  m_RootOrder: 0
+  m_Father: {fileID: 473130}
+  m_RootOrder: 5
 --- !u!4 &476510
 Transform:
   m_ObjectHideFlags: 1
@@ -7693,6 +7693,26 @@ MonoBehaviour:
   enemyMapObjectCarrier: {fileID: 0}
   playerAnimator: {fileID: 0}
   enemyAnimator: {fileID: 0}
+  enemyParticleSystems:
+    attack: []
+    heal: []
+    shield: []
+    stun: []
+    wrath: []
+    revenge: []
+    enemyAttack: []
+    enemyHeal: []
+    enemyCritAttack: []
+  playerParticleSystems:
+    attack: []
+    heal: []
+    shield: []
+    stun: []
+    wrath: []
+    revenge: []
+    enemyAttack: []
+    enemyHeal: []
+    enemyCritAttack: []
   characterModelPrefabs: {fileID: 0}
   gameSM: {fileID: 0}
   enemyAction: 0
@@ -8089,7 +8109,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c982fc1e8dfdb994193940072b598760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heal: {fileID: 19851756}
+  allParticleSystems:
+    attack: []
+    heal: []
+    shield: []
+    stun: []
+    wrath: []
+    revenge: []
+    enemyAttack: []
+    enemyHeal: []
+    enemyCritAttack: []
 --- !u!114 &11490432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8221,6 +8250,7 @@ MonoBehaviour:
   debugTime0: 0
   debugTime1: 3.79376435
   model: {fileID: 185812}
+  animateStart: 1
   reset: 0
 --- !u!124 &12431242
 Behaviour:
