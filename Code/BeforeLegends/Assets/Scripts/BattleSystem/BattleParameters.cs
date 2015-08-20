@@ -17,6 +17,18 @@ public class BattleParameters : MonoBehaviour{
 
     public GameObject[] levelUpWeapons;
 
+    private static BattleParameters _instance;
+
+    public static BattleParameters instance
+    {
+        get
+        {
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<BattleParameters>();
+            return _instance;
+        }
+    }
+
     void Update() {
         if (Input.GetKeyDown(KeyCode.V)) {
             exp = 100000;

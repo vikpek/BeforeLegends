@@ -46,8 +46,8 @@ public class BattleController : MonoBehaviour{
     public HPText enemyHPText;
     public HPText playerHPText;
 
-    public ParticleSystem playerParticles;
-    public ParticleSystem enemyParticles;
+    public CharacterParticleController playerParticles;
+    public CharacterParticleController enemyParticles;
 
     public GameObject enemyWorldObject;
     public GameObject playerWorldObject;
@@ -58,6 +58,9 @@ public class BattleController : MonoBehaviour{
 
     public CharacterAnimations playerAnimator;
     public CharacterAnimations enemyAnimator;
+
+    public ParticleSystemCollection enemyParticleSystems;
+    public ParticleSystemCollection playerParticleSystems;
 
     public CharacterModelPrefabs characterModelPrefabs;
 
@@ -209,6 +212,7 @@ public class BattleController : MonoBehaviour{
                 enemyWorldObject.GetComponent<LPathfinding>().enabled = false;
                 GameStateManager.instance.endBattle(true, enemyData.expToGain);
                 Messenger.instance.send(new AllActionsEndedMessage());
+                TurnManager.instance.NextEnemyTurn();
 			    return true;
 		    }
 		    return false;
@@ -239,8 +243,11 @@ public class BattleController : MonoBehaviour{
 	    enemy.transform.parent = transform;
         enemyAnimator = enemy.GetComponent<CharacterAnimations>();
 
-        enemyParticles = enemy.GetComponent<CharacterParticleController>().heal;
-        playerParticles = player.GetComponent<CharacterParticleController>().heal;
+        enemyParticles = enemy.GetComponent<CharacterParticleController>();
+        playerParticles = player.GetComponent<CharacterParticleController>();
+
+        enemyParticles.allParticleSystems = enemyParticleSystems;
+        playerParticles.allParticleSystems = playerParticleSystems;
         
         enemyHPText = enemy.GetComponent<HPText>();
         playerHPText = player.GetComponent<HPText>();

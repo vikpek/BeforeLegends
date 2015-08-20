@@ -7,7 +7,8 @@ public class Tutorial : MonoBehaviour {
     public int clicksToDismiss;
 	// Use this for initialization
 	void Start () {
-        MoveOnClick.instance.SetMouseOverUIElement(true);
+        if(!name.Contains("BM"))
+            MoveOnClick.instance.SetMouseOverUIElement(true);
 	}
 	
 	// Update is called once per frame
@@ -18,7 +19,8 @@ public class Tutorial : MonoBehaviour {
         if (clicks >= clicksToDismiss)
         {
             gameObject.SetActive(false);
-            MoveOnClick.instance.SetMouseOverUIElement(false);
+            if (!name.Contains("BM"))
+                MoveOnClick.instance.SetMouseOverUIElement(false);
         }
 	}
 }

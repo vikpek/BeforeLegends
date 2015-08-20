@@ -10,6 +10,8 @@ public class FogOfWar : MonoBehaviour {
     public List<GameObject> ressourceInRange = new List<GameObject>();
     public List<Hexagon> adjacent = new List<Hexagon>();
     public List<Hexagon> adjacentTemp = new List<Hexagon>();
+
+    public GameObject tempGo;
     
 //var adjacentTemp : Hexagon[];
 
@@ -27,36 +29,70 @@ public class FogOfWar : MonoBehaviour {
         }
     }
 
-/*void Update () {
-	if(Input.GetKeyDown(KeyCode.L))
-		CheckTiles(gameObject.GetComponent.<MapObjectCarrier>().pos, visionRange);
-	if(Input.GetKeyDown(KeyCode.K))
-		SetEntitiesToVisible();
-	if(Input.GetKeyDown(KeyCode.J))
-		SetEntitiesToInvisible();
-}*/
-
     public void CheckTiles(Vec2int origin, int radius) {
 	    ClearLists();
+
 	    WorldMapData worldData = WorldMapData.instance;
 
-	    var hexCenter = worldData.tiles[origin.x, origin.y];
+        adjacentTemp.Clear();
+        Hexagon hexCenter = worldData.tiles[origin.x, origin.y];
 	    adjacentTemp.Add(hexCenter);
 	    adjacent.Add(hexCenter);
+        int newAdjacentLength = 0;
 
-	    for(var i = 0; i <= radius; i++) {
-		    for(var l = 0; l < 6 * radius; l++) {
-			    adjacentTemp = adjacent[l].getAdjacent().ToList();
-			    foreach(Hexagon hex in adjacentTemp) {
-				    if(!adjacent.Contains(hex))
-					    adjacent.Add(hex);
-			    }
-		    }
-	    }
+        adjacentTemp = adjacent[0].getAdjacent().ToList();
+        if (WorldMapGenerator.instance.playerSpawned)
+            if (!WorldMapData.instance.tiles[hexCenter.gridPos.x, hexCenter.gridPos.y].alreadyFlipped)
+            {
+                FogOfWarTiles.instance.AddTileToUnFOW(hexCenter.gridPos, WorldMapData.instance.tiles[hexCenter.gridPos.x, hexCenter.gridPos.y].matID, origin);
+                WorldMapData.instance.tiles[hexCenter.gridPos.x, hexCenter.gridPos.y].alreadyFlipped = true;
+            }
+
+        foreach (Hexagon hex in adjacentTemp)
+        {
+            if (!adjacent.Contains(hex))
+            {
+                if (WorldMapGenerator.instance.playerSpawned)
+                    if (!WorldMapData.instance.tiles[hex.gridPos.x, hex.gridPos.y].alreadyFlipped)
+                    {
+                        FogOfWarTiles.instance.AddTileToUnFOW(hex.gridPos, WorldMapData.instance.tiles[hex.gridPos.x, hex.gridPos.y].matID, origin);
+                        WorldMapData.instance.tiles[hex.gridPos.x, hex.gridPos.y].alreadyFlipped = true;
+                    }
+                adjacent.Add(hex);
+            }
+        }
+
+        newAdjacentLength = adjacent.Count;
+
+        for (int i = 0; i < radius - 1; i++)
+        {
+            for (int l = 0; l < newAdjacentLength; l++)
+            {
+                adjacentTemp = adjacent[l].getAdjacent().ToList();
+                foreach (Hexagon hex in adjacentTemp)
+                {
+                    if (!adjacent.Contains(hex))
+                    {
+                        if (WorldMapGenerator.instance.playerSpawned)
+                            if (!WorldMapData.instance.tiles[hex.gridPos.x, hex.gridPos.y].alreadyFlipped)
+                            {
+                                WorldMapData.instance.tiles[hex.gridPos.x, hex.gridPos.y].alreadyFlipped = true;
+                                FogOfWarTiles.instance.AddTileToUnFOW(hex.gridPos, WorldMapData.instance.tiles[hex.gridPos.x, hex.gridPos.y].matID, origin);
+
+                            }
+                        adjacent.Add(hex);
+                    }
+                }
+            }
+            newAdjacentLength = adjacent.Count;
+        }
+
 	    adjacent = Enumerable.ToList(Enumerable.Distinct(adjacent));
 	    AddEnemysInRangeToList();
 	    AddRessourcesInRangeToList();
     }
+
+
 
     public void AddEnemysInRangeToList()
     {
@@ -138,9 +174,12 @@ public class FogOfWar : MonoBehaviour {
         GameObject.Find("FogOfWar").SetActive(false);
     }
 
-    void Update() {
+    void Update() 
+    {
         if(Input.GetKeyDown(KeyCode.X)) {
-            Cheat();
+           // Cheat();
         }
+        if (Input.GetKeyDown(KeyCode.L))
+            CheckTiles(new Vec2int(0, 0), 5);
     }
 }

@@ -100,6 +100,7 @@ public class WorldMapGenerator : MonoBehaviour
     
     public FlatHexagon flatHex;
     public bool generationComplete = false;
+    public bool playerSpawned = false;
     void Start()
     {
         InitWorld();
@@ -123,13 +124,21 @@ public class WorldMapGenerator : MonoBehaviour
         enemys = new Dictionary<GameObject, GameObject>();
         flatHex = new FlatHexagon(1);
         setSeeds();
+        print("seeds set!");
         packTextures();
+        print("texture packed!");
         generate();
+        print("world generated!");
         createChunks();
+        print("chunks created!");
         spawnObjects();
+        print("object spawned!");
         spawnCarriers();
+        print("carriers spawned!");
         spwanRessources();
+        print("resources spawned!");
         spawnPlayer();
+        print("player spawned!");
         generationComplete = true;
     }
 
@@ -252,7 +261,7 @@ public class WorldMapGenerator : MonoBehaviour
 	    Vector2[] uvs = new Vector2[mesh.uv.Length];
 	    for(int y = 0; y < chunkSize.y; y++){
 		    for(int x = 0; x < chunkSize.x; x++){
-			    Vector2[] texUV = chunkUVs[WorldMapData.instance.tiles[chunkSize.x * xChunk + x, chunkSize.y * yChunk + y].matID];
+			    Vector2[] texUV = chunkUVs[36];
 			    int offset = (x + y * chunkSize.y) * flatHex.uv.Length;
 			    for(int i = 0; i < flatHex.uv.Length; i++){
 				    uvs[offset + i] = texUV[i];
@@ -264,6 +273,18 @@ public class WorldMapGenerator : MonoBehaviour
 	    render.sharedMaterial = mapMaterial;
 	    chunk.transform.parent = transform;
     }
+
+    public void ChangeTileTexture(Vec2int tilePosition, int tileId)
+    {
+        MeshFilter chunk = GameObject.Find("Chunk(" + ((int)(tilePosition.x / chunkSize.x)) + "|" + ((int)(tilePosition.y / chunkSize.y)) + ")").GetComponent<MeshFilter>();
+
+        int chunkTileIndex = (tilePosition.y % chunkSize.y) * chunkSize.x + (tilePosition.x % chunkSize.x);
+        Vector2[] changeChunkUVs = chunk.mesh.uv;
+        for (int i = 0; i < flatHex.uv.Length; i++)
+            changeChunkUVs[chunkTileIndex * flatHex.uv.Length + i] = chunkUVs[tileId][i];
+        chunk.mesh.uv = changeChunkUVs;
+    }
+
 
     Mesh getChunkMesh(){
 	    Mesh mesh = new Mesh();
@@ -480,7 +501,6 @@ public class WorldMapGenerator : MonoBehaviour
     void spawnPlayer()
     {
         WorldMapData worldData = WorldMapData.instance;
-        bool playerSpawned = false;
         while (!playerSpawned)
         {
             int randX = Random.Range(0, size.x);
@@ -521,6 +541,7 @@ public class WorldMapGenerator : MonoBehaviour
                     //CameraTransitions.Instance.LerpCamera(player.transform);
 
                     playerSpawned = true;
+                    FogOfWar.instance.CheckTiles(new Vec2int(randX, randY), FogOfWar.instance.visionRange);
                 }
             }
         }

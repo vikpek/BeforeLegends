@@ -27,17 +27,20 @@ public class HornedLionBattleActions : MonoBehaviour{
     { // this is the basic attack
         if (battle.shielded) {
             battle.shielded = false;
-            battle.playerParticles.Stop();
         }
         else {
-            if (!battle.revenge) {
+            if (!battle.revenge)
+            {
+                battle.enemyParticles.EnemyAttackParticles();
                 battle.playerData.lastDamageReceived = battle.enemyData.calcDamage(battle.playerData, 1);
                 battle.enemyData.lastDamageDealt = battle.playerData.lastDamageReceived;
                 battle.playerData.hitPoints -= battle.playerData.lastDamageReceived;
                 battle.playerHPText.tm.gameObject.GetComponent<CombatText>().DisplayDamage(battle.enemyData.lastDamageDealt);
                 battle.PrintToBattlelog(AssembleBattleLog(battle));
             }
-            else {//revenge reflects damage
+            else
+            {//revenge reflects damage
+                battle.enemyParticles.EnemyAttackParticles();
                 battle.playerData.lastDamageReceived = 0; //battle.enemyData.calcDamage(battle.playerData, 1);
                 battle.enemyData.lastDamageDealt = battle.enemyData.calcDamage(battle.enemyData, 1);
                 battle.enemyData.hitPoints -= battle.enemyData.lastDamageDealt;
@@ -53,9 +56,10 @@ public class HornedLionBattleActions : MonoBehaviour{
     { // this is a very powerful attack, deals 4x basic damage
         if (battle.shielded) {
             battle.shielded = false;
-            battle.playerParticles.Stop();
         }
-        else {
+        else
+        {
+            battle.enemyParticles.EnemyCriticalParticles();
             if (!battle.revenge) {
                 battle.playerData.lastDamageReceived = battle.enemyData.calcDamage(battle.playerData, 4);
                 battle.enemyData.lastDamageDealt = battle.playerData.lastDamageReceived;
@@ -64,7 +68,9 @@ public class HornedLionBattleActions : MonoBehaviour{
                 battle.enemyData.actionPoints--;
                 battle.PrintToBattlelog(AssembleBattleLog(battle));
             }
-            else {//revenge reflects damage
+            else
+            {//revenge reflects damage
+                battle.enemyParticles.EnemyCriticalParticles();
                 battle.playerData.lastDamageReceived = 0; //battle.enemyData.calcDamage(battle.playerData, 1);
                 battle.enemyData.lastDamageDealt = battle.enemyData.calcDamage(battle.playerData, 4);
                 battle.enemyData.hitPoints -= battle.enemyData.lastDamageDealt;
@@ -79,7 +85,7 @@ public class HornedLionBattleActions : MonoBehaviour{
 
     void healSelfOpponent(BattleController battle)
     { // this power allows the Lion to heal itself
-	    battle.enemyParticles.Play();
+        battle.enemyParticles.EnemyHealParticles();
 	    battle.enemyData.actionPoints--;
 	    battle.enemyData.hitPoints += battle.enemyData.maxHitPoints*0.3f;
 	    if (battle.enemyData.hitPoints > battle.enemyData.maxHitPoints){

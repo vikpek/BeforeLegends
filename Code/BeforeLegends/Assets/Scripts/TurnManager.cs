@@ -50,34 +50,38 @@ public class TurnManager : MonoBehaviour {
     }
 
     void LateUpdate(){
-	    if(Input.GetKeyDown("space") && numActions == 0)
-            EnemyTurn();
 
-        if (nextEnemyDoTurn && world.activeSelf)
-            NextEnemyTurn();
+        if (WorldMapGenerator.instance.generationComplete)
+        {
+            if (Input.GetKeyDown("space") && numActions == 0)
+                EnemyTurn();
+
+            if (nextEnemyDoTurn && world.activeSelf)
+                NextEnemyTurn();
 
 
-        if(nextTurnButton == null)
-            nextTurnButton = GameObject.Find("NextTurn").GetComponent<Image>();
-        if(olafMapObjectCarrier == null) 
-            olafMapObjectCarrier = GameObject.Find("Olaf").GetComponent<MapObjectCarrier>();
+            if (nextTurnButton == null)
+                nextTurnButton = GameObject.Find("NextTurn").GetComponent<Image>();
+            if (olafMapObjectCarrier == null)
+                olafMapObjectCarrier = GameObject.Find("Olaf").GetComponent<MapObjectCarrier>();
 
-        if (olafMapObjectCarrier.moved >= olafMapObjectCarrier.movedMax) {
-            if (Mathf.Sin(Time.time * 5) < 0)
-                nextTurnButton.sprite = button_h;
+            if (olafMapObjectCarrier.moved >= olafMapObjectCarrier.movedMax)
+            {
+                if (Mathf.Sin(Time.time * 5) < 0)
+                    nextTurnButton.sprite = button_h;
+                else
+                    nextTurnButton.sprite = button;
+            }
             else
+            {
                 nextTurnButton.sprite = button;
+            }
         }
-        else {
-            nextTurnButton.sprite = button;
-        }
-
     }
 
     public void EnemyTurn() {
         Messenger.instance.send(new TurnEndedMessage(turn));
         enemyAIs = FindObjectsOfType(typeof(EnemyAI)) as EnemyAI[];
-        numOfEnemys.text = "EnemyAIs in Array: " + enemyAIs.Length;
         nextEnemyDoTurn = true;
     }
 
@@ -92,7 +96,6 @@ public class TurnManager : MonoBehaviour {
         {
             enemyAIs[actualEnemyTurnIndex].HuntPlayer();
             actualEnemyTurnIndex++;
-            numOfEnemys.text = "EnemyAIs in Array: " + enemyAIs.Length + ", actualEnemyTurnIndex: " + actualEnemyTurnIndex;
         }
         nextEnemyDoTurn = false;
     }

@@ -155,7 +155,7 @@ public class EnemyAI : MonoBehaviour {
                 worlddata.tiles[moc.pos.x, moc.pos.y].mapObjects.Add(moc.data);
                 worlddata.tiles[moc.pos.x, moc.pos.y].gameObjectList.Add(transform.parent.gameObject);
                 walkIndex--;
-                FogOfWar.instance.CheckTiles(mocOlaf.pos, 4);
+                //FogOfWar.instance.CheckTiles(mocOlaf.pos, 5);
                 FogOfWar.instance.SetEntitiesToVisible();
                 FogOfWar.instance.SetEntitiesToInvisible();
 
