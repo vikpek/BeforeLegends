@@ -16,6 +16,7 @@ public class DropChance
     public void overallDropChance()
     {
         chance = woodDropChance + stoneDropChance + foodDropChance + soulsDropChance;
+        chance *= 1.33f;
     }
 
     public int returnDrop()

@@ -24,7 +24,7 @@ public class FogOfWarTiles : MonoBehaviour {
 
     List<FOWTileToFlip> tilesToFlip = new List<FOWTileToFlip>();
     List<FOWTileToFlip> tilesToChangeText = new List<FOWTileToFlip>();
-
+    public List<FOWTileToFlip> tilesToFlipActive = new List<FOWTileToFlip>();
     
 
     public bool cheatEnabled = false;
@@ -47,39 +47,44 @@ public class FogOfWarTiles : MonoBehaviour {
 
     IEnumerator TileFlipAnimation(FOWTileToFlip iFoWTileToFlip)
     {
-            float actualRotateTime = 0;
-            GameObject flippingTile = Instantiate(flipTilePrefab, WorldMapData.instance.tiles[iFoWTileToFlip.vec2IntPosition.x, iFoWTileToFlip.vec2IntPosition.y].position, Quaternion.identity) as GameObject;
-            WorldMapGenerator.instance.ChangeTileTexture(iFoWTileToFlip.vec2IntPosition, 37);
-            flippingTile.GetComponentsInChildren<MeshRenderer>()[0].material.mainTexture = WorldMapGenerator.instance.tileTextures[iFoWTileToFlip.tileType];
+        tilesToFlipActive.Add(iFoWTileToFlip);
+        float actualRotateTime = 0;
+        GameObject flippingTile = Instantiate(flipTilePrefab, WorldMapData.instance.tiles[iFoWTileToFlip.vec2IntPosition.x, iFoWTileToFlip.vec2IntPosition.y].position, Quaternion.identity) as GameObject;
+        WorldMapGenerator.instance.ChangeTileTexture(iFoWTileToFlip.vec2IntPosition, 37);
+        flippingTile.GetComponentsInChildren<MeshRenderer>()[0].material.mainTexture = WorldMapGenerator.instance.tileTextures[iFoWTileToFlip.tileType];
+        yield return new WaitForEndOfFrame();
+
+
+        while (actualRotateTime < rotateTime)
+        {
+            actualRotateTime += Time.deltaTime;
+
+            flippingTile.transform.localEulerAngles = new Vector3(rotationOverTime.Evaluate(actualRotateTime / rotateTime) * 180, 0, 0);
+            //flippingTile.transform.rotation = Quaternion.Inverse(Quaternion.Euler(new Vector3(rotationOverTime.Evaluate(actualRotateTime / rotateTime) * 180, 0, 0)));
+            flippingTile.transform.position = new Vector3(flippingTile.transform.position.x, heightOverTime.Evaluate(actualRotateTime / rotateTime), flippingTile.transform.position.z);
+
+            if (flippingTile.transform.localEulerAngles.x > 180)
+                flippingTile.transform.localEulerAngles = new Vector3(180, 0, 0);
+
             yield return new WaitForEndOfFrame();
-
-
-            while (actualRotateTime < rotateTime)
-            {
-                actualRotateTime += Time.deltaTime;
-
-                flippingTile.transform.localEulerAngles = new Vector3(rotationOverTime.Evaluate(actualRotateTime / rotateTime) * 180, 0, 0);
-                //flippingTile.transform.rotation = Quaternion.Inverse(Quaternion.Euler(new Vector3(rotationOverTime.Evaluate(actualRotateTime / rotateTime) * 180, 0, 0)));
-                flippingTile.transform.position = new Vector3(flippingTile.transform.position.x, heightOverTime.Evaluate(actualRotateTime / rotateTime), flippingTile.transform.position.z);
-
-                if (flippingTile.transform.localEulerAngles.x > 180)
-                    flippingTile.transform.localEulerAngles = new Vector3(180, 0, 0);
-
-                yield return new WaitForEndOfFrame();
-            }
-            actualRotateTime = 0;
-            Destroy(flippingTile);
-            WorldMapGenerator.instance.ChangeTileTexture(iFoWTileToFlip.vec2IntPosition, iFoWTileToFlip.tileType);
+        }
+        actualRotateTime = 0;
+        WorldMapGenerator.instance.ChangeTileTexture(iFoWTileToFlip.vec2IntPosition, iFoWTileToFlip.tileType);
+        Destroy(flippingTile);
+        tilesToChangeText.Add(iFoWTileToFlip);
+        tilesToFlipActive.Remove(iFoWTileToFlip);
     }
 
     public void Cheat()
     {
         cheatEnabled = true;
-        for (int x = 0; x < WorldMapGenerator.instance.size.x; x++ )
+
+
+        for (int x = 0; x < WorldMapGenerator.instance.size.x; x++)
         {
             for (int y = WorldMapGenerator.instance.size.y - 1; 0 <= y; y--)
             {
-                AddTileToUnFOW(WorldMapData.instance.tiles[y, x].gridPos, WorldMapData.instance.tiles[x, y].matID, new Vec2int(0,0));
+                AddTileToUnFOW(WorldMapData.instance.tiles[y, x].gridPos, WorldMapData.instance.tiles[y, x].matID, new Vec2int(0, 0));
             }
         }
     }
@@ -115,7 +120,6 @@ public class FogOfWarTiles : MonoBehaviour {
         {
             Cheat();
         }
-
 	    if(tilesToFlip.Count != 0)
         {
             actualTileAnimationDelay += Time.deltaTime;

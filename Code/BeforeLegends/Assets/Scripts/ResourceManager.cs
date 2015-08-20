@@ -47,6 +47,13 @@ public class ResourceManager : MonoBehaviour
             for (int i = 0; i < 5; i++)
                 CardManager.Instance.cards[i].number += 999;
         }
+        if (Input.GetKey(KeyCode.R) && Input.GetKey(KeyCode.LeftShift))
+        {
+            ResourceAS("Wood", 1);
+            ResourceAS("Soul", 1);
+            ResourceAS("Stone", 1);
+            ResourceAS("Food", 1);
+        }
 	}
 
     void UpdateResourceText()

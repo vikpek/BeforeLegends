@@ -8,6 +8,7 @@ public class Hexagon {
     public Vec2int gridPos;
 
     public bool alreadyFlipped = false;
+    public bool alreadyChecked = false;
 
     public int matID;
     public string tileType;

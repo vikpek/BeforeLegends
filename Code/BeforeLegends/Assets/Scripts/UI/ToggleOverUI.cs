@@ -7,7 +7,10 @@ public class ToggleOverUI : MonoBehaviour {
     }
 
     void OnMouseDown() {
-        UnitInfo.Instance.DisplayUnitInfo(BattleParameters.instance.gameObject);
+        if(name.Contains("Player"))
+            UnitInfo.Instance.DisplayUnitInfo(gameObject.transform.parent.gameObject);
+        else
+            UnitInfo.Instance.DisplayUnitInfo(gameObject.transform.parent.parent.gameObject);
     }
 
     void OnMouseEnter() {

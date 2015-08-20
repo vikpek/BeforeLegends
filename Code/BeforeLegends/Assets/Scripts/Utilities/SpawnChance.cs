@@ -41,6 +41,8 @@ public class SpawnChance
             greenLion + greenJackal + greenMammoth + 
             desertLion + desertJackal + desertMammoth + 
             hornedLion + mammoth + tigerLion;
+
+        chance *= 0.66f;
     }
 
     public int returnSpawn()

@@ -212,7 +212,6 @@ public class BattleController : MonoBehaviour{
                 enemyWorldObject.GetComponent<LPathfinding>().enabled = false;
                 GameStateManager.instance.endBattle(true, enemyData.expToGain);
                 Messenger.instance.send(new AllActionsEndedMessage());
-                TurnManager.instance.NextEnemyTurn();
 			    return true;
 		    }
 		    return false;

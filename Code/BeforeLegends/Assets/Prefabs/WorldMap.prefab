@@ -1420,7 +1420,6 @@ GameObject:
   - 114: {fileID: 11409926}
   - 114: {fileID: 11408510}
   - 114: {fileID: 11494408}
-  - 114: {fileID: 11437090}
   m_Layer: 15
   m_Name: Olaf
   m_TagString: Player
@@ -2092,6 +2091,7 @@ GameObject:
   - 82: {fileID: 8200438}
   - 114: {fileID: 11470626}
   - 114: {fileID: 11419568}
+  - 114: {fileID: 11480040}
   m_Layer: 0
   m_Name: WorldMap
   m_TagString: Untagged
@@ -6872,18 +6872,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &11437090
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c982fc1e8dfdb994193940072b598760, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heal: {fileID: 19849600}
 --- !u!114 &11440204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7271,6 +7259,76 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Wood
+--- !u!114 &11480040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462fddd6cba942a49bef8a49c7ddebf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileAnimationDelay: 0
+  flipTilePrefab: {fileID: 117878, guid: fbed2363f82309a4eade1e2b28c1a7cc, type: 2}
+  rotationOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: .149999991
+      value: .0500000007
+      inSlope: .809523821
+      outSlope: .809523821
+      tangentMode: 10
+    - time: .849999964
+      value: .949999988
+      inSlope: .809523821
+      outSlope: .809523821
+      tangentMode: 10
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  heightOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 3.26242566
+      outSlope: 3.26242566
+      tangentMode: 10
+    - time: .150077119
+      value: .48961544
+      inSlope: 5.21826649
+      outSlope: 5.21826649
+      tangentMode: 10
+    - time: .5
+      value: 3
+      inSlope: .0257663727
+      outSlope: .0257663727
+      tangentMode: 10
+    - time: .850374401
+      value: .504432201
+      inSlope: -5.24693537
+      outSlope: -5.24693537
+      tangentMode: 10
+    - time: 1
+      value: 0
+      inSlope: -3.37129617
+      outSlope: -3.37129617
+      tangentMode: 10
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  rotateTime: .300000012
+  cheatEnabled: 0
 --- !u!114 &11481652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7400,7 +7458,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: e2f82bc89d52142c69544293d53f171b, type: 3}
   - {fileID: 2800000, guid: 6663d68c882684223b290135cf3ecd50, type: 3}
   - {fileID: 2800000, guid: 6663d68c882684223b290135cf3ecd50, type: 3}
-  - {fileID: 2800000, guid: 975b060e9fbd7fd4199a1ee1ca5062d7, type: 3}
+  - {fileID: 2800000, guid: ea2fbc375c736e94f9c4b48194326490, type: 3}
   - {fileID: 2800000, guid: 2e3b4adcebb38604ca75d6eb5b078167, type: 3}
   - {fileID: 2800000, guid: 975b060e9fbd7fd4199a1ee1ca5062d7, type: 3}
   heightLookup:
@@ -7771,8 +7829,8 @@ MonoBehaviour:
     defense: 2
     armor: 2
     damage: 6
-    hitPoints: 20
-    maxHitPoints: 20
+    hitPoints: 30
+    maxHitPoints: 30
     actionPoints: 0
     maxActionPoints: 0
     speed: 0
@@ -7805,8 +7863,8 @@ MonoBehaviour:
     defense: 0
     armor: 2
     damage: 3
-    hitPoints: 5
-    maxHitPoints: 5
+    hitPoints: 10
+    maxHitPoints: 10
     actionPoints: 0
     maxActionPoints: 0
     speed: 0
@@ -7820,8 +7878,8 @@ MonoBehaviour:
     defense: 0
     armor: 2
     damage: 2
-    hitPoints: 5
-    maxHitPoints: 5
+    hitPoints: 10
+    maxHitPoints: 10
     actionPoints: 0
     maxActionPoints: 0
     speed: 0
@@ -7835,8 +7893,8 @@ MonoBehaviour:
     defense: 0
     armor: 2
     damage: 3
-    hitPoints: 5
-    maxHitPoints: 5
+    hitPoints: 10
+    maxHitPoints: 10
     actionPoints: 0
     maxActionPoints: 0
     speed: 0
@@ -7850,8 +7908,8 @@ MonoBehaviour:
     defense: 0
     armor: 2
     damage: 3
-    hitPoints: 5
-    maxHitPoints: 5
+    hitPoints: 10
+    maxHitPoints: 10
     actionPoints: 0
     maxActionPoints: 0
     speed: 0
@@ -7925,7 +7983,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c982fc1e8dfdb994193940072b598760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heal: {fileID: 19811396, guid: 25d08e4a231fa2d4eba5b88156d0b5ad, type: 2}
+  allParticleSystems:
+    attack: []
+    heal: []
+    shield: []
+    stun: []
+    wrath: []
+    revenge: []
+    enemyAttack: []
+    enemyHeal: []
+    enemyCritAttack: []
 --- !u!114 &11496284
 MonoBehaviour:
   m_ObjectHideFlags: 1

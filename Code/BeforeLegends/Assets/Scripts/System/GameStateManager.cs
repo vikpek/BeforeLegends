@@ -20,6 +20,7 @@ public class GameStateManager : MonoBehaviour {
     public GameObject worldMapGUI;
     public GameObject battleMapGUI;
     public BattleParameters olaf;
+    MapObjectCarrier olafMoc;
 
     public int state;
     public bool lastBattleResult;
@@ -28,6 +29,25 @@ public class GameStateManager : MonoBehaviour {
 
     public void startBattle(GameObject player, GameObject enemy)
     {
+        olafMoc = olaf.GetComponent<MapObjectCarrier>();
+
+        GameObject[] tempTiles = GameObject.FindGameObjectsWithTag("FOWTile");
+
+        for (int i = 0; i < tempTiles.Length; i++)
+        {
+            Destroy(tempTiles[i]);
+        }
+
+        for (int i = 0; i < FogOfWarTiles.instance.tilesToFlipActive.Count; i++)
+        {
+            WorldMapGenerator.instance.ChangeTileTexture(FogOfWarTiles.instance.tilesToFlipActive[i].vec2IntPosition, FogOfWarTiles.instance.tilesToFlipActive[i].tileType);
+        }
+
+        for (int i = 0; i < FogOfWarTiles.instance.tilesToFlipActive.Count; i++)
+        {
+            FogOfWarTiles.instance.tilesToFlipActive.RemoveAt(i);
+        }
+
 		AudioMaster.instance.BattleStartA015Play();
         battleC.init(player, enemy);
         state = 1;

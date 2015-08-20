@@ -53,7 +53,7 @@ public class TurnManager : MonoBehaviour {
 
         if (WorldMapGenerator.instance.generationComplete)
         {
-            if (Input.GetKeyDown("space") && numActions == 0)
+            if (Input.GetKeyDown("space") && numActions == 0 && GameStateManager.instance.state == 0)
                 EnemyTurn();
 
             if (nextEnemyDoTurn && world.activeSelf)
